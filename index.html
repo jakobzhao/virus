@@ -234,7 +234,7 @@
              // bring the layer to the front.
              layer.bringToFront();
              // select the update class, and update the contet with the input value.
-             $(".update").html('<b>' + layer.feature.properties.name + '</b>   ' + layer.feature.properties.density + ' people / mi<sup>2</sup>');
+             // $(".update").html('<b>' + layer.feature.properties.name + '</b>   ' + layer.feature.properties.density + ' people / mi<sup>2</sup>');
          }
 
          // 3.2.2 zoom to the highlighted feature when the mouse is clicking onto it.
@@ -244,8 +244,8 @@
 
          // 3.2.3 reset the hightlighted feature when the mouse is out of its region.
          function resetHighlight(e) {
-             geojson.resetStyle(e.target);
-             $(".update").html("Hover over a state");
+             provinces.resetStyle(e.target);
+             // $(".update").html("Hover over a state");
          }
 
          // 3.3 add these event the layer obejct.
