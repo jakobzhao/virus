@@ -70,14 +70,15 @@ html, body, main {
   color: white;
   opacity: 1;
   padding: 40px 15px 20px 15px;
+  overflow-x: hidden;
 }
+
 
 .card-deck .card {
   background: #343a40;
   padding: 2px;
   margin-right: 0px;
   margin-left: 0px;
-
 }
 
 .counts {
@@ -96,20 +97,33 @@ html, body, main {
   margin-bottom: 0rem;
 }
 
-.legend {
-  margin-top: 50px;
-  margin-left: 0px;
-  margin-right: 20px;
+#legend-panel {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  width: 250px;
+  /* background: dark; */
+  height: 20px;
+  z-index: 1000;
+  background: #343a4000;
 }
 
+.legend .card {
+  background: #343a4000;
+  padding:0;
+
+}
 .legend .card-title {
   font-size: 15px;
-  text-align: left;
-  padding-left: 4px;
+  /* text-align: left; */
+  /* padding-left: 4px; */
+  /* background: #343a4000; */
 }
 
 .card-text {
   font-size: 40px;
+  text-align: center;
+  /* background: #343a4000; */
 }
 
 #info h4 i {
@@ -153,9 +167,14 @@ span {
   font-size: 48px;
 }
 
-
 #timeline-chart .c3-axis-y .tick {
-   display: none;
+  display: none;
+}
+
+#timeline-chart .c3-axis-x {
+  display: none;
+  visibility: hidden;
+  /* opacity: 0; */
 }
 
 text {
@@ -163,15 +182,18 @@ text {
 }
 
 .tick line {
-  /* fill: white; */
   stroke: gray;
-  stroke-width:1
+  /* stroke-width:1; */
 }
 
-.c3-axis path  {
+.c3-axis path {
   /* fill: white; */
   stroke: gray;
-  stroke-width:1
+  stroke-width: 1
+}
+
+.c3-bar {
+  fill: #dc3545 !important;
 }
 
 .name {
@@ -187,29 +209,51 @@ text {
 #timeline-chart {
   position: relative;
   top: -70px;
-  left: 50px;
+  left: 80px;
 }
-
 
 #total-chart {
-  /* position: relative; */
+  position: relative;
   top: 50px;
-
 }
+
+#rank-chart {
+  position: relative;
+  top: 80px;
+  left: -10px;
+}
+
 
 #footer {
-  position: absolute;
+  position: relative;
+  top: 150px;
+  bottom:10px;
+  left: 20px;
+  font-size: 10pt;
   color: lightgray;
-  bottom: 0;
+  /* bottom: 0; */
+  line-height: 20%;
+  /* z-index: 10000002!important; */
 }
 
+.confirmed-count {
+  color: #dc3545;
+}
 
+.suspected-count {
+  color: orange;
+}
+
+.recovered-count {
+  color: #28a745;
+}
+
+.death-count {
+  color: #5d4f72e8;
+}
 
 .textLabelclass a {
   white-space: nowrap;
   font-size: 10px;
-  /* font-weight: 400; */
-  /* text-shadow: 0 0 0.1em gray, 0 0 0.1em gray,
-    0 0 0.1em gray, 0 0 0.1em gray, 0 0 0.1em; */
   color: brown !important;
 }

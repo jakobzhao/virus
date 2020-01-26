@@ -6,45 +6,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="Bo Zhao, Benji Antolin">
-  <title>Local Changes</title>
+  <title>2019 Coronavirous Map</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
   <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.14/c3.min.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"> -->
   <link rel="stylesheet" href="css/simplebar.css" />
   <link rel="stylesheet" href="css/main.css">
-  <!-- <link rel="stylesheet" href="css/case2.css"> -->
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <!-- <link rel="icon" href="//favicon.ico" type="image/x-icon" /> -->
+  <script src="js/simplebar.min.js"></script>
   <script src="https://unpkg.com/d3@5/dist/d3.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.14/c3.min.js"></script>
-  <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
-  <!-- <script src="https://dc-js.github.io/dc.js/js/crossfilter.js"></script>
-  <script src="https://dc-js.github.io/dc.js/js/dc.js"></script> -->
   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
   <!-- <script src="js/leaflet.heat.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.3.4/chroma.min.js"></script>
-  <script src="js/simplebar.min.js"></script>
+
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script> -->
+
+  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script> -->
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script> -->
 </head>
 
 <body>
   <main>
-    <div id="info" class="">
+    <div id="info" >
       <div id="title"><i class="fas fa-medkit"></i> 2019 Coronavirous Map
-        <span><a href="https://www.facebook.com/TurfgrassWaterConservationAlliance/" target="_blank"><i class="fab fa-facebook"></i></a></span>
-        <span><a href="https://twitter.com/_tgwca" target="_blank"><i class="fab fa-twitter-square"></i></a></span>
-        <span><a data-toggle="modal" data-target="#disclaimer"><i class="nav fas fa-question-circle"></i></a></span>
+        <span><a href="https://www.facebook.com/uwgeog/" target="_blank"><i class="fab fa-facebook"></i></a></span>
+        <span><a href="https://twitter.com/UW" target="_blank"><i class="fab fa-twitter-square"></i></a></span>
+        <!-- <span><a data-toggle="modal" data-target="#disclaimer"><i class="nav fas fa-question-circle"></i></a></span> -->
       </div>
 
       <span id="date">Jan 25</span>
@@ -53,38 +48,51 @@
         <div class="card">
           <div class="card-body confirmed">
             <h5 class="card-title">Confirmed</h5>
-            <p class="card-text">5678</p>
           </div>
+          <p class="card-text confirmed-count">5678</p>
         </div>
 
         <div class="card">
           <div class="card-body suspected">
             <h5 class="card-title">Suspected</h5>
-            <p class="card-text">5678</p>
+            <p class="card-text suspected-count">5678</p>
           </div>
         </div>
         <div class="card">
           <div class="card-body recovered">
             <h5 class="card-title">Recovered</h5>
-            <p class="card-text">5678</p>
+            <p class="card-text recovered-count">5678</p>
           </div>
         </div>
 
         <div class="card">
           <div class="card-body death">
             <h5 class="card-title">Death</h5>
-            <p class="card-text">5678</p>
+            <p class="card-text death-count">5678</p>
           </div>
         </div>
       </div>
 
-      <div class="card-deck legend">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title" style="color:gray; text-align:right"> Legend: </h5>
+      <div id="timeline-chart"></div>
+      <div id="total-chart"></div>
+      <div id="rank-chart"></div>
 
-          </div>
-        </div>
+      <div id="footer">
+        <p><a href="https://hgis.uw.edu" target="_blank"><img src="img/logo.png" width="250px"></img></a></p>
+        <p>Made By <a href="http://hgis.uw.edu">Humanistic GIS Lab at University of Washington - Seattle</a>.</p>
+        <p>Data sources: WHO, CDC, NHC, JHU CSSE and Dingxiangyuan.</p>
+        <p>Platform is made of CartoDB, Leaflet, D3, C3, bootstrap, and chroma. </p>
+
+      </div>
+    </div>
+
+    <div id="map"></div>
+
+    <div id="legend-panel">
+
+
+      <div class="card-deck legend">
+
 
         <div class="card">
           <div class="card-body legend-color-1">
@@ -121,17 +129,7 @@
       </div>
 
 
-
-      <div id="timeline-chart"></div>
-      <div id="total-chart"></div>
-      <div id="rank-chart"></div>
-      <div id="footer">
-        <p style="font-size: 10pt">Data sources: WHO, CDC, NHC, JHU CSSE and Dingxiangyuan</p>
-        <p style="font-size: 10pt">Supported by <a href="http://hgis.uw.edu">Humanistic GIS Lab at University of Washington - Seattle</a>.</p>
-      </div>
     </div>
-
-    <div id="map"></div>
   </main>
 
   <script>
@@ -141,6 +139,7 @@
         html: labelText
       })
     }
+
     var mymap = L.map('map', {
       center: [31.448, 105.765],
       zoomControl: false,
@@ -157,7 +156,6 @@
 
 
     var gray = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png').addTo(mymap);
-
     var streets = L.tileLayer('http://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}@2x.png');
     var satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}');
 
@@ -177,7 +175,6 @@
       $('head').append($("<style> .legend-color-" + (i + 1).toString() + " { background: " + colors[i] + "; font-size: 15px; text-shadow: 0 0 3px #ffffff;} </style>"));
     }
 
-
     Promise.all([
       d3.csv('assets/2019-nCoV.csv'),
       d3.json("assets/wuhan.geojson")
@@ -194,8 +191,6 @@
         } else {
           pop = 0;
         }
-
-        console.log(pop);
 
         if (pop >= 100) {
           id = 4;
@@ -225,8 +220,52 @@
 
 
 
+
+      function highlightFeature(e) {
+             // e indicates the current event
+             var layer = e.target; //the target capture the object which the event associates with
+             layer.setStyle({
+                 weight: 8,
+                 opacity: 0.8,
+                 color: '#e3e3e3',
+                 fillColor: '#e3e00f',
+                 fillOpacity: 0.5
+             });
+             // bring the layer to the front.
+             layer.bringToFront();
+             // select the update class, and update the contet with the input value.
+             $(".update").html('<b>' + layer.feature.properties.name + '</b>   ' + layer.feature.properties.density + ' people / mi<sup>2</sup>');
+         }
+
+         // 3.2.2 zoom to the highlighted feature when the mouse is clicking onto it.
+         function zoomToFeature(e) {
+             mymap.fitBounds(e.target.getBounds());
+         }
+
+         // 3.2.3 reset the hightlighted feature when the mouse is out of its region.
+         function resetHighlight(e) {
+             geojson.resetStyle(e.target);
+             $(".update").html("Hover over a state");
+         }
+
+         // 3.3 add these event the layer obejct.
+         function onEachFeature(feature, layer) {
+             layer.on({
+                 mouseover: highlightFeature,
+                 click: zoomToFeature,
+                 mouseout: resetHighlight
+             });
+         }
+
+
+
+
+
+
+
       var provinces = L.geoJSON(datasets[1], {
-        style: style
+        style: style,
+        onEachFeature: onEachFeature
       }).addTo(mymap);
 
       // mymap.fitBounds(provinces.getBounds());
@@ -243,29 +282,72 @@
       var suspected = ["Suspected"];
       var recovered = ["Recovered"];
       var death = ["Death"];
-      var japan = ["Japan"];
-      var southKorea = ["South Korea"];
-      var thailand = ["Thailand"];
 
 
 
+      cf = 0, sp = 0, rc = 0, dd = 0;
       datasets[0].forEach(function(d) {
-        t.push(new Date(d["datetime"]))
+        t.push(new Date(d["datetime"]));
 
-        confirmed.push(+d["hubei"].split("-")[0])
+        cf = 0, sp = 0, rc = 0, dd = 0;
+        current = d;
+        delete current["datetime"];
 
-        if (d["hubei"].split("-").length == 1) {
-          suspected.push(0)
-        } else {
-          suspected.push(+d["hubei"].split("-")[1])
-        }
+        Object.values(current).forEach(function(d) {
+          if (d == undefined) {
+            d = 0
+          };
+          items = d.split("-");
+          switch (items.length) {
+            case 4:
+              dd += +items[3];
+            case 3:
+              rc += +items[2];
+            case 2:
+              sp += +items[1];
+            case 1:
+              cf += +items[0];
+              break;
+          }
+        });
+
+        confirmed.push(cf);
+        suspected.push(sp);
+        recovered.push(rc);
+        death.push(dd);
 
       });
 
-      latest = datasets[0][datasets[0].length - 1]
-      japan.push(latest["japan"]);
-      southKorea.push(latest["south korea"]);
-      thailand.push(latest["thailand"]);
+
+      //
+      // cf = 0, sp = 0, rc = 0, dd = 0;
+      // latest = datasets[0][datasets[0].length - 1];
+      // delete latest["datetime"];
+      // Object.values(latest).forEach(function(d) {
+      //   if (d == undefined) {
+      //     d = 0
+      //   };
+      //   items = d.split("-");
+      //   switch (items.length) {
+      //     case 4:
+      //       dd += +items[3];
+      //     case 3:
+      //       rc += +items[2];
+      //     case 2:
+      //       sp += +items[1];
+      //     case 1:
+      //       cf += +items[0];
+      //       break;
+      //   }
+      //
+      // });
+
+      $(".confirmed-count").text(cf);
+      $(".suspected-count").text(sp);
+      $(".recovered-count").text(rc);
+      $(".death-count").text(dd);
+      console.log(cf);
+
 
 
       chart = c3.generate({
@@ -275,10 +357,16 @@
         data: {
           x: "t",
           y: "confirmed",
-          columns: [t, confirmed, suspected],
+          columns: [t, confirmed, suspected, recovered, death],
           type: 'spline',
           axes: {
             confirmed: 'y'
+          },
+          colors: {
+            Confirmed: '#dc3545',
+            Suspected: 'orange',
+            Recovered: '#28a745',
+            Death: '#5d4f72e8'
           }
         },
         axis: {
@@ -329,16 +417,16 @@
       tchart = c3.generate({
         size: {
           height: 80,
-          width: 380
+          width: 350
         },
         data: {
           x: "t",
           columns: [t, confirmed],
           onmouseover: dailyUpdate,
-          type: 'bar',
-          labels: true,
+          type: 'line',
+          labels: false,
           colors: {
-            Confirmed: 'rgba(255, 255, 255, 0.8)',
+            Confirmed: '#f8f9faed',
           }
         },
         axis: {
@@ -347,12 +435,6 @@
             tick: {
               format: "%b %d",
               fit: true
-            }
-          },
-          y: {
-            label: {
-              text: 'Total Pop.',
-              position: 'outer-middle'
             }
           }
         },
@@ -366,94 +448,53 @@
           show: false
         },
         point: {
-          r: 5,
+          r: 8,
           focus: {
             expand: {
               r: 15
             }
           }
         },
-        // zoom: {
-        //   enabled: true,
-        //   onzoomend: function(d) {
-        //
-        //   }
-        //},
         bindto: "#timeline-chart"
       });
 
 
       $($($("#timeline-chart svg").children()[1]).children()[6]).hide();
 
-
-
-
-
+      // https://c3js.org/samples/axes_x_tick_rotate.html
       rchart = c3.generate({
         size: {
-          height: 400,
-          width: 380
+          height: 300,
+          width: 400
         },
         data: {
-          columns: [southKorea, thailand, japan],
-          // onmouseover: dailyUpdate,
+          x: 'x',
+          columns: [
+            ['x', 'China', 'Japan', 'US', 'South Korean', 'Vietnam'],
+            ['Total Confirmed Pop.', 2310, 32, 4, 24, 2]
+          ],
           type: 'bar',
-          order: 'desc',
-          labels: true,
-          colors: {
-            // Thailand: 'rgba(255, 255, 255, 0.8)',
-          }
+          // labels: true
         },
         axis: {
-          rotated: true
+          // rotated: true,
+          x: {
+            type: 'category',
+            label: false
+          },
+          y: {
+            label: {
+              text: 'Total Confirmed Pop.',
+              position: 'outer-middle'
+            }
+          }
         },
-        // axis: {
-        //   x: {
-        //     type: "timeseries",
-        //     tick: {
-        //       format: "%b %d",
-        //       fit: true
-        //     }
-        //   },
-        //   y: {
-        //     label: {
-        //       text: 'Total Pop.',
-        //       position: 'outer-middle'
-        //     }
-        //   }
-        // },
-        // area: {
-        //   zerobased: false
-        // },
-        // tooltip: {
-        //   show: false
-        // },
-        // legend: {
-        //   show: false
-        // },
-        // point: {
-        //   r: 5,
-        //   focus: {
-        //     expand: {
-        //       r: 15
-        //     }
-        //   }
-        // },
-        // zoom: {
-        //   enabled: true,
-        //   onzoomend: function(d) {
-        //
-        //   }
-        //},
+        legend: {
+          show: false
+
+        },
         bindto: "#rank-chart"
       });
-
-
-
-
-
-
-
 
     });
 
