@@ -82,7 +82,7 @@ html, body, main {
 }
 
 .counts {
-  margin-top: -20px;
+  margin-top: -70px;
 }
 
 .card-body {
@@ -143,7 +143,7 @@ html, body, main {
 }
 
 span {
-  margin-right: 10px
+  margin-right: 10px;
 }
 
 #info a {
@@ -177,19 +177,30 @@ span {
   /* opacity: 0; */
 }
 
+#placename {
+  font-size: 45px;
+  position: relative;
+  top: -70px;
+  font-family: 'Oswald', sans-serif;
+}
+#hint {
+  color: gray;
+  font-size:14px;
+  font-style: italic;
+
+}
+
+
 text {
   fill: gray
 }
 
 .tick line {
   stroke: gray;
-  /* stroke-width:1; */
 }
 
 .c3-axis path {
-  /* fill: white; */
   stroke: gray;
-  stroke-width: 1
 }
 
 .c3-bar {
@@ -214,19 +225,19 @@ text {
 
 #total-chart {
   position: relative;
-  top: 50px;
+  top: 30px;
+  left: -20px;
 }
 
 #rank-chart {
   position: relative;
-  top: 80px;
-  left: -10px;
+  top: 40px;
+  left: -20px;
 }
-
 
 #footer {
   position: relative;
-  top: 150px;
+  top: 120px;
   bottom:10px;
   left: 20px;
   font-size: 10pt;

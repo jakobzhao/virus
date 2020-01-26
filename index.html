@@ -35,7 +35,7 @@
 
 <body>
   <main>
-    <div id="info" >
+    <div id="info">
       <div id="title"><i class="fas fa-medkit"></i> 2019 Coronavirous Map
         <span><a href="https://www.facebook.com/uwgeog/" target="_blank"><i class="fab fa-facebook"></i></a></span>
         <span><a href="https://twitter.com/UW" target="_blank"><i class="fab fa-twitter-square"></i></a></span>
@@ -43,7 +43,9 @@
       </div>
 
       <span id="date">Jan 25</span>
+
       <div id="timeline-chart"></div>
+      <p id="placename">Global Stats. <span id="hint"> Click to see local stats.</span></p>
       <div class="card-deck counts">
         <div class="card">
           <div class="card-body confirmed">
@@ -222,45 +224,43 @@
 
 
       function highlightFeature(e) {
-             // e indicates the current event
-             var layer = e.target; //the target capture the object which the event associates with
-             layer.setStyle({
-                 weight: 8,
-                 opacity: 0.8,
-                 color: '#e3e3e3',
-                 fillColor: '#e3e00f',
-                 fillOpacity: 0.5
-             });
-             // bring the layer to the front.
-             layer.bringToFront();
-             // select the update class, and update the contet with the input value.
-             // $(".update").html('<b>' + layer.feature.properties.name + '</b>   ' + layer.feature.properties.density + ' people / mi<sup>2</sup>');
-         }
-
-         // 3.2.2 zoom to the highlighted feature when the mouse is clicking onto it.
-         function zoomToFeature(e) {
-             mymap.fitBounds(e.target.getBounds());
-         }
-
-         // 3.2.3 reset the hightlighted feature when the mouse is out of its region.
-         function resetHighlight(e) {
-             provinces.resetStyle(e.target);
-             // $(".update").html("Hover over a state");
-         }
-
-         // 3.3 add these event the layer obejct.
-         function onEachFeature(feature, layer) {
-             layer.on({
-                 mouseover: highlightFeature,
-                 click: zoomToFeature,
-                 mouseout: resetHighlight
-             });
-         }
+        // e indicates the current event
+        var layer = e.target; //the target capture the object which the event associates with
+        layer.setStyle({
+          weight: 8,
+          opacity: 0.8,
+          color: '#e3e3e3',
+          fillColor: '#e3e00f',
+          fillOpacity: 0.5
+        });
+        // bring the layer to the front.
+        layer.bringToFront();
+        // e.target.feature.properties.enname
+        // select the update class, and update the contet with the input value.
 
 
+        // $(".update").html('<b>' + layer.feature.properties.name + '</b>   ' + layer.feature.properties.density + ' people / mi<sup>2</sup>');
+      }
 
+      // 3.2.2 zoom to the highlighted feature when the mouse is clicking onto it.
+      function zoomToFeature(e) {
+        mymap.fitBounds(e.target.getBounds());
+      }
 
+      // 3.2.3 reset the hightlighted feature when the mouse is out of its region.
+      function resetHighlight(e) {
+        provinces.resetStyle(e.target);
+        // $(".update").html("Hover over a state");
+      }
 
+      // 3.3 add these event the layer obejct.
+      function onEachFeature(feature, layer) {
+        layer.on({
+          mouseover: highlightFeature,
+          click: zoomToFeature,
+          mouseout: resetHighlight
+        });
+      }
 
 
       var provinces = L.geoJSON(datasets[1], {
