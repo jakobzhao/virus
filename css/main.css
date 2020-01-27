@@ -60,6 +60,13 @@ html, body, main {
   stroke: transparent;
 }
 
+@media only screen and (max-width: 1026px) {
+    #info {
+        display: none;
+    }
+}
+
+
 #info {
   position: absolute;
   width: 480px;
