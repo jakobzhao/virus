@@ -19,6 +19,7 @@ html, body, main {
   opacity: 1;
 }
 
+
 #map {
   position: relative;
   width: 100%;
@@ -73,16 +74,11 @@ html, body, main {
   overflow-x: hidden;
 }
 
-
 .card-deck .card {
   background: #343a40;
   padding: 2px;
   margin-right: 0px;
   margin-left: 0px;
-}
-
-.counts {
-  margin-top: -70px;
 }
 
 .card-body {
@@ -92,9 +88,10 @@ html, body, main {
 }
 
 .card-title {
-  color: gray;
+  color: lightgray;
   font-size: 14px;
   margin-bottom: 0rem;
+  font-weight: bold;
 }
 
 #legend-panel {
@@ -110,9 +107,9 @@ html, body, main {
 
 .legend .card {
   background: #343a4000;
-  padding:0;
-
+  padding: 0;
 }
+
 .legend .card-title {
   font-size: 15px;
   /* text-align: left; */
@@ -157,39 +154,34 @@ span {
 
 #date {
   position: relative;
-  min-width: 10px;
-  /* left: 0px; */
-  background: rgba(225, 225, 225, 0);
+  top: -20px;
   text-align: left;
+  font-size: 14px;
   color: white;
-  font-family: 'Oswald', sans-serif;
-  /* font-family: 'Titillium Web', sans-serif; */
-  font-size: 48px;
-}
-
-#timeline-chart .c3-axis-y .tick {
-  display: none;
-}
-
-#timeline-chart .c3-axis-x {
-  display: none;
-  visibility: hidden;
-  /* opacity: 0; */
+  /* font-family: 'Oswald', sans-serif; */
+  /* font-size: 48px; */
 }
 
 #placename {
   font-size: 45px;
   position: relative;
-  top: -70px;
+  top: -20px;
   font-family: 'Oswald', sans-serif;
 }
-#hint {
-  color: gray;
-  font-size:14px;
-  font-style: italic;
 
+#hint {
+  position: relative;
+  top: -40px;
+  color: gray;
+  font-size: 14px;
+  font-style: italic;
+  text-decoration: underline;
+  /* left: 100px */
 }
 
+.counts {
+  margin-top: -20px;
+}
 
 text {
   fill: gray
@@ -217,12 +209,6 @@ text {
   color: black
 }
 
-#timeline-chart {
-  position: relative;
-  top: -70px;
-  left: 80px;
-}
-
 #total-chart {
   position: relative;
   top: 30px;
@@ -238,12 +224,12 @@ text {
 #footer {
   position: relative;
   top: 120px;
-  bottom:10px;
+  bottom: 10px;
   left: 20px;
   font-size: 10pt;
   color: lightgray;
   /* bottom: 0; */
-  line-height: 20%;
+  line-height: 30%;
   /* z-index: 10000002!important; */
 }
 
