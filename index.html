@@ -13,19 +13,13 @@
   <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.10/c3.min.css" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="css/simplebar.css" /> -->
   <link rel="stylesheet" href="css/main.css">
-  <!-- <link rel="icon" href="//favicon.ico" type="image/x-icon" /> -->
-  <!-- <script src="js/simplebar.min.js"></script> -->
   <script src="https://unpkg.com/d3@5/dist/d3.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.10/c3.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
-  <!-- <script src="js/leaflet.heat.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.3.4/chroma.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script> -->
 </head>
 
 <body>
@@ -88,7 +82,6 @@
 
 
       <div class="card-deck legend">
-
 
         <div class="card">
           <div class="card-body legend-color-1">
@@ -184,6 +177,27 @@
       $("#date").text(datasets[0][datasets[0].length - 1]["datetime"].toString().split(" 2020")[0].substring(4));
 
       $("#date").text("last update on " + Date(datasets[0][datasets[0].length - 1]["datetime"]).toString().split(" 2020")[0].substring(4));
+
+      //totalConfirmed
+      function tc(country){
+        if (country == undefined) {
+          country = 0
+        } else {
+          country = +country.split("-")[0];
+        }
+        return country;
+      }
+
+      var latest = datasets[0][datasets[0].length - 1];
+      var japan = tc(latest["japan"]);
+      var thailand = tc(latest["thailand"]);
+      var southKorea = tc(latest["south korea"]);
+      var france = tc(latest["france"]);
+      var australia = tc(latest["australia"]);
+      var malaysia = tc(latest["malaysia"]);
+      var singapore = tc(latest["singapore"]);
+      var us = tc(latest["washington"]) + tc(latest["illinois"]) + tc(latest["california"]);
+      var china =  tc(latest["anhui"]) + tc(latest["beijing"]) + tc(latest["chongqing"]) + tc(latest["fujian"]) + tc(latest["gansu"]) + tc(latest["guangdong"]) + tc(latest["guangxi"]) + tc(latest["guizhou"]) + tc(latest["hainan"]) + tc(latest["hebei"]) + tc(latest["heilongjiang"]) + tc(latest["henan"]) + tc(latest["hongkong"]) + tc(latest["hubei"]) + tc(latest["hunan"]) + tc(latest["neimenggu"]) + tc(latest["jiangsu"]) + tc(latest["jiangxi"]) + tc(latest["jilin"]) + tc(latest["liaoning"]) + tc(latest["macau"]) + tc(latest["ningxia"]) + tc(latest["qinghai"]) + tc(latest["shaanxi"]) + tc(latest["shandong"]) + tc(latest["shanghai"]) + tc(latest["shanxi"]) + tc(latest["sichuan"]) + tc(latest["taiwan"]) + tc(latest["tianjin"]) + tc(latest["xinjiang"]) + tc(latest["yunnan"]) + tc(latest["zhejiang"]) + tc(latest["xizang"]);
 
 
       var t = ["t"];
@@ -294,8 +308,6 @@
         }
 
         return colors[id];
-
-
 
       }
 
@@ -408,10 +420,10 @@
         });
 
       });
+
       calCounts(global);
 
 
-      console.log(cf);
 
 
 
@@ -480,6 +492,15 @@
 
 
       // https://c3js.org/samples/axes_x_tick_rotate.html
+      //
+      // var japan = totalConfirmed(latest["japan"]);
+      // var thailand = totalConfirmed(latest["thailand"]);
+      // var southKorea = totalConfirmed(latest["south korea"]);
+      // var france = totalConfirmed(latest["france"]);
+      // var australia = totalConfirmed(latest["australia"]);
+      // var malaysia = totalConfirmed(latest["malaysia"]);
+      // var singapore = totalConfirmed(latest["singapore"]);
+
       rchart = c3.generate({
         size: {
           height: 300,
@@ -489,7 +510,7 @@
           x: 'x',
           columns: [
             ['x', 'China', 'Thailand', 'Japan', 'Malaysia', 'Singapore', 'Australia', 'U.S.', 'South Korea', 'France'],
-            ['Total Confirmed Pop.', 2079, 8, 4, 4, 4, 4, 3, 3, 3]
+            ['Total Confirmed Pop.', china, thailand, japan, malaysia, singapore, australia, us, southKorea, france]
           ],
           type: 'bar'
         },
