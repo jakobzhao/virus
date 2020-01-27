@@ -404,6 +404,10 @@
 
       $("#hint").on("click", function() {
         calCounts(global);
+        chart.load({
+          columns: [global.c, global.s, global.r, global.d],
+          unload: ['Confirmed', 'Suspected', 'Recovered', 'Death'],
+        });
 
       });
       calCounts(global);
