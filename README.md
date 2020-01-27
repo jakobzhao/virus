@@ -1,10 +1,6 @@
 # wuhan
 
 
-angel
-
-Lin
-
 crontab content
 
 ```sh
