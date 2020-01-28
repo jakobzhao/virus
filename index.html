@@ -33,7 +33,7 @@
       </div>
 
       <p><span id="placename">Global Stats.</span> </p>
-      <span id="hint"> Click a place on the map to see details.</span>
+      <p>  <span id="date"></span> <span id="hint"> Click a place to see details.</span></p>
       <div class="card-deck counts">
         <div class="card">
           <div class="card-body confirmed">
@@ -70,7 +70,6 @@
       <div id="footer">
 
         <p><a href="https://hgis.uw.edu" target="_blank"><img src="img/logo.png" width="250px"></img></a></p>
-        <p id="date"></p>
         <p>Made By <a href="http://hgis.uw.edu">Humanistic GIS Lab at University of Washington - Seattle</a>.</p>
         <p>Data sources: WHO, CDC, NHC, JHU CSSE, baidu and Dingxiangyuan.</p>
         <p>Platform is made of CartoDB, Leaflet, D3, C3, bootstrap, and chroma. </p>
@@ -177,7 +176,7 @@
 
       // $("#date").text(datasets[0][datasets[0].length - 1]["datetime"].toString().split(" 2020")[0].substring(4));
       lastupdate = new Date(datasets[0][datasets[0].length - 1]["datetime"]);
-      $("#date").text("last update at " + lastupdate.toLocaleDateString() + " " + lastupdate.toLocaleTimeString() + " EST");
+      $("#date").text("Last update at " + lastupdate.toLocaleDateString() + " " + lastupdate.toLocaleTimeString() + " EST");
 
       //totalConfirmed
       function tc(country) {

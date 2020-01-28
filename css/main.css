@@ -160,6 +160,8 @@ span {
 }
 
 #date {
+  position: relative;
+  top: -40px;
   /* position: relative;
   top: -85px;
   left: 30px; */
