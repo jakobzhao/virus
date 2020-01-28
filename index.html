@@ -32,7 +32,7 @@
         <!-- <span><a data-toggle="modal" data-target="#disclaimer"><i class="nav fas fa-question-circle"></i></a></span> -->
       </div>
 
-      <p><span id="placename">Global Stats.</span> <span id="date"></span></p>
+      <p><span id="placename">Global Stats.</span> </p>
       <span id="hint"> Click a place on the map to see details.</span>
       <div class="card-deck counts">
         <div class="card">
@@ -68,9 +68,11 @@
       <div id="rank-chart"></div>
 
       <div id="footer">
+
         <p><a href="https://hgis.uw.edu" target="_blank"><img src="img/logo.png" width="250px"></img></a></p>
+        <p id="date"></p>
         <p>Made By <a href="http://hgis.uw.edu">Humanistic GIS Lab at University of Washington - Seattle</a>.</p>
-        <p>Data sources: WHO, CDC, NHC, JHU CSSE and Dingxiangyuan.</p>
+        <p>Data sources: WHO, CDC, NHC, JHU CSSE, baidu and Dingxiangyuan.</p>
         <p>Platform is made of CartoDB, Leaflet, D3, C3, bootstrap, and chroma. </p>
       </div>
     </div>
@@ -173,12 +175,12 @@
       d3.json("assets/wuhan.geojson")
     ]).then(function(datasets) {
 
-      $("#date").text(datasets[0][datasets[0].length - 1]["datetime"].toString().split(" 2020")[0].substring(4));
-
-      $("#date").text("last update on " + Date(datasets[0][datasets[0].length - 1]["datetime"]).toString().split(" 2020")[0].substring(4));
+      // $("#date").text(datasets[0][datasets[0].length - 1]["datetime"].toString().split(" 2020")[0].substring(4));
+      lastupdate = new Date(datasets[0][datasets[0].length - 1]["datetime"]);
+      $("#date").text("last update at " + lastupdate.toLocaleDateString() + " " + lastupdate.toLocaleTimeString() + " EST");
 
       //totalConfirmed
-      function tc(country){
+      function tc(country) {
         if (country == undefined) {
           country = 0
         } else {
@@ -196,7 +198,10 @@
       var malaysia = tc(latest["malaysia"]);
       var singapore = tc(latest["singapore"]);
       var us = tc(latest["washington"]) + tc(latest["illinois"]) + tc(latest["california"]);
-      var china =  tc(latest["anhui"]) + tc(latest["beijing"]) + tc(latest["chongqing"]) + tc(latest["fujian"]) + tc(latest["gansu"]) + tc(latest["guangdong"]) + tc(latest["guangxi"]) + tc(latest["guizhou"]) + tc(latest["hainan"]) + tc(latest["hebei"]) + tc(latest["heilongjiang"]) + tc(latest["henan"]) + tc(latest["hongkong"]) + tc(latest["hubei"]) + tc(latest["hunan"]) + tc(latest["neimenggu"]) + tc(latest["jiangsu"]) + tc(latest["jiangxi"]) + tc(latest["jilin"]) + tc(latest["liaoning"]) + tc(latest["macau"]) + tc(latest["ningxia"]) + tc(latest["qinghai"]) + tc(latest["shaanxi"]) + tc(latest["shandong"]) + tc(latest["shanghai"]) + tc(latest["shanxi"]) + tc(latest["sichuan"]) + tc(latest["taiwan"]) + tc(latest["tianjin"]) + tc(latest["xinjiang"]) + tc(latest["yunnan"]) + tc(latest["zhejiang"]) + tc(latest["xizang"]);
+      var china = tc(latest["anhui"]) + tc(latest["beijing"]) + tc(latest["chongqing"]) + tc(latest["fujian"]) + tc(latest["gansu"]) + tc(latest["guangdong"]) + tc(latest["guangxi"]) + tc(latest["guizhou"]) + tc(latest["hainan"]) + tc(latest[
+          "hebei"]) + tc(latest["heilongjiang"]) + tc(latest["henan"]) + tc(latest["hongkong"]) + tc(latest["hubei"]) + tc(latest["hunan"]) + tc(latest["neimenggu"]) + tc(latest["jiangsu"]) + tc(latest["jiangxi"]) + tc(latest["jilin"]) + tc(
+          latest["liaoning"]) + tc(latest["macau"]) + tc(latest["ningxia"]) + tc(latest["qinghai"]) + tc(latest["shaanxi"]) + tc(latest["shandong"]) + tc(latest["shanghai"]) + tc(latest["shanxi"]) + tc(latest["sichuan"]) + tc(latest["taiwan"]) +
+        tc(latest["tianjin"]) + tc(latest["xinjiang"]) + tc(latest["yunnan"]) + tc(latest["zhejiang"]) + tc(latest["xizang"]);
 
 
       var t = ["t"];
@@ -396,7 +401,9 @@
         onEachFeature: onEachFeature
       }).addTo(mymap);
 
-      new L.control.layers(baseLayers, {"Virus": provinces},  {
+      new L.control.layers(baseLayers, {
+        "Virus": provinces
+      }, {
         collapsed: false
       }).addTo(mymap);
 
@@ -420,9 +427,6 @@
       });
 
       calCounts(global);
-
-
-
 
 
       chart = c3.generate({
@@ -503,7 +507,7 @@
         data: {
           x: 'x',
           columns: [
-            ['x', 'China', 'Thailand', 'Australia', 'Japan', 'Malaysia', 'Singapore',  'U.S.', 'South Korea', 'France'],
+            ['x', 'China', 'Thailand', 'Australia', 'Japan', 'Malaysia', 'Singapore', 'U.S.', 'South Korea', 'France'],
             ['Total Confirmed Pop.', china, thailand, australia, japan, malaysia, singapore, us, southKorea, france]
           ],
           type: 'bar'

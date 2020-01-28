@@ -160,11 +160,13 @@ span {
 }
 
 #date {
-  position: relative;
-  top: -20px;
-  text-align: left;
+  /* position: relative;
+  top: -85px;
+  left: 30px; */
+  /* text-align: left; */
   font-size: 14px;
-  color: white;
+  /* font-weight:  */
+  color: danger;
   /* font-family: 'Oswald', sans-serif; */
   /* font-size: 48px; */
 }
