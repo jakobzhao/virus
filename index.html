@@ -456,7 +456,12 @@
             label: {
               text: 'Total Pop.',
               position: 'outer-middle'
-            }
+            },
+            // tick: {
+            //   values: [10, 50, 250, 500, 1000, 5000]
+            // },
+            type: 'linear',
+            // min: 0
           }
         },
         point: {
@@ -482,22 +487,13 @@
           position: 'inset',
           inset: {
             anchor: "top-left",
-            y: 10,
+            y: 10
           },
         },
         bindto: "#total-chart"
       });
 
 
-      // https://c3js.org/samples/axes_x_tick_rotate.html
-      //
-      // var japan = totalConfirmed(latest["japan"]);
-      // var thailand = totalConfirmed(latest["thailand"]);
-      // var southKorea = totalConfirmed(latest["south korea"]);
-      // var france = totalConfirmed(latest["france"]);
-      // var australia = totalConfirmed(latest["australia"]);
-      // var malaysia = totalConfirmed(latest["malaysia"]);
-      // var singapore = totalConfirmed(latest["singapore"]);
 
       rchart = c3.generate({
         size: {
@@ -507,8 +503,8 @@
         data: {
           x: 'x',
           columns: [
-            ['x', 'China', 'Thailand', 'Japan', 'Malaysia', 'Singapore', 'Australia', 'U.S.', 'South Korea', 'France'],
-            ['Total Confirmed Pop.', china, thailand, japan, malaysia, singapore, australia, us, southKorea, france]
+            ['x', 'China', 'Thailand', 'Australia', 'Japan', 'Malaysia', 'Singapore',  'U.S.', 'South Korea', 'France'],
+            ['Total Confirmed Pop.', china, thailand, australia, japan, malaysia, singapore, us, southKorea, france]
           ],
           type: 'bar'
         },
