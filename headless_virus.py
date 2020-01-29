@@ -8,13 +8,11 @@ import sqlite3
 from selenium.webdriver.firefox.options import Options
 
 
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 
-
-cap = DesiredCapabilities().FIREFOX
-
-cap["marionette"] = False
+options = Options()
+options.headless = True
+# driver = webdriver.Firefox()
 
 
 
@@ -34,7 +32,7 @@ with open("assets/name.csv", "r", encoding="utf-8") as fp:
 
 url = "https://voice.baidu.com/act/newpneumonia/newpneumonia"
 # browser = webdriver.Chrome("C:\workspace\chromedriver.exe")
-browser = webdriver.Firefox(capabilities=cap, options=options, executable_path=r'/home/zhaobo/geckodriver', service_log_path = "/home/zhaobo/geckodriver.log")
+browser = webdriver.Firefox(options=options, executable_path=r'/home/zhaobo/geckodriver', service_log_path = "/home/zhaobo/geckodriver.log")
 # browser = webdriver.Firefox(options=options, executable_path=r'/home/zhaobo/geckodriver')
 
 browser.get(url)
