@@ -3,13 +3,13 @@ from bs4 import BeautifulSoup
 import time
 from datetime import datetime
 import sqlite3
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-from selenium.webdriver.firefox.options import Options
-
-cap = DesiredCapabilities().FIREFOX
-cap["marionette"] = False
+from selenium.webdriver.chrome.options import Options
 
 options = Options()
+options.add_argument('--headless')
+options.add_argument('--no-sandbox')
+browser = webdriver.Chrome("/usr/bin/chromedriver", options=options)
+
 
 now = str(datetime.now())
 
@@ -21,11 +21,6 @@ with open("assets/name.csv", "r", encoding="utf-8") as fp:
         placeName[placeItem[0]] = placeItem[1]
 
 url = "https://voice.baidu.com/act/newpneumonia/newpneumonia"
-# browser = webdriver.Chrome("C:\workspace\chromedriver.exe")
-browser = webdriver.Firefox(options=options, capabilities=cap, executable_path=r'/home/zhaobo/geckodriver', service_log_path = "/home/zhaobo/geckodriver.log")
-
-
-
 
 browser.get(url)
 
