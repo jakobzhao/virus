@@ -22,7 +22,9 @@ with open("assets/name.csv", "r", encoding="utf-8") as fp:
 
 url = "https://voice.baidu.com/act/newpneumonia/newpneumonia"
 # browser = webdriver.Chrome("C:\workspace\chromedriver.exe")
-browser = webdriver.Firefox(options=options, executable_path=r'/home/zhaobo/geckodriver', service_log_path = "/home/zhaobo/geckodriver.log")
+# browser = webdriver.Firefox(options=options, executable_path=r'/home/zhaobo/geckodriver', service_log_path = "/home/zhaobo/geckodriver.log")
+browser = webdriver.Firefox(options=options, executable_path=r'/home/zhaobo/geckodriver')
+
 browser.get(url)
 
 
@@ -82,4 +84,3 @@ with open("assets/virus.csv", "w", encoding="utf-8") as fp:
 
 conn.close()
 print("finished!")
-
