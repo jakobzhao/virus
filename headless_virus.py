@@ -5,21 +5,20 @@ from datetime import datetime
 import sqlite3
 
 
-from selenium.webdriver.firefox.options import Options
 
 
-
-
-options = Options()
-options.headless = True
 # driver = webdriver.Firefox()
 
 
 
+from selenium.webdriver.chrome.options import Options
+chrome_options.add_argument("--headless")
+# chrome_options.add_argument("--window-size=1920x1080")
+# driver = webdriver.Chrome(chrome_options=chrome_options, executable_path=chrome_driver)
+
 # from pymongo import MongoClient
 
-options = Options()
-
+# options = Options()
 
 now = str(datetime.now())
 
@@ -32,8 +31,10 @@ with open("assets/name.csv", "r", encoding="utf-8") as fp:
 
 url = "https://voice.baidu.com/act/newpneumonia/newpneumonia"
 # browser = webdriver.Chrome("C:\workspace\chromedriver.exe")
-browser = webdriver.Firefox(options=options, executable_path=r'/home/zhaobo/geckodriver', service_log_path = "/home/zhaobo/geckodriver.log")
-# browser = webdriver.Firefox(options=options, executable_path=r'/home/zhaobo/geckodriver')
+#browser = webdriver.Firefox(options=options, executable_path=r'/home/zhaobo/geckodriver', service_log_path = "/home/zhaobo/geckodriver.log")
+browser = webdriver.Chrome( chrome_options=chrome_options, executable_path=r'/home/zhaobo/chromedriver')
+
+
 
 browser.get(url)
 
