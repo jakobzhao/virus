@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 
@@ -29,11 +30,11 @@
       <div id="title"><i class="fas fa-medkit"></i> 2019 Coronavirus Map
         <span><a href="https://www.facebook.com/uwgeog/" target="_blank"><i class="fab fa-facebook"></i></a></span>
         <span><a href="https://twitter.com/UW" target="_blank"><i class="fab fa-twitter-square"></i></a></span>
-        <!-- <span><a data-toggle="modal" data-target="#disclaimer"><i class="nav fas fa-question-circle"></i></a></span> -->
+        <span><a data-toggle="modal" data-target="#disclaimer"><i class="nav fas fa-question-circle"></i></a></span>
       </div>
 
-      <p><span id="placename">Global Stats.</span> <span id="date"></span></p>
-      <span id="hint"> Click a place on the map to see details.</span>
+      <p><span id="placename">Global Stats.</span> </p>
+      <p>  <span id="date"></span> <span id="hint"> Click a place to see details.</span></p>
       <div class="card-deck counts">
         <div class="card">
           <div class="card-body confirmed">
@@ -68,9 +69,10 @@
       <div id="rank-chart"></div>
 
       <div id="footer">
+
         <p><a href="https://hgis.uw.edu" target="_blank"><img src="img/logo.png" width="250px"></img></a></p>
         <p>Made By <a href="http://hgis.uw.edu">Humanistic GIS Lab at University of Washington - Seattle</a>.</p>
-        <p>Data sources: WHO, CDC, NHC, JHU CSSE and Dingxiangyuan.</p>
+        <p>Data sources: WHO, CDC, NHC, JHU CSSE, baidu and Dingxiangyuan.</p>
         <p>Platform is made of CartoDB, Leaflet, D3, C3, bootstrap, and chroma. </p>
       </div>
     </div>
@@ -173,12 +175,12 @@
       d3.json("assets/wuhan.geojson")
     ]).then(function(datasets) {
 
-      $("#date").text(datasets[0][datasets[0].length - 1]["datetime"].toString().split(" 2020")[0].substring(4));
-
-      $("#date").text("last update on " + Date(datasets[0][datasets[0].length - 1]["datetime"]).toString().split(" 2020")[0].substring(4));
+      // $("#date").text(datasets[0][datasets[0].length - 1]["datetime"].toString().split(" 2020")[0].substring(4));
+      lastupdate = new Date(datasets[0][datasets[0].length - 1]["datetime"]);
+      $("#date").text("Last update at " + lastupdate.toLocaleDateString() + " " + lastupdate.toLocaleTimeString() + " EST");
 
       //totalConfirmed
-      function tc(country){
+      function tc(country) {
         if (country == undefined) {
           country = 0
         } else {
@@ -195,8 +197,12 @@
       var australia = tc(latest["australia"]);
       var malaysia = tc(latest["malaysia"]);
       var singapore = tc(latest["singapore"]);
-      var us = tc(latest["washington"]) + tc(latest["illinois"]) + tc(latest["california"]);
-      var china =  tc(latest["anhui"]) + tc(latest["beijing"]) + tc(latest["chongqing"]) + tc(latest["fujian"]) + tc(latest["gansu"]) + tc(latest["guangdong"]) + tc(latest["guangxi"]) + tc(latest["guizhou"]) + tc(latest["hainan"]) + tc(latest["hebei"]) + tc(latest["heilongjiang"]) + tc(latest["henan"]) + tc(latest["hongkong"]) + tc(latest["hubei"]) + tc(latest["hunan"]) + tc(latest["neimenggu"]) + tc(latest["jiangsu"]) + tc(latest["jiangxi"]) + tc(latest["jilin"]) + tc(latest["liaoning"]) + tc(latest["macau"]) + tc(latest["ningxia"]) + tc(latest["qinghai"]) + tc(latest["shaanxi"]) + tc(latest["shandong"]) + tc(latest["shanghai"]) + tc(latest["shanxi"]) + tc(latest["sichuan"]) + tc(latest["taiwan"]) + tc(latest["tianjin"]) + tc(latest["xinjiang"]) + tc(latest["yunnan"]) + tc(latest["zhejiang"]) + tc(latest["xizang"]);
+      //var us = tc(latest["washington"]) + tc(latest["illinois"]) + tc(latest["california"]);
+      var us = tc(latest["us"]);
+      var china = tc(latest["anhui"]) + tc(latest["beijing"]) + tc(latest["chongqing"]) + tc(latest["fujian"]) + tc(latest["gansu"]) + tc(latest["guangdong"]) + tc(latest["guangxi"]) + tc(latest["guizhou"]) + tc(latest["hainan"]) + tc(latest[
+          "hebei"]) + tc(latest["heilongjiang"]) + tc(latest["henan"]) + tc(latest["hongkong"]) + tc(latest["hubei"]) + tc(latest["hunan"]) + tc(latest["neimenggu"]) + tc(latest["jiangsu"]) + tc(latest["jiangxi"]) + tc(latest["jilin"]) + tc(
+          latest["liaoning"]) + tc(latest["macau"]) + tc(latest["ningxia"]) + tc(latest["qinghai"]) + tc(latest["shaanxi"]) + tc(latest["shandong"]) + tc(latest["shanghai"]) + tc(latest["shanxi"]) + tc(latest["sichuan"]) + tc(latest["taiwan"]) +
+        tc(latest["tianjin"]) + tc(latest["xinjiang"]) + tc(latest["yunnan"]) + tc(latest["zhejiang"]) + tc(latest["xizang"]);
 
 
       var t = ["t"];
@@ -396,7 +402,9 @@
         onEachFeature: onEachFeature
       }).addTo(mymap);
 
-      new L.control.layers(baseLayers, {"Virus": provinces},  {
+      new L.control.layers(baseLayers, {
+        "Virus": provinces
+      }, {
         collapsed: false
       }).addTo(mymap);
 
@@ -420,9 +428,6 @@
       });
 
       calCounts(global);
-
-
-
 
 
       chart = c3.generate({
@@ -456,7 +461,12 @@
             label: {
               text: 'Total Pop.',
               position: 'outer-middle'
-            }
+            },
+            // tick: {
+            //   values: [10, 50, 250, 500, 1000, 5000]
+            // },
+            type: 'linear',
+            // min: 0
           }
         },
         point: {
@@ -482,22 +492,13 @@
           position: 'inset',
           inset: {
             anchor: "top-left",
-            y: 10,
+            y: 10
           },
         },
         bindto: "#total-chart"
       });
 
 
-      // https://c3js.org/samples/axes_x_tick_rotate.html
-      //
-      // var japan = totalConfirmed(latest["japan"]);
-      // var thailand = totalConfirmed(latest["thailand"]);
-      // var southKorea = totalConfirmed(latest["south korea"]);
-      // var france = totalConfirmed(latest["france"]);
-      // var australia = totalConfirmed(latest["australia"]);
-      // var malaysia = totalConfirmed(latest["malaysia"]);
-      // var singapore = totalConfirmed(latest["singapore"]);
 
       rchart = c3.generate({
         size: {
@@ -507,8 +508,8 @@
         data: {
           x: 'x',
           columns: [
-            ['x', 'China', 'Thailand', 'Japan', 'Malaysia', 'Singapore', 'Australia', 'U.S.', 'South Korea', 'France'],
-            ['Total Confirmed Pop.', china, thailand, japan, malaysia, singapore, australia, us, southKorea, france]
+            ['x', 'China', 'Thailand', 'Australia', 'Japan', 'Malaysia', 'Singapore', 'U.S.', 'South Korea', 'France'],
+            ['Total Confirmed Pop.', china, thailand, australia, japan, malaysia, singapore, us, southKorea, france]
           ],
           type: 'bar'
         },
