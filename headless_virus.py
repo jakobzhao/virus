@@ -9,7 +9,6 @@ from selenium.webdriver.firefox.options import Options
 cap = DesiredCapabilities().FIREFOX
 cap["marionette"] = False
 
-driver = webdriver.Firefox()
 options = Options()
 
 now = str(datetime.now())
