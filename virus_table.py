@@ -67,11 +67,16 @@ conn.commit()
 cursor.execute("SELECT * from virus")
 col_name_list = [tuple[0] for tuple in cursor.description]
 
-
+flag = ""
+priorFlag = ""
 with open("assets/virus.csv", "w", encoding="utf-8") as fp:
     fp.write(str(col_name_list)[1:len(str(col_name_list))-1].replace("\'", "").replace(", ", ",") + "\n")
     for row in cursor.execute("SELECT * from virus"):
-        fp.write(str(row)[1:len(str(row))-1].replace("\'", "").replace("None", "").replace(", ", ",") + "\n")
+        line = str(row)[1:len(str(row))-1].replace("\'", "").replace("None", "").replace(", ", ",") + "\n"
+        flag = line[0:10]
+        if flag != priorFlag:
+            fp.write(str(row)[1:len(str(row)) - 1].replace("\'", "").replace("None", "").replace(", ", ",") + "\n")
+        priorFlag = flag
 
 conn.close()
 print("finished!")
