@@ -46,11 +46,11 @@ for item in items:
         confirmed = item.find_all("td")[1].text.strip()
         recovered = item.find_all("td")[2].text.strip()
         death = item.find_all("td")[3].text.strip()
-        if recovered == "":
+        if recovered == "" or recovered == "-":
             recovered = "0"
-        if death == "":
+        if death == "" or death == "-":
             death = "0"
-        if confirmed == "":
+        if confirmed == "" or confirmed == "-" :
             confirmed = "0"
         print(chname, placeName[chname], confirmed, recovered, death)
         sqls += ", '" + placeName[chname].strip() + "'"
