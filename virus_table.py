@@ -73,11 +73,10 @@ with open("assets/virus.csv", "w", encoding="utf-8") as fp:
         line = str(row)[1:len(str(row))-1].replace("\'", "").replace("None", "").replace(", ", ",") + "\n"
         flag = line[0:10]
         hubei = line.split(",")[14]
-        if flag != priorFlag and hubei != priorHubei:
+        if hubei != priorHubei:
             fp.write(str(row)[1:len(str(row)) - 1].replace("\'", "").replace("None", "").replace(", ", ",") + "\n")
         priorFlag = flag
         priorHubei = hubei
 
 conn.close()
 print("finished!")
-
