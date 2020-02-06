@@ -56,7 +56,7 @@ for item in items:
             recovered = "0"
         if death == "" or death == "-":
             death = "0"
-        if confirmed == "" or confirmed == "-" :
+        if confirmed == "" or confirmed == "-":
             confirmed = "0"
         print(chname, placeName[chname], confirmed, recovered, death)
         sqls += ", '" + placeName[chname].strip() + "'"
