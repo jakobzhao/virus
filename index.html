@@ -68,12 +68,12 @@
       <div id="rank-chart"></div>
 
       <div id="footer">
-<!--        CartoDB basemap, -->
+        <!--        CartoDB basemap, -->
         <p><a href="https://hgis.uw.edu" target="_blank"><img src="img/logo.png" width="250px"></img></a></p>
         <p>Made By <a href="http://hgis.uw.edu" target="_blank">Humanistic GIS Lab at University of Washington - Seattle</a>.</p>
         <p>Data sources are from WHO, CDC, NHC, and <a href="https://voice.baidu.com/act/newpneumonia/newpneumonia" target="_blank">Baidu</a>.</p>
         <p>Platform is created by Leaflet, D3, C3, bootstrap, and chroma. </p>
-         <p>The Server is provided by <a href="https://csde.washington.edu/" target="_blank">UW's Center for Studies in Demography and Ecology</a>.</p>
+        <p>The Server is provided by <a href="https://csde.washington.edu/" target="_blank">UW's Center for Studies in Demography and Ecology</a>.</p>
       </div>
     </div>
 
@@ -375,7 +375,7 @@
 
 
         chart.load({
-          columns: [place.c,  place.r, place.d],
+          columns: [place.c, place.r, place.d],
           unload: ['Confirmed', 'Recovered', 'Death'],
         });
 
@@ -449,6 +449,10 @@
             Death: '#5d4f72e8'
           }
         },
+        zoom: {
+          enabled: true,
+          type: 'drag',
+        },
         axis: {
           x: {
             type: "timeseries",
@@ -513,8 +517,8 @@
         data: {
           x: 'x',
           columns: [
-            ['x', 'China', 'Japan',  'Singapore', 'Thailand', 'South Korea', 'Australia', 'Malaysia', 'Germany', 'U.S.'],
-            ['Total Confirmed Pop.', china, japan, singapore, thailand, southKorea, australia, malaysia, germany , us]
+            ['x', 'China', 'Japan', 'Singapore', 'Thailand', 'South Korea', 'Australia', 'Malaysia', 'Germany', 'U.S.'],
+            ['Total Confirmed Pop.', china, japan, singapore, thailand, southKorea, australia, malaysia, germany, us]
           ],
           type: 'bar'
         },

@@ -68,13 +68,13 @@ col_name_list = [tuple[0] for tuple in cursor.description]
 
 flag, priorFlag, hubei, priorHubei = "", "", "", ""
 with open("assets/virus.csv", "w", encoding="utf-8") as fp:
-    fp.write(str(col_name_list)[1:len(str(col_name_list))-1].replace("\'", "").replace(", ", ",") + "\n")
+    fp.write(str(col_name_list)[1:len(str(col_name_list))-1].replace("\'", "").replace(", ", ",").replace("(null)", "") + "\n")
     for row in cursor.execute("SELECT * from virus"):
-        line = str(row)[1:len(str(row))-1].replace("\'", "").replace("None", "").replace(", ", ",") + "\n"
+        line = str(row)[1:len(str(row))-1].replace("\'", "").replace("None", "").replace(", ", ",").replace("(null)", "") + "\n"
         flag = line[0:10]
         hubei = line.split(",")[14]
-        if hubei != priorHubei:
-            fp.write(str(row)[1:len(str(row)) - 1].replace("\'", "").replace("None", "").replace(", ", ",") + "\n")
+        if flag != priorFlag:
+            fp.write(str(row)[1:len(str(row)) - 1].replace("\'", "").replace("None", "").replace(", ", ",").replace("(null)", "") + "\n")
         priorFlag = flag
         priorHubei = hubei
 
