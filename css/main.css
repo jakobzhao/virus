@@ -61,9 +61,10 @@ html, body, main {
 }
 
 @media only screen and (max-width: 1026px) {
-    #info {
+    #info, .legend, .leaflet-top {
         display: none;
     }
+
 }
 
 
