@@ -34,7 +34,7 @@
       </div>
 
       <p><span id="placename">Global Trend</span> </p>
-      <p> <span id="date"></span> <span id="hint"> Click a place to see details.</span></p>
+      <p> <span id="date"></span> <span id="hint"> Click a place to review local trend.</span></p>
       <div class="card-deck counts">
         <div class="card">
           <div class="card-body confirmed">
@@ -75,7 +75,7 @@
         <p>Data sources are from <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/" target="_blank">WHO</a>,
           <a href="https://www.cdc.gov/coronavirus/2019-ncov/cases-in-us.html" target="_blank">CDC</a>,
           <a href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html" target="_blank">PHA</a> ,
-          <a href="http://2019ncov.chinacdc.cn/2019-nCoV/" target="_blank">ChinaCDC</a>
+          <a href="http://2019ncov.chinacdc.cn/2019-nCoV/" target="_blank">China CDC</a>
           and <a href="https://voice.baidu.com/act/newpneumonia/newpneumonia" target="_blank">Baidu</a>.</p>
         <p>Platform is created by
           <a href="https://leafletjs.com" target="_blank">Leaflet</a> ,
@@ -460,7 +460,7 @@
           unload: ['Confirmed', 'Recovered', 'Death'],
         });
 
-        $("#hint").text("Click a place to see details.");
+        $("#hint").text("Click a place to review local trend.");
 
       });
 

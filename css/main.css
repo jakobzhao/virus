@@ -230,8 +230,13 @@ text {
 
 #rank-chart {
   position: relative;
-  top: 40px;
+  top: 60px;
   left: -20px;
+}
+
+#rank-chart > div > table > tbody > tr > td > span {
+
+background-color: #dc3545 !important
 }
 
 #footer {
