@@ -106,8 +106,7 @@ html, body, main {
   position: fixed;
   bottom: 10px;
   right: 20px;
-  width: 250px;
-  /* background: dark; */
+  width: 300px;
   height: 20px;
   z-index: 1000;
   background: #343a4000;
@@ -119,7 +118,7 @@ html, body, main {
 }
 
 .legend .card-title {
-  font-size: 15px;
+  font-size: 13px;
   /* text-align: left; */
   /* padding-left: 4px; */
   /* background: #343a4000; */
