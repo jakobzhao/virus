@@ -184,11 +184,12 @@ span {
 #hint {
   position: relative;
   top: -40px;
+  width: 5000px;
   color: gray;
-  font-size: 11px;
+  font-size: 13px;
   font-style: italic;
   text-decoration: underline;
-  left: -10px
+  left: -10px;
 }
 
 .counts {
