@@ -68,25 +68,24 @@
       <div id="total-chart"></div>
       <div id="rank-chart"></div>
 
-      <div id="footer">
-        <!--        CartoDB basemap, -->
-        <p><a href="https://hgis.uw.edu" target="_blank"><img src="img/logo.png" width="250px"></img></a></p>
-        <p>Made By <a href="http://hgis.uw.edu" target="_blank">Humanistic GIS Lab at University of Washington - Seattle</a>.</p>
-        <p>Data sources are from <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/" target="_blank">WHO</a>,
-          <a href="https://www.cdc.gov/coronavirus/2019-ncov/cases-in-us.html" target="_blank">CDC</a>,
-          <a href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html" target="_blank">PHA</a> ,
-          <a href="http://2019ncov.chinacdc.cn/2019-nCoV/" target="_blank">China CDC</a>
-          and <a href="https://voice.baidu.com/act/newpneumonia/newpneumonia" target="_blank">Baidu</a>.</p>
-        <p>Platform is created by
-          <a href="https://leafletjs.com" target="_blank">Leaflet</a> ,
-          <a href="https://d3js.org" target="_blank">D3</a>,
-          <a href="https://c3js.org" target="_blank">C3</a>,
-          <a href="https://getbootstrap.com" target="_blank">bootstrap</a>,
-          and <a href="https://www.chroma.com" target="_blank">chroma</a>. </p>
-        <p>The Server is provided by <a href="https://csde.washington.edu/" target="_blank">UW's Center for Studies in Demography and Ecology</a>.</p>
-        <p>Our data can be download <a href="http://hgis.uw.edu/virus/assets/virus.db" target="_blank">here</a>.</p>
-      </div>
+    <div id="footer">
+      <p><a href="https://hgis.uw.edu" target="_blank"><img src="img/logo.png" width="250px"></img></a></p>
+      <div>Made By <a href="http://hgis.uw.edu" target="_blank">Humanistic GIS Lab at University of Washington - Seattle</a>.
+        Data sources are from <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/" target="_blank">WHO</a>,
+        <a href="https://www.cdc.gov/coronavirus/2019-ncov/cases-in-us.html" target="_blank">CDC</a>,
+        <a href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html" target="_blank">PHA</a> ,
+        <a href="http://2019ncov.chinacdc.cn/2019-nCoV/" target="_blank">China CDC</a>
+        and <a href="https://voice.baidu.com/act/newpneumonia/newpneumonia" target="_blank">Baidu</a>.
+        Platform is created by
+        <a href="https://leafletjs.com" target="_blank">Leaflet</a> ,
+        <a href="https://d3js.org" target="_blank">D3</a>,
+        <a href="https://c3js.org" target="_blank">C3</a>,
+        <a href="https://getbootstrap.com" target="_blank">bootstrap</a>,
+        and <a href="https://www.chroma.com" target="_blank">chroma</a>.
+        The Server is provided by <a href="https://csde.washington.edu/" target="_blank">UW's Center for Studies in Demography and Ecology</a>.
+        Our data can be download <a href="http://hgis.uw.edu/virus/assets/virus.db" target="_blank">here</a>.</div>
     </div>
+  </div>
 
     <div id="map"></div>
 
@@ -96,7 +95,7 @@
 
         <div class="card">
           <div class="card-body legend-color-1">
-            <h5 class="card-title" style="color:black">0</h5>
+            <h5 class="card-title" style="color:black">1</h5>
 
           </div>
         </div>
@@ -123,7 +122,12 @@
 
         <div class="card">
           <div class="card-body legend-color-5">
-            <h5 class="card-title" style="color:black">1000+</h5>
+            <h5 class="card-title" style="color:black">1,000</h5>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body legend-color-6">
+            <h5 class="card-title" style="color:black">10,000+</h5>
           </div>
         </div>
       </div>
@@ -149,8 +153,6 @@
     </div>
   </div>
   <script>
-
-
     $(window).ready(function() {
       $('.loader').fadeOut("slow");
     });
@@ -168,8 +170,8 @@
       center: [31.448, 105.765],
       zoomControl: false,
       zoom: 5.5,
-      maxZoom: 16,
-      minZoom: 1,
+      maxZoom: 10,
+      minZoom: 4,
       worldCopyJump: true
     });
 
@@ -194,8 +196,8 @@
 
     var chart, rchart;
 
-    var colors = chroma.scale('YlOrRd').mode('lch').colors(7);
-    for (i = 0; i < 5; i++) {
+    var colors = chroma.scale('YlOrRd').mode('lch').colors(6);
+    for (i = 0; i < 6; i++) {
       $('head').append($("<style> .region-color-" + (i + 1).toString() + " { color: " + colors[i] + "; font-size: 15px; text-shadow: 0 0 3px #ffffff;} </style>"));
       $('head').append($("<style> .legend-color-" + (i + 1).toString() + " { background: " + colors[i] + "; font-size: 15px; text-shadow: 0 0 3px #ffffff;} </style>"));
     }
@@ -332,7 +334,9 @@
           // return "#00000000";
         }
 
-        if (pop >= 1000) {
+        if (pop >= 10000) {
+          id = 5;
+        } else if (pop > 1000 && pop <= 9999) {
           id = 4;
         } else if (pop > 250 && pop <= 999) {
           id = 3;
@@ -353,14 +357,22 @@
 
 
       function style(feature) {
-        return {
-          fillColor: setColor(feature.properties.enname),
-          fillOpacity: 0.4,
-          weight: 2,
-          opacity: 1,
-          color: '#b4b4b4',
-          dashArray: '3'
-        };
+        if (feature.properties.enname == "california" || feature.properties.enname == "washington" || feature.properties.enname == "bc" || feature.properties.enname == "ontario" || feature.properties.enname == "illinois" || feature.properties
+          .enname == "massachusetts") {
+          return {
+            fillOpacity: 0,
+            opacity: 0,
+          };
+        } else {
+          return {
+            fillColor: setColor(feature.properties.enname),
+            fillOpacity: 0.4,
+            weight: 1,
+            opacity: 1,
+            color: '#b4b4b4',
+            dashArray: '3'
+          };
+        }
       }
 
 
@@ -498,7 +510,7 @@
               format: "%b %d",
               centered: true,
               fit: true,
-               count: 8
+              count: 8
             }
           },
           y: {

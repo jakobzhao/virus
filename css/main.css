@@ -240,13 +240,13 @@ background-color: #dc3545 !important
 
 #footer {
   position: relative;
-  top: 120px;
+  top: 80px;
   bottom: 10px;
-  left: 10px;
-  font-size: 10pt;
+  font-size: 11pt;
+  margin-bottom: 20px;
   color: lightgray;
   /* bottom: 0; */
-  line-height: 100%;
+  line-height: 120%;
   /* z-index: 10000002!important; */
 }
 
