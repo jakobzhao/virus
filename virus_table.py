@@ -75,8 +75,14 @@ with open("assets/virus.csv", "w", encoding="utf-8") as fp:
         hubei = line.split(",")[14]
         if flag != priorFlag:
             fp.write(str(row)[1:len(str(row)) - 1].replace("\'", "").replace("None", "").replace(", ", ",").replace("(null)", "") + "\n")
-        priorFlag = flag
-        priorHubei = hubei
+            priorFlag = flag
+            priorHubei = hubei
+    for row in cursor.execute("SELECT * from virus order by rowid DESC limit 1"):
+        line = str(row)[1:len(str(row))-1].replace("\'", "").replace("None", "").replace(", ", ",").replace("(null)", "") + "\n"
+        flag = line[0:10]
+        hubei = line.split(",")[14]
+        if hubei != priorHubei:
+            fp.write(str(row)[1:len(str(row)) - 1].replace("\'", "").replace("None", "").replace(", ", ",").replace("(null)", "") + "\n")
 
 conn.close()
 print("finished!")
