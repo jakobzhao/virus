@@ -19,7 +19,20 @@ html, body, main {
   opacity: 1;
 }
 
+#demo {
+  font-size: 14px
+}
+#demo>h5 {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: bold;
+  font-size: 16px
+}
 
+#demo>li {
+  /* padding: 5px; */
+  margin-left: 10px;
+  line-height: 20px;
+}
 
 #map {
   position: relative;
@@ -222,13 +235,13 @@ text {
 
 #total-chart {
   position: relative;
-  top: 30px;
+  top: 10px;
   left: -20px;
 }
 
 #rank-chart {
   position: relative;
-  top: 60px;
+  top: 30px;
   left: -20px;
 }
 
@@ -238,11 +251,10 @@ text {
 
 #footer {
   position: relative;
-  top: 120px;
+  top: 40px;
   bottom: 10px;
-  font-size: 11pt;
+  font-size: 13px;
   line-height: 150%;
-  margin-bottom: 20px;
   color: lightgray;
 }
 
