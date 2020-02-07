@@ -1,31 +1,21 @@
-# 2019 Coronavirus Map
+#  Noval Coronavirus Infection Map
 
-This repository stores the source code of the Noval Coronavirous Map (https://hgis.uw.edu/virus). This map is made by the [Humanistic GIS Lab](https://hgis.uw.edu) at [University of Washington – Seattle](https://www.uw.edu). The virus trend dataset are collected from multiple official data sources, and we also try to make timely update to display the latest updates. 
+This repository stores the source code for the Noval Coronavirus Infection Map (https://hgis.uw.edu/virus). This map is made by the [Humanistic GIS Lab](https://hgis.uw.edu) at [University of Washington – Seattle](https://www.uw.edu). This online internactive map enable users to track the spreading strend of Noval Coronavirus infection in a timely fashion since Jan 21st, 2020. The Coronavirus infection dataset is timely collected from multiple official  sources and plotted to the map. This online internactive map enable users to track the spreading strend of Noval Coronavirus infection in a timely fashion. A user can track either the global and local trend of the virus infection.
 
 
-
-interactive map was built upon opensource libraries and collecte
 
 # Data Sources:
-a)	National Health Commission (NHC) of the People’s Republic of China;
-b)	China’s Provincial & Municipal Health Commission;
-c)	China’s Provincial & Municipal government database;
-d)	Public data published from Hongkong, Macau and Taiwan official channels;
-e)	WHO, CDC, PHA, China NHC and Baidu
-a)	China’s data is updated from NHC every day before 3:00 PM EST (providential data is not up to date until later in the day, China’s national data might occur to be greater than the sum of providential data); Global data is updated from World Health Organization (WHO); USA data is updated from CDC
-## 	Principals & Data Update:
-b)	Data will be updated Every 4 hours; Data is verified daily;
-c)	Due to data-calculation verification, live update of national and provincial data will experience a slight delay compared to data from official sites.
-d)	China’s data is updated to provincial & municipal scale
-e)	Data concerning USA and Canada will be specified to provincial & Municipal level soon
-## 	Functions:
-a)	Interactive web-based map, clicking on countries will present the respective country’s national epidemic data;
-b)	Clicking on provinces in China will present the respective province’s epidemic data;
-c)	Dot chart tracks the data changes since January 21st;
-4.	Website can be accessed via:  http://hgis.uw.edu/virus/assets/virus.db
-5.	Data are manipulated via Sqlite, data is represented by a 4-sequel entry divided by dashes, the first sequel represents number of confirmed cases, the second sequel represents suspected cases, the third sequel represents cured cases, the fourth sequel represents death cases
+The data are mainly collected from a) National Health Commission (NHC) of the People’s Republic of China; b) China’s Provincial & Municipal Health Commission; c) China’s Provincial & Municipal government database; d) Public data published from Hongkong, Macau and Taiwan official channels; e) (WHO), (CDC), PHA, China NHC and Baidu.
+The dataset (in sqlite format) can be dowloaded from http://hgis.uw.edu/virus/assets/virus.db. You can view the data (in csv format) at http://hgis.uw.edu/virus/assets/virus.csv.
 
-Made by
-Platform is created by Leaflet, D3, C3, bootstrap, and chroma.
-The Server is provided by UW’s Center for Studies in Demography and Ecology
-Team members: Bo Zhao, Cindy Xu, Lola , Joshua Ji, Steven
+> **Note:** In the data table, each cell represents the infection status in the format of "#-#-#-#" (a 4-sequel entry divided by dashes). The first sequel represents number of confirmed cases, the second sequel represents suspected cases, the third sequel represents cured cases, the fourth sequel represents death cases.
+
+## 	Update Procedure:
+
+The global data of the virus infection is collected from WHO, the China data is collected from multiple sources such as NHC, and Baidu. We also refer to CDC to verifying the virus spreading in the U.S. To make a timely updates of the map, we will collect the data every 4 hours, and verify the data quality per day. In addition, we plan to provide finer scale data from China (the county level), U.S. (the state level) and Canada (the province level) in the next version.
+
+
+## Acknowledgement
+
+- Team members: Bo Zhao, Fengyu Xu, Lola Kang, Joshua Ji, and Steven Bao.
+- The Server is hosted at UW’s Center for Studies in Demography and Ecology (CSDE).
