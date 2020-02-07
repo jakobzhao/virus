@@ -4,7 +4,7 @@ This repository stores the source code for the Noval Coronavirus Infection Map (
 
 
 ## Data Sources:
-The data are mainly collected from a) National Health Commission (NHC) of the People’s Republic of China; b) China’s Provincial & Municipal Health Commission; c) China’s Provincial & Municipal government database; d) Public data published from Hongkong, Macau and Taiwan official channels; e) World Health Organization (WHO), f) Centers for Disease Control and Prevention (CDC), g) The Periodic Health Assessment (PHA), h) Baidu.
+The data are mainly collected from a) [National Health Commission](http://en.nhc.gov.cn/) (NHC) of the People’s Republic of China; b) China’s Provincial & Municipal Health Commission; c) China’s Provincial & Municipal government database; d) Public data published from Hongkong, Macau and Taiwan official channels; e) [World Health Organization](https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/) (WHO), f) [Centers for Disease Control and Prevention](https://www.cdc.gov/coronavirus/) (CDC), g) [Public Health Agency of Canada](https://www.canada.ca/en/public-health.html) (PHA), h) [Baidu](https://voice.baidu.com/act/newpneumonia/newpneumonia).
 
 - The dataset (in sqlite format) can be dowloaded from http://hgis.uw.edu/virus/assets/virus.db.
 
@@ -20,4 +20,4 @@ The global data of the virus infection is collected from WHO, the China data is 
 ## Acknowledgement
 
 - Team members: Bo Zhao, Fengyu Xu, Lola Kang, Joshua Ji, and Steven Bao.
-- The Server is hosted at [UW's Center for Studies in Demography and Ecology](https://csde.washington.edu/)(CSDE).
+- The Server is hosted at [UW's Center for Studies in Demography and Ecology](https://csde.washington.edu/) (CSDE).
