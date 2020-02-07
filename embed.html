@@ -9,19 +9,20 @@
   <title>2019 Coronavirus Map</title>
   <style>
 
-object {
+    .zoom {
 
-zoom: 0.75; 
+      transition: scale(0.55)
+      width: 1026px;
+      height: 200px;
 
-}
-
+    }
 
   </style>
 
 </head>
-
+<!-- style="transform: scale(0.55)" width="1026" height="800" -->
 <body>
-  <object type="text/html" width="1026" height="800" data="https://hgis.uw.edu/virus">
+  <object type="text/html" class="zoom"  width="1026" height="800" data="https://hgis.uw.edu/virus">
   </object>
 </body>
 </html>

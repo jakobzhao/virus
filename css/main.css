@@ -104,8 +104,8 @@ html, body, main {
   color: white;
   opacity: 1;
   padding: 40px 15px 20px 15px;
-  overflow-x: hidden;
-  overflow-y: auto
+  /* overflow-x: hidden;
+  overflow-y: visible; */
   /* overflow: hidden; */
 
 }
