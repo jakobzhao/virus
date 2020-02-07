@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <meta name="author" content="Bo Zhao">
+  <meta name="authors" content="Bo Zhao, Fengyu Xu, Xiaoqi Bao">
   <title>2019 Coronavirus Map</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
@@ -351,7 +351,7 @@
       function zoomToFeature(e) {
         // mymap.fitBounds(e.target.getBounds());
 
-        $("#hint").text("click here to reset.");
+        $("#hint").text("click here go back to the globle trend.");
 
 
 
@@ -419,8 +419,8 @@
       $("#hint").on("click", function() {
         calCounts(global);
         chart.load({
-          columns: [global.c, global.s, global.r, global.d],
-          unload: ['Confirmed', 'Suspected', 'Recovered', 'Death'],
+          columns: [global.c,  global.r, global.d],
+          unload: ['Confirmed',  'Recovered', 'Death'],
         });
 
       });
@@ -504,7 +504,6 @@
         },
         bindto: "#total-chart"
       });
-
 
 
       rchart = c3.generate({
