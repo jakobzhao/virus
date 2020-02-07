@@ -20,4 +20,4 @@ The global data of the virus infection is collected from WHO, the China data is 
 ## Acknowledgement
 
 - Team members: Bo Zhao, Fengyu Xu, Lola Kang, Joshua Ji, and Steven Bao.
-- The Server is hosted at UW’s Center for Studies in Demography and Ecology (https://csde.washington.edu/) (CSDE).
+- The Server is hosted at [UW's Center for Studies in Demography and Ecology](https://csde.washington.edu/)(CSDE).
