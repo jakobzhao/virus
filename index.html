@@ -148,8 +148,6 @@
     </div>
   </div>
   <script>
-
-
     $(window).ready(function() {
       $('.loader').fadeOut("slow");
     });
@@ -352,14 +350,21 @@
 
 
       function style(feature) {
-        return {
-          fillColor: setColor(feature.properties.enname),
-          fillOpacity: 0.4,
-          weight: 2,
-          opacity: 1,
-          color: '#b4b4b4',
-          dashArray: '3'
-        };
+        if (feature.properties.enname == "california" || feature.properties.enname == "washington" || feature.properties.enname == "bc" || feature.properties.enname == "ontario" ||feature.properties.enname == "illinois"  ||feature.properties.enname == "massachusetts") {
+          return {
+            fillOpacity: 0,
+            opacity: 0,
+          };
+        } else {
+          return {
+            fillColor: setColor(feature.properties.enname),
+            fillOpacity: 0.4,
+            weight: 1,
+            opacity: 1,
+            color: '#b4b4b4',
+            dashArray: '3'
+          };
+        }
       }
 
 
@@ -497,7 +502,7 @@
               format: "%b %d",
               centered: true,
               fit: true,
-               count: 8
+              count: 8
             }
           },
           y: {
