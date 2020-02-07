@@ -30,7 +30,7 @@
       <div id="title"><img src="img/virus_logo.png" width="28px"></a> 2019 Coronavirus Map
         <span><a href="https://www.facebook.com/uwgeog/" target="_blank"><i class="fab fa-facebook"></i></a></span>
         <span><a href="https://twitter.com/UW" target="_blank"><i class="fab fa-twitter-square"></i></a></span>
-        <span><a data-toggle="modal" data-target="#disclaimer"><i class="nav fas fa-question-circle"></i></a></span>
+        <span><a data-toggle="modal" data-target="#infowindow"><i class="nav fas fa-question-circle"></i></a></span>
       </div>
 
       <p><span id="placename">Global Trend</span> </p>
@@ -129,11 +129,32 @@
 
     </div>
   </main>
-
+  <div id="infowindow" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="width:1250px!important">
+      <div class="modal-content">
+        <div class="modal-header">
+          <strong class="modal-title" id="exampleModalLongTitle">Information</strong>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="demo" class="carousel slide" data-ride="carousel">
+            <p>This calculator is intended only as a watering guide and is based on historical data. For greater accuracy we recommend consulting with your local extension agency. Please make sure your watering practice complies with state and local
+              ordinances. For more information about this calculator contact us at <a href="mailto://info@tgwca.org">info@tgwca.org</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <script>
+
+
     $(window).ready(function() {
       $('.loader').fadeOut("slow");
     });
+
+
 
     var createLabelIcon = function(labelClass, labelText) {
       return L.divIcon({
