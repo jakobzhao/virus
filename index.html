@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="authors" content="Bo Zhao, Fengyu Xu, Lola Kang, Joshua Ji, and Steven Bao">
-  <title>Noval Coronavirus Infection Map</title>
+  <title>Novel Coronavirus Infection Map</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
@@ -27,7 +27,7 @@
   <main>
     <div class="loader"></div>
     <div id="info">
-      <div id="title"><img src="img/virus_logo.png" width="28px"></a> Noval Coronavirus Infection Map
+      <div id="title"><img src="img/virus_logo.png" width="28px"></a> Novel Coronavirus Infection Map
         <span><a href="https://www.facebook.com/uwgeog/" target="_blank"><i class="fab fa-facebook"></i></a></span>
         <span><a href="https://twitter.com/UW" target="_blank"><i class="fab fa-twitter-square"></i></a></span>
         <span><a href="https://github.com/jakobzhao/virus" target="_blank"><i class="fab fa-github-square"></i></a></span>
@@ -35,7 +35,7 @@
       </div>
 
       <p><span id="placename">Global Trend</span> </p>
-      <p> <span id="date"></span> <span id="hint"> Click a place to see local trend.</span></p>
+      <p> <span id="date"></span> <span id="hint"> Click a place to review local trend.</span></p>
       <div class="card-deck counts">
         <div class="card">
           <div class="card-body confirmed">
@@ -140,7 +140,7 @@
         </div>
         <div class="modal-body">
           <div id="demo" class="carousel " data-ride="carousel">
-            <p>This online interactive map enables users to track both the global and local trend of Noval Coronavirus infection since Jan 21st, 2020. The supporting dataset is timely collected from multiple official sources and then plotted onto
+            <p>This online interactive map enables users to track both the global and local trend of Novel Coronavirus infection since Jan 21st, 2020. The supporting dataset is timely collected from multiple official sources and then plotted onto
               this map.</p>
             <h5>Data Sources</h5>
             <p>The data are mainly collected from 1. <a href="http://www.nhc.gov.cn" target="_blank">National Health Commission</a> (NHC) of the People’s Republic of China
@@ -229,7 +229,7 @@
 
       // $("#date").text(datasets[0][datasets[0].length - 1]["datetime"].toString().split(" 2020")[0].substring(4));
       lastupdate = new Date(datasets[0][datasets[0].length - 1]["datetime"]);
-      $("#date").text("Last update at " + lastupdate.toLocaleDateString() + " " + lastupdate.toLocaleTimeString() + " PST");
+      $("#date").text("Last update at " + lastupdate.toLocaleDateString() + " " + lastupdate.toLocaleTimeString() + " EST");
 
       //totalConfirmed
       function tc(country) {
@@ -493,7 +493,7 @@
           unload: ['Confirmed', 'Recovered', 'Death'],
         });
 
-        $("#hint").text("Click a place to see local trend.");
+        $("#hint").text("Click a place to review local trend.");
 
       });
 
