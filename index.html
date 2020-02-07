@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -21,6 +22,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
+
 <body>
   <main>
     <div class="loader"></div>
@@ -31,7 +33,7 @@
         <span><a data-toggle="modal" data-target="#disclaimer"><i class="nav fas fa-question-circle"></i></a></span>
       </div>
 
-      <p><span id="placename">Global Stats.</span> </p>
+      <p><span id="placename">Global Trend</span> </p>
       <p> <span id="date"></span> <span id="hint"> Click a place to see details.</span></p>
       <div class="card-deck counts">
         <div class="card">
@@ -210,7 +212,7 @@
       var recovered = ["Recovered"];
       var death = ["Death"]
       var global = {
-        name: "global",
+        name: "Global Trend",
         c: confirmed,
         s: suspected,
         r: recovered,
@@ -269,7 +271,6 @@
           i["s"].push(sp);
           i["r"].push(rc);
           i["d"].push(dd);
-
         });
 
         $(".confirmed-count").text(cf);
@@ -277,9 +278,15 @@
         $(".recovered-count").text(rc);
         $(".death-count").text(dd);
 
-
-        $("#placename").text(i["name"].toUpperCase() + " Stats");
-
+        if (i["name"] == "anhui" || i["name"] == "beijing" || i["name"] == "chongqing" || i["name"] == "fujian" || i["name"] == "gansu" || i["name"] == "guangdong" ||
+          i["name"] == "guangxi" || i["name"] == "guizhou" || i["name"] == "hainan" || i["name"] == "hebei" || i["name"] == "heilongjiang" || i["name"] == "henan" || i["name"] == "hongkong" ||
+          i["name"] == "hubei" || i["name"] == "hunan" || i["name"] == "neimenggu" || i["name"] == "jiangsu" || i["name"] == "jiangxi" || i["name"] == "jilin" || i["name"] == "liaoning" ||
+          i["name"] == "macau" || i["name"] == "ningxia" || i["name"] == "qinghai" || i["name"] == "shanxi" || i["name"] == "shandong" || i["name"] == "shanghai" || i["name"] == "shanxi" ||
+          i["name"] == "sichuan" || i["name"] == "tianjin" || i["name"] == "xinjiang" || i["name"] == "yunnan" || i["name"] == "zhejiang" || i["name"] == "xizang") {
+          $("#placename").text(i["name"].toUpperCase() + ", CHINA");
+        } else {
+          $("#placename").text(i["name"].toUpperCase());
+        }
 
       }
 
@@ -420,8 +427,8 @@
       $("#hint").on("click", function() {
         calCounts(global);
         chart.load({
-          columns: [global.c,  global.r, global.d],
-          unload: ['Confirmed',  'Recovered', 'Death'],
+          columns: [global.c, global.r, global.d],
+          unload: ['Confirmed', 'Recovered', 'Death'],
         });
 
       });
