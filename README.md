@@ -4,7 +4,7 @@ This repository stores the source code for the Noval Coronavirus Infection Map (
 
 
 ## Data Sources:
-The data are mainly collected from a) National Health Commission (NHC) of the People’s Republic of China; b) China’s Provincial & Municipal Health Commission; c) China’s Provincial & Municipal government database; d) Public data published from Hongkong, Macau and Taiwan official channels; e) World Health Organization (WHO), f) (CDC), PHA, and Baidu.
+The data are mainly collected from a) National Health Commission (NHC) of the People’s Republic of China; b) China’s Provincial & Municipal Health Commission; c) China’s Provincial & Municipal government database; d) Public data published from Hongkong, Macau and Taiwan official channels; e) World Health Organization (WHO), f) Centers for Disease Control and Prevention (CDC), g) The Periodic Health Assessment (PHA), h) Baidu.
 
 - The dataset (in sqlite format) can be dowloaded from http://hgis.uw.edu/virus/assets/virus.db.
 
@@ -14,10 +14,10 @@ The data are mainly collected from a) National Health Commission (NHC) of the Pe
 
 ## 	Update Procedure:
 
-The global data of the virus infection is collected from WHO, the China data is collected from multiple sources such as NHC, and Baidu. We also refer to CDC to verifying the virus spreading in the U.S. To make a timely updates of the map, we will collect the data every 4 hours, and verify the data quality per day. In addition, we plan to provide finer scale data from China (the county level), U.S. (the state level) and Canada (the province level) in the next version.
+The global data of the virus infection is collected from WHO, the China data is collected from multiple sources such as NHC, and Baidu. We also refer to CDC to verify the virus spreading in the U.S. To make timely updates of the map, we will collect the data every 4 hours, and verify the data quality per day. In addition, we plan to provide finer scale data from China (the county level), U.S. (the state level) and Canada (the province level) in the next version.
 
 
 ## Acknowledgement
 
 - Team members: Bo Zhao, Fengyu Xu, Lola Kang, Joshua Ji, and Steven Bao.
-- The Server is hosted at UW’s Center for Studies in Demography and Ecology (CSDE).
+- The Server is hosted at UW’s Center for Studies in Demography and Ecology (https://csde.washington.edu/) (CSDE).
