@@ -13,7 +13,7 @@ The data are mainly collected from a) [National Health Commission](http://en.nhc
 
 - You can view the data (in CSV format) at http://hgis.uw.edu/virus/assets/virus.csv.
 
-> **Note:** In the data table, each cell indicates the infection status in the format of "#-#-#-#" -- a 4-sequel entry divided by dashes. The first sequel represents the number of confirmed cases, the second sequel represents suspected cases, the third sequel represents cured cases, the fourth sequel represents death cases.
+> **Note:** In the data table, each entry indicates the infection status in the format of ·#-#-#-#· - a 4-sequel entry divided by dashes. The first sequel represents the number of confirmed cases, the second sequel represents suspected cases, the third sequel represents cured cases, the fourth sequel represents death cases.
 
 ## 	Update Procedure:
 
