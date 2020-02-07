@@ -1,6 +1,6 @@
-#  Noval Coronavirus Infection Map
+#  Novel Coronavirus Infection Map
 
-This repository stores the source code for the Noval Coronavirus Infection Map (https://hgis.uw.edu/virus). This online internactive map enables users to track both the global and local trends of Noval Coronavirus infection since Jan 21st, 2020. The dataset is timely collected from multiple official sources and then plotted opto this map.
+This repository stores the source code for the Novel Coronavirus Infection Map (https://hgis.uw.edu/virus). This online internactive map enables users to track both the global and local trends of Novel Coronavirus infection since Jan 21st, 2020. The dataset is timely collected from multiple official sources and then plotted opto this map.
 
 
 
@@ -21,6 +21,6 @@ The country-level data is collected from WHO, while the data of each province in
 
 ## Acknowledgement:
 
--  This map is made by the [Humanistic GIS Lab](https://hgis.uw.edu) at [University of Washington – Seattle](https://www.uw.edu). 
+-  This map is made by the [Humanistic GIS Lab](https://hgis.uw.edu) at [University of Washington – Seattle](https://www.uw.edu).
 - Team members: Bo Zhao (leader), Fengyu Xu, Lola Kang, Joshua Ji, and Steven Bao.
 - The Server is hosted at [UW's Center for Studies in Demography and Ecology](https://csde.washington.edu/) (CSDE).
