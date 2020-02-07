@@ -133,38 +133,40 @@
     <div class="modal-dialog modal-dialog-centered" role="document" style="width:1250px!important">
       <div class="modal-content">
         <div class="modal-header">
-          <strong class="modal-title" id="exampleModalLongTitle">Information</strong>
+          <strong class="modal-title" id="exampleModalLongTitle">Info</strong>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          <div id="demo" class="carousel slide" data-ride="carousel">
-            <p>This map is made by the <a href="https://www.cdc.gov/coronavirus/2019-ncov/cases-in-us.html" target="_blank">Humanistic GIS Lab<a> at University of Washington – Seattle. This online internactive map enable users to
-              track the spreading strend of Noval Coronavirus infection in a timely fashion since Jan 21st, 2020. The Coronavirus infection dataset is timely collected from multiple official sources and plotted to the map. A user can track either the global and local trend of the virus infection.</p>
-            <h5 class="infoSection"> Data Sources</h5>
-            <p>The data are mainly collected from a) National Health Commission (NHC) of the People’s Republic of China; b) China’s Provincial & Municipal Health Commission; c) China’s Provincial & Municipal government database; d) Public data
-              published from Hongkong, Macau and Taiwan official channels; e) World Health Organization (WHO), f) (CDC), PHA, and Baidu.
-              The dataset (in sqlite format) can be dowloaded from <a href = "http://hgis.uw.edu/virus/assets/virus.db" target = "_blank">here</a>.
-              You can view the data (in csv format) at <a href = "http://hgis.uw.edu/virus/assets/virus.csv" target = "_blank">here</a>.</p>
+          <div id="demo" class="carousel " data-ride="carousel">
+            <p>This map is made by the <a href="https://www.cdc.gov/coronavirus/2019-ncov/cases-in-us.html" target="_blank">Humanistic GIS Lab</a> at University of Washington – Seattle. This online internactive map enable users to
+                  track the spreading strend of Noval Coronavirus infection in a timely fashion since Jan 21st, 2020. The Coronavirus infection dataset is timely collected from multiple official sources and plotted to the map. A user can track either
+                  the global and local trend of the virus infection.</p>
+            <h5>Data Sources</h5>
+            <p>The data are mainly collected from 1. <a href="http://www.nhc.gov.cn" target="_blank">National Health Commission</a> (NHC) of the People’s Republic of China
+              2. China’s Provincial & Municipal Health Commission, China’s Provincial & Municipal government database
+              3. Public data published from Hongkong, Macau and Taiwan official channels
+              4. <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/" target="_blank">World Health Organization</a> (WHO)
+              5. <a href="https://www.cdc.gov/coronavirus/2019-ncov/cases-in-us.html" target="_blank">Centers for Disease Control and Prevention</a> (CDC)
+              6.<a href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html" target="_blank">Public Health Agency of Canada</a> (PHAC)
+              7.<a href="https://voice.baidu.com/act/newpneumonia/newpneumonia" target="_blank">Baidu</a>.
+              The dataset (in sqlite format) can be dowloaded from <a href="http://hgis.uw.edu/virus/assets/virus.db" target="_blank">here</a>.
+              You can view the data (in csv format) at <a href="http://hgis.uw.edu/virus/assets/virus.csv" target="_blank">here</a>.</p>
 
-            <p>Notably: In the data table, each cell represents the infection status in the format of "#-#-#-#" -- a 4-sequel entry divided by dashes. The first sequel represents number of confirmed cases, the second sequel represents suspected cases,
+            <p>Notably, in the data table, each cell represents the infection status in the format of "#-#-#-#" -- a 4-sequel entry divided by dashes. The first sequel represents number of confirmed cases, the second sequel represents suspected
+              cases,
               the third sequel represents cured cases, the fourth sequel represents death cases.
             </p>
             <h5>Update Procedure</h5>
-            <p>The global data of the virus infection is collected from
-              <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/" target="_blank">WHO</a>,
-              the China data is collected from multiple sources such as <a href="http://www.nhc.gov.cn" target="_blank">NHC</a>,
-              and <a href="https://voice.baidu.com/act/newpneumonia/newpneumonia" target="_blank">Baidu</a>.
-              We also refer to <a href="https://www.cdc.gov/coronavirus/2019-ncov/cases-in-us.html" target="_blank">CDC</a>
-              to verifying the virus spreading in the U.S. To make a timely updates of the
-              map, we will collect the data every 4 hours, and verify the data quality per day. In addition, we plan to provide finer scale data from China (the county level), U.S. (the state level) and Canada (the province level) in the next
-              version.</p>
+            <p>The global data of the virus infection is collected from WHO,
+              the China data is collected from multiple sources such as NHC, and Baidu.
+              We also refer to CDC to verifying the virus spreading in the U.S. To make a timely updates of the map, we will collect the data every 4 hours, and verify the data quality per day. In addition, we plan to provide finer scale data from China (the county level), U.S. (the state level) and Canada (the province level) in the next version.</p>
 
             <h5>Acknowledgement</h5>
             <p>
               <li>Team members: Bo Zhao, Fengyu Xu, Lola Kang, Joshua Ji, and Steven Bao.</li>
-              <li>The Server is hosted at UW’s Center for Studies in Demography and Ecology (CSDE).</li>
+              <li>The Server is hosted at UW’s <a href="https://https://csde.washington.edu/" target="_blank">Center for Studies in Demography and Ecology (CSDE)</a>.</li>
             </p>
           </div>
         </div>
@@ -420,7 +422,7 @@
       function zoomToFeature(e) {
         // mymap.fitBounds(e.target.getBounds());
 
-        $("#hint").text("Click here to review the global trend.");
+        $("#hint").text("Click here to the global trend.");
 
 
 
