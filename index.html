@@ -228,7 +228,7 @@
           cf = 0, sp = 0, rc = 0, dd = 0;
           current = d;
           delete current["datetime"];
-          if (i["name"] != "global") {
+          if (i["name"] != "Global Trend") {
             d = current[i["name"]];
             if (d == undefined) {
               d = "0"
@@ -430,6 +430,8 @@
           columns: [global.c, global.r, global.d],
           unload: ['Confirmed', 'Recovered', 'Death'],
         });
+
+          $("#hint").text("Click a place to see details.");
 
       });
 

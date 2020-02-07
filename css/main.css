@@ -185,10 +185,10 @@ span {
   position: relative;
   top: -40px;
   color: gray;
-  font-size: 14px;
+  font-size: 11px;
   font-style: italic;
   text-decoration: underline;
-  /* left: 100px */
+  left: -10px
 }
 
 .counts {
