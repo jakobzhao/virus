@@ -75,21 +75,8 @@ html, body, main {
 }
 
 @media only screen and (max-width: 1026px) {
-  /* #info, .legend, .leaflet-top {
+  #info, .legend, .leaflet-top {
     display: none;
-  } */
-
-  #title {
-    display: flex!important;
-    margin-bottom: 30px;
-    font-size: 25px;
-    font-family: 'Oswald', sans-serif;
-    position: fix;
-    width: 480px;
-    top: 1%;
-    bottom: 1%;
-    left: .5%;
-    z-index: 1000;
   }
 }
 
@@ -104,6 +91,7 @@ html, body, main {
   color: white;
   opacity: 1;
   padding: 40px 15px 20px 15px;
+  /* overflow-x: hidden; */
   /* overflow-x: hidden;
   overflow-y: visible; */
   /* overflow: hidden; */
