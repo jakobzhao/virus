@@ -240,14 +240,12 @@ background-color: #dc3545 !important
 
 #footer {
   position: relative;
-  top: 80px;
+  top: 120px;
   bottom: 10px;
   font-size: 11pt;
+  line-height: 150%;
   margin-bottom: 20px;
   color: lightgray;
-  /* bottom: 0; */
-  line-height: 120%;
-  /* z-index: 10000002!important; */
 }
 
 .confirmed-count {

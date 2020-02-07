@@ -5,10 +5,13 @@ This repository stores the source code for the Noval Coronavirus Infection Map (
 
 
 # Data Sources:
-The data are mainly collected from a) National Health Commission (NHC) of the People’s Republic of China; b) China’s Provincial & Municipal Health Commission; c) China’s Provincial & Municipal government database; d) Public data published from Hongkong, Macau and Taiwan official channels; e) (WHO), (CDC), PHA, China NHC and Baidu.
-The dataset (in sqlite format) can be dowloaded from http://hgis.uw.edu/virus/assets/virus.db. You can view the data (in csv format) at http://hgis.uw.edu/virus/assets/virus.csv.
+The data are mainly collected from a) National Health Commission (NHC) of the People’s Republic of China; b) China’s Provincial & Municipal Health Commission; c) China’s Provincial & Municipal government database; d) Public data published from Hongkong, Macau and Taiwan official channels; e) World Health Organization (WHO), (CDC), PHA, China NHC and Baidu.
 
-> **Note:** In the data table, each cell represents the infection status in the format of "#-#-#-#" (a 4-sequel entry divided by dashes). The first sequel represents number of confirmed cases, the second sequel represents suspected cases, the third sequel represents cured cases, the fourth sequel represents death cases.
+- The dataset (in sqlite format) can be dowloaded from http://hgis.uw.edu/virus/assets/virus.db.
+
+- You can view the data (in csv format) at http://hgis.uw.edu/virus/assets/virus.csv.
+
+> **Note:** In the data table, each cell represents the infection status in the format of "#-#-#-#" -- a 4-sequel entry divided by dashes. The first sequel represents number of confirmed cases, the second sequel represents suspected cases, the third sequel represents cured cases, the fourth sequel represents death cases.
 
 ## 	Update Procedure:
 
