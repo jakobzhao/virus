@@ -241,7 +241,7 @@ text {
   font-size: 10pt;
   color: lightgray;
   /* bottom: 0; */
-  line-height: 30%;
+  line-height: 100%;
   /* z-index: 10000002!important; */
 }
 
