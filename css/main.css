@@ -20,6 +20,7 @@ html, body, main {
 }
 
 
+
 #map {
   position: relative;
   width: 100%;
@@ -61,12 +62,10 @@ html, body, main {
 }
 
 @media only screen and (max-width: 1026px) {
-    #info, .legend, .leaflet-top {
-        display: none;
-    }
-
+  #info, .legend, .leaflet-top {
+    display: none;
+  }
 }
-
 
 #info {
   position: absolute;
@@ -233,9 +232,8 @@ text {
   left: -20px;
 }
 
-#rank-chart > div > table > tbody > tr > td > span {
-
-background-color: #dc3545 !important
+#rank-chart>div>table>tbody>tr>td>span {
+  background-color: #dc3545 !important
 }
 
 #footer {
