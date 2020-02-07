@@ -22,7 +22,7 @@ html, body, main {
 #demo {
   font-size: 14px
 }
-#demo>h5 {
+#demo > h5 {
   font-family: 'Titillium Web', sans-serif;
   font-weight: bold;
   font-size: 16px
