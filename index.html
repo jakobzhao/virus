@@ -84,8 +84,8 @@
           The computational resources are provided by <a href="https://csde.washington.edu/" target="_blank">UW's Center for Studies in Demography and Ecology</a>.
           <span style="color:#e8e3d3">The timely updated dataset can be downloaded <a href="http://hgis.uw.edu/virus/assets/virus.db" style="color:#e8e3d3; text-decoration: underline;" target="_blank">here</a>.</span>
         </div>
-        <div>An isolated place &nbsp; <i
-            class="fas fa-procedures community"> </i> &nbsp; indicates a community or village where confirmed cases were found. The local governments in China have taken strict measures to isolate the residents of these places from the outside. The dataset of isolated places are constantly contributed by volunteers, and can be foudn at <a href="https://mapmiao.com/ncov/" target="_blank">mapmiao</a>. If you have any questions or
+        <div>An isolated place &nbsp; <i class="fas fa-procedures community"> </i> &nbsp; indicates a community or village where confirmed cases were found. The local governments in China have taken strict measures to isolate the residents of these
+          places from the outside. The dataset of isolated places are constantly contributed by volunteers, and can be foudn at <a href="https://mapmiao.com/ncov/" target="_blank">mapmiao</a>. If you have any questions or
           concerns, please contect <a href="mailto:zhaobao@uw.edu">Bo Zhao</a>.</div>
       </div>
     </div>
@@ -237,8 +237,37 @@
       spiderfyOnMaxZoom: false,
       singleMarkerMode: true,
       // showCoverageOnHover: false,
-      // zoomToBoundsOnClick: false
+      // zoomToBoundsOnClick: false,
+      iconCreateFunction: function(cluster) {
+        return L.divIcon({
+          html: '<span class="fas fa-procedures community community-marker"> <b>' + cluster.getChildCount() + '</b></span>'
+        });
+      }
+
     }).addTo(mymap);
+
+
+
+    //
+    // var markers = L.markerClusterGroup({
+  	// 		maxClusterRadius: 120,
+  	// 		iconCreateFunction: function (cluster) {
+  	// 			var markers = cluster.getAllChildMarkers();
+  	// 			var n = 0;
+  	// 			for (var i = 0; i < markers.length; i++) {
+  	// 				n += markers[i].number;
+  	// 			}
+  	// 			return L.divIcon({ html: n, className: 'mycluster', iconSize: L.point(40, 40) });
+  	// 		},
+  	// 		//Disable all of the defaults:
+  	// 		spiderfyOnMaxZoom: false, showCoverageOnHover: false, zoomToBoundsOnClick: false
+  	// 	});
+    //
+
+
+
+
+
 
     Promise.all([
       d3.csv('assets/virus.csv'),
@@ -250,12 +279,16 @@
       datasets[2].forEach(function(d) {
         // console.log(d);
 
-        L.marker([parseFloat(d.lat), parseFloat(d.lng)], {
-          icon: L.divIcon({
-            className: 'fas fa-procedures community'
-          })
-        }).bindPopup(d.name).addTo(communities);
+        L.marker([parseFloat(d.lat), parseFloat(d.lng)]).bindPopup(d.name).addTo(communities);
       })
+
+    //
+    //   L.marker([parseFloat(d.lat), parseFloat(d.lng)], {
+    //     icon: L.divIcon({
+    //       className: 'fas fa-procedures community'
+    //     })
+    //   }).bindPopup(d.name).addTo(communities);
+    // })
 
       // $("#date").text(datasets[0][datasets[0].length - 1]["datetime"].toString().split(" 2020")[0].substring(4));
       lastupdate = new Date(datasets[0][datasets[0].length - 1]["datetime"]);
