@@ -91,12 +91,12 @@ html, body, main {
   }
 
   #info {
-    position: fixed;
+    position: fixed !important;
     /* top: 90vh !important; */
     bottom: 5px;
     /* background-color: gray !important; */
     left: 0;
-    height:30vh;
+    height:30vh !important;
     width:100wh !important;
   }
 
