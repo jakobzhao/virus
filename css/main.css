@@ -87,7 +87,7 @@ html, body, main {
   #info, .simplebar-track {
     position: fixed;
     width: 0 !important;
-    height: 0 !important;
+    /* height: 0 !important; */
   }
 
   #title {
