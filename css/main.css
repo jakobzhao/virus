@@ -93,12 +93,14 @@ html, body, main {
   #info {
     position: fixed !important;
     /* top: 90vh !important; */
-    top: 80vh;
-    bottom: 5px;
+    /* top: 80vh; */
+    top: 0px;
+    height:50%;
+    /* bottom: 5px; */
     /* background-color: gray !important; */
     left: 0;
     /* height:30vh !important; */
-    width:0 !important;
+    width:100wh !important;
   }
 
   #title {
@@ -144,11 +146,18 @@ html, body, main {
   }
 
   .card-deck {
+    position:fixed;
+    top: 100px !important;
+    /* right: 10px; */
+    /* width: 75% !important; */
+    left: 10px;
+    /* left: 0px !important;
+    right: 0px !important; */
     /* position: relative; */
-    position: fixed;
-    left: 20px;
-    bottom: 5px;
-    width: 300px;
+    /* position: fixed; */
+    /* left: 20px; */
+    /* bottom: 5px; */
+    /* width: 300px; */
   }
 
   .card-text {
