@@ -92,10 +92,11 @@ html, body, main {
 
   #info {
     position: fixed;
-    top: 90vh !important;
+    /* top: 90vh !important; */
+    bottom: 5px;
     /* background-color: gray !important; */
     left: 0;
-    height:10vh;
+    /* height:10vh; */
     width:100wh !important;
   }
 
