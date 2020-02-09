@@ -81,12 +81,12 @@ html, body, main {
   }
 
   #info, #rank-chart, #total-chart, .c3-legend-item, .c3-legend-background, #footer, #title>img,  #title>span {
-    visibility: hidden;
+    visibility: hidden !important;
   }
 
   #info, .simplebar-track {
     position: fixed;
-    width: 0 !important;
+    width:400 !important;
     /* height: 0 !important; */
   }
 
