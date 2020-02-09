@@ -19,6 +19,13 @@ html, body, main {
   opacity: 1;
 }
 
+
+
+.community{
+  color: #dc3545; 
+  font-size: 15px;
+  text-shadow: 0 0 3px #ffffff;
+}
 #demo {
   font-size: 14px
 }
