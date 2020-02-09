@@ -157,7 +157,7 @@ html, body, main {
     /* position: fixed; */
     /* left: 20px; */
     /* bottom: 5px; */
-    /* width: 300px; */
+    width: 300px;
   }
 
   .card-text {
