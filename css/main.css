@@ -377,6 +377,9 @@ text {
   color: lightgray;
   margin-bottom: 50px;
 }
+#footer >div {
+  font-size: 13px;
+}
 
 .confirmed-count {
   color: #dc3545;

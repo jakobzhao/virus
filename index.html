@@ -75,6 +75,11 @@
 
       <div id="footer">
         <p><a href="https://hgis.uw.edu" target="_blank"><img src="img/logo.png" width="250px"></img></a></p>
+
+        <div>An isolated place &nbsp; <i class="fas fa-procedures community"> </i> &nbsp; indicates a community or village where confirmed cases were found. The local governments in China have taken strict measures to isolate the residents of these
+          places from the outside. The dataset of isolated places are constantly contributed by volunteers, and can be foudn at <a href="https://mapmiao.com/ncov/" target="_blank">mapmiao</a>.
+        </div>
+
         <div>This map is made by the <a href="http://hgis.uw.edu" target="_blank">Humanistic GIS Lab at University of Washington - Seattle</a>.
           The data are mainly collected from <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/" target="_blank">WHO</a>,
           <a href="https://www.cdc.gov/coronavirus/2019-ncov/cases-in-us.html" target="_blank">CDC</a>,
@@ -82,12 +87,16 @@
           <a href="http://2019ncov.chinacdc.cn/2019-nCoV/" target="_blank">China CDC</a>
           and <a href="https://voice.baidu.com/act/newpneumonia/newpneumonia" target="_blank">Baidu</a>.
           The computational resources are provided by <a href="https://csde.washington.edu/" target="_blank">UW's Center for Studies in Demography and Ecology</a>.
-          <span style="color:#e8e3d3">The timely updated dataset can be downloaded <a href="http://hgis.uw.edu/virus/assets/virus.db" style="color:#e8e3d3; text-decoration: underline;" target="_blank">here</a>.</span>
+          <span style="color:#e8e3d3">The timely updated dataset can be downloaded <a href="http://hgis.uw.edu/virus/assets/virus.db" style="color:#e8e3d3; text-decoration: underline;" target="_blank">here</a>.</span> If you have any questions or
+          concerns, please contect <a href="mailto:zhaobao@uw.edu">Bo Zhao</a>.
         </div>
-        <div>An isolated place &nbsp; <i class="fas fa-procedures community"> </i> &nbsp; indicates a community or village where confirmed cases were found. The local governments in China have taken strict measures to isolate the residents of these
-          places from the outside. The dataset of isolated places are constantly contributed by volunteers, and can be foudn at <a href="https://mapmiao.com/ncov/" target="_blank">mapmiao</a>. If you have any questions or
-          concerns, please contect <a href="mailto:zhaobao@uw.edu">Bo Zhao</a>.</div>
+
+
+
+
       </div>
+
+
     </div>
 
     <div id="map"></div>
@@ -257,7 +266,8 @@
       datasets[2].forEach(function(d) {
         // console.log(d);
 
-        L.marker([parseFloat(d.lat), parseFloat(d.lng)]).bindPopup(d.name + "&nbsp;&nbsp;(<a target='_blank' href='https://translate.google.com/#view=home&op=translate&sl=zh-CN&tl=en&text="+ d.name  +"'>Translate to English</a>)").addTo(communities);
+        L.marker([parseFloat(d.lat), parseFloat(d.lng)]).bindPopup(d.name + "&nbsp;&nbsp;(<a target='_blank' href='https://translate.google.com/#view=home&op=translate&sl=zh-CN&tl=en&text=" + d.name + "'>Translate to English</a>)").addTo(
+          communities);
       })
 
 
