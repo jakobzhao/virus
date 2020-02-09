@@ -84,59 +84,76 @@ html, body, main {
     visibility: hidden !important;
   }
 
-  #info, .simplebar-track {
+  .simplebar-track {
+    /* position: fixed;
+    width:100 !important; */
+    visibility: hidden !important;
+  }
+
+  #info {
     position: fixed;
-    width:400 !important;
-    /* height: 0 !important; */
+    top: 90vh !important;
+    /* background-color: gray !important; */
+    left: 0;
+    height:10vh;
+    width:100wh !important;
   }
 
   #title {
-    position: fixed !important;
+    position: fixed;
     color: gray;
+    font-size: 13px!important;
     top: 5px !important;
     left: -20px !important;
     width: 400px !important;
   }
 
   #placename {
+    /* position: relative; */
     color: gray;
-    font-size: 30px !important;
+    font-size: 15px !important;
     position: fixed !important;
     left: 10px;
-    top: 35px !important;
+    top: 25px !important;
     width: 500px;
   }
 
 
   #date {
+    /* position: relative; */
     color: black;
-    font-size: 15px!important;
+    font-size: 10px!important;
     position: fixed !important;
-    left: 10px;
-    top: 80px !important;
+    left: 12px;
+    top: 45px !important;
     width: 300px;
   }
 
 
   #hint {
+    /* position: relative; */
     color: black;
-    font-size: 15px!important;
+    font-size: 11px!important;
     position: fixed !important;
     left: 10px !important;
     font-weight: bold;
-    top: 105px !important;
+    top: 60px !important;
     width: 300px;
   }
 
   .card-deck {
+    /* position: relative; */
     position: fixed;
     left: 20px;
-    bottom: 10px;
+    bottom: 5px;
     width: 300px;
   }
 
   .card-text {
-    font-size: 16px !important
+    font-size: 12px !important
+  }
+  .card-title {
+    font-size: 10px !important
   }
 }
 
