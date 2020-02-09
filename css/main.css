@@ -93,10 +93,11 @@ html, body, main {
   #info {
     position: fixed !important;
     /* top: 90vh !important; */
+    top: 80vh;
     bottom: 5px;
     /* background-color: gray !important; */
     left: 0;
-    height:30vh !important;
+    /* height:30vh !important; */
     width:100wh !important;
   }
 
@@ -144,7 +145,7 @@ html, body, main {
 
   .card-deck {
     /* position: relative; */
-    /* position: fixed; */
+    position: fixed;
     left: 20px;
     bottom: 5px;
     width: 300px;
