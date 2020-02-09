@@ -231,8 +231,6 @@
     }
 
 
-    //ar communities = L.layerGroup().addTo(mymap);
-
     var communities = new L.MarkerClusterGroup({
       spiderfyOnMaxZoom: false,
       singleMarkerMode: true,
@@ -240,31 +238,11 @@
       // zoomToBoundsOnClick: false,
       iconCreateFunction: function(cluster) {
         return L.divIcon({
-          html: '<span class="fas fa-procedures community community-marker"> <b>' + cluster.getChildCount() + '</b></span>'
+          html: '<i class="fas fa-procedures community community-marker"> <b>' + cluster.getChildCount() + '</b></i>'
         });
       }
 
     }).addTo(mymap);
-
-
-
-    //
-    // var markers = L.markerClusterGroup({
-  	// 		maxClusterRadius: 120,
-  	// 		iconCreateFunction: function (cluster) {
-  	// 			var markers = cluster.getAllChildMarkers();
-  	// 			var n = 0;
-  	// 			for (var i = 0; i < markers.length; i++) {
-  	// 				n += markers[i].number;
-  	// 			}
-  	// 			return L.divIcon({ html: n, className: 'mycluster', iconSize: L.point(40, 40) });
-  	// 		},
-  	// 		//Disable all of the defaults:
-  	// 		spiderfyOnMaxZoom: false, showCoverageOnHover: false, zoomToBoundsOnClick: false
-  	// 	});
-    //
-
-
 
 
 
@@ -282,15 +260,8 @@
         L.marker([parseFloat(d.lat), parseFloat(d.lng)]).bindPopup(d.name).addTo(communities);
       })
 
-    //
-    //   L.marker([parseFloat(d.lat), parseFloat(d.lng)], {
-    //     icon: L.divIcon({
-    //       className: 'fas fa-procedures community'
-    //     })
-    //   }).bindPopup(d.name).addTo(communities);
-    // })
 
-      // $("#date").text(datasets[0][datasets[0].length - 1]["datetime"].toString().split(" 2020")[0].substring(4));
+
       lastupdate = new Date(datasets[0][datasets[0].length - 1]["datetime"]);
       $("#date").text("Last update: " + lastupdate.toLocaleDateString() + " " + lastupdate.toLocaleTimeString() + " PST");
 
@@ -476,8 +447,6 @@
         // select the update class, and update the contet with the input value.
 
         // $(".update").html('<b>' + layer.feature.properties.name + '</b>   ' + layer.feature.properties.density + ' people / mi<sup>2</sup>');
-
-
       }
 
       // 3.2.2 zoom to the highlighted feature when the mouse is clicking onto it.
