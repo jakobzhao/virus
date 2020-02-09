@@ -257,7 +257,7 @@
       datasets[2].forEach(function(d) {
         // console.log(d);
 
-        L.marker([parseFloat(d.lat), parseFloat(d.lng)]).bindPopup(d.name).addTo(communities);
+        L.marker([parseFloat(d.lat), parseFloat(d.lng)]).bindPopup(d.name + "&nbsp;&nbsp;(<a target='_blank' href='https://translate.google.com/#view=home&op=translate&sl=zh-CN&tl=en&text="+ d.name  +"'>Translate to English</a>)").addTo(communities);
       })
 
 
