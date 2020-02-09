@@ -144,7 +144,7 @@ html, body, main {
 
   .card-deck {
     /* position: relative; */
-    position: fixed;
+    /* position: fixed; */
     left: 20px;
     bottom: 5px;
     width: 300px;
