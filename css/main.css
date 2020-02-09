@@ -19,10 +19,12 @@ html, body, main {
   opacity: 1;
 }
 
-
+div#footer >div{
+  margin-bottom: 10px
+}
 
 .community{
-  color: #dc3545; 
+  color: #dc3545;
   font-size: 15px;
   text-shadow: 0 0 3px #ffffff;
 }
