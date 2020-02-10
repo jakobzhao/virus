@@ -7,7 +7,7 @@ This repository stores the source code for the Novel Coronavirus Infection Map (
 ![](img/interface.png)
 
 ## Data Sources:
-The data are mainly collected from a) [National Health Commission](http://en.nhc.gov.cn/) (NHC) of the People’s Republic of China; b) China’s Provincial & Municipal Health Commission; c) China’s Provincial & Municipal government database; d) Public data published from Hongkong, Macau and Taiwan official channels; e) [World Health Organization](https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/) (WHO), f) [Centers for Disease Control and Prevention](https://www.cdc.gov/coronavirus/) (CDC), g) [Public Health Agency of Canada](https://www.canada.ca/en/public-health.html) (PHA), h) [Baidu](https://voice.baidu.com/act/newpneumonia/newpneumonia).
+The data are mainly collected from a) [National Health Commission](http://en.nhc.gov.cn/) (NHC) of the People’s Republic of China; b) China’s Provincial & Municipal Health Commission; c) China’s Provincial & Municipal government database; d) Public data published from Hongkong, Macau and Taiwan official channels; e) [World Health Organization](https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/) (WHO), f) [Centers for Disease Control and Prevention](https://www.cdc.gov/coronavirus/) (CDC), g) [Public Health Agency of Canada](https://www.canada.ca/en/public-health.html) (PHA), h) [Baidu](https://voice.baidu.com/act/newpneumonia/newpneumonia), i)[Mapmiao](https://mapmiao.com/ncov/).
 
 - The dataset (in SQLite format) can be dowloaded from http://hgis.uw.edu/virus/assets/virus.db.
 
@@ -17,7 +17,7 @@ The data are mainly collected from a) [National Health Commission](http://en.nhc
 
 ## 	Update Procedure:
 
-The country-level data is collected from WHO, while the data of each province in China is collected from multiple sources such as China's NHC and Baidu. Notably, we also refer to CDC to verify the virus spreading status in the U.S. To make a timely data and map updates, we collect the data every 4 hours, and verify the data quality per day. In addition, we plan to provide finer-scale data from China (the county level), U.S. (the state level) and Canada (the province level) in the next version.
+The country-level data is collected from WHO, while the data of each province in China is collected from multiple sources such as China's NHC, Mapmiao and Baidu. Notably, we also refer to CDC to verify the virus spreading status in the U.S. To make a timely data and map updates, we collect the data every 4 hours, and verify the data quality per day. In addition, we plan to provide finer-scale data from China (the county level), U.S. (the state level) and Canada (the province level) in the next version.
 
 ## Acknowledgement:
 
