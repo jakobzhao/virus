@@ -552,9 +552,9 @@
 
 
       chart = c3.generate({
-        size: {
-          width: 440
-        },
+        // size: {
+        //   width: 440
+        // },
         data: {
           x: "t",
           xFormat: '%Y-%m-%d %H:%M:%S',
@@ -579,7 +579,10 @@
           x: {
             type: "timeseries",
             tick: {
-              format: "%b %d"
+              format: "%b %d",
+              centered: true,
+              fit: true,
+              count: 8
             }
           },
           y: {
