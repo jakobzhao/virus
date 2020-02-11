@@ -81,21 +81,22 @@ div#footer >div{
 }
 
 .leaflet-control-layers {
-  color: #333333 !important;
+  color: white !important;
   background-color: none;
   padding: 6px 8px;
   border: none !important;
-  background: rgba(225, 225, 225, 0.5) !important;
+  background: #343a40 !important;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2) !important;
   border-radius: 5px !important;
 }
 
+
 .leaflet-control-zoom, .leaflet-control-zoom-in, .leaflet-control-zoom-out {
-  color: #333333 !important;
+  color: white !important;
   padding: 0px !important;
-  background-color: transparent;
+  background-color: none;
   border: none !important;
-  background: rgba(225, 225, 225, 0.5) !important;
+  background: #343a40 !important;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2) !important;
   border-radius: 5px !important;
 }
