@@ -6,6 +6,8 @@ import sqlite3
 
 
 now = str(datetime.now())
+sqls = "INSERT OR REPLACE INTO virus ('datetime'"
+sqle = ") VALUES ('" + now + "', "
 
 placeName = {}
 with open("assets/name.csv", "r", encoding="utf-8") as fp:
@@ -14,8 +16,10 @@ with open("assets/name.csv", "r", encoding="utf-8") as fp:
         placeItem = line.replace("\n", "").split(",")
         placeName[placeItem[0]] = placeItem[1]
 
-url = "https://voice.baidu.com/act/newpneumonia/newpneumonia"
 browser = webdriver.Chrome("C:\workspace\chromedriver.exe")
+# # China Provinces
+#
+url = "https://voice.baidu.com/act/newpneumonia/newpneumonia"
 browser.get(url)
 
 
@@ -30,8 +34,7 @@ browser.find_element_by_xpath("//table[starts-with(@class,'VirusTable')]").find_
 soup = BeautifulSoup(browser.page_source, 'html.parser')
 
 time.sleep(4)
-sqls = "INSERT OR REPLACE INTO virus ('datetime'"
-sqle = ") VALUES ('" + now + "', "
+
 
 items = soup.find_all("tr")
 for item in items:
@@ -54,6 +57,56 @@ for item in items:
         print(chname, placeName[chname], confirmed, recovered, death)
         sqls += ", '" + placeName[chname].strip() + "'"
         sqle += "'" + confirmed + "-0-" + recovered + "-" + death + "', "
+
+
+# US
+# https://www.worldometers.info/coronavirus/usa-coronavirus/
+
+url = "https://www.worldometers.info/coronavirus/usa-coronavirus/"
+browser.get(url)
+browser.find_element_by_class_name('content-inner')
+soup = BeautifulSoup(browser.page_source, 'html.parser')
+states = soup.find_all("ul")[1].find_all("li")[0:]
+for state in states:
+    enName = state.text.lower().split(" ")[2]
+    confirmed = state.text.lower().split(" ")[0]
+    recovered = '0'
+    death = '0'
+
+    if recovered == "" or recovered == "-":
+        recovered = "0"
+    if death == "" or death == "-":
+        death = "0"
+    if confirmed == "" or confirmed == "-" :
+        confirmed = "0"
+    print(enName, confirmed, recovered, death)
+    sqls += ", '" + enName.strip() + "'"
+    sqle += "'" + confirmed + "-0-" + recovered + "-" + death + "', "
+
+# Canada
+
+url = "https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html"
+browser.get(url)
+browser.find_element_by_css_selector('main.container')
+soup = BeautifulSoup(browser.page_source, 'html.parser')
+provinces = soup.find_all("table")[0].find("tbody").find_all("tr")
+
+for province in provinces:
+    enName = province.find_all("td")[0].text.lower()
+    confirmed = province.find_all("td")[1].text
+    recovered = '0'
+    death = '0'
+
+    if recovered == "" or recovered == "-":
+        recovered = "0"
+    if death == "" or death == "-":
+        death = "0"
+    if confirmed == "" or confirmed == "-" :
+        confirmed = "0"
+    print(enName, confirmed, recovered, death)
+    sqls += ", '" + enName.strip() + "'"
+    sqle += "'" + confirmed + "-0-" + recovered + "-" + death + "', "
+
 
 browser.close()
 
