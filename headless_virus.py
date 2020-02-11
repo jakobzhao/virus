@@ -127,7 +127,7 @@ for province in provinces:
     else:
         recovered = '0'
         death = '0'
-
+        
     if recovered == "" or recovered == "-":
         recovered = "0"
     if death == "" or death == "-":
