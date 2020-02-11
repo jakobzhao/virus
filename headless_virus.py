@@ -11,6 +11,18 @@ options.add_argument('--no-sandbox')
 browser = webdriver.Chrome("/usr/bin/chromedriver", options=options)
 
 
+now = str(datetime.now())
+sqls = "INSERT OR REPLACE INTO virus ('datetime'"
+sqle = ") VALUES ('" + now + "', "
+
+placeName = {}
+with open("assets/name.csv", "r", encoding="utf-8") as fp:
+    lines = fp.readlines()
+    for line in lines:
+        placeItem = line.replace("\n", "").split(",")
+        placeName[placeItem[0]] = placeItem[1]
+
+
 # # China Provinces
 #
 url = "https://voice.baidu.com/act/newpneumonia/newpneumonia"
