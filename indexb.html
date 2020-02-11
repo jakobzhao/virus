@@ -424,8 +424,7 @@
 
 
       function style(feature) {
-        if (feature.properties.enname == "california" || feature.properties.enname == "washington" || feature.properties.enname == "bc" || feature.properties.enname == "ontario" || feature.properties.enname == "illinois" || feature.properties
-          .enname == "massachusetts") {
+        if (feature.properties.enname == "us" || feature.properties.enname == "canada") {
           return {
             fillOpacity: 0,
             opacity: 0,
@@ -456,6 +455,10 @@
         });
         // bring the layer to the front.
         layer.bringToFront();
+
+        if (e.target.feature.properties.enname == "us" || e.target.feature.properties.enname == "canada") {
+          layer.bringToBack();
+        }
         // e.target.feature.properties.enname
         // select the update class, and update the contet with the input value.
 
