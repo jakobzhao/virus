@@ -651,7 +651,7 @@
               position: 'outer-middle'
             },
             tick: {
-              values: [10, 50, 100, 500, 2000, 20000]
+              values: [10, 50, 100, 500, 2000, 30000]
             },
             type: 'log'
           }
@@ -670,29 +670,6 @@
       // var currentDate = new Date(d.x.toString());
       // console.log(month);
       $("#date").text(d.x.toString().split(" 2020")[0].substring(4));
-
-      // var start = currentYear.toString() + "-01-01";
-      // var end = currentYear.toString() + "-12-31";
-      //
-      //
-      //
-      // var ticks = [];
-      // start = new Date(start.toString());
-      // end = new Date(end.toString());
-      //
-      // s = start.getTime();
-      // e = end.getTime();
-      // breaks = 5;
-      // interval = Math.floor(e - s) / breaks
-      // ticks = [];
-      // for (var j = 0; j < breaks; j++) {
-      //   ticks.push(new Date(s + interval * j))
-      // }
-      // ticks.push(end);
-      //
-      // chart.internal.config.axis_x_tick_values = ticks;
-      // // chart.flush();
-      // chart.zoom([new Date(start.toString()), new Date(end.toString())]);
 
     }
 
