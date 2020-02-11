@@ -325,7 +325,7 @@ span {
   margin-top: -20px;
 }
 
-text {
+/* text {
   fill: gray
 }
 
@@ -361,7 +361,7 @@ text {
   position: relative;
   top: 30px;
   left: -20px;
-}
+} */
 
 #rank-chart>div>table>tbody>tr>td>span {
   background-color: #dc3545 !important
