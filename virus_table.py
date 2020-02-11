@@ -90,7 +90,7 @@ for state in states:
     confirmed = state.text.lower().split(" ")[0]
     if enName in latest.keys():
         recovered = latest[enName].split("-")[2]
-        death = latest[enName].split("-")[2]
+        death = latest[enName].split("-")[3]
     else:
         recovered = '0'
         death = '0'
@@ -119,7 +119,7 @@ for province in provinces:
 
     if enName in latest.keys():
         recovered = latest[enName].split("-")[2]
-        death = latest[enName].split("-")[2]
+        death = latest[enName].split("-")[3]
     else:
         recovered = '0'
         death = '0'
