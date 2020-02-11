@@ -325,7 +325,7 @@ span {
   margin-top: -20px;
 }
 
-text {
+/* text {
   fill: gray
 }
 
@@ -349,7 +349,7 @@ text {
 .value {
   background-color: black;
   color: black
-}
+} */
 
 /* #total-chart {
   position: relative;
