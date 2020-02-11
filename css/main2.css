@@ -351,11 +351,11 @@ text {
   color: black
 }
 
-#total-chart {
+/* #total-chart {
   position: relative;
   top: 10px;
   left: -20px;
-}
+} */
 
 #rank-chart {
   position: relative;
