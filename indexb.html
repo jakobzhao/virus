@@ -262,7 +262,7 @@
 
     Promise.all([
       d3.csv('assets/virus.csv'),
-      d3.json("assets/wuhan-30.json"),
+      d3.json("assets/wuhan-20.json"),
       d3.csv('assets/communities.csv')
     ]).then(function(datasets) {
 
@@ -631,8 +631,8 @@
         data: {
           x: 'x',
           columns: [
-            ['x', 'China', 'Japan', 'Singapore', 'Thailand', 'South Korea', 'Australia', 'Malaysia', 'Germany', 'U.S.'],
-            ['Confirmed Cases', china, japan, singapore, thailand, southKorea, australia, malaysia, germany, us]
+            ['x', 'China', 'Japan', 'Singapore', 'Thailand', 'South Korea', 'Malaysia', 'Australia', 'Germany', 'U.S.'],
+            ['Confirmed Cases', china, japan, singapore, thailand, southKorea, malaysia, australia, germany, us]
           ],
           type: 'bar'
         },
