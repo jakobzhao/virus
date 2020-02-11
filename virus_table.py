@@ -61,6 +61,22 @@ for item in items:
         sqle += "'" + confirmed + "-0-" + recovered + "-" + death + "', "
 
 
+# other places
+
+conn = sqlite3.connect("assets/virus.db")
+cursor = conn.cursor()
+latest = {}
+for row in cursor.execute("SELECT `arizona`, `illinois`, `washington`, `california`, `wisconsin`, `massachusetts`, `ontario`, `british columbia` from virus order by rowid DESC limit 1"):
+    latest['arizona'] = row[0]
+    latest['illinois'] = row[1]
+    latest['washington'] = row[2]
+    latest['california'] = row[3]
+    latest['wisconsin'] = row[4]
+    latest['massachusetts'] = row[5]
+    latest['ontario'] = row[6]
+    latest['british columbia'] = row[7]
+
+
 # US
 # https://www.worldometers.info/coronavirus/usa-coronavirus/
 
@@ -72,8 +88,12 @@ states = soup.find_all("ul")[1].find_all("li")[0:]
 for state in states:
     enName = state.text.lower().split(" ")[2]
     confirmed = state.text.lower().split(" ")[0]
-    recovered = '0'
-    death = '0'
+    if enName in latest.keys():
+        recovered = latest[enName].split("-")[2]
+        death = latest[enName].split("-")[2]
+    else:
+        recovered = '0'
+        death = '0'
 
     if recovered == "" or recovered == "-":
         recovered = "0"
@@ -96,8 +116,13 @@ provinces = soup.find_all("table")[0].find("tbody").find_all("tr")
 for province in provinces:
     enName = province.find_all("td")[0].text.lower()
     confirmed = province.find_all("td")[1].text
-    recovered = '0'
-    death = '0'
+
+    if enName in latest.keys():
+        recovered = latest[enName].split("-")[2]
+        death = latest[enName].split("-")[2]
+    else:
+        recovered = '0'
+        death = '0'
 
     if recovered == "" or recovered == "-":
         recovered = "0"
@@ -112,8 +137,7 @@ for province in provinces:
 
 browser.close()
 
-conn = sqlite3.connect("assets/virus.db")
-cursor = conn.cursor()
+
 
 insert_record_sql = sqls + sqle[0: len(sqle) -2] + ")"
 cursor.execute(insert_record_sql)
