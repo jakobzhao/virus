@@ -444,6 +444,8 @@
 
 
 
+
+
       function highlightFeature(e) {
         // e indicates the current event
         var layer = e.target; //the target capture the object which the event associates with
@@ -465,7 +467,7 @@
       // 3.2.2 zoom to the highlighted feature when the mouse is clicking onto it.
       function zoomToFeature(e) {
         // mymap.fitBounds(e.target.getBounds());
-
+        L.DomEvent.stopPropagation(e);
         $("#hint").text("Click here to the global trend.");
 
 
@@ -491,6 +493,7 @@
           columns: [place.c, place.r, place.d],
           unload: ['Confirmed', 'Recovered', 'Death'],
         });
+
 
       }
 
@@ -544,6 +547,20 @@
         $("#hint").text("Click a place to review local trend.");
 
       });
+
+
+      function onMapClick(e) {
+
+        $("#hint").click();
+        // e.preventDefault();
+        // scope.deselectAllMarkers();
+
+        // return false;
+      }
+
+      mymap.on('click', onMapClick);
+
+
 
       calCounts(global);
 

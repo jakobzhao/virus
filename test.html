@@ -467,6 +467,8 @@
 
       // 3.2.2 zoom to the highlighted feature when the mouse is clicking onto it.
       function zoomToFeature(e) {
+
+        L.DomEvent.stopPropagation(e);
         // mymap.fitBounds(e.target.getBounds());
 
         $("#hint").text("Click here to the global trend.");
@@ -547,6 +549,22 @@
         $("#hint").text("Click a place to review local trend.");
 
       });
+
+
+      function onMapClick(e) {
+
+        $("#hint").click();
+        // e.preventDefault();
+        // scope.deselectAllMarkers();
+
+        // return false;
+      }
+
+      mymap.on('click', onMapClick);
+
+
+
+
 
       calCounts(global);
 
