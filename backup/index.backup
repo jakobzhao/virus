@@ -5,72 +5,66 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <meta name="author" content="Bo Zhao, Benji Antolin">
-  <title>2019 Coronavirus Map</title>
+  <meta name="authors" content="Bo Zhao, Fengyu Xu, Lola Kang, Joshua Ji, and Steven Bao">
+  <title>Novel Coronavirus Infection Map</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/MarkerCluster.Default.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
   <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.14/c3.min.css" rel="stylesheet">
+  <link href="css/c3.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/simplebar.css" />
   <link rel="stylesheet" href="css/main.css">
-  <!-- <link rel="icon" href="//favicon.ico" type="image/x-icon" /> -->
-  <script src="js/simplebar.min.js"></script>
-  <script src="https://unpkg.com/d3@5/dist/d3.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.14/c3.min.js"></script>
-  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
-  <!-- <script src="js/leaflet.heat.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.3.4/chroma.min.js"></script>
-
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <script src="js/d3.js"></script>
+  <script src="js/c3.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+  <script src="js/leaflet.markercluster.js"></script>
+  <script src="js/chroma.min.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script> -->
-
-  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script> -->
+  <script src="js/simplebar.min.js"></script>
 </head>
 
 <body>
   <main>
-    <div id="info">
-      <div id="title"><i class="fas fa-medkit"></i> 2019 Coronavirus Map
+    <div class="loader"></div>
+    <div id="info" data-simplebar data-simplebar-auto-hide="false">
+      <div id="title"><img src="img/virus_logo.png" width="28px"> Novel Coronavirus Infection Map
         <span><a href="https://www.facebook.com/uwgeog/" target="_blank"><i class="fab fa-facebook"></i></a></span>
         <span><a href="https://twitter.com/UW" target="_blank"><i class="fab fa-twitter-square"></i></a></span>
-        <!-- <span><a data-toggle="modal" data-target="#disclaimer"><i class="nav fas fa-question-circle"></i></a></span> -->
+        <span><a href="https://github.com/jakobzhao/virus" target="_blank"><i class="fab fa-github-square"></i></a></span>
+        <span><a data-toggle="modal" data-target="#infowindow"><i class="nav fas fa-question-circle"></i></a></span>
       </div>
 
-      <span id="date">Jan 25</span>
-
-      <div id="timeline-chart"></div>
-      <p><span id="placename">Global Stats.</span><span id="hint"> Click on the map to see details</span></p>
+      <p><span id="placename">Global Trend</span> </p>
+      <p> <span id="date"></span> <span id="hint"> Click a place to review local trend.</span></p>
       <div class="card-deck counts">
         <div class="card">
           <div class="card-body confirmed">
             <h5 class="card-title">Confirmed</h5>
           </div>
-          <p class="card-text confirmed-count">5678</p>
+          <p class="card-text confirmed-count">0</p>
         </div>
 
-        <div class="card">
+        <!-- <div class="card">
           <div class="card-body suspected">
             <h5 class="card-title">Suspected</h5>
-            <p class="card-text suspected-count">5678</p>
+            <p class="card-text suspected-count">0</p>
           </div>
-        </div>
+        </div> -->
         <div class="card">
           <div class="card-body recovered">
             <h5 class="card-title">Recovered</h5>
-            <p class="card-text recovered-count">5678</p>
+            <p class="card-text recovered-count">0</p>
           </div>
         </div>
 
         <div class="card">
           <div class="card-body death">
             <h5 class="card-title">Death</h5>
-            <p class="card-text death-count">5678</p>
+            <p class="card-text death-count">0</p>
           </div>
         </div>
       </div>
@@ -81,24 +75,41 @@
 
       <div id="footer">
         <p><a href="https://hgis.uw.edu" target="_blank"><img src="img/logo.png" width="250px"></img></a></p>
-        <p>Made By <a href="http://hgis.uw.edu">Humanistic GIS Lab at University of Washington - Seattle</a>.</p>
-        <p>Data sources: WHO, CDC, NHC, JHU CSSE and Dingxiangyuan.</p>
-        <p>Platform is made of CartoDB, Leaflet, D3, C3, bootstrap, and chroma. </p>
+        <div>A quarantine area &nbsp; <i class="fas fa-procedures community"> </i> &nbsp; indicates a community or village where confirmed cases were found. The local governments in China have taken strict measures to isolate the residents of these
+          places from the outside. The dataset of quarantine area are constantly contributed by volunteers, and can be found at <a href="https://mapmiao.com/ncov/" target="_blank">mapmiao</a>.
+        </div>
+
+        <div>This map is made by the <a href="http://hgis.uw.edu" target="_blank">Humanistic GIS Lab at University of Washington - Seattle</a>.
+          The data are mainly collected from <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/" target="_blank">WHO</a>,
+          <a href="https://www.cdc.gov/coronavirus/2019-ncov/cases-in-us.html" target="_blank">CDC</a>,
+          <a href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html" target="_blank">PHA</a> ,
+          <a href="http://2019ncov.chinacdc.cn/2019-nCoV/" target="_blank">China CDC</a>,
+          <a href="https://mapmiao.com/ncov/" target="_blank">Mapmiao</a>,
+          and <a href="https://voice.baidu.com/act/newpneumonia/newpneumonia" target="_blank">Baidu</a>.
+          The computational resources are provided by <a href="https://csde.washington.edu/" target="_blank">UW's Center for Studies in Demography and Ecology</a>. The base maps are from <a target="_blank"
+            href="https://github.com/CartoDB/cartodb/wiki/BaseMaps-available">CartoDB</a> and <a href="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/" target="_blank">ESRI</a>.
+          <span style="color:#e8e3d3">The timely updated dataset can be downloaded <a href="http://hgis.uw.edu/virus/assets/virus.csv" style="color:#e8e3d3; text-decoration: underline;" target="_blank">here</a>.</span> Details about this interactive
+          map can be found <a data-toggle="modal" data-target="#infowindow"> here</a>. If you have any questions or
+          concerns, please contect <a href="mailto:zhaobao@uw.edu">Bo Zhao</a>.
+        </div>
+
+
+
 
       </div>
+
+
     </div>
 
     <div id="map"></div>
 
     <div id="legend-panel">
 
-
       <div class="card-deck legend">
-
 
         <div class="card">
           <div class="card-body legend-color-1">
-            <h5 class="card-title" style="color:black">0</h5>
+            <h5 class="card-title" style="color:black">1</h5>
 
           </div>
         </div>
@@ -111,30 +122,84 @@
         </div>
         <div class="card">
           <div class="card-body  legend-color-3">
-            <h5 class="card-title" style="color:black">25</h5>
+            <h5 class="card-title" style="color:black">100</h5>
 
           </div>
         </div>
 
         <div class="card">
           <div class="card-body  legend-color-4">
-            <h5 class="card-title" style="color:black">50</h5>
+            <h5 class="card-title" style="color:black">250</h5>
 
           </div>
         </div>
 
         <div class="card">
           <div class="card-body legend-color-5">
-            <h5 class="card-title" style="color:black">100+</h5>
+            <h5 class="card-title" style="color:black">1,000</h5>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body legend-color-6">
+            <h5 class="card-title" style="color:black">10,000+</h5>
           </div>
         </div>
       </div>
 
-
     </div>
   </main>
+  <div id="infowindow" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="width:1250px!important">
+      <div class="modal-content">
+        <div class="modal-header">
+          <strong class="modal-title" id="exampleModalLongTitle">Info</strong>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="demo" class="carousel " data-ride="carousel">
+            <p>This online interactive map enables users to track both the global and local trends of Novel Coronavirus infection since Jan 21st, 2020. The supporting dataset is timely collected from multiple official sources and then plotted onto
+              this map.</p>
+            <h5>Data Sources</h5>
+            <p>The data are mainly collected from 1. <a href="http://www.nhc.gov.cn" target="_blank">National Health Commission</a> (NHC) of the People’s Republic of China
+              2. China’s Provincial & Municipal Health Commission, China’s Provincial & Municipal government database
+              3. Public data published from Hongkong, Macau, and Taiwan official channels
+              4. <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/" target="_blank">World Health Organization</a> (WHO)
+              5. <a href="https://www.cdc.gov/coronavirus/2019-ncov/cases-in-us.html" target="_blank">Centers for Disease Control and Prevention</a> (CDC)
+              6. <a href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html" target="_blank">Public Health Agency of Canada</a> (PHAC)
+              7. <a href="https://voice.baidu.com/act/newpneumonia/newpneumonia" target="_blank">Baidu</a>.
+              8. <a href="https://mapmiao.com/ncov/" target="_blank">Mapmiao</a>(data of quarantine area in China).
+              The dataset (in SQLite format) can be downloaded from <a href="http://hgis.uw.edu/virus/assets/virus.db" target="_blank">here</a>.
+              You can view the data (in CSV format) at <a href="http://hgis.uw.edu/virus/assets/virus.csv" target="_blank">here</a>.</p>
 
+            <p>In the data table, each entry indicates the infection status in the format of "#-#-#-#" -- a 4-sequel entry divided by dashes. The first sequel represents the number of confirmed cases, the second sequel represents suspected
+              cases, the third sequel represents cured cases, the fourth sequel represents death cases.</p>
+
+            <h5>Update Procedure</h5>
+
+            <p>The country-level data is collected from WHO, while the data of each province in China is collected from multiple sources such as China's NHC，Mapmiao and Baidu. Notably, we also refer to CDC to verify the virus spreading status in the
+              U.S. To
+              make a timely data and map updates, we collect the data every 4 hours, and verify the data quality per day. In addition, we plan to provide finer-scale data from China (the county level), U.S. (the state level) and Canada (the province
+              level) in the next version.</p>
+
+            <h5>Acknowledgment</h5>
+            <p>
+              <li>Team members: Bo Zhao, Fengyu Xu, Lola Kang, Joshua Ji, and Steven Bao.</li>
+              <li>The Server is hosted at UW’s <a href="https://https://csde.washington.edu/" target="_blank">Center for Studies in Demography and Ecology (CSDE)</a>.</li>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <script>
+    $(window).ready(function() {
+      $('.loader').fadeOut("slow");
+    });
+
+
+
     var createLabelIcon = function(labelClass, labelText) {
       return L.divIcon({
         className: labelClass,
@@ -147,7 +212,8 @@
       zoomControl: false,
       zoom: 5.5,
       maxZoom: 16,
-      minZoom: 1
+      minZoom: 4,
+      worldCopyJump: true
     });
 
 
@@ -157,8 +223,8 @@
 
 
 
-    var gray = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png').addTo(mymap);
-    var streets = L.tileLayer('http://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}@2x.png');
+    var gray = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png').addTo(mymap);
+    var streets = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}@2x.png');
     var satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}');
 
     var baseLayers = {
@@ -168,24 +234,75 @@
     }
 
 
-    var chart, tchart, rchart;
 
+    var chart, rchart;
 
-    var colors = chroma.scale('YlOrRd').mode('lch').colors(7);
-    for (i = 0; i < 5; i++) {
+    var colors = chroma.scale('YlOrRd').mode('lch').colors(6);
+    for (i = 0; i < 6; i++) {
       $('head').append($("<style> .region-color-" + (i + 1).toString() + " { color: " + colors[i] + "; font-size: 15px; text-shadow: 0 0 3px #ffffff;} </style>"));
       $('head').append($("<style> .legend-color-" + (i + 1).toString() + " { background: " + colors[i] + "; font-size: 15px; text-shadow: 0 0 3px #ffffff;} </style>"));
     }
 
+
+    var communities = new L.MarkerClusterGroup({
+      spiderfyOnMaxZoom: false,
+      singleMarkerMode: true,
+      // showCoverageOnHover: false,
+      // zoomToBoundsOnClick: false,
+      iconCreateFunction: function(cluster) {
+        return L.divIcon({
+          html: '<i class="fas fa-procedures community community-marker"> <b>' + cluster.getChildCount() + '</b></i>'
+        });
+      }
+
+    }).addTo(mymap);
+
+
+
+
     Promise.all([
-      d3.csv('assets/2019-nCoV.csv'),
-      d3.json("assets/wuhan.geojson")
+      d3.csv('assets/virus.csv'),
+      d3.json("assets/wuhan-30.json"),
+      d3.csv('assets/communities.csv')
     ]).then(function(datasets) {
 
 
+      datasets[2].forEach(function(d) {
+        // console.log(d);
+
+        L.marker([parseFloat(d.lat), parseFloat(d.lng)]).bindPopup(d.name + "&nbsp;&nbsp;(<a target='_blank' href='https://translate.google.com/#view=home&op=translate&sl=zh-CN&tl=en&text=" + d.name + "'>Translate to English</a>)").addTo(
+          communities);
+      })
 
 
+      lastupdate = new Date(datasets[0][datasets[0].length - 1]["datetime"]);
+      $("#date").text("Last update: " + lastupdate.toLocaleDateString() + " " + lastupdate.toLocaleTimeString() + " PST");
 
+      //totalConfirmed
+      function tc(country) {
+        if (country == undefined) {
+          country = 0
+        } else {
+          country = +country.split("-")[0];
+        }
+        return country;
+      }
+
+      var latest = datasets[0][datasets[0].length - 1];
+      var japan = tc(latest["japan"]);
+      var thailand = tc(latest["thailand"]);
+      var southKorea = tc(latest["south korea"]);
+      var france = tc(latest["france"]);
+      var australia = tc(latest["australia"]);
+      var malaysia = tc(latest["malaysia"]);
+      var singapore = tc(latest["singapore"]);
+      var germany = tc(latest["germany"]);
+      //var us = tc(latest["washington"]) + tc(latest["illinois"]) + tc(latest["california"]);
+      var us = tc(latest["us"]);
+      var china = tc(latest["anhui"]) + tc(latest["beijing"]) + tc(latest["chongqing"]) + tc(latest["fujian"]) + tc(latest["gansu"]) + tc(latest["guangdong"]) + tc(latest["guangxi"]) + tc(latest["guizhou"]) + tc(latest["hainan"]) + tc(latest[
+          "hebei"]) + tc(latest["heilongjiang"]) + tc(latest["henan"]) + tc(latest["hongkong"]) + tc(latest["hubei"]) + tc(latest["hunan"]) + tc(latest["neimenggu"]) + tc(latest["jiangsu"]) + tc(latest["jiangxi"]) + tc(latest["jilin"]) + tc(
+          latest["liaoning"]) + tc(latest["macau"]) + tc(latest["ningxia"]) + tc(latest["qinghai"]) + tc(latest["shaanxi"]) + tc(latest["shandong"]) + tc(latest["shanghai"]) + tc(latest["shanxi"]) + tc(latest["sichuan"]) + tc(latest["taiwan"]) +
+        tc(latest["tianjin"]) + tc(latest["xinjiang"]) + tc(latest["yunnan"]) + tc(latest["zhejiang"]) + tc(latest["xizang"]);
 
 
       var t = ["t"];
@@ -194,14 +311,13 @@
       var recovered = ["Recovered"];
       var death = ["Death"]
       var global = {
-        name: "global",
+        name: "Global Trend",
         c: confirmed,
         s: suspected,
         r: recovered,
         d: death
 
       }
-
 
 
       function calCounts(i) {
@@ -211,10 +327,10 @@
           cf = 0, sp = 0, rc = 0, dd = 0;
           current = d;
           delete current["datetime"];
-          if (i["name"] != "global") {
+          if (i["name"] != "Global Trend") {
             d = current[i["name"]];
             if (d == undefined) {
-              d = 0
+              d = "0"
             };
             items = d.split("-");
             switch (items.length) {
@@ -233,7 +349,7 @@
 
             Object.values(current).forEach(function(d) {
               if (d == undefined) {
-                d = 0
+                d = "0"
               };
               items = d.split("-");
               switch (items.length) {
@@ -254,17 +370,22 @@
           i["s"].push(sp);
           i["r"].push(rc);
           i["d"].push(dd);
-
         });
 
         $(".confirmed-count").text(cf);
-        $(".suspected-count").text(sp);
+        // $(".suspected-count").text(sp);
         $(".recovered-count").text(rc);
         $(".death-count").text(dd);
 
-
-        $("#placename").text(i["name"].toUpperCase() + " Stats");
-
+        if (i["name"] == "anhui" || i["name"] == "beijing" || i["name"] == "chongqing" || i["name"] == "fujian" || i["name"] == "gansu" || i["name"] == "guangdong" ||
+          i["name"] == "guangxi" || i["name"] == "guizhou" || i["name"] == "hainan" || i["name"] == "hebei" || i["name"] == "heilongjiang" || i["name"] == "henan" || i["name"] == "hongkong" ||
+          i["name"] == "hubei" || i["name"] == "hunan" || i["name"] == "neimenggu" || i["name"] == "jiangsu" || i["name"] == "jiangxi" || i["name"] == "jilin" || i["name"] == "liaoning" ||
+          i["name"] == "macau" || i["name"] == "ningxia" || i["name"] == "qinghai" || i["name"] == "shaanxi" || i["name"] == "shandong" || i["name"] == "shanghai" || i["name"] == "shanxi" ||
+          i["name"] == "sichuan" || i["name"] == "tianjin" || i["name"] == "xinjiang" || i["name"] == "yunnan" || i["name"] == "zhejiang" || i["name"] == "xizang") {
+          $("#placename").text(i["name"].toUpperCase() + ", CHINA");
+        } else {
+          $("#placename").text(i["name"].toUpperCase());
+        }
 
       }
 
@@ -275,36 +396,53 @@
 
         if (pop != undefined) {
           pop = +pop.toString().split("-")[0];
-
         } else {
           pop = 0;
+          // return "#00000000";
         }
 
-        if (pop >= 100) {
+        if (pop >= 10000) {
+          id = 5;
+        } else if (pop > 1000 && pop <= 10000) {
           id = 4;
-        } else if (pop > 50 && pop <= 99) {
+        } else if (pop > 250 && pop <= 1000) {
           id = 3;
-        } else if (pop > 25 && pop <= 50) {
+        } else if (pop > 100 && pop <= 250) {
           id = 2;
-        } else if (pop > 10 && pop <= 25) {
+        } else if (pop > 10 && pop <= 100) {
           id = 1;
-        } else {
+        } else if (pop > 0 && pop <= 10) {
           id = 0;
+        } else {
+          id = -1;
+          return "#00000000";
         }
+
         return colors[id];
+
       }
 
 
       function style(feature) {
-        return {
-          fillColor: setColor(feature.properties.enname),
-          fillOpacity: 0.4,
-          weight: 2,
-          opacity: 1,
-          color: '#b4b4b4',
-          dashArray: '3'
-        };
+        if (feature.properties.enname == "california" || feature.properties.enname == "washington" || feature.properties.enname == "bc" || feature.properties.enname == "ontario" || feature.properties.enname == "illinois" || feature.properties
+          .enname == "massachusetts") {
+          return {
+            fillOpacity: 0,
+            opacity: 0,
+          };
+        } else {
+          return {
+            fillColor: setColor(feature.properties.enname),
+            fillOpacity: 0.4,
+            weight: 1,
+            opacity: 1,
+            color: '#b4b4b4',
+            dashArray: '3'
+          };
+        }
       }
+
+
 
 
 
@@ -324,15 +462,13 @@
         // select the update class, and update the contet with the input value.
 
         // $(".update").html('<b>' + layer.feature.properties.name + '</b>   ' + layer.feature.properties.density + ' people / mi<sup>2</sup>');
-
-
       }
 
       // 3.2.2 zoom to the highlighted feature when the mouse is clicking onto it.
       function zoomToFeature(e) {
         // mymap.fitBounds(e.target.getBounds());
-
-        $("#hint").text("click here to reset");
+L.DomEvent.stopPropagation(e);
+        $("#hint").text("Click here to the global trend.");
 
 
 
@@ -354,13 +490,8 @@
 
 
         chart.load({
-          columns: [place.c, place.s, place.r, place.d],
-          unload: ['Confirmed', 'Suspected', 'Recovered', 'Death'],
-        });
-
-        tchart.load({
-          columns: [place.c],
-          unload: ['Confirmed'],
+          columns: [place.c, place.r, place.d],
+          unload: ['Confirmed', 'Recovered', 'Death'],
         });
 
 
@@ -387,6 +518,15 @@
         onEachFeature: onEachFeature
       }).addTo(mymap);
 
+
+
+      new L.control.layers(baseLayers, {
+        "Infection Level": provinces,
+        "Quarantine Area &nbsp;&nbsp; <i class='fas fa-procedures community'></i>": communities
+      }, {
+        collapsed: false
+      }).addTo(mymap);
+
       // mymap.fitBounds(provinces.getBounds());
 
 
@@ -399,13 +539,30 @@
 
       $("#hint").on("click", function() {
         calCounts(global);
+        chart.load({
+          columns: [global.c, global.r, global.d],
+          unload: ['Confirmed', 'Recovered', 'Death'],
+        });
+
+        $("#hint").text("Click a place to review local trend.");
 
       });
+
+
+      function onMapClick(e) {
+
+        $("#hint").click();
+        // e.preventDefault();
+        // scope.deselectAllMarkers();
+
+        // return false;
+      }
+
+      mymap.on('click', onMapClick);
+
+
+
       calCounts(global);
-
-
-      console.log(cf);
-
 
 
       chart = c3.generate({
@@ -415,31 +572,42 @@
         data: {
           x: "t",
           y: "confirmed",
-          columns: [t, global.c, global.s, global.r, global.d],
+          columns: [t, global.c, global.r, global.d],
           type: 'line',
           axes: {
             confirmed: 'y'
           },
           colors: {
             Confirmed: '#dc3545',
-            Suspected: 'orange',
+            // Suspected: 'orange',
             Recovered: '#28a745',
             Death: '#5d4f72e8'
           }
         },
+        // zoom: {
+        //   enabled: true,
+        //   type: 'drag',
+        // },
         axis: {
           x: {
             type: "timeseries",
             tick: {
               format: "%b %d",
-              fit: true
+              centered: true,
+              fit: true,
+              count: 8
             }
           },
           y: {
             label: {
-              text: 'Total Pop.',
+              text: 'Cases',
               position: 'outer-middle'
-            }
+            },
+            // tick: {
+            //   values: [10, 50, 250, 500, 1000, 5000]
+            // },
+            type: 'linear',
+            // min: 0
           }
         },
         point: {
@@ -465,61 +633,13 @@
           position: 'inset',
           inset: {
             anchor: "top-left",
-            y: 10,
+            y: 10
           },
         },
         bindto: "#total-chart"
       });
 
 
-      tchart = c3.generate({
-        size: {
-          height: 80,
-          width: 350
-        },
-        data: {
-          x: "t",
-          columns: [t, global.c],
-          onmouseover: dailyUpdate,
-          type: 'line',
-          labels: false,
-          colors: {
-            Confirmed: '#f8f9faed',
-          }
-        },
-        axis: {
-          x: {
-            type: "timeseries",
-            tick: {
-              format: "%b %d",
-              fit: true
-            }
-          }
-        },
-        area: {
-          zerobased: false
-        },
-        tooltip: {
-          show: false
-        },
-        legend: {
-          show: false
-        },
-        point: {
-          r: 8,
-          focus: {
-            expand: {
-              r: 15
-            }
-          }
-        },
-        bindto: "#timeline-chart"
-      });
-
-
-      $($($("#timeline-chart svg").children()[1]).children()[6]).hide();
-
-      // https://c3js.org/samples/axes_x_tick_rotate.html
       rchart = c3.generate({
         size: {
           height: 300,
@@ -528,28 +648,33 @@
         data: {
           x: 'x',
           columns: [
-            ['x', 'China', 'Japan', 'US', 'South Korean', 'Vietnam'],
-            ['Total Confirmed Pop.', 2310, 32, 4, 24, 2]
+            ['x', 'China', 'Japan', 'Singapore', 'Thailand', 'South Korea', 'Malaysia', 'Australia', 'Germany', 'U.S.'],
+            ['Confirmed Cases', china, japan, singapore, thailand, southKorea, malaysia, australia, germany, us]
           ],
-          type: 'bar',
-          // labels: true
+          type: 'bar'
         },
         axis: {
-          // rotated: true,
           x: {
             type: 'category',
-            label: false
+
+            tick: {
+              rotate: -60,
+              multiline: false
+            }
           },
           y: {
             label: {
-              text: 'Total Confirmed Pop.',
+              text: 'Confirmed Cases',
               position: 'outer-middle'
-            }
+            },
+            tick: {
+              values: [10, 50, 100, 500, 2000, 30000]
+            },
+            type: 'log'
           }
         },
         legend: {
           show: false
-
         },
         bindto: "#rank-chart"
       });
@@ -563,38 +688,25 @@
       // console.log(month);
       $("#date").text(d.x.toString().split(" 2020")[0].substring(4));
 
-      // var start = currentYear.toString() + "-01-01";
-      // var end = currentYear.toString() + "-12-31";
-      //
-      //
-      //
-      // var ticks = [];
-      // start = new Date(start.toString());
-      // end = new Date(end.toString());
-      //
-      // s = start.getTime();
-      // e = end.getTime();
-      // breaks = 5;
-      // interval = Math.floor(e - s) / breaks
-      // ticks = [];
-      // for (var j = 0; j < breaks; j++) {
-      //   ticks.push(new Date(s + interval * j))
-      // }
-      // ticks.push(end);
-      //
-      // chart.internal.config.axis_x_tick_values = ticks;
-      // // chart.flush();
-      // chart.zoom([new Date(start.toString()), new Date(end.toString())]);
-
     }
 
 
     $(".leaflet-control-attribution")
-      // .css("bottom", "60px")
       .css("background-color", "transparent")
-      .html("Supported by <a href='http://hgis.uw.edu'> HGIS Lab @ University of Washigton -Seattle </a>")
       .html("");
   </script>
+
+  <!-- Google Analytics -->
+  <script>
+    window.ga = window.ga || function() {
+      (ga.q = ga.q || []).push(arguments)
+    };
+    ga.l = +new Date;
+    ga('create', 'UA-100818948-4', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <script async src='https://www.google-analytics.com/analytics.js'></script>
+  <!-- End Google Analytics -->
 </body>
 
 </html>
