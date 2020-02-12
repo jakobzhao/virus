@@ -101,10 +101,10 @@ div#footer >div{
   border-radius: 5px !important;
 }
 
-/* .c3-legend-background {
+.c3-legend-background {
   fill: transparent;
   stroke: transparent;
-} */
+}
 
 @media only screen and (max-width: 1026px) {
   .legend, .leaflet-control-layers {
@@ -325,7 +325,7 @@ span {
   margin-top: -20px;
 }
 
-/* text {
+text {
   fill: gray
 }
 
@@ -349,13 +349,13 @@ span {
 .value {
   background-color: black;
   color: black
-} */
+}
 
-/* #total-chart {
+#total-chart {
   position: relative;
   top: 10px;
   left: -20px;
-} */
+}
 
 #rank-chart {
   position: relative;
