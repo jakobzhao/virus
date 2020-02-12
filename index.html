@@ -262,7 +262,7 @@
 
     Promise.all([
       d3.csv('assets/virus.csv'),
-      d3.json("assets/wuhan-30.json"),
+      d3.json("assets/wuhan-20.json"),
       d3.csv('assets/communities.csv')
     ]).then(function(datasets) {
 
@@ -424,8 +424,7 @@
 
 
       function style(feature) {
-        if (feature.properties.enname == "california" || feature.properties.enname == "washington" || feature.properties.enname == "bc" || feature.properties.enname == "ontario" || feature.properties.enname == "illinois" || feature.properties
-          .enname == "massachusetts") {
+        if (feature.properties.enname == "us" || feature.properties.enname == "canada") {
           return {
             fillOpacity: 0,
             opacity: 0,
@@ -444,8 +443,6 @@
 
 
 
-
-
       function highlightFeature(e) {
         // e indicates the current event
         var layer = e.target; //the target capture the object which the event associates with
@@ -453,11 +450,15 @@
           weight: 4,
           opacity: 0.8,
           color: '#e3e3e3',
-          fillColor: 'yellow',
-          fillOpacity: 0.8
+          fillColor: '#00ffd9',
+          fillOpacity: 0.3
         });
         // bring the layer to the front.
         layer.bringToFront();
+
+        if (e.target.feature.properties.enname == "us" || e.target.feature.properties.enname == "canada") {
+          layer.bringToBack();
+        }
         // e.target.feature.properties.enname
         // select the update class, and update the contet with the input value.
 
@@ -466,8 +467,10 @@
 
       // 3.2.2 zoom to the highlighted feature when the mouse is clicking onto it.
       function zoomToFeature(e) {
-        // mymap.fitBounds(e.target.getBounds());
+
         L.DomEvent.stopPropagation(e);
+        // mymap.fitBounds(e.target.getBounds());
+
         $("#hint").text("Click here to the global trend.");
 
 
@@ -493,7 +496,6 @@
           columns: [place.c, place.r, place.d],
           unload: ['Confirmed', 'Recovered', 'Death'],
         });
-
 
       }
 
@@ -559,6 +561,8 @@
       }
 
       mymap.on('click', onMapClick);
+
+
 
 
 
@@ -668,7 +672,7 @@
               position: 'outer-middle'
             },
             tick: {
-              values: [10, 50, 100, 500, 2000, 30000]
+              values: [10, 50, 100, 500, 2000, 20000]
             },
             type: 'log'
           }
@@ -688,11 +692,36 @@
       // console.log(month);
       $("#date").text(d.x.toString().split(" 2020")[0].substring(4));
 
+      // var start = currentYear.toString() + "-01-01";
+      // var end = currentYear.toString() + "-12-31";
+      //
+      //
+      //
+      // var ticks = [];
+      // start = new Date(start.toString());
+      // end = new Date(end.toString());
+      //
+      // s = start.getTime();
+      // e = end.getTime();
+      // breaks = 5;
+      // interval = Math.floor(e - s) / breaks
+      // ticks = [];
+      // for (var j = 0; j < breaks; j++) {
+      //   ticks.push(new Date(s + interval * j))
+      // }
+      // ticks.push(end);
+      //
+      // chart.internal.config.axis_x_tick_values = ticks;
+      // // chart.flush();
+      // chart.zoom([new Date(start.toString()), new Date(end.toString())]);
+
     }
 
 
     $(".leaflet-control-attribution")
+      // .css("bottom", "60px")
       .css("background-color", "transparent")
+      .html("Supported by <a href='http://hgis.uw.edu'> HGIS Lab @ University of Washigton -Seattle </a>")
       .html("");
   </script>
 
