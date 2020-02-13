@@ -190,7 +190,7 @@ with open("assets/virus.csv", "w", encoding="utf-8") as fp:
 
 
 with open("assets/timestamp.txt", "w", encoding="utf-8") as fp:
-    fp.write("timestamp")
+    fp.write("timestamp\n")
     fp.write(now)
 
 print("finished!")
