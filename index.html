@@ -427,7 +427,10 @@
 
       function style(feature) {
         if (feature.properties.enname == "california" || feature.properties.enname == "washington" || feature.properties.enname == "bc" || feature.properties.enname == "ontario" || feature.properties.enname == "illinois" || feature.properties
-          .enname == "massachusetts") {
+          .enname == "massachusetts" || feature.properties
+            .enname == "arizona" || feature.properties
+              .enname == "wisconsin" || feature.properties
+                .enname == "british columbia") {
           return {
             fillOpacity: 0,
             opacity: 0,
