@@ -96,8 +96,6 @@
         </div>
 
 
-
-
       </div>
 
 
@@ -271,8 +269,6 @@
 
 
       datasets[2].forEach(function(d) {
-        // console.log(d);
-
         L.marker([parseFloat(d.lat), parseFloat(d.lng)]).bindPopup(d.name + "&nbsp;&nbsp;(<a target='_blank' href='https://translate.google.com/#view=home&op=translate&sl=zh-CN&tl=en&text=" + d.name + "'>Translate to English</a>)").addTo(
           communities);
       })
@@ -304,7 +300,6 @@
       var malaysia = tc(latest["malaysia"]);
       var singapore = tc(latest["singapore"]);
       var germany = tc(latest["germany"]);
-      //var us = tc(latest["washington"]) + tc(latest["illinois"]) + tc(latest["california"]);
       var us = tc(latest["us"]);
       var china = tc(latest["anhui"]) + tc(latest["beijing"]) + tc(latest["chongqing"]) + tc(latest["fujian"]) + tc(latest["gansu"]) + tc(latest["guangdong"]) + tc(latest["guangxi"]) + tc(latest["guizhou"]) + tc(latest["hainan"]) + tc(latest[
           "hebei"]) + tc(latest["heilongjiang"]) + tc(latest["henan"]) + tc(latest["hongkong"]) + tc(latest["hubei"]) + tc(latest["hunan"]) + tc(latest["neimenggu"]) + tc(latest["jiangsu"]) + tc(latest["jiangxi"]) + tc(latest["jilin"]) + tc(
@@ -452,7 +447,6 @@
 
 
 
-
       function highlightFeature(e) {
         // e indicates the current event
         var layer = e.target; //the target capture the object which the event associates with
@@ -465,10 +459,6 @@
         });
         // bring the layer to the front.
         layer.bringToFront();
-        // e.target.feature.properties.enname
-        // select the update class, and update the contet with the input value.
-
-        // $(".update").html('<b>' + layer.feature.properties.name + '</b>   ' + layer.feature.properties.density + ' people / mi<sup>2</sup>');
       }
 
       // 3.2.2 zoom to the highlighted feature when the mouse is clicking onto it.
@@ -476,8 +466,6 @@
         // mymap.fitBounds(e.target.getBounds());
         L.DomEvent.stopPropagation(e);
         $("#hint").text("Click here to the global trend.");
-
-
 
         var t = ["t"];
         var confirmed = ["Confirmed"];
