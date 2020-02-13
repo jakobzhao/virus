@@ -263,7 +263,8 @@
     Promise.all([
       d3.csv('assets/virus.csv'),
       d3.json("assets/wuhan-30.json"),
-      d3.csv('assets/communities.csv')
+      d3.csv('assets/communities.csv'),
+      d3.csv('assets/timestamp.txt')
     ]).then(function(datasets) {
 
 
@@ -275,8 +276,12 @@
       })
 
 
-      lastupdate = new Date(datasets[0][datasets[0].length - 1]["datetime"]);
-      $("#date").text("Last update: " + lastupdate.toLocaleDateString() + " " + lastupdate.toLocaleTimeString() + " PST");
+      // lastupdate = new Date(datasets[0][datasets[0].length - 1]["datetime"]);
+      // $("#date").text("Last update: " + lastupdate.toLocaleDateString() + " " + lastupdate.toLocaleTimeString() + " PST");
+
+      $("#date").text("Last update: " +  datasets[3][0].timestamp.split(".")[0]  + " PST");
+
+
 
       //totalConfirmed
       function tc(country) {
