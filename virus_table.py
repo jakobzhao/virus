@@ -162,7 +162,9 @@ with open("assets/virus.csv", "w", encoding="utf-8") as fp:
         hubei = line.split(",")[14]
         if hubei != priorHubei:
             fp.write(str(row)[1:len(str(row)) - 1].replace("\'", "").replace("None", "").replace(", ", ",").replace("(null)", "") + "\n")
+
 conn.close()
+
 
 fp = open("assets/virus.csv", "r", encoding="utf-8")
 lines = fp.readlines()
@@ -182,5 +184,9 @@ with open("assets/virus.csv", "w", encoding="utf-8") as fp:
             fp.write(line)
         id += 1
 
+
+with open("assets/timestamp.txt", "w", encoding="utf-8") as fp:
+    fp.write("timestamp\n")
+    fp.write(now)
 
 print("finished!")
