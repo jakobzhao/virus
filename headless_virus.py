@@ -51,9 +51,14 @@ for item in items:
     except:
         pass
     if (chname in placeName.keys()):
-        confirmed = item.find_all("td")[1].text.strip()
-        recovered = item.find_all("td")[2].text.strip()
-        death = item.find_all("td")[3].text.strip()
+        if chname in ["美国", "泰国", "新加坡", "日本", "马来西亚", "澳大利亚", "韩国", "法国", "德国", "越南", "加拿大", "尼泊尔", "柬埔寨", "斯里兰卡", "菲律宾", "阿联酋", "英国", "印度", "俄罗斯", "意大利", "比利时", "西班牙", "瑞典", "芬兰", "埃及"] :
+            confirmed = item.find_all("td")[1].text.strip()
+            recovered = item.find_all("td")[2].text.strip()
+            death = item.find_all("td")[3].text.strip()
+        else:
+            confirmed = item.find_all("td")[2].text.strip()
+            recovered = item.find_all("td")[3].text.strip()
+            death = item.find_all("td")[4].text.strip()
         if recovered == "" or recovered == "-":
             recovered = "0"
         if death == "" or death == "-":
