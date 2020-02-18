@@ -185,9 +185,7 @@
 
             <h5>Acknowledgment</h5>
             <p>
-              <li>Team members: Bo Zhao (leader), Fengyu Xu, Lola Kang, Joshua Ji, and Steven Bao.</li>
-              <li>This interactive map is built upon a few open source libraries, such as leaflet, d3, c3. chroma.js, boostrap, MarkerCluster, simplebar, and jquery.</li>
-              <li>The current base maps are from CartoDB and ESRI. The raw geospatial data for the CartoDB maps were acquired from OpenStreetMap.</li>
+              <li>Team members: Bo Zhao, Fengyu Xu, Lola Kang, Joshua Ji, and Steven Bao.</li>
               <li>The Server is hosted at UW’s <a href="https://https://csde.washington.edu/" target="_blank">Center for Studies in Demography and Ecology (CSDE)</a>.</li>
             </p>
           </div>
@@ -429,10 +427,7 @@
 
       function style(feature) {
         if (feature.properties.enname == "california" || feature.properties.enname == "washington" || feature.properties.enname == "bc" || feature.properties.enname == "ontario" || feature.properties.enname == "illinois" || feature.properties
-          .enname == "massachusetts" || feature.properties
-            .enname == "arizona" || feature.properties
-              .enname == "wisconsin" || feature.properties
-                .enname == "british columbia") {
+          .enname == "massachusetts") {
           return {
             fillOpacity: 0,
             opacity: 0,
@@ -471,6 +466,7 @@
         // mymap.fitBounds(e.target.getBounds());
         L.DomEvent.stopPropagation(e);
         $("#hint").text("Click here to the global trend.");
+
 
         var t = ["t"];
         var confirmed = ["Confirmed"];
