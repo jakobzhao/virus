@@ -506,7 +506,6 @@
           pop = +pop.toString().split("-")[0];
         } else {
           pop = 0;
-          // return "#00000000";
         }
 
         if (pop >= 10000) {
@@ -594,8 +593,6 @@
 
         calCounts(place);
 
-
-
         chart.load({
           columns: [place.c, place.r, place.d],
           unload: ['Confirmed', 'Recovered', 'Death'],
@@ -676,10 +673,6 @@
             Death: '#5d4f72e8'
           }
         },
-        // zoom: {
-        //   enabled: true,
-        //   type: 'drag',
-        // },
         axis: {
           x: {
             type: "timeseries",
