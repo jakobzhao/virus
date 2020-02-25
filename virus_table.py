@@ -63,7 +63,8 @@ for item in items:
             death = "0"
         if confirmed == "" or confirmed == "-" :
             confirmed = "0"
-        confirmed = str(int(confirmed) + int(recovered) + int(death))
+        if chname not in ["美国", "泰国", "新加坡", "日本", "马来西亚", "澳大利亚", "韩国", "法国", "德国", "越南", "加拿大", "尼泊尔", "柬埔寨", "斯里兰卡","菲律宾", "阿联酋", "英国", "印度", "俄罗斯", "意大利", "比利时", "西班牙", "瑞典", "芬兰", "埃及", "伊朗"]:
+            confirmed = str(int(confirmed) + int(recovered) + int(death))
         print(chname, placeName[chname], confirmed, recovered, death)
         sqls += ", '" + placeName[chname].strip() + "'"
         sqle += "'" + confirmed + "-0-" + recovered + "-" + death + "', "
