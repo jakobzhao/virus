@@ -95,7 +95,7 @@ url = "https://www.worldometers.info/coronavirus/usa-coronavirus/"
 browser.get(url)
 browser.find_element_by_class_name('content-inner')
 soup = BeautifulSoup(browser.page_source, 'html.parser')
-states = soup.find_all("ul")[1].find_all("li")[1:]
+states = soup.find_all("ul")[2].find_all("li")[0:]
 for state in states:
     enName = state.text.lower().split(" ")[2]
     confirmed = state.text.lower().split(" ")[0]
