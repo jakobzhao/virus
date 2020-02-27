@@ -51,7 +51,7 @@ for item in items:
     except:
         pass
     if (chname in placeName.keys()):
-        if chname in ["美国", "泰国", "新加坡", "日本", "马来西亚", "澳大利亚", "韩国", "法国", "德国", "越南", "加拿大", "尼泊尔", "柬埔寨", "斯里兰卡", "菲律宾", "阿联酋", "英国", "印度", "俄罗斯", "意大利", "比利时", "西班牙", "瑞典", "芬兰", "埃及", "伊朗", "科威特", "阿曼", "巴林", "以色列", "阿富汗", "伊拉克", "黎巴嫩", "巴西","奥地利","克罗地亚", "瑞士"]:
+        if chname in ["美国", "泰国", "新加坡", "日本", "马来西亚", "澳大利亚", "韩国", "法国", "德国", "越南", "加拿大", "尼泊尔", "柬埔寨", "斯里兰卡", "菲律宾", "阿联酋", "英国", "印度", "俄罗斯", "意大利", "比利时", "西班牙", "瑞典", "芬兰", "埃及", "伊朗", "科威特", "阿曼", "巴林", "以色列", "阿富汗", "伊拉克", "黎巴嫩", "巴西","奥地利","克罗地亚", "瑞士", "阿尔及利亚","巴基斯坦","希腊", "爱沙尼亚", "罗马尼亚", "北马其顿", "挪威", "格鲁吉亚"]:
             confirmed = item.find_all("td")[1].text.strip()
             recovered = item.find_all("td")[2].text.strip()
             death = item.find_all("td")[3].text.strip()
@@ -65,7 +65,7 @@ for item in items:
             death = "0"
         if confirmed == "" or confirmed == "-" :
             confirmed = "0"
-        if chname not in ["美国", "泰国", "新加坡", "日本", "马来西亚", "澳大利亚", "韩国", "法国", "德国", "越南", "加拿大", "尼泊尔", "柬埔寨", "斯里兰卡","菲律宾", "阿联酋", "英国", "印度", "俄罗斯", "意大利", "比利时", "西班牙", "瑞典", "芬兰", "埃及", "伊朗", "科威特", "阿曼", "巴林", "以色列", "阿富汗", "伊拉克", "黎巴嫩", "巴西","奥地利","克罗地亚", "瑞士"]:
+        if chname not in ["美国", "泰国", "新加坡", "日本", "马来西亚", "澳大利亚", "韩国", "法国", "德国", "越南", "加拿大", "尼泊尔", "柬埔寨", "斯里兰卡","菲律宾", "阿联酋", "英国", "印度", "俄罗斯", "意大利", "比利时", "西班牙", "瑞典", "芬兰", "埃及", "伊朗", "科威特", "阿曼", "巴林", "以色列", "阿富汗", "伊拉克", "黎巴嫩", "巴西","奥地利","克罗地亚", "瑞士", "阿尔及利亚","巴基斯坦","希腊", "爱沙尼亚", "罗马尼亚", "北马其顿", "挪威", "格鲁吉亚"]:
             confirmed = str(int(confirmed) + int(recovered) + int(death))
         print(chname, placeName[chname], confirmed, recovered, death)
         sqls += ", '" + placeName[chname].strip() + "'"
@@ -95,7 +95,7 @@ url = "https://www.worldometers.info/coronavirus/usa-coronavirus/"
 browser.get(url)
 browser.find_element_by_class_name('content-inner')
 soup = BeautifulSoup(browser.page_source, 'html.parser')
-states = soup.find_all("ul")[1].find_all("li")[1:]
+states = soup.find_all("ul")[2].find_all("li")[0:]
 for state in states:
     enName = state.text.lower().split(" ")[2]
     confirmed = state.text.lower().split(" ")[0]
