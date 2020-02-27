@@ -148,7 +148,7 @@ browser.close()
 
 
 insert_record_sql = sqls + sqle[0: len(sqle) -2] + ")"
-shicursor.execute(insert_record_sql)
+cursor.execute(insert_record_sql)
 conn.commit()
 cursor.execute("SELECT * from virus")
 col_name_list = [tuple[0] for tuple in cursor.description]
