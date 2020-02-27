@@ -76,7 +76,7 @@
       <div id="footer">
         <p><a href="https://hgis.uw.edu" target="_blank"><img src="img/logo.png" width="250px"></img></a></p>
         <div>A quarantine area &nbsp; <i class="fas fa-procedures community"> </i> &nbsp; indicates a community or village where confirmed cases were found. The local governments in China have taken strict measures to isolate the residents of these
-          places from the outside. The dataset of quarantine area is constantly contributed by volunteers, and can be found at <a href="https://mapmiao.com/ncov/" target="_blank">mapmiao</a>.
+          places from the outside. The dataset of quarantine area are constantly contributed by volunteers, and can be found at <a href="https://mapmiao.com/ncov/" target="_blank">mapmiao</a>.
         </div>
 
         <div>This map is made by the <a href="http://hgis.uw.edu" target="_blank">Humanistic GIS Lab at University of Washington - Seattle</a>.
@@ -316,7 +316,7 @@
 
 
     var gray = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png').addTo(mymap);
-    var streets = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png');
+    var streets = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}@2x.png');
     var satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}');
 
     var baseLayers = {
@@ -354,7 +354,7 @@
 
     Promise.all([
       d3.csv('assets/virus.csv'),
-      d3.json("assets/wuhan-15.json"),
+      d3.json("assets/wuhan-20.json"),
       d3.csv('assets/communities.csv'),
       d3.csv('assets/timestamp.txt')
     ]).then(function(datasets) {
@@ -402,8 +402,6 @@
       var malaysia = tc(latest["malaysia"]);
       var singapore = tc(latest["singapore"]);
       var germany = tc(latest["germany"]);
-      var iran = tc(latest["iran"]);
-      var italy = tc(latest["italy"]);
       var us = tc(latest["us"]);
 
       var china = tc(latest["anhui"]) + tc(latest["beijing"]) + tc(latest["chongqing"]) + tc(latest["fujian"]) + tc(latest["gansu"]) + tc(latest["guangdong"]) + tc(latest["guangxi"]) + tc(latest["guizhou"]) + tc(latest["hainan"]) + tc(latest[
@@ -506,6 +504,7 @@
           pop = +pop.toString().split("-")[0];
         } else {
           pop = 0;
+          // return "#00000000";
         }
 
         if (pop >= 10000) {
@@ -593,6 +592,8 @@
 
         calCounts(place);
 
+
+
         chart.load({
           columns: [place.c, place.r, place.d],
           unload: ['Confirmed', 'Recovered', 'Death'],
@@ -673,6 +674,10 @@
             Death: '#5d4f72e8'
           }
         },
+        // zoom: {
+        //   enabled: true,
+        //   type: 'drag',
+        // },
         axis: {
           x: {
             type: "timeseries",
@@ -730,8 +735,8 @@
         data: {
           x: 'x',
           columns: [
-            ['x', 'China',  'South Korea', 'Japan', 'Italy', 'Iran','Singapore',  'U.S.', 'Thailand', 'Malaysia'],
-            ['Confirmed Cases', china,  southKorea, japan,  italy,iran, singapore, us, thailand, malaysia]
+            ['x', 'China', 'Japan', 'South Korea', 'Singapore', 'U.S.', 'Thailand', 'Malaysia', 'Germany', 'Australia'],
+            ['Confirmed Cases', china, japan, southKorea, singapore, us, thailand, malaysia, germany, australia]
           ],
           type: 'bar'
         },
