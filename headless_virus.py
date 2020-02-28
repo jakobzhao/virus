@@ -117,6 +117,8 @@ for state in states:
     sqls += ", '" + enName.strip() + "'"
     sqle += "'" + confirmed + "-0-" + recovered + "-" + death + "', "
 
+exit(-1)
+
 # Canada
 
 url = "https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html"
