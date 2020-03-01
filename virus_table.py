@@ -74,15 +74,15 @@ for item in items:
 conn = sqlite3.connect("assets/virus.db")
 cursor = conn.cursor()
 latest = {}
-for row in cursor.execute("SELECT `arizona`, `illinois`, `washington`, `california`, `wisconsin`, `massachusetts`, `ontario`, `british columbia` from virus order by rowid DESC limit 1"):
-    latest['arizona'] = row[0]
-    latest['illinois'] = row[1]
-    latest['washington'] = row[2]
-    latest['california'] = row[3]
-    latest['wisconsin'] = row[4]
-    latest['massachusetts'] = row[5]
-    latest['ontario'] = row[6]
-    latest['british columbia'] = row[7]
+# for row in cursor.execute("SELECT `arizona`, `illinois`, `washington`, `california`, `wisconsin`, `massachusetts`, `ontario`, `british columbia` from virus order by rowid DESC limit 1"):
+#     latest['arizona'] = row[0]
+#     latest['illinois'] = row[1]
+#     latest['washington'] = row[2]
+#     latest['california'] = row[3]
+#     latest['wisconsin'] = row[4]
+#     latest['massachusetts'] = row[5]
+#     latest['ontario'] = row[6]
+#     latest['british columbia'] = row[7]
 
 
 # US
