@@ -8,8 +8,8 @@ from selenium.webdriver.chrome.options import Options
 options = Options()
 options.add_argument('--headless')
 options.add_argument('--no-sandbox')
-#browser = webdriver.Chrome("/usr/bin/chromedriver", options=options)
-browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver", options=options)
+browser = webdriver.Chrome("/usr/bin/chromedriver", options=options)
+#browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver", options=options)
 
 
 now = str(datetime.now())
