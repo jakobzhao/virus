@@ -24,3 +24,19 @@ manually update
 ```
 sudo git pull
 ```
+
+
+renew the whole Website
+
+```powershell
+cd /var/www/html
+sudo rm -rf virus
+git clone [git url]
+```
+
+
+automatical update
+
+```
+cd /home/zhaobo
+sudo sh virus.shauso
