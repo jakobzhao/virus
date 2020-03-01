@@ -53,9 +53,25 @@ update wuhan-15.json
 for US states or CA provices.
 
 virus.db  //add new columns for the new countries or states/provinces.
+
 update wuhan-15.json
 
-
-
-
 sudo crontab -e
+
+
+
+=========================
+
+1. topojson replaces geojson
+
+http://bl.ocks.org/hpfast/2fb8de57c356d8c45ce511189eec5d6a
+
+2. cookie clean
+
+3. projection robinson
+
+4. charts/calendar.
+
+5. timeline table
+
+6. datasets  at github
