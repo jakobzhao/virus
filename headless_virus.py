@@ -8,7 +8,8 @@ from selenium.webdriver.chrome.options import Options
 options = Options()
 options.add_argument('--headless')
 options.add_argument('--no-sandbox')
-browser = webdriver.Chrome("/usr/bin/chromedriver", options=options)
+#browser = webdriver.Chrome("/usr/bin/chromedriver", options=options)
+browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver", options=options)
 
 
 now = str(datetime.now())
@@ -91,6 +92,7 @@ for row in cursor.execute("SELECT `arizona`, `illinois`, `washington`, `californ
     latest['ontario'] = row[9]
     latest['british columbia'] = row[10]
 
+soup = BeautifulSoup(browser.page_source, 'html.parser')
 # US
 # https://www.worldometers.info/coronavirus/usa-coronavirus/
 
@@ -118,8 +120,6 @@ for state in states:
     print(enName, confirmed, recovered, death)
     sqls += ", '" + enName.strip() + "'"
     sqle += "'" + confirmed + "-0-" + recovered + "-" + death + "', "
-
-exit(-1)
 
 # Canada
 

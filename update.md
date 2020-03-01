@@ -23,6 +23,7 @@ manually update
 
 ```
 sudo git pull
+sudo python3 headless_virus.py
 ```
 
 
@@ -39,7 +40,9 @@ automatical update
 
 ```
 cd /home/zhaobo
-sudo sh virus.shauso
+sudo sh virus.sh
+
+auso
 
 
 
