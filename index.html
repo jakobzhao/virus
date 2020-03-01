@@ -532,7 +532,8 @@
 
 
       function style(feature) {
-
+        // if ( feature.properties.enname == "texas" || feature.properties.enname == "wisconsin" ||  feature.properties.enname == "arizona" || feature.properties.enname == "california" || feature.properties.enname == "washington" || feature.properties.enname == "british columbia" || feature.properties.enname == "ontario" || feature.properties.enname == "illinois" || feature.properties
+        //   .enname == "massachusetts") {
 
         if (feature.properties.enname == "us" || feature.properties.enname == "canada") {
           return {
@@ -736,14 +737,15 @@
         data: {
           x: 'x',
           columns: [
-            ['x', 'China',  'South Korea', 'Italy', 'Japan',  'Iran', 'Singapore', 'Germany', 'U.S.' ],
-            ['Confirmed Cases', china, southKorea, italy, japan,  iran, singapore, germany, us]
+            ['x', 'China',  'South Korea', 'Japan', 'Italy', 'Iran', 'Singapore', 'U.S.', 'Germany' ],
+            ['Confirmed Cases', china, southKorea,  japan, italy, iran, singapore, us, germany]
           ],
           type: 'bar'
         },
         axis: {
           x: {
             type: 'category',
+
             tick: {
               rotate: -60,
               multiline: false
