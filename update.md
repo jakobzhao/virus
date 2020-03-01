@@ -54,3 +54,8 @@ for US states or CA provices.
 
 virus.db  //add new columns for the new countries or states/provinces.
 update wuhan-15.json
+
+
+
+
+sudo crontab -e

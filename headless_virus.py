@@ -117,7 +117,7 @@ for state in states:
     sqls += ", '" + enName.strip() + "'"
     sqle += "'" + confirmed + "-0-" + recovered + "-" + death + "', "
 
-exit(-1)
+
 
 # Canada
 
