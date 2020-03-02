@@ -95,7 +95,7 @@ for item in items:
 conn = sqlite3.connect("assets/virus.db")
 cursor = conn.cursor()
 latest = {}
-for row in cursor.execute("SELECT * from virus order by rowid DESC limit 1"):
+for row in cursor.execute("SELECT `arizona`, `illinois`, `washington`, `california`, `wisconsin`, `massachusetts`, `oregon`, `texas`, `quebec`, `ontario`, `british columbia`, `rhode island`, `florida`, `new york` from virus order by rowid DESC limit 1"):
     latest['arizona'] = row[0]
     latest['illinois'] = row[1]
     latest['washington'] = row[2]
@@ -107,26 +107,42 @@ for row in cursor.execute("SELECT * from virus order by rowid DESC limit 1"):
     latest['quebec'] = row[8]
     latest['ontario'] = row[9]
     latest['british columbia'] = row[10]
-
-
+    latest['rhode island'] = row[11]
+    latest['florida'] = row[12]
+    latest['new york'] = row[13]
 
 # US
-# https://www.worldometers.info/coronavirus/usa-coronavirus/
+# https://nowcorona.com/
 
-url = "https://www.worldometers.info/coronavirus/usa-coronavirus/"
+url = "https://nowcorona.com/"
 browser.get(url)
-browser.find_element_by_class_name('content-inner')
+browser.find_element_by_tag_name("main")
 soup = BeautifulSoup(browser.page_source, 'html.parser')
-states = soup.find_all("ul")[2].find_all("li")[0:]
+states = soup.find("section", class_="elementor-element-fb5563c").findAll("tr")[3:]
 for state in states:
-    enName = state.text.lower().split(" ")[2]
-    confirmed = state.text.lower().split(" ")[0]
+    enName = state.find("td", class_="column-1").text.lower()
+    confirmed = state.find("td", class_="column-2").text
+    recovered = state.find("td", class_="column-4").text
+    death = state.find("td", class_="column-3").text
+    if enName == 'washiongton':
+        enName = 'washington'
     if enName in latest.keys():
-        recovered = latest[enName].split("-")[2]
-        death = latest[enName].split("-")[3]
-        if confirmed < latest[enName].split("-")[1]:
-            confirmed = latest[enName].split("-")[1]
+        print(latest[enName])
+        # recovered = latest[enName].split("-")[2]
+        # death = latest[enName].split("-")[3]
+        try:
+            if confirmed < latest[enName].split("-")[0]:
+                confirmed = latest[enName].split("-")[0]
+            if recovered < latest[enName].split("-")[2]:
+                recovered = latest[enName].split("-")[2]
+            if death < latest[enName].split("-")[3]:
+                death = latest[enName].split("-")[3]
+        except:
+            confirmed = '0'
+            recovered = '0'
+            death = '0'
     else:
+        confirmed = '0'
         recovered = '0'
         death = '0'
 
