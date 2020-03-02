@@ -21,6 +21,7 @@
   <script src="js/c3.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
   <script src="js/leaflet.markercluster.js"></script>
+  <script src="js/topojson.v1.min.js"></script>
   <script src="js/chroma.min.js"></script>
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -293,12 +294,28 @@
 
 
 
-    var createLabelIcon = function(labelClass, labelText) {
-      return L.divIcon({
-        className: labelClass,
-        html: labelText
-      })
-    }
+    L.TopoJSON = L.GeoJSON.extend({
+      addData: function(jsonData) {
+        if (jsonData.type === 'Topology') {
+          for (key in jsonData.objects) {
+            geojson = topojson.feature(jsonData, jsonData.objects[key]);
+            L.GeoJSON.prototype.addData.call(this, geojson);
+          }
+        } else {
+          L.GeoJSON.prototype.addData.call(this, jsonData);
+        }
+      }
+    });
+    // Copyright (c) 2013 Ryan Clark
+
+
+
+    // var createLabelIcon = function(labelClass, labelText) {
+    //   return L.divIcon({
+    //     className: labelClass,
+    //     html: labelText
+    //   })
+    // }
 
     var mymap = L.map('map', {
       center: [25, -50],
@@ -356,7 +373,7 @@
 
     Promise.all([
       d3.csv('assets/virus.csv'),
-      d3.json("assets/wuhan-15.json"),
+      d3.json("assets/all-topo-30.json"),
       d3.csv('assets/communities.csv'),
       d3.csv('assets/timestamp.txt')
     ]).then(function(datasets) {
@@ -557,7 +574,6 @@
 
 
 
-
       function highlightFeature(e) {
         // e indicates the current event
         var layer = e.target; //the target capture the object which the event associates with
@@ -609,7 +625,7 @@
 
       // 3.2.3 reset the hightlighted feature when the mouse is out of its region.
       function resetHighlight(e) {
-        provinces.resetStyle(e.target);
+        areas.resetStyle(e.target);
 
       }
 
@@ -623,10 +639,19 @@
       }
 
 
-      var provinces = L.geoJSON(datasets[1], {
+      // var provinces = L.geoJSON(datasets[1], {
+      //   style: style,
+      //   onEachFeature: onEachFeature
+      // }).addTo(mymap);
+
+      var areas = new L.TopoJSON(datasets[1], {
         style: style,
         onEachFeature: onEachFeature
       }).addTo(mymap);
+
+      // areas.addData(datasets[4]);
+      // areas.addTo(mymap);
+      // areas.eachLayer(handleLayer);
 
 
 
@@ -741,7 +766,7 @@
           x: 'x',
           columns: [
             ['x', 'China', 'South Korea', 'Italy', 'Iran', 'Japan', 'Germany', 'France', 'Singapore'],
-            ['Confirmed Cases', china, southKorea, italy, iran, japan, germany,  france, singapore]
+            ['Confirmed Cases', china, southKorea, italy, iran, japan, germany, france, singapore]
           ],
           type: 'bar'
         },
