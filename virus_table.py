@@ -131,11 +131,11 @@ for state in states:
         # recovered = latest[enName].split("-")[2]
         # death = latest[enName].split("-")[3]
         try:
-            if confirmed < latest[enName].split("-")[0]:
+            if int(confirmed) < int(latest[enName].split("-")[0]):
                 confirmed = latest[enName].split("-")[0]
-            if recovered < latest[enName].split("-")[2]:
+            if int(recovered) < int(latest[enName].split("-")[2]):
                 recovered = latest[enName].split("-")[2]
-            if death < latest[enName].split("-")[3]:
+            if int(death) < int(latest[enName].split("-")[3]):
                 death = latest[enName].split("-")[3]
         except:
             confirmed = '0'
