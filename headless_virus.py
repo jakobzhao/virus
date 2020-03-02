@@ -17,11 +17,18 @@ sqls = "INSERT OR REPLACE INTO virus ('datetime'"
 sqle = ") VALUES ('" + now + "', "
 
 placeName = {}
-with open("assets/name.csv", "r", encoding="utf-8") as fp:
+with open("assets/country_name.csv", "r", encoding="utf-8") as fp:
     lines = fp.readlines()
     for line in lines:
         placeItem = line.replace("\n", "").split(",")
         placeName[placeItem[0]] = placeItem[1]
+
+chineseCity = {}
+with open("assets/name.csv", "r", encoding="utf-8") as fp:
+    lines = fp.readlines()
+    for line in lines:
+        placeItem = line.replace("\n", "").split(",")
+        chineseCity[placeItem[0]] = placeItem[1]
 
 
 # # China Provinces
@@ -51,23 +58,25 @@ for item in items:
         chname = item.find_all("td")[0].text
     except:
         pass
-    if (chname in placeName.keys()):
-        if chname in ["美国", "泰国", "新加坡", "日本", "马来西亚", "澳大利亚", "韩国", "法国", "德国", "越南", "加拿大", "尼泊尔", "柬埔寨", "斯里兰卡", "菲律宾", "阿联酋", "英国", "印度", "俄罗斯", "意大利", "比利时", "西班牙", "瑞典", "芬兰", "埃及", "伊朗", "科威特", "阿曼", "巴林", "以色列", "阿富汗", "伊拉克", "黎巴嫩", "巴西","奥地利","克罗地亚", "瑞士", "阿尔及利亚","巴基斯坦","希腊", "爱沙尼亚", "罗马尼亚", "北马其顿", "挪威", "格鲁吉亚", "阿塞拜疆","白俄罗斯","立陶宛","新西兰","荷兰","丹麦","圣马力诺","摩纳哥","冰岛","尼日利亚","厄瓜多尔","卢森堡","多米尼加共和国","墨西哥","捷克","爱尔兰"]:
 
+    if (chname in placeName.keys()):
+        if chname not in chineseCity.keys():
             confirmed = item.find_all("td")[1].text.strip()
             recovered = item.find_all("td")[2].text.strip()
             death = item.find_all("td")[3].text.strip()
         else:
+            print(chname)
             confirmed = item.find_all("td")[2].text.strip()
             recovered = item.find_all("td")[3].text.strip()
             death = item.find_all("td")[4].text.strip()
+
         if recovered == "" or recovered == "-":
             recovered = "0"
         if death == "" or death == "-":
             death = "0"
         if confirmed == "" or confirmed == "-" :
             confirmed = "0"
-        if chname not in ["美国", "泰国", "新加坡", "日本", "马来西亚", "澳大利亚", "韩国", "法国", "德国", "越南", "加拿大", "尼泊尔", "柬埔寨", "斯里兰卡","菲律宾", "阿联酋", "英国", "印度", "俄罗斯", "意大利", "比利时", "西班牙", "瑞典", "芬兰", "埃及", "伊朗", "科威特", "阿曼", "巴林", "以色列", "阿富汗", "伊拉克", "黎巴嫩", "巴西","奥地利","克罗地亚", "瑞士", "阿尔及利亚","巴基斯坦","希腊", "爱沙尼亚", "罗马尼亚", "北马其顿", "挪威", "格鲁吉亚","阿塞拜疆","白俄罗斯","立陶宛","新西兰","荷兰","丹麦","圣马力诺","摩纳哥","冰岛","尼日利亚","厄瓜多尔","卢森堡","多米尼加共和国","墨西哥","捷克","爱尔兰"]:
+        if chname in chineseCity.keys():
             confirmed = str(int(confirmed) + int(recovered) + int(death))
         print(chname, placeName[chname], confirmed, recovered, death)
         sqls += ", '" + placeName[chname].strip() + "'"
