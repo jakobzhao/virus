@@ -65,7 +65,6 @@ for item in items:
             recovered = item.find_all("td")[2].text.strip()
             death = item.find_all("td")[3].text.strip()
         else:
-            print(chname)
             confirmed = item.find_all("td")[2].text.strip()
             recovered = item.find_all("td")[3].text.strip()
             death = item.find_all("td")[4].text.strip()
