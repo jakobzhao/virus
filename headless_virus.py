@@ -37,12 +37,12 @@ url = "https://voice.baidu.com/act/newpneumonia/newpneumonia"
 browser.get(url)
 
 
-unfolds = browser.find_elements_by_xpath("//div[starts-with(@class,'Common')]")
-
+# unfolds = browser.find_elements_by_xpath("//div[starts-with(@class,'Common')]")
+unfolds = browser.find_elements_by_xpath("//div[starts-with(@class,'VirusTable')]")
 for unfold in unfolds:
-    if unfold.text == "展开全部":
+    if unfold.text == "欧洲" or unfold.text == "北美洲" or unfold.text == "大洋洲" or unfold.text == "南美洲":
         unfold.click()
-
+        time.sleep(2)
 
 browser.find_element_by_xpath("//table[starts-with(@class,'VirusTable')]").find_elements_by_tag_name("tr")
 soup = BeautifulSoup(browser.page_source, 'html.parser')
@@ -59,11 +59,11 @@ for item in items:
     except:
         pass
 
-    if (chname in placeName.keys()):
+    if (chname in placeName.keys()) and chname != "中国":
         if chname not in chineseCity.keys():
-            confirmed = item.find_all("td")[1].text.strip()
-            recovered = item.find_all("td")[2].text.strip()
-            death = item.find_all("td")[3].text.strip()
+            confirmed = item.find_all("td")[2].text.strip()
+            recovered = item.find_all("td")[3].text.strip()
+            death = item.find_all("td")[4].text.strip()
         else:
             confirmed = item.find_all("td")[2].text.strip()
             recovered = item.find_all("td")[3].text.strip()
