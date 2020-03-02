@@ -108,7 +108,7 @@ for row in cursor.execute("SELECT * from virus order by rowid DESC limit 1"):
     latest['ontario'] = row[9]
     latest['british columbia'] = row[10]
 
-exit(-1)
+
 
 # US
 # https://www.worldometers.info/coronavirus/usa-coronavirus/
@@ -124,6 +124,8 @@ for state in states:
     if enName in latest.keys():
         recovered = latest[enName].split("-")[2]
         death = latest[enName].split("-")[3]
+        if confirmed < latest[enName].split("-")[1]:
+            confirmed = latest[enName].split("-")[1]
     else:
         recovered = '0'
         death = '0'

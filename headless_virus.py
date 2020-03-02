@@ -115,6 +115,8 @@ for state in states:
     if enName in latest.keys():
         recovered = latest[enName].split("-")[2]
         death = latest[enName].split("-")[3]
+        if confirmed < latest[enName].split("-")[1]:
+            confirmed = latest[enName].split("-")[1]
     else:
         recovered = '0'
         death = '0'
