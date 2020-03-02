@@ -16,8 +16,8 @@ with open("assets/name.csv", "r", encoding="utf-8") as fp:
         placeItem = line.replace("\n", "").split(",")
         placeName[placeItem[0]] = placeItem[1]
 
-browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver")
 #browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver")
+browser = webdriver.Chrome("C:\Workspace\chromedriver.exe") # zhaobo's chromedrive location'
 
 
 # # China Provinces
