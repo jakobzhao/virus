@@ -93,7 +93,7 @@ for item in items:
 conn = sqlite3.connect("assets/virus.db")
 cursor = conn.cursor()
 latest = {}
-for row in cursor.execute("SELECT `arizona`, `illinois`, `washington`, `california`, `wisconsin`, `massachusetts`, `oregon`, `texas`, `quebec`, `ontario`, `british columbia`, `rhode island`, `florida`, `new york`, `new hampshire` from virus order by rowid DESC limit 1"):
+for row in cursor.execute("SELECT `arizona`, `illinois`, `washington`, `california`, `wisconsin`, `massachusetts`, `oregon`, `texas`, `quebec`, `ontario`, `british columbia`, `rhode island`, `florida`, `new york`, `new hampshire`, `district of columbia` from virus order by rowid DESC limit 1"):
     latest['arizona'] = row[0]
     latest['illinois'] = row[1]
     latest['washington'] = row[2]
@@ -109,19 +109,20 @@ for row in cursor.execute("SELECT `arizona`, `illinois`, `washington`, `californ
     latest['florida'] = row[12]
     latest['new york'] = row[13]
     latest['new hampshire'] = row[14]
-
-
+    latest['district of columbia'] = row[15]
 
 # US
-# https://www.worldometers.info/coronavirus/usa-coronavirus/
+# https://nowcorona.com/
 
 url = "https://nowcorona.com/"
 browser.get(url)
 browser.find_element_by_tag_name("main")
 soup = BeautifulSoup(browser.page_source, 'html.parser')
 states = soup.find("section", class_="elementor-element-fb5563c").findAll("tr")[3:]
+webState = []
 for state in states:
     enName = state.find("td", class_="column-1").text.lower()
+    webState.append(enName)
     confirmed = state.find("td", class_="column-2").text
     recovered = state.find("td", class_="column-4").text
     death = state.find("td", class_="column-3").text
@@ -132,11 +133,11 @@ for state in states:
         # recovered = latest[enName].split("-")[2]
         # death = latest[enName].split("-")[3]
         try:
-            if confirmed < latest[enName].split("-")[0]:
+            if int(confirmed) < int(latest[enName].split("-")[0]):
                 confirmed = latest[enName].split("-")[0]
-            if recovered < latest[enName].split("-")[2]:
+            if int(recovered) < int(latest[enName].split("-")[2]):
                 recovered = latest[enName].split("-")[2]
-            if death < latest[enName].split("-")[3]:
+            if int(death) < int(latest[enName].split("-")[3]):
                 death = latest[enName].split("-")[3]
         except:
             confirmed = '0'
@@ -156,6 +157,13 @@ for state in states:
     print(enName, confirmed, recovered, death)
     sqls += ", '" + enName.strip() + "'"
     sqle += "'" + confirmed + "-0-" + recovered + "-" + death + "', "
+
+for latestState in latest:
+    if latestState not in webState:
+        print(latestState, latest[latestState])
+        sqls += ", '" + latestState + "'"
+        sqle += "'" + latest[latestState] + "', "
+
 
 # Canada
 
