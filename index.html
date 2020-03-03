@@ -76,6 +76,16 @@
 
       <div id="footer">
         <p><a href="https://hgis.uw.edu" target="_blank"><img src="img/logo.png" width="250px"></img></a></p>
+
+
+        <div>An Infection Case &nbsp; <i class='fas fa-user community'></i> &nbsp; indicates a confirmed case found at county level.
+          Clicking the icon, more information of infected person: gender, age, identified date and source of infection, will pop up.
+          <font color="red">NOTICE: The location of the icon is at county level does not specificy to the street level. </font>
+          It does not include the infected people who were from the Diamond Princess cruise ship.
+          The dataset of the cases of infection are constantly contributed by volunteers and can be found at
+           <a href="https://mapmiao.com/ncov/" target="_blank">nowcorona</a>.
+        </div>
+
         <div>An Infected Community &nbsp; <i class="fas fa-procedures community"> </i> &nbsp; indicates a community or village where confirmed cases were found. The local governments in China have taken strict measures to isolate the residents of
           these
           places from the outside. The dataset of quarantine area are constantly contributed by volunteers, and can be found at <a href="https://mapmiao.com/ncov/" target="_blank">mapmiao</a>.
@@ -801,8 +811,8 @@
         data: {
           x: 'x',
           columns: [
-            ['x', 'China', 'South Korea', 'Italy', 'Iran', 'Japan', 'France', 'Germany', 'Singapore'],
-            ['Confirmed Cases', china, southKorea, italy, iran, japan, france, germany, singapore]
+            ['x', 'China', 'South Korea', 'Iran', 'Italy', 'Japan', 'France', 'Germany', 'Singapore'],
+            ['Confirmed Cases', china, southKorea, iran, italy, japan, france, germany, singapore]
           ],
           type: 'bar'
         },
