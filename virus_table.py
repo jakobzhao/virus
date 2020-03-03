@@ -117,7 +117,7 @@ for row in cursor.execute("SELECT `arizona`, `illinois`, `washington`, `californ
     latest['rhode island'] = row[11]
     latest['florida'] = row[12]
     latest['new york'] = row[13]
-    latest['new hampshire'] = row[13]
+    latest['new hampshire'] = row[14]
 
 # US
 # https://nowcorona.com/
