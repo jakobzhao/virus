@@ -8,13 +8,14 @@ from selenium.webdriver.chrome.options import Options
 options = Options()
 options.add_argument('--headless')
 options.add_argument('--no-sandbox')
-browser = webdriver.Chrome("/usr/bin/chromedriver", options=options)
-#browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver", options=options)
+#browser = webdriver.Chrome("/usr/bin/chromedriver", options=options)
+browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver", options=options)
 
 
 
 now = str(datetime.now())
-
+sqls = "INSERT OR REPLACE INTO virus ('datetime'"
+sqle = ") VALUES ('" + now + "', "
 
 placeName = {}
 with open("assets/country_name.csv", "r", encoding="utf-8") as fp:
@@ -42,8 +43,8 @@ with open("assets/old_name.csv", "r", encoding="utf-8") as fp:
         cursor.execute("ALTER TABLE virus ADD [" + city + "] CHAR(20);")"""
 
 
-#browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver") #fengyu's chromefrive location
-browser = webdriver.Chrome("C:\Workspace\chromedriver.exe") # zhaobo's chromedrive location'
+browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver") #fengyu's chromefrive location
+#browser = webdriver.Chrome("C:\Workspace\chromedriver.exe") # zhaobo's chromedrive location'
 
 
 # # China Provinces
@@ -134,8 +135,10 @@ browser.get(url)
 browser.find_element_by_tag_name("main")
 soup = BeautifulSoup(browser.page_source, 'html.parser')
 states = soup.find("section", class_="elementor-element-fb5563c").findAll("tr")[3:]
+webState = []
 for state in states:
     enName = state.find("td", class_="column-1").text.lower()
+    webState.append(enName)
     confirmed = state.find("td", class_="column-2").text
     recovered = state.find("td", class_="column-4").text
     death = state.find("td", class_="column-3").text
@@ -170,6 +173,12 @@ for state in states:
     print(enName, confirmed, recovered, death)
     sqls += ", '" + enName.strip() + "'"
     sqle += "'" + confirmed + "-0-" + recovered + "-" + death + "', "
+
+for latestState in latest:
+    if latestState not in webState:
+        print(latestState, latest[latestState])
+        sqls += ", '" + latestState + "'"
+        sqle += "'" + latest[latestState] + "', "
 
 # Canada
 
