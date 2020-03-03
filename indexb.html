@@ -316,11 +316,18 @@
     //     html: labelText
     //   })
     // }
+    //
+    // var usBounds = L.latLngBounds(
+    //   L.latLng(24.520833, -124.7771694), //Southwest
+    //   L.latLng(49.384472, -66.947028) //Northeast
+    // );
+
+
 
     var mymap = L.map('map', {
-      center: [25, -50],
+      center: [38, -100],
       zoomControl: false,
-      zoom: 3,
+      zoom: 4.5,
       maxZoom: 16,
       minZoom: 2,
       worldCopyJump: true
@@ -332,10 +339,14 @@
 
 
 
-    var gray = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png');
+
+
+    var gray = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png').addTo(mymap);
     // var dark = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png').addTo(mymap);
-    var voyager = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png').addTo(mymap);
-    var satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}');
+    var voyager =
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png');
+    var satellite =
+      L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}');
 
     var baseLayers = {
       'CartoDB Light': gray,
@@ -369,13 +380,29 @@
     }).addTo(mymap);
 
 
+    var cases = new L.MarkerClusterGroup({
+      spiderfyOnMaxZoom: false,
+      singleMarkerMode: true,
+      // showCoverageOnHover: false,
+      // zoomToBoundsOnClick: false,
+      iconCreateFunction: function(cluster) {
+        return L.divIcon({
+          html: '<i class="fas fa-user community community-marker"> <b>' + cluster.getChildCount() + '</b></i>'
+        });
+      }
+
+    }).addTo(mymap);
+
+
+
 
 
     Promise.all([
       d3.csv('assets/virus.csv'),
-      d3.json("assets/all-topo-30.json"),
+      d3.json("assets/all-topo-15.json"),
       d3.csv('assets/communities.csv'),
-      d3.csv('assets/timestamp.txt')
+      d3.csv('assets/timestamp.txt'),
+      d3.csv('assets/cases.csv')
     ]).then(function(datasets) {
 
 
@@ -384,6 +411,11 @@
           communities);
       })
 
+
+      datasets[4].forEach(function(d) {
+        L.marker([parseFloat(d.lat), parseFloat(d.lng)]).bindPopup("<b>" + d.iftype + " case </b> <p>" + d.info + " identified on " + d.date + ", &nbsp;" + d.source + ".</p>").addTo(
+          cases);
+      })
 
       // lastupdate = new Date(datasets[0][datasets[0].length - 1]["datetime"]);
       // $("#date").text("Last update: " + lastupdate.toLocaleDateString() + " " + lastupdate.toLocaleTimeString() + " PST");
@@ -430,6 +462,9 @@
           "hebei"]) + tc(latest["heilongjiang"]) + tc(latest["henan"]) + tc(latest["hongkong"]) + tc(latest["hubei"]) + tc(latest["hunan"]) + tc(latest["neimenggu"]) + tc(latest["jiangsu"]) + tc(latest["jiangxi"]) + tc(latest["jilin"]) + tc(
           latest["liaoning"]) + tc(latest["macau"]) + tc(latest["ningxia"]) + tc(latest["qinghai"]) + tc(latest["shaanxi"]) + tc(latest["shandong"]) + tc(latest["shanghai"]) + tc(latest["shanxi"]) + tc(latest["sichuan"]) + tc(latest["taiwan"]) +
         tc(latest["tianjin"]) + tc(latest["xinjiang"]) + tc(latest["yunnan"]) + tc(latest["zhejiang"]) + tc(latest["xizang"]);
+
+
+      // var china = tc(latest["china"]);
 
 
       var t = ["t"];
@@ -656,7 +691,8 @@
 
 
       new L.control.layers(baseLayers, {
-        "Infection Level": provinces,
+        "Infection Level": areas,
+        "Infaction Case &nbsp;&nbsp; <i class='fas fa-user community'></i>": cases,
         "Infected Community &nbsp;&nbsp; <i class='fas fa-procedures community'></i>": communities
       }, {
         collapsed: false
@@ -765,8 +801,8 @@
         data: {
           x: 'x',
           columns: [
-            ['x', 'China', 'South Korea', 'Italy', 'Iran', 'Japan', 'Germany', 'France', 'Singapore'],
-            ['Confirmed Cases', china, southKorea, italy, iran, japan, germany, france, singapore]
+            ['x', 'China', 'South Korea', 'Italy', 'Iran', 'Japan', 'France', 'Germany', 'Singapore'],
+            ['Confirmed Cases', china, southKorea, italy, iran, japan, france, germany, singapore]
           ],
           type: 'bar'
         },
@@ -785,7 +821,7 @@
               position: 'outer-middle'
             },
             tick: {
-              values: [50, 200, 1000, 10000, 75000]
+              values: [50, 200, 1000, 5000, 10000, 90000]
             },
             type: 'log'
           }
