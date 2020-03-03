@@ -45,7 +45,11 @@ url = "https://voice.baidu.com/act/newpneumonia/newpneumonia"
 browser.get(url)
 
 
-# unfolds = browser.find_elements_by_xpath("//div[starts-with(@class,'Common')]")
+unfolds = browser.find_elements_by_xpath("//div[starts-with(@class,'Common')]")
+for unfold in unfolds:
+    if unfold.text == "展开全部":
+        unfold.click()
+        time.sleep(2)
 unfolds = browser.find_elements_by_xpath("//div[starts-with(@class,'VirusTable')]")
 for unfold in unfolds:
     if unfold.text == "欧洲" or unfold.text == "北美洲" or unfold.text == "大洋洲" or unfold.text == "南美洲" or unfold.text == "非洲":
