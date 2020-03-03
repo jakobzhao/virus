@@ -118,7 +118,7 @@ for state in states:
     confirmed = state.find("td", class_="column-2").text
     recovered = state.find("td", class_="column-4").text
     death = state.find("td", class_="column-3").text
-    if enName == 'washiongton':
+    if enName == 'washiongton' or "washington" in enName:
         enName = 'washington'
     if enName in latest.keys():
         print(latest[enName])
