@@ -93,7 +93,7 @@ for item in items:
 conn = sqlite3.connect("assets/virus.db")
 cursor = conn.cursor()
 latest = {}
-for row in cursor.execute("SELECT `arizona`, `illinois`, `washington`, `california`, `wisconsin`, `massachusetts`, `oregon`, `texas`, `quebec`, `ontario`, `british columbia`, `rhode island`, `florida`, `new york`, `new hampshire`, `district of columbia` from virus order by rowid DESC limit 1"):
+for row in cursor.execute("SELECT `arizona`, `illinois`, `washington`, `california`, `wisconsin`, `massachusetts`, `oregon`, `texas`, `quebec`, `ontario`, `british columbia`, `rhode island`, `florida`, `new york`, `new hampshire`, `district of columbia`, `north carolina` from virus order by rowid DESC limit 1"):
     latest['arizona'] = row[0]
     latest['illinois'] = row[1]
     latest['washington'] = row[2]
@@ -110,6 +110,7 @@ for row in cursor.execute("SELECT `arizona`, `illinois`, `washington`, `californ
     latest['new york'] = row[13]
     latest['new hampshire'] = row[14]
     latest['district of columbia'] = row[15]
+    latest['north carolina'] = row[16]
 
 # US
 # https://nowcorona.com/
