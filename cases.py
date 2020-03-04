@@ -20,11 +20,11 @@ cases = soup.find("table", class_="tablepress-id-4").findAll("tr")
 id = 0
 outputs = []
 for case in cases:
-    iftype = "confirmed"
+    iftype = "Confirmed"
     if "recovered" in case.find("td", class_="column-1").text.lower():
-        iftype = "recovered"
+        iftype = "Recovered"
     elif "death" in case.find("td", class_="column-1").text.lower():
-        iftype = "death"
+        iftype = "Death"
     else:
         iftype= "confirmed"
 
