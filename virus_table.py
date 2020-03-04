@@ -111,7 +111,7 @@ for item in items:
 conn = sqlite3.connect("assets/virus.db")
 cursor = conn.cursor()
 latest = {}
-for row in cursor.execute("SELECT `arizona`, `illinois`, `washington`, `california`, `wisconsin`, `massachusetts`, `oregon`, `texas`, `quebec`, `ontario`, `british columbia`, `rhode island`, `florida`, `new york`, `new hampshire`, `district of columbia`, `north carolina` from virus order by rowid DESC limit 1"):
+for row in cursor.execute("SELECT `arizona`, `illinois`, `washington`, `california`, `wisconsin`, `massachusetts`, `oregon`, `texas`, `quebec`, `ontario`, `british columbia`, `rhode island`, `florida`, `new york`, `new hampshire`, `district of columbia`, `north carolina`, `georgia usa` from virus order by rowid DESC limit 1"):
     latest['arizona'] = row[0]
     latest['illinois'] = row[1]
     latest['washington'] = row[2]
@@ -129,6 +129,7 @@ for row in cursor.execute("SELECT `arizona`, `illinois`, `washington`, `californ
     latest['new hampshire'] = row[14]
     latest['district of columbia'] = row[15]
     latest['north carolina'] = row[16]
+    latest['georgia usa'] = row[17]
 
 # US
 # https://nowcorona.com/
@@ -141,12 +142,15 @@ states = soup.find("section", class_="elementor-element-fb5563c").findAll("tr")[
 webState = []
 for state in states:
     enName = state.find("td", class_="column-1").text.lower()
-    webState.append(enName)
+
     confirmed = state.find("td", class_="column-2").text
     recovered = state.find("td", class_="column-4").text
     death = state.find("td", class_="column-3").text
     if enName == 'washiongton' or "washington" in enName:
         enName = 'washington'
+    if "georgia" in enName:
+        enName = 'georgia usa'
+    webState.append(enName)
     if enName in latest.keys():
         print(latest[enName])
         # recovered = latest[enName].split("-")[2]
