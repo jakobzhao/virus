@@ -318,17 +318,16 @@
 
 
     // var createLabelIcon = function(labelClass, labelText) {
-    //   return L.divIcon({
-    //     className: labelClass,
-    //     html: labelText
-    //   })
+    // return L.divIcon({
+    // className: labelClass,
+    // html: labelText
+    // })
     // }
     //
     // var usBounds = L.latLngBounds(
-    //   L.latLng(24.520833, -124.7771694), //Southwest
-    //   L.latLng(49.384472, -66.947028) //Northeast
+    // L.latLng(24.520833, -124.7771694), //Southwest
+    // L.latLng(49.384472, -66.947028) //Northeast
     // );
-
 
 
     var mymap = L.map('map', {
@@ -477,10 +476,50 @@
       var us = tc(latest["us"]);
       var spain = tc(latest["spain"]);
 
+
+
+
       var china = tc(latest["anhui"]) + tc(latest["beijing"]) + tc(latest["chongqing"]) + tc(latest["fujian"]) + tc(latest["gansu"]) + tc(latest["guangdong"]) + tc(latest["guangxi"]) + tc(latest["guizhou"]) + tc(latest["hainan"]) + tc(latest[
           "hebei"]) + tc(latest["heilongjiang"]) + tc(latest["henan"]) + tc(latest["hongkong"]) + tc(latest["hubei"]) + tc(latest["hunan"]) + tc(latest["neimenggu"]) + tc(latest["jiangsu"]) + tc(latest["jiangxi"]) + tc(latest["jilin"]) + tc(
           latest["liaoning"]) + tc(latest["macau"]) + tc(latest["ningxia"]) + tc(latest["qinghai"]) + tc(latest["shaanxi"]) + tc(latest["shandong"]) + tc(latest["shanghai"]) + tc(latest["shanxi"]) + tc(latest["sichuan"]) + tc(latest["taiwan"]) +
         tc(latest["tianjin"]) + tc(latest["xinjiang"]) + tc(latest["yunnan"]) + tc(latest["zhejiang"]) + tc(latest["xizang"]);
+
+
+
+      var top = {
+        "China": china,
+        "Japan": tc(latest["japan"]),
+        "USA": tc(latest["us"]),
+        "Singapore": tc(latest["singapore"]),
+        "South Korea": tc(latest["south korea"]),
+        "Germany": tc(latest["germany"]),
+        "Spain": tc(latest["spain"]),
+        "Iran": tc(latest["iran"]),
+        "Italy": tc(latest["italy"]),
+        "France": tc(latest["france"]),
+        "Thailand": tc(latest["thailand"])
+      };
+
+
+      function sortJsObject(obj) {
+        items = Object.keys(obj).map(function(key) {
+            return [key, obj[key]];
+        });
+        items.sort(function(first, second) {
+            return second[1] - first[1];
+        });
+        sorted_obj={}
+        $.each(items, function(k, v) {
+            use_key = v[0]
+            use_value = v[1]
+            sorted_obj[use_key] = use_value
+        })
+        return(sorted_obj)
+    }
+
+
+
+      stop = sortJsObject(top);
 
 
       // var china = tc(latest["china"]);
@@ -548,9 +587,9 @@
             });
           }
 
-          dd = dd - td(latest["us"]) - td(latest["canada"]);
-          rc = rc - tr(latest["us"]) - tr(latest["canada"]);
-          cf = cf - tc(latest["us"]) - tc(latest["canada"]);
+          // dd = dd - td(latest["us"]) - td(latest["canada"]);
+          // rc = rc - tr(latest["us"]) - tr(latest["canada"]);
+          // cf = cf - tc(latest["us"]) - tc(latest["canada"]);
 
           i["c"].push(cf);
           i["s"].push(sp);
@@ -815,6 +854,15 @@
       });
 
 
+      x = Object.keys(stop).slice(0,9);
+      x.reverse();
+      x.push("x");
+      x.reverse();
+
+      y = Object.values(stop).slice(0,9);
+      y.reverse();
+      y.push("Confirmed Cases");
+      y.reverse();
       rchart = c3.generate({
         size: {
           height: 300,
@@ -823,8 +871,7 @@
         data: {
           x: 'x',
           columns: [
-            ['x', 'China', 'South Korea', 'Italy', 'Iran', 'Japan', 'Germany', 'France', 'Spain'],
-            ['Confirmed Cases', china, southKorea, italy, iran, japan, germany, france, spain]
+            x, y
           ],
           type: 'bar'
         },
