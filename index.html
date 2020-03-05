@@ -592,8 +592,6 @@
           }
 
 
-
-
           i["c"].push(cf);
           i["s"].push(sp);
           i["r"].push(rc);
@@ -652,8 +650,6 @@
 
 
       function style(feature) {
-        // if ( feature.properties.enname == "texas" || feature.properties.enname == "wisconsin" ||  feature.properties.enname == "arizona" || feature.properties.enname == "california" || feature.properties.enname == "washington" || feature.properties.enname == "british columbia" || feature.properties.enname == "ontario" || feature.properties.enname == "illinois" || feature.properties
-        //   .enname == "massachusetts") {
 
         if (feature.properties.enname == "us" || feature.properties.enname == "canada") {
           return {
@@ -678,8 +674,8 @@
         // e indicates the current event
         var layer = e.target; //the target capture the object which the event associates with
         layer.setStyle({
-          weight: 4,
-          opacity: 0.8,
+          weight: 8,
+          opacity: 0.2,
           color: '#e3e3e3',
           fillColor: '#00ffd9',
           fillOpacity: 0.3
@@ -739,19 +735,11 @@
       }
 
 
-      // var provinces = L.geoJSON(datasets[1], {
-      //   style: style,
-      //   onEachFeature: onEachFeature
-      // }).addTo(mymap);
 
       var areas = new L.TopoJSON(datasets[1], {
         style: style,
         onEachFeature: onEachFeature
       }).addTo(mymap);
-
-      // areas.addData(datasets[4]);
-      // areas.addTo(mymap);
-      // areas.eachLayer(handleLayer);
 
 
 
