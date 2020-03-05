@@ -19,35 +19,33 @@ html, body, main {
   opacity: 1;
 }
 
-div#footer >div{
+div#footer>div {
   margin-bottom: 10px
 }
 
-.community{
+.community {
   color: #dc3545;
   font-size: 15px;
   text-shadow: 0 0 3px #ffffff;
   visibility: visible !important
 }
 
-.community-marker{
-
-  width:80px;
+.case-marker {
+  width: 10px;
 
 }
+.community-marker {
+  width: 80px;
+}
 
-.community-marker > b{
-
+.community-marker>b {
   font-family: 'Titillium Web', sans-serif;
-
 }
-
 
 .leaflet-marker-icon {
-  visibility:hidden;
+  visibility: hidden;
   /* width:20px!important */
 }
-
 
 #demo {
   font-size: 14px
@@ -90,7 +88,6 @@ div#footer >div{
   border-radius: 5px !important;
 }
 
-
 .leaflet-control-zoom, .leaflet-control-zoom-in, .leaflet-control-zoom-out {
   color: white !important;
   padding: 0px !important;
@@ -111,7 +108,7 @@ div#footer >div{
     display: none;
   }
 
-  #info, #rank-chart, #total-chart, .c3-legend-item, .c3-legend-background, #footer, #title>img,  #title>span {
+  #info, #rank-chart, #total-chart, .c3-legend-item, .c3-legend-background, #footer, #title>img, #title>span {
     visibility: hidden !important;
   }
 
@@ -126,18 +123,18 @@ div#footer >div{
     /* top: 90vh !important; */
     /* top: 80vh; */
     top: 0px;
-    height:50%;
+    height: 50%;
     /* bottom: 5px; */
     /* background-color: gray !important; */
     left: 0;
     /* height:30vh !important; */
-    width:100wh !important;
+    width: 100wh !important;
   }
 
   #title {
     position: fixed;
     color: black;
-    font-size: 13px!important;
+    font-size: 13px !important;
     top: 5px !important;
     left: -20px !important;
     width: 400px !important;
@@ -153,22 +150,20 @@ div#footer >div{
     width: 500px;
   }
 
-
   #date {
     /* position: relative; */
     color: black;
-    font-size: 10px!important;
+    font-size: 10px !important;
     position: fixed !important;
     left: 12px;
     top: 45px !important;
     width: 300px;
   }
 
-
   #hint {
     /* position: relative; */
-    color: black!important;
-    font-size: 11px!important;
+    color: black !important;
+    font-size: 11px !important;
     position: fixed !important;
     left: 10px !important;
     font-weight: bold;
@@ -177,7 +172,7 @@ div#footer >div{
   }
 
   .card-deck {
-    position:fixed;
+    position: fixed;
     top: 100px !important;
     /* right: 10px; */
     /* width: 75% !important; */
@@ -194,6 +189,7 @@ div#footer >div{
   .card-text {
     font-size: 12px !important
   }
+
   .card-title {
     font-size: 10px !important
   }
@@ -367,8 +363,6 @@ text {
   background-color: #dc3545 !important
 }
 
-
-
 #footer {
   position: relative;
   top: 40px;
@@ -378,7 +372,8 @@ text {
   color: lightgray;
   margin-bottom: 50px;
 }
-#footer >div {
+
+#footer>div {
   font-size: 13px;
 }
 
