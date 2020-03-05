@@ -26,7 +26,7 @@ for case in cases:
     elif "death" in case.find("td", class_="column-1").text.lower():
         iftype = "Death"
     else:
-        iftype= "confirmed"
+        iftype= "Confirmed"
 
     date = case.find("td", class_="column-2").text
     info = case.find("td", class_="column-3").text

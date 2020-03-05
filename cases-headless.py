@@ -22,11 +22,11 @@ outputs = []
 for case in cases:
     iftype = "confirmed"
     if "recovered" in case.find("td", class_="column-1").text.lower():
-        iftype = "recovered"
+        iftype = "Recovered"
     elif "death" in case.find("td", class_="column-1").text.lower():
-        iftype = "death"
+        iftype = "Death"
     else:
-        iftype= "confirmed"
+        iftype= "Confirmed"
 
     date = case.find("td", class_="column-2").text
     info = case.find("td", class_="column-3").text
