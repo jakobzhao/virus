@@ -788,7 +788,8 @@
 
       chart = c3.generate({
         size: {
-          width: 440
+          width: 440,
+          height: 280
         },
         data: {
           x: "t",
@@ -831,10 +832,10 @@
           }
         },
         point: {
-          r: 5,
+          r: 3.5,
           focus: {
             expand: {
-              r: 2
+              r: 5
             }
           }
         },
@@ -868,7 +869,7 @@
       y.reverse();
       rchart = c3.generate({
         size: {
-          height: 300,
+          height: 280,
           width: 440
         },
         data: {
@@ -893,7 +894,7 @@
               position: 'outer-middle'
             },
             tick: {
-              values: [50, 200, 1000, 5000, 10000, 90000]
+              values: [200, 1000, 5000, 10000, 90000]
             },
             type: 'log'
           }
