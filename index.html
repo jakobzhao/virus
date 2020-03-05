@@ -585,11 +585,14 @@
                   break;
               }
             });
+
+            dd = dd - td(latest["us"]) - td(latest["canada"]);
+            rc = rc - tr(latest["us"]) - tr(latest["canada"]);
+            cf = cf - tc(latest["us"]) - tc(latest["canada"]);
           }
 
-          // dd = dd - td(latest["us"]) - td(latest["canada"]);
-          // rc = rc - tr(latest["us"]) - tr(latest["canada"]);
-          // cf = cf - tc(latest["us"]) - tc(latest["canada"]);
+
+
 
           i["c"].push(cf);
           i["s"].push(sp);
