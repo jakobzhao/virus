@@ -204,7 +204,7 @@ with urllib.request.urlopen(urllink) as url:
         name = data[0].lower()
         if name == 'georgia':
             name = 'georgia usa'
-        cases = data[3] + "-0-" + data[4] + "-" + data[5]
+        cases = data[3] + "-0-" + data[5] + "-" + data[4]
         sqls += ", '" + name + "'"
         sqle += "'" + cases + "', "
         print(name + " " + cases)
