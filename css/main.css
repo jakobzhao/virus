@@ -8,6 +8,18 @@ html, body, main {
   overflow: hidden
 }
 
+
+.leaflet-tooltip.feature-label {
+    background-color: transparent;
+    border: transparent;
+    box-shadow: none;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'Titillium Web', sans-serif;
+    text-shadow: 0 0 2px #FFFFFF;
+    color: #dc3545;
+}
+
 .loader {
   position: fixed;
   width: 100%;

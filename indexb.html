@@ -19,6 +19,8 @@
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <script src="js/d3.js"></script>
   <script src="js/c3.min.js"></script>
+  <script src="https://unpkg.com/rbush@2.0.1/rbush.min.js"></script>
+  <script src="https://unpkg.com/labelgun@6.0.0/lib/labelgun.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
   <script src="js/leaflet.markercluster.js"></script>
   <script src="js/topojson.v1.min.js"></script>
@@ -76,9 +78,16 @@
 
       <div id="footer">
         <p><a href="https://hgis.uw.edu" target="_blank"><img src="img/logo.png" width="250px"></img></a></p>
+
+
+        <div>An Infection Case &nbsp; <i class='fas fa-user community'></i> &nbsp; indicates a confirmed infected individual from the U.S, however the cases identified from the Diamond Princess are not included.
+          The dataset of the infected cases are continuously enriched from different data portals such as
+          <a href="https://mapmiao.com/ncov/" target="_blank">nowcorona</a> as well as the public health department of different states.
+        </div>
+
         <div>An Infected Community &nbsp; <i class="fas fa-procedures community"> </i> &nbsp; indicates a community or village where confirmed cases were found. The local governments in China have taken strict measures to isolate the residents of
           these
-          places from the outside. The dataset of quarantine area are constantly contributed by volunteers, and can be found at <a href="https://mapmiao.com/ncov/" target="_blank">mapmiao</a>.
+          places from the outside. The dataset of infected community is continuously contributed by volunteers, and can be found at <a href="https://mapmiao.com/ncov/" target="_blank">mapmiao</a>.
         </div>
 
         <div>This map is made by the <a href="http://hgis.uw.edu" target="_blank">Humanistic GIS Lab at University of Washington - Seattle</a>.
@@ -294,6 +303,63 @@
 
 
 
+
+    // 14. This is core of how Labelgun works. We must provide two functions, one
+    // that hides our labels, another that shows the labels. These are essentially
+    // callbacks that labelgun uses to actually show and hide our labels
+    // In this instance we set the labels opacity to 0 and 1 respectively.
+    var hideLabel = function(label) {
+      label.labelObject.style.opacity = 0;
+    };
+    var showLabel = function(label) {
+      label.labelObject.style.opacity = 1;
+    };
+    var labelEngine = new labelgun.default(hideLabel, showLabel);
+    var labels = [];
+
+    function addLabel(layer, id) {
+      // This is ugly but there is no getContainer method on the tooltip :(
+      var label = layer.getTooltip()._source._tooltip._container;
+      if (label) {
+        // We need the bounding rectangle of the label itself
+        var rect = label.getBoundingClientRect();
+
+        // We convert the container coordinates (screen space) to Lat/lng
+        var bottomLeft = mymap.containerPointToLatLng([rect.left, rect.bottom]);
+        var topRight = mymap.containerPointToLatLng([rect.right, rect.top]);
+        var boundingBox = {
+          bottomLeft: [bottomLeft.lng, bottomLeft.lat],
+          topRight: [topRight.lng, topRight.lat]
+        };
+
+        // Ingest the label into labelgun itself
+        labelEngine.ingestLabel(
+          boundingBox,
+          id,
+          parseInt(Math.random() * (5 - 1) + 1), // Weight
+          label,
+          label.innerText,
+          false
+        );
+
+        // If the label hasn't been added to the map already
+        // add it and set the added flag to true
+        if (!layer.added) {
+          layer.addTo(mymap);
+          layer.added = true;
+        }
+      }
+
+    }
+
+
+
+
+
+
+
+
+
     L.TopoJSON = L.GeoJSON.extend({
       addData: function(jsonData) {
         if (jsonData.type === 'Topology') {
@@ -310,12 +376,12 @@
 
 
 
-    // var createLabelIcon = function(labelClass, labelText) {
-    //   return L.divIcon({
-    //     className: labelClass,
-    //     html: labelText
-    //   })
-    // }
+    var createLabelIcon = function(labelClass, labelText) {
+      return L.divIcon({
+        className: labelClass,
+        html: labelText
+      })
+    }
     //
     // var usBounds = L.latLngBounds(
     //   L.latLng(24.520833, -124.7771694), //Southwest
@@ -328,7 +394,7 @@
       center: [38, -100],
       zoomControl: false,
       zoom: 4.5,
-      maxZoom: 16,
+      maxZoom: 10,
       minZoom: 2,
       worldCopyJump: true
     });
@@ -340,8 +406,7 @@
 
 
 
-
-    var gray = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png').addTo(mymap);
+    var gray = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}@2x.png').addTo(mymap);
     // var dark = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png').addTo(mymap);
     var voyager =
       L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png');
@@ -381,7 +446,7 @@
 
 
     var cases = new L.MarkerClusterGroup({
-      spiderfyOnMaxZoom: false,
+      spiderfyOnMaxZoom: true,
       singleMarkerMode: true,
       // showCoverageOnHover: false,
       // zoomToBoundsOnClick: false,
@@ -457,6 +522,7 @@
       var italy = tc(latest["italy"]);
       var iran = tc(latest["iran"]);
       var us = tc(latest["us"]);
+      var spain = tc(latest["spain"]);
 
       var china = tc(latest["anhui"]) + tc(latest["beijing"]) + tc(latest["chongqing"]) + tc(latest["fujian"]) + tc(latest["gansu"]) + tc(latest["guangdong"]) + tc(latest["guangxi"]) + tc(latest["guizhou"]) + tc(latest["hainan"]) + tc(latest[
           "hebei"]) + tc(latest["heilongjiang"]) + tc(latest["henan"]) + tc(latest["hongkong"]) + tc(latest["hubei"]) + tc(latest["hunan"]) + tc(latest["neimenggu"]) + tc(latest["jiangsu"]) + tc(latest["jiangxi"]) + tc(latest["jilin"]) + tc(
@@ -671,6 +737,13 @@
           click: zoomToFeature,
           mouseout: resetHighlight
         });
+
+        layer.bindTooltip(feature.properties.enname, {
+          className: 'feature-label',
+          permanent: true,
+          direction: 'center'
+        });
+        labels.push(layer);
       }
 
 
@@ -692,11 +765,20 @@
 
       new L.control.layers(baseLayers, {
         "Infection Level": areas,
-        "Infaction Case &nbsp;&nbsp; <i class='fas fa-user community'></i>": cases,
+        "Infection Case &nbsp;&nbsp; <i class='fas fa-user community'></i>": cases,
         "Infected Community &nbsp;&nbsp; <i class='fas fa-procedures community'></i>": communities
       }, {
         collapsed: false
       }).addTo(mymap);
+
+
+      mymap.on("zoomend", function() {
+        var i = 0;
+        areas.eachLayer(function(label) {
+          addLabel(label, ++i);
+        });
+        labelEngine.update();
+      });
 
 
 
@@ -801,8 +883,8 @@
         data: {
           x: 'x',
           columns: [
-            ['x', 'China', 'South Korea', 'Italy', 'Iran', 'Japan', 'France', 'Germany', 'Singapore'],
-            ['Confirmed Cases', china, southKorea, italy, iran, japan, france, germany, singapore]
+            ['x', 'China', 'South Korea', 'Italy', 'Iran', 'Japan', 'Germany', 'France', 'Spain'],
+            ['Confirmed Cases', china, southKorea, italy, iran, japan, germany, france, spain]
           ],
           type: 'bar'
         },
@@ -860,6 +942,18 @@
   </script>
   <script async src='https://www.google-analytics.com/analytics.js'></script>
   <!-- End Google Analytics -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159947082-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-159947082-1');
+  </script>
 </body>
 
 </html>
