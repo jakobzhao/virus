@@ -877,6 +877,15 @@
 
 
 
+      x = Object.keys(stop).slice(0, 9);
+      x.reverse();
+      x.push("x");
+      x.reverse();
+
+      y = Object.values(stop).slice(0, 9);
+      y.reverse();
+      y.push("Confirmed Cases");
+      y.reverse();
 
       rchart = c3.generate({
         size: {

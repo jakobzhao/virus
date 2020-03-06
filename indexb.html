@@ -19,8 +19,6 @@
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <script src="js/d3.js"></script>
   <script src="js/c3.min.js"></script>
-  <script src="https://unpkg.com/rbush@2.0.1/rbush.min.js"></script>
-  <script src="https://unpkg.com/labelgun@6.0.0/lib/labelgun.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
   <script src="js/leaflet.markercluster.js"></script>
   <script src="js/topojson.v1.min.js"></script>
@@ -82,7 +80,7 @@
 
         <div>An Infection Case &nbsp; <i class='fas fa-user community'></i> &nbsp; indicates a confirmed infected individual from the U.S, however the cases identified from the Diamond Princess are not included.
           The dataset of the infected cases are continuously enriched from different data portals such as
-          <a href="https://mapmiao.com/ncov/" target="_blank">nowcorona</a> as well as the public health department of different states.
+          <a href="https://nowcorona.com/coronavirus-us-situation-summary/" target="_blank">nowcorona</a> as well as the public health department of different states.
         </div>
 
         <div>An Infected Community &nbsp; <i class="fas fa-procedures community"> </i> &nbsp; indicates a community or village where confirmed cases were found. The local governments in China have taken strict measures to isolate the residents of
@@ -303,63 +301,6 @@
 
 
 
-
-    // 14. This is core of how Labelgun works. We must provide two functions, one
-    // that hides our labels, another that shows the labels. These are essentially
-    // callbacks that labelgun uses to actually show and hide our labels
-    // In this instance we set the labels opacity to 0 and 1 respectively.
-    var hideLabel = function(label) {
-      label.labelObject.style.opacity = 0;
-    };
-    var showLabel = function(label) {
-      label.labelObject.style.opacity = 1;
-    };
-    var labelEngine = new labelgun.default(hideLabel, showLabel);
-    var labels = [];
-
-    function addLabel(layer, id) {
-      // This is ugly but there is no getContainer method on the tooltip :(
-      var label = layer.getTooltip()._source._tooltip._container;
-      if (label) {
-        // We need the bounding rectangle of the label itself
-        var rect = label.getBoundingClientRect();
-
-        // We convert the container coordinates (screen space) to Lat/lng
-        var bottomLeft = mymap.containerPointToLatLng([rect.left, rect.bottom]);
-        var topRight = mymap.containerPointToLatLng([rect.right, rect.top]);
-        var boundingBox = {
-          bottomLeft: [bottomLeft.lng, bottomLeft.lat],
-          topRight: [topRight.lng, topRight.lat]
-        };
-
-        // Ingest the label into labelgun itself
-        labelEngine.ingestLabel(
-          boundingBox,
-          id,
-          parseInt(Math.random() * (5 - 1) + 1), // Weight
-          label,
-          label.innerText,
-          false
-        );
-
-        // If the label hasn't been added to the map already
-        // add it and set the added flag to true
-        if (!layer.added) {
-          layer.addTo(mymap);
-          layer.added = true;
-        }
-      }
-
-    }
-
-
-
-
-
-
-
-
-
     L.TopoJSON = L.GeoJSON.extend({
       addData: function(jsonData) {
         if (jsonData.type === 'Topology') {
@@ -376,12 +317,12 @@
 
 
 
-    var createLabelIcon = function(labelClass, labelText) {
-      return L.divIcon({
-        className: labelClass,
-        html: labelText
-      })
-    }
+    // var createLabelIcon = function(labelClass, labelText) {
+    //   return L.divIcon({
+    //     className: labelClass,
+    //     html: labelText
+    //   })
+    // }
     //
     // var usBounds = L.latLngBounds(
     //   L.latLng(24.520833, -124.7771694), //Southwest
@@ -406,7 +347,8 @@
 
 
 
-    var gray = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}@2x.png').addTo(mymap);
+
+    var gray = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png').addTo(mymap);
     // var dark = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png').addTo(mymap);
     var voyager =
       L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png');
@@ -456,7 +398,7 @@
         });
       }
 
-    }).addTo(mymap);
+    });
 
 
 
@@ -528,6 +470,43 @@
           "hebei"]) + tc(latest["heilongjiang"]) + tc(latest["henan"]) + tc(latest["hongkong"]) + tc(latest["hubei"]) + tc(latest["hunan"]) + tc(latest["neimenggu"]) + tc(latest["jiangsu"]) + tc(latest["jiangxi"]) + tc(latest["jilin"]) + tc(
           latest["liaoning"]) + tc(latest["macau"]) + tc(latest["ningxia"]) + tc(latest["qinghai"]) + tc(latest["shaanxi"]) + tc(latest["shandong"]) + tc(latest["shanghai"]) + tc(latest["shanxi"]) + tc(latest["sichuan"]) + tc(latest["taiwan"]) +
         tc(latest["tianjin"]) + tc(latest["xinjiang"]) + tc(latest["yunnan"]) + tc(latest["zhejiang"]) + tc(latest["xizang"]);
+
+
+      var top = {
+        "China": china,
+        "Japan": tc(latest["japan"]),
+        "USA": tc(latest["us"]),
+        "Singapore": tc(latest["singapore"]),
+        "South Korea": tc(latest["south korea"]),
+        "Germany": tc(latest["germany"]),
+        "Spain": tc(latest["spain"]),
+        "Iran": tc(latest["iran"]),
+        "Italy": tc(latest["italy"]),
+        "France": tc(latest["france"]),
+        "Thailand": tc(latest["thailand"])
+      };
+
+
+      function sortJsObject(obj) {
+        items = Object.keys(obj).map(function(key) {
+          return [key, obj[key]];
+        });
+        items.sort(function(first, second) {
+          return second[1] - first[1];
+        });
+        sorted_obj = {}
+        $.each(items, function(k, v) {
+          use_key = v[0]
+          use_value = v[1]
+          sorted_obj[use_key] = use_value
+        })
+        return (sorted_obj)
+      }
+
+
+
+      stop = sortJsObject(top);
+
 
 
       // var china = tc(latest["china"]);
@@ -737,13 +716,6 @@
           click: zoomToFeature,
           mouseout: resetHighlight
         });
-
-        layer.bindTooltip(feature.properties.enname, {
-          className: 'feature-label',
-          permanent: true,
-          direction: 'center'
-        });
-        labels.push(layer);
       }
 
 
@@ -772,15 +744,6 @@
       }).addTo(mymap);
 
 
-      mymap.on("zoomend", function() {
-        var i = 0;
-        areas.eachLayer(function(label) {
-          addLabel(label, ++i);
-        });
-        labelEngine.update();
-      });
-
-
 
       $("#hint").on("click", function() {
         calCounts(global);
@@ -805,6 +768,7 @@
 
       chart = c3.generate({
         size: {
+          height: 280,
           width: 440
         },
         data: {
@@ -849,10 +813,10 @@
           }
         },
         point: {
-          r: 5,
+          r: 3.5,
           focus: {
             expand: {
-              r: 2
+              r: 5
             }
           }
         },
@@ -875,16 +839,54 @@
       });
 
 
+
+      var top = {
+        "China": china,
+        "Japan": tc(latest["japan"]),
+        "USA": tc(latest["us"]),
+        "Singapore": tc(latest["singapore"]),
+        "South Korea": tc(latest["south korea"]),
+        "Germany": tc(latest["germany"]),
+        "Spain": tc(latest["spain"]),
+        "Iran": tc(latest["iran"]),
+        "Italy": tc(latest["italy"]),
+        "France": tc(latest["france"]),
+        "Thailand": tc(latest["thailand"])
+      };
+
+
+      function sortJsObject(obj) {
+        items = Object.keys(obj).map(function(key) {
+          return [key, obj[key]];
+        });
+        items.sort(function(first, second) {
+          return second[1] - first[1];
+        });
+        sorted_obj = {}
+        $.each(items, function(k, v) {
+          use_key = v[0]
+          use_value = v[1]
+          sorted_obj[use_key] = use_value
+        })
+        return (sorted_obj)
+      }
+
+
+
+      stop = sortJsObject(top);
+
+
+
+
       rchart = c3.generate({
         size: {
-          height: 300,
+          height: 280,
           width: 440
         },
         data: {
           x: 'x',
           columns: [
-            ['x', 'China', 'South Korea', 'Italy', 'Iran', 'Japan', 'Germany', 'France', 'Spain'],
-            ['Confirmed Cases', china, southKorea, italy, iran, japan, germany, france, spain]
+            x, y
           ],
           type: 'bar'
         },
