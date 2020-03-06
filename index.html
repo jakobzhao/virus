@@ -442,11 +442,22 @@
       }
 
       //totalRecovered
-      function rc(country) {
+      function tr(country) {
         if (country == undefined) {
           country = 0
         } else {
           country = +country.split("-")[2];
+        }
+        return country;
+      }
+
+
+      //totalDeath
+      function td(country) {
+        if (country == undefined) {
+          country = 0
+        } else {
+          country = +country.split("-")[3];
         }
         return country;
       }
@@ -572,6 +583,12 @@
                   break;
               }
             });
+
+            dd = dd - td(latest["us"]) - td(latest["canada"]);
+            rc = rc - tr(latest["us"]) - tr(latest["canada"]);
+            cf = cf - tc(latest["us"]) - tc(latest["canada"]);
+
+
           }
 
           i["c"].push(cf);
