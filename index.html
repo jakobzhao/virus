@@ -442,22 +442,11 @@
       }
 
       //totalRecovered
-      function tr(country) {
+      function rc(country) {
         if (country == undefined) {
           country = 0
         } else {
           country = +country.split("-")[2];
-        }
-        return country;
-      }
-
-
-      //totalDeath
-      function td(country) {
-        if (country == undefined) {
-          country = 0
-        } else {
-          country = +country.split("-")[3];
         }
         return country;
       }
@@ -483,43 +472,6 @@
         tc(latest["tianjin"]) + tc(latest["xinjiang"]) + tc(latest["yunnan"]) + tc(latest["zhejiang"]) + tc(latest["xizang"]);
 
 
-      var top = {
-        "China": china,
-        "Japan": tc(latest["japan"]),
-        "USA": tc(latest["us"]),
-        "Singapore": tc(latest["singapore"]),
-        "South Korea": tc(latest["south korea"]),
-        "Germany": tc(latest["germany"]),
-        "Spain": tc(latest["spain"]),
-        "Iran": tc(latest["iran"]),
-        "Italy": tc(latest["italy"]),
-        "France": tc(latest["france"]),
-        "Thailand": tc(latest["thailand"])
-      };
-
-
-      function sortJsObject(obj) {
-        items = Object.keys(obj).map(function(key) {
-          return [key, obj[key]];
-        });
-        items.sort(function(first, second) {
-          return second[1] - first[1];
-        });
-        sorted_obj = {}
-        $.each(items, function(k, v) {
-          use_key = v[0]
-          use_value = v[1]
-          sorted_obj[use_key] = use_value
-        })
-        return (sorted_obj)
-      }
-
-
-
-      stop = sortJsObject(top);
-
-
-
       // var china = tc(latest["china"]);
 
 
@@ -541,7 +493,8 @@
       function calCounts(i) {
         cf = 0, sp = 0, rc = 0, dd = 0;
         datasets[0].forEach(function(d) {
-          t.push(new Date(d["datetime"]));
+          var USTd = new Date(d["datetime"])
+          t.push(USTd.setHours(USTd.getHours()+8));
           cf = 0, sp = 0, rc = 0, dd = 0;
           current = d;
           delete current["datetime"];
@@ -583,12 +536,6 @@
                   break;
               }
             });
-
-            dd = dd - td(latest["us"]) - td(latest["canada"]);
-            rc = rc - tr(latest["us"]) - tr(latest["canada"]);
-            cf = cf - tc(latest["us"]) - tc(latest["canada"]);
-
-
           }
 
           i["c"].push(cf);
@@ -785,7 +732,6 @@
 
       chart = c3.generate({
         size: {
-          height: 280,
           width: 440
         },
         data: {
@@ -830,10 +776,10 @@
           }
         },
         point: {
-          r: 3.5,
+          r: 5,
           focus: {
             expand: {
-              r: 5
+              r: 2
             }
           }
         },
@@ -856,29 +802,16 @@
       });
 
 
-
-
-
-
-      x = Object.keys(stop).slice(0, 9);
-      x.reverse();
-      x.push("x");
-      x.reverse();
-
-      y = Object.values(stop).slice(0, 9);
-      y.reverse();
-      y.push("Confirmed Cases");
-      y.reverse();
-
       rchart = c3.generate({
         size: {
-          height: 280,
+          height: 300,
           width: 440
         },
         data: {
           x: 'x',
           columns: [
-            x, y
+            ['x', 'China', 'South Korea', 'Italy', 'Iran', 'Japan', 'Germany', 'France', 'Spain'],
+            ['Confirmed Cases', china, southKorea, italy, iran, japan, germany, france, spain]
           ],
           type: 'bar'
         },
@@ -937,17 +870,14 @@
   <script async src='https://www.google-analytics.com/analytics.js'></script>
   <!-- End Google Analytics -->
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159947082-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-159947082-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-159947082-1');
-  </script>
+  gtag('config', 'UA-159947082-1');
+</script>
 </body>
 
 </html>
