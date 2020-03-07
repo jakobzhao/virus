@@ -2,6 +2,7 @@ import sqlite3
 
 conn = sqlite3.connect("assets/virus.db")
 cursor = conn.cursor()
+cursor.execute("SELECT `ontario` from virus order by rowid DESC limit 1")
 
 for row in cursor.execute("SELECT `ontario` from virus order by rowid DESC limit 1"):
     print(row[0])
