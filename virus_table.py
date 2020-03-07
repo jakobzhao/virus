@@ -111,7 +111,7 @@ for item in items:
 conn = sqlite3.connect("assets/virus.db")
 cursor = conn.cursor()
 latest = {}
-for row in cursor.execute("SELECT `arizona`, `illinois`, `washington`, `california`, `wisconsin`, `massachusetts`, `oregon`, `texas`, `quebec`, `ontario`, `british columbia`, `rhode island`, `florida`, `new york`, `new hampshire`, `district of columbia`, `north carolina`, `georgia usa` from virus order by rowid DESC limit 1"):
+for row in cursor.execute("SELECT `arizona`, `illinois`, `washington`, `california`, `wisconsin`, `massachusetts`, `oregon`, `texas`, `quebec`, `ontario`, `british columbia`, `rhode island`, `florida`, `new york`, `new hampshire`, `district of columbia`, `north carolina`, `georgia usa`, `nebraska`, `new jersey`, `tennessee`, `utah`, `nevada`, `maryland`, `colorado`, `pennsylvania`, `indiana`, `minnesota` from virus order by rowid DESC limit 1"):
     latest['arizona'] = row[0]
     latest['illinois'] = row[1]
     latest['washington'] = row[2]
@@ -130,6 +130,16 @@ for row in cursor.execute("SELECT `arizona`, `illinois`, `washington`, `californ
     latest['district of columbia'] = row[15]
     latest['north carolina'] = row[16]
     latest['georgia usa'] = row[17]
+    latest['nebraska'] = row[18]
+    latest['new jersey'] = row[19]
+    latest['tennessee'] = row[20]
+    latest['utah'] = row[21]
+    latest['nevada'] = row[22]
+    latest['maryland'] = row[23]
+    latest['colorado'] = row[24]
+    latest['pennsylvania'] = row[25]
+    latest['indiana'] = row[26]
+    latest['minnesota'] = row[27]
 
 # US
 # https://nowcorona.com/

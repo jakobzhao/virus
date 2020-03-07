@@ -12,27 +12,31 @@ browser = webdriver.Chrome("E:\chromedriver_win32\chromedriver.exe")
 
 # US individual cases
 # "https://nowcorona.com/coronavirus-us-situation-summary/"
-
-url = "https://nowcorona.com/coronavirus-us-situation-summary/"
-browser.get(url)
-browser.find_element_by_tag_name("main")
-soup = BeautifulSoup(browser.page_source, 'html.parser')
-cases = soup.find("table", class_="tablepress-id-4").findAll("tr")
 id = 0
+url = "https://coronavirus.1point3acres.com/en?fbclid=IwAR1wDNOOEnTqMh5SbX2zXWH2n8hBcEMiDOCaXA_VaFWulMzMB18gwn9z_AQ"
+browser.get(url)
+
+button = browser.find_element_by_xpath('//*[@id="map"]/div[3]/div[1]/div[3]/div/div/ul/li[9]/a')
+print(button)
+time.sleep(2)
+browser.execute_script("window.scrollTo(0, document.body.scrollHeight*2/5);")
+time.sleep(2)
+button.click()
+soup = BeautifulSoup(browser.page_source, 'html.parser')
+cases = soup.find("table").find_all("tr")[1:]
+
 outputs = []
 for case in cases:
     iftype = "Confirmed"
-    if "recovered" in case.find("td", class_="column-1").text.lower():
+    data = case.find_all("td")
+    date = data[1].text
+    loc = data[2].text
+    info = data[3].text
+    source = "<a target ='_blank' href='" + str(data[7].find('a').get('href')) + "'>" + str(data[7].text) + "</a>"
+    print(id, iftype, date, info, loc, source)
+    if "recovered" in data[6].text.lower():
         iftype = "Recovered"
-    elif "death" in case.find("td", class_="column-1").text.lower():
-        iftype = "Death"
-    else:
-        iftype= "Confirmed"
 
-    date = case.find("td", class_="column-2").text
-    info = case.find("td", class_="column-3").text
-    loc = case.find("td", class_="column-4").text
-    source = case.find("td", class_="column-5").text
     try:
         g = geocoder.arcgis(loc)
         lat = g.current_result.lat
@@ -43,8 +47,8 @@ for case in cases:
     time.sleep(1)
     id += 1
     print(id, iftype, date, info, loc, source)
-    output = '%d,"%s",%f,%f,"%s","%s","%s","%s"\n' % (id, iftype, lng, lat, date, info, loc, source)
-    outputs.append(output)
+    #output = '%d,"%s",%f,%f,"%s","%s","%s","%s"\n' % (id, iftype, lng, lat, date, info, loc, source)
+    #outputs.append(output)
 
 
 with open("assets/cases.csv", "w", encoding="utf-8") as fp:

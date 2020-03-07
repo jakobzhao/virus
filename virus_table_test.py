@@ -12,8 +12,8 @@ options.add_argument('--headless')
 options.add_argument('--no-sandbox')
 # browser = webdriver.Chrome("/usr/bin/chromedriver", options=options)
 # browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver", options=options)
-browser = webdriver.Chrome("C:/workspace/chromedriver.exe")
-# browser = webdriver.Chrome("E:\chromedriver_win32\chromedriver.exe")
+#browser = webdriver.Chrome("C:/workspace/chromedriver.exe")
+browser = webdriver.Chrome("E:\chromedriver_win32\chromedriver.exe")
 
 now = str(datetime.now())
 sqls = "INSERT OR REPLACE INTO virus ('datetime'"
@@ -39,6 +39,18 @@ with open("assets/old_name.csv", "r", encoding="utf-8") as fp:
     for line in lines:
         placeItem = line.replace("\n", "").split(",")
         oldCity[placeItem[0]] = placeItem[1]
+
+unitedStates = []
+with open("assets/unitedStates.txt", "r", encoding="utf-8") as fp:
+    states = fp.readlines()
+    for state in states:
+        unitedStates.append(state.replace("\n","").lower())
+
+canadacities = []
+with open("assets/canada_city.txt", "r", encoding="utf-8") as fp:
+    states = fp.readlines()
+    for state in states:
+        canadacities.append(state.replace("\n","").lower())
 
 """for city in placeName.values():
     if city not in oldCity.values():
@@ -111,92 +123,7 @@ for item in items:
 
 conn = sqlite3.connect("assets/virus.db")
 cursor = conn.cursor()
-latest = {}
-for row in cursor.execute("SELECT `arizona`, `illinois`, `washington`, `california`, `wisconsin`, `massachusetts`, `oregon`, `texas`, `quebec`, `ontario`, `british columbia`, `rhode island`, `florida`, `new york`, `new hampshire`, `district of columbia`, `north carolina`, `georgia usa`, `nebraska`, `new jersey`, `tennessee`, `utah`, `nevada`, `maryland`, `colorado`, `pennsylvania`, `indiana`, `minnesota` from virus order by rowid DESC limit 1"):
-    latest['arizona'] = row[0]
-    latest['illinois'] = row[1]
-    latest['washington'] = row[2]
-    latest['california'] = row[3]
-    latest['wisconsin'] = row[4]
-    latest['massachusetts'] = row[5]
-    latest['oregon'] = row[6]
-    latest['texas'] = row[7]
-    latest['quebec'] = row[8]
-    latest['ontario'] = row[9]
-    latest['british columbia'] = row[10]
-    latest['rhode island'] = row[11]
-    latest['florida'] = row[12]
-    latest['new york'] = row[13]
-    latest['new hampshire'] = row[14]
-    latest['district of columbia'] = row[15]
-    latest['north carolina'] = row[16]
-    latest['georgia usa'] = row[17]
-    latest['nebraska'] = row[18]
-    latest['new jersey'] = row[19]
-    latest['tennessee'] = row[20]
-    latest['utah'] = row[21]
-    latest['nevada'] = row[22]
-    latest['maryland'] = row[23]
-    latest['colorado'] = row[24]
-    latest['pennsylvania'] = row[25]
-    latest['indiana'] = row[26]
-    latest['minnesota'] = row[27]
 
-"""# US
-# https://nowcorona.com/
-
-url = "https://nowcorona.com/"
-browser.get(url)
-browser.find_element_by_tag_name("main")
-soup = BeautifulSoup(browser.page_source, 'html.parser')
-states = soup.find("section", class_="elementor-element-fb5563c").findAll("tr")[3:]
-webState = []
-for state in states:
-    enName = state.find("td", class_="column-1").text.lower()
-
-    confirmed = state.find("td", class_="column-2").text
-    recovered = state.find("td", class_="column-4").text
-    death = state.find("td", class_="column-3").text
-    if enName == 'washiongton' or "washington" in enName:
-        enName = 'washington'
-    if "georgia" in enName:
-        enName = 'georgia usa'
-    webState.append(enName)
-    if enName in latest.keys():
-        print(latest[enName])
-        # recovered = latest[enName].split("-")[2]
-        # death = latest[enName].split("-")[3]
-        try:
-            if int(confirmed) < int(latest[enName].split("-")[0]):
-                confirmed = latest[enName].split("-")[0]
-            if int(recovered) < int(latest[enName].split("-")[2]):
-                recovered = latest[enName].split("-")[2]
-            if int(death) < int(latest[enName].split("-")[3]):
-                death = latest[enName].split("-")[3]
-        except:
-            confirmed = '0'
-            recovered = '0'
-            death = '0'
-    else:
-        confirmed = '0'
-        recovered = '0'
-        death = '0'
-
-    if recovered == "" or recovered == "-":
-        recovered = "0"
-    if death == "" or death == "-":
-        death = "0"
-    if confirmed == "" or confirmed == "-" :
-        confirmed = "0"
-    print(enName, confirmed, recovered, death)
-    sqls += ", '" + enName.strip() + "'"
-    sqle += "'" + confirmed + "-0-" + recovered + "-" + death + "', "
-
-for latestState in latest:
-    if latestState not in webState:
-        print(latestState, latest[latestState])
-        sqls += ", '" + latestState + "'"
-        sqle += "'" + latest[latestState] + "', """""
 
 urllink = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdW9DsR5iffFcJvKAJXyOiNn4IYtavRIGslkcJIslHJC7UfrbChv-L4E89TeDEcWZS6QSzCuHWeMON/pub?gid=1879451031&single=true&output=csv"
 with urllib.request.urlopen(urllink) as url:
@@ -225,9 +152,11 @@ for province in provinces:
     enName = province.find_all("td")[0].text.lower()
     confirmed = province.find_all("td")[1].text
 
-    if enName in latest.keys():
-        recovered = latest[enName].split("-")[2]
-        death = latest[enName].split("-")[3]
+    if enName in canadacities:
+        for row in cursor.execute("SELECT `" + enName + "` from virus order by rowid DESC limit 1"):
+            latest = row[0]
+        recovered = latest.split("-")[2]
+        death = latest.split("-")[3]
     else:
         recovered = '0'
         death = '0'

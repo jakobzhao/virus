@@ -7,8 +7,7 @@ from datetime import datetime
 now = str(datetime.now())
 
 #browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver") #fengyu's chromefrive location
-#browser = webdriver.Chrome("C:\Workspace\chromedriver.exe") # zhaobo's chromedrive location'
-browser = webdriver.Chrome("E:\chromedriver_win32\chromedriver.exe")
+browser = webdriver.Chrome("C:\Workspace\chromedriver.exe") # zhaobo's chromedrive location'
 
 # US individual cases
 # "https://nowcorona.com/coronavirus-us-situation-summary/"
