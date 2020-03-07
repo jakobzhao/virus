@@ -472,6 +472,46 @@
         tc(latest["tianjin"]) + tc(latest["xinjiang"]) + tc(latest["yunnan"]) + tc(latest["zhejiang"]) + tc(latest["xizang"]);
 
 
+
+
+      var top = {
+        "China": china,
+        "Japan": tc(latest["japan"]),
+        "USA": tc(latest["us"]),
+        "Singapore": tc(latest["singapore"]),
+        "South Korea": tc(latest["south korea"]),
+        "Germany": tc(latest["germany"]),
+        "Spain": tc(latest["spain"]),
+        "Iran": tc(latest["iran"]),
+        "Italy": tc(latest["italy"]),
+        "France": tc(latest["france"]),
+        "Thailand": tc(latest["thailand"])
+      };
+
+
+      function sortJsObject(obj) {
+        items = Object.keys(obj).map(function(key) {
+          return [key, obj[key]];
+        });
+        items.sort(function(first, second) {
+          return second[1] - first[1];
+        });
+        sorted_obj = {}
+        $.each(items, function(k, v) {
+          use_key = v[0]
+          use_value = v[1]
+          sorted_obj[use_key] = use_value
+        })
+        return (sorted_obj)
+      }
+
+
+
+      stop = sortJsObject(top);
+
+
+
+
       // var china = tc(latest["china"]);
 
 
@@ -494,7 +534,7 @@
         cf = 0, sp = 0, rc = 0, dd = 0;
         datasets[0].forEach(function(d) {
           var USTd = new Date(d["datetime"])
-          t.push(USTd.setHours(USTd.getHours()+8));
+          t.push(USTd.setHours(USTd.getHours() + 8));
           cf = 0, sp = 0, rc = 0, dd = 0;
           current = d;
           delete current["datetime"];
@@ -683,20 +723,11 @@
       }
 
 
-      // var provinces = L.geoJSON(datasets[1], {
-      //   style: style,
-      //   onEachFeature: onEachFeature
-      // }).addTo(mymap);
 
       var areas = new L.TopoJSON(datasets[1], {
         style: style,
         onEachFeature: onEachFeature
       }).addTo(mymap);
-
-      // areas.addData(datasets[4]);
-      // areas.addTo(mymap);
-      // areas.eachLayer(handleLayer);
-
 
 
       new L.control.layers(baseLayers, {
@@ -732,6 +763,7 @@
 
       chart = c3.generate({
         size: {
+          height: 280,
           width: 440
         },
         data: {
@@ -776,10 +808,10 @@
           }
         },
         point: {
-          r: 5,
+          r: 3.5,
           focus: {
             expand: {
-              r: 2
+              r: 5
             }
           }
         },
@@ -802,16 +834,25 @@
       });
 
 
+      x = Object.keys(stop).slice(0, 9);
+      x.reverse();
+      x.push("x");
+      x.reverse();
+
+      y = Object.values(stop).slice(0, 9);
+      y.reverse();
+      y.push("Confirmed Cases");
+      y.reverse();
+
       rchart = c3.generate({
         size: {
-          height: 300,
+          height: 280,
           width: 440
         },
         data: {
           x: 'x',
           columns: [
-            ['x', 'China', 'South Korea', 'Italy', 'Iran', 'Japan', 'Germany', 'France', 'Spain'],
-            ['Confirmed Cases', china, southKorea, italy, iran, japan, germany, france, spain]
+            x, y
           ],
           type: 'bar'
         },
@@ -830,7 +871,7 @@
               position: 'outer-middle'
             },
             tick: {
-              values: [50, 200, 1000, 5000, 10000, 90000]
+              values: [500, 1000, 5000, 10000, 90000]
             },
             type: 'log'
           }
@@ -870,14 +911,17 @@
   <script async src='https://www.google-analytics.com/analytics.js'></script>
   <!-- End Google Analytics -->
   <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-159947082-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159947082-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-159947082-1');
-</script>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-159947082-1');
+  </script>
 </body>
 
 </html>
