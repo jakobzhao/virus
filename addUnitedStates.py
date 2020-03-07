@@ -3,6 +3,9 @@ import sqlite3
 conn = sqlite3.connect("assets/virus.db")
 cursor = conn.cursor()
 
+for row in cursor.execute("SELECT `ontario` from virus order by rowid DESC limit 1"):
+    print(row[0])
+
 with open("assets/canada_city.txt", "r", encoding="utf-8") as fp:
     states = fp.readlines()
     for state in states:
