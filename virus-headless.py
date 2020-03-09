@@ -30,6 +30,33 @@ with open("assets/name.csv", "r", encoding="utf-8") as fp:
         placeItem = line.replace("\n", "").split(",")
         chineseCity[placeItem[0]] = placeItem[1]
 
+oldCity = {}
+with open("assets/old_name.csv", "r", encoding="utf-8") as fp:
+    lines = fp.readlines()
+    for line in lines:
+        placeItem = line.replace("\n", "").split(",")
+        oldCity[placeItem[0]] = placeItem[1]
+
+unitedStates = []
+with open("assets/unitedStates.txt", "r", encoding="utf-8") as fp:
+    states = fp.readlines()
+    for state in states:
+        unitedStates.append(state.replace("\n","").lower())
+
+canadacities = []
+with open("assets/canada_city.txt", "r", encoding="utf-8") as fp:
+    states = fp.readlines()
+    for state in states:
+        canadacities.append(state.replace("\n","").lower())
+
+"""for city in placeName.values():
+    if city not in oldCity.values():
+        cursor.execute("ALTER TABLE virus ADD [" + city + "] CHAR(20);")"""
+
+
+# browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver") #fengyu's chromefrive location
+#browser = webdriver.Chrome("C:\Workspace\chromedriver.exe") # zhaobo's chromedrive location'
+
 
 # # China Provinces
 #
@@ -49,6 +76,7 @@ for unfold in unfolds2:
         browser.execute_script("window.scrollTo(0, document.body.scrollHeight/4);")
         time.sleep(3)
         unfold.click()
+
 
 browser.find_element_by_xpath("//table[starts-with(@class,'VirusTable')]").find_elements_by_tag_name("tr")
 soup = BeautifulSoup(browser.page_source, 'html.parser')
@@ -92,83 +120,22 @@ for item in items:
 
 conn = sqlite3.connect("assets/virus.db")
 cursor = conn.cursor()
-latest = {}
-for row in cursor.execute("SELECT `arizona`, `illinois`, `washington`, `california`, `wisconsin`, `massachusetts`, `oregon`, `texas`, `quebec`, `ontario`, `british columbia`, `rhode island`, `florida`, `new york`, `new hampshire`, `district of columbia`, `north carolina`, `georgia usa` from virus order by rowid DESC limit 1"):
-    latest['arizona'] = row[0]
-    latest['illinois'] = row[1]
-    latest['washington'] = row[2]
-    latest['california'] = row[3]
-    latest['wisconsin'] = row[4]
-    latest['massachusetts'] = row[5]
-    latest['oregon'] = row[6]
-    latest['texas'] = row[7]
-    latest['quebec'] = row[8]
-    latest['ontario'] = row[9]
-    latest['british columbia'] = row[10]
-    latest['rhode island'] = row[11]
-    latest['florida'] = row[12]
-    latest['new york'] = row[13]
-    latest['new hampshire'] = row[14]
-    latest['district of columbia'] = row[15]
-    latest['north carolina'] = row[16]
-    latest['georgia usa'] = row[17]
 
-# US
-# https://nowcorona.com/
 
-url = "https://nowcorona.com/"
-browser.get(url)
-browser.find_element_by_tag_name("main")
-soup = BeautifulSoup(browser.page_source, 'html.parser')
-states = soup.find("section", class_="elementor-element-fb5563c").findAll("tr")[3:]
-webState = []
-for state in states:
-    enName = state.find("td", class_="column-1").text.lower()
-
-    confirmed = state.find("td", class_="column-2").text
-    recovered = state.find("td", class_="column-4").text
-    death = state.find("td", class_="column-3").text
-    if enName == 'washiongton' or "washington" in enName:
-        enName = 'washington'
-    if "georgia" in enName:
-        enName = 'georgia usa'
-    webState.append(enName)
-    if enName in latest.keys():
-        print(latest[enName])
-        # recovered = latest[enName].split("-")[2]
-        # death = latest[enName].split("-")[3]
-        try:
-            if int(confirmed) < int(latest[enName].split("-")[0]):
-                confirmed = latest[enName].split("-")[0]
-            if int(recovered) < int(latest[enName].split("-")[2]):
-                recovered = latest[enName].split("-")[2]
-            if int(death) < int(latest[enName].split("-")[3]):
-                death = latest[enName].split("-")[3]
-        except:
-            confirmed = '0'
-            recovered = '0'
-            death = '0'
-    else:
-        confirmed = '0'
-        recovered = '0'
-        death = '0'
-
-    if recovered == "" or recovered == "-":
-        recovered = "0"
-    if death == "" or death == "-":
-        death = "0"
-    if confirmed == "" or confirmed == "-" :
-        confirmed = "0"
-    print(enName, confirmed, recovered, death)
-    sqls += ", '" + enName.strip() + "'"
-    sqle += "'" + confirmed + "-0-" + recovered + "-" + death + "', "
-
-for latestState in latest:
-    if latestState not in webState:
-        print(latestState, latest[latestState])
-        sqls += ", '" + latestState + "'"
-        sqle += "'" + latest[latestState] + "', "
-
+urllink = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdW9DsR5iffFcJvKAJXyOiNn4IYtavRIGslkcJIslHJC7UfrbChv-L4E89TeDEcWZS6QSzCuHWeMON/pub?gid=1879451031&single=true&output=csv"
+with urllib.request.urlopen(urllink) as url:
+    content = url.read().decode()
+    content.replace("/r/n","")
+    states = content.split("\r\n")[1:]
+    for state in states:
+        data = state.split(",")
+        name = data[0].lower()
+        if name == 'georgia':
+            name = 'georgia usa'
+        cases = data[3] + "-0-" + data[5] + "-" + data[4]
+        sqls += ", '" + name + "'"
+        sqle += "'" + cases + "', "
+        print(name + " " + cases)
 
 # Canada
 
@@ -182,9 +149,11 @@ for province in provinces:
     enName = province.find_all("td")[0].text.lower()
     confirmed = province.find_all("td")[1].text
 
-    if enName in latest.keys():
-        recovered = latest[enName].split("-")[2]
-        death = latest[enName].split("-")[3]
+    if enName in canadacities:
+        for row in cursor.execute("SELECT `" + enName + "` from virus order by rowid DESC limit 1"):
+            latest = row[0]
+        recovered = latest.split("-")[2]
+        death = latest.split("-")[3]
     else:
         recovered = '0'
         death = '0'
@@ -209,6 +178,7 @@ cursor.execute(insert_record_sql)
 conn.commit()
 cursor.execute("SELECT * from virus")
 col_name_list = [tuple[0] for tuple in cursor.description]
+
 
 flag, priorFlag, hubei, priorHubei = "", "", "", ""
 with open("assets/virus.csv", "w", encoding="utf-8") as fp:
