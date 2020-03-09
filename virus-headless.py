@@ -2,6 +2,7 @@ from selenium import webdriver
 from bs4 import BeautifulSoup
 import time
 from datetime import datetime
+from urllib import request
 import sqlite3
 from selenium.webdriver.chrome.options import Options
 
@@ -123,7 +124,7 @@ cursor = conn.cursor()
 
 
 urllink = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdW9DsR5iffFcJvKAJXyOiNn4IYtavRIGslkcJIslHJC7UfrbChv-L4E89TeDEcWZS6QSzCuHWeMON/pub?gid=1879451031&single=true&output=csv"
-with urllib.request.urlopen(urllink) as url:
+with request.urlopen(urllink) as url:
     content = url.read().decode()
     content.replace("/r/n","")
     states = content.split("\r\n")[1:]
