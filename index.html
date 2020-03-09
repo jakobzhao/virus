@@ -504,7 +504,6 @@
       stop = sortJsObject(top);
 
 
-
       var t = ["t"];
       var confirmed = ["Confirmed"];
       var suspected = ["Suspected"];
@@ -518,7 +517,6 @@
         d: death
 
       }
-
 
       function calCounts(i) {
         cf = 0, sp = 0, rc = 0, dd = 0;
@@ -546,8 +544,6 @@
                 break;
             }
 
-
-
           } else {
 
             Object.values(current).forEach(function(d) {
@@ -568,19 +564,13 @@
               }
             });
 
-
             cf -= (tc(latest["us"]) + tc(latest["canada"]));
             rc -= (tr(latest["us"]) + tr(latest["canada"]));
             dd -= (td(latest["us"]) + td(latest["canada"]));
-
-
-
           }
 
-
-
           i["c"].push(cf);
-          i["s"].push(sp);
+          // i["s"].push(sp);
           i["r"].push(rc);
           i["d"].push(dd);
         });
