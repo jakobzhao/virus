@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c82d1dfd-4c87-4a78-bd59-b46ac0c78764" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/assets/Canada.dbf" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/Canada.dbf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Canada.prj" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/Canada.prj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Canada.sbn" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/Canada.sbn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Canada.sbx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/Canada.sbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Canada.shp" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/Canada.shp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Canada.shp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/Canada.shp.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Canada.shx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/Canada.shx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Covid-19-NEJM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/Covid-19-NEJM.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/all-topo-30.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/all-topo-30.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/cases.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/cases.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/china.cpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/china.cpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/china.dbf" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/china.dbf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/china.prj" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/china.prj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/china.qpj" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/china.qpj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/china.shp" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/china.shp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/china.shx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/china.shx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/communities-1583087572.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583087572.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/communities-1583087572.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583087572.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/communities-1583087688.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583087688.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/communities-1583087688.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583087688.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/communities-1583087782.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583087782.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/communities-1583087782.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583087782.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/communities-1583087836.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583087836.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/communities-1583087836.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583087836.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/communities-1583088123.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583088123.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/communities-1583088123.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583088123.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/communities-1583374042.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583374042.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/communities-1583374042.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583374042.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/communities-1583613672.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583613672.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/communities-1583613672.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583613672.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/communities-1583692288.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583692288.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/communities-1583692288.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583692288.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/communities-20200208_220119.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-20200208_220119.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/communities-20200208_220119.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-20200208_220119.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/communities-20200209_224736.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-20200209_224736.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/communities-20200209_224736.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-20200209_224736.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/communities-20200215_215249.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-20200215_215249.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/communities-20200215_215249.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-20200215_215249.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/communities-20200222_171052.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-20200222_171052.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/communities-20200222_171052.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-20200222_171052.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/countries.cpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/countries.cpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/countries.dbf" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/countries.dbf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/countries.prj" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/countries.prj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/countries.qpj" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/countries.qpj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/countries.shp" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/countries.shp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/countries.shx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/countries.shx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/trips-1583093200.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/trips-1583093200.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/trips-1583093200.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/trips-1583093200.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/trips-1583093292.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/trips-1583093292.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/trips-1583093292.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/trips-1583093292.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/trips-1583093309.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/trips-1583093309.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/trips-1583093309.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/trips-1583093309.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/trips-1583093339.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/trips-1583093339.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/trips-1583093339.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/trips-1583093339.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/trips.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/trips.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/trips.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/trips.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/us.cpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/us.cpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/us.dbf" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/us.dbf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/us.prj" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/us.prj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/us.qpj" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/us.qpj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/us.shp" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/us.shp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/us.shx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/us.shx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/virus-bkp.db" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/virus-bkp.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/wuhan-15.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan-15.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/wuhan-20 - Copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan-20 - Copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/wuhan-20.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan-20.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/wuhan-30.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan-30.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/wuhan-40.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan-40.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/wuhan-bkp.cpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan-bkp.cpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/wuhan-bkp.dbf" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan-bkp.dbf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/wuhan-bkp.prj" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan-bkp.prj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/wuhan-bkp.qpj" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan-bkp.qpj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/wuhan-bkp.shp" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan-bkp.shp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/wuhan-bkp.shx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan-bkp.shx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/wuhan.cpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan.cpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/wuhan.dbf" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan.dbf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/wuhan.prj" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan.prj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/wuhan.qgz" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan.qgz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/wuhan.qpj" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan.qpj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/wuhan.shp" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan.shp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/wuhan.shx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan.shx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cases.py___jb_old___" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cases_new.py" beforeDir="false" afterPath="$PROJECT_DIR$/backup/cases_new.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/communities.py" beforeDir="false" afterPath="$PROJECT_DIR$/backup/communities.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index_xu.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/indexb.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trips.py" beforeDir="false" afterPath="$PROJECT_DIR$/backup/trips.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/update.md" beforeDir="false" afterPath="$PROJECT_DIR$/backup/update.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/virus_table.py" beforeDir="false" afterPath="$PROJECT_DIR$/virus_table.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/virus_table_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/backup/virus_table.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/cases.py" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectId" id="1Ycz0mYOSE1TCJTTj4iIsH49ZmG" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="ignore_missing_gitignore" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Workspace\virus\assets" />
+      <recent name="C:\Workspace\virus\assets\backup" />
+      <recent name="C:\Workspace\virus\backup" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.virus_table_test">
+    <configuration name="cases-new" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="virus" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cases-new.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="cases" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="virus" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cases.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="communities-ahusmart" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="virus" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/communities-ahusmart.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="virus_table" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="virus" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Workspace\virus\backup\virus_table.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="virus_table" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="virus" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Workspace\virus\virus_table.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="virus_table" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="virus" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/virus_table.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.virus_table_test" />
+        <item itemvalue="Python.communities-ahusmart" />
+        <item itemvalue="Python.cases-new" />
+        <item itemvalue="Python.virus_table" />
+        <item itemvalue="Python.cases" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c82d1dfd-4c87-4a78-bd59-b46ac0c78764" name="Default Changelist" comment="" />
+      <created>1583256450517</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583256450517</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="994" y="307" key="#virus_table" timestamp="1583313535771">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="994" y="307" key="#virus_table/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583313535771" />
+    <state x="941" y="208" key="CommitChangelistDialog2" timestamp="1583728093414">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="941" y="208" key="CommitChangelistDialog2/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583728093414" />
+    <state width="2517" height="376" key="GridCell.Tab.0.bottom" timestamp="1583727734047">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="376" key="GridCell.Tab.0.bottom/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583558198920" />
+    <state width="2517" height="376" key="GridCell.Tab.0.bottom/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583727734047" />
+    <state width="2517" height="376" key="GridCell.Tab.0.center" timestamp="1583727734047">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="376" key="GridCell.Tab.0.center/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583558198920" />
+    <state width="2517" height="376" key="GridCell.Tab.0.center/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583727734047" />
+    <state width="2517" height="376" key="GridCell.Tab.0.left" timestamp="1583727734046">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="376" key="GridCell.Tab.0.left/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583558198920" />
+    <state width="2517" height="376" key="GridCell.Tab.0.left/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583727734046" />
+    <state width="2517" height="376" key="GridCell.Tab.0.right" timestamp="1583727734047">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="376" key="GridCell.Tab.0.right/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583558198920" />
+    <state width="2517" height="376" key="GridCell.Tab.0.right/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583727734047" />
+    <state width="2517" height="469" key="GridCell.Tab.1.bottom" timestamp="1583562255031">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="469" key="GridCell.Tab.1.bottom/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583562255031" />
+    <state width="2517" height="469" key="GridCell.Tab.1.center" timestamp="1583562255030">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="469" key="GridCell.Tab.1.center/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583562255030" />
+    <state width="2517" height="469" key="GridCell.Tab.1.left" timestamp="1583562255030">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="469" key="GridCell.Tab.1.left/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583562255030" />
+    <state width="2517" height="469" key="GridCell.Tab.1.right" timestamp="1583562255030">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="469" key="GridCell.Tab.1.right/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583562255030" />
+    <state x="149" y="343" key="SettingsEditor" timestamp="1583607276520">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="149" y="343" key="SettingsEditor/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583607276520" />
+    <state width="1290" height="710" key="XDebugger.FullValuePopup" timestamp="1583559692965">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1290" height="710" key="XDebugger.FullValuePopup/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583559692965" />
+    <state x="1087" y="612" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583649315795">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1087" y="612" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583649315795" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1583559050948">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583559050948" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backup/virus_table.py</url>
+          <line>46</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="browser.find_elements_by_css_selector(&quot;ul.ant-pagination&quot;)[0].find_elements_by_css_selector(&quot;a.ant-pagination-item-link&quot;)[2]" language="Python" />
+        <watch expression="browser.find_element_by_xpath('// *[ @ id = &quot;map&quot;] / div[3] / div[1] / div[3] / div / div / ul / li[9] / a')" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
