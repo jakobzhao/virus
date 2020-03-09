@@ -442,7 +442,7 @@
       }
 
       //totalRecovered
-      function rc(country) {
+      function tr(country) {
         if (country == undefined) {
           country = 0
         } else {
@@ -451,28 +451,23 @@
         return country;
       }
 
+      //totalDeath
+      function td(country) {
+        if (country == undefined) {
+          country = 0
+        } else {
+          country = +country.split("-")[3];
+        }
+        return country;
+      }
+
+
       var latest = datasets[0][datasets[0].length - 1];
-      var japan = tc(latest["japan"]);
-      var thailand = tc(latest["thailand"]);
-      var southKorea = tc(latest["south korea"]);
-      var france = tc(latest["france"]);
-      var australia = tc(latest["australia"]);
-      var malaysia = tc(latest["malaysia"]);
-      var singapore = tc(latest["singapore"]);
-      var germany = tc(latest["germany"]);
-      var france = tc(latest["france"]);
-      var italy = tc(latest["italy"]);
-      var iran = tc(latest["iran"]);
-      var us = tc(latest["us"]);
-      var spain = tc(latest["spain"]);
 
       var china = tc(latest["anhui"]) + tc(latest["beijing"]) + tc(latest["chongqing"]) + tc(latest["fujian"]) + tc(latest["gansu"]) + tc(latest["guangdong"]) + tc(latest["guangxi"]) + tc(latest["guizhou"]) + tc(latest["hainan"]) + tc(latest[
           "hebei"]) + tc(latest["heilongjiang"]) + tc(latest["henan"]) + tc(latest["hongkong"]) + tc(latest["hubei"]) + tc(latest["hunan"]) + tc(latest["neimenggu"]) + tc(latest["jiangsu"]) + tc(latest["jiangxi"]) + tc(latest["jilin"]) + tc(
           latest["liaoning"]) + tc(latest["macau"]) + tc(latest["ningxia"]) + tc(latest["qinghai"]) + tc(latest["shaanxi"]) + tc(latest["shandong"]) + tc(latest["shanghai"]) + tc(latest["shanxi"]) + tc(latest["sichuan"]) + tc(latest["taiwan"]) +
         tc(latest["tianjin"]) + tc(latest["xinjiang"]) + tc(latest["yunnan"]) + tc(latest["zhejiang"]) + tc(latest["xizang"]);
-
-
-
 
       var top = {
         "China": china,
@@ -506,13 +501,8 @@
       }
 
 
-
       stop = sortJsObject(top);
 
-
-
-
-      // var china = tc(latest["china"]);
 
 
       var t = ["t"];
@@ -557,6 +547,7 @@
             }
 
 
+
           } else {
 
             Object.values(current).forEach(function(d) {
@@ -576,7 +567,17 @@
                   break;
               }
             });
+
+
+            cf -= (tc(latest["us"]) + tc(latest["canada"]));
+            rc -= (tr(latest["us"]) + tr(latest["canada"]));
+            dd -= (td(latest["us"]) + td(latest["canada"]));
+
+
+
           }
+
+
 
           i["c"].push(cf);
           i["s"].push(sp);
