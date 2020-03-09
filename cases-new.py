@@ -3,6 +3,8 @@ from bs4 import BeautifulSoup
 import time
 import geocoder
 from datetime import datetime
+from selenium.webdriver.remote.webelement import WebElement
+from selenium.webdriver.common.action_chains import ActionChains
 
 now = str(datetime.now())
 
@@ -14,7 +16,8 @@ browser = webdriver.Chrome("C:\Workspace\chromedriver.exe") # zhaobo's chromedri
 
 url = "https://coronavirus.1point3acres.com/en"
 browser.get(url)
-i = 0
+
+i = 1
 while i < 20:
     browser.find_element_by_css_selector("html")
     soup = BeautifulSoup(browser.page_source, 'html.parser')
@@ -28,16 +31,31 @@ while i < 20:
         else:
             print("finished!")
             break
-    # time.sleep(1)
-    #nextpage_button = browser.find_elements_by_css_selector("ul.ant-pagination")[0].find_elements_by_css_selector("a.ant-pagination-item-link")[2]
 
-    #nextpage_button = browser.find_element_by_xpath('// *[ @ id = "map"] / div[3] / div[1] / div[3] / div / div / ul / li[9] / a')
+    # nextpage_button = browser.find_element_by_xpath('//*[@id="map"]/div[3]/div[1]/div[3]/div/div/ul/li[9]/a/i')
+    # nextpage_button = browser.find_element_by_css_selector(".ant-pagination-item-" + str(i))
 
-    nextpage_button = browser.find_element_by_xpath('//*[@id="map"]/div[3]/div[1]/div[3]/div/div/ul/li[9]/a')
+    time.sleep(2)
+    nextpage_button = browser.find_element_by_css_selector(".ant-pagination-next")
+    # nextpage_button.click()
+    # nextpage_button.location_once_scrolled_into_view
     time.sleep(2)
     browser.execute_script("window.scrollTo(0, document.body.scrollHeight*2/5);")
-    time.sleep(2)
-    nextpage_button.click()
+    actions = ActionChains(browser)
+    actions.move_to_element(nextpage_button)
+    actions.perform()
+
+    # // *[ @ id = "map"] / div[3] / div[1] / div[3] / div / div / ul / li[9]
+    # map > div.jsx-1766821484.tab-container > div.jsx-1766821484.active > div.ant-table-wrapper.responsive-table > div > div > ul > li.ant-pagination-next > a
+
+    # time.sleep(2)
+    # browser.execute_script("window.scrollTo(0, document.body.scrollHeight*2/5);")
+    # time.sleep(2)
+    # browser.execute_script("window.scrollTo(0, document.body.scrollHeight/2);")
+
+    # browser.execute_script("nextpage_button.click();", nextpage_button)
+    # time.sleep(2)
+    # nextpage_button.click()
     i += 1
 
 exit(-1)

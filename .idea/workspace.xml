@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c82d1dfd-4c87-4a78-bd59-b46ac0c78764" name="Default Changelist" comment="" />
+    <list default="true" id="c82d1dfd-4c87-4a78-bd59-b46ac0c78764" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cases-new.py" beforeDir="false" afterPath="$PROJECT_DIR$/cases-new.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +45,7 @@
       <recent name="C:\Workspace\virus\backup" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.cases">
+  <component name="RunManager" selected="Python.cases-new">
     <configuration name="cases-new" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="virus" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -171,8 +174,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.communities-ahusmart" />
         <item itemvalue="Python.cases-new" />
+        <item itemvalue="Python.communities-ahusmart" />
         <item itemvalue="Python.virus_table" />
         <item itemvalue="Python.cases" />
       </list>
@@ -204,6 +207,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="960" y="436" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1583737577472">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="960" y="436" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583737577472" />
     <state x="994" y="307" key="#virus_table" timestamp="1583313535771">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -212,26 +219,26 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="941" y="208" key="CommitChangelistDialog2/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583728093414" />
-    <state width="2517" height="376" key="GridCell.Tab.0.bottom" timestamp="1583727734047">
+    <state width="1236" height="376" key="GridCell.Tab.0.bottom" timestamp="1583739780383">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="376" key="GridCell.Tab.0.bottom/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583558198920" />
-    <state width="2517" height="376" key="GridCell.Tab.0.bottom/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583727734047" />
-    <state width="2517" height="376" key="GridCell.Tab.0.center" timestamp="1583727734047">
+    <state width="1236" height="376" key="GridCell.Tab.0.bottom/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583739780383" />
+    <state width="1236" height="376" key="GridCell.Tab.0.center" timestamp="1583739780383">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="376" key="GridCell.Tab.0.center/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583558198920" />
-    <state width="2517" height="376" key="GridCell.Tab.0.center/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583727734047" />
-    <state width="2517" height="376" key="GridCell.Tab.0.left" timestamp="1583727734046">
+    <state width="1236" height="376" key="GridCell.Tab.0.center/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583739780383" />
+    <state width="1236" height="376" key="GridCell.Tab.0.left" timestamp="1583739780383">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="376" key="GridCell.Tab.0.left/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583558198920" />
-    <state width="2517" height="376" key="GridCell.Tab.0.left/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583727734046" />
-    <state width="2517" height="376" key="GridCell.Tab.0.right" timestamp="1583727734047">
+    <state width="1236" height="376" key="GridCell.Tab.0.left/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583739780383" />
+    <state width="1236" height="376" key="GridCell.Tab.0.right" timestamp="1583739780383">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="376" key="GridCell.Tab.0.right/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583558198920" />
-    <state width="2517" height="376" key="GridCell.Tab.0.right/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583727734047" />
+    <state width="1236" height="376" key="GridCell.Tab.0.right/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583739780383" />
     <state width="2517" height="469" key="GridCell.Tab.1.bottom" timestamp="1583562255031">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
