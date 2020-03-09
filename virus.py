@@ -183,22 +183,33 @@ cursor.execute("SELECT * from virus")
 col_name_list = [tuple[0] for tuple in cursor.description]
 
 
-flag, priorFlag, hubei, priorHubei = "", "", "", ""
+flag, priorFlag, confirmed, priorConfirmed = "", "", 0, 0
 with open("assets/virus.csv", "w", encoding="utf-8") as fp:
     fp.write(str(col_name_list)[1:len(str(col_name_list))-1].replace("\'", "").replace(", ", ",").replace("(null)", "") + "\n")
     for row in cursor.execute("SELECT * from virus"):
         line = str(row)[1:len(str(row))-1].replace("\'", "").replace("None", "").replace(", ", ",").replace("(null)", "") + "\n"
         flag = line[0:10]
-        hubei = line.split(",")[14]
+        for area in line.split(",")[1:]:
+            if area == "" or area == "(null)" or area == "None" or area == "\n":
+                area = 0
+            else:
+                area = int(area.split("-")[0])
+            confirmed += area
+
         if flag != priorFlag:
             fp.write(str(row)[1:len(str(row)) - 1].replace("\'", "").replace("None", "").replace(", ", ",").replace("(null)", "") + "\n")
             priorFlag = flag
-            priorHubei = hubei
+            priorConfirmed = confirmed
     for row in cursor.execute("SELECT * from virus order by rowid DESC limit 1"):
         line = str(row)[1:len(str(row))-1].replace("\'", "").replace("None", "").replace(", ", ",").replace("(null)", "") + "\n"
         flag = line[0:10]
-        hubei = line.split(",")[14]
-        if hubei != priorHubei:
+        for area in line.split(",")[1:]:
+            if area == "" or area == "(null)" or area == "None" or area == "\n":
+                area = 0
+            else:
+                area = int(area.split("-")[0])
+            confirmed += area
+        if confirmed != priorConfirmed:
             fp.write(str(row)[1:len(str(row)) - 1].replace("\'", "").replace("None", "").replace(", ", ",").replace("(null)", "") + "\n")
 
 conn.close()
@@ -210,7 +221,7 @@ fp.close()
 n = len(lines)
 if lines[n-1][0:10] == lines[n-2][0:10]:
     lines.pop(n-2)
-pass
+
 with open("assets/virus.csv", "w", encoding="utf-8") as fp:
     start = 10
     stop = 26
