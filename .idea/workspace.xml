@@ -1,99 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c82d1dfd-4c87-4a78-bd59-b46ac0c78764" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/Canada.dbf" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/Canada.dbf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Canada.prj" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/Canada.prj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Canada.sbn" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/Canada.sbn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Canada.sbx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/Canada.sbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Canada.shp" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/Canada.shp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Canada.shp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/Canada.shp.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Canada.shx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/Canada.shx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Covid-19-NEJM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/Covid-19-NEJM.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/all-topo-30.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/all-topo-30.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/cases.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/cases.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/china.cpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/china.cpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/china.dbf" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/china.dbf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/china.prj" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/china.prj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/china.qpj" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/china.qpj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/china.shp" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/china.shp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/china.shx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/china.shx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/communities-1583087572.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583087572.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/communities-1583087572.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583087572.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/communities-1583087688.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583087688.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/communities-1583087688.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583087688.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/communities-1583087782.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583087782.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/communities-1583087782.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583087782.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/communities-1583087836.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583087836.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/communities-1583087836.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583087836.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/communities-1583088123.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583088123.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/communities-1583088123.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583088123.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/communities-1583374042.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583374042.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/communities-1583374042.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583374042.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/communities-1583613672.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583613672.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/communities-1583613672.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583613672.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/communities-1583692288.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583692288.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/communities-1583692288.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-1583692288.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/communities-20200208_220119.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-20200208_220119.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/communities-20200208_220119.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-20200208_220119.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/communities-20200209_224736.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-20200209_224736.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/communities-20200209_224736.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-20200209_224736.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/communities-20200215_215249.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-20200215_215249.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/communities-20200215_215249.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-20200215_215249.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/communities-20200222_171052.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-20200222_171052.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/communities-20200222_171052.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/communities-20200222_171052.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/countries.cpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/countries.cpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/countries.dbf" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/countries.dbf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/countries.prj" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/countries.prj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/countries.qpj" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/countries.qpj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/countries.shp" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/countries.shp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/countries.shx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/countries.shx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/trips-1583093200.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/trips-1583093200.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/trips-1583093200.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/trips-1583093200.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/trips-1583093292.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/trips-1583093292.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/trips-1583093292.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/trips-1583093292.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/trips-1583093309.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/trips-1583093309.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/trips-1583093309.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/trips-1583093309.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/trips-1583093339.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/trips-1583093339.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/trips-1583093339.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/trips-1583093339.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/trips.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/trips.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/trips.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/trips.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/us.cpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/us.cpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/us.dbf" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/us.dbf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/us.prj" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/us.prj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/us.qpj" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/us.qpj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/us.shp" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/us.shp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/us.shx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/us.shx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/virus-bkp.db" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/virus-bkp.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/wuhan-15.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan-15.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/wuhan-20 - Copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan-20 - Copy.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/wuhan-20.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan-20.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/wuhan-30.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan-30.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/wuhan-40.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan-40.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/wuhan-bkp.cpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan-bkp.cpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/wuhan-bkp.dbf" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan-bkp.dbf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/wuhan-bkp.prj" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan-bkp.prj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/wuhan-bkp.qpj" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan-bkp.qpj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/wuhan-bkp.shp" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan-bkp.shp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/wuhan-bkp.shx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan-bkp.shx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/wuhan.cpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan.cpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/wuhan.dbf" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan.dbf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/wuhan.prj" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan.prj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/wuhan.qgz" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan.qgz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/wuhan.qpj" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan.qpj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/wuhan.shp" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan.shp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/wuhan.shx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/wuhan.shx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cases.py___jb_old___" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cases_new.py" beforeDir="false" afterPath="$PROJECT_DIR$/backup/cases_new.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/communities.py" beforeDir="false" afterPath="$PROJECT_DIR$/backup/communities.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_xu.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/indexb.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trips.py" beforeDir="false" afterPath="$PROJECT_DIR$/backup/trips.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/update.md" beforeDir="false" afterPath="$PROJECT_DIR$/backup/update.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/virus_table.py" beforeDir="false" afterPath="$PROJECT_DIR$/virus_table.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/virus_table_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/backup/virus_table.py" afterDir="false" />
-    </list>
+    <list default="true" id="c82d1dfd-4c87-4a78-bd59-b46ac0c78764" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -134,7 +42,7 @@
       <recent name="C:\Workspace\virus\backup" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.virus_table_test">
+  <component name="RunManager" selected="Python.cases">
     <configuration name="cases-new" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="virus" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -263,7 +171,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.virus_table_test" />
         <item itemvalue="Python.communities-ahusmart" />
         <item itemvalue="Python.cases-new" />
         <item itemvalue="Python.virus_table" />
