@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c82d1dfd-4c87-4a78-bd59-b46ac0c78764" name="Default Changelist" comment="" />
+    <list default="true" id="c82d1dfd-4c87-4a78-bd59-b46ac0c78764" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/virus.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/virus.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -286,10 +290,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="469" key="GridCell.Tab.1.right/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583783801308" />
-    <state x="149" y="343" key="SettingsEditor" timestamp="1583607276520">
+    <state x="149" y="343" key="SettingsEditor" timestamp="1583796416285">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="149" y="343" key="SettingsEditor/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583607276520" />
+    <state x="149" y="343" key="SettingsEditor/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583796416285" />
     <state x="1199" y="428" key="Vcs.Push.Dialog.v2" timestamp="1583776834004">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
