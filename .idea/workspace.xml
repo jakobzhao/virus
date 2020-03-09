@@ -71,27 +71,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="cases" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="virus" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cases.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="communities-ahusmart" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="virus" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -105,6 +84,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/communities-ahusmart.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="virus-headless" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="virus" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/virus-headless.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -200,10 +200,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.virus" />
+        <item itemvalue="Python.virus-headless" />
         <item itemvalue="Python.cases-new" />
         <item itemvalue="Python.communities-ahusmart" />
         <item itemvalue="Python.virus_table" />
-        <item itemvalue="Python.cases" />
       </list>
     </recent_temporary>
   </component>
@@ -257,26 +257,26 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="941" y="208" key="CommitChangelistDialog2/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583776826449" />
-    <state width="2517" height="376" key="GridCell.Tab.0.bottom" timestamp="1583783982280">
+    <state width="2517" height="376" key="GridCell.Tab.0.bottom" timestamp="1583784278823">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="376" key="GridCell.Tab.0.bottom/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583558198920" />
-    <state width="2517" height="376" key="GridCell.Tab.0.bottom/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583783982280" />
-    <state width="2517" height="376" key="GridCell.Tab.0.center" timestamp="1583783982280">
+    <state width="2517" height="376" key="GridCell.Tab.0.bottom/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583784278823" />
+    <state width="2517" height="376" key="GridCell.Tab.0.center" timestamp="1583784278823">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="376" key="GridCell.Tab.0.center/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583558198920" />
-    <state width="2517" height="376" key="GridCell.Tab.0.center/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583783982280" />
-    <state width="2517" height="376" key="GridCell.Tab.0.left" timestamp="1583783982280">
+    <state width="2517" height="376" key="GridCell.Tab.0.center/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583784278823" />
+    <state width="2517" height="376" key="GridCell.Tab.0.left" timestamp="1583784278823">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="376" key="GridCell.Tab.0.left/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583558198920" />
-    <state width="2517" height="376" key="GridCell.Tab.0.left/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583783982280" />
-    <state width="2517" height="376" key="GridCell.Tab.0.right" timestamp="1583783982280">
+    <state width="2517" height="376" key="GridCell.Tab.0.left/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583784278823" />
+    <state width="2517" height="376" key="GridCell.Tab.0.right" timestamp="1583784278823">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="376" key="GridCell.Tab.0.right/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583558198920" />
-    <state width="2517" height="376" key="GridCell.Tab.0.right/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583783982280" />
+    <state width="2517" height="376" key="GridCell.Tab.0.right/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583784278823" />
     <state width="2517" height="469" key="GridCell.Tab.1.bottom" timestamp="1583783801308">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
