@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c82d1dfd-4c87-4a78-bd59-b46ac0c78764" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/geocoding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/virus-headless.py" beforeDir="false" afterPath="$PROJECT_DIR$/virus-headless.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/cases.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/cases-20200309.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/cases_new.py" beforeDir="false" afterPath="$PROJECT_DIR$/backup/cases_new.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cases-headless.py" beforeDir="false" afterPath="$PROJECT_DIR$/cases-headless.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cases-new.py" beforeDir="false" afterPath="$PROJECT_DIR$/cases-new.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cases.py" beforeDir="false" afterPath="$PROJECT_DIR$/cases.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,12 +47,14 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\workspace\virus\assets" />
+      <recent name="C:\workspace\virus\assets\backup" />
       <recent name="C:\Workspace\virus\assets" />
       <recent name="C:\Workspace\virus\assets\backup" />
       <recent name="C:\Workspace\virus\backup" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.virus">
+  <component name="RunManager" selected="Python.geocoding">
     <configuration name="cases-new" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="virus" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -80,6 +89,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/communities-ahusmart.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="geocoding" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="virus" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/geocoding.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -137,27 +167,6 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Workspace\virus\backup\virus_table.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="virus_table" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="virus" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -195,11 +204,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.geocoding" />
         <item itemvalue="Python.virus" />
         <item itemvalue="Python.virus-headless" />
         <item itemvalue="Python.cases-new" />
         <item itemvalue="Python.communities-ahusmart" />
-        <item itemvalue="Python.virus_table" />
       </list>
     </recent_temporary>
   </component>
@@ -240,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583796563700</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update">
+      <created>1583796851718</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1583796851718</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -261,42 +277,42 @@
     </state>
     <state x="-1619" y="208" key="CommitChangelistDialog2/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583796562768" />
     <state x="941" y="208" key="CommitChangelistDialog2/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583776826449" />
-    <state width="2517" height="376" key="GridCell.Tab.0.bottom" timestamp="1583784377960">
+    <state width="2539" height="401" key="GridCell.Tab.0.bottom" timestamp="1583819309266">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="376" key="GridCell.Tab.0.bottom/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583558198920" />
-    <state width="2517" height="376" key="GridCell.Tab.0.bottom/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583784377960" />
-    <state width="2517" height="376" key="GridCell.Tab.0.center" timestamp="1583784377960">
+    <state width="2539" height="401" key="GridCell.Tab.0.bottom/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583819309266" />
+    <state width="2539" height="401" key="GridCell.Tab.0.center" timestamp="1583819309266">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="376" key="GridCell.Tab.0.center/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583558198920" />
-    <state width="2517" height="376" key="GridCell.Tab.0.center/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583784377960" />
-    <state width="2517" height="376" key="GridCell.Tab.0.left" timestamp="1583784377960">
+    <state width="2539" height="401" key="GridCell.Tab.0.center/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583819309266" />
+    <state width="2539" height="401" key="GridCell.Tab.0.left" timestamp="1583819309266">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="376" key="GridCell.Tab.0.left/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583558198920" />
-    <state width="2517" height="376" key="GridCell.Tab.0.left/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583784377960" />
-    <state width="2517" height="376" key="GridCell.Tab.0.right" timestamp="1583784377960">
+    <state width="2539" height="401" key="GridCell.Tab.0.left/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583819309266" />
+    <state width="2539" height="401" key="GridCell.Tab.0.right" timestamp="1583819309266">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="376" key="GridCell.Tab.0.right/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583558198920" />
-    <state width="2517" height="376" key="GridCell.Tab.0.right/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583784377960" />
-    <state width="2517" height="469" key="GridCell.Tab.1.bottom" timestamp="1583783801308">
+    <state width="2539" height="401" key="GridCell.Tab.0.right/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583819309266" />
+    <state width="2539" height="492" key="GridCell.Tab.1.bottom" timestamp="1583819309266">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="469" key="GridCell.Tab.1.bottom/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583783801308" />
-    <state width="2517" height="469" key="GridCell.Tab.1.center" timestamp="1583783801308">
+    <state width="2539" height="492" key="GridCell.Tab.1.bottom/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583819309266" />
+    <state width="2539" height="492" key="GridCell.Tab.1.center" timestamp="1583819309266">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="469" key="GridCell.Tab.1.center/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583783801308" />
-    <state width="2517" height="469" key="GridCell.Tab.1.left" timestamp="1583783801308">
+    <state width="2539" height="492" key="GridCell.Tab.1.center/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583819309266" />
+    <state width="2539" height="492" key="GridCell.Tab.1.left" timestamp="1583819309266">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="469" key="GridCell.Tab.1.left/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583783801308" />
-    <state width="2517" height="469" key="GridCell.Tab.1.right" timestamp="1583783801308">
+    <state width="2539" height="492" key="GridCell.Tab.1.left/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583819309266" />
+    <state width="2539" height="492" key="GridCell.Tab.1.right" timestamp="1583819309266">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="469" key="GridCell.Tab.1.right/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583783801308" />
+    <state width="2539" height="492" key="GridCell.Tab.1.right/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583819309266" />
     <state x="149" y="343" key="SettingsEditor" timestamp="1583796416285">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -329,13 +345,5 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="PythonConfigurationType">
-        <watch expression="line" language="Python" />
-        <watch expression="line.split(&quot;,&quot;)[1:]" language="Python" />
-        <watch expression="&quot;0&quot;.split(&quot;,&quot;)" language="Python" />
-        <watch expression="line.split(&quot;,&quot;)" language="Python" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>

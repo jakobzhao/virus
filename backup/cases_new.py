@@ -57,7 +57,7 @@ def content():
         #outputs.append(output)
 
 
-with open("assets/cases.csv", "w", encoding="utf-8") as fp:
+with open("assets/cases-20200309.csv", "w", encoding="utf-8") as fp:
     fp.write("id,iftype,lng,lat,date,info,loc,source\n")
     for output in outputs:
         fp.write(output)

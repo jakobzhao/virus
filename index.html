@@ -80,12 +80,12 @@
 
         <div>An Infection Case &nbsp; <i class='fas fa-user community'></i> &nbsp; indicates a confirmed infected individual from the U.S, however the cases identified from the Diamond Princess are not included.
           The dataset of the infected cases are continuously enriched from different data portals such as
-          <a href="https://nowcorona.com/coronavirus-us-situation-summary/" target="_blank">nowcorona</a> as well as the public health department of different states.
+          <a href="https://coronavirus.1point3acres.com/en" target="_blank">1point3acres</a> as well as the public health department of different states.
         </div>
 
         <div>An Infected Community &nbsp; <i class="fas fa-procedures community"> </i> &nbsp; indicates a community or village where confirmed cases were found. The local governments in China have taken strict measures to isolate the residents of
           these
-          places from the outside. The dataset of infected community is continuously contributed by volunteers, and can be found at <a href="https://mapmiao.com/ncov/" target="_blank">mapmiao</a>.
+          places from the outside. The dataset of infected community can be found at <a href="https://lab.ahusmart.com/nCoV/api/detail" target="_blank">ahusmart</a>.
         </div>
 
         <div>This map is made by the <a href="http://hgis.uw.edu" target="_blank">Humanistic GIS Lab at University of Washington - Seattle</a>.
@@ -384,7 +384,7 @@
         });
       }
 
-    }).addTo(mymap);
+    });
 
 
     var cases = new L.MarkerClusterGroup({
@@ -398,7 +398,7 @@
         });
       }
 
-    });
+    }).addTo(mymap);
 
 
 
@@ -420,7 +420,8 @@
 
 
       datasets[4].forEach(function(d) {
-        L.marker([parseFloat(d.lat), parseFloat(d.lng)]).bindPopup("<b>" + d.iftype + " case </b> <p>" + d.info + " identified on " + d.date + ", &nbsp;" + d.source + ".</p>").addTo(
+        console.log(d.id)
+        L.marker([parseFloat(d.lat), parseFloat(d.lng)]).bindPopup("<b>" + d.no + " case </b> <p>" + d.note + " identified on " + d.date + ", &nbsp;" + d.reference + ".</p>").addTo(
           cases);
       })
 
