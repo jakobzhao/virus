@@ -1,3 +1,10 @@
 
-#.1 NO.447 Case for COVID-19 https://hgis.uw.edu/virus/
+# NO.447 Case for COVID-19
 38.8627728,-95.0812111
+
+
+
+# No. 217-218, 238, 241, 242, 564
+Harrison County, TX, USA
+lat: 29.816050
+long: -95.237670

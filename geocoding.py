@@ -2,8 +2,8 @@ from selenium import webdriver
 from bs4 import BeautifulSoup
 import time
 import geocoder
-from datetime import datetime
-import shutils
+import datetime
+import shutil
 
 now = str(datetime.now())
 
