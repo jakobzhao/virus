@@ -511,13 +511,13 @@
       var confirmed = ["Confirmed"];
       var suspected = ["Suspected"];
       var recovered = ["Recovered"];
-      var death = ["Death"]
+      var dead = ["Dead"]
       var global = {
         name: "Global Trend",
         c: confirmed,
         s: suspected,
         r: recovered,
-        d: death
+        d: dead
 
       }
 
@@ -698,13 +698,13 @@
         var confirmed = ["Confirmed"];
         var suspected = ["Suspected"];
         var recovered = ["Recovered"];
-        var death = ["Death"]
+        var dead = ["Dead"]
         var place = {
           name: e.target.feature.properties.enname,
           c: confirmed,
           s: suspected,
           r: recovered,
-          d: death
+          d: dead
         }
 
         calCounts(place);
@@ -713,7 +713,7 @@
 
         chart.load({
           columns: [place.c, place.r, place.d],
-          unload: ['Confirmed', 'Recovered', 'Death'],
+          unload: ['Confirmed', 'Recovered', 'Dead'],
         });
 
 
@@ -756,7 +756,7 @@
         calCounts(global);
         chart.load({
           columns: [global.c, global.r, global.d],
-          unload: ['Confirmed', 'Recovered', 'Death'],
+          unload: ['Confirmed', 'Recovered', 'Dead'],
         });
 
         $("#hint").text("Click a place to review local trend.");
@@ -790,7 +790,7 @@
             Confirmed: '#dc3545',
             // Suspected: 'orange',
             Recovered: '#28a745',
-            Death: '#5d4f72e8'
+            Dead: '#5d4f72e8'
           }
         },
         // zoom: {
