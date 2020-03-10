@@ -49,12 +49,13 @@
           <p class="card-text confirmed-count">0</p>
         </div>
 
-        <!-- <div class="card">
-          <div class="card-body suspected">
-            <h5 class="card-title">Suspected</h5>
-            <p class="card-text suspected-count">0</p>
+         <div class="card">
+          <div class="card-body active">
+            <h5 class="card-title">Active</h5>
+            <p class="card-text active-count">0</p>
           </div>
-        </div> -->
+        </div>
+
         <div class="card">
           <div class="card-body recovered">
             <h5 class="card-title">Recovered</h5>
@@ -64,7 +65,7 @@
 
         <div class="card">
           <div class="card-body death">
-            <h5 class="card-title">Death</h5>
+            <h5 class="card-title">Dead</h5>
             <p class="card-text death-count">0</p>
           </div>
         </div>
@@ -594,9 +595,10 @@
         });
 
         $(".confirmed-count").text(cf);
-        // $(".suspected-count").text(sp);
+        $(".active-count").text(cf-rc);
         $(".recovered-count").text(rc);
         $(".death-count").text(dd);
+        
 
         if (i["name"] == "anhui" || i["name"] == "beijing" || i["name"] == "chongqing" || i["name"] == "fujian" || i["name"] == "gansu" || i["name"] == "guangdong" ||
           i["name"] == "guangxi" || i["name"] == "guizhou" || i["name"] == "hainan" || i["name"] == "hebei" || i["name"] == "heilongjiang" || i["name"] == "henan" || i["name"] == "hongkong" ||
