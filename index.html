@@ -595,10 +595,10 @@
           i["d"].push(dd);
         });
 
-        $(".confirmed-count").text(cf);
-        $(".active-count").text(cf-rc-dd);
-        $(".recovered-count").text(rc);
-        $(".death-count").text(dd);
+        $(".confirmed-count").text(cf.toLocaleString());
+        $(".active-count").text((cf-rc-dd).toLocaleString());
+        $(".recovered-count").text(rc.toLocaleString());
+        $(".death-count").text(dd.toLocaleString());
         
 
         if (i["name"] == "anhui" || i["name"] == "beijing" || i["name"] == "chongqing" || i["name"] == "fujian" || i["name"] == "gansu" || i["name"] == "guangdong" ||
