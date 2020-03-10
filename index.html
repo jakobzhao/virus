@@ -40,7 +40,7 @@
       </div>
 
       <p><span id="placename">Global Trend</span> </p>
-      <p> <span id="date"></span> <span id="hint"> Click a place to review local trend.</span></p>
+      <p id="date-row"> <span id="date"></span> <span id="hint"> Click a place to review local trend.</span></p>
       <div class="card-deck counts">
         <div class="card">
           <div class="card-body confirmed">
@@ -55,7 +55,8 @@
             <p class="card-text active-count">0</p>
           </div>
         </div>
-
+      </div>
+      <div class="card-deck counts">
         <div class="card">
           <div class="card-body recovered">
             <h5 class="card-title">Recovered</h5>
@@ -595,7 +596,7 @@
         });
 
         $(".confirmed-count").text(cf);
-        $(".active-count").text(cf-rc);
+        $(".active-count").text(cf-rc-dd);
         $(".recovered-count").text(rc);
         $(".death-count").text(dd);
         
