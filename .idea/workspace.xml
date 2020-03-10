@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c82d1dfd-4c87-4a78-bd59-b46ac0c78764" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/geocoding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/cases.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/cases-20200309.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/cases_new.py" beforeDir="false" afterPath="$PROJECT_DIR$/backup/cases_new.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cases-headless.py" beforeDir="false" afterPath="$PROJECT_DIR$/cases-headless.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cases-new.py" beforeDir="false" afterPath="$PROJECT_DIR$/cases-new.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cases.py" beforeDir="false" afterPath="$PROJECT_DIR$/cases.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="c82d1dfd-4c87-4a78-bd59-b46ac0c78764" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
