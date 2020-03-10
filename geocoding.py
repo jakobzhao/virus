@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import time
 import geocoder
 from datetime import datetime
+import shutils
 
 now = str(datetime.now())
 
@@ -30,7 +31,7 @@ for line in lines[1:]:
         reference = ""
 
     try:
-        g = geocoder.arcgis(county + ", " + state + ", U.S.A.")
+        g = geocoder.arcgis(county + " county, " + state + ", U.S.A.")
         lat = g.current_result.lat
         lng = g.current_result.lng
     except:
@@ -48,4 +49,7 @@ with open("assets/cases.csv", "w", encoding="utf-8") as fp:
     for output in outputs:
         fp.write(output)
 
+
+ts = str(datetime.datetime.now().timestamp()).split(".")[0]
+shutil.copyfile("assets/cases.csv", "assets/cases-" + ts + ".csv")
 print("finished!")
