@@ -2,11 +2,8 @@ from selenium import webdriver
 from bs4 import BeautifulSoup
 import time
 import geocoder
-import datetime
+from datetime import datetime
 import shutil
-
-now = str(datetime.now())
-
 
 fp = open("assets/cases.csv", "r", encoding="utf-8")
 lines = fp.readlines()
@@ -50,6 +47,6 @@ with open("assets/cases.csv", "w", encoding="utf-8") as fp:
         fp.write(output)
 
 
-ts = str(datetime.datetime.now().timestamp()).split(".")[0]
+ts = str(datetime.now().timestamp()).split(".")[0]
 shutil.copyfile("assets/cases.csv", "assets/cases-" + ts + ".csv")
 print("finished!")
