@@ -146,7 +146,7 @@ browser.find_element_by_css_selector('main.container')
 soup = BeautifulSoup(browser.page_source, 'html.parser')
 provinces = soup.find_all("table")[0].find("tbody").find_all("tr")
 
-for province in provinces:
+for province in provinces[:-1]:
     enName = province.find_all("td")[0].text.lower()
     confirmed = province.find_all("td")[1].text
 
