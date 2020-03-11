@@ -40,22 +40,23 @@
       </div>
 
       <p><span id="placename">Global Trend</span> </p>
-      <p> <span id="date"></span> <span id="hint"> Click a place to review local trend.</span></p>
+      <div> <span id="date"></span> <span id="hint"> Click a place to review local trend.</span></div>
       <div class="card-deck counts">
         <div class="card">
           <div class="card-body confirmed">
             <h5 class="card-title">Aggr. Confirmed</h5>
           </div>
-          <p class="card-text confirmed-count">0</p>
+          <p class="card-text"><span class="confirmed-count"></span><span class="confirmed-new-count"></span></p>
         </div>
 
         <div class="card">
           <div class="card-body confirmed">
             <h5 class="card-title">Active Confirmed</h5>
           </div>
-          <p class="card-text active-count">0</p>
+          <p class="card-text"><span class="active-count"></span><span class="active-new-count"></span></p>
         </div>
-
+      </div>
+      <div class="card-deck counts">
         <!-- <div class="card">
           <div class="card-body suspected">
             <h5 class="card-title">Suspected</h5>
@@ -65,14 +66,14 @@
         <div class="card">
           <div class="card-body recovered">
             <h5 class="card-title">Recovered</h5>
-            <p class="card-text recovered-count">0</p>
+            <p class="card-text"><span class="recovered-count"></span><span class="recovered-new-count"></span></p>
           </div>
         </div>
 
         <div class="card">
           <div class="card-body death">
             <h5 class="card-title">Death</h5>
-            <p class="card-text death-count">0</p>
+            <p class="card-text"><span class="death-count"></span><span class="death-new-count"></span></p>
           </div>
         </div>
       </div>
@@ -427,7 +428,7 @@
 
 
       datasets[4].forEach(function(d) {
-        console.log(d.id)
+        //console.log(d.id)
         L.marker([parseFloat(d.lat), parseFloat(d.lng)]).bindPopup("<b>" + d.no + "</b> <p>" + d.note + " identified on " + d.date + ", &nbsp;" + d.reference + ".</p>").addTo(
           cases);
       })
@@ -527,11 +528,11 @@
       }
 
       function calCounts(i) {
-        cf = 0, sp = 0, rc = 0, dd = 0, active= 0;
+        cf = 0, sp = 0, rc = 0, dd = 0, active = 0;
         datasets[0].forEach(function(d) {
           var USTd = new Date(d["datetime"])
           t.push(USTd.setHours(USTd.getHours() + 8));
-          cf = 0, sp = 0, rc = 0, dd = 0, active= 0;
+          cf = 0, sp = 0, rc = 0, dd = 0, active = 0;
           current = d;
           delete current["datetime"];
           if (i["name"] != "Global Trend") {
@@ -551,7 +552,7 @@
                 cf += +items[0];
                 break;
             };
-            active= cf - dd -rc;
+            active = cf - dd - rc;
 
           } else {
 
@@ -571,29 +572,38 @@
                   cf += +items[0];
                   break;
               };
-              active= cf - dd -rc;
+              active = cf - dd - rc;
             });
             //
             cf -= (tc(current["alabama"]) + tc(current["alaska"]) + tc(current["arizona"]) + tc(current["arkansas"]) + tc(current["california"]) + tc(current["colorado"]) + tc(current["connecticut"]) + tc(current["delaware"]) + tc(current[
-            "florida"]) + tc(current["georgia usa"]) + tc(current["hawaii"]) + tc(current["idaho"]) + tc(current["illinois"]) + tc(current["indiana"]) + tc(current["iowa"]) + tc(current["kansas"]) + tc(current["kentucky"]) + tc(current[
-              "louisiana"]) + tc(current["maine"]) + tc(current["maryland"]) + tc(current["massachusetts"]) + tc(current["michigan"]) + tc(current["minnesota"]) + tc(current["mississippi"]) + tc(current["missouri"]) + tc(current["montana"]) + tc(
-              current["nebraska"]) + tc(current["nevada"]) + tc(current["new hampshire"]) + tc(current["new jersey"]) + tc(current["new mexico"]) + tc(current["new york"]) + tc(current["north carolina"]) + tc(current["north dakota"]) + tc(current[
-              "ohio"]) + tc(current["oklahoma"]) + tc(current["oregon"]) + tc(current["pennsylvania"]) + tc(current["rhode island"]) + tc(current["south carolina"]) + tc(current["south dakota"]) + tc(current["tennessee"]) + tc(current["texas"]) +
-            tc(current["utah"]) + tc(current["vermont"]) + tc(current["virginia"]) + tc(current["washington"]) + tc(current["west virginia"]) + tc(current["canada"]));
+                "florida"]) + tc(current["georgia usa"]) + tc(current["hawaii"]) + tc(current["idaho"]) + tc(current["illinois"]) + tc(current["indiana"]) + tc(current["iowa"]) + tc(current["kansas"]) + tc(current["kentucky"]) + tc(current[
+                "louisiana"]) + tc(current["maine"]) + tc(current["maryland"]) + tc(current["massachusetts"]) + tc(current["michigan"]) + tc(current["minnesota"]) + tc(current["mississippi"]) + tc(current["missouri"]) + tc(current[
+                "montana"]) + tc(
+                current["nebraska"]) + tc(current["nevada"]) + tc(current["new hampshire"]) + tc(current["new jersey"]) + tc(current["new mexico"]) + tc(current["new york"]) + tc(current["north carolina"]) + tc(current["north dakota"]) +
+              tc(current[
+                "ohio"]) + tc(current["oklahoma"]) + tc(current["oregon"]) + tc(current["pennsylvania"]) + tc(current["rhode island"]) + tc(current["south carolina"]) + tc(current["south dakota"]) + tc(current["tennessee"]) + tc(current[
+                "texas"]) +
+              tc(current["utah"]) + tc(current["vermont"]) + tc(current["virginia"]) + tc(current["washington"]) + tc(current["west virginia"]) + tc(current["canada"]));
 
             rc -= (tr(current["alabama"]) + tr(current["alaska"]) + tr(current["arizona"]) + tr(current["arkansas"]) + tr(current["california"]) + tr(current["colorado"]) + tr(current["connecticut"]) + tr(current["delaware"]) + tr(current[
-          "florida"]) + tr(current["georgia usa"]) + tr(current["hawaii"]) + tr(current["idaho"]) + tr(current["illinois"]) + tr(current["indiana"]) + tr(current["iowa"]) + tr(current["kansas"]) + tr(current["kentucky"]) + tr(current[
-            "louisiana"]) + tr(current["maine"]) + tr(current["maryland"]) + tr(current["massachusetts"]) + tr(current["michigan"]) + tr(current["minnesota"]) + tr(current["mississippi"]) + tr(current["missouri"]) + tr(current["montana"]) + tc(
-            current["nebraska"]) + tr(current["nevada"]) + tr(current["new hampshire"]) + tr(current["new jersey"]) + tr(current["new mexico"]) + tr(current["new york"]) + tr(current["north carolina"]) + tr(current["north dakota"]) + tr(current[
-            "ohio"]) + tr(current["oklahoma"]) + tr(current["oregon"]) + tr(current["pennsylvania"]) + tr(current["rhode island"]) + tr(current["south carolina"]) + tr(current["south dakota"]) + tr(current["tennessee"]) + tr(current["texas"]) +
-          tr(current["utah"]) + tr(current["vermont"]) + tr(current["virginia"]) + tr(current["washington"]) + tr(current["west virginia"]) + tr(current["canada"]));
+                "florida"]) + tr(current["georgia usa"]) + tr(current["hawaii"]) + tr(current["idaho"]) + tr(current["illinois"]) + tr(current["indiana"]) + tr(current["iowa"]) + tr(current["kansas"]) + tr(current["kentucky"]) + tr(current[
+                "louisiana"]) + tr(current["maine"]) + tr(current["maryland"]) + tr(current["massachusetts"]) + tr(current["michigan"]) + tr(current["minnesota"]) + tr(current["mississippi"]) + tr(current["missouri"]) + tr(current[
+                "montana"]) + tc(
+                current["nebraska"]) + tr(current["nevada"]) + tr(current["new hampshire"]) + tr(current["new jersey"]) + tr(current["new mexico"]) + tr(current["new york"]) + tr(current["north carolina"]) + tr(current["north dakota"]) +
+              tr(current[
+                "ohio"]) + tr(current["oklahoma"]) + tr(current["oregon"]) + tr(current["pennsylvania"]) + tr(current["rhode island"]) + tr(current["south carolina"]) + tr(current["south dakota"]) + tr(current["tennessee"]) + tr(current[
+                "texas"]) +
+              tr(current["utah"]) + tr(current["vermont"]) + tr(current["virginia"]) + tr(current["washington"]) + tr(current["west virginia"]) + tr(current["canada"]));
 
-          dd -= (td(current["alabama"]) + td(current["alaska"]) + td(current["arizona"]) + td(current["arkansas"]) + td(current["california"]) + td(current["colorado"]) + td(current["connecticut"]) + td(current["delaware"]) + td(current[
-          "florida"]) + td(current["georgia usa"]) + td(current["hawaii"]) + td(current["idaho"]) + td(current["illinois"]) + td(current["indiana"]) + td(current["iowa"]) + td(current["kansas"]) + td(current["kentucky"]) + td(current[
-            "louisiana"]) + td(current["maine"]) + td(current["maryland"]) + td(current["massachusetts"]) + td(current["michigan"]) + td(current["minnesota"]) + td(current["mississippi"]) + td(current["missouri"]) + td(current["montana"]) + tc(
-            current["nebraska"]) + td(current["nevada"]) + td(current["new hampshire"]) + td(current["new jersey"]) + td(current["new mexico"]) + td(current["new york"]) + td(current["north carolina"]) + td(current["north dakota"]) + td(current[
-            "ohio"]) + td(current["oklahoma"]) + td(current["oregon"]) + td(current["pennsylvania"]) + td(current["rhode island"]) + td(current["south carolina"]) + td(current["south dakota"]) + td(current["tennessee"]) + td(current["texas"]) +
-          td(current["utah"]) + td(current["vermont"]) + td(current["virginia"]) + td(current["washington"]) + td(current["west virginia"]) + td(current["canada"]));
+            dd -= (td(current["alabama"]) + td(current["alaska"]) + td(current["arizona"]) + td(current["arkansas"]) + td(current["california"]) + td(current["colorado"]) + td(current["connecticut"]) + td(current["delaware"]) + td(current[
+                "florida"]) + td(current["georgia usa"]) + td(current["hawaii"]) + td(current["idaho"]) + td(current["illinois"]) + td(current["indiana"]) + td(current["iowa"]) + td(current["kansas"]) + td(current["kentucky"]) + td(current[
+                "louisiana"]) + td(current["maine"]) + td(current["maryland"]) + td(current["massachusetts"]) + td(current["michigan"]) + td(current["minnesota"]) + td(current["mississippi"]) + td(current["missouri"]) + td(current[
+                "montana"]) + tc(
+                current["nebraska"]) + td(current["nevada"]) + td(current["new hampshire"]) + td(current["new jersey"]) + td(current["new mexico"]) + td(current["new york"]) + td(current["north carolina"]) + td(current["north dakota"]) +
+              td(current[
+                "ohio"]) + td(current["oklahoma"]) + td(current["oregon"]) + td(current["pennsylvania"]) + td(current["rhode island"]) + td(current["south carolina"]) + td(current["south dakota"]) + td(current["tennessee"]) + td(current[
+                "texas"]) +
+              td(current["utah"]) + td(current["vermont"]) + td(current["virginia"]) + td(current["washington"]) + td(current["west virginia"]) + td(current["canada"]));
           }
 
           i["c"].push(cf);
@@ -602,12 +612,19 @@
           i["d"].push(dd);
           i["a"].push(active);
         });
-        active = cf - rc -dd;
+        active = cf - rc - dd;
         $(".confirmed-count").text(cf);
         // $(".suspected-count").text(sp);
         $(".recovered-count").text(rc);
         $(".death-count").text(dd);
         $(".active-count").text(active);
+
+
+        
+        $(".confirmed-new-count").text(i.c[i.c.length - 1] - i.c[i.c.length - 2]);
+        $(".recovered-new-count").text(i.r[i.r.length - 1] - i.r[i.r.length - 2]);
+        $(".death-new-count").text(i.d[i.d.length - 1] - i.d[i.d.length - 2]);
+        $(".active-new-count").text(i.a[i.a.length - 1] - i.a[i.a.length - 2]);
 
         if (i["name"] == "anhui" || i["name"] == "beijing" || i["name"] == "chongqing" || i["name"] == "fujian" || i["name"] == "gansu" || i["name"] == "guangdong" ||
           i["name"] == "guangxi" || i["name"] == "guizhou" || i["name"] == "hainan" || i["name"] == "hebei" || i["name"] == "heilongjiang" || i["name"] == "henan" || i["name"] == "hongkong" ||
@@ -723,7 +740,7 @@
 
         chart.load({
           columns: [place.c, place.r, place.d, place.a],
-          unload:  ['Aggr. Confirmed', 'Active Confirmed', 'Recovered', 'Death'],
+          unload: ['Aggr. Confirmed', 'Active Confirmed', 'Recovered', 'Death'],
         });
 
 
@@ -785,7 +802,7 @@
 
       chart = c3.generate({
         size: {
-          height: 350,
+          height: 280,
           width: 440
         },
         data: {

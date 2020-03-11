@@ -185,7 +185,7 @@ div#footer>div {
 
   .card-deck {
     position: fixed;
-    top: 100px !important;
+    margin-top: 100px !important;
     /* right: 10px; */
     /* width: 75% !important; */
     left: 10px;
@@ -305,6 +305,7 @@ span {
 #date {
   position: relative;
   top: -40px;
+  /* bottom: -40px; */
   /* position: relative;
   top: -85px;
   left: 30px; */
@@ -335,7 +336,7 @@ span {
 }
 
 .counts {
-  margin-top: -20px;
+  margin-top: 0px;
 }
 
 text {
@@ -414,6 +415,36 @@ text {
 .death-count {
   color: #5d4f72e8;
 }
+
+
+.confirmed-new-count {
+vertical-align:super !important;
+font-size:50% !important;
+color: #dc3545;
+}
+
+
+.active-new-count {
+vertical-align:super !important;
+font-size:50% !important;
+color: orange;
+}
+
+
+.death-new-count {
+vertical-align:super !important;
+font-size:50% !important;
+color: #5d4f72e8;
+}
+
+
+.recovered-new-count {
+vertical-align:super !important;
+font-size:50% !important;
+color: #28a745;
+}
+
+
 
 .textLabelclass a {
   white-space: nowrap;
