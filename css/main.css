@@ -120,7 +120,7 @@ div#footer>div {
     display: none;
   }
 
-  #info, #rank-chart, #total-chart, .c3-legend-item, .c3-legend-background, #footer, #title>img, #title>span {
+  #info, #rank-chart, #total-chart, .c3-legend-item, #deck-2, .c3-legend-background, #footer, #title>img, #title>span {
     visibility: hidden !important;
   }
 
@@ -404,9 +404,9 @@ text {
   color: orange;
 }
 
-.suspected-count {
+/* .suspected-count {
   color: orange;
-}
+} */
 
 .recovered-count {
   color: #28a745;
@@ -446,8 +446,8 @@ color: #28a745;
 
 
 
-.textLabelclass a {
+/* .textLabelclass a {
   white-space: nowrap;
   font-size: 10px;
   color: brown !important;
-}
+} */
