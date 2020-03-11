@@ -146,7 +146,7 @@ div#footer>div {
   #title {
     position: fixed;
     color: black;
-    font-size: 13px !important;
+    font-size: 18px !important;
     top: 5px !important;
     left: -20px !important;
     width: 400px !important;
@@ -155,20 +155,20 @@ div#footer>div {
   #placename {
     /* position: relative; */
     color: black;
-    font-size: 15px !important;
+    font-size: 30px !important;
     position: fixed !important;
     left: 10px;
-    top: 25px !important;
+    top: 28px !important;
     width: 500px;
   }
 
   #date {
     /* position: relative; */
     color: black;
-    font-size: 10px !important;
+    font-size: 12px !important;
     position: fixed !important;
     left: 12px;
-    top: 45px !important;
+    top: 65px !important;
     width: 300px;
   }
 
@@ -179,7 +179,7 @@ div#footer>div {
     position: fixed !important;
     left: 10px !important;
     font-weight: bold;
-    top: 60px !important;
+    top: 85px !important;
     width: 300px;
   }
 
