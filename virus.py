@@ -74,11 +74,11 @@ for unfold in unfolds:
         unfold.click()
         time.sleep(2)
 
-unfolds2 = browser.find_elements_by_xpath('//*[@id="foreignTable"]/table/tbody/tr')
-for unfold in unfolds2[1:]:
-    if "欧洲" in unfold.text or "亚洲" in unfold.text or "北美洲" in unfold.text or "大洋洲" in unfold.text  or "南美洲" in unfold.text or "非洲" in unfold.text:
-        unfold.find_element_by_css_selector("div").click()
-        time.sleep(2)
+# unfolds2 = browser.find_elements_by_xpath('//*[@id="foreignTable"]/table/tbody/tr')
+# for unfold in unfolds2[1:]:
+#     if "欧洲" in unfold.text or "亚洲" in unfold.text or "北美洲" in unfold.text or "大洋洲" in unfold.text  or "南美洲" in unfold.text or "非洲" in unfold.text:
+#         unfold.find_element_by_css_selector("div").click()
+#         time.sleep(2)
 
 
 
@@ -216,7 +216,7 @@ with open("assets/virus.csv", "w", encoding="utf-8") as fp:
 
 conn.close()
 
-exit(-1)
+# exit(-1)
 fp = open("assets/virus.csv", "r", encoding="utf-8")
 lines = fp.readlines()
 fp.close()
