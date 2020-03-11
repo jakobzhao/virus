@@ -622,25 +622,35 @@
         nd = i.d[i.d.length - 1] - i.d[i.d.length - 2];
         na = i.a[i.a.length - 1] - i.a[i.a.length - 2];
 
-        if (nc != 0){
+        if (nc > 0) {
           $(".confirmed-new-count").text("+" + nc.toString());
+        } else if (nc == 0) {
+          $(".confirmed-new-count").text("");
         } else {
-            $(".confirmed-new-count").text("-")
+
+          $(".confirmed-new-count").text(nc.toString());
         }
-        if (nr != 0){
+
+        if (nr > 0) {
           $(".recovered-new-count").text("+" + nr.toString());
-        }else {
-            $(".recovered-new-count").text("-")
+        } else if (nr == 0) {
+          $(".recovered-new-count").text("")
+        } else {
+          $(".recovered-new-count").text(nr.toString());
         }
-        if (nd != 0){
+        if (nd > 0) {
           $(".death-new-count").text("+" + nd.toString());
-        }else {
-            $(".death-new-count").text("-")
+        } else if (nd == 0) {
+          $(".death-new-count").text("")
+        } else {
+          $(".death-new-count").text(nd.toString());
         }
-        if (na != 0){
+        if (na > 0) {
           $(".active-new-count").text("+" + na.toString());
-        }else {
-            $(".active-new-count").text("-")
+        } else if (na == 0) {
+          $(".active-new-count").text("")
+        } else {
+          $(".active-new-count").text(na.toString());
         }
 
 
