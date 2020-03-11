@@ -78,7 +78,7 @@
         <p><a href="https://hgis.uw.edu" target="_blank"><img src="img/logo.png" width="250px"></img></a></p>
 
 
-        <div>An Infection Case &nbsp; <i class='fas fa-user community'></i> &nbsp; indicates a confirmed infected individual from the U.S, however the cases identified from the Diamond Princess are not included.
+        <div>Infection Case(s) &nbsp; <i class='fas fa-users community'></i> &nbsp; indicates a confirmed infected individual from the U.S, however the cases identified from the Diamond Princess are not included.
           The dataset of the infected cases are continuously enriched from different data portals such as
           <a href="https://coronavirus.1point3acres.com/en" target="_blank">1point3acres</a> as well as the public health department of different states.
         </div>
@@ -394,7 +394,7 @@
       // zoomToBoundsOnClick: false,
       iconCreateFunction: function(cluster) {
         return L.divIcon({
-          html: '<i class="fas fa-user community community-marker"> <b>' + cluster.getChildCount() + '</b></i>'
+          html: '<i class="fas fa-users community community-marker"> <b>' + cluster.getChildCount() + '</b></i>'
         });
       }
 
@@ -741,7 +741,7 @@
 
       new L.control.layers(baseLayers, {
         "Infection Level": areas,
-        "Infection Case &nbsp;&nbsp; <i class='fas fa-user community'></i>": cases,
+        "Infection Case(s) &nbsp;&nbsp; <i class='fas fa-users community'></i>": cases,
         "Infected Community &nbsp;&nbsp; <i class='fas fa-procedures community'></i>": communities
       }, {
         collapsed: false
