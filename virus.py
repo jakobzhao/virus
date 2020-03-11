@@ -5,7 +5,8 @@ from datetime import datetime
 import sqlite3
 from selenium.webdriver.chrome.options import Options
 import urllib.request
-import shutil
+# import shutil
+from selenium.webdriver.common.action_chains import ActionChains
 
 options = Options()
 options.add_argument('--headless')
@@ -76,9 +77,15 @@ for unfold in unfolds:
 unfolds2 = browser.find_elements_by_xpath("//div[starts-with(@class,'VirusTable')]")
 for unfold in unfolds2:
     if unfold.text == "欧洲" or unfold.text == "北美洲" or unfold.text == "大洋洲" or unfold.text == "南美洲" or unfold.text == "非洲":
-        browser.execute_script("window.scrollTo(0, document.body.scrollHeight/4);")
+        browser.execute_script("window.scrollTo(0, document.body.scrollHeight*2/5);")
         time.sleep(3)
-        unfold.click()
+        # unfold.click()
+
+
+        # browser.execute_script("window.scrollTo(0, document.body.scrollHeight*2/5);")
+        # actions = ActionChains(browser)
+        # actions.move_to_element(unfold)
+        # actions.perform()
 
 
 browser.find_element_by_xpath("//table[starts-with(@class,'VirusTable')]").find_elements_by_tag_name("tr")
@@ -149,7 +156,7 @@ soup = BeautifulSoup(browser.page_source, 'html.parser')
 provinces = soup.find_all("table")[0].find("tbody").find_all("tr")
 
 for province in provinces[:-1]:
-    enName = province.find_all("td")[0].text.lower()
+    enName = province.find_all("td")[0].text.lower().replace("british colombia", "british columbia")
     confirmed = province.find_all("td")[1].text
 
     if enName in canadacities:
@@ -177,6 +184,7 @@ browser.close()
 
 
 insert_record_sql = sqls + sqle[0: len(sqle) -2] + ")"
+
 cursor.execute(insert_record_sql)
 conn.commit()
 cursor.execute("SELECT * from virus")
@@ -214,7 +222,7 @@ with open("assets/virus.csv", "w", encoding="utf-8") as fp:
 
 conn.close()
 
-
+exit(-1)
 fp = open("assets/virus.csv", "r", encoding="utf-8")
 lines = fp.readlines()
 fp.close()

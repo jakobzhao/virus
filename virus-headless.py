@@ -175,6 +175,7 @@ browser.close()
 
 
 insert_record_sql = sqls + sqle[0: len(sqle) -2] + ")"
+insert_record_sql.replace("british colombia", "british columbia")
 cursor.execute(insert_record_sql)
 conn.commit()
 cursor.execute("SELECT * from virus")
