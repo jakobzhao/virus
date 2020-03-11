@@ -71,12 +71,12 @@ for unfold in unfolds:
         unfold.click()
         time.sleep(2)
 
-unfolds2 = browser.find_elements_by_xpath("//div[starts-with(@class,'VirusTable')]")
-for unfold in unfolds2:
-    if unfold.text == "欧洲" or unfold.text == "北美洲" or unfold.text == "大洋洲" or unfold.text == "南美洲" or unfold.text == "非洲":
-        browser.execute_script("window.scrollTo(0, document.body.scrollHeight/4);")
-        time.sleep(3)
-        unfold.click()
+unfolds2 = browser.find_elements_by_xpath('//*[@id="foreignTable"]/table/tbody/tr')
+for unfold in unfolds2[1:]:
+    if "欧洲" in unfold.text or "亚洲" in unfold.text or "北美洲" in unfold.text or "大洋洲" in unfold.text  or "南美洲" in unfold.text or "非洲" in unfold.text:
+        unfold.find_element_by_css_selector("div").click()
+        time.sleep(2)
+
 
 
 browser.find_element_by_xpath("//table[starts-with(@class,'VirusTable')]").find_elements_by_tag_name("tr")
@@ -124,7 +124,7 @@ cursor = conn.cursor()
 
 
 urllink = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdW9DsR5iffFcJvKAJXyOiNn4IYtavRIGslkcJIslHJC7UfrbChv-L4E89TeDEcWZS6QSzCuHWeMON/pub?gid=1879451031&single=true&output=csv"
-with request.urlopen(urllink) as url:
+with urllib.request.urlopen(urllink) as url:
     content = url.read().decode()
     content.replace("/r/n","")
     states = content.split("\r\n")[1:]
@@ -147,7 +147,7 @@ soup = BeautifulSoup(browser.page_source, 'html.parser')
 provinces = soup.find_all("table")[0].find("tbody").find_all("tr")
 
 for province in provinces[:-1]:
-    enName = province.find_all("td")[0].text.lower()
+    enName = province.find_all("td")[0].text.lower().replace("british colombia", "british columbia")
     confirmed = province.find_all("td")[1].text
 
     if enName in canadacities:
@@ -175,7 +175,7 @@ browser.close()
 
 
 insert_record_sql = sqls + sqle[0: len(sqle) -2] + ")"
-insert_record_sql.replace("british colombia", "british columbia")
+
 cursor.execute(insert_record_sql)
 conn.commit()
 cursor.execute("SELECT * from virus")
@@ -213,7 +213,7 @@ with open("assets/virus.csv", "w", encoding="utf-8") as fp:
 
 conn.close()
 
-
+exit(-1)
 fp = open("assets/virus.csv", "r", encoding="utf-8")
 lines = fp.readlines()
 fp.close()

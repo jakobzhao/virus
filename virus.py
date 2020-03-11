@@ -74,18 +74,12 @@ for unfold in unfolds:
         unfold.click()
         time.sleep(2)
 
-unfolds2 = browser.find_elements_by_xpath("//div[starts-with(@class,'VirusTable')]")
-for unfold in unfolds2:
-    if unfold.text == "欧洲" or unfold.text == "北美洲" or unfold.text == "大洋洲" or unfold.text == "南美洲" or unfold.text == "非洲":
-        browser.execute_script("window.scrollTo(0, document.body.scrollHeight*2/5);")
-        time.sleep(3)
-        # unfold.click()
+unfolds2 = browser.find_elements_by_xpath('//*[@id="foreignTable"]/table/tbody/tr')
+for unfold in unfolds2[1:]:
+    if "欧洲" in unfold.text or "亚洲" in unfold.text or "北美洲" in unfold.text or "大洋洲" in unfold.text  or "南美洲" in unfold.text or "非洲" in unfold.text:
+        unfold.find_element_by_css_selector("div").click()
+        time.sleep(2)
 
-
-        # browser.execute_script("window.scrollTo(0, document.body.scrollHeight*2/5);")
-        # actions = ActionChains(browser)
-        # actions.move_to_element(unfold)
-        # actions.perform()
 
 
 browser.find_element_by_xpath("//table[starts-with(@class,'VirusTable')]").find_elements_by_tag_name("tr")
