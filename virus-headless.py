@@ -74,6 +74,7 @@ for unfold in unfolds:
 unfolds2 = browser.find_elements_by_xpath('//*[@id="foreignTable"]/table/tbody/tr')
 for unfold in unfolds2[1:]:
     if "欧洲" in unfold.text or "亚洲" in unfold.text or "北美洲" in unfold.text or "大洋洲" in unfold.text  or "南美洲" in unfold.text or "非洲" in unfold.text:
+        browser.execute_script("window.scrollTo(0, document.body.scrollHeight/4);")
         unfold.find_element_by_css_selector("div").click()
         time.sleep(2)
 
