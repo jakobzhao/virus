@@ -44,9 +44,16 @@
       <div class="card-deck counts">
         <div class="card">
           <div class="card-body confirmed">
-            <h5 class="card-title">Confirmed</h5>
+            <h5 class="card-title">Aggr. Confirmed</h5>
           </div>
           <p class="card-text confirmed-count">0</p>
+        </div>
+
+        <div class="card">
+          <div class="card-body confirmed">
+            <h5 class="card-title">Active Confirmed</h5>
+          </div>
+          <p class="card-text active-count">0</p>
         </div>
 
         <!-- <div class="card">
@@ -506,7 +513,8 @@
 
 
       var t = ["t"];
-      var confirmed = ["Confirmed"];
+      var confirmed = ["Aggr. Confirmed"];
+      var active = ["Active Confirmed"];
       var suspected = ["Suspected"];
       var recovered = ["Recovered"];
       var death = ["Death"]
@@ -515,16 +523,16 @@
         c: confirmed,
         s: suspected,
         r: recovered,
-        d: death
-
+        d: death,
+        a: active
       }
 
       function calCounts(i) {
-        cf = 0, sp = 0, rc = 0, dd = 0;
+        cf = 0, sp = 0, rc = 0, dd = 0, active= 0;
         datasets[0].forEach(function(d) {
           var USTd = new Date(d["datetime"])
           t.push(USTd.setHours(USTd.getHours() + 8));
-          cf = 0, sp = 0, rc = 0, dd = 0;
+          cf = 0, sp = 0, rc = 0, dd = 0, active= 0;
           current = d;
           delete current["datetime"];
           if (i["name"] != "Global Trend") {
@@ -543,7 +551,8 @@
               case 1:
                 cf += +items[0];
                 break;
-            }
+            };
+            active= cf - dd -rc;
 
           } else {
 
@@ -562,7 +571,8 @@
                 case 1:
                   cf += +items[0];
                   break;
-              }
+              };
+              active= cf - dd -rc;
             });
             //
             cf -= (tc(current["alabama"]) + tc(current["alaska"]) + tc(current["arizona"]) + tc(current["arkansas"]) + tc(current["california"]) + tc(current["colorado"]) + tc(current["connecticut"]) + tc(current["delaware"]) + tc(current[
@@ -591,12 +601,14 @@
           // i["s"].push(sp);
           i["r"].push(rc);
           i["d"].push(dd);
+          i["a"].push(active);
         });
-
+        active = cf - rc -dd;
         $(".confirmed-count").text(cf);
         // $(".suspected-count").text(sp);
         $(".recovered-count").text(rc);
         $(".death-count").text(dd);
+        $(".active-count").text(active);
 
         if (i["name"] == "anhui" || i["name"] == "beijing" || i["name"] == "chongqing" || i["name"] == "fujian" || i["name"] == "gansu" || i["name"] == "guangdong" ||
           i["name"] == "guangxi" || i["name"] == "guizhou" || i["name"] == "hainan" || i["name"] == "hebei" || i["name"] == "heilongjiang" || i["name"] == "henan" || i["name"] == "hongkong" ||
@@ -692,16 +704,18 @@
 
 
         var t = ["t"];
-        var confirmed = ["Confirmed"];
+        var confirmed = ["Aggr. Confirmed"];
         var suspected = ["Suspected"];
         var recovered = ["Recovered"];
+        var active = ["Active Confirmed"];
         var death = ["Death"]
         var place = {
           name: e.target.feature.properties.enname,
           c: confirmed,
           s: suspected,
           r: recovered,
-          d: death
+          d: death,
+          a: active
         }
 
         calCounts(place);
@@ -709,8 +723,8 @@
 
 
         chart.load({
-          columns: [place.c, place.r, place.d],
-          unload: ['Confirmed', 'Recovered', 'Death'],
+          columns: [place.c, place.r, place.d, place.a],
+          unload:  ['Aggr. Confirmed', 'Active Confirmed', 'Recovered', 'Death'],
         });
 
 
@@ -752,8 +766,8 @@
       $("#hint").on("click", function() {
         calCounts(global);
         chart.load({
-          columns: [global.c, global.r, global.d],
-          unload: ['Confirmed', 'Recovered', 'Death'],
+          columns: [global.c, global.a, global.r, global.d],
+          unload: ['Aggr. Confirmed', 'Active Confirmed', 'Recovered', 'Death'],
         });
 
         $("#hint").text("Click a place to review local trend.");
@@ -772,20 +786,21 @@
 
       chart = c3.generate({
         size: {
-          height: 280,
+          height: 250,
           width: 440
         },
         data: {
           x: "t",
           y: "confirmed",
-          columns: [t, global.c, global.r, global.d],
+          columns: [t, global.c, global.a, global.r, global.d],
           type: 'line',
           axes: {
             confirmed: 'y'
           },
           colors: {
-            Confirmed: '#dc3545',
+            'Aggr. Confirmed': '#dc3545',
             // Suspected: 'orange',
+            'Active Confirmed': 'orange',
             Recovered: '#28a745',
             Death: '#5d4f72e8'
           }
@@ -855,7 +870,7 @@
 
       rchart = c3.generate({
         size: {
-          height: 280,
+          height: 250,
           width: 440
         },
         data: {

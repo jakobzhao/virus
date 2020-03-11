@@ -231,6 +231,11 @@ div#footer>div {
   padding: 0;
   margin: 0;
   text-align: center;
+
+}
+
+.card-text {
+font-size: 33px !important
 }
 
 .card-title {
@@ -391,6 +396,11 @@ text {
 
 .confirmed-count {
   color: #dc3545;
+}
+
+
+.active-count {
+  color: orange;
 }
 
 .suspected-count {
