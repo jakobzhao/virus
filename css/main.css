@@ -280,7 +280,7 @@ font-size: 33px !important
 }
 
 #title {
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   font-size: 25px;
   font-family: 'Oswald', sans-serif;
 }
@@ -305,7 +305,7 @@ span {
 
 #date {
   position: relative;
-  top: -40px;
+  top: -20px;
   /* bottom: -40px; */
   /* position: relative;
   top: -85px;
@@ -321,13 +321,13 @@ span {
 #placename {
   font-size: 40px;
   position: relative;
-  top: -20px;
+  /* top: -20px; */
   font-family: 'Oswald', sans-serif;
 }
 
 #hint {
   position: relative;
-  top: -40px;
+  top: -20px;
   width: 5000px;
   color: gray;
   font-size: 13px;
