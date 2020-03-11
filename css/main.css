@@ -422,6 +422,8 @@ text {
 vertical-align:super !important;
 font-size:50% !important;
 color: #dc3545;
+font-style: italic;
+font-kerning: normal;
 }
 
 
@@ -429,6 +431,8 @@ color: #dc3545;
 vertical-align:super !important;
 font-size:50% !important;
 color: orange;
+font-style: italic;
+font-kerning: normal;
 }
 
 
@@ -436,6 +440,8 @@ color: orange;
 vertical-align:super !important;
 font-size:50% !important;
 color: #5d4f72e8;
+font-style: italic;
+font-kerning: normal;
 }
 
 
@@ -443,6 +449,8 @@ color: #5d4f72e8;
 vertical-align:super !important;
 font-size:50% !important;
 color: #28a745;
+font-style: italic;
+font-kerning: normal;
 }
 
 
