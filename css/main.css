@@ -453,6 +453,51 @@ font-style: italic;
 font-kerning: normal;
 }
 
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  text-decoration: underline;
+  /*border-bottom: 1px dotted lightgray;  If you want dots under the hoverable text */
+  opacity: 100;
+}
+
+/* Tooltip text */
+.tooltiptext {
+  font-family: 'Titillium Web', sans-serif;
+  bottom: 100%;
+  left: 50%;
+  visibility: hidden;
+  width: 200px;
+  margin-left: -100px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  background-color: gray;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/*bottom arrow*/
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: gray transparent transparent transparent;
+}
+
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
 
 
 /* .textLabelclass a {
