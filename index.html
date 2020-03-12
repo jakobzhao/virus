@@ -877,31 +877,7 @@
         // mymap.fitBounds(e.target.getBounds());
         L.DomEvent.stopPropagation(e);
         $("#hint").text("Click here to the global trend.");
-
         displayPlace(e.target.feature.properties.enname)
-        // var t = ["t"];
-        // var confirmed = ["Aggr. Confirmed"];
-        // var suspected = ["Suspected"];
-        // var recovered = ["Recovered"];
-        // var active = ["Active Confirmed"];
-        // var death = ["Death"]
-        // var place = {
-        //   name: e.target.feature.properties.enname,
-        //   c: confirmed,
-        //   s: suspected,
-        //   r: recovered,
-        //   d: death,
-        //   a: active
-        // }
-        //
-        // calCounts(place);
-        //
-        // chart.load({
-        //   columns: [place.c, place.a, place.r, place.d],
-        //   unload: ['Aggr. Confirmed', 'Active Confirmed', 'Recovered', 'Death'],
-        // });
-
-
       }
 
       // 3.2.3 reset the hightlighted feature when the mouse is out of its region.
