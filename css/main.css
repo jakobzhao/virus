@@ -455,16 +455,18 @@ font-kerning: normal;
 
 /* Tooltip container */
 .tooltip {
-  position: relative;
+  position:relative;
+  font-size: 0.3px;
   display: inline-block;
   /*border-bottom: 1px dotted lightgray;  If you want dots under the hoverable text */
   opacity: 100;
+  vertical-align: super;
 }
 
 /* Tooltip text */
 .tooltiptext {
   font-family: 'Titillium Web', sans-serif;
-  font-size: 14px;
+  font-size: 2px;
   bottom: 100%;
   left: 50%;
   visibility: hidden;
