@@ -475,10 +475,10 @@ font-kerning: normal;
   margin-left: -100px; /* Use half of the width (120/2 = 60), to center the tooltip */
   background-color: gray;
   color: #fff;
-  font-size: 12px;
+  font-size: 12px !important;
   text-align: center;
   padding: 5px;
-  border-radius: 6px;
+  /* border-radius: 6px; */
   /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;
