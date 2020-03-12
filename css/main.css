@@ -458,8 +458,8 @@ font-kerning: normal;
   font-family: 'Titillium Web', sans-serif;
   position: relative;
   display: inline-block;
-  text-decoration: underline;
-  text-decoration-style: dashed;
+  text-decoration:underline;
+  text-decoration-style:dotted;
   /*border-bottom: 1px dotted lightgray;  If you want dots under the hoverable text */
   opacity: 100;
 }
