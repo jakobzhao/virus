@@ -455,9 +455,11 @@ font-kerning: normal;
 
 /* Tooltip container */
 .tooltip {
+  font-family: 'Titillium Web', sans-serif;
   position: relative;
   display: inline-block;
   text-decoration: underline;
+  text-decoration-style: dashed;
   /*border-bottom: 1px dotted lightgray;  If you want dots under the hoverable text */
   opacity: 100;
 }
@@ -465,6 +467,7 @@ font-kerning: normal;
 /* Tooltip text */
 .tooltiptext {
   font-family: 'Titillium Web', sans-serif;
+  font-size: 10px;
   bottom: 100%;
   left: 50%;
   visibility: hidden;
@@ -498,6 +501,65 @@ font-kerning: normal;
   visibility: visible;
 }
 
+[data-tooltip] {
+    display: inline-block;
+    position: relative;
+    cursor: help;
+    padding: 4px;
+}
+/* Tooltip styling */
+[data-tooltip]:before {
+    content: attr(data-tooltip);
+    display: none;
+    position: absolute;
+    background: gray;
+    color: white;
+    padding: 4px 8px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 10px;
+    line-height: 1.4;
+    min-width: 150px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+/* Dynamic horizontal centering */
+[data-tooltip-position="top"]:before{
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: 100%;
+    margin-bottom: 6px;
+}
+
+/* Tooltip arrow styling/placement */
+[data-tooltip]:after {
+    content: '';
+    display: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+}
+
+/* Dynamic horizontal centering for the tooltip */
+[data-tooltip-position="top"]:after {
+    left: 50%;
+    margin-left: -6px;
+    bottom: 100%;
+    border-width: 6px 6px 0;
+    border-top-color: gray;
+}
+
+/* Show the tooltip when hovering */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+    display: block;
+    z-index: 50;
+}
 
 
 /* .textLabelclass a {
