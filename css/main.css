@@ -444,7 +444,9 @@ font-style: italic;
 font-kerning: normal;
 }
 
-
+/* .c3-line {
+    stroke-width: 2px;
+} */
 .recovered-new-count {
 vertical-align:super !important;
 font-size:50% !important;
