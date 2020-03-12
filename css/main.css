@@ -455,11 +455,8 @@ font-kerning: normal;
 
 /* Tooltip container */
 .tooltip {
-  font-family: 'Titillium Web', sans-serif;
   position: relative;
   display: inline-block;
-  text-decoration:underline;
-  text-decoration-style:dotted;
   /*border-bottom: 1px dotted lightgray;  If you want dots under the hoverable text */
   opacity: 100;
 }
@@ -478,7 +475,7 @@ font-kerning: normal;
   font-size: 12px !important;
   text-align: center;
   padding: 5px;
-  /* border-radius: 6px; */
+  /*border-radius: 6px; */
   /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;
@@ -505,8 +502,6 @@ font-kerning: normal;
 [data-tooltip] {
     display: inline-block;
     position: relative;
-    cursor: help;
-    padding: 4px;
 }
 /* Tooltip styling */
 [data-tooltip]:before {
@@ -516,12 +511,14 @@ font-kerning: normal;
     background: gray;
     color: white;
     padding: 4px 8px;
+    font-style: normal;
     font-family: 'Titillium Web', sans-serif;
     font-size: 10px;
     line-height: 1.4;
     min-width: 150px;
     text-align: center;
     border-radius: 4px;
+    border-radius: 0px;
 }
 
 /* Dynamic horizontal centering */
