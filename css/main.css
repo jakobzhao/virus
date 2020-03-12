@@ -467,7 +467,7 @@ font-kerning: normal;
 /* Tooltip text */
 .tooltiptext {
   font-family: 'Titillium Web', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   bottom: 100%;
   left: 50%;
   visibility: hidden;
