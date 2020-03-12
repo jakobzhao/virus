@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c82d1dfd-4c87-4a78-bd59-b46ac0c78764" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/timestamp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assets/timestamp.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/virus.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/virus.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/virus.db" beforeDir="false" afterPath="$PROJECT_DIR$/assets/virus.db" afterDir="false" />
-    </list>
+    <list default="true" id="c82d1dfd-4c87-4a78-bd59-b46ac0c78764" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,7 +45,7 @@
       <recent name="C:\Workspace\virus\backup" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.virus">
+  <component name="RunManager" selected="Python.communities-ahusmart">
     <configuration name="cases-new" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="virus" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -200,11 +195,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.communities-ahusmart" />
         <item itemvalue="Python.virus" />
         <item itemvalue="Python.geocoding" />
         <item itemvalue="Python.virus-headless" />
         <item itemvalue="Python.cases-new" />
-        <item itemvalue="Python.communities-ahusmart" />
       </list>
     </recent_temporary>
   </component>
@@ -274,26 +269,26 @@
     </state>
     <state x="-1619" y="208" key="CommitChangelistDialog2/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583796562768" />
     <state x="941" y="208" key="CommitChangelistDialog2/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583776826449" />
-    <state width="1236" height="376" key="GridCell.Tab.0.bottom" timestamp="1583993759725">
+    <state width="1236" height="376" key="GridCell.Tab.0.bottom" timestamp="1584035954537">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2539" height="395" key="GridCell.Tab.0.bottom/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583875960396" />
-    <state width="1236" height="376" key="GridCell.Tab.0.bottom/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583993759725" />
-    <state width="1236" height="376" key="GridCell.Tab.0.center" timestamp="1583993759725">
+    <state width="1236" height="376" key="GridCell.Tab.0.bottom/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1584035954537" />
+    <state width="1236" height="376" key="GridCell.Tab.0.center" timestamp="1584035954537">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2539" height="395" key="GridCell.Tab.0.center/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583875960396" />
-    <state width="1236" height="376" key="GridCell.Tab.0.center/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583993759725" />
-    <state width="1236" height="376" key="GridCell.Tab.0.left" timestamp="1583993759724">
+    <state width="1236" height="376" key="GridCell.Tab.0.center/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1584035954537" />
+    <state width="1236" height="376" key="GridCell.Tab.0.left" timestamp="1584035954537">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2539" height="395" key="GridCell.Tab.0.left/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583875960396" />
-    <state width="1236" height="376" key="GridCell.Tab.0.left/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583993759724" />
-    <state width="1236" height="376" key="GridCell.Tab.0.right" timestamp="1583993759725">
+    <state width="1236" height="376" key="GridCell.Tab.0.left/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1584035954537" />
+    <state width="1236" height="376" key="GridCell.Tab.0.right" timestamp="1584035954537">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2539" height="395" key="GridCell.Tab.0.right/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583875960396" />
-    <state width="1236" height="376" key="GridCell.Tab.0.right/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583993759725" />
+    <state width="1236" height="376" key="GridCell.Tab.0.right/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1584035954537" />
     <state width="2517" height="469" key="GridCell.Tab.1.bottom" timestamp="1583918609326">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
