@@ -475,6 +475,7 @@ font-kerning: normal;
   margin-left: -100px; /* Use half of the width (120/2 = 60), to center the tooltip */
   background-color: gray;
   color: #fff;
+  font-size: 12px;
   text-align: center;
   padding: 5px;
   border-radius: 6px;
@@ -560,10 +561,3 @@ font-kerning: normal;
     display: block;
     z-index: 50;
 }
-
-
-/* .textLabelclass a {
-  white-space: nowrap;
-  font-size: 10px;
-  color: brown !important;
-} */
