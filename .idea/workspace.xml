@@ -45,7 +45,7 @@
       <recent name="C:\Workspace\virus\assets\backup" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.geocoding">
+  <component name="RunManager" selected="Python.virus">
     <configuration name="cases-new" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="virus" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -195,8 +195,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.geocoding" />
         <item itemvalue="Python.virus" />
+        <item itemvalue="Python.geocoding" />
         <item itemvalue="Python.communities-ahusmart" />
         <item itemvalue="Python.virus-headless" />
         <item itemvalue="Python.cases-new" />
