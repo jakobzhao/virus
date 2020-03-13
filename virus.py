@@ -152,13 +152,14 @@ provinces = soup.find_all("table")[0].find("tbody").find_all("tr")
 
 for province in provinces[:-2]:
     enName = province.find_all("td")[0].text.lower().replace("british colombia", "british columbia")
-    confirmed = province.find_all("td")[1].text
+    # print (province.text)
+    confirmed = province.find_all("td")[2].text
 
     if enName in canadacities:
         for row in cursor.execute("SELECT `" + enName + "` from virus order by rowid DESC limit 1"):
             latest = row[0]
-        recovered = latest.split("-")[2]
-        death = latest.split("-")[3]
+        # recovered = latest.split("-")[2]
+        # death = latest.split("-")[3]
     else:
         recovered = '0'
         death = '0'

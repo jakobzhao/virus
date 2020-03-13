@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c82d1dfd-4c87-4a78-bd59-b46ac0c78764" name="Default Changelist" comment="" />
+    <list default="true" id="c82d1dfd-4c87-4a78-bd59-b46ac0c78764" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/timestamp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assets/timestamp.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/virus.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/virus.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/virus.db" beforeDir="false" afterPath="$PROJECT_DIR$/assets/virus.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/virus.py" beforeDir="false" afterPath="$PROJECT_DIR$/virus.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -269,42 +275,42 @@
     </state>
     <state x="-1619" y="208" key="CommitChangelistDialog2/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583796562768" />
     <state x="941" y="208" key="CommitChangelistDialog2/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583776826449" />
-    <state width="2517" height="378" key="GridCell.Tab.0.bottom" timestamp="1584047439637">
+    <state width="2517" height="469" key="GridCell.Tab.0.bottom" timestamp="1584059986444">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2539" height="395" key="GridCell.Tab.0.bottom/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583875960396" />
-    <state width="2517" height="378" key="GridCell.Tab.0.bottom/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1584047439637" />
-    <state width="2517" height="378" key="GridCell.Tab.0.center" timestamp="1584047439637">
+    <state width="2517" height="469" key="GridCell.Tab.0.bottom/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1584059986444" />
+    <state width="2517" height="469" key="GridCell.Tab.0.center" timestamp="1584059986444">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2539" height="395" key="GridCell.Tab.0.center/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583875960396" />
-    <state width="2517" height="378" key="GridCell.Tab.0.center/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1584047439637" />
-    <state width="2517" height="378" key="GridCell.Tab.0.left" timestamp="1584047439637">
+    <state width="2517" height="469" key="GridCell.Tab.0.center/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1584059986444" />
+    <state width="2517" height="469" key="GridCell.Tab.0.left" timestamp="1584059986444">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2539" height="395" key="GridCell.Tab.0.left/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583875960396" />
-    <state width="2517" height="378" key="GridCell.Tab.0.left/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1584047439637" />
-    <state width="2517" height="378" key="GridCell.Tab.0.right" timestamp="1584047439637">
+    <state width="2517" height="469" key="GridCell.Tab.0.left/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1584059986444" />
+    <state width="2517" height="469" key="GridCell.Tab.0.right" timestamp="1584059986444">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2539" height="395" key="GridCell.Tab.0.right/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583875960396" />
-    <state width="2517" height="378" key="GridCell.Tab.0.right/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1584047439637" />
-    <state width="2517" height="469" key="GridCell.Tab.1.bottom" timestamp="1583918609326">
+    <state width="2517" height="469" key="GridCell.Tab.0.right/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1584059986444" />
+    <state width="2517" height="469" key="GridCell.Tab.1.bottom" timestamp="1584059986444">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="469" key="GridCell.Tab.1.bottom/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583918609326" />
-    <state width="2517" height="469" key="GridCell.Tab.1.center" timestamp="1583918609325">
+    <state width="2517" height="469" key="GridCell.Tab.1.bottom/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1584059986444" />
+    <state width="2517" height="469" key="GridCell.Tab.1.center" timestamp="1584059986444">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="469" key="GridCell.Tab.1.center/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583918609325" />
-    <state width="2517" height="469" key="GridCell.Tab.1.left" timestamp="1583918609325">
+    <state width="2517" height="469" key="GridCell.Tab.1.center/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1584059986444" />
+    <state width="2517" height="469" key="GridCell.Tab.1.left" timestamp="1584059986444">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="469" key="GridCell.Tab.1.left/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583918609325" />
-    <state width="2517" height="469" key="GridCell.Tab.1.right" timestamp="1583918609326">
+    <state width="2517" height="469" key="GridCell.Tab.1.left/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1584059986444" />
+    <state width="2517" height="469" key="GridCell.Tab.1.right" timestamp="1584059986444">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="469" key="GridCell.Tab.1.right/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583918609326" />
+    <state width="2517" height="469" key="GridCell.Tab.1.right/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1584059986444" />
     <state x="149" y="343" key="SettingsEditor" timestamp="1583913368018">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -318,10 +324,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1290" height="710" key="XDebugger.FullValuePopup/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583559692965" />
-    <state x="1087" y="612" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583649315795">
+    <state x="1087" y="612" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584059358698">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1087" y="612" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583649315795" />
+    <state x="1087" y="612" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1584059358698" />
     <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1583559050948">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -342,6 +348,8 @@
         <watch expression="unfold.text" language="Python" />
         <watch expression="unfold.find_element_by_css_selector(&quot;div&quot;).click()" language="Python" />
         <watch expression="unfold.find_element_by_css_selector(&quot;div&quot;).click()" language="Python" />
+        <watch expression="confirmed = province.find_all(&quot;td&quot;)[1].text" language="Python" />
+        <watch expression="province.find_all(&quot;td&quot;)[2]" language="Python" />
       </configuration>
     </watches-manager>
   </component>
