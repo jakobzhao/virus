@@ -20,6 +20,7 @@ now = str(datetime.now())
 sqls = "INSERT OR REPLACE INTO virus ('datetime'"
 sqle = ") VALUES ('" + now + "', "
 
+citynames = []
 placeName = {}
 with open("assets/country_name.csv", "r", encoding="utf-8") as fp:
     lines = fp.readlines()
@@ -174,6 +175,43 @@ for province in provinces[:-2]:
     sqls += ", '" + enName.strip() + "'"
     sqle += "'" + confirmed + "-0-" + recovered + "-" + death + "', "
 
+#india
+"""url = "https://www.mohfw.gov.in"
+browser.get(url)
+
+table = browser.find_element_by_tag_name("table")
+soup = BeautifulSoup(browser.page_source, 'html.parser')
+items = soup.find_all("tr")[1:-1]
+for item in items:
+    data = item.find_all("td")
+    name = data[1].text.lower()
+    if name == "union territory of ladakh":
+        kconfirmed = int(data[2].text) + int(data[3].text)
+        krecovered = int(data[4].text)
+        kdeath = int(data[5].text)
+    elif name == "union territory of jammu and kashmir":
+        kname = "jammu and kashmir"
+        kconfirmed += int(data[2].text) + int(data[3].text)
+        krecovered += int(data[4].text)
+        kdeath += int(data[5].text)
+        citynames.append(kname)
+        print(kname, str(kconfirmed), str(krecovered), str(kdeath))
+        sqls += ", '" + kname + "'"
+        sqle += "'" + str(kconfirmed) + "-0-" + str(krecovered) + "-" + str(kdeath) + "', "
+    else:
+        confirmed = int(data[2].text) + int(data[3].text)
+        recovered = data[4].text
+        death = data[5].text
+        citynames.append(name)
+        print(name,confirmed,recovered,death)
+        sqls += ", '" + name + "'"
+        sqle += "'" + str(confirmed) + "-0-" + recovered + "-" + death + "', "
+
+conn = sqlite3.connect("assets/virus.db")
+cursor = conn.cursor()
+
+for name in citynames:
+    cursor.execute("ALTER TABLE virus ADD [" + name + "] CHAR(20);")"""
 
 browser.close()
 
