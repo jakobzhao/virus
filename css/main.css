@@ -463,8 +463,8 @@ font-kerning: normal;
   font-size: 12px;
   display: inline-block;
   /*border-bottom: 1px dotted lightgray;  If you want dots under the hoverable text */
-  opacity: 100;
   vertical-align: super;
+  opacity: 0.3;
 }
 
 /* Tooltip text */
@@ -516,4 +516,5 @@ left: -24px
   right:10px;
   bottom:10px;
   color:orange;
+  opacity: 0.3;
 }
