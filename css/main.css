@@ -490,11 +490,7 @@ font-kerning: normal;
   /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;
-}
-
-.active-new-count-tooltip {
-
-left: -24px
+  opacity: 1;
 }
 
 /*bottom arrow
@@ -519,6 +515,6 @@ left: -24px
   position:relative;
   right:10px;
   bottom:10px;
-  color:orange;
-  opacity: 0.3;
+  color:#6d5831;
+  left: -24px;
 }
