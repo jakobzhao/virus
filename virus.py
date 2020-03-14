@@ -13,8 +13,8 @@ options.add_argument('--headless')
 options.add_argument('--no-sandbox')
 # browser = webdriver.Chrome("/usr/bin/chromedriver", options=options)
 # browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver")
-# browser = webdriver.Chrome("C:/workspace/chromedriver.exe")
-browser = webdriver.Chrome("E:\chromedriver_win32\chromedriver.exe")
+browser = webdriver.Chrome("C:/workspace/chromedriver.exe")
+# browser = webdriver.Chrome("E:\chromedriver_win32\chromedriver.exe")
 
 now = str(datetime.now())
 sqls = "INSERT OR REPLACE INTO virus ('datetime'"
@@ -152,9 +152,10 @@ soup = BeautifulSoup(browser.page_source, 'html.parser')
 provinces = soup.find_all("table")[0].find("tbody").find_all("tr")
 
 for province in provinces[:-2]:
-    enName = province.find_all("td")[0].text.lower().replace("british colombia", "british columbia")
+    # enName = province.find_all("td")[0].text.lower().replace("british colombia", "british columbia")
+    enName = province.find_all("td")[0].text.lower()
     # print (province.text)
-    confirmed = province.find_all("td")[2].text
+    confirmed = province.find_all("td")[1].text
 
     if enName in canadacities:
         for row in cursor.execute("SELECT `" + enName + "` from virus order by rowid DESC limit 1"):
