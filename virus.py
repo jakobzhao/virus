@@ -12,11 +12,12 @@ options = Options()
 options.add_argument('--headless')
 options.add_argument('--no-sandbox')
 # browser = webdriver.Chrome("/usr/bin/chromedriver", options=options)
+# browser = webdriver.Chrome("E:\chromedriver_win32\chromedriver.exe")
 try:
     browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver")
 except:
     browser = webdriver.Chrome("C:/workspace/chromedriver.exe")
-# browser = webdriver.Chrome("E:\chromedriver_win32\chromedriver.exe")
+
 
 now = str(datetime.now())
 sqls = "INSERT OR REPLACE INTO virus ('datetime'"
