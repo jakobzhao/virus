@@ -433,6 +433,8 @@ font-size:50% !important;
 color: orange;
 font-style: italic;
 font-kerning: normal;
+position: relative;
+left: -10px
 }
 
 
@@ -484,6 +486,11 @@ font-kerning: normal;
   /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;
+}
+
+.active-new-count-tooltip {
+
+left: -24px
 }
 
 /*bottom arrow
