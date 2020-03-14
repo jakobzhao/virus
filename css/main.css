@@ -183,6 +183,37 @@ div#footer>div {
     width: 300px;
   }
 
+  #deck-1 {
+    position: relative;
+    margin-top: 70px !important;
+    /* height:200px !important; */
+    /* right: 10px; */
+    /* width: 75% !important; */
+    left: 10px;
+    /* left: 0px !important;
+    right: 0px !important; */
+    /* position: relative; */
+    /* position: fixed; */
+    /* left: 20px; */
+    /* bottom: 5px; */
+    width:70%
+  }
+
+#deck-2 {
+    position: relative;
+    margin-top: 470px !important;
+    /* height:200px !important; */
+    /* right: 10px; */
+    /* width: 75% !important; */
+    left: 10px;
+    /* left: 0px !important;
+    right: 0px !important; */
+    /* position: relative; */
+    /* position: fixed; */
+    /* left: 20px; */
+    /* bottom: 5px; */
+    width:70%
+  }
 
 
   .card-text {
@@ -231,41 +262,6 @@ font-size: 33px !important
   margin-bottom: 0rem;
   font-weight: bold;
 }
-
-#deck-1 {
-  position: relative;
-  margin-top: 70px !important;
-  /* height:200px !important; */
-  /* right: 10px; */
-  /* width: 75% !important; */
-  left: 10px;
-  /* left: 0px !important;
-  right: 0px !important; */
-  /* position: relative; */
-  /* position: fixed; */
-  /* left: 20px; */
-  /* bottom: 5px; */
-  width:70%
-}
-
-#deck-2 {
-  position: relative;
-  margin-top: 470px !important;
-  /* height:200px !important; */
-  /* right: 10px; */
-  /* width: 75% !important; */
-  left: 10px;
-  /* left: 0px !important;
-  right: 0px !important; */
-  /* position: relative; */
-  /* position: fixed; */
-  /* left: 20px; */
-  /* bottom: 5px; */
-  width:70%
-}
-
-
-
 
 #legend-panel {
   position: fixed;
