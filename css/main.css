@@ -428,6 +428,8 @@ font-size:50% !important;
 color: #dc3545;
 font-style: italic;
 font-kerning: normal;
+position: relative;
+left: -10px
 }
 
 
@@ -438,7 +440,7 @@ color: orange;
 font-style: italic;
 font-kerning: normal;
 position: relative;
-left: -10px
+left: -14px
 }
 
 
@@ -448,6 +450,8 @@ font-size:50% !important;
 color: #5d4f72e8;
 font-style: italic;
 font-kerning: normal;
+position: relative;
+left: -10px
 }
 
 /* .c3-line {
@@ -459,6 +463,8 @@ font-size:50% !important;
 color: #28a745;
 font-style: italic;
 font-kerning: normal;
+position: relative;
+left: -10px
 }
 
 /* Tooltip container */
