@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c82d1dfd-4c87-4a78-bd59-b46ac0c78764" name="Default Changelist" comment="">
+    <list default="true" id="c82d1dfd-4c87-4a78-bd59-b46ac0c78764" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/virus.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/virus.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/timestamp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assets/timestamp.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/virus.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/virus.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/virus.db" beforeDir="false" afterPath="$PROJECT_DIR$/assets/virus.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/virus.py" beforeDir="false" afterPath="$PROJECT_DIR$/virus.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,18 +53,6 @@
       <recent name="C:\Workspace\virus\assets" />
       <recent name="C:\Workspace\virus\assets\backup" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Python.virus">
     <configuration name="communities-ahusmart" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -269,26 +257,26 @@
     </state>
     <state x="-1619" y="208" key="CommitChangelistDialog2/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583796562768" />
     <state x="941" y="208" key="CommitChangelistDialog2/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1583776826449" />
-    <state width="1258" height="362" key="GridCell.Tab.0.bottom" timestamp="1584171040460">
+    <state width="1258" height="362" key="GridCell.Tab.0.bottom" timestamp="1584208094357">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2539" height="395" key="GridCell.Tab.0.bottom/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583875960396" />
-    <state width="1258" height="362" key="GridCell.Tab.0.bottom/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1584171040460" />
-    <state width="1258" height="362" key="GridCell.Tab.0.center" timestamp="1584171040460">
+    <state width="1258" height="362" key="GridCell.Tab.0.bottom/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1584208094357" />
+    <state width="1258" height="362" key="GridCell.Tab.0.center" timestamp="1584208094355">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2539" height="395" key="GridCell.Tab.0.center/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583875960396" />
-    <state width="1258" height="362" key="GridCell.Tab.0.center/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1584171040460" />
-    <state width="1258" height="362" key="GridCell.Tab.0.left" timestamp="1584171040460">
+    <state width="1258" height="362" key="GridCell.Tab.0.center/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1584208094355" />
+    <state width="1258" height="362" key="GridCell.Tab.0.left" timestamp="1584208094353">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2539" height="395" key="GridCell.Tab.0.left/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583875960396" />
-    <state width="1258" height="362" key="GridCell.Tab.0.left/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1584171040460" />
-    <state width="1258" height="362" key="GridCell.Tab.0.right" timestamp="1584171040460">
+    <state width="1258" height="362" key="GridCell.Tab.0.left/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1584208094353" />
+    <state width="1258" height="362" key="GridCell.Tab.0.right" timestamp="1584208094357">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2539" height="395" key="GridCell.Tab.0.right/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1583875960396" />
-    <state width="1258" height="362" key="GridCell.Tab.0.right/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1584171040460" />
+    <state width="1258" height="362" key="GridCell.Tab.0.right/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1584208094357" />
     <state width="2517" height="469" key="GridCell.Tab.1.bottom" timestamp="1584059986444">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -305,10 +293,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="469" key="GridCell.Tab.1.right/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1584059986444" />
-    <state x="149" y="343" key="SettingsEditor" timestamp="1584169994022">
+    <state x="149" y="343" key="SettingsEditor" timestamp="1584207720255">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="149" y="343" key="SettingsEditor/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1584169994022" />
+    <state x="149" y="343" key="SettingsEditor/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1584207720255" />
     <state x="-1361" y="428" key="Vcs.Push.Dialog.v2" timestamp="1583796565982">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
