@@ -482,7 +482,8 @@
       // zoomToBoundsOnClick: false,
       iconCreateFunction: function(cluster) {
         return L.divIcon({
-          html: '<i class="fas fa-procedures community community-marker"> <b>' + cluster.getChildCount() + '</b></i>'
+          // html: '<i class="fas fa-procedures community community-marker"> <b>' + cluster.getChildCount() + '</b></i>'
+            html: '<i class="fas fa-procedures community community-marker"> <b>' + "cluster.getChildCount() "+ '</b></i>'
         });
       }
 
@@ -496,7 +497,8 @@
       // zoomToBoundsOnClick: false,
       iconCreateFunction: function(cluster) {
         return L.divIcon({
-          html: '<i class="fas fa-users community community-marker"> <b>' + cluster.getChildCount() + '</b></i>'
+          // html: '<i class="fas fa-users community community-marker"> <b>' + cluster.getChildCount() + '</b></i>'
+          html: '<i class="fas fa-users community community-marker"> <b>' + "" + '</b></i>'
         });
       }
 
