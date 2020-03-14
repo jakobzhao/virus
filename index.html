@@ -807,7 +807,7 @@
         var pop = datasets[0][datasets[0].length - 1][enname];
 
         if (pop != undefined) {
-          pop = +pop.toString().split("-")[0];
+          pop = +pop.toString().split("-")[0] - +pop.toString().split("-")[2] - +pop.toString().split("-")[3]; // remaining confirmed
         } else {
           pop = 0;
           // return "#00000000";
