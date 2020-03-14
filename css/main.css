@@ -458,7 +458,7 @@ font-kerning: normal;
 /* Tooltip container */
 .tooltip {
   position:relative;
-  font-size: 0.3px;
+  font-size: 12px;
   display: inline-block;
   /*border-bottom: 1px dotted lightgray;  If you want dots under the hoverable text */
   opacity: 100;
