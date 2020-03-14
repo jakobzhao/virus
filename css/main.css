@@ -184,8 +184,8 @@ div#footer>div {
   }
 
   #deck-1 {
-    position: fixed;
-    margin-top: 50px !important;
+    position: relative;
+    margin-top: 70px !important;
     /* height:200px !important; */
     /* right: 10px; */
     /* width: 75% !important; */
@@ -196,11 +196,28 @@ div#footer>div {
     /* position: fixed; */
     /* left: 20px; */
     /* bottom: 5px; */
-    width: 300px;
+    width:70%
   }
 
+#deck-2 {
+    position: relative;
+    margin-top: 470px !important;
+    /* height:200px !important; */
+    /* right: 10px; */
+    /* width: 75% !important; */
+    left: 10px;
+    /* left: 0px !important;
+    right: 0px !important; */
+    /* position: relative; */
+    /* position: fixed; */
+    /* left: 20px; */
+    /* bottom: 5px; */
+    width:70%
+  }
+
+
   .card-text {
-    font-size: 12px !important
+    font-size: 8px !important
   }
 
   .card-title {
@@ -263,15 +280,11 @@ font-size: 33px !important
 
 .legend .card-title {
   font-size: 13px;
-  /* text-align: left; */
-  /* padding-left: 4px; */
-  /* background: #343a4000; */
 }
 
 .card-text {
   font-size: 40px;
   text-align: center;
-  /* background: #343a4000; */
 }
 
 #info h4 i {
@@ -280,7 +293,6 @@ font-size: 33px !important
 }
 
 #title {
-  /* margin-bottom: 30px; */
   font-size: 25px;
   font-family: 'Oswald', sans-serif;
 }
@@ -306,16 +318,8 @@ span {
 #date {
   position: relative;
   top: -20px;
-  /* bottom: -40px; */
-  /* position: relative;
-  top: -85px;
-  left: 30px; */
-  /* text-align: left; */
   font-size: 14px;
-  /* font-weight:  */
   color: danger;
-  /* font-family: 'Oswald', sans-serif; */
-  /* font-size: 48px; */
 }
 
 #placename {
