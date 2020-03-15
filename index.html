@@ -23,6 +23,7 @@
   <script src="js/c3.min.js"></script>
   <script src="js/leaflet.js"></script>
   <script src="js/leaflet.markercluster.js"></script>
+  <script src="http://lwsu.github.io/leaflet-polygon-fillPattern/leaflet-polygon.fillPattern.js"></script>
   <script src="js/topojson.v1.min.js"></script>
   <script src="js/chroma.min.js"></script>
   <script src="js/jquery-3.3.1.min.js"></script>
@@ -123,7 +124,7 @@
 
       <div id="footer">
 
-  <div> In the main map, an country or region's inflection level is measured by # of today's active/remaining confirmed cases. Its legend is displayed as below.</div>
+        <div> In the main map, an country or region's inflection level is measured by # of today's active/remaining confirmed cases. Its legend is displayed as below.</div>
         <div id="legend-panel" class="card-deck legend">
           <div class="card">
             <div class="card-body legend-color-1">
@@ -167,7 +168,8 @@
 
         <div>Infection Case(s) &nbsp; <i class='fas fa-users community'></i> &nbsp; indicates one or several confirmed infected individual(s) in the U.S., excluding those were identified from the Diamond Princess.
           The dataset of the infected cases are continuously enriched from different data portals such as
-          <a href="https://coronavirus.1point3acres.com/en" target="_blank">1point3acres</a> and state officials. Notably, <b style="color:#e8e3d3;text-decoration-line: underline; text-decoration-style: dotted;"> each case was geocoded to an approximate location within the county
+          <a href="https://coronavirus.1point3acres.com/en" target="_blank">1point3acres</a> and state officials. Notably, <b style="color:#e8e3d3;text-decoration-line: underline; text-decoration-style: dotted;"> each case was geocoded to an
+            approximate location within the county
             which reported the case. The location is by no means identical to the exact address where the case was discovered</b>.
         </div>
 
@@ -546,10 +548,7 @@
             // html: '<i class="fas fa-users community community-marker"> <b>' + cluster.getChildCount() + '</b></i>'
             html: '<i class="fas fa-users community community-marker fa-sm "> <b>' + "" + '</b></i>'
           });
-
         }
-
-
       }
 
     }).addTo(mymap);
@@ -853,6 +852,24 @@
 
       }
 
+      function setFill(enname){
+        var pop = datasets[0][datasets[0].length - 1][enname];
+        if (pop != undefined) {
+          pop = +pop.toString().split("-")[0] - +pop.toString().split("-")[2] - +pop.toString().split("-")[3]; // remaining confirmed
+        } else {
+          pop = 0;
+          // return "#00000000";
+        }
+
+        if (pop == 0) {
+            return 'url(img/texture.png)';
+        } else {
+
+          return 'url()';
+        }
+
+
+      }
 
       function setColor(enname) {
         var id = 0;
@@ -898,6 +915,7 @@
           };
         } else {
           return {
+            fill: setFill(feature.properties.enname),
             fillColor: setColor(feature.properties.enname),
             fillOpacity: 0.4,
             weight: 0.5,
