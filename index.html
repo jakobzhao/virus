@@ -530,27 +530,21 @@
       iconCreateFunction: function(cluster) {
         cnt = cluster.getChildCount()
 
-        if (cnt >= 100) {
+        if (cnt >= 70) {
           return L.divIcon({
             // html: '<i class="fas fa-users community community-marker"> <b>' + cluster.getChildCount() + '</b></i>'
             html: '<i class="fas fa-users community community-marker fa-2x "> <b>' + "" + '</b></i>'
           });
-        } else if (cnt >= 50 && cnt < 100) {
+        } else if (cnt >= 10 && cnt < 70) {
           return L.divIcon({
             // html: '<i class="fas fa-users community community-marker"> <b>' + cluster.getChildCount() + '</b></i>'
             html: '<i class="fas fa-users community community-marker fa-lg "> <b>' + "" + '</b></i>'
           });
 
-        } else if (cnt > 5 && cnt < 50) {
-          return L.divIcon({
-            // html: '<i class="fas fa-users community community-marker"> <b>' + cluster.getChildCount() + '</b></i>'
-            html: '<i class="fas fa-users community community-marker fa-sm "> <b>' + "" + '</b></i>'
-          });
-
         } else {
           return L.divIcon({
             // html: '<i class="fas fa-users community community-marker"> <b>' + cluster.getChildCount() + '</b></i>'
-            html: '<i class="fas fa-users community community-marker fa-xs "> <b>' + "" + '</b></i>'
+            html: '<i class="fas fa-users community community-marker fa-sm "> <b>' + "" + '</b></i>'
           });
 
         }
