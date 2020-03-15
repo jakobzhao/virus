@@ -119,6 +119,7 @@ div#footer>div {
   visibility: hidden;
 }
 
+/* Mobile devices */
 @media only screen and (max-width: 1026px) {
   .legend, .leaflet-control-layers {
     display: none;
@@ -129,45 +130,38 @@ div#footer>div {
   }
 
   #mobiledeck {
-    font-size: 10px !important;
-    z-index: 200000 !important;
-    position: fixed !important;
-    top: 100px !important;
-    display: block !important;
-    visibility: visible !important;
+    font-size: 10px;
+    z-index: 1000;
+    position: fixed;
+    top: 100px;
+    display: block;
+    visibility: visible;
     margin-top: 20px;
     left: 10px;
     background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
   }
 
   .mobile-title {
-    font-size: 13px !important;
+    font-size: 13px;
     margin-bottom: 0px;
     margin-left: 10px;
-    /* font-weight: normal; */
   }
 
   #mobiledeck>p {
-    font-size: 16px !important;
+    font-size: 16px;
     font-weight: bold;
   }
 
   .simplebar-track {
-    /* position: fixed;
-    width:100 !important; */
     visibility: hidden !important;
   }
 
   #info {
     position: fixed !important;
-    /* top: 90vh !important; */
-    /* top: 80vh; */
     top: 0px;
     height: 30%;
-    /* bottom: 5px; */
-    /* background-color: gray !important; */
     left: 0;
-    /* height:30vh !important; */
     width: 100wh !important;
   }
 
