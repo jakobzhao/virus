@@ -128,8 +128,8 @@
         <div id="legend-panel" class="card-deck legend">
 
           <div class="card">
-            <div class="card-body legend-color-2">
-              <h5 class="card-title diagonal-stripe" style="color:black">no case</h5>
+            <div class="card-body">
+              <h5 class="card-title grey-circles" style="color:black">no case</h5>
             </div>
           </div>
 
@@ -165,6 +165,7 @@
               <h5 class="card-title" style="color:black">1,000</h5>
             </div>
           </div>
+
           <div class="card">
             <div class="card-body legend-color-6">
               <h5 class="card-title" style="color:black">10,000+</h5>
@@ -844,6 +845,9 @@
         if (na > 0) {
           document.getElementById("counticon").style.display = "initial";
           $(".active-new-count").text("+" + na.toString());
+        } else if (na < 0) {
+          document.getElementById("counticon").style.display = "initial";
+          $(".active-new-count").text("" + na.toString());
         } else if (na == 0) {
           document.getElementById("counticon").style.display = "none";
           $(".active-new-count").text("")
@@ -867,14 +871,15 @@
 
       function setFill(enname) {
         var pop = datasets[0][datasets[0].length - 1][enname];
-        if (pop != undefined) {
+        if(pop == "" || pop == undefined || pop.toString().split("-")[0] == "0"){
+          return 'url(img/texture.png)'; //non-case country, 0 aggregate confirm
+        }
+        else {
           pop = +pop.toString().split("-")[0] - +pop.toString().split("-")[2] - +pop.toString().split("-")[3]; // remaining confirmed
-        } else {
-          pop = 0;
           // return "#00000000";
         }
-        if (pop == 0|| isNaN(pop)) {
-          return 'url(img/texture.png)';
+        if (pop == 0) {
+          return 'url(img/green_texture.png)'; // 0 active confirm
           // return 'url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScgLz4KICA8cmVjdCB4PScwJyB5PScwJyB3aWR0aD0nMScgaGVpZ2h0PScxJyBmaWxsPSdibGFjaycgLz4KPC9zdmc+")';
         } else {
           return 'url()';
