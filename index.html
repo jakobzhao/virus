@@ -452,21 +452,34 @@
     //   })
     // }
     //
-    // var usBounds = L.latLngBounds(
-    //   L.latLng(24.520833, -124.7771694), //Southwest
-    //   L.latLng(49.384472, -66.947028) //Northeast
-    // );
+    var usBounds = L.latLngBounds(
+      L.latLng(24.520833, -100), //Southwest
+      L.latLng(49.384472, 5) //Northeast
+    );
+
+    var usBounds = L.latLngBounds(
+      L.latLng(-60, -130), //Southwest
+      L.latLng(80, 15) //Northeast
+    );
 
 
+    // var mymap = L.map('map', {
+    //   center: [38, -120],
+    //   zoomControl: false,
+    //   zoom: 4,
+    //   maxZoom: 10,
+    //   minZoom: 2,
+    //   worldCopyJump: true
+    // });
 
     var mymap = L.map('map', {
-      center: [38, -100],
+      center: [38, -120],
       zoomControl: false,
-      zoom: 4.5,
+      zoom: 4,
       maxZoom: 10,
       minZoom: 2,
       worldCopyJump: true
-    });
+    }).fitBounds(usBounds);
     // .fitWorld()
     new L.Control.Zoom({
       position: 'topright'
@@ -900,10 +913,10 @@
           return {
             fillColor: setColor(feature.properties.enname),
             fillOpacity: 0.4,
-            weight: 1,
+            weight: 0.5,
             opacity: 1,
             color: '#b4b4b4',
-            dashArray: '3'
+            dashArray: '2'
           };
         }
       }
@@ -914,7 +927,7 @@
         // e indicates the current event
         var layer = e.target; //the target capture the object which the event associates with
         layer.setStyle({
-          weight: 4,
+          weight: 2,
           opacity: 0.8,
           color: '#e3e3e3',
           fillColor: '#00ffd9',
