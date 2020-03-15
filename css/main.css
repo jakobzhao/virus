@@ -360,7 +360,7 @@ text {
 
 #rank-chart {
   position: relative;
-  top: 30px;
+  top: 20px;
   left: -20px;
 }
 
@@ -370,7 +370,7 @@ text {
 
 #footer {
   position: relative;
-  top: 40px;
+  top: 15px;
   bottom: 10px;
   font-size: 13px;
   line-height: 150%;
