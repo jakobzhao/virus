@@ -2,8 +2,6 @@
 
 This repository stores the source code for the Novel Coronavirus Infection Map (https://hgis.uw.edu/virus). This online internactive map enables users to track both the global and local trends of Novel Coronavirus infection since Jan 21st, 2020. The dataset is timely collected from multiple official sources and then plotted opto this map.
 
-<p>To support open source, buy us a cup of coffee :coffee: :grinning: <a href="https://paypal.me/jakobzhao"><img src="img/Donate-PayPal-green.svg" align="center" /></a> </p>
-
 ![](img/interface.png)
 
 ## Data Sources:
