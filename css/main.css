@@ -244,28 +244,30 @@ div#footer>div {
 }
 
 #legend-panel {
-  position: fixed;
+  position: relative;
+  padding-top: 10px !important;
   bottom: 10px;
-  right: 20px;
-  width: 300px;
-  height: 20px;
-  z-index: 1000;
-  background: #343a4000;
+  left: 12px;
+  width: 440px;
+  height:15px;
+    padding: 0;
+  /* z-index: 1000; */
+  /* background: #343a4000; */
 }
 
-.legend .card {
-  background: #343a4000;
-  padding: 0;
+.legend >div.card {
+  padding: 0px;
+  margin: 0px;
 }
 
 .legend .card-title {
-  font-size: 13px;
+  font-size: 12px !important;
 }
 
-.card-text {
+/* .card-text {
   font-size: 40px;
   text-align: center;
-}
+} */
 
 #info h4 i {
   font-size: 1.25e;

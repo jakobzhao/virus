@@ -131,10 +131,51 @@
 
       <div id="footer">
 
+  <div> In the main map, an country or region's inflection level is measured by # of today's active/remaining confirmed cases. Its legend is displayed as below.</div>
+        <div id="legend-panel" class="card-deck legend">
+          <div class="card">
+            <div class="card-body legend-color-1">
+              <h5 class="card-title" style="color:black">1</h5>
+
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body  legend-color-2">
+              <h5 class="card-title" style="color:black">10</h5>
+
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body  legend-color-3">
+              <h5 class="card-title" style="color:black">100</h5>
+
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body  legend-color-4">
+              <h5 class="card-title" style="color:black">250</h5>
+
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body legend-color-5">
+              <h5 class="card-title" style="color:black">1,000</h5>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body legend-color-6">
+              <h5 class="card-title" style="color:black">10,000+</h5>
+            </div>
+          </div>
+        </div>
+
 
         <div>Infection Case(s) &nbsp; <i class='fas fa-users community'></i> &nbsp; indicates one or several confirmed infected individual(s) in the U.S., excluding those were identified from the Diamond Princess.
           The dataset of the infected cases are continuously enriched from different data portals such as
-          <a href="https://coronavirus.1point3acres.com/en" target="_blank">1point3acres</a> and state officials. Notably, <b style="color:#e8e3d3; text-decoration: underline;"> each case was geocoded to an approximate location within the county
+          <a href="https://coronavirus.1point3acres.com/en" target="_blank">1point3acres</a> and state officials. Notably, <b style="color:#e8e3d3;text-decoration-line: underline; text-decoration-style: dotted;"> each case was geocoded to an approximate location within the county
             which reported the case. The location is by no means identical to the exact address where the case was discovered</b>.
         </div>
 
@@ -168,50 +209,7 @@
 
     <div id="map"></div>
 
-    <div id="legend-panel">
 
-      <div class="card-deck legend">
-
-        <div class="card">
-          <div class="card-body legend-color-1">
-            <h5 class="card-title" style="color:black">1</h5>
-
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-body  legend-color-2">
-            <h5 class="card-title" style="color:black">10</h5>
-
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body  legend-color-3">
-            <h5 class="card-title" style="color:black">100</h5>
-
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-body  legend-color-4">
-            <h5 class="card-title" style="color:black">250</h5>
-
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-body legend-color-5">
-            <h5 class="card-title" style="color:black">1,000</h5>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body legend-color-6">
-            <h5 class="card-title" style="color:black">10,000+</h5>
-          </div>
-        </div>
-      </div>
-
-    </div>
   </main>
   <div id="infowindow" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document" style="width:1250px!important">
