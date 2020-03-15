@@ -95,7 +95,7 @@
           <p class="card-text">
             <span class="active-count"></span>
             <span class="active-new-count"></span>
-            <i class="nav fas fa-exclamation-circle tooltip counticon active-new-count-tooltip">
+            <i id = "counticon" class="nav fas fa-exclamation-circle tooltip counticon active-new-count-tooltip">
               <span class="tooltiptext">The newly increased/decreased confirmed cases: the # of today's active confirmed cases subtract the # of yesterday's.</span>
             </i>
 
@@ -842,10 +842,13 @@
           $(".death-new-count").text(nd.toString());
         }
         if (na > 0) {
+          document.getElementById("counticon").style.display = "initial";
           $(".active-new-count").text("+" + na.toString());
         } else if (na == 0) {
+          document.getElementById("counticon").style.display = "none";
           $(".active-new-count").text("")
         } else {
+          document.getElementById("counticon").style.display = "none";
           $(".active-new-count").text(na.toString());
         }
 
