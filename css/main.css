@@ -8,16 +8,15 @@ html, body, main {
   overflow: hidden
 }
 
-
 .leaflet-tooltip.feature-label {
-    background-color: transparent;
-    border: transparent;
-    box-shadow: none;
-    font-weight: bold;
-    font-size: 14px;
-    font-family: 'Titillium Web', sans-serif;
-    text-shadow: 0 0 2px #FFFFFF;
-    color: #dc3545;
+  background-color: transparent;
+  border: transparent;
+  box-shadow: none;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: 'Titillium Web', sans-serif;
+  text-shadow: 0 0 2px #FFFFFF;
+  color: #dc3545;
 }
 
 .loader {
@@ -44,8 +43,8 @@ div#footer>div {
 
 .case-marker {
   width: 10px;
-
 }
+
 .community-marker {
   width: 80px;
 }
@@ -115,13 +114,42 @@ div#footer>div {
   stroke: transparent;
 }
 
+#mobiledeck {
+  display: none;
+  visibility: hidden;
+}
+
 @media only screen and (max-width: 1026px) {
   .legend, .leaflet-control-layers {
     display: none;
   }
 
-  #info, #rank-chart, #total-chart, .c3-legend-item, #deck-2, .c3-legend-background, #footer, #title>img, #title>span {
+  #info, .card-deck, #rank-chart, #total-chart, .c3-legend-item, .c3-legend-background, #footer, #title>img, #title>span {
     visibility: hidden !important;
+  }
+
+  #mobiledeck {
+    font-size: 10px !important;
+    z-index: 200000 !important;
+    position: fixed !important;
+    top: 100px !important;
+    display: block !important;
+    visibility: visible !important;
+    margin-top: 20px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .mobile-title {
+    font-size: 13px !important;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    /* font-weight: normal; */
+  }
+
+  #mobiledeck>p {
+    font-size: 16px !important;
+    font-weight: bold;
   }
 
   .simplebar-track {
@@ -135,7 +163,7 @@ div#footer>div {
     /* top: 90vh !important; */
     /* top: 80vh; */
     top: 0px;
-    height: 50%;
+    height: 30%;
     /* bottom: 5px; */
     /* background-color: gray !important; */
     left: 0;
@@ -182,47 +210,6 @@ div#footer>div {
     top: 85px !important;
     width: 300px;
   }
-
-  #deck-1 {
-    position: relative;
-    margin-top: 70px !important;
-    /* height:200px !important; */
-    /* right: 10px; */
-    /* width: 75% !important; */
-    left: 10px;
-    /* left: 0px !important;
-    right: 0px !important; */
-    /* position: relative; */
-    /* position: fixed; */
-    /* left: 20px; */
-    /* bottom: 5px; */
-    width:70%
-  }
-
-#deck-2 {
-    position: relative;
-    margin-top: 470px !important;
-    /* height:200px !important; */
-    /* right: 10px; */
-    /* width: 75% !important; */
-    left: 10px;
-    /* left: 0px !important;
-    right: 0px !important; */
-    /* position: relative; */
-    /* position: fixed; */
-    /* left: 20px; */
-    /* bottom: 5px; */
-    width:70%
-  }
-
-
-  .card-text {
-    font-size: 8px !important
-  }
-
-  .card-title {
-    font-size: 10px !important
-  }
 }
 
 #info {
@@ -249,11 +236,10 @@ div#footer>div {
   padding: 0;
   margin: 0;
   text-align: center;
-
 }
 
 .card-text {
-font-size: 33px !important
+  font-size: 33px !important
 }
 
 .card-title {
@@ -404,7 +390,6 @@ text {
   color: #dc3545;
 }
 
-
 .active-count {
   color: orange;
 }
@@ -412,7 +397,6 @@ text {
 /* .suspected-count {
   color: orange;
 } */
-
 .recovered-count {
   color: #28a745;
 }
@@ -421,59 +405,56 @@ text {
   color: #5d4f72e8;
 }
 
-
 .confirmed-new-count {
-vertical-align:super !important;
-font-size:50% !important;
-color: #dc3545;
-font-style: italic;
-font-kerning: normal;
-position: relative;
-left: -10px
+  vertical-align: super !important;
+  font-size: 50% !important;
+  color: #dc3545;
+  font-style: italic;
+  font-kerning: normal;
+  position: relative;
+  left: -10px
 }
-
 
 .active-new-count {
-vertical-align:super !important;
-font-size:50% !important;
-color: orange;
-font-style: italic;
-font-kerning: normal;
-position: relative;
-left: -14px
+  vertical-align: super !important;
+  font-size: 50% !important;
+  color: orange;
+  font-style: italic;
+  font-kerning: normal;
+  position: relative;
+  left: -14px
 }
 
-
 .death-new-count {
-vertical-align:super !important;
-font-size:50% !important;
-color: #5d4f72e8;
-font-style: italic;
-font-kerning: normal;
-position: relative;
-left: -10px
+  vertical-align: super !important;
+  font-size: 50% !important;
+  color: #5d4f72e8;
+  font-style: italic;
+  font-kerning: normal;
+  position: relative;
+  left: -10px
 }
 
 /* .c3-line {
     stroke-width: 2px;
 } */
 .recovered-new-count {
-vertical-align:super !important;
-font-size:50% !important;
-color: #28a745;
-font-style: italic;
-font-kerning: normal;
-position: relative;
-left: -10px
+  vertical-align: super !important;
+  font-size: 50% !important;
+  color: #28a745;
+  font-style: italic;
+  font-kerning: normal;
+  position: relative;
+  left: -10px
 }
 
 /* Tooltip container */
 .tooltip {
-  position:relative;
+  position: relative;
   font-size: 12px;
   display: inline-block;
   vertical-align: super;
-  opacity:1;
+  opacity: 1;
   color: #737373;
 }
 
@@ -486,7 +467,8 @@ left: -10px
   visibility: hidden;
   line-height: 150%;
   width: 200px;
-  margin-left: -170px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  margin-left: -170px;
+  /* Use half of the width (120/2 = 60), to center the tooltip */
   margin-bottom: 5px;
   background-color: gray;
   color: #fff;
@@ -499,16 +481,15 @@ left: -10px
   opacity: 0.8;
 }
 
-
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
 
-.counticon{
-  position:relative;
-  right:10px;
-  bottom:10px;
-  color:#6d5831;
+.counticon {
+  position: relative;
+  right: 10px;
+  bottom: 10px;
+  color: #6d5831;
   left: -24px;
 }
