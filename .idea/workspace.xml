@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c82d1dfd-4c87-4a78-bd59-b46ac0c78764" name="Default Changelist" comment="update" />
+    <list default="true" id="c82d1dfd-4c87-4a78-bd59-b46ac0c78764" name="Default Changelist" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/timestamp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assets/timestamp.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/virus.csv" beforeDir="false" afterPath="$PROJECT_DIR$/assets/virus.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/virus.db" beforeDir="false" afterPath="$PROJECT_DIR$/assets/virus.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/texture.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/texture.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,6 +50,18 @@
       <recent name="C:\Workspace\virus\assets" />
       <recent name="C:\Workspace\virus\assets\backup" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Python.virus">
     <configuration name="communities-ahusmart" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
