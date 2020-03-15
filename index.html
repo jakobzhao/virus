@@ -454,10 +454,7 @@
     //   })
     // }
     //
-    var usBounds = L.latLngBounds(
-      L.latLng(24.520833, -100), //Southwest
-      L.latLng(49.384472, 5) //Northeast
-    );
+
 
     var usBounds = L.latLngBounds(
       L.latLng(-60, -130), //Southwest
@@ -530,11 +527,17 @@
 
     });
 
-
     var cases = new L.MarkerClusterGroup({
       spiderfyOnMaxZoom: true,
       singleMarkerMode: true,
-      // showCoverageOnHover: false,
+      polygonOptions: {
+        fillColor: "red",
+        color: 'red',
+        weight: 0.5,
+        opacity: 0.6,
+        fillOpacity: 0.2
+      },
+      showCoverageOnHover: true,
       // zoomToBoundsOnClick: false,
       iconCreateFunction: function(cluster) {
         cnt = cluster.getChildCount()
@@ -859,7 +862,7 @@
 
       }
 
-      function setFill(enname){
+      function setFill(enname) {
         var pop = datasets[0][datasets[0].length - 1][enname];
         if (pop != undefined) {
           pop = +pop.toString().split("-")[0] - +pop.toString().split("-")[2] - +pop.toString().split("-")[3]; // remaining confirmed
@@ -869,8 +872,8 @@
         }
 
         if (pop == 0) {
-            return 'url(img/texture.png)';
-            // return 'url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScgLz4KICA8cmVjdCB4PScwJyB5PScwJyB3aWR0aD0nMScgaGVpZ2h0PScxJyBmaWxsPSdibGFjaycgLz4KPC9zdmc+")';
+          return 'url(img/texture.png)';
+          // return 'url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScgLz4KICA8cmVjdCB4PScwJyB5PScwJyB3aWR0aD0nMScgaGVpZ2h0PScxJyBmaWxsPSdibGFjaycgLz4KPC9zdmc+")';
         } else {
 
           return 'url()';
