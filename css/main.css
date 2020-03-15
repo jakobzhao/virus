@@ -209,6 +209,8 @@ div#footer>div {
     font-weight: bold;
     top: 85px !important;
     width: 300px;
+    text-decoration-line: underline !important;
+    text-decoration-style: dotted !important;
   }
 }
 
@@ -324,7 +326,8 @@ span {
   color: gray;
   font-size: 13px;
   font-style: italic;
-  text-decoration: underline;
+  text-decoration-line: underline !important;
+  text-decoration-style: dotted !important;
   left: -10px;
 }
 
