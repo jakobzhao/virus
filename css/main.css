@@ -484,7 +484,7 @@ text {
 
 .counticon {
   position: relative;
-  right: 10px;
+  left: -27px;
   bottom: 5px;
   color: #6d5831;
 }
