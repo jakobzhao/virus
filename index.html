@@ -872,14 +872,14 @@
       function setFill(enname) {
         var pop = datasets[0][datasets[0].length - 1][enname];
         if(pop == "" || pop == undefined || pop.toString().split("-")[0] == "0"){
-          return 'url(img/texture.png)'; //non-case country, 0 aggregate confirm
+          return 'url(img/dot_texture.gif)'; //non-case country, 0 aggregate confirm
         }
         else {
           pop = +pop.toString().split("-")[0] - +pop.toString().split("-")[2] - +pop.toString().split("-")[3]; // remaining confirmed
           // return "#00000000";
         }
         if (pop == 0) {
-          return 'url(img/green_texture.png)'; // 0 active confirm
+          return 'url(img/dot_texture_green.gif)'; // 0 active confirm
           // return 'url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScgLz4KICA8cmVjdCB4PScwJyB5PScwJyB3aWR0aD0nMScgaGVpZ2h0PScxJyBmaWxsPSdibGFjaycgLz4KPC9zdmc+")';
         } else {
           return 'url()';
