@@ -88,7 +88,7 @@
           <div class="card-body active">
             <h5 class="card-title">Active Confirmed
               <i class="nav fas fa-exclamation-circle tooltip">
-                <span class="tooltiptext">The remaining confirmed cases. The aggregated confirmed cases excludes the recovered and death cases.</span>
+                <span class="tooltiptext">The remaining confirmed cases. The active confirmed cases excludes the recovered and death cases.</span>
               </i>
             </h5>
           </div>
@@ -124,7 +124,7 @@
 
       <div id="footer">
 
-        <div> In the main map, an country or region's inflection level is measured by # of today's active/remaining confirmed cases. Its legend is displayed as below.</div>
+        <div> In the main map, an country or region's inflection level is measured by # of today's active/remaining confirmed cases. Its legend is displayed as below. The gray slash texture indicates no previous casese are found. the green texture indicates a region whereh all the infected cases have recovered.</div>
         <div id="legend-panel" class="card-deck legend">
 
           <div class="card">
@@ -872,14 +872,14 @@
       function setFill(enname) {
         var pop = datasets[0][datasets[0].length - 1][enname];
         if(pop == "" || pop == undefined || pop.toString().split("-")[0] == "0"){
-          return 'url(img/dot_texture.gif)'; //non-case country, 0 aggregate confirm
+          return 'url(img/texture-s.png)'; //non-case country, 0 aggregate confirm
         }
         else {
           pop = +pop.toString().split("-")[0] - +pop.toString().split("-")[2] - +pop.toString().split("-")[3]; // remaining confirmed
           // return "#00000000";
         }
         if (pop == 0) {
-          return 'url(img/dot_texture_green.gif)'; // 0 active confirm
+          return 'url(img/texture-sg.png)'; // 0 active confirm
           // return 'url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScgLz4KICA8cmVjdCB4PScwJyB5PScwJyB3aWR0aD0nMScgaGVpZ2h0PScxJyBmaWxsPSdibGFjaycgLz4KPC9zdmc+")';
         } else {
           return 'url()';
