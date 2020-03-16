@@ -8,6 +8,24 @@ html, body, main {
   overflow: hidden
 }
 
+#table {
+  visibility: hidden;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: white;
+  z-index: 500!important;
+}
+
+#table-container {
+  position: relative;
+  left: 500px;
+  top: 20px;
+  width: 1000px;
+
+}
 .grey-circles {
   background-color: white;
   background-image: url("../img/texture-s.png");
@@ -107,6 +125,7 @@ div#footer>div {
   background: #343a40 !important;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2) !important;
   border-radius: 5px !important;
+  /* z-index: 299 !important; */
 }
 
 .leaflet-control-zoom, .leaflet-control-zoom-in, .leaflet-control-zoom-out {
@@ -117,6 +136,7 @@ div#footer>div {
   background: #343a40 !important;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2) !important;
   border-radius: 5px !important;
+  /* z-index: 299 !important; */
 }
 
 .c3-legend-background {

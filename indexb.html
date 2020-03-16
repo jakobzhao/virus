@@ -18,7 +18,7 @@
   <link href="css/c3.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/simplebar.css" />
   <link rel="stylesheet" href="css/main.css">
-  <!-- <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet"> -->
+  <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <script src="js/d3.js"></script>
   <script src="js/c3.min.js"></script>
@@ -29,7 +29,7 @@
   <script src="js/chroma.min.js"></script>
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
   <script src="js/simplebar.min.js"></script>
 </head>
 
@@ -127,8 +127,8 @@
       <div id="footer">
 
 
-        <!--
-        <input type="checkbox" id="panelSwitcher" checked data-toggle="toggle" data-on="Map" data-size="xs" data-off="Table" data-onstyle="success" data-offstyle="danger" data-onstyle="outline-secondary" data-offstyle="outline-info"> -->
+
+        <input type="checkbox" id="panelSwitcher" checked data-toggle="toggle" data-on="Map" data-size="xs" data-off="Table" data-onstyle="success" data-offstyle="danger" data-onstyle="outline-secondary" data-offstyle="outline-info">
 
         <div> In the main map, an country or region's inflection level is measured by the # of today's active/remaining confirmed cases. Its legend is displayed as below. The gray slash texture indicates no previous casese are discovered; the green
           texture means the region in which all the infected cases have recovered.</div>
@@ -217,36 +217,36 @@
     </div>
     <div id="table">
       <div id="table-container">
-        <table class="table table-bordered ">
-          <thead>
-            <tr>
-              <th scope="col">Country</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <table class="table table-bordered ">
+        <thead>
+          <tr>
+            <th scope="col">Country</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
 
 
@@ -1245,21 +1245,21 @@
 
 
 
-      // $('#panelSwitcher').change(function() {
-      //
-      //   if (document.getElementById('panelSwitcher').checked) {
-      //       $("#table").css("visibility", "hidden");
-      //       $(".leaflet-control-container").css("visibility", "visible");
-      //
-      //   } else {
-      //
-      //     $("#table").css("visibility", "visible");
-      //     $(".leaflet-control-container").css("visibility", "hidden");
-      //
-      //   }
-      //
-      //
-      // })
+      $('#panelSwitcher').change(function() {
+
+        if (document.getElementById('panelSwitcher').checked) {
+            $("#table").css("visibility", "hidden");
+            $(".leaflet-control-container").css("visibility", "visible");
+
+        } else {
+
+          $("#table").css("visibility", "visible");
+          $(".leaflet-control-container").css("visibility", "hidden");
+
+        }
+
+
+      })
 
 
 
