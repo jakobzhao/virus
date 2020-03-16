@@ -14,7 +14,8 @@ options.add_argument('--no-sandbox')
 # browser = webdriver.Chrome("/usr/bin/chromedriver", options=options)
 # browser = webdriver.Chrome("E:\chromedriver_win32\chromedriver.exe")
 try:
-    browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver")
+    browser = webdriver.Chrome("/Users/joshuaji/Desktop/chromedriver") #joshua's chromedrive location
+
 except FileNotFoundError:
     browser = webdriver.Chrome("C:/workspace/chromedriver.exe")
 except:
@@ -65,13 +66,13 @@ with open("assets/canada_city.txt", "r", encoding="utf-8") as fp:
 
 # browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver") #fengyu's chromefrive location
 #browser = webdriver.Chrome("C:\Workspace\chromedriver.exe") # zhaobo's chromedrive location'
+#browser = webdriver.Chrome("/Users/joshuaji/Desktop/chromedriver") #joshua's chromedrive location
 
 
 # # China Provinces
 #
 url = "https://voice.baidu.com/act/newpneumonia/newpneumonia"
 browser.get(url)
-
 
 unfolds = browser.find_elements_by_xpath("//div[starts-with(@class,'Common')]")
 for unfold in unfolds:
