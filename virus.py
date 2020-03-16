@@ -15,9 +15,10 @@ options.add_argument('--no-sandbox')
 # browser = webdriver.Chrome("E:\chromedriver_win32\chromedriver.exe")
 try:
     browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver")
-except:
+except FileNotFoundError:
     browser = webdriver.Chrome("C:/workspace/chromedriver.exe")
-
+except:
+    browser = webdriver.Chrome("E:/dev/workspaces/chromedriver.exe")
 
 now = str(datetime.now())
 sqls = "INSERT OR REPLACE INTO virus ('datetime'"
