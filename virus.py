@@ -14,8 +14,8 @@ options.add_argument('--no-sandbox')
 # browser = webdriver.Chrome("/usr/bin/chromedriver", options=options)
 # browser = webdriver.Chrome("E:\chromedriver_win32\chromedriver.exe")
 try:
-    browser = webdriver.Chrome("/Users/joshuaji/Desktop/chromedriver") #joshua's chromedrive location
-
+    #browser = webdriver.Chrome("/Users/joshuaji/Desktop/chromedriver") #joshua's chromedrive location
+    browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver")
 except FileNotFoundError:
     browser = webdriver.Chrome("C:/workspace/chromedriver.exe")
 except:
