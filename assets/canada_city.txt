@@ -1,13 +1,1 @@
-Alberta
-Columbia British
-Manitoba
-New Brunswick
-Newfoundland and Labrador
-Nova Scotia
-Ontario
-Prince Edward Island
-Quebec
-Saskatchewan
-Northwest Territories
-Nunavut
-Yukon
+alberta,columbia british,manitoba,new brunswick,newfoundland and labrador,nova scotia,ontario,prince edward island,quebec,saskatchewan,northwest territories,nunavut,yukon,

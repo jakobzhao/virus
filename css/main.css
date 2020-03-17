@@ -286,6 +286,24 @@ div#footer>div {
     text-decoration-line: underline !important;
     text-decoration-style: dotted !important;
   }
+
+  #source {
+    color: black;
+    font-size: 12px !important;
+    position: fixed !important;
+    left: 12px;
+    top: 65px !important;
+    width: 300px;
+  }
+
+  #source-website {
+    color: black;
+    font-size: 12px !important;
+    position: fixed !important;
+    left: 12px;
+    top: 65px !important;
+    width: 300px;
+  }
 }
 
 #info {
@@ -403,6 +421,18 @@ span {
   text-decoration-line: underline !important;
   text-decoration-style: dotted !important;
   left: -10px;
+}
+
+#source {
+  position: relative;
+  top: -30px;
+  font-size: 14px;
+}
+
+#source-website {
+  position: relative;
+  top: -30px;
+  font-size: 14px;
 }
 
 .counts {
