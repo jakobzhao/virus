@@ -128,7 +128,7 @@
 
 
 
-        <input type="checkbox" id="panelSwitcher" checked data-toggle="toggle" data-on="Map" data-size="xs" data-off="Table" data-onstyle="success" data-offstyle="danger" data-onstyle="outline-secondary" data-offstyle="outline-info">
+        <input type="checkbox" id="panelSwitcher" unchecked data-toggle="toggle" data-off="Interactive Map"  data-width="180" data-size="xs" data-on="Situational Chart (Beta)" data-offstyle="danger" data-onstyle="outline-secondary" data-offstyle="outline-info">
 
         <div> In the main map, an country or region's inflection level is measured by the # of today's active/remaining confirmed cases. Its legend is displayed as below. The gray slash texture indicates no previous casese are discovered; the green
           texture means the region in which all the infected cases have recovered.</div>
@@ -217,7 +217,7 @@
     </div>
     <div id="table">
       <div id="table-container" data-simplebar data-simplebar-auto-hide="true">
-        <table class="table table-bordered">
+        <table id="table-container-div" class="table table-bordered">
           <thead>
           </thead>
           <tbody>
@@ -1120,7 +1120,7 @@
 
       $('#panelSwitcher').change(function() {
 
-        if (document.getElementById('panelSwitcher').checked) {
+        if (document.getElementById('panelSwitcher').checked == false) {
           $("#table").css("visibility", "hidden");
           $(".leaflet-control-container").css("visibility", "visible");
 
@@ -1135,26 +1135,38 @@
 
 
           len = places["Global Trend"].t.length
-          showLen = 10
-          $("thead").html('<th scope="col">Country</th>');
+          showLen = 15
+          $("thead").html('<th scope="col" style="width:120px !important">Country</th>');
 
           Object.values(places["Global Trend"].t.slice(len - 1 - showLen, len - 1)).forEach(function(d) {
             //label = new Date(new Date(d).setHours(new Date(d).getHours() + 8)).toString().substring(4,10);
             label = (new Date(d)).toString().substring(4, 10);
             // console.log(label);
-            $("thead").append("<th scope='row'>" + label + "</th>");
+            $("thead").append("<th scope='row''>" + label + "</th>");
           });
 
           $("tbody").html('');
           Object.keys(stop).slice(0, 40).forEach(function(d) {
 
-            $("tbody").append("<tr id='" + d.replace(" ", "") + "-row'><th>" + d.toUpperCase() + "</th></tr>");
+            $("tbody").append("<tr id='" + d.replace(" ", "") + "-row'><th>" + d.toUpperCase().replace("DIAMOND PRINCESS", "CRUISE") + "</th></tr>");
             places[d] = calPlace(d);
 
-            Object.values(places[d].c.slice(len - showLen, len)).forEach(function(k) {
-              $("tr#" + d.replace(" ", "") + "-row").append('<th scope="col">' + k + '</th>');
-            })
+            for (var i = len -showLen; i<len; i++) {
+                //$("tr#" + d.replace(" ", "") + "-row").append('<th scope="col"><i class="cell">' + places[d].c[i] + '</i></th>');
+                $("tr#" + d.replace(" ", "") + "-row").append('<th scope="col"><i class="cell square">' + '' + '</i></th>');
+            }
 
+
+
+
+            // Object.values(places[d].c.slice(len - showLen, len)).forEach(function(k) {
+            //   $("tr#" + d.replace(" ", "") + "-row").append('<th scope="col">' + k + '</th>');
+            // })
+
+            // for (i = 0; i < 6; i++) {
+            //   $('head').append($("<style> .region-color-" + (i + 1).toString() + " { color: " + colors[i] + "; font-size: 15px; text-shadow: 0 0 3px #ffffff;} </style>"));
+            //   $('head').append($("<style> .legend-color-" + (i + 1).toString() + " { background: " + colors[i] + "; font-size: 15px; text-shadow: 0 0 3px #ffffff;} </style>"));
+            // }
 
 
 
