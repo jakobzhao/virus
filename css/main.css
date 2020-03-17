@@ -444,12 +444,12 @@ text {
 
 #footer {
   position: relative;
-  top: 55px;
+  top: 100px;
   bottom: 10px;
   font-size: 13px;
   line-height: 150%;
   color: lightgray;
-  margin-bottom:50px;
+  margin-bottom:100px;
 }
 
 #footer>div {
