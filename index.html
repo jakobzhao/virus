@@ -71,7 +71,7 @@
         <span><a data-toggle="modal" data-target="#infowindow"><i class="nav fas fa-question-circle"></i></a></span>
       </div>
 
-      <p><span id="placename">Global Trend</span> </p>
+      <p><span id="placename">GLOBAL TREND</span> </p>
       <div> <span id="date"></span> <span id="hint"> Click a place to review local trend.</span></div>
       <div id="deck-1" class="card-deck counts">
         <div class="card">
@@ -126,10 +126,13 @@
       <div id="rank-chart"></div>
 
       <div id="footer">
-
-
-
-        <input type="checkbox" id="panelSwitcher" unchecked data-toggle="toggle" data-off="Situational Chart (Beta)" data-width="180" data-size="xs" data-on="Back to Map" data-onstyle="danger" data-offstyle="outline-secondary">
+        <div id="mtToggle">
+          <input type="checkbox" id="panelSwitcher" unchecked data-toggle="toggle" data-off="Situational Heatmap" data-width="180" data-size="xs" data-on="Back to Map" data-onstyle="secondary" data-offstyle="outline-secondary">
+          <span style="margin-right:50px"> </span>
+          <span id="rankingToggle"><input type="checkbox" id="areaSwitcher" unchecked data-toggle="toggle" data-on="Ranking Countries" data-width="180" data-size="xs" data-off="Ranking States" data-onstyle="secondary"
+              data-offstyle="outline-secondary">
+          </span>
+        </div>
 
         <div> In the main map, an country or region's inflection level is measured by the # of today's active/remaining confirmed cases. Its legend is displayed as below. The gray slash texture indicates no previous casese are discovered; the green
           texture means the region in which all the infected cases have recovered.</div>
@@ -618,6 +621,7 @@
 
 
       stop = sortJsObject(top);
+      sustop = sortJsObject(ustop);
 
 
       var places = {};
@@ -1049,16 +1053,6 @@
       });
 
 
-      x = Object.keys(stop).slice(0, 9);
-      x.reverse();
-      x.push("x");
-      x.reverse();
-
-      y = Object.values(stop).slice(0, 9);
-      y.reverse();
-      y.push("Confirmed Cases");
-      y.reverse();
-
       function displayPlace(name) {
 
         places[name] = calPlace(name);
@@ -1072,51 +1066,179 @@
       }
 
 
-      // rchart = c3.generate({
-      //   size: {
-      //     height: 200,
-      //     width: 460
-      //   },
-      //   data: {
-      //     x: 'x',
-      //     columns: [
-      //       x, y
-      //     ],
-      //     type: 'bar',
-      //     onmouseover: function(d) {
-      //       displayPlace(x[d.x + 1].toLowerCase());
-      //     },
-      //   },
-      //   axis: {
-      //     x: {
-      //       type: 'category',
-      //
-      //       tick: {
-      //         rotate: -60,
-      //         multiline: false
-      //       }
-      //     },
-      //     y: {
-      //       label: {
-      //         text: 'Confirmed Cases',
-      //         position: 'outer-middle'
-      //       },
-      //       tick: {
-      //         values: [1000, 5000, 10000, 30000, 100000, 200000]
-      //       },
-      //       // min: -1000,
-      //       max: 30000,
-      //       padding: 1500,
-      //       type: 'log'
-      //     }
-      //   },
-      //   legend: {
-      //     show: false
-      //   },
-      //   bindto: "#rank-chart"
-      // });
-      //
-      //
+      function makeTable() {
+
+        var topinuse = {};
+        if (document.getElementById('areaSwitcher').checked != false) {
+          topinuse = sustop;
+        } else {
+          topinuse = stop;
+        }
+
+        Object.keys(topinuse).slice(0, 40).forEach(function(d) {
+          if (d.toUpperCase() == "DIAMOND PRINCESS") {
+            return;
+          }
+
+          $("tbody").append("<tr id='" + d.replace(" ", "") + "-row'><th style='text-align:right;cursor: pointer;'>" + d.toUpperCase() + "</th></tr>");
+          places[d] = calPlace(d);
+
+
+
+
+
+          $("tr#" + d.replace(" ", "") + "-row").append('<th ><i class="cell-' + d.replace(" ", "") + '">' + "" + '</i></th>');
+
+
+          var a = [];
+          for (var i = len - showLen; i < len; i++) {
+            a.push(places[d].a[i]);
+          }
+
+          $("." + 'cell-' + d.replace(" ", "")).sparkline(a, {
+            type: 'line',
+            lineColor: '#bf0000',
+            fillColor: '#ffd4aa',
+            disableTooltips: true
+          });
+
+
+          for (var i = len - showLen; i < len; i++) {
+            // a.push(places[d].a[i]);
+            //$("tr#" + d.replace(" ", "") + "-row").append('<th scope="col"><i class="cell">' + places[d].c[i] + '</i></th>');
+            $("tr#" + d.replace(" ", "") + "-row").append('<th ><i class="cell cell-' + d.replace(" ", "") + '-' + i.toString() + '">' + "" + '</i></th>');
+            bgcolor = "#28a745";
+            bdcolor = "#28a745";
+            size = "32px";
+            bdsize = "0px";
+            top = "0rem";
+            left = "0rem";
+
+
+            //all the cases are recovered
+            // c ===> 0, 10, 100, 1000, 10000
+            // size =>0,  4,   8,   16,    32
+
+            if (places[d].c[i] >= 10000) {
+              size = "32px"
+              top = "-.45rem";
+              left = "-.35rem";
+
+
+            } else if (places[d].c[i] < 10000 && places[d].c[i] >= 1000) {
+              size = "24px";
+              top = "-.2rem";
+              left = "-.1rem";
+
+            } else if (places[d].c[i] < 1000 && places[d].c[i] >= 100) {
+              size = "16px";
+              top = "0rem";
+              left = ".1rem";;
+
+
+            } else if (places[d].c[i] < 100 && places[d].c[i] >= 10) {
+              size = "10px";
+              top = ".25rem";
+              left = ".25rem";
+
+            } else if (places[d].c[i] < 10 && places[d].c[i] >= 1) {
+              size = "8px";
+              top = ".25rem";
+              left = ".25rem";
+            } else {
+              size = "0px";
+              bdsize = "0px";
+            }
+
+
+            // a/c rate ==> red, oregen, yellow, green{plus yellow}
+            // color ==>  recover:  #28a745
+            // a ===>
+            acrate = places[d].a[i] / places[d].c[i]
+
+            colors = chroma.scale('YlOrRd').mode('lch').colors(6);
+            if (acrate > 0.995) {
+              bgcolor = colors[5];
+            } else if (acrate >= 0.9 && acrate <= 0.995) {
+              bgcolor = colors[4];
+            } else if (acrate >= 0.5 && acrate <= 0.9) {
+              bgcolor = colors[3];
+            } else if (acrate >= 0.3 && acrate <= 0.5) {
+              bgcolor = colors[2];
+            } else {
+              bgcolor = colors[1];
+            }
+
+
+            $('.cell-' + d.replace(" ", "") + '-' + i.toString())
+              .css("background-color", bgcolor)
+              .css("border", bdsize + " solid " + bdcolor)
+              .css("width", size)
+              .css("height", size)
+              .css("margin-top", top)
+              .css("margin-left", left);
+
+
+          }
+
+
+
+
+          $("tr#" + d.replace(" ", "") + "-row").on("click", function() {
+            // places[d] = calPlace(d);
+            showPlace(d);
+
+            chart.load({
+              columns: [places[d].c, places[d].a, places[d].r, places[d].d],
+              unload: ['Aggr. Confirmed', 'Active Confirmed', 'Recovered', 'Death'],
+            });
+          })
+
+
+
+        })
+
+      }
+
+
+      $('#areaSwitcher').change(function() {
+
+        $('.loader').show();
+
+        $("#rankingToggle").css('visibility', 'visible');
+
+        $("#table").css("visibility", "visible");
+        $(".leaflet-control-container").css("visibility", "hidden");
+
+
+        len = places["Global Trend"].t.length
+        showLen = 20
+        $("thead").html('<th scope="col" style="text-align:right; width:120px !important"><b>Country</b></th>');
+        $("thead").append("<th style='text-align:center' >Active Confirmed</th>");
+
+        Object.values(places["Global Trend"].t.slice(len - 1 - showLen, len - 1)).forEach(function(d) {
+          //label = new Date(new Date(d).setHours(new Date(d).getHours() + 8)).toString().substring(4,10);
+          label = (new Date(d)).toString().substring(4, 10);
+          // console.log(label);
+          $("thead").append("<th style='text-align:center' >" + label + "</th>");
+        });
+
+
+        $("tbody").html('');
+
+        var topinuse = {};
+        // if (document.getElementById('areaSwitcher').checked != false) {
+        //   topinuse = sustop;
+        // } else {
+        //   topinuse = stop;
+        // }
+        makeTable();
+
+
+        $('.loader').fadeOut("slow");
+
+      })
+
 
       $('#panelSwitcher').change(function() {
         $('.loader').show();
@@ -1131,6 +1253,8 @@
 
         } else {
 
+          $("#rankingToggle").css('visibility', 'visible');
+
           $("#table").css("visibility", "visible");
           $(".leaflet-control-container").css("visibility", "hidden");
 
@@ -1138,6 +1262,7 @@
           len = places["Global Trend"].t.length
           showLen = 20
           $("thead").html('<th scope="col" style="text-align:right; width:120px !important"><b>Country</b></th>');
+          $("thead").append("<th style='text-align:center' >Active Confirmed</th>");
 
           Object.values(places["Global Trend"].t.slice(len - 1 - showLen, len - 1)).forEach(function(d) {
             //label = new Date(new Date(d).setHours(new Date(d).getHours() + 8)).toString().substring(4,10);
@@ -1145,122 +1270,12 @@
             // console.log(label);
             $("thead").append("<th style='text-align:center' >" + label + "</th>");
           });
-          $("thead").append("<th  style='text-align:center' >Active Confirmed</th>");
+
 
           $("tbody").html('');
 
-          Object.keys(stop).slice(0, 30).forEach(function(d) {
-            if (d.toUpperCase() == "DIAMOND PRINCESS") {
-              return;
-            }
 
-            $("tbody").append("<tr id='" + d.replace(" ", "") + "-row'><th style='text-align:right;cursor: pointer;'>" + d.toUpperCase() + "</th></tr>");
-            places[d] = calPlace(d);
-
-
-            $("#" + d.replace(" ", "") + "-row").on("click", function() {
-              // places[d] = calPlace(d);
-              showPlace(d);
-
-              chart.load({
-                columns: [places[d].c, places[d].a, places[d].r, places[d].d],
-                unload: ['Aggr. Confirmed', 'Active Confirmed', 'Recovered', 'Death'],
-              });
-            })
-
-            var a = [];
-            for (var i = len - showLen; i < len; i++) {
-              a.push(places[d].a[i]);
-              //$("tr#" + d.replace(" ", "") + "-row").append('<th scope="col"><i class="cell">' + places[d].c[i] + '</i></th>');
-              $("tr#" + d.replace(" ", "") + "-row").append('<th ><i class="cell cell-' + d.replace(" ", "") + '-' + i.toString() + '">' + "" + '</i></th>');
-              bgcolor = "#28a745";
-              bdcolor = "#28a745";
-              size = "32px";
-              bdsize = "0px";
-              top = "0rem";
-              left = "0rem";
-
-
-              //all the cases are recovered
-              // c ===> 0, 10, 100, 1000, 10000
-              // size =>0,  4,   8,   16,    32
-
-              if (places[d].c[i] >= 10000) {
-                size = "32px"
-                top = "-.45rem";
-                left = "-.35rem";
-
-
-              } else if (places[d].c[i] < 10000 && places[d].c[i] >= 1000) {
-                size = "24px";
-                top = "-.2rem";
-                left = "-.1rem";
-
-              } else if (places[d].c[i] < 1000 && places[d].c[i] >= 100) {
-                size = "16px";
-                top = "0rem";
-                left = ".1rem";;
-
-
-              } else if (places[d].c[i] < 100 && places[d].c[i] >= 10) {
-                size = "10px";
-                top = ".25rem";
-                left = ".25rem";
-
-              } else if (places[d].c[i] < 10 && places[d].c[i] >= 1) {
-                size = "8px";
-                top = ".25rem";
-                left = ".25rem";
-              } else {
-                size = "0px";
-                bdsize = "0px";
-              }
-
-
-              // a/c rate ==> red, oregen, yellow, green{plus yellow}
-              // color ==>  recover:  #28a745
-              // a ===>
-              acrate = places[d].a[i] / places[d].c[i]
-
-              colors = chroma.scale('YlOrRd').mode('lch').colors(6);
-              if (acrate > 0.995) {
-                bgcolor = colors[5];
-              } else if (acrate >= 0.9 && acrate <= 0.995) {
-                bgcolor = colors[4];
-              } else if (acrate >= 0.5 && acrate <= 0.9) {
-                bgcolor = colors[3];
-              } else if (acrate >= 0.3 && acrate <= 0.5) {
-                bgcolor = colors[2];
-              } else {
-                bgcolor = colors[1];
-              }
-
-
-              $('.cell-' + d.replace(" ", "") + '-' + i.toString())
-                .css("background-color", bgcolor)
-                .css("border", bdsize + " solid " + bdcolor)
-                .css("width", size)
-                .css("height", size)
-                .css("margin-top", top)
-                .css("margin-left", left);
-
-
-            }
-
-            $("tr#" + d.replace(" ", "") + "-row").append('<th ><i class="cell-' + d.replace(" ", "") + '-' + (i + 1).toString() + '">' + "3456789" + '</i></th>');
-
-            $("." + 'cell-' + d.replace(" ", "") + '-' + (i + 1).toString()).sparkline(a, {
-              type: 'line',
-              lineColor: '#bf0000',
-              fillColor: '#ffd4aa',
-              disableTooltips: true
-            });
-
-
-
-
-
-          })
+          makeTable();
 
 
         }

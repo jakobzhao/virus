@@ -9,6 +9,10 @@ html, body, main {
 }
 
 
+
+ #rankingToggle{
+   visibility: hidden
+ }
 #table {
   visibility: hidden;
   position: fixed;
@@ -432,12 +436,12 @@ text {
 
 #footer {
   position: relative;
-  top: 15px;
+  top: 55px;
   bottom: 10px;
   font-size: 13px;
   line-height: 150%;
   color: lightgray;
-  margin-bottom: 50px;
+  margin-bottom:50px;
 }
 
 #footer>div {
