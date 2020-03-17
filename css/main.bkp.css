@@ -105,8 +105,8 @@ div#footer>div {
   color: #dc3545;
   /* font-size: 15px; */
   text-shadow: 0 0 3px #ffffff;
-visibility: visible;
-  /*   z-index: 400 !important; */
+  /* visibility: visible;
+  z-index: 400 !important; */
 }
 
 .case-marker {
