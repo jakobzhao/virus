@@ -549,7 +549,10 @@
       d3.json("assets/all-topo-15.json"),
       d3.csv('assets/communities.csv'),
       d3.csv('assets/timestamp.txt'),
-      d3.csv('assets/cases.csv')
+      d3.csv('assets/cases.csv'),
+      d3.csv('assets/unitedStates.txt'),
+      d3.csv('assets/canada_city.txt'),
+      d3.csv('assets/old_name.csv')
     ]).then(function(datasets) {
 
       $("#date").text("Last update: " + datasets[3][0].timestamp.split(".")[0] + " PST");
@@ -579,22 +582,15 @@
       Object.keys(latest).forEach(function(d) {
         // value = tc(datasets[0][datasets[0].length - 1][d]) - tr(datasets[0][datasets[0].length - 1][d]) - td(datasets[0][datasets[0].length - 1][d]);
         value = tc(datasets[0][datasets[0].length - 1][d]);
-        if (d == "anhui" || d == "beijing" || d == "chongqing" || d == "fujian" || d == "gansu" || d == "guangdong" || d == "guangxi" || d == "guizhou" || d == "hainan" || d == "hebei" || d == "heilongjiang" || d == "henan" || d ==
-          "hongkong" || d == "hubei" || d == "hunan" || d == "neimenggu" || d == "jiangsu" || d == "jiangxi" || d == "jilin" || d == "liaoning" || d == "macau" || d == "ningxia" || d == "qinghai" || d == "shaanxi" || d == "shandong" || d ==
-          "shanghai" || d == "shanxi" || d == "sichuan" || d == "taiwan" || d == "tianjin" || d == "xinjiang" || d == "yunnan" || d == "zhejiang" || d == "xizang") {
+        if (datasets[7]["columns"].includes(d)) {
           // console.log(value);
           // console.log(top["china"]);
           top["china"] += +value;
           cntop[d] = value;
 
-        } else if (d == "alberta" || d == "columbia british" || d == "manitoba" || d == "new brunswick" || d == "newfoundland and labrador" || d == "nova scotia" || d == "ontario" || d == "prince edward island" || d == "quebec" || d ==
-          "saskatchewan" || d == "northwest territories" || d == "nunavut" || d == "yukon") {
+        } else if (datasets[6]["columns"].includes(d)) {
           ;
-        } else if (d == "alabama" || d == "alaska" || d == "arizona" || d == "arkansas" || d == "california" || d == "colorado" || d == "connecticut" || d == "delaware" || d == "florida" || d == "georgia usa" || d == "hawaii" || d ==
-          "idaho" || d == "illinois" || d == "indiana" || d == "iowa" || d == "kansas" || d == "kentucky" || d == "louisiana" || d == "maine" || d == "maryland" || d == "massachusetts" || d == "michigan" || d == "minnesota" || d ==
-          "mississippi" || d == "missouri" || d == "montana" || d == "nebraska" || d == "nevada" || d == "new hampshire" || d == "new jersey" || d == "new mexico" || d == "new york" || d == "north carolina" || d == "north dakota" || d ==
-          "ohio" || d == "oklahoma" || d == "oregon" || d == "pennsylvania" || d == "rhode island" || d == "south carolina" || d == "south dakota" || d == "tennessee" || d == "texas" || d == "utah" || d == "vermont" || d == "virginia" || d ==
-          "washington" || d == "west virginia" || d == "wyoming" || d == "wisconsin") {
+        } else if (datasets[5]["columns"].includes(d)) {
           ustop[d] = value;
         } else {
           top[d] = value;
