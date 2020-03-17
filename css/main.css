@@ -8,6 +8,11 @@ html, body, main {
   overflow: hidden
 }
 
+ .btn-xs {
+  line-height: 1 !important;
+
+}
+
 #table {
   visibility: hidden;
   position: fixed;
@@ -28,10 +33,47 @@ html, body, main {
   right: 10px;
   top: 15px;
   bottom: 10px;
-  width: 1600px;
-  /* overflow-y: scroll; */
-  /* background-color: lightblue; */
+
 }
+
+#table-container-div {
+    width: 800px !important;
+}
+
+
+th {
+  text-align: center;
+}
+
+i.cell {
+  position:absolute;
+  background-color: orange;
+  /* align-items: center;
+  align-content: center; */
+
+  /* top: -1px; */
+  /* top: 0px; */
+  /* line-height: 16px; */
+  margin-top: -.5rem;
+  margin-left: -1rem;
+  width: 32px !important;
+  height: 32px !important;
+  opacity: 0.9;
+  border: 16px solid green;
+  /* padding: 5px 5px;
+  margin: 5px 5px; */
+  /* background: rgba(255,255,255,0.5); */
+    /* box-shadow: 0 0 15px rgba(0,0,0,0.2); */
+    /* border-radius: 5px; */
+/* width: 300px; */
+/* border: 15px solid green;
+padding: 50px;
+margin: 20px; */
+}
+
+
+
+
 .grey-circles {
   background-color: white;
   background-image: url("../img/texture-s.png");
@@ -67,6 +109,7 @@ html, body, main {
 div#footer>div {
   margin-bottom: 10px
 }
+
 
 .community {
   color: #dc3545;
