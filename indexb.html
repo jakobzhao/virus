@@ -216,37 +216,14 @@
 
     </div>
     <div id="table">
-      <div id="table-container">
-      <table class="table table-bordered ">
-        <thead>
-          <tr>
-            <th scope="col">Country</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+      <div id="table-container" data-simplebar data-simplebar-auto-hide="true">
+        <table class="table table-bordered">
+          <thead>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
 
 
 
@@ -469,51 +446,8 @@
       </div>
     </div>
   </div>
+  <script src="js/main.js"></script>
   <script>
-    $(window).ready(function() {
-      $('.loader').fadeOut("slow");
-    });
-
-
-
-    L.TopoJSON = L.GeoJSON.extend({
-      addData: function(jsonData) {
-        if (jsonData.type === 'Topology') {
-          for (key in jsonData.objects) {
-            geojson = topojson.feature(jsonData, jsonData.objects[key]);
-            L.GeoJSON.prototype.addData.call(this, geojson);
-          }
-        } else {
-          L.GeoJSON.prototype.addData.call(this, jsonData);
-        }
-      }
-    });
-    // Copyright (c) 2013 Ryan Clark
-
-    // var createLabelIcon = function(labelClass, labelText) {
-    //   return L.divIcon({
-    //     className: labelClass,
-    //     html: labelText
-    //   })
-    // }
-    //
-
-
-    var usBounds = L.latLngBounds(
-      L.latLng(-60, -100), //Southwest
-      L.latLng(80, 15) //Northeast
-    );
-
-
-    // var mymap = L.map('map', {
-    //   center: [38, -120],
-    //   zoomControl: false,
-    //   zoom: 4,
-    //   maxZoom: 10,
-    //   minZoom: 2,
-    //   worldCopyJump: true
-    // });
-
     var mymap = L.map('map', {
       center: [38, -120],
       zoomControl: false,
@@ -521,13 +455,11 @@
       maxZoom: 10,
       minZoom: 2,
       worldCopyJump: true
-    }).fitBounds(usBounds);
+    }).fitBounds(worldBounds);
     // .fitWorld()
     new L.Control.Zoom({
       position: 'topright'
     }).addTo(mymap);
-
-
 
 
 
@@ -616,6 +548,7 @@
       d3.csv('assets/cases.csv')
     ]).then(function(datasets) {
 
+      $("#date").text("Last update: " + datasets[3][0].timestamp.split(".")[0] + " PST");
 
       datasets[2].forEach(function(d) {
         L.marker([parseFloat(d.lat), parseFloat(d.lng)]).bindPopup(d.name + "&nbsp;&nbsp;(<a target='_blank' href='https://translate.google.com/#view=home&op=translate&sl=zh-CN&tl=en&text=" + d.name + "'>Translate to English</a>)").addTo(
@@ -629,64 +562,41 @@
           cases);
       })
 
-      // lastupdate = new Date(datasets[0][datasets[0].length - 1]["datetime"]);
-      // $("#date").text("Last update: " + lastupdate.toLocaleDateString() + " " + lastupdate.toLocaleTimeString() + " PST");
-
-      $("#date").text("Last update: " + datasets[3][0].timestamp.split(".")[0] + " PST");
-
-
-
-      //totalConfirmed
-      function tc(country) {
-        if (country == undefined) {
-          country = 0
-        } else {
-          country = +country.split("-")[0];
-        }
-        return country;
-      }
-
-      //totalRecovered
-      function tr(country) {
-        if (country.split("-")[2] == undefined) {
-          country = 0
-        } else {
-          country = +country.split("-")[2];
-        }
-        return country;
-      }
-
-      //totalDeath
-      function td(country) {
-        if (country.split("-")[3] == undefined) {
-          country = 0
-        } else {
-          country = +country.split("-")[3];
-        }
-        return country;
-      }
 
 
       var latest = datasets[0][datasets[0].length - 1];
+      delete latest["datetime"];
 
-      var china = tc(latest["anhui"]) + tc(latest["beijing"]) + tc(latest["chongqing"]) + tc(latest["fujian"]) + tc(latest["gansu"]) + tc(latest["guangdong"]) + tc(latest["guangxi"]) + tc(latest["guizhou"]) + tc(latest["hainan"]) + tc(latest[
-          "hebei"]) + tc(latest["heilongjiang"]) + tc(latest["henan"]) + tc(latest["hongkong"]) + tc(latest["hubei"]) + tc(latest["hunan"]) + tc(latest["neimenggu"]) + tc(latest["jiangsu"]) + tc(latest["jiangxi"]) + tc(latest["jilin"]) + tc(
-          latest["liaoning"]) + tc(latest["macau"]) + tc(latest["ningxia"]) + tc(latest["qinghai"]) + tc(latest["shaanxi"]) + tc(latest["shandong"]) + tc(latest["shanghai"]) + tc(latest["shanxi"]) + tc(latest["sichuan"]) + tc(latest["taiwan"]) +
-        tc(latest["tianjin"]) + tc(latest["xinjiang"]) + tc(latest["yunnan"]) + tc(latest["zhejiang"]) + tc(latest["xizang"]);
 
-      var top = {
-        "China": china,
-        "Japan": tc(latest["japan"]),
-        "US": tc(latest["us"]),
-        "Singapore": tc(latest["singapore"]),
-        "South Korea": tc(latest["south korea"]),
-        "Germany": tc(latest["germany"]),
-        "Spain": tc(latest["spain"]),
-        "Iran": tc(latest["iran"]),
-        "Italy": tc(latest["italy"]),
-        "France": tc(latest["france"]),
-        "Thailand": tc(latest["thailand"])
-      };
+      var top = {},
+        ustop = {},
+        cntop = {};
+      top["china"] = 0;
+      Object.keys(latest).forEach(function(d) {
+        value = tc(datasets[0][datasets[0].length - 1][d]) - tr(datasets[0][datasets[0].length - 1][d]) - td(datasets[0][datasets[0].length - 1][d]);
+
+        if (d == "anhui" || d == "beijing" || d == "chongqing" || d == "fujian" || d == "gansu" || d == "guangdong" || d == "guangxi" || d == "guizhou" || d == "hainan" || d == "hebei" || d == "heilongjiang" || d == "henan" || d ==
+          "hongkong" || d == "hubei" || d == "hunan" || d == "neimenggu" || d == "jiangsu" || d == "jiangxi" || d == "jilin" || d == "liaoning" || d == "macau" || d == "ningxia" || d == "qinghai" || d == "shaanxi" || d == "shandong" || d ==
+          "shanghai" || d == "shanxi" || d == "sichuan" || d == "taiwan" || d == "tianjin" || d == "xinjiang" || d == "yunnan" || d == "zhejiang" || d == "xizang") {
+          // console.log(value);
+          // console.log(top["china"]);
+          top["china"] += +value;
+          cntop[d] = value;
+
+        } else if (d == "alberta" || d == "columbia british" || d == "manitoba" || d == "new brunswick" || d == "newfoundland and labrador" || d == "nova scotia" || d == "ontario" || d == "prince edward island" || d == "quebec" || d ==
+          "saskatchewan" || d == "northwest territories" || d == "nunavut" || d == "yukon") {
+          ;
+        } else if (d == "alabama" || d == "alaska" || d == "arizona" || d == "arkansas" || d == "california" || d == "colorado" || d == "connecticut" || d == "delaware" || d == "florida" || d == "georgia usa" || d == "hawaii" || d ==
+          "idaho" || d == "illinois" || d == "indiana" || d == "iowa" || d == "kansas" || d == "kentucky" || d == "louisiana" || d == "maine" || d == "maryland" || d == "massachusetts" || d == "michigan" || d == "minnesota" || d ==
+          "mississippi" || d == "missouri" || d == "montana" || d == "nebraska" || d == "nevada" || d == "new hampshire" || d == "new jersey" || d == "new mexico" || d == "new york" || d == "north carolina" || d == "north dakota" || d ==
+          "ohio" || d == "oklahoma" || d == "oregon" || d == "pennsylvania" || d == "rhode island" || d == "south carolina" || d == "south dakota" || d == "tennessee" || d == "texas" || d == "utah" || d == "vermont" || d == "virginia" || d ==
+          "washington" || d == "west virginia" || d == "wyoming") {
+          ustop[d] = value;
+        } else {
+          top[d] = value;
+        }
+
+      })
 
 
       function sortJsObject(obj) {
@@ -708,33 +618,30 @@
 
       stop = sortJsObject(top);
 
-      var t = ["t"];
-      var confirmed = ["Aggr. Confirmed"];
-      var active = ["Active Confirmed"];
-      var suspected = ["Suspected"];
-      var recovered = ["Recovered"];
-      var death = ["Death"]
-      var global = {
-        name: "Global Trend",
-        c: confirmed,
-        s: suspected,
-        r: recovered,
-        d: death,
-        a: active
-      }
 
-      function calCounts(i) {
-        cf = 0, sp = 0, rc = 0, dd = 0, active = 0;
+      var places = {};
+
+      function calPlace(name) {
+        var place = {}
+        place[name] = {
+          't': ['t'],
+          'c': ['Aggr. Confirmed'],
+          's': ['s'],
+          'r': ['Recovered'],
+          'd': ['Death'],
+          'a': ['Active Confirmed']
+        }
+        // cf = 0, sp = 0, rc = 0, dd = 0, active = 0;
         datasets[0].forEach(function(d) {
           var USTd = new Date(d["datetime"]);
-          t.push(USTd.setHours(USTd.getHours() + 8));
-          // t.push(new Date(d["datetime"]));
+
+          place[name].t.push(USTd.setHours(USTd.getHours() + 8));
+
           cf = 0, sp = 0, rc = 0, dd = 0, active = 0;
           current = d;
           delete current["datetime"];
 
-
-          if (i["name"] == "Global Trend") {
+          if (name == "Global Trend") {
 
             Object.values(current).forEach(function(d) {
               if (d == undefined) {
@@ -754,7 +661,7 @@
               };
               active = cf - dd - rc;
             });
-            //
+
             cf -= (tc(current["alabama"]) + tc(current["alaska"]) + tc(current["arizona"]) + tc(current["arkansas"]) + tc(current["california"]) + tc(current["colorado"]) + tc(current["connecticut"]) + tc(current["delaware"]) + tc(current[
                 "florida"]) + tc(current["georgia usa"]) + tc(current["hawaii"]) + tc(current["idaho"]) + tc(current["illinois"]) + tc(current["indiana"]) + tc(current["iowa"]) + tc(current["kansas"]) + tc(current["kentucky"]) + tc(current[
                 "louisiana"]) + tc(current["maine"]) + tc(current["maryland"]) + tc(current["massachusetts"]) + tc(current["michigan"]) + tc(current["minnesota"]) + tc(current["mississippi"]) + tc(current["missouri"]) + tc(current[
@@ -785,8 +692,7 @@
                 "texas"]) +
               td(current["utah"]) + td(current["vermont"]) + td(current["virginia"]) + td(current["washington"]) + td(current["west virginia"]) + td(current["canada"]));
 
-
-          } else if (i["name"] == "china") {
+          } else if (name == "china") {
 
 
             for (const [key, value] of Object.entries(current)) {
@@ -796,7 +702,6 @@
                 key == "hubei" || key == "hunan" || key == "neimenggu" || key == "jiangsu" || key == "jiangxi" || key == "jilin" || key == "liaoning" ||
                 key == "macau" || key == "ningxia" || key == "qinghai" || key == "shaanxi" || key == "shandong" || key == "shanghai" || key == "shanxi" ||
                 key == "sichuan" || key == "taiwan" || key == "tianjin" || key == "xinjiang" || key == "yunnan" || key == "zhejiang" || key == "xizang") {
-
 
                 if (value == undefined) {
                   value = "0"
@@ -821,7 +726,7 @@
           } else {
 
 
-            d = current[i["name"]];
+            d = current[name];
             if (d == undefined) {
               d = "0"
             };
@@ -839,27 +744,31 @@
             };
             active = cf - dd - rc;
 
-
-
           }
+          active = cf - dd - rc;
+          place[name].c.push(cf);
+          //place[name].s.push(sp);
+          place[name].r.push(rc);
+          place[name].d.push(dd);
+          place[name].a.push(active);
 
-          i["c"].push(cf);
-          // i["s"].push(sp);
-          i["r"].push(rc);
-          i["d"].push(dd);
-          i["a"].push(active);
         });
-        active = cf - rc - dd;
-        $(".confirmed-count").text(cf);
-        // $(".suspected-count").text(sp);
-        $(".recovered-count").text(rc);
-        $(".death-count").text(dd);
-        $(".active-count").text(active);
 
-        nc = i.c[i.c.length - 1] - i.c[i.c.length - 2];
-        nr = i.r[i.r.length - 1] - i.r[i.r.length - 2];
-        nd = i.d[i.d.length - 1] - i.d[i.d.length - 2];
-        na = i.a[i.a.length - 1] - i.a[i.a.length - 2];
+        return place[name];
+      }
+
+      function showPlace(name) {
+
+        len = places[name].t.length;
+        $(".confirmed-count").text(places[name].c[len - 1]);
+        $(".recovered-count").text(places[name].r[len - 1]);
+        $(".death-count").text(places[name].d[len - 1]);
+        $(".active-count").text(places[name].a[len - 1]);
+
+        nc = places[name].c[len - 1] - places[name].c[len - 2];
+        nr = places[name].r[len - 1] - places[name].r[len - 2];
+        nd = places[name].d[len - 1] - places[name].d[len - 2];
+        na = places[name].a[len - 1] - places[name].a[len - 2];
 
         if (nc > 0) {
           $(".confirmed-new-count").text("+" + nc.toString());
@@ -884,6 +793,8 @@
         } else {
           $(".death-new-count").text(nd.toString());
         }
+
+
         if (na > 0) {
           document.getElementById("counticon").style.display = "initial";
           $(".active-new-count").text("+" + na.toString());
@@ -899,17 +810,18 @@
         }
 
 
-        if (i["name"] == "anhui" || i["name"] == "beijing" || i["name"] == "chongqing" || i["name"] == "fujian" || i["name"] == "gansu" || i["name"] == "guangdong" ||
-          i["name"] == "guangxi" || i["name"] == "guizhou" || i["name"] == "hainan" || i["name"] == "hebei" || i["name"] == "heilongjiang" || i["name"] == "henan" || i["name"] == "hongkong" ||
-          i["name"] == "hubei" || i["name"] == "hunan" || i["name"] == "neimenggu" || i["name"] == "jiangsu" || i["name"] == "jiangxi" || i["name"] == "jilin" || i["name"] == "liaoning" ||
-          i["name"] == "macau" || i["name"] == "ningxia" || i["name"] == "qinghai" || i["name"] == "shaanxi" || i["name"] == "shandong" || i["name"] == "shanghai" || i["name"] == "shanxi" ||
-          i["name"] == "sichuan" || i["name"] == "tianjin" || i["name"] == "xinjiang" || i["name"] == "yunnan" || i["name"] == "zhejiang" || i["name"] == "xizang") {
-          $("#placename").text(i["name"].toUpperCase() + ", CHINA");
+        if (name == "anhui" || name == "beijing" || name == "chongqing" || name == "fujian" || name == "gansu" || name == "guangdong" ||
+          name == "guangxi" || name == "guizhou" || name == "hainan" || name == "hebei" || name == "heilongjiang" || name == "henan" ||
+          name == "hubei" || name == "hunan" || name == "neimenggu" || name == "jiangsu" || name == "jiangxi" || name == "jilin" || name == "liaoning" ||
+          name == "ningxia" || name == "qinghai" || name == "shaanxi" || name == "shandong" || name == "shanghai" || name == "shanxi" ||
+          name == "sichuan" || name == "tianjin" || name == "xinjiang" || name == "yunnan" || name == "zhejiang" || name == "xizang") {
+          $("#placename").text(name.toUpperCase() + ", CHINA");
         } else {
-          $("#placename").text(i["name"].toUpperCase());
+          $("#placename").text(name.toUpperCase());
         }
 
       }
+
 
       function setFill(enname) {
         var pop = datasets[0][datasets[0].length - 1][enname];
@@ -1038,11 +950,12 @@
       }).addTo(mymap);
 
 
-
       $("#hint").on("click", function() {
-        calCounts(global);
+        places["Global Trend"] = calPlace("Global Trend");
+        showPlace("Global Trend");
+        // calCounts(global);
         chart.load({
-          columns: [global.c, global.a, global.r, global.d],
+          columns: [places["Global Trend"].c, places["Global Trend"].a, places["Global Trend"].r, places["Global Trend"].d],
           unload: ['Aggr. Confirmed', 'Active Confirmed', 'Recovered', 'Death'],
         });
 
@@ -1050,14 +963,16 @@
 
       });
 
+      mymap.on('click', onMapClick);
+
 
       function onMapClick(e) {
         $("#hint").click();
       }
 
-      mymap.on('click', onMapClick);
 
-      calCounts(global);
+      places["Global Trend"] = calPlace("Global Trend");
+      showPlace("Global Trend");
 
 
       chart = c3.generate({
@@ -1068,7 +983,7 @@
         data: {
           x: "t",
           y: "confirmed",
-          columns: [t, global.c, global.a, global.r, global.d],
+          columns: [places["Global Trend"].t, places["Global Trend"].c, places["Global Trend"].a, places["Global Trend"].r, places["Global Trend"].d],
           type: 'line',
           axes: {
             confirmed: 'y'
@@ -1143,59 +1058,18 @@
       y.push("Confirmed Cases");
       y.reverse();
 
-      function displayPlace(placeName) {
+      function displayPlace(name) {
 
-        var confirmed = ["Aggr. Confirmed"];
-        var suspected = ["Suspected"];
-        var recovered = ["Recovered"];
-        var active = ["Active Confirmed"];
-        var death = ["Death"]
-        var place = {
-          name: placeName,
-          c: confirmed,
-          s: suspected,
-          r: recovered,
-          d: death,
-          a: active
-        }
-
-        calCounts(place);
+        places[name] = calPlace(name);
+        showPlace(name);
 
         chart.load({
-          columns: [place.c, place.a, place.r, place.d],
+          columns: [places[name].c, places[name].a, places[name].r, places[name].d],
           unload: ['Aggr. Confirmed', 'Active Confirmed', 'Recovered', 'Death'],
         });
 
-
       }
 
-
-
-      function buildPlace(placeName) {
-
-        var confirmed = ["Aggr. Confirmed"];
-        var suspected = ["Suspected"];
-        var recovered = ["Recovered"];
-        var active = ["Active Confirmed"];
-        var death = ["Death"]
-        var place = {
-          name: placeName,
-          c: confirmed,
-          s: suspected,
-          r: recovered,
-          d: death,
-          a: active
-        }
-
-        calCounts(place);
-
-        chart.load({
-          columns: [place.c, place.a, place.r, place.d],
-          unload: ['Aggr. Confirmed', 'Active Confirmed', 'Recovered', 'Death'],
-        });
-
-
-      }
 
       rchart = c3.generate({
         size: {
@@ -1244,17 +1118,49 @@
 
 
 
-
       $('#panelSwitcher').change(function() {
 
         if (document.getElementById('panelSwitcher').checked) {
-            $("#table").css("visibility", "hidden");
-            $(".leaflet-control-container").css("visibility", "visible");
+          $("#table").css("visibility", "hidden");
+          $(".leaflet-control-container").css("visibility", "visible");
+
+          $("thead").html('');
+          $("tbody").html('');
+
 
         } else {
 
           $("#table").css("visibility", "visible");
           $(".leaflet-control-container").css("visibility", "hidden");
+
+
+          len = places["Global Trend"].t.length
+          showLen = 10
+          $("thead").html('<th scope="col">Country</th>');
+
+          Object.values(places["Global Trend"].t.slice(len - 1 - showLen, len - 1)).forEach(function(d) {
+            //label = new Date(new Date(d).setHours(new Date(d).getHours() + 8)).toString().substring(4,10);
+            label = (new Date(d)).toString().substring(4, 10);
+            // console.log(label);
+            $("thead").append("<th scope='row'>" + label + "</th>");
+          });
+
+          $("tbody").html('');
+          Object.keys(stop).slice(0, 40).forEach(function(d) {
+
+            $("tbody").append("<tr id='" + d.replace(" ", "") + "-row'><th>" + d.toUpperCase() + "</th></tr>");
+            places[d] = calPlace(d);
+
+            Object.values(places[d].c.slice(len - showLen, len)).forEach(function(k) {
+              $("tr#" + d.replace(" ", "") + "-row").append('<th scope="col">' + k + '</th>');
+            })
+
+
+
+
+
+          })
+
 
         }
 
@@ -1264,26 +1170,7 @@
 
 
 
-
-
-
-
-
     });
-
-    /////////////////////////
-
-    function dailyUpdate(d) {
-      // var currentDate = new Date(d.x.toString());
-      // console.log(month);
-      $("#date").text(d.x.toString().split(" 2020")[0].substring(4));
-
-    }
-
-
-    $(".leaflet-control-attribution")
-      .css("background-color", "transparent")
-      .html("");
   </script>
 
   <!-- Google Analytics -->
@@ -1296,19 +1183,17 @@
     ga('send', 'pageview');
   </script>
   <script async src='https://www.google-analytics.com/analytics.js'></script>
-  <!-- End Google Analytics -->
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159947082-1"></script>
+
   <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-159947082-1');
+    window.ga = window.ga || function() {
+      (ga.q = ga.q || []).push(arguments)
+    };
+    ga.l = +new Date;
+    ga('create', 'UA-159947082-1', 'auto');
+    ga('send', 'pageview');
   </script>
+  <script async src='https://www.google-analytics.com/analytics.js'></script>
+  <!-- Google Analytics End-->
 </body>
 
 </html>

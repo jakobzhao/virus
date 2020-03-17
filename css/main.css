@@ -17,14 +17,20 @@ html, body, main {
   bottom: 0px;
   background-color: white;
   z-index: 500!important;
+  font-size:12px;
+  /* overflow: auto; */
 }
 
 #table-container {
-  position: relative;
+  position: fixed;
+  /* overflow: auto; */
   left: 500px;
-  top: 20px;
-  width: 1000px;
-
+  right: 10px;
+  top: 15px;
+  bottom: 10px;
+  width: 1600px;
+  /* overflow-y: scroll; */
+  /* background-color: lightblue; */
 }
 .grey-circles {
   background-color: white;
