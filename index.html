@@ -1079,10 +1079,11 @@
           if (d.toUpperCase() == "DIAMOND PRINCESS") {
             return;
           }
+          var dlabel = d.toUpperCase();
           if (d.toUpperCase() == "GEORGIA USA") {
-            d= "GEORGIA"
+            dlabel = "GEORGIA";
           }
-          $("tbody").append("<tr id='" + d.replace(" ", "") + "-row'><th style='text-align:right;cursor: pointer;'>" + d.toUpperCase() + "</th></tr>");
+          $("tbody").append("<tr id='" + d.replace(" ", "") + "-row'><th style='text-align:right;cursor: pointer;'>" + dlabel + "</th></tr>");
           places[d] = calPlace(d);
 
 
