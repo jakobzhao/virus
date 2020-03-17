@@ -592,7 +592,7 @@
           ;
         } else if (datasets[5]["columns"].includes(d)) {
           ustop[d] = value;
-        } else {
+        } else if(d != "datetime"){
           top[d] = value;
         }
 
