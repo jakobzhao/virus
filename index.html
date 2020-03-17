@@ -550,9 +550,9 @@
       d3.csv('assets/communities.csv'),
       d3.csv('assets/timestamp.txt'),
       d3.csv('assets/cases.csv'),
-      d3.csv('assets/unitedStates.txt'),
-      d3.csv('assets/canada_city.txt'),
-      d3.csv('assets/old_name.csv')
+      d3.csv('assets/united-states.txt'),
+      d3.csv('assets/canada-city.txt'),
+      d3.csv('assets/old-name.csv')
     ]).then(function(datasets) {
 
       $("#date").text("Last update: " + datasets[3][0].timestamp.split(".")[0] + " PST");
