@@ -1075,11 +1075,13 @@
           topinuse = stop;
         }
 
-        Object.keys(topinuse).slice(0, 40).forEach(function(d) {
+        Object.keys(topinuse).slice(0, 51).forEach(function(d) {
           if (d.toUpperCase() == "DIAMOND PRINCESS") {
             return;
           }
-
+          if (d.toUpperCase() == "GEORGIA USA") {
+            d= "GEORGIA"
+          }
           $("tbody").append("<tr id='" + d.replace(" ", "") + "-row'><th style='text-align:right;cursor: pointer;'>" + d.toUpperCase() + "</th></tr>");
           places[d] = calPlace(d);
 
@@ -1212,7 +1214,7 @@
 
 
         len = places["Global Trend"].t.length
-        showLen = 20
+        showLen = 25
         $("thead").html('<th scope="col" style="text-align:right; width:120px !important"><b>Country</b></th>');
         $("thead").append("<th style='text-align:center' >Active Confirmed</th>");
 
@@ -1225,13 +1227,6 @@
 
 
         $("tbody").html('');
-
-        var topinuse = {};
-        // if (document.getElementById('areaSwitcher').checked != false) {
-        //   topinuse = sustop;
-        // } else {
-        //   topinuse = stop;
-        // }
         makeTable();
 
 
