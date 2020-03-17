@@ -9,17 +9,20 @@ html, body, main {
 }
 
 .btn-xs {
-  /* line-height: 50%; */
+  /* line-height: 0.5 !important; */
   /* align-items: baseline!important;
    align-content: center !important; */
   /* font-size: 15px!important */
   /* text-align: center !important */
+  /* top: 10px; */
+  /* bottom: 10px */
+
 }
 
-/* #panelSwitcher{
+#panelSwitcher{
 
   text-align: center
-} */
+}
 #table {
   visibility: hidden;
   position: fixed;
