@@ -8,13 +8,18 @@ html, body, main {
   overflow: hidden
 }
 
-#legend-panel {
-
+.btn-xs {
+  /* line-height: 50%; */
+  /* align-items: baseline!important;
+   align-content: center !important; */
+  /* font-size: 15px!important */
+  /* text-align: center !important */
 }
 
- #rankingToggle{
-   visibility: hidden
- }
+/* #panelSwitcher{
+
+  text-align: center
+} */
 #table {
   visibility: hidden;
   position: fixed;
@@ -22,7 +27,7 @@ html, body, main {
   left: 0px;
   right: 0px;
   bottom: 0px;
-  background-color: rgba(245, 245, 245, 0.7);
+  background-color: rgba(255, 255, 255, 0.72);
   z-index: 500 !important;
   font-size: 12px;
   /* overflow: auto; */
@@ -100,8 +105,8 @@ div#footer>div {
   color: #dc3545;
   /* font-size: 15px; */
   text-shadow: 0 0 3px #ffffff;
-visibility: visible;
-  /*   z-index: 400 !important; */
+  /* visibility: visible;
+  z-index: 400 !important; */
 }
 
 .case-marker {
@@ -190,7 +195,7 @@ visibility: visible;
     display: none;
   }
 
-  #info, .card-deck, #rank-chart, #legend-panel, #total-chart, .c3-legend-item, .c3-legend-background, #footer, #title>img, #title>span {
+  #info, .card-deck, #rank-chart, #total-chart, .c3-legend-item, .c3-legend-background, #footer, #title>img, #title>span {
     visibility: hidden !important;
   }
 
@@ -271,24 +276,6 @@ visibility: visible;
     text-decoration-line: underline !important;
     text-decoration-style: dotted !important;
   }
-
-  #source {
-    color: black;
-    font-size: 12px !important;
-    position: fixed !important;
-    left: 12px;
-    top: 65px !important;
-    width: 300px;
-  }
-
-  #source-website {
-    color: black;
-    font-size: 12px !important;
-    position: fixed !important;
-    left: 12px;
-    top: 65px !important;
-    width: 300px;
-  }
 }
 
 #info {
@@ -329,21 +316,15 @@ visibility: visible;
 }
 
 #legend-panel {
-  position: fixed;
-  /* padding-top: 10px !important; */
-  bottom: 30px;
-  right: 20px;
-  width: 340px;
+  position: relative;
+  padding-top: 10px !important;
+  bottom: 10px;
+  left: 12px;
+  width: 440px;
   height: 15px;
-  /* padding: 3px; */
-  z-index: 499;
-  background: dark;
-  border-radius: 0px;
-  border-color: white
-}
-
-#legend-panel .card{
-  background-color: rgba(174, 254, 167, 0) !important
+  padding: 0;
+  /* z-index: 1000; */
+  /* background: #343a4000; */
 }
 
 .legend>div.card {
@@ -414,18 +395,6 @@ span {
   left: -10px;
 }
 
-#source {
-  position: relative;
-  top: -30px;
-  font-size: 14px;
-}
-
-#source-website {
-  position: relative;
-  top: -30px;
-  font-size: 14px;
-}
-
 .counts {
   margin-top: 0px;
 }
@@ -474,18 +443,14 @@ text {
 
 #footer {
   position: relative;
-  top: 35px;
+  top: 15px;
   bottom: 10px;
   font-size: 13px;
   line-height: 150%;
   color: lightgray;
-  margin-bottom:100px;
+  margin-bottom: 50px;
 }
-/* 
-#mtToggle{
-  /* position: relative; */
 
-} */
 #footer>div {
   font-size: 13px;
 }
