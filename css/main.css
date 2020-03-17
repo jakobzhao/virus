@@ -8,7 +8,9 @@ html, body, main {
   overflow: hidden
 }
 
+#legend-panel {
 
+}
 
  #rankingToggle{
    visibility: hidden
@@ -188,7 +190,7 @@ visibility: visible;
     display: none;
   }
 
-  #info, .card-deck, #rank-chart, #total-chart, .c3-legend-item, .c3-legend-background, #footer, #title>img, #title>span {
+  #info, .card-deck, #rank-chart, #legend-panel, #total-chart, .c3-legend-item, .c3-legend-background, #footer, #title>img, #title>span {
     visibility: hidden !important;
   }
 
@@ -309,15 +311,21 @@ visibility: visible;
 }
 
 #legend-panel {
-  position: relative;
-  padding-top: 10px !important;
-  bottom: 10px;
-  left: 12px;
-  width: 440px;
+  position: fixed;
+  /* padding-top: 10px !important; */
+  bottom: 30px;
+  right: 20px;
+  width: 340px;
   height: 15px;
-  padding: 0;
-  /* z-index: 1000; */
-  /* background: #343a4000; */
+  /* padding: 3px; */
+  z-index: 499;
+  background: dark;
+  border-radius: 0px;
+  border-color: white
+}
+
+#legend-panel .card{
+  background-color: rgba(174, 254, 167, 0) !important
 }
 
 .legend>div.card {

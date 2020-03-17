@@ -32,9 +32,6 @@ var worldBounds = L.latLngBounds(
   L.latLng(80, 15) //Northeast
 );
 
-$(".leaflet-control-attribution")
-  .css("background-color", "transparent")
-  .html("");
 
 
 //totalConfirmed

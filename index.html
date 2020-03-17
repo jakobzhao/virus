@@ -136,53 +136,7 @@
 
         <div> In the main map, an country or region's inflection level is measured by the # of today's active/remaining confirmed cases. Its legend is displayed as below. The gray slash texture indicates no previous casese are discovered; the green
           texture means the region in which all the infected cases have recovered.</div>
-        <div id="legend-panel" class="card-deck legend">
 
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title grey-circles" style="color:black">no case</h5>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-body legend-color-1">
-              <h5 class="card-title" style="color:black">1</h5>
-
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-body legend-color-2">
-              <h5 class="card-title" style="color:black">10</h5>
-
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body  legend-color-3">
-              <h5 class="card-title" style="color:black">100</h5>
-
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-body  legend-color-4">
-              <h5 class="card-title" style="color:black">250</h5>
-
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-body legend-color-5">
-              <h5 class="card-title" style="color:black">1,000</h5>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-body legend-color-6">
-              <h5 class="card-title" style="color:black">10,000+</h5>
-            </div>
-          </div>
-        </div>
 
 
         <div>Infection Case(s) &nbsp; <i class='fas fa-users community'></i> &nbsp; indicates one or several confirmed infected individual(s) in the U.S., excluding those were identified from the Diamond Princess.
@@ -231,6 +185,54 @@
 
 
 
+    </div>
+
+    <div id="legend-panel" class="card-deck legend">
+
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title grey-circles" style="color:black">no case</h5>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body legend-color-1">
+          <h5 class="card-title" style="color:black">1</h5>
+
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body legend-color-2">
+          <h5 class="card-title" style="color:black">10</h5>
+
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body  legend-color-3">
+          <h5 class="card-title" style="color:black">100</h5>
+
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body  legend-color-4">
+          <h5 class="card-title" style="color:black">250</h5>
+
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body legend-color-5">
+          <h5 class="card-title" style="color:black">1,000</h5>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body legend-color-6">
+          <h5 class="card-title" style="color:black">10,000+</h5>
+        </div>
+      </div>
     </div>
     <div id="map"></div>
 
@@ -1240,6 +1242,7 @@
 
         if (document.getElementById('panelSwitcher').checked == false) {
           $("#table").css("visibility", "hidden");
+            $("#rankingToggle").css("visibility", "hidden");
           $(".leaflet-control-container").css("visibility", "visible");
 
           $("thead").html('');
@@ -1278,6 +1281,9 @@
 
       })
 
+      $(".leaflet-control-attribution")
+        .css("background-color", "transparent")
+        .html("");
 
 
 
