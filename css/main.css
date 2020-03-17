@@ -8,21 +8,7 @@ html, body, main {
   overflow: hidden
 }
 
-.btn-xs {
-  /* line-height: 0.5 !important; */
-  /* align-items: baseline!important;
-   align-content: center !important; */
-  /* font-size: 15px!important */
-  /* text-align: center !important */
-  /* top: 10px; */
-  /* bottom: 10px */
 
-}
-
-#panelSwitcher{
-
-  text-align: center
-}
 #table {
   visibility: hidden;
   position: fixed;
@@ -30,7 +16,7 @@ html, body, main {
   left: 0px;
   right: 0px;
   bottom: 0px;
-  background-color: rgba(255, 255, 255, 0.72);
+  background-color: rgba(245, 245, 245, 0.7);
   z-index: 500 !important;
   font-size: 12px;
   /* overflow: auto; */

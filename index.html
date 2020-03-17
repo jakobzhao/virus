@@ -129,8 +129,7 @@
 
 
 
-        <input type="checkbox" id="panelSwitcher" unchecked data-toggle="toggle" data-off="Situational Chart (Beta)" data-width="180" data-size="xs" data-on="Back to Map" data-onstyle="danger" data-offstyle="outline-secondary"
-          >
+        <input type="checkbox" id="panelSwitcher" unchecked data-toggle="toggle" data-off="Situational Chart (Beta)" data-width="180" data-size="xs" data-on="Back to Map" data-onstyle="danger" data-offstyle="outline-secondary">
 
         <div> In the main map, an country or region's inflection level is measured by the # of today's active/remaining confirmed cases. Its legend is displayed as below. The gray slash texture indicates no previous casese are discovered; the green
           texture means the region in which all the infected cases have recovered.</div>
@@ -1119,8 +1118,8 @@
       //
       //
 
-
       $('#panelSwitcher').change(function() {
+        $('.loader').show();
 
         if (document.getElementById('panelSwitcher').checked == false) {
           $("#table").css("visibility", "hidden");
@@ -1137,8 +1136,8 @@
 
 
           len = places["Global Trend"].t.length
-          showLen = 25
-          $("thead").html('<th scope="col" style="text-align:right; width:120px !important">Country</th>');
+          showLen = 20
+          $("thead").html('<th scope="col" style="text-align:right; width:120px !important"><b>Country</b></th>');
 
           Object.values(places["Global Trend"].t.slice(len - 1 - showLen, len - 1)).forEach(function(d) {
             //label = new Date(new Date(d).setHours(new Date(d).getHours() + 8)).toString().substring(4,10);
@@ -1150,15 +1149,19 @@
 
           $("tbody").html('');
 
-          Object.keys(stop).slice(0, 40).forEach(function(d) {
+          Object.keys(stop).slice(0, 30).forEach(function(d) {
+            if (d.toUpperCase() == "DIAMOND PRINCESS") {
+              return;
+            }
 
-            $("tbody").append("<tr id='" + d.replace(" ", "") + "-row'><th style='text-align:right;cursor: pointer;'>" + d.toUpperCase().replace("DIAMOND PRINCESS", "CRUISE") + "</th></tr>");
+            $("tbody").append("<tr id='" + d.replace(" ", "") + "-row'><th style='text-align:right;cursor: pointer;'>" + d.toUpperCase() + "</th></tr>");
             places[d] = calPlace(d);
 
 
             $("#" + d.replace(" ", "") + "-row").on("click", function() {
               // places[d] = calPlace(d);
               showPlace(d);
+
               chart.load({
                 columns: [places[d].c, places[d].a, places[d].r, places[d].d],
                 unload: ['Aggr. Confirmed', 'Active Confirmed', 'Recovered', 'Death'],
@@ -1261,7 +1264,7 @@
 
 
         }
-
+        $('.loader').fadeOut("slow");
 
       })
 
