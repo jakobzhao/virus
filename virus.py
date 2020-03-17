@@ -14,7 +14,8 @@ options.add_argument('--no-sandbox')
 # browser = webdriver.Chrome("/usr/bin/chromedriver", options=options)
 # browser = webdriver.Chrome("E:\chromedriver_win32\chromedriver.exe")
 try:
-    browser = webdriver.Chrome("/Users/joshuaji/Desktop/chromedriver") #joshua's chromedrive location
+    browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver")
+    #browser = webdriver.Chrome("/Users/joshuaji/Desktop/chromedriver") #joshua's chromedrive location
 except FileNotFoundError:
     browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver")
 except FileNotFoundError:
@@ -44,20 +45,20 @@ with open("assets/name.csv", "r", encoding="utf-8") as fp:
         chineseCity[placeItem[0]] = placeItem[1]
 
 oldCity = {}
-with open("assets/old_name.csv", "r", encoding="utf-8") as fp:
+with open("assets/old-name.csv", "r", encoding="utf-8") as fp:
     lines = fp.readlines()
     for line in lines:
         placeItem = line.replace("\n", "").split(",")
         oldCity[placeItem[0]] = placeItem[1]
 
 unitedStates = []
-with open("assets/unitedStates.txt", "r", encoding="utf-8") as fp:
+with open("assets/united-states.txt", "r", encoding="utf-8") as fp:
     states = fp.readlines()
     for state in states:
         unitedStates.append(state.replace("\n","").lower())
 
 canadacities = []
-with open("assets/canada_city.txt", "r", encoding="utf-8") as fp:
+with open("assets/canada-city.txt", "r", encoding="utf-8") as fp:
     states = fp.readlines()
     for state in states:
         canadacities.append(state.replace("\n","").lower())
