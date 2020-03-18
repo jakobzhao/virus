@@ -8,9 +8,7 @@ html, body, main {
   overflow: hidden
 }
 
-#legend-panel {
 
-}
 
  #rankingToggle{
    visibility: hidden
@@ -481,7 +479,7 @@ text {
   color: lightgray;
   margin-bottom:100px;
 }
-/* 
+/*
 #mtToggle{
   /* position: relative; */
 
