@@ -129,8 +129,7 @@
         <div id="mtToggle">
           <input type="checkbox" id="panelSwitcher" unchecked data-toggle="toggle" data-off="Situational Heatmap" data-width="180" data-size="xs" data-on="Back to Map" data-onstyle="secondary" data-offstyle="outline-secondary">
           <span style="margin-right:50px"> </span>
-          <span id="rankingToggle"><input type="checkbox" id="areaSwitcher" unchecked data-toggle="toggle" data-on="Global Rank" data-width="180" data-size="xs" data-off="U.S. Rank" data-onstyle="secondary"
-              data-offstyle="outline-secondary">
+          <span id="rankingToggle"><input type="checkbox" id="areaSwitcher" unchecked data-toggle="toggle" data-on="Global Rank" data-width="180" data-size="xs" data-off="U.S. Rank" data-onstyle="secondary" data-offstyle="outline-secondary">
           </span>
         </div>
 
@@ -173,16 +172,13 @@
     </div>
     <div id="table">
       <div id="table-container" data-simplebar data-simplebar-auto-hide="true">
-        <table id="table-container-div" class="table table-bordered">
+        <table id="table-container-div" class="table table-bordered table-hover">
           <thead>
           </thead>
           <tbody>
           </tbody>
         </table>
       </div>
-
-
-
     </div>
 
     <div id="legend-panel" class="card-deck legend">
@@ -592,7 +588,7 @@
           ;
         } else if (datasets[5]["columns"].includes(d)) {
           ustop[d] = value;
-        } else if(d != "datetime"){
+        } else if (d != "datetime") {
           top[d] = value;
         }
 
@@ -1237,7 +1233,7 @@
 
         if (document.getElementById('panelSwitcher').checked == false) {
           $("#table").css("visibility", "hidden");
-            $("#rankingToggle").css("visibility", "hidden");
+          $("#rankingToggle").css("visibility", "hidden");
           $(".leaflet-control-container").css("visibility", "visible");
 
           $("thead").html('');
