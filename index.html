@@ -75,7 +75,7 @@
 
       <p><span id="placename">GLOBAL TREND</span> </p>
       <div><span id="last-date">Last update: </span><span id="date"></span> <span id="hint"> Click a place to review local trend.</span></div>
-      <span id = "source">Source: </span><a id="source-website" href = "" target="_blank"></a>
+      <span id="source">Source: </span><a id="source-website" href="" target="_blank"></a>
       <div id="deck-1" class="card-deck counts">
         <div class="card">
           <div class="card-body confirmed">
@@ -141,7 +141,8 @@
           </span>
         </div>
 
-        <div id= "content-explain" style="margin-top:30px"> In the main map, an country or region's inflection level is measured by the # of today's active/remaining confirmed cases. The gray slash texture indicates no previous cases are discovered; the green
+        <div id="content-explain" style="margin-top:30px"> In the main map, an country or region's inflection level is measured by the # of today's active/remaining confirmed cases. The gray slash texture indicates no previous cases are discovered;
+          the green
           texture means the region in which all the infected cases have recovered.</div>
 
         <div>Infection Case(s) &nbsp; <i class='fas fa-users community'></i> &nbsp; indicates one or several confirmed infected individual(s) in the U.S., excluding those were identified from the Diamond Princess.
@@ -830,17 +831,18 @@
           $("#placename").text(name.toUpperCase());
         }
 
-        if(datasets[5]["columns"].
-          // $("#source-website").html('<a target="_blank" href="#">WHO</a>, <a target="_blank" href="#">CDC</a> and <a target="_blank" href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546">NBC News</a>.');
-        }else if(datasets[6]["columns"].includes(name)){ //Canada
+        if (datasets[5]["columns"]) {
+          $("#source-website").html(
+            '<a target="_blank" href="#">WHO</a>, <a target="_blank" href="#">CDC</a> and <a target="_blank" href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546">NBC News</a>.');
+        } else if (datasets[6]["columns"].includes(name)) { //Canada
           $("#source-website").html('<a target="_blank" href="#">Public Health Agency of Canada.</a>');
-        }else if(datasets[7]["columns"].includes(name)){ //China
+        } else if (datasets[7]["columns"].includes(name)) { //China
           $("#source-website").html('WHO, China CDC and Baidu.');
-        }else if(name == "Global Trend"){ //global
+        } else if (name == "Global Trend") { //global
           $("#source-website").html('WHO, NBC News, CDC, Baidu and etc.');
-        }else if(name == "japan"){ //japan
+        } else if (name == "japan") { //japan
           $("#source-website").html('WHO and Baidu. The discrepancy on the data in Japan between March 11th and March 12th comes from the disagreement of whether to include cases from the Princess Diamond cruise.');
-        }else{ //Other countries
+        } else { //Other countries
           $("#source-website").html('WHO an Baidu.');
         }
       }
@@ -1261,7 +1263,9 @@
 
           $("#rankingToggle").css("visibility", "hidden");
           $(".leaflet-control-container").css("visibility", "visible");
-          $("#content-explain").text("In the main map, an country or region's inflection level is measured by the # of today's active/remaining confirmed cases. The gray slash texture indicates no previous cases are discovered; the greentexture means the region in which all the infected cases have recovered.");
+          $("#content-explain").text(
+            "In the main map, an country or region's inflection level is measured by the # of today's active/remaining confirmed cases. The gray slash texture indicates no previous cases are discovered; the greentexture means the region in which all the infected cases have recovered."
+            );
           $("thead").html('');
           $("tbody").html('');
 
@@ -1269,7 +1273,9 @@
         } else {
 
           $("#rankingToggle").css('visibility', 'visible');
-          $("#content-explain").text("This situational heatmap use different color and size to represent the number and recover rate of coronavirus cases of different places within 20 days. The size of the block increase as the number aggregate cases increase. While the color of the blobk get darker as the 'confirmed / aggregate' rate increase.");
+          $("#content-explain").text(
+            "This situational heatmap use different color and size to represent the number and recover rate of coronavirus cases of different places within 20 days. The size of the block increase as the number aggregate cases increase. While the color of the blobk get darker as the 'confirmed / aggregate' rate increase."
+            );
           $("#table").css("visibility", "visible");
           $(".leaflet-control-container").css("visibility", "hidden");
 
