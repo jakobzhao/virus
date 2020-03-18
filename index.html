@@ -75,7 +75,7 @@
 
       <p><span id="placename">GLOBAL TREND</span> </p>
       <div> <span id="date"></span> <span id="hint"> Click a place to review local trend.</span></div>
-      <span id = "source">Source:</span><a id="source-website" href = "" target="_blank"></a>
+      <p><span id = "source">Source:</span><a id="source-website" href = "" target="_blank"></a></p>
       <div id="deck-1" class="card-deck counts">
         <div class="card">
           <div class="card-body confirmed">
@@ -141,7 +141,7 @@
           </span>
         </div>
 
-        <div style="margin-top:30px"> In the main map, an country or region's inflection level is measured by the # of today's active/remaining confirmed cases. The gray slash texture indicates no previous cases are discovered; the green
+        <div id= "content-explain" style="margin-top:30px"> In the main map, an country or region's inflection level is measured by the # of today's active/remaining confirmed cases. The gray slash texture indicates no previous cases are discovered; the green
           texture means the region in which all the infected cases have recovered.</div>
 
         <div>Infection Case(s) &nbsp; <i class='fas fa-users community'></i> &nbsp; indicates one or several confirmed infected individual(s) in the U.S., excluding those were identified from the Diamond Princess.
@@ -831,19 +831,22 @@
         }
 
         if(datasets[5]["columns"].includes(name)){ //America
-          $("#source-website").text('WHO, CDC, NBC News');
+          $("#source-website").text('WHO, CDC, NBC News.');
           $("#source-website").attr("href","https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546");
         }else if(datasets[6]["columns"].includes(name)){ //Canada
-          $("#source-website").text('Public Health Agency of Canada');
+          $("#source-website").text('Public Health Agency of Canada.');
           $("#source-website").attr("href","https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html");
         }else if(datasets[7]["columns"].includes(name)){ //China
-          $("#source-website").text('WHO, China CDC, Baidu');
+          $("#source-website").text('WHO, China CDC, Baidu.');
           $("#source-website").attr("href","https://voice.baidu.com/act/newpneumonia/newpneumonia");
-        }else if(name == "Global Trend"){ //Other countries
-          $("#source-website").text('WHO, Baidu, NBC News, CDC, PHA');
+        }else if(name == "Global Trend"){ //global
+          $("#source-website").text('WHO, Baidu, NBC News, CDC, PHA.');
+          $("#source-website").attr("href","https://voice.baidu.com/act/newpneumonia/newpneumonia");
+        }else if(name == "japan"){ //japan
+          $("#source-website").text('WHO, Baidu. The discrepancy on the data in Japan between March 11th and March 12th comes from the disagreement of whether to include cases from the Princess Diamond cruise.');
           $("#source-website").attr("href","https://voice.baidu.com/act/newpneumonia/newpneumonia");
         }else{ //Other countries
-          $("#source-website").text('WHO, Baidu');
+          $("#source-website").text('WHO, Baidu.');
           $("#source-website").attr("href","https://voice.baidu.com/act/newpneumonia/newpneumonia");
         }
       }
@@ -1230,7 +1233,6 @@
         $('.loader').show();
 
         $("#rankingToggle").css('visibility', 'visible');
-
         $("#table").css("visibility", "visible");
         $(".leaflet-control-container").css("visibility", "hidden");
 
@@ -1263,6 +1265,7 @@
 
         if (document.getElementById('panelSwitcher').checked == false) {
           $("#table").css("visibility", "hidden");
+          $("#content-explain").text("In the main map, an country or region's inflection level is measured by the # of today's active/remaining confirmed cases. The gray slash texture indicates no previous cases are discovered; the greentexture means the region in which all the infected cases have recovered.");
           $("#rankingToggle").css("visibility", "hidden");
           $(".leaflet-control-container").css("visibility", "visible");
 
@@ -1273,7 +1276,7 @@
         } else {
 
           $("#rankingToggle").css('visibility', 'visible');
-
+          $("#content-explain").text("In the main map, an country or region's inflection level is measured by the # of today's active/remaining confirmed cases. The gray slash texture indicates no previous cases are discovered; the greentexture means the region in which all the infected cases have recovered.");
           $("#table").css("visibility", "visible");
           $(".leaflet-control-container").css("visibility", "hidden");
 
