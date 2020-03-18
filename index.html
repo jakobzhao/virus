@@ -18,7 +18,7 @@
   <link href="css/c3.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/simplebar.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link href="css/bootstrap4-toggle.min.css" rel="stylesheet">
+  <link href="css/bootstrap4-toggle.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
 
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
@@ -129,9 +129,11 @@
 
       <div id="footer">
         <div id="mtToggle">
-          <span> Rankings </span>
-          <i style="color:#dc3545" class="fas fa-angle-double-right animated infinite slideInRight delay-2s" style="gray"></i>
-          <span style="margin-right:15px"> </span>
+          <span id="rankingText"> <b> Rankings</b> </span>
+          <!-- #e8e3d3; -->
+          <!-- #dc3545; -->
+          <span id="rankingIcon"><i style="color:#dc3545" class="fas fa-angle-double-right animated infinite slideInRight delay-2s" style="gray"></i></span>
+          <span id="rankingSpace" style="margin-right:15px"> </span>
           <input type="checkbox" id="panelSwitcher" unchecked data-toggle="toggle" data-off="Situational Heatmap" data-width="180" data-size="xs" data-on="Back to Map" data-onstyle="secondary" data-offstyle="outline-secondary">
           <span style="margin-right:25px"> </span>
           <span id="rankingToggle"><input type="checkbox" id="areaSwitcher" unchecked data-toggle="toggle" data-on="Global Rank" data-width="100" data-size="xs" data-off="U.S. Rank" data-onstyle="secondary" data-offstyle="outline-secondary">
@@ -1216,6 +1218,7 @@
         $("thead").html('<th scope="col" style="text-align:right; width:120px !important"><b>Country</b></th>');
         $("thead").append("<th style='text-align:center' >Active Confirmed</th>");
 
+
         Object.values(places["Global Trend"].t.slice(len - 1 - showLen, len - 1)).forEach(function(d) {
           //label = new Date(new Date(d).setHours(new Date(d).getHours() + 8)).toString().substring(4,10);
           label = (new Date(d)).toString().substring(4, 10);
@@ -1251,6 +1254,11 @@
 
           $("#table").css("visibility", "visible");
           $(".leaflet-control-container").css("visibility", "hidden");
+
+          $("#rankingText").remove();
+          $("#rankingIcon").remove();
+          $("#rankingSpace").remove();
+
 
 
           len = places["Global Trend"].t.length
