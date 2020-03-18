@@ -75,6 +75,7 @@
 
       <p><span id="placename">GLOBAL TREND</span> </p>
       <div> <span id="date"></span> <span id="hint"> Click a place to review local trend.</span></div>
+      <span id = "source">Source:</span><a id="source-website" href = "" target="_blank"></a>
       <div id="deck-1" class="card-deck counts">
         <div class="card">
           <div class="card-body confirmed">
@@ -829,6 +830,22 @@
           $("#placename").text(name.toUpperCase());
         }
 
+        if(datasets[5]["columns"].includes(name)){ //America
+          $("#source-website").text('WHO, CDC, NBC News');
+          $("#source-website").attr("href","https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546");
+        }else if(datasets[6]["columns"].includes(name)){ //Canada
+          $("#source-website").text('Public Health Agency of Canada');
+          $("#source-website").attr("href","https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html");
+        }else if(datasets[7]["columns"].includes(name)){ //China
+          $("#source-website").text('WHO, China CDC, Baidu');
+          $("#source-website").attr("href","https://voice.baidu.com/act/newpneumonia/newpneumonia");
+        }else if(name == "Global Trend"){ //Other countries
+          $("#source-website").text('WHO, Baidu, NBC News, CDC, PHA');
+          $("#source-website").attr("href","https://voice.baidu.com/act/newpneumonia/newpneumonia");
+        }else{ //Other countries
+          $("#source-website").text('WHO, Baidu');
+          $("#source-website").attr("href","https://voice.baidu.com/act/newpneumonia/newpneumonia");
+        }
       }
 
 
