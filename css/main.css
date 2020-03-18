@@ -9,6 +9,12 @@ html, body, main {
 }
 
 
+.emphasis{
+
+  text-decoration: underline;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
 
  #rankingToggle{
    visibility: hidden
