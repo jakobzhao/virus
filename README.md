@@ -1,13 +1,13 @@
 #  Novel Coronavirus Infection Map
 
-This repository stores the source code for the Novel Coronavirus Infection Map (https://hgis.uw.edu/virus). This online internactive map enables users to track both the global and local trends of Novel Coronavirus infection since Jan 21st, 2020. The dataset is timely collected from multiple official sources and then plotted opto this map.
+This repository stores the source code for the Novel Coronavirus Infection Map (https://hgis.uw.edu/virus). This online interactive map enables users to track both the global and local trends of Novel Coronavirus infection since Jan 21st, 2020. The dataset is timely collected from multiple official sources and then plotted onto this map.
 
 ![](img/interface.png)
 
 ## Data Sources:
 The data are mainly collected from a) [National Health Commission](http://en.nhc.gov.cn/) (NHC) of the People’s Republic of China; b) China’s Provincial & Municipal Health Commission; c) China’s Provincial & Municipal government database; d) Public data published from Hongkong, Macau and Taiwan official channels; e) [World Health Organization](https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/) (WHO), f) [Centers for Disease Control and Prevention](https://www.cdc.gov/coronavirus/) (CDC), g) [Public Health Agency of Canada](https://www.canada.ca/en/public-health.html) (PHA), h) [Baidu](https://voice.baidu.com/act/newpneumonia/newpneumonia), i)[Mapmiao](https://mapmiao.com/ncov/).
 
-- The dataset (in SQLite format) can be dowloaded from http://hgis.uw.edu/virus/assets/virus.db.
+- The dataset (in SQLite format) can be downloaded from http://hgis.uw.edu/virus/assets/virus.db.
 
 - You can view the data (in CSV format) at http://hgis.uw.edu/virus/assets/virus.csv.
 
