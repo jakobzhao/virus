@@ -769,10 +769,10 @@
       function showPlace(name) {
 
         len = places[name].t.length;
-        $(".confirmed-count").text(places[name].c[len - 1]);
-        $(".recovered-count").text(places[name].r[len - 1]);
-        $(".death-count").text(places[name].d[len - 1]);
-        $(".active-count").text(places[name].a[len - 1]);
+        $(".confirmed-count").text(places[name].c[len - 1].toLocaleString());
+        $(".recovered-count").text(places[name].r[len - 1].toLocaleString());
+        $(".death-count").text(places[name].d[len - 1].toLocaleString());
+        $(".active-count").text(places[name].a[len - 1].toLocaleString());
 
         nc = places[name].c[len - 1] - places[name].c[len - 2];
         nr = places[name].r[len - 1] - places[name].r[len - 2];
@@ -780,42 +780,42 @@
         na = places[name].a[len - 1] - places[name].a[len - 2];
 
         if (nc > 0) {
-          $(".confirmed-new-count").text("+" + nc.toString());
+          $(".confirmed-new-count").text("+" + nc.toLocaleString());
         } else if (nc == 0) {
           $(".confirmed-new-count").text("");
         } else {
 
-          $(".confirmed-new-count").text(nc.toString());
+          $(".confirmed-new-count").text(nc.toLocaleString());
         }
 
         if (nr > 0) {
-          $(".recovered-new-count").text("+" + nr.toString());
+          $(".recovered-new-count").text("+" + nr.toLocaleString());
         } else if (nr == 0) {
           $(".recovered-new-count").text("")
         } else {
-          $(".recovered-new-count").text(nr.toString());
+          $(".recovered-new-count").text(nr.toLocaleString());
         }
         if (nd > 0) {
-          $(".death-new-count").text("+" + nd.toString());
+          $(".death-new-count").text("+" + nd.toLocaleString());
         } else if (nd == 0) {
           $(".death-new-count").text("")
         } else {
-          $(".death-new-count").text(nd.toString());
+          $(".death-new-count").text(nd.toLocaleString());
         }
 
 
         if (na > 0) {
           document.getElementById("counticon").style.display = "initial";
-          $(".active-new-count").text("+" + na.toString());
+          $(".active-new-count").text("+" + na.toLocaleString());
         } else if (na < 0) {
           document.getElementById("counticon").style.display = "initial";
-          $(".active-new-count").text("" + na.toString());
+          $(".active-new-count").text("" + na.toLocaleString());
         } else if (na == 0) {
           document.getElementById("counticon").style.display = "none";
           $(".active-new-count").text("")
         } else {
           document.getElementById("counticon").style.display = "none";
-          $(".active-new-count").text(na.toString());
+          $(".active-new-count").text(na.toLocaleString());
         }
 
 
