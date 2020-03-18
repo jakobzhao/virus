@@ -13,17 +13,12 @@ options.add_argument('--headless')
 options.add_argument('--no-sandbox')
 # browser = webdriver.Chrome("/usr/bin/chromedriver", options=options)
 # browser = webdriver.Chrome("E:\chromedriver_win32\chromedriver.exe")
-try:
-    browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver")
-    #browser = webdriver.Chrome("/Users/joshuaji/Desktop/chromedriver") #joshua's chromedrive location
-except FileNotFoundError:
-    browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver")
-except FileNotFoundError:
-    browser = webdriver.Chrome("C:/workspace/chromedriver.exe")
-except FileNotFoundError:
-    browser = webdriver.Chrome("E:/dev/workspaces/chromedriver.exe")
-except:
-    browser = webdriver.Chrome("/Users/stevenbao/dev/chromedriver")
+
+#browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver")
+#browser = webdriver.Chrome("/Users/joshuaji/Desktop/chromedriver") #joshua's chromedrive location
+#browser = webdriver.Chrome("C:/workspace/chromedriver.exe")
+browser = webdriver.Chrome("E:/dev/workspaces/chromedriver.exe")
+#browser = webdriver.Chrome("/Users/stevenbao/dev/chromedriver")
 
 now = str(datetime.now())
 sqls = "INSERT OR REPLACE INTO virus ('datetime'"
