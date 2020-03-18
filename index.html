@@ -831,11 +831,9 @@
         }
 
         if(datasets[5]["columns"].includes(name)){ //America
-          $("#source-website").html('<a href="#">WHO</a>, CDC, NBC News.');
-          $("#source-website").attr("href","https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546");
+          $("#source-website").html('<a target="_blank" href="#">WHO</a>, <a target="_blank" href="#">CDC</a>, <a target="_blank" href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546">NBC News</a>.');
         }else if(datasets[6]["columns"].includes(name)){ //Canada
-          $("#source-website").text('Public Health Agency of Canada.');
-          $("#source-website").attr("href","https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html");
+          $("#source-website").html('<a target="_blank" href="#">Public Health Agency of Canada.</a>');
         }else if(datasets[7]["columns"].includes(name)){ //China
           $("#source-website").text('WHO, China CDC, Baidu.');
           $("#source-website").attr("href","https://voice.baidu.com/act/newpneumonia/newpneumonia");
