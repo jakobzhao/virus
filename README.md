@@ -12,7 +12,16 @@ Infection Case(s) (shown as human icon in red) indicates one or more confirmed i
 An Infected Community (shown as bed icon in red) indicates a community or village where confirmed cases were found. The local governments in China have taken strict measures to isolate the residents of these places from the outside. The dataset of infected community can be found at [ahusmart](https://lab.ahusmart.com/nCoV/api/detail).
 
 ## Data Sources:
-The data are mainly collected from a) [National Health Commission](http://en.nhc.gov.cn/) (NHC) of the People’s Republic of China; b) China’s Provincial & Municipal Health Commission; c) China’s Provincial & Municipal government database; d) Public data published from Hongkong, Macau and Taiwan official channels; e) [World Health Organization](https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/) (WHO), f) [Centers for Disease Control and Prevention](https://www.cdc.gov/coronavirus/) (CDC), g) [Public Health Agency of Canada](https://www.canada.ca/en/public-health.html) (PHA), h) [Baidu](https://voice.baidu.com/act/newpneumonia/newpneumonia), i)[Mapmiao](https://mapmiao.com/ncov/).
+The data are mainly collected from:
+- [National Health Commission](http://en.nhc.gov.cn/) (NHC) of the People’s Republic of China
+- China’s Provincial & Municipal Health Commission
+- China’s Provincial & Municipal government database
+- Public data published from Hongkong, Macau and Taiwan official channels
+- [World Health Organization](https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/) (WHO)
+- [Centers for Disease Control and Prevention](https://www.cdc.gov/coronavirus/) (CDC)
+- [Public Health Agency of Canada](https://www.canada.ca/en/public-health.html) (PHA)
+- [Baidu](https://voice.baidu.com/act/newpneumonia/newpneumonia)
+- [Mapmiao](https://mapmiao.com/ncov/)
 
 - The dataset (in SQLite format) can be downloaded from http://hgis.uw.edu/virus/assets/virus.db.
 
@@ -52,4 +61,4 @@ The country-level data is collected from WHO, while the data of each province in
 
 -  This map is made by the [Humanistic GIS Lab](https://hgis.uw.edu) at [University of Washington – Seattle](https://www.uw.edu).
 - Team members: Bo Zhao (leader), Fengyu Xu, Lola Kang, Joshua Ji, Steven Bao, and Jou Ho.
-- The Server is hosted at [UW's Center for Studies in Demography and Ecology](https://csde.washington.edu/) (CSDE).
+- The Server is hosted at [UW's Center for Studies in Demography and Ecology](https://csde.washington.edu/) (CSDE). <img src="img/logo-bkp.png" width="150px" align="right" />
