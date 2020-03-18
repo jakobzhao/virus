@@ -22,9 +22,7 @@ The data are mainly collected from:
 - [Public Health Agency of Canada](https://www.canada.ca/en/public-health.html) (PHA)
 - [Baidu](https://voice.baidu.com/act/newpneumonia/newpneumonia)
 - [Mapmiao](https://mapmiao.com/ncov/)
-
 - The dataset (in SQLite format) can be downloaded from http://hgis.uw.edu/virus/assets/virus.db.
-
 - You can view the data (in CSV format) at http://hgis.uw.edu/virus/assets/virus.csv.
 
 > **Note:** In the data table, each entry indicates the infection status in the format of `#-#-#-#` - a 4-sequel entry divided by dashes. The first sequel represents the number of confirmed cases, the second sequel represents suspected cases, the third sequel represents cured cases, the fourth sequel represents death cases.
@@ -61,4 +59,6 @@ The country-level data is collected from WHO, while the data of each province in
 
 -  This map is made by the [Humanistic GIS Lab](https://hgis.uw.edu) at [University of Washington – Seattle](https://www.uw.edu).
 - Team members: Bo Zhao (leader), Fengyu Xu, Lola Kang, Joshua Ji, Steven Bao, and Jou Ho.
-- The Server is hosted at [UW's Center for Studies in Demography and Ecology](https://csde.washington.edu/) (CSDE). <img src="img/logo-bkp.png" width="150px" align="right" />
+- The Server is hosted at [UW's Center for Studies in Demography and Ecology](https://csde.washington.edu/) (CSDE).
+
+<img src="img/logo-bkp.png" width="300px" align="right" />
