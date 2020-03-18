@@ -831,17 +831,17 @@
         }
 
         if(datasets[5]["columns"].
-          $("#source-website").html('<a target="_blank" href="#">WHO</a>, <a target="_blank" href="#">CDC</a> and <a target="_blank" href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546">NBC News</a>.');
+          // $("#source-website").html('<a target="_blank" href="#">WHO</a>, <a target="_blank" href="#">CDC</a> and <a target="_blank" href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546">NBC News</a>.');
         }else if(datasets[6]["columns"].includes(name)){ //Canada
           $("#source-website").html('<a target="_blank" href="#">Public Health Agency of Canada.</a>');
         }else if(datasets[7]["columns"].includes(name)){ //China
-          $("#source-website").text('WHO, China CDC and Baidu.');
+          $("#source-website").html('WHO, China CDC and Baidu.');
         }else if(name == "Global Trend"){ //global
-          $("#source-website").text('WHO, NBC News, CDC, Baidu and etc.');
+          $("#source-website").html('WHO, NBC News, CDC, Baidu and etc.');
         }else if(name == "japan"){ //japan
-          $("#source-website").text('WHO and Baidu. The discrepancy on the data in Japan between March 11th and March 12th comes from the disagreement of whether to include cases from the Princess Diamond cruise.');
+          $("#source-website").html('WHO and Baidu. The discrepancy on the data in Japan between March 11th and March 12th comes from the disagreement of whether to include cases from the Princess Diamond cruise.');
         }else{ //Other countries
-          $("#source-website").text('WHO an Baidu.');
+          $("#source-website").html('WHO an Baidu.');
         }
       }
 
