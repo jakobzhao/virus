@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <link href="css/bootstrap4-toggle.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
-
+  <link rel="stylesheet" href="css/mobile.css">
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <script src="js/d3.js"></script>
   <script src="js/c3.min.js"></script>
@@ -74,7 +74,8 @@
       </div>
 
       <p><span id="placename">GLOBAL TREND</span> </p>
-      <div> <span id="date"></span> <span id="hint"> Click a place to review local trend.</span></div>
+      <div><span id="last-date">Last update: </span><span id="date"></span> <span id="hint"> Click a place to review local trend.</span></div>
+      <span id="source">Source: </span><a id="source-website" href="" target="_blank"></a>
       <div id="deck-1" class="card-deck counts">
         <div class="card">
           <div class="card-body confirmed">
@@ -140,7 +141,8 @@
           </span>
         </div>
 
-        <div style="margin-top:30px"> In the main map, an country or region's inflection level is measured by the # of today's active/remaining confirmed cases. The gray slash texture indicates no previous casese are discovered; the green
+        <div id="content-explain" style="margin-top:30px"> In the main map, an country or region's inflection level is measured by the # of today's active/remaining confirmed cases. The gray slash texture indicates no previous cases are discovered;
+          the green
           texture means the region in which all the infected cases have recovered.</div>
 
         <div>Infection Case(s) &nbsp; <i class='fas fa-users community'></i> &nbsp; indicates one or several confirmed infected individual(s) in the U.S., excluding those were identified from the Diamond Princess.
@@ -555,10 +557,11 @@
       d3.csv('assets/cases.csv'),
       d3.csv('assets/united-states.txt'),
       d3.csv('assets/canada-city.txt'),
-      d3.csv('assets/old-name.csv')
+      d3.csv('assets/old-name.csv'),
+      d3.csv('assets/cases-canada.csv')
     ]).then(function(datasets) {
 
-      $("#date").text("Last update: " + datasets[3][0].timestamp.split(".")[0] + " PST");
+      $("#date").text(datasets[3][0].timestamp.split(".")[0] + " PST");
 
       datasets[2].forEach(function(d) {
         L.marker([parseFloat(d.lat), parseFloat(d.lng)]).bindPopup(d.name + "&nbsp;&nbsp;(<a target='_blank' href='https://translate.google.com/#view=home&op=translate&sl=zh-CN&tl=en&text=" + d.name + "'>Translate to English</a>)").addTo(
@@ -572,7 +575,11 @@
           cases);
       })
 
-
+      datasets[8].forEach(function(d) {
+        //console.log(d.id)
+        L.marker([parseFloat(d.lat), parseFloat(d.lng)]).bindPopup("<b>" + d.no + "</b> <p>" + d.note + " identified on " + d.date + ", &nbsp;" + d.reference + ".</p>").addTo(
+          cases);
+      })
 
       var latest = datasets[0][datasets[0].length - 1];
       //delete latest["datetime"];
@@ -764,10 +771,10 @@
       function showPlace(name) {
 
         len = places[name].t.length;
-        $(".confirmed-count").text(places[name].c[len - 1]);
-        $(".recovered-count").text(places[name].r[len - 1]);
-        $(".death-count").text(places[name].d[len - 1]);
-        $(".active-count").text(places[name].a[len - 1]);
+        $(".confirmed-count").text(places[name].c[len - 1].toLocaleString());
+        $(".recovered-count").text(places[name].r[len - 1].toLocaleString());
+        $(".death-count").text(places[name].d[len - 1].toLocaleString());
+        $(".active-count").text(places[name].a[len - 1].toLocaleString());
 
         nc = places[name].c[len - 1] - places[name].c[len - 2];
         nr = places[name].r[len - 1] - places[name].r[len - 2];
@@ -775,42 +782,42 @@
         na = places[name].a[len - 1] - places[name].a[len - 2];
 
         if (nc > 0) {
-          $(".confirmed-new-count").text("+" + nc.toString());
+          $(".confirmed-new-count").text("+" + nc.toLocaleString());
         } else if (nc == 0) {
           $(".confirmed-new-count").text("");
         } else {
 
-          $(".confirmed-new-count").text(nc.toString());
+          $(".confirmed-new-count").text(nc.toLocaleString());
         }
 
         if (nr > 0) {
-          $(".recovered-new-count").text("+" + nr.toString());
+          $(".recovered-new-count").text("+" + nr.toLocaleString());
         } else if (nr == 0) {
           $(".recovered-new-count").text("")
         } else {
-          $(".recovered-new-count").text(nr.toString());
+          $(".recovered-new-count").text(nr.toLocaleString());
         }
         if (nd > 0) {
-          $(".death-new-count").text("+" + nd.toString());
+          $(".death-new-count").text("+" + nd.toLocaleString());
         } else if (nd == 0) {
           $(".death-new-count").text("")
         } else {
-          $(".death-new-count").text(nd.toString());
+          $(".death-new-count").text(nd.toLocaleString());
         }
 
 
         if (na > 0) {
           document.getElementById("counticon").style.display = "initial";
-          $(".active-new-count").text("+" + na.toString());
+          $(".active-new-count").text("+" + na.toLocaleString());
         } else if (na < 0) {
           document.getElementById("counticon").style.display = "initial";
-          $(".active-new-count").text("" + na.toString());
+          $(".active-new-count").text("" + na.toLocaleString());
         } else if (na == 0) {
           document.getElementById("counticon").style.display = "none";
           $(".active-new-count").text("")
         } else {
           document.getElementById("counticon").style.display = "none";
-          $(".active-new-count").text(na.toString());
+          $(".active-new-count").text(na.toLocaleString());
         }
 
 
@@ -824,6 +831,20 @@
           $("#placename").text(name.toUpperCase());
         }
 
+        if (datasets[5]["columns"]) {
+          $("#source-website").html(
+            '<a target="_blank" href="#">WHO</a>, <a target="_blank" href="#">CDC</a> and <a target="_blank" href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546">NBC News</a>.');
+        } else if (datasets[6]["columns"].includes(name)) { //Canada
+          $("#source-website").html('<a target="_blank" href="#">Public Health Agency of Canada.</a>');
+        } else if (datasets[7]["columns"].includes(name)) { //China
+          $("#source-website").html('WHO, China CDC and Baidu.');
+        } else if (name == "Global Trend") { //global
+          $("#source-website").html('WHO, NBC News, CDC, Baidu and etc.');
+        } else if (name == "japan") { //japan
+          $("#source-website").html('WHO and Baidu. The discrepancy on the data in Japan between March 11th and March 12th comes from the disagreement of whether to include cases from the Princess Diamond cruise.');
+        } else { //Other countries
+          $("#source-website").html('WHO an Baidu.');
+        }
       }
 
 
@@ -1171,7 +1192,6 @@
               bgcolor = colors[1];
             }
 
-
             $('.cell-' + d.replace(" ", "") + '-' + i.toString())
               .css("background-color", bgcolor)
               .css("border", bdsize + " solid " + bdcolor)
@@ -1208,7 +1228,6 @@
         $('.loader').show();
 
         $("#rankingToggle").css('visibility', 'visible');
-
         $("#table").css("visibility", "visible");
         $(".leaflet-control-container").css("visibility", "hidden");
 
@@ -1241,9 +1260,12 @@
 
         if (document.getElementById('panelSwitcher').checked == false) {
           $("#table").css("visibility", "hidden");
+
           $("#rankingToggle").css("visibility", "hidden");
           $(".leaflet-control-container").css("visibility", "visible");
-
+          $("#content-explain").text(
+            "In the main map, an country or region's inflection level is measured by the # of today's active/remaining confirmed cases. The gray slash texture indicates no previous cases are discovered; the greentexture means the region in which all the infected cases have recovered."
+            );
           $("thead").html('');
           $("tbody").html('');
 
@@ -1251,7 +1273,9 @@
         } else {
 
           $("#rankingToggle").css('visibility', 'visible');
-
+          $("#content-explain").text(
+            "This situational heatmap use different color and size to represent the number and recover rate of coronavirus cases of different places within 20 days. The size of the block increase as the number aggregate cases increase. While the color of the blobk get darker as the 'confirmed / aggregate' rate increase."
+            );
           $("#table").css("visibility", "visible");
           $(".leaflet-control-container").css("visibility", "hidden");
 
