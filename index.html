@@ -75,7 +75,7 @@
 
       <p><span id="placename">GLOBAL TREND</span> </p>
       <div><span id="last-date">Last update: </span><span id="date"></span> <span id="hint"> Click a place to review local trend.</span></div>
-      <span id="source">Source: </span><a id="source-website" href="" target="_blank"></a>
+      <p><span id="source">Source: </span><span id="source-website" href="" target="_blank"></span></p>
       <div id="deck-1" class="card-deck counts">
         <div class="card">
           <div class="card-body confirmed">
@@ -833,7 +833,7 @@
 
         if (datasets[5]["columns"]) {
           $("#source-website").html(
-            '<a target="_blank" href="#">WHO</a>, <a target="_blank" href="#">CDC</a> and <a target="_blank" href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546">NBC News</a>.');
+            '<a target="_blank" href="#"> WHO</a>, <a target="_blank" href="#">CDC</a> and <a target="_blank" href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546">NBC News</a>.');
         } else if (datasets[6]["columns"].includes(name)) { //Canada
           $("#source-website").html('<a target="_blank" href="#">Public Health Agency of Canada.</a>');
         } else if (datasets[7]["columns"].includes(name)) { //China
@@ -1002,7 +1002,7 @@
 
       chart = c3.generate({
         size: {
-          height: 280,
+          height: 350,
           width: 460
         },
         data: {
