@@ -2,14 +2,21 @@
 
 This repository stores the source code for the Novel Coronavirus Infection Map (https://hgis.uw.edu/virus). This online interactive map enables users to track both the global and local trends of Novel Coronavirus infection since Jan 21st, 2020. The dataset is timely collected from multiple official sources and then plotted onto this map.
 
+## Choropleth Map:
+
 ![](img/interface.png)
 
-## Choropleth Map:
 In the main map, an country or region's inflection level is measured by the # of today's active/remaining confirmed cases. The gray slash texture indicates no previous cases are discovered; the green texture means the region in which all the infected cases have recovered.
 
 Infection Case(s) (shown as human icon in red) indicates one or more confirmed infected individual(s) in the U.S., excluding those were identified from the Diamond Princess. The dataset of the infected cases are continuously enriched from different data portals such as [1point3acres](https://coronavirus.1point3acres.com/en) and state officials. **Notably, each case was geocoded to an approximate location within the county which reported the case. The location is by no means identical to the exact address where the case was discovered.**
 
 An Infected Community (shown as bed icon in red) indicates a community or village where confirmed cases were found. The local governments in China have taken strict measures to isolate the residents of these places from the outside. The dataset of infected community can be found at [ahusmart](https://lab.ahusmart.com/nCoV/api/detail).
+
+## Situational Heatmap:
+
+![](img/heatmap.png)
+
+The situational heatmap focuses on incremental data and statistics on daily historical data. This heatmap shows the development of the epidemic, and helps to reveal the turning point of the COVID-19 epidemic. The size of each square indicates the change in the number of aggregate cases on that day from the previous day. Larger box means more cases confirmed in the region. The color of the square indicates the status of active cases. Darker colors indicate the increase in active cases and lighter colors indicate the decrease in active cases.
 
 ## Data Sources:
 The data are mainly collected from:
