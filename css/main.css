@@ -247,6 +247,16 @@ visibility: visible;
     width: 500px;
   }
 
+  #last-date {
+    /* position: relative; */
+    color: black;
+    font-size: 12px !important;
+    position: fixed !important;
+    left: 12px;
+    top: 65px !important;
+    width: 300px;
+  }
+
   #date {
     /* position: relative; */
     color: black;
@@ -386,11 +396,19 @@ span {
   opacity: 0.3;
 }
 
+#last-date {
+  position: relative;
+  top: -20px;
+  font-size: 16px;
+  color: danger;
+}
+
 #date {
   position: relative;
   top: -20px;
-  font-size: 14px;
-  color: danger;
+  left: -10px;
+  font-size: 8px;
+  color: lightgray;
 }
 
 #placename {
@@ -409,20 +427,21 @@ span {
   font-style: italic;
   text-decoration-line: underline !important;
   text-decoration-style: dotted !important;
-  left: -10px;
+  left: -20px;
 }
 
 #source {
   position: relative;
   top: -20px;
-  font-size: 14px;
+  font-size: 16px;
   margin-right: 0px;
 }
 
 #source-website {
   position: relative;
   top: -20px;
-  font-size: 14px;
+  font-size: 8px;
+  color: lightgray !important;
 }
 
 .counts {

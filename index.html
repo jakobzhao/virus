@@ -74,8 +74,8 @@
       </div>
 
       <p><span id="placename">GLOBAL TREND</span> </p>
+      <div><span id="last-date">Last update: </span><span id="date"></span> <span id="hint"> Click a place to review local trend.</span></div>
       <span id = "source">Source: </span><a id="source-website" href = "" target="_blank"></a>
-      <div><span id="date"></span> <span id="hint"> Click a place to review local trend.</span></div>
       <div id="deck-1" class="card-deck counts">
         <div class="card">
           <div class="card-body confirmed">
@@ -560,7 +560,7 @@
       d3.csv('assets/cases-canada.csv')
     ]).then(function(datasets) {
 
-      $("#date").text("Last update: " + datasets[3][0].timestamp.split(".")[0] + " PST");
+      $("#date").text(datasets[3][0].timestamp.split(".")[0] + " PST");
 
       datasets[2].forEach(function(d) {
         L.marker([parseFloat(d.lat), parseFloat(d.lng)]).bindPopup(d.name + "&nbsp;&nbsp;(<a target='_blank' href='https://translate.google.com/#view=home&op=translate&sl=zh-CN&tl=en&text=" + d.name + "'>Translate to English</a>)").addTo(
