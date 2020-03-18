@@ -75,7 +75,11 @@
 
       <p><span id="placename">GLOBAL TREND</span> </p>
       <div><span id="last-date">Last update: </span><span id="date"></span> <span id="hint"> Click a place to review local trend.</span></div>
+<<<<<<< HEAD
       <div style = "line-height:15px"><span id="source">Source: </span><a id="source-website" href="" target="_blank"></a></div>
+=======
+      <p><span id="source">Source: </span><span id="source-website" href="" target="_blank"></span></p>
+>>>>>>> 86b8a8e004be2f3841e2a4a5a15160a85b8ccf38
       <div id="deck-1" class="card-deck counts">
         <div class="card">
           <div class="card-body confirmed">
@@ -145,14 +149,14 @@
           the green
           texture means the region in which all the infected cases have recovered.</div>
 
-        <div>Infection Case(s) &nbsp; <i class='fas fa-users community'></i> &nbsp; indicates one or several confirmed infected individual(s) in the U.S., excluding those were identified from the Diamond Princess.
+        <div><i class='fas fa-users' style="color:#dc3545"></i>  &nbsp; Infection Case(s) indicates one or several confirmed infected individual(s) in the U.S., excluding those were identified from the Diamond Princess.
           The dataset of the infected cases are continuously enriched from different data portals such as
-          <a href="https://coronavirus.1point3acres.com/en" target="_blank">1point3acres</a> and state officials. Notably, <b style="color:#e8e3d3;text-decoration-line: underline; text-decoration-style: dotted;"> each case was geocoded to an
+          <a href="https://coronavirus.1point3acres.com/en" target="_blank">1point3acres</a> and state officials. Notably, <span class="emphasis"> each case was geocoded to an
             approximate location within the county
-            which reported the case. The location is by no means identical to the exact address where the case was discovered</b>.
+            which reported the case. The location is by no means identical to the exact address where the case was discovered>.</span>
         </div>
 
-        <div>An Infected Community &nbsp; <i class="fas fa-procedures community"> </i> &nbsp; indicates a community or village where confirmed cases were found. The local governments in China have taken strict measures to isolate the residents of
+        <div> <i class="fas fa-procedures" style="color:#dc3545"> </i> &nbsp;  An Infected Community indicates a community or village where confirmed cases were found. The local governments in China have taken strict measures to isolate the residents of
           these
           places from the outside. The dataset of infected community can be found at <a href="https://lab.ahusmart.com/nCoV/api/detail" target="_blank">ahusmart</a>.
         </div>
@@ -168,7 +172,7 @@
           The computational resources are provided by <a href="https://csde.washington.edu/" target="_blank">UW's Center for Studies in Demography and Ecology</a>. The base maps are from <a target="_blank"
             href="https://github.com/CartoDB/cartodb/wiki/BaseMaps-available">Carto</a> and <a href="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/" target="_blank">ESRI</a>, and the geospatial data for the base maps
           are acquired from the <a href="openstreetmap.org/copyright" target="_blank"> OpenStreetMap</a>.
-          <span style="color:#e8e3d3">The timely updated dataset of the virus infection can be downloaded <a href="http://hgis.uw.edu/virus/assets/virus.csv" style="color:#e8e3d3; text-decoration: underline;" target="_blank">here</a>.</span> Details
+          <span class="emphasis">The timely updated dataset of the virus infection can be downloaded <a href="http://hgis.uw.edu/virus/assets/virus.csv" target="_blank">here.</a></span> Details
           about this interactive
           map can be found <a data-toggle="modal" data-target="#infowindow"> here</a>. If you have any questions or
           concerns, please contact <a href="mailto:zhaobo@uw.edu">Bo Zhao</a>.
@@ -833,7 +837,7 @@
 
         if (datasets[5]["columns"].includes(name)) {
           $("#source-website").html(
-            '<a target="_blank" href="#">WHO</a>, <a target="_blank" href="#">CDC</a> and <a target="_blank" href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546">NBC News</a>.');
+            '<a target="_blank" href="#"> WHO</a>, <a target="_blank" href="#">CDC</a> and <a target="_blank" href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546">NBC News</a>.');
         } else if (datasets[6]["columns"].includes(name)) { //Canada
           $("#source-website").html('<a target="_blank" href="#">Public Health Agency of Canada.</a>');
         } else if (datasets[7]["columns"].includes(name)) { //China
@@ -1002,7 +1006,7 @@
 
       chart = c3.generate({
         size: {
-          height: 280,
+          height: 350,
           width: 460
         },
         data: {
@@ -1274,7 +1278,7 @@
 
           $("#rankingToggle").css('visibility', 'visible');
           $("#content-explain").text(
-            "This situational heatmap use different color and size to represent the number and recover rate of coronavirus cases of different places within 20 days. The size of the block increase as the number aggregate cases increase. While the color of the blobk get darker as the 'confirmed / aggregate' rate increase."
+            "This situational heatmap uses a series of blocks in different size and color to represent the number and recover rate of coronavirus cases of different places within 20 days. The size of the block increases as the number aggregated confirmed cases increase. While the color of the block, in a \"yellow-orange-red\" ramp, gets darker as the 'confirmed / aggregate' rate increases."
             );
           $("#table").css("visibility", "visible");
           $(".leaflet-control-container").css("visibility", "hidden");
