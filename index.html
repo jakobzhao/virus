@@ -831,7 +831,7 @@
         }
 
         if(datasets[5]["columns"].includes(name)){ //America
-          $("#source-website").text('WHO, CDC, NBC News.');
+          $("#source-website").html('<a href="#">WHO</a>, CDC, NBC News.');
           $("#source-website").attr("href","https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546");
         }else if(datasets[6]["columns"].includes(name)){ //Canada
           $("#source-website").text('Public Health Agency of Canada.');
