@@ -382,7 +382,7 @@ text {
 
 #footer {
   position: relative;
-  top: 35px;
+  top: 15px;
   bottom: 10px;
   font-size: 13px;
   line-height: 150%;
@@ -390,10 +390,7 @@ text {
   margin-bottom: 100px;
 }
 
-/*
-#mtToggle{
-  /* position: relative; */
-}
+
 
 */ #footer>div {
   font-size: 13px;
