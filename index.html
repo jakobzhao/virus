@@ -75,7 +75,7 @@
 
       <p><span id="placename">GLOBAL TREND</span> </p>
       <div><span id="last-date">Last update: </span><span id="date"></span> <span id="hint"> Click a place to review local trend.</span></div>
-      <span id="source">Source: </span><a id="source-website" href="" target="_blank"></a>
+      <div style = "line-height:15px"><span id="source">Source: </span><a id="source-website" href="" target="_blank"></a></div>
       <div id="deck-1" class="card-deck counts">
         <div class="card">
           <div class="card-body confirmed">
@@ -831,7 +831,7 @@
           $("#placename").text(name.toUpperCase());
         }
 
-        if (datasets[5]["columns"]) {
+        if (datasets[5]["columns"].includes(name)) {
           $("#source-website").html(
             '<a target="_blank" href="#">WHO</a>, <a target="_blank" href="#">CDC</a> and <a target="_blank" href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546">NBC News</a>.');
         } else if (datasets[6]["columns"].includes(name)) { //Canada

@@ -308,7 +308,7 @@ span {
   top: -20px;
   width: 5000px;
   color: gray;
-  font-size: 12px;
+  font-size: 8px;
   font-style: italic;
   text-decoration-line: underline !important;
   text-decoration-style: dotted !important;
@@ -326,11 +326,9 @@ span {
   position: relative;
   top: -20px;
   line-height: 0.8 !important;
-  font-size: 12px;
+  font-size: 8px;
   color: lightgray !important;
   line-height: 1.3;
-  display: block;
-  width: 400px;
 }
 
 .counts {
