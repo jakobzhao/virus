@@ -555,7 +555,8 @@
       d3.csv('assets/cases.csv'),
       d3.csv('assets/united-states.txt'),
       d3.csv('assets/canada-city.txt'),
-      d3.csv('assets/old-name.csv')
+      d3.csv('assets/old-name.csv'),
+      d3.csv('assets/cases-canada.csv')
     ]).then(function(datasets) {
 
       $("#date").text("Last update: " + datasets[3][0].timestamp.split(".")[0] + " PST");
@@ -572,7 +573,11 @@
           cases);
       })
 
-
+      datasets[8].forEach(function(d) {
+        //console.log(d.id)
+        L.marker([parseFloat(d.lat), parseFloat(d.lng)]).bindPopup("<b>" + d.no + "</b> <p>" + d.note + " identified on " + d.date + ", &nbsp;" + d.reference + ".</p>").addTo(
+          cases);
+      })
 
       var latest = datasets[0][datasets[0].length - 1];
       //delete latest["datetime"];
