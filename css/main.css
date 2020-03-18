@@ -225,16 +225,11 @@ div#footer>div {
 
 #legend-panel {
   position: fixed;
-  /* padding-top: 10px !important; */
-  bottom: 30px;
+  bottom: 0px;
   right: 20px;
   width: 340px;
   height: 15px;
-  /* padding: 3px; */
   z-index: 499;
-  background: dark;
-  border-radius: 0px;
-  border-color: white
 }
 
 #legend-panel .card {
