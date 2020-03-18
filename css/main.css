@@ -288,6 +288,11 @@ span {
   color: danger;
 }
 
+a {
+  color:lightgray !important
+}
+
+
 #date {
   position: relative;
   top: -20px;
