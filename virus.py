@@ -23,8 +23,12 @@ browser = webdriver.Chrome("/Users/joshuaji/Desktop/chromedriver") #joshua's chr
 #browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver")
 #browser = webdriver.Chrome("/Users/joshuaji/Desktop/chromedriver") #joshua's chromedrive location
 #browser = webdriver.Chrome("C:/workspace/chromedriver.exe")
+<<<<<<< HEAD
 # browser = webdriver.Chrome("E:/dev/workspaces/chromedriver.exe")
 #>>>>>>> 99465fbe3ee6929f37edfce2fcd124c1ab4aa67f
+=======
+#browser = webdriver.Chrome("E:/dev/workspaces/chromedriver.exe")
+>>>>>>> 3343809a2b066a2abee0bc1d77862ae98a2cd7b4
 #browser = webdriver.Chrome("/Users/stevenbao/dev/chromedriver")
 
 now = str(datetime.now())
