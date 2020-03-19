@@ -3,6 +3,10 @@ $(window).ready(function() {
 });
 
 
+var d3locale = d3.formatDefaultLocale({
+    "thousands": ",",
+    "grouping": [3],
+});
 
 L.TopoJSON = L.GeoJSON.extend({
   addData: function(jsonData) {
