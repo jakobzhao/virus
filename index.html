@@ -1245,7 +1245,8 @@
         len = places["Global Trend"].t.length
         showLen = 25
         $("thead").html('<th scope="col" style="text-align:right; width:120px !important"><b>Country</b></th>');
-        $("thead").append("<th style='text-align:center' >Active Confirmed</th>");
+        $("thead").append("<th style='text-align:center' >Aggr. Cfm </th>");
+        $("thead").append("<th style='text-align:center' >Active Cfm. Trend</th>");
 
 
         Object.values(places["Global Trend"].t.slice(len - 1 - showLen, len - 1)).forEach(function(d) {
