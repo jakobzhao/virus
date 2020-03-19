@@ -285,7 +285,7 @@ span {
   color: danger;
 }
 
-a {
+#info a {
   color: lightgray !important
 }
 
@@ -306,14 +306,14 @@ a {
 
 #hint {
   position: relative;
-  top: -20px;
+  top: -21px;
   width: 5000px;
   color: gray;
-  font-size: 8px;
+  font-size: 12px;
   font-style: italic;
   text-decoration-line: underline !important;
   text-decoration-style: dotted !important;
-  left: -20px;
+  left: -17px;
 }
 
 #source {
