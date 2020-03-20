@@ -413,7 +413,7 @@ text {
 }
 
 .death-count {
-  color: #5d4f72e8;
+  color: SlateBlue;
 }
 
 .confirmed-new-count {
@@ -439,7 +439,7 @@ text {
 .death-new-count {
   vertical-align: super !important;
   font-size: 50% !important;
-  color: #5d4f72e8;
+  color: SlateBlue;
   font-style: italic;
   font-kerning: normal;
   position: relative;
