@@ -673,8 +673,8 @@ function td(country) {
         cntop = {};
       top["china"] = 0;
       Object.keys(latest).forEach(function(d) {
-        // value = tc(datasets[0][datasets[0].length - 1][d]) - tr(datasets[0][datasets[0].length - 1][d]) - td(datasets[0][datasets[0].length - 1][d]);
-        value = tc(datasets[0][datasets[0].length - 1][d]);
+        value = tc(datasets[0][datasets[0].length - 1][d]) - tr(datasets[0][datasets[0].length - 1][d]) - td(datasets[0][datasets[0].length - 1][d]);
+        // value = tc(datasets[0][datasets[0].length - 1][d]);
         if (datasets[7]["columns"].includes(d)) {
           // console.log(value);
           // console.log(top["china"]);
