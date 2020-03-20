@@ -609,12 +609,12 @@ function td(country) {
       iconCreateFunction: function(cluster) {
         cnt = cluster.getChildCount()
 
-        if (cnt >= 70) {
+        if (cnt >= 100) {
           return L.divIcon({
             // html: '<i class="fas fa-users community community-marker"> <b>' + cluster.getChildCount() + '</b></i>'
             html: '<i class="fas fa-users community community-marker fa-2x "> <b>' + "" + '</b></i>'
           });
-        } else if (cnt >= 10 && cnt < 70) {
+        } else if (cnt >= 20 && cnt < 100) {
           return L.divIcon({
             // html: '<i class="fas fa-users community community-marker"> <b>' + cluster.getChildCount() + '</b></i>'
             html: '<i class="fas fa-users community community-marker fa-lg "> <b>' + "" + '</b></i>'
@@ -654,13 +654,13 @@ function td(country) {
 
       datasets[4].forEach(function(d) {
         //console.log(d.id)
-        L.marker([parseFloat(d.lat), parseFloat(d.lng)]).bindPopup("<b>" + d.no + "</b> <p>" + d.note + " identified on " + d.date + ", &nbsp;" + d.reference + ".</p>").addTo(
+        L.marker([parseFloat(d.lat), parseFloat(d.lng)]).bindPopup("<b>" + d.no + "</b> <p>" + d.note + " identified on " + d.date + ", &nbsp;<a href='https://" + d.reference + "' target='_blank'>" + d.reference + "</a>.</p>").addTo(
           cases);
       })
 
       datasets[8].forEach(function(d) {
         //console.log(d.id)
-        L.marker([parseFloat(d.lat), parseFloat(d.lng)]).bindPopup("<b>" + d.no + "</b> <p>" + d.note + " identified on " + d.date + ", &nbsp;" + d.reference + ".</p>").addTo(
+        L.marker([parseFloat(d.lat), parseFloat(d.lng)]).bindPopup("<b>" + d.no + "</b> <p>" + d.note + " identified on " + d.date + ", &nbsp;<a href='https://" + d.reference + "' target='_blank'>" + d.reference + "</a>.</p>").addTo(
           cases);
       })
 
