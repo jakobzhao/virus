@@ -210,6 +210,7 @@ div#footer>div {
   padding: 0;
   margin: 0;
   text-align: center;
+  flex:none;
 }
 
 .card-text {
@@ -501,4 +502,26 @@ text {
   left: -27px;
   bottom: 5px;
   color: #6d5831;
+}
+
+#heatmap-legend-panel {
+  position: relative;
+  bottom: -40px;
+  right: -15px;
+  width: 400px;
+  height: 5px;
+  z-index: 499;
+}
+
+.card-deck .size-card {
+  align-self: center;
+}
+
+.size-card-title{
+  color: lightgray;
+  text-shadow:none;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  top: 6px;
 }
