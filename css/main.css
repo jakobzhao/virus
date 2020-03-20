@@ -508,7 +508,7 @@ text {
   position: relative;
   bottom: -40px;
   right: -15px;
-  width: 400px;
+  width: 50px;
   height: 5px;
   z-index: 499;
 }
@@ -524,4 +524,11 @@ text {
   font-weight: bold;
   position: absolute;
   top: 6px;
+}
+
+#heatmap-size{
+  position: relative;
+  top: -116px;
+  left: 38px;
+  width: 275px;
 }
