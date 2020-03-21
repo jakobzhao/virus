@@ -1229,29 +1229,29 @@ function td(country) {
             // c ===> 0, 10, 100, 1000, 10000
             // size =>0,  4,   8,   16,    32
 
-            if (places[d].c[i] >= 10000) {
+            if (places[d].a[i] >= 10000) {
               size = "32px"
               top = "-.45rem";
               left = "-.35rem";
 
 
-            } else if (places[d].c[i] < 10000 && places[d].c[i] >= 1000) {
+            } else if (places[d].a[i] < 10000 && places[d].a[i] >= 1000) {
               size = "24px";
               top = "-.2rem";
               left = "-.1rem";
 
-            } else if (places[d].c[i] < 1000 && places[d].c[i] >= 100) {
+            } else if (places[d].a[i] < 1000 && places[d].a[i] >= 100) {
               size = "16px";
               top = "0rem";
               left = ".1rem";;
 
 
-            } else if (places[d].c[i] < 100 && places[d].c[i] >= 10) {
+            } else if (places[d].a[i] < 100 && places[d].a[i] >= 10) {
               size = "10px";
               top = ".25rem";
               left = ".25rem";
 
-            } else if (places[d].c[i] < 10 && places[d].c[i] >= 1) {
+            } else if (places[d].a[i] < 10 && places[d].a[i] >= 1) {
               size = "8px";
               top = ".25rem";
               left = ".25rem";
