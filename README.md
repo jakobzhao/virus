@@ -62,9 +62,9 @@ The data are mainly collected from:
 
 The country-level data is collected from WHO, while the data of each province in China is collected from multiple sources such as China's NHC, Mapmiao and Baidu. Notably, we also refer to CDC to verify the virus spreading status in the U.S. To make a timely data and map updates, we collect the data every 4 hours, and verify the data quality per day. In addition, we plan to provide finer-scale data from China (the county level), U.S. (the state level) and Canada (the province level) in the next version.
 
-## Acknowledgement:<img src="img/logo-bkp.png" width="300px" align="right" />
+## Acknowledgement:
 
 -  This map is made by the [Humanistic GIS Lab](https://hgis.uw.edu) at [University of Washington – Seattle](https://www.uw.edu).
 - Team members: Bo Zhao (leader), Fengyu Xu, Lola Kang, Joshua Ji, Steven Bao, and Jou Ho.
-- The Server is hosted at [UW's Center for Studies in Demography and Ecology](https://csde.washington.edu/) (CSDE).
+- The Server is hosted at [UW's Center for Studies in Demography and Ecology](https://csde.washington.edu/) (CSDE).<img src="img/logo-bkp.png" width="250px" align="right" />
 
