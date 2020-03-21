@@ -155,7 +155,7 @@ provinces = soup.find_all("table")[0].find("tbody").find_all("tr")
 
 for province in provinces[:-2]:
     # enName = province.find_all("td")[0].text.lower().replace("british colombia", "british columbia")
-    enName = province.find_all("td")[0].text.lower()
+    enName = province.find_all("td")[0].text.lower().replace("    ", " ")
     # print (province.text)
     confirmed = province.find_all("td")[1].text
 
