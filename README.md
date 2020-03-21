@@ -64,7 +64,7 @@ The country-level data is collected from WHO, while the data of each province in
 
 ## Acknowledgement:
 
--  This map is made by the [Humanistic GIS Lab](https://hgis.uw.edu) at [University of Washington – Seattle](https://www.uw.edu).
+- <img src="img/logo-bkp.png" width="250px" align="right" />
+This map is made by the [Humanistic GIS Lab](https://hgis.uw.edu) at [University of Washington – Seattle](https://www.uw.edu).
 - Team members: Bo Zhao (leader), Fengyu Xu, Lola Kang, Joshua Ji, Steven Bao, and Jou Ho.
-- The Server is hosted at [UW's Center for Studies in Demography and Ecology](https://csde.washington.edu/) (CSDE).<img src="img/logo-bkp.png" width="250px" align="right" />
-
+- The Server is hosted at [UW's Center for Studies in Demography and Ecology](https://csde.washington.edu/) (CSDE).
