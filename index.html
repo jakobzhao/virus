@@ -1213,7 +1213,7 @@ function td(country) {
 
 
 
-          for (var i = len - showLen-1; i <= len; i++) {
+          for (var i = len - showLen-1; i < len; i++) {
             // a.push(places[d].a[i]);
             //$("tr#" + d.replace(" ", "") + "-row").append('<th scope="col"><i class="cell">' + places[d].c[i] + '</i></th>');
             $("tr#" + d.replace(" ", "") + "-row").append('<th ><i class="cell cell-' + d.replace(" ", "") + '-' + i.toString() + '">' + "" + '</i></th>');
@@ -1325,16 +1325,14 @@ function td(country) {
 
 
         len = places["Global Trend"].t.length
-        showLen = 25
+        showLen = 20
         $("thead").html('<th scope="col" style="text-align:right; width:120px !important"><b>Country/State</b></th>');
         $("thead").append("<th style='text-align:center' >Aggr. Cfm </th>");
         $("thead").append("<th style='text-align:center' >Active Cfm. Trend</th>");
 
 
         Object.values(places["Global Trend"].t.slice(len - 1 - showLen, len)).forEach(function(d) {
-          //label = new Date(new Date(d).setHours(new Date(d).getHours() + 8)).toString().substring(4,10);
           label = (new Date(d)).toString().substring(4, 10);
-          // console.log(label);
           $("thead").append("<th style='text-align:center' >" + label + "</th>");
         });
 
