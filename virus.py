@@ -13,9 +13,9 @@ options.add_argument('--headless')
 options.add_argument('--no-sandbox')
 
 #browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver")
-browser = webdriver.Chrome("/Users/joshuaji/Desktop/chromedriver") #joshua's chromedrive location
+#browser = webdriver.Chrome("/Users/joshuaji/Desktop/chromedriver") #joshua's chromedrive location
 #browser = webdriver.Chrome("C:/workspace/chromedriver.exe")
-#browser = webdriver.Chrome("E:/dev/workspaces/chromedriver.exe")
+browser = webdriver.Chrome("E:/dev/workspaces/chromedriver.exe")
 #browser = webdriver.Chrome("/Users/stevenbao/dev/chromedriver")
 
 now = str(datetime.now())
@@ -134,7 +134,7 @@ urllink = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdW9DsR5iffFcJvKAJXy
 with urllib.request.urlopen(urllink) as url:
     content = url.read().decode()
     content.replace("/r/n","")
-    states = content.split("\r\n")[1:-1]
+    states = content.split("\r\n")[1:None]
     for state in states:
         data = state.split(",")
         name = data[0].lower()
