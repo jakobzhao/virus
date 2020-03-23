@@ -645,7 +645,7 @@ function td(country) {
       d3.csv('assets/cases.csv'), //America cases
       d3.csv('assets/united-states.txt'), //datasets[5]
       d3.csv('assets/canada-city.txt'), //datasets[6]
-      d3.csv('assets/old-name.csv'), //datasets[7]
+      d3.csv('assets/old-name.csv'), //datasets[7] chinese provinces
       d3.csv('assets/cases-canada.csv') //datasets[8]
     ]).then(function(datasets) {
 
@@ -682,6 +682,7 @@ function td(country) {
         ustop = {},
         cntop = {};
       top["china"] = 0;
+      //this fucntion read the latest data from virus.csv and write the country name and it's latest active confirmed value into dictionary
       Object.keys(latest).forEach(function(d) {
         value = tc(datasets[0][datasets[0].length - 1][d]) - tr(datasets[0][datasets[0].length - 1][d]) - td(datasets[0][datasets[0].length - 1][d]);
         // value = tc(datasets[0][datasets[0].length - 1][d]);
@@ -701,7 +702,7 @@ function td(country) {
 
       })
 
-
+      // this function take a dictionary [country:active confirmed case], return a dictionary that sorted by the number of active confired case
       function sortJsObject(obj) {
         items = Object.keys(obj).map(function(key) {
           return [key, obj[key]];
@@ -719,16 +720,18 @@ function td(country) {
       }
 
 
-      stop = sortJsObject(top);
-      sustop = sortJsObject(ustop);
+      stop = sortJsObject(top); //sort globally
+      sustop = sortJsObject(ustop); //sort US states
 
 
       var places = {};
 
+      //this function take a string of country/place name and calculate the data for it
+      //return place[name] which is a dictonary that has everyday's dataset
       function calPlace(name) {
         var place = {}
         place[name] = {
-          't': ['t'],
+          't': ['t'], //date
           'c': ['Aggr. Confirmed'],
           's': ['s'],
           'r': ['Recovered'],
@@ -739,7 +742,7 @@ function td(country) {
         datasets[0].forEach(function(d) {
           var USTd = new Date(d["datetime"]);
 
-          place[name].t.push(USTd.setHours(USTd.getHours() + 8));
+          place[name].t.push(USTd.setHours(USTd.getHours() + 8)); //convert to American time zone
 
           cf = 0, sp = 0, rc = 0, dd = 0, active = 0;
           current = d;
@@ -801,11 +804,7 @@ function td(country) {
 
             for (const [key, value] of Object.entries(current)) {
 
-              if (key == "anhui" || key == "beijing" || key == "chongqing" || key == "fujian" || key == "gansu" || key == "guangdong" ||
-                key == "guangxi" || key == "guizhou" || key == "hainan" || key == "hebei" || key == "heilongjiang" || key == "henan" || key == "hongkong" ||
-                key == "hubei" || key == "hunan" || key == "neimenggu" || key == "jiangsu" || key == "jiangxi" || key == "jilin" || key == "liaoning" ||
-                key == "macau" || key == "ningxia" || key == "qinghai" || key == "shaanxi" || key == "shandong" || key == "shanghai" || key == "shanxi" ||
-                key == "sichuan" || key == "taiwan" || key == "tianjin" || key == "xinjiang" || key == "yunnan" || key == "zhejiang" || key == "xizang") {
+              if (datasets[7]["columns"].includes(key)) {
 
                 if (value == undefined) {
                   value = "0"
@@ -861,6 +860,7 @@ function td(country) {
         return place[name];
       }
 
+      //this function take a place name and diaplay the data to the info panel
       function showPlace(name) {
 
         len = places[name].t.length;
@@ -869,17 +869,16 @@ function td(country) {
         $(".death-count").text(places[name].d[len - 1].toLocaleString());
         $(".active-count").text(places[name].a[len - 1].toLocaleString());
 
-        nc = places[name].c[len - 1] - places[name].c[len - 2];
-        nr = places[name].r[len - 1] - places[name].r[len - 2];
-        nd = places[name].d[len - 1] - places[name].d[len - 2];
-        na = places[name].a[len - 1] - places[name].a[len - 2];
+        nc = places[name].c[len - 1] - places[name].c[len - 2]; //new aggregate confirmed cases of the day
+        nr = places[name].r[len - 1] - places[name].r[len - 2]; //new recovered confirmed cases of the day
+        nd = places[name].d[len - 1] - places[name].d[len - 2]; //new death of the day
+        na = places[name].a[len - 1] - places[name].a[len - 2]; //new active cases of the days
 
         if (nc > 0) {
           $(".confirmed-new-count").text("+" + nc.toLocaleString());
         } else if (nc == 0) {
           $(".confirmed-new-count").text("");
         } else {
-
           $(".confirmed-new-count").text(nc.toLocaleString());
         }
 
@@ -899,7 +898,7 @@ function td(country) {
         }
 
 
-        if (na > 0) {
+        if (na > 0) { //only display info icon when there's change
           document.getElementById("counticon").style.display = "initial";
           $(".active-new-count").text("+" + na.toLocaleString());
         } else if (na < 0) {
@@ -913,19 +912,16 @@ function td(country) {
           $(".active-new-count").text(na.toLocaleString());
         }
 
-
-        if (name == "anhui" || name == "beijing" || name == "chongqing" || name == "fujian" || name == "gansu" || name == "guangdong" ||
-          name == "guangxi" || name == "guizhou" || name == "hainan" || name == "hebei" || name == "heilongjiang" || name == "henan" ||
-          name == "hubei" || name == "hunan" || name == "neimenggu" || name == "jiangsu" || name == "jiangxi" || name == "jilin" || name == "liaoning" ||
-          name == "ningxia" || name == "qinghai" || name == "shaanxi" || name == "shandong" || name == "shanghai" || name == "shanxi" ||
-          name == "sichuan" || name == "tianjin" || name == "xinjiang" || name == "yunnan" || name == "zhejiang" || name == "xizang") {
+        //add ",CHINA" to every provinces in China
+        if (datasets[7]["columns"].includes(name)) { //add ",CHINA" to every provinces in China
           $("#placename").text(name.toUpperCase() + ", CHINA");
         } else {
           $("#placename").text(name.toUpperCase());
         }
 
+        //add reference source for each place
         if (datasets[5]["columns"].includes(name)) {
-          $("#source-website").html(
+          $("#source-website").html( //Unisted states
             '<a target="_blank" href="#"> WHO</a>, <a target="_blank" href="#">CDC</a> and <a target="_blank" href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546">NBC News</a>.');
         } else if (datasets[6]["columns"].includes(name)) { //Canada
           $("#source-website").html('<a target="_blank" href="#">Public Health Agency of Canada.</a>');
@@ -940,17 +936,20 @@ function td(country) {
         }
       }
 
-
+      //this funciton take a place name and check the status of that place, then fill the background based on its status
+      //grey slash for non-case country, zero aggregate confirmed case
+      //green slash for country that had cases before but now has zero active confirmed case
+      //other countries remain blank background
       function setFill(enname) {
         var pop = datasets[0][datasets[0].length - 1][enname];
         if (pop == "" || pop == undefined || pop.toString().split("-")[0] == "0") {
-          return 'url(img/texture-s.png)'; //non-case country, 0 aggregate confirm
+          return 'url(img/texture-s.png)';
         } else {
-          pop = +pop.toString().split("-")[0] - +pop.toString().split("-")[2] - +pop.toString().split("-")[3]; // remaining confirmed
+          pop = +pop.toString().split("-")[0] - +pop.toString().split("-")[2] - +pop.toString().split("-")[3];
           // return "#00000000";
         }
         if (pop == 0) {
-          return 'url(img/texture-sg.png)'; // 0 active confirm
+          return 'url(img/texture-sg.png)';
           // return 'url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScgLz4KICA8cmVjdCB4PScwJyB5PScwJyB3aWR0aD0nMScgaGVpZ2h0PScxJyBmaWxsPSdibGFjaycgLz4KPC9zdmc+")';
         } else {
           return 'url()';
@@ -959,6 +958,8 @@ function td(country) {
 
       }
 
+      //this function take a place name, return a color that fills the place area on the maps
+      //the color is based on the number of active confirmed case
       function setColor(enname) {
         var id = 0;
         var pop = datasets[0][datasets[0].length - 1][enname];
@@ -991,7 +992,7 @@ function td(country) {
 
       }
 
-
+      //this function takes a place's name, set the color background and opacitiy for the place area on the map
       function style(feature) {
         if (feature.properties.enname == "us" || feature.properties.enname == "canada") {
           return {
@@ -1012,7 +1013,8 @@ function td(country) {
       }
 
 
-
+      //this function works when there's a click on the map
+      //will highlight the layer that the mouse clicked
       function highlightFeature(e) {
         // e indicates the current event
         var layer = e.target; //the target capture the object which the event associates with
@@ -1058,7 +1060,8 @@ function td(country) {
         onEachFeature: onEachFeature
       }).addTo(mymap);
 
-
+      //add the control panel at the topright corner of the maps
+      //control the display of infection level, cases and commnities icon
       new L.control.layers(baseLayers, {
         "Infection Level": areas,
         "Infection Case(s) &nbsp;&nbsp; <i class='fas fa-users' style='color: #dc3545;'></i>": cases,
@@ -1067,7 +1070,7 @@ function td(country) {
         collapsed: false
       }).addTo(mymap);
 
-
+      //when click on the tag with "hint" class, the info panel will display global information
       $("#hint").on("click", function() {
         places["Global Trend"] = calPlace("Global Trend");
         showPlace("Global Trend");
@@ -1092,7 +1095,7 @@ function td(country) {
       places["Global Trend"] = calPlace("Global Trend");
       showPlace("Global Trend");
 
-
+      //this set the style for the linechart displayed in info panel
       chart = c3.generate({
         size: {
           height: 350,
@@ -1168,7 +1171,7 @@ function td(country) {
         bindto: "#total-chart"
       });
 
-
+      //this funtion take a place's name and load the linechart with that place's data
       function displayPlace(name) {
 
         places[name] = calPlace(name);
@@ -1181,7 +1184,7 @@ function td(country) {
 
       }
 
-
+      //this function generate the situational-heatmap table
       function makeTable() {
 
         var topinuse = {};
@@ -1191,6 +1194,7 @@ function td(country) {
           topinuse = stop;
         }
 
+        //create rows for each country/state
         Object.keys(topinuse).slice(0, 52).forEach(function(d) {
           if (d.toUpperCase() == "DIAMOND PRINCESS") {
             return;
@@ -1202,7 +1206,7 @@ function td(country) {
           $("tbody").append("<tr id='" + d.replace(" ", "") + "-row'><th style='text-align:right;cursor: pointer;'>" + dlabel + "</th></tr>");
           places[d] = calPlace(d);
 
-
+          //aggregate confirm column
           $("tr#" + d.replace(" ", "") + "-row").append('<th style="text-align:right"><i class="cell-' + d.replace(" ", "") + '-aggre-confirmed">' + places[d].c[len - 1].toLocaleString() + '</i></th>');
 
 
@@ -1222,7 +1226,7 @@ function td(country) {
           });
 
 
-
+          //place blocks into each cell based on the that day's data
           for (var i = len - showLen-1; i < len; i++) {
             // a.push(places[d].a[i]);
             //$("tr#" + d.replace(" ", "") + "-row").append('<th scope="col"><i class="cell">' + places[d].c[i] + '</i></th>');
@@ -1307,7 +1311,7 @@ function td(country) {
 
 
 
-
+          //when lick on a country's row, the info panel will show the information related to that country/place
           $("tr#" + d.replace(" ", "") + "-row").on("click", function() {
             // places[d] = calPlace(d);
             showPlace(d);
@@ -1324,7 +1328,7 @@ function td(country) {
 
       }
 
-
+      //switch to show the situational-heatmap feature
       $('#areaSwitcher').change(function() {
 
         $('.loader').show();
@@ -1355,10 +1359,11 @@ function td(country) {
 
       })
 
-
+      //swithch between us and global heatmap
       $('#panelSwitcher').change(function() {
         $('.loader').show();
 
+        //this part of content will shall when it's on global heatmap
         if (document.getElementById('panelSwitcher').checked == false) {
           $("#table").css("visibility", "hidden");
 
@@ -1371,7 +1376,7 @@ function td(country) {
           $("tbody").html('');
 
 
-        } else {
+        } else { //this part of content will shall when it's on us heatmap
 
           $("#rankingToggle").css('visibility', 'visible');
           $("#content-explain").text(
