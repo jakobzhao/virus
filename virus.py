@@ -13,9 +13,9 @@ options.add_argument('--headless')
 options.add_argument('--no-sandbox')
 
 #browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver")
-#browser = webdriver.Chrome("/Users/joshuaji/Desktop/chromedriver") #joshua's chromedrive location
+browser = webdriver.Chrome("/Users/joshuaji/Desktop/chromedriver") #joshua's chromedrive location
 #browser = webdriver.Chrome("C:/workspace/chromedriver.exe")
-browser = webdriver.Chrome("E:/dev/workspaces/chromedriver.exe")
+#browser = webdriver.Chrome("E:/dev/workspaces/chromedriver.exe")
 #browser = webdriver.Chrome("/Users/stevenbao/dev/chromedriver")
 
 now = str(datetime.now())
