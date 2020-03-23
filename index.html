@@ -504,7 +504,7 @@ var worldBounds = L.latLngBounds(
 
 
 
-//totalConfirmed
+//return the totalConfirmed number of given country
 function tc(country) {
   if (country == undefined) {
     country = 0
@@ -514,7 +514,7 @@ function tc(country) {
   return country;
 }
 
-//totalRecovered
+//return the totalRecovered number of given country
 function tr(country) {
   if (country.split("-")[2] == undefined) {
     country = 0
@@ -524,7 +524,7 @@ function tr(country) {
   return country;
 }
 
-//totalDeath
+//return the totalDeath number of given country
 function td(country) {
   if (country.split("-")[3] == undefined) {
     country = 0
@@ -539,8 +539,8 @@ function td(country) {
 
 
 
-
-    var mymap = L.map('map', {
+  //create the base map and set the initial view point
+  var mymap = L.map('map', {
       center: [38, -120],
       zoomControl: false,
       zoom: 4,
@@ -573,13 +573,15 @@ function td(country) {
 
     var chart, rchart;
 
+    //create colot scale for both region and legend,and insert the "style" into the "head" tag
     var colors = chroma.scale('YlOrRd').mode('lch').colors(6);
     for (i = 0; i < 6; i++) {
       $('head').append($("<style> .region-color-" + (i + 1).toString() + " { color: " + colors[i] + "; font-size: 15px; text-shadow: 0 0 3px #ffffff;} </style>"));
       $('head').append($("<style> .legend-color-" + (i + 1).toString() + " { background: " + colors[i] + "; font-size: 15px; text-shadow: 0 0 3px #ffffff;} </style>"));
     }
 
-
+    //create communities object that can add community icon to the map through leaflet
+    //chinese cases
     var communities = new L.MarkerClusterGroup({
       spiderfyOnMaxZoom: false,
       singleMarkerMode: true,
@@ -594,6 +596,9 @@ function td(country) {
 
     });
 
+    //create cases object that can add community icon to the map through leaflet, the size of the icon is based on the number of cases in that area
+    // <20 cases return small size icon, >20 & <100 ruturn large size, >100 return 2x size
+    //for america and canada cases
     var cases = new L.MarkerClusterGroup({
       spiderfyOnMaxZoom: true,
       singleMarkerMode: true,
@@ -631,33 +636,38 @@ function td(country) {
     }).addTo(mymap);
 
 
-
-    Promise.all([
-      d3.csv('assets/virus.csv'),
-      d3.json("assets/all-topo-15.json"),
-      d3.csv('assets/communities.csv'),
-      d3.csv('assets/timestamp.txt'),
-      d3.csv('assets/cases.csv'),
-      d3.csv('assets/united-states.txt'),
-      d3.csv('assets/canada-city.txt'),
-      d3.csv('assets/old-name.csv'),
-      d3.csv('assets/cases-canada.csv')
+    //load all datasets through d3 and store them in an array
+     Promise.all([
+      d3.csv('assets/virus.csv'), //datasets[0]
+      d3.json("assets/all-topo-15.json"), //datasets[1]
+      d3.csv('assets/communities.csv'), //chinese cases
+      d3.csv('assets/timestamp.txt'), //datasets[3]
+      d3.csv('assets/cases.csv'), //America cases
+      d3.csv('assets/united-states.txt'), //datasets[5]
+      d3.csv('assets/canada-city.txt'), //datasets[6]
+      d3.csv('assets/old-name.csv'), //datasets[7]
+      d3.csv('assets/cases-canada.csv') //datasets[8]
     ]).then(function(datasets) {
 
+      //read the timestamp in timestamp.txt and add it to map
       $("#date").text(datasets[3][0].timestamp.split(".")[0] + " PST");
 
+      //read data from communities.csv and add each case on to the map with given information
+      //cases in china
       datasets[2].forEach(function(d) {
         L.marker([parseFloat(d.lat), parseFloat(d.lng)]).bindPopup(d.name + "&nbsp;&nbsp;(<a target='_blank' href='https://translate.google.com/#view=home&op=translate&sl=zh-CN&tl=en&text=" + d.name + "'>Translate to English</a>)").addTo(
           communities);
       })
 
-
+      //read data from cases.csv and add each case on to the map with given information
+      //cases in America
       datasets[4].forEach(function(d) {
         //console.log(d.id)
         L.marker([parseFloat(d.lat), parseFloat(d.lng)]).bindPopup("<b>" + d.no + "</b> <p>" + d.note + " identified on " + d.date + ", &nbsp;<a href='https://" + d.reference + "' target='_blank'>" + d.reference + "</a>.</p>").addTo(
           cases);
       })
 
+      //cases in Canada
       datasets[8].forEach(function(d) {
         //console.log(d.id)
         L.marker([parseFloat(d.lat), parseFloat(d.lng)]).bindPopup("<b>" + d.no + "</b> <p>" + d.note + " identified on " + d.date + ", &nbsp;<a href='https://" + d.reference + "' target='_blank'>" + d.reference + "</a>.</p>").addTo(
@@ -667,7 +677,7 @@ function td(country) {
       var latest = datasets[0][datasets[0].length - 1];
       //delete latest["datetime"];
 
-
+      //get latest data for every country/city
       var top = {},
         ustop = {},
         cntop = {};
@@ -675,17 +685,17 @@ function td(country) {
       Object.keys(latest).forEach(function(d) {
         value = tc(datasets[0][datasets[0].length - 1][d]) - tr(datasets[0][datasets[0].length - 1][d]) - td(datasets[0][datasets[0].length - 1][d]);
         // value = tc(datasets[0][datasets[0].length - 1][d]);
-        if (datasets[7]["columns"].includes(d)) {
+        if (datasets[7]["columns"].includes(d)) { //china
           // console.log(value);
           // console.log(top["china"]);
           top["china"] += +value;
           cntop[d] = value;
 
-        } else if (datasets[6]["columns"].includes(d)) {
+        } else if (datasets[6]["columns"].includes(d)) { //canada
           ;
-        } else if (datasets[5]["columns"].includes(d)) {
+        } else if (datasets[5]["columns"].includes(d)) { //us
           ustop[d] = value;
-        } else if (d != "datetime") {
+        } else if (d != "datetime") { //else
           top[d] = value;
         }
 
