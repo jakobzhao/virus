@@ -228,7 +228,11 @@ cursor.execute("SELECT * from virus")
 col_name_list = [tuple[0] for tuple in cursor.description]
 
 
-flag, priorFlag, confirmed, priorConfirmed = "", "", 0, 0
+flag, confirmed, priorConfirmed = "", 0, 0
+prior_row = str(list(cursor.execute("SELECT * FROM virus WHERE rowid = 1")))
+prior_row = prior_row[2:(len(prior_row)-5)]
+priorFlag = prior_row[1:11]
+
 with open("assets/virus.csv", "w", encoding="utf-8") as fp:
     fp.write(str(col_name_list)[1:len(str(col_name_list))-1].replace("\'", "").replace(", ", ",").replace("(null)", "") + "\n")
     for row in cursor.execute("SELECT * from virus"):
@@ -242,9 +246,11 @@ with open("assets/virus.csv", "w", encoding="utf-8") as fp:
             confirmed += area
 
         if flag != priorFlag:
-            fp.write(str(row)[1:len(str(row)) - 1].replace("\'", "").replace("None", "").replace(", ", ",").replace("(null)", "") + "\n")
+            fp.write(str(prior_row)[1:len(str(prior_row)) - 1].replace("\'", "").replace("None", "").replace(", ", ",").replace("(null)", "") + "\n")
             priorFlag = flag
             priorConfirmed = confirmed
+        prior_row = row
+
     for row in cursor.execute("SELECT * from virus order by rowid DESC limit 1"):
         line = str(row)[1:len(str(row))-1].replace("\'", "").replace("None", "").replace(", ", ",").replace("(null)", "") + "\n"
         flag = line[0:10]
