@@ -915,6 +915,10 @@ function td(country) {
         //add ",CHINA" to every provinces in China
         if (datasets[7]["columns"].includes(name)) { //add ",CHINA" to every provinces in China
           $("#placename").text(name.toUpperCase() + ", CHINA");
+          if (name == "taiwan"){
+            $("#placename").text("Taiwan");
+          }
+
         } else {
           $("#placename").text(name.toUpperCase());
         }
