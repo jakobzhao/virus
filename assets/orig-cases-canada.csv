@@ -1,4 +1,298 @@
-﻿Cases,Date,Location,Notes,News Reference
+﻿Cases ,Date,Location,Notes,Reference
+NO.1,2020/1/27,Toronto,A man in his 40s who recently travelled to Wuhan. where the outbreak started. He s doing well and does not need hospitalization.,www.foxnews.com 
+NO.2,2020/1/28,Toronto,Wife of the first confirmed patient. She s been in self-isolation.,globalnews.ca 
+NO.3,2020/1/28,Vancouver. BC,B.C. s first case. A man in his 40s. who lives in the Vancouver Coastal Health region. recently travelled to Wuhan. Experienced an onset of symptoms following his return. Then contacted a primary health care provider for assessment.,globalnews.ca 
+NO.4,2020/1/31,London,Western University student. She wore a surgical mask in her travel from Wuhan to London on Jan. 23. even though no symptoms. She went straight into isolation at home and only went to hospital. while continuing to wear a mask.,www.uwo.ca 
+NO.5,2020/2/4,Vancouver. BC,A B.C. woman who had  close contact  with Wuhan visitors. In her 50s and living in Metro Vancouver area.,nationalpost.com 
+NO.6,2020/2/6,Vancouver. BC,two individuals from Wuhan area who are visiting a relative living in the Vancouver area (the B.C woman in 50s),theprovince.com 
+NO.7,2020/2/6,Vancouver. BC,See the previous one.,theprovince.com 
+NO.8,2020/2/14,Vancouver. BC,The woman is in her 30s and flew into YVR from Shanghai. before driving to her home in the B.C. Interior region. the onset of symptoms were during the flight and she was wearing a mask.,www.richmond-news.com 
+NO.9,2020/2/20,Vancouver. BC,A woman in her 30s visited Iran in late Januar.for a couple of weeks. and returned home to BC within the last week. She s back at home.,dailyhive.com 
+NO.10,2020/2/24,Vancouver. BC,Contacted the woman who return from Iran.,www.richmond-news.com 
+NO.11,2020/2/24,Toronto,the woman was in China since late last year and had travelled to Wuhan. The case was low positive and she s doing quite well.,www.wgrz.com 
+NO.12,2020/2/26,Toronto,A woman in her 60s went to Iran recently. She s released and in self-isolation at home.,www.mapleridgenews.com 
+NO.13,2020/2/27,Toronto,Husband of the woman in her 60s.,www.mapleridgenews.com 
+NO.14,2020/2/27,Montréal,First case in Quebec. a woman returned to Montreal from Iran on Monday and went to the clinic with minor symptoms. Went back home for self-isolation.,globalnews.ca 
+NO.15,2020/2/28,Toronto,A man in his 50s who arrived in Toronto from Iran on Tuesday and went to Sunnybrook Health Sciences Centre the next day,nationalpost.com 
+NO.16,2020/2/28,Toronto,A man in his 80s with a travel history to Egypt. Wore a mask throughout his travels. Discharged. Back to home.,nationalpost.com 
+NO.17,2020/2/29,York,A 34-year-old woman with a travel history to Iran. Low severity. Not admitted to hospital.,www.cp24.com 
+NO.18,2020/2/29,Toronto,A 51-year-old woman who returned to Toronto from Iran on February 22.,www.cp24.com 
+NO.19,2020/2/29,Toronto,Her 69-year-old husband. who did not have a recent travel history to Iran. also tested positive.,
+NO.20,2020/2/29,British Columbia,B.C. s eighth case. A woman in her 60s who travelled from Tehran to visit family in the Vancouver Coastal Health region,www.surreynowleader.com 
+NO.21,2020/3/1,Toronto,Husband of that 34-year-old woman. They went to Iran together.,www.cbc.ca 
+NO.22,2020/3/1,Toronto,A man in his 50s. a Toronto resident who is temporarily residing in Vaughan. Brother of one of Toronto s recently reported cases who had also travelled to Iran. arriving at Pearson on Feb. 25. He s in self-isolation.,www.cbc.ca 
+NO.23,2020/3/1,Toronto,A woman in her 70s. from Newmarket. who is a contact of the positive case in Toronto who is believed to have contracted the virus in Egypt.,www.cbc.ca 
+NO.24,2020/3/1,Toronto,A man in his 60s who returned from Iran on Feb. 23. He was discharged from hospital.,www.cbc.ca 
+NO.25,2020/3/2,Ontario,Two women in their 60s and 70s who returned from Egypt on Feb. 20,globalnews.ca 
+NO.26,2020/3/2,Ontario,Two women in their 60s and 70s who returned from Egypt on Feb. 20,globalnews.ca 
+NO.27,2020/3/2,Ontario,A man in his 60s who returned from Iran on Feb. 23.,globalnews.ca 
+NO.28,2020/3/3,Ontario,The 3rd case is in GTA residents who had recent travel histories to Iran and Egypt and both have been placed into self-isolation.,toronto.ctvnews.ca 
+NO.29,2020/3/3,Ontario,The 4th case is in GTA residents who had recent travel histories to Iran and Egypt and both have been placed into self-isolation.,toronto.ctvnews.ca 
+NO.30,2020/3/3,British Columbia,The 9th case in B.C. A man in his 50s who recently returned from Iran is British Columbia s ninth confirmed case of COVID-19.,www.cbc.ca 
+NO.31,2020/3/3,British Columbia,Three more cases of COVID-19 infection have been identified in B.C.. bringing the total number of patients in the province to 12.,www.cbc.ca 
+NO.32,2020/3/3,British Columbia,Three more cases of COVID-19 infection have been identified in B.C.. bringing the total number of patients in the province to 12.,www.cbc.ca 
+NO.33,2020/3/3,British Columbia,Three more cases of COVID-19 infection have been identified in B.C.. bringing the total number of patients in the province to 12.,www.cbc.ca 
+NO.34,2020/3/4,British Columbia,B.C. announces 13th case of coronavirus. woman in critical condition. she recently returned from travelling in Hong Kong and India .,vancouverisland.ctvnews.ca 
+NO.35,2020/3/5,Quebec,Government says person in question recently returned from India,www.cbc.ca 
+NO.36,2020/3/5,Waterloo,Ontario 21st case. a woman in her 50s. returned and tested from Italy on March 3. Now self-isolation at home with mild symptoms.,toronto.ctvnews.ca 
+NO.37,2020/3/5,Ontario,Ontario 22nd case. a man in his 60s. who returned home from Iran on Feb. 29. Now self0isolation at home.,toronto.ctvnews.ca 
+NO.38,2020/3/5,Mississauga. Ontario,Late on Thursday. Peel Public Health confirmed the first positive case of the coronavirus in Peel region. The affected individual is a man in his 60s who is a resident of Mississauga. The man was aboard the Grand Princess Cruise Ship out of San Francisco from Feb. 11 to 21. He returned to Canada on Feb. 28.,www.cbc.ca 
+NO.39-46,2020/3/5,British Columbia,This is B.C. s first apparent case of coronavirus spread in the community,www.cbc.ca 
+NO.47,2020/3/5,Alberta,It s not yet known where in the province the case was detected. The case is presumptive. which means it is not yet lab-confirmed.,calgaryherald.com 
+NO.48,2020/3/5,Quebec,The patient. a woman of unknown age. had travelled to France and returned to Quebec on Tuesday. only to learn she had been in contact with a confirmed case while abroad.,globalnews.ca 
+NO.49,2020/3/6,Ontario,The patient had recently travelled to Las Vegas for an international conference .,torontosun.com 
+NO.50,2020/3/6,Alberta,The second case in Alberta is connected to a man in his 40s from Edmonton who just returned from a trip to the U.S (Illinois. Michigan and Ohio).,globalnews.ca 
+NO.51,2020/3/6,Richmond Hill,A female in their 60s returned from Iran on March 2. 2020. She presented herself to Mackenzie Richmond Hill Hospital s emergency department. in Richmond Hill. The hospital took all necessary precautions and followed standard operating procedures. including testing and assessment. The patient was discharged home the same day where she remains in self-isolation.,news.ontario.ca 
+NO.52,2020/3/6,Ontario,A male in his 20s returned from Italy on March 3. 2020. and presented himself to Mount Sinai Hospital s emergency department in Toronto. The hospital took all necessary precautions and followed standard operating procedures. including testing and assessment. The patient was discharged home the same day where he remains in self-isolation.,news.ontario.ca 
+NO.53-54,2020/3/6,Ontario,The number of Ontario residents infected with the novel coronavirus continued to climb on Friday as public health officials recorded six new cases in the past 36 hours. bringing the total in the province to 28 by late afternoon.,globalnews.ca 
+NO.55-56,2020/3/7,Vancouver,Six new cases of the new coronavirus have been identified in British Columbia. two of which are connected to a care home in North Vancouver. Chief medical health officer Dr. Bonnie Henry and Health Minister Adrian Dix also gave an update on a previously-announced case that likely contracted COVID-19 in the community. According to the officials. that patient is a health care worker at the Lynn Valley Care Centre where two of the new cases live. [Update] The first death from COVID-19 in Canada has been recorded in B.C. The person who died was a resident of Lynn Valley Care Centre.,globalnews.ca 
+NO.57-58,2020/3/7,British Columbia,Two of the other new cases travelled to the province from Iran.,globalnews.ca 
+NO.59-60,2020/3/7,British Columbia,The final two new cases were passengers of the Grand Princess cruise ship currently docked off the shore of San Francisco. The pair left the ship on Feb. 21 after travelling to Mexico and back to California.,globalnews.ca 
+NO.61,2020/3/8,Alberta,The two new cases were announced Sunday morning. bringing the total in the province to three presumptive cases and one confirmed case of coronavirus. In an update Sunday. Hinshaw said the third and fourth cases of COVID-19 were found in a man in his 60s in the Edmonton zone and a woman in her 30s in the Calgary zone.,edmonton.ctvnews.ca 
+NO.62,2020/3/8,Ontario,Ontario reports the 29th case of COVID-19. woman who travelled to Colorado,globalnews.ca 
+NO.63,2020/3/8,Quebec,A fourth probable case of coronavirus has been detected in Quebec.,canoe.com 
+NO.64,2020/3/8,Toronto,The second is man in his 60s who presented himself to North York General Hospital s emergency department March 7. after returning from Washington D.C on March 3,www.thestar.com 
+NO.65,2020/3/8,Toronto,One of the two new cases announced Sunday evening include a woman in her 60s who went to Scarborough Health Network-General Site s emergency department on March 7. after returning from France on March 2.,www.thestar.com 
+NO.66,2020/3/8,Peel,Peel health officials confirmed Sunday evening the region s third case of COVID-19 -- a man in his 50 s who returned from Germany on Saturday. He was assessed at Brampton Civic Hospital.,www.cp24.com 
+NO.67,2020/3/8,Alberta,The two new cases were announced Sunday morning. bringing the total in the province to three presumptive cases and one confirmed case of coronavirus. In an update Sunday. Hinshaw said the third and fourth cases of COVID-19 were found in a man in his 60s in the Edmonton zone and a woman in her 30s in the Calgary zone.,globalnews.ca 
+NO.68,2020/3/9,Toronto,Ontario health officials have announced three new cases of the novel coronavirus. bringing the total in the province to 34. One patient. a man in his 50s. recently travelled to Germany. and the other two cases are a man in his 80s and a woman in her 70s who were recently in Iran.,nationalpost.com 
+NO.69,2020/3/9,Toronto,Ontario health officials have announced three new cases of the novel coronavirus. bringing the total in the province to 34. One patient. a man in his 50s. recently travelled to Germany. and the other two cases are a man in his 80s and a woman in her 70s who were recently in Iran.,nationalpost.com 
+NO.70-72,2020/3/9,Alberta,Alberta has recorded three new presumptive cases,globalnews.ca 
+NO.73-77,2020/3/9,British Columbia,Five more cases of the viral infection have been confirmed in B.C.. bringing the provincial total to 32. Two of the new cases involve travel. One is a female in her 50s who recently returned from Iran. The second is a man in his 30s who travelled from Italy.,www.cbc.ca 
+NO.78,2020/3/9,Ontario,Ontario health officials announced four new cases of the novel coronavirus Monday. bringing the total in the province to 35. On Monday. Ontario s newest cases are a man in his 50s who recently travelled to Germany. a man in his 80s and a woman in her 70s who were recently in Iran. and a woman in her 30s who is a close contact of another confirmed case. All of the patients have been released into self-isolation.,globalnews.ca 
+NO.79,2020/3/9,Hamilton. ON,A 32-year-old oncologist with the Juravinski Cancer Centre is in self-isolation in Burlington after a positive test for COVID-19.,globalnews.ca 
+NO.80,2020/3/10,Ontario,This is case NO#36. male in his 40s. patient is tested in St. Joseph s Health Center now. with travel history (Switzerland). Right now patient is self-isolating.,www.ontario.ca 
+NO.81-87,2020/3/10,Alberta,Seven new cases of COVID-19 have been confirmed in Alberta. This brings the total number of confirmed cases in Alberta to 14.,www.alberta.ca 
+NO.88-94,2020/3/10,British Columbia,Seven more people in B.C. have tested posted for the novel coronavirus. including two health-care workers at Lynn Valley Care Centre in North Vancouver. B.C. s provincial health officer has announced. Another two cases appear to have been contracted through community contact. Dr. Bonnie Henry said Tuesday afternoon. Three are travel-related.,www.cbc.ca 
+NO.95-97,2020/3/10,Quebec,According to Quebec official website. as of March 10. 2020. there are 7 confirmed cases. [update 3/11] Earlier. only four people had been confirmed to have contracted the disease. and one person presumptively had it. That person s case has now been confirmed. as have two others.,msss.gouv.qc.ca 
+NO.98,2020/3/10,Sudbury,An Ontario man who travelled to Toronto last week to attend a conference has been confirmed to have COVID-19. health officials said Tuesday. The person contracts the novel coronavirus had attended the Prospectors and Developers Association in Canada conference earlier in March. Premier Doug Ford attends same conference in March,www.cp24.com 
+NO.100,2020/3/11,Toronto,Ontario s four new cases are  a man in his 30s from Toronto. who travelled to the U.S. All of them are at home in self-isolation.,www.thestar.com 
+NO.101,2020/3/11,Ottawa,Ontario s four new cases are  a man in his 40s from Ottawa who travelled to Austria. All of them are at home in self-isolation.,www.thestar.com 
+NO.102,2020/3/11,Halton,Ontario s four new cases are  a woman in his 30s from Halton Region who showed up a Hamilton hospital after travelling to the U.S. All of them are at home in self-isolation.,www.thestar.com 
+NO.103,2020/3/11,Grand Princess,Canadian public health officials have announced one Canadian passenger of the Grand Princess tested positive for COVID-19 while in quarantine at Canadian Forces Base Trenton.,globalnews.ca 
+NO.104,2020/3/11,New Brunswick,New Brunswick s chief medical officer of health. Dr. Jennifer Russell. announced on Wednesday that the first presumptive case of the novel coronavirus has been identified in the province. Russell said the patient was  minimally symptomatic  and has been in self-isolation. The case relates to a woman between the age of 50 and 60. Russell said. adding that she travelled internationally from France.,globalnews.ca 
+NO.105-109,2020/3/11,Alberta,Five new cases of COVID-19 have been confirmed in Alberta. This brings the total number of confirmed cases in Alberta to 19.,www.alberta.ca 
+NO.110,2020/3/11,Quebec,Eighth case confirmed in Quebec. The latest patient was a person who travelled to Quebec from abroad.,montreal.ctvnews.ca 
+NO.111,2020/3/11,Ontario,Ontario s 42th cases is confrimed. a female in her 40s. She has a travel history in US recently.,www.ontario.ca 
+NO.112-118,2020/3/11,British Columbia,Seven more people in B.C. have tested positive for the coronavirus. bringing B.C. s total to 46.,www.cbc.ca 
+NO.119,2020/3/11,Quebec,Quebec s health ministry confirmed a ninth case of the novel coronavirus in the province on Wednesday evening.,globalnews.ca 
+NO.99,2020/3/11,York,Ontario s four new cases are  a woman in her 30s from York Region. who travelled to Egypt.,www.thestar.com 
+NO.120,2020/3/12,Winnipeg. MB,At a Thursday morning press conference Health Minister Cameron Friesen said the province s first presumptive case is a woman in her 40s living in the Winnipeg area. The woman told health officials she had recently traveled to the Philippines. She had been self-isolating at home when she got home a few days ago,globalnews.ca 
+NO.121,2020/3/12,Waterloo,Two more cases of coronavirus have been confirmed in Waterloo region. That brings the total number of cases to three. after a case was announced on March 5. The two new cases involve a woman in her 60s and a man in his 40s who are both Waterloo region residents. The woman got sick on a cruise that left Puerto Rico on March 1. visited St. Thomas. St. Martin. Barbados. Dominique and Grenada before returning to Puerto Rico. She developed symptoms after returning to Canada on March 8. according to public health officials. The woman did not have symptoms during travel. officials said. and began to self-isolate at home when symptoms developed. She took private transportation to Grand River Hospital on Tuesday to be tested. She has since been released with mild respiratory symptoms. The two are among 17 more cases announced across the province. bringing the total number to 59 across Ontario.,www.cbc.ca 
+NO.122,2020/3/12,Waterloo,The third confirmed case is a man in his 40s who visited Las Vegas. The two are among 17 more cases announced across the province. bringing the total number to 59 across Ontario.,www.cbc.ca 
+NO.123,2020/3/12,Toronto,the total number to 59 across Ontario. 20s Male. with close contact. now self-isolating.,www.ontario.ca 
+NO.124,2020/3/12,Saskatoon. Saskatchewan,Saskatoon man is the province s first presumptive case of COVID-19. He has travelled to Egypt and is well enough to self-isolate at home.,saskatoon.ctvnews.ca 
+NO.125,2020/3/12,Ottawa,the total number to 59 across Ontario. 40s male. travel to Italy. Now self-isolating.,www.ontario.ca 
+NO.126,2020/3/12,Toronto,the total number to 59 across Ontario. 40s male. travel to USA. Now self-isolating.,www.ontario.ca 
+NO.127,2020/3/12,Toronto,the total number to 59 across Ontario. 70s Male. travel to USA. Now self-isolating.,www.ontario.ca 
+NO.128,2020/3/12,Peel,the total number to 59 across Ontario. 20s female. travel history pending. Now self-isolating.,www.ontario.ca 
+NO.129,2020/3/12,Toronto,the total number to 59 across Ontario. 60s female. travel to USA. Now self-isolating.,www.ontario.ca 
+NO.130,2020/3/12,Toronto,the total number to 59 across Ontario. 40s Male. travel to USA. Now self-isolating.,www.ontario.ca 
+NO.131,2020/3/12,Peel,the total number to 59 across Ontario. female. with close contact and now self-isolating.,www.ontario.ca 
+NO.132,2020/3/12,Ottawa,the total number to 59 across Ontario. 40s Female. travel to Italy. Now self-isolating.,www.ontario.ca 
+NO.133,2020/3/12,Toronto,the total number to 59 across Ontario. 40s female. travel to Europe. Now self-isolating.,www.ontario.ca 
+NO.134,2020/3/12,Halton,the total number to 59 across Ontario. 40s female. travel to USA. Costa Rica. Now self-isolating.,www.ontario.ca 
+NO.135,2020/3/12,Toronto,the total number to 59 across Ontario. 60s male. travel to USA. Now self-isolating.,www.ontario.ca 
+NO.136,2020/3/12,Toronto,the total number to 59 across Ontario. 20s male. travel to USA. Now self-isolating.,www.ontario.ca 
+NO.137,2020/3/12,Toronto,the total number to 59 across Ontario. female teenager. with close contact. now self-isolating.,www.ontario.ca 
+NO.138,2020/3/12,Toronto,the total number to 59 across Ontario. 30s Male. with close contact. now self-isolating.,www.ontario.ca 
+NO.139-142,2020/3/12,Quebec,The number of cases in Quebec rises to 13.,ici.radio-canada.ca 
+NO.143-146,2020/3/12,Alberta,With four new cases reported on Thursday. all in the Calgary zone. Alberta must adopt aggressive new measures to limit the spread in the virus. Dr. Deena Hinshaw said at a new conference.,ici.radio-canada.ca 
+NO.147-148,2020/3/12,Winnipeg. MB,2 more presumptive cases in Manitoba. bringing total to 3. The second and third cases are both men in their 30s who live in Winnipeg and were likely exposed to the virus during recent travel.,www.cbc.ca 
+NO.149-155,2020/3/12,British Columbia,B.C. health officials are advising against all non-essential travel outside of Canada as they announced 7 new cases Thursday. That includes travel to the US. said health officials.,www.vancouverisawesome.com 
+NO.156-159,2020/3/12,Quebec,4 new coronavirus cases in Quebec push state total to 17.,mobile.twitter.com 
+NO.160-171,2020/3/13,Toronto,20 new cases were confirmed in Ontario. bringing the state s total of positive tests to 79. 12 new cases are from Toronto.,www.ontario.ca 
+NO.172-175,2020/3/13,Peel,20 new cases were confirmed in Ontario. bringing the state s total of positive tests to 79. 4 new cases are from Peel.,www.ontario.ca 
+NO.176,2020/3/13,York,20 new cases were confirmed in Ontario. bringing the state s total of positive tests to 79. One new cases is from York.,www.ontario.ca 
+NO.177,2020/3/13,Ottawa,20 new cases were confirmed in Ontario. bringing the state s total of positive tests to 79. One new cases is from Ottawa.,www.ontario.ca 
+NO.178,2020/3/13,Niagara,20 new cases were confirmed in Ontario. bringing the state s total of positive tests to 79. One new cases is from Niagara.,www.ontario.ca 
+NO.179,2020/3/13,Waterloo,20 new cases were confirmed in Ontario. bringing the state s total of positive tests to 79. One new cases is from Waterloo.,www.ontario.ca 
+NO.180-181,2020/3/13,Grand Princess,As of midday Friday. there were almost 180 confirmed and presumptive cases of COVID-19. Ontario has reported 79 cases. including five the province lists as resolved. B.C. has reported 53 cases. including one death and four the province lists as recovered. Alberta has reported 23 cases. Quebec has reported 17 cases. Manitoba has three presumptive cases. Saskatchewn has reported one presumptive case. New Brunswick has one confirmed case. Two cases confirmed among Grand Princess cruise passengers at CFB Trenton.,www.cbc.ca 
+NO.182-187,2020/3/13,Alberta,6 new coronavirus cases in Alberta. bringing total to 29,edmonton.ctvnews.ca 
+NO.188,2020/3/13,Saskatchewan,Saskatchewan confirms the 2nd presumptive case of COVID-19. The person is in their 60s and recently returned from Oregon state in the United States. The test was conducted in Saskatoon on March 10 and the individual has been well enough to self-isolate at home.,globalnews.ca 
+NO.189-196,2020/3/13,British Columbia,B.C. now has 64 cases. placeholder.,
+NO.197,2020/3/13,Winnipeg. MB,4th case of COVID-19 identified in Manitoba  province. The patient is a 40-something-year-old man residing in Winnipeg. who may have been exposed to COVID-19 while travelling in South Korean. the Philippines or Japan.,www.cbc.ca 
+NO.198-200,2020/3/13,Vancouver. BC,Vancouver Coastal Health (VCH) has confirmed that three administrative staff members at North Vancouver s Lions Gate Hospital have tested positive for the novel coronavirus.,globalnews.ca 
+NO.201,2020/3/13,Northumberland,First positive case in Northumberland County. ON was confirmed.The affected individual is a woman in her 60s. who has traveled to Spain and Portugal recently. The woman had travelled on Air Transat flight 337 from Lisbon. Portugal to Toronto on March 6. 2020.,nhh.ca 
+NO.202,2020/3/13,Waterloo,A man in his 40s developed mild respiratory symptoms on March 1 while on a Celebrity Cruise. The man contacted Public Health for assessment on March 10 and took private transportation to St. Mary s General Hospital for testing. He was released from hospital to self-isolate at home and is being monitored by Public Health. Region of Waterloo Public Health confirms a fifth case of COVID-19 in the region.,www.ontario.ca 
+NO.203,2020/3/14,New Brunswick,There is a second presumptive case of COVID-19 in New Brunswick. A man between the ages of 50 and 60 who was a close contact with the person involved in the first case.,www.cbc.ca 
+NO.204-212,2020/3/14,Toronto,Saturday morning. Ontario confimed 101 total cases. 9 of new cases are from Toronto.,www.cbc.ca 
+NO.213,2020/3/14,Peel,Saturday morning. Ontario confimed 101 total cases. 1 of new cases are from Peel.,www.cbc.ca 
+NO.214,2020/3/14,Montréal,4 new coronavirus cases in Quebec push state total to 21. One of them is in Montreal.,www.quebec.ca 
+NO.215,2020/3/14,Lanaudière,4 new coronavirus cases in Quebec push state total to 21. One of them is in Lanaudière.,www.quebec.ca 
+NO.216-217,2020/3/14,Montérégie,4 new coronavirus cases in Quebec push state total to 21. One of them is in Montérégie.,www.quebec.ca 
+NO.218,2020/3/14,Queens county. PE,First case on Prince Edward Island. The Queens County woman is in her 50s and has recently returned from a trip on a cruise ship.,www.cbc.ca 
+NO.219-227,2020/3/14,Vancouver. BC,B.C. has detected nine new cases of COVID-19. bringing the province s total to 73. Many of the new cases are related to an outbreak at the Lynn Valley Care centre in North Vancouver. Four residents and 12 staff of the centre are now infected. 7 in Vancouver Coastal Health(North Van). 1 in Fraser Health(Surrrey). 1 in Interior Health(Kelowna),www.cbc.ca 
+NO.228-230,2020/3/14,Quebec,3 new coronavirus cases in Quebec push state total to 24.,twitter.com 
+NO.231,2020/3/14,Newfoundland and Labrador,Newfoundland and Labrador has its first presumptive case of COVID-19. the woman recently returned from travel on a cruise ship and is currently self-isolating and contact tracing has begun,www.cbc.ca 
+NO.232-241,2020/3/14,Alberta,Ten new cases have been diagnosed bringing the total to 39 cases in Alberta. including two that have been admitted to intensive care.,www.alberta.ca 
+NO.242,2020/3/14,Northwestern Ontario,The 102nd case in Ontario was confirmed in the Victoria Hospital (Winnipeg). and the status is self-isolating. more detail are pending.,twitter.com 
+NO.243,2020/3/14,Eastern Ontario,The 103rd case in Ontario is a female in her 30s. who recently had traveled to U.S. She was confirmed in the Glengarry Memorial Hospital. and the status is self-isolating.,www.ontario.ca 
+NO.244,2020/3/14,Waterloo,The 90th case in Ontario is in Waterloo. Details are pending.,www.ontario.ca 
+NO.245-246,2020/3/14,Ottawa,The 80th and the 89th confirmed cases in Ontario are from Ottawa. details are pending.,www.ontario.ca 
+NO.247,2020/3/14,Middlesex London,The 92nd case in Ontario is a 50s female from Middlesex London. who went to the London Health Sciences and now is self-isolating.,www.ontario.ca 
+NO.248,2020/3/14,Durham,The 87th confirmed case in Ontario is a 70s female from Durham. who has traveled to multiple locations (including Egypt). She went to the Lakeridge Health (Oshawa) and now is self-isolating.,www.ontario.ca 
+NO.249,2020/3/14,Durham,The 96th confirmed case in Ontario is a 50s male from Durham. who has traveled to Asia. He went to the Lakeridge Health (Oshawa) and now is self-isolating.,www.ontario.ca 
+NO.250,2020/3/14,Durham,The 97th confirmed case in Ontario is a 60s female from Durham. who has traveled to Asia. She went to the Lakeridge Health (Oshawa) and now is self-isolating.,www.ontario.ca 
+NO.251,2020/3/14,Huron Perth,The 98th case in Ontario is from Huron Perth. Details are pending.,www.ontario.ca 
+NO.252,2020/3/14,Halton,The 99th case in Ontario is a 50s female from Halton. who has traveled to U.S.. She went to the Joseph Brant and now is self-isolating.,www.ontario.ca 
+NO.253,2020/3/14,Hamilton,The 100th case in Ontario is from Hamilton. Details are pending.,www.ontario.ca 
+NO.254,2020/3/14,Northern. Saskatchewan,Saskatchewan confirms the 3rd presumptive case of COVID-19. She is a nurse. working in local clinic and is in self-isolation. She has travelled to Nigeria and Germany.,www.cbc.ca 
+NO.255,2020/3/14,Regina. Saskatchewan,Two people living in the same Regina household were tested for COVID-19 on March 13. after one of the residents attended a dental conference in Vancouver. where an attendee was later confirmed to have COVID-19.,www.cbc.ca 
+NO.256,2020/3/14,Regina. Saskatchewan,Two people living in the same Regina household were tested for COVID-19 on March 13. after one of the residents attended a dental conference in Vancouver. where an attendee was later confirmed to have COVID-19.,www.cbc.ca 
+NO.257,2020/3/14,Regina. Saskatchewan,An individual in their 20s who recently travelled to Tennessee. U.S.A.. was tested in Regina and is now self-isolating at home.,www.cbc.ca 
+NO.258-260,2020/3/15,Nova Scotia. NS,The Nova Scotia government says there are three presumptive cases of COVID-19 in the province. The cases are all related to travel. It says the individuals have all been notified and are in self-isolation.,www.cbc.ca 
+NO.261,2020/3/15,Unassign,Ontario confirms 42 new cases of COVID-19 bringing the total to 145 in the province. Placeholder,www.ontario.ca 
+NO.262-264,2020/3/15,Manitoba. MB,3 more presumptive cases of COVID-19 identified in Manitoba. The fifth case is a man in his 70s. and the sixth case is a woman in her 70s who the province said was likely exposed to the virus through recent travel. The seventh case is a woman in her 50s.,www.cbc.ca 
+NO.265-266,2020/3/15,To be determined,3/15 noon. 2 new case of Region of residence unknown. More information to come. [Update] the number of the unknown area is 3.,www.quebec.ca 
+NO.267-268,2020/3/15,Capitale Nationale,3/15 noon. Capitale Nationale 2 more cases. [Update] According to the Official Site. a new case was confirmed since 3/16 2PM. The total number remains at 2.,www.quebec.ca 
+NO.269-271,2020/3/15,Mauricie - Centre du,3/15 noon. Mauricie - Centre du Québec 3 more cases.,www.quebec.ca 
+NO.272,2020/3/15,Estrie,3/15 noon. Estrie 1 more case.,www.quebec.ca 
+NO.273,2020/3/15,Montréal,3/15 noon. Montréal 2 more cases.,www.quebec.ca 
+NO.274,2020/3/15,Laurentides,3/15 noon. Laurentides 1 more case.,www.quebec.ca 
+NO.275-276,2020/3/15,Montérégie,3/15 noon. Montérégie 2 more cases.,www.quebec.ca 
+NO.277,2020/3/15,Outside Québec,3/15 noon. Outside Québec 1 more case. Person who doesn t live in Québec. but who was on the territory and has been tested in Québec.,www.quebec.ca 
+NO.278-281,2020/3/15,New Brunswick,New Brunswick has four new presumptive cases of COVID-19. according to Dr. Jennifer Russell. the province s chief medical officer of health. The new presumptive cases include  A male in his 50s-60s. A female in her 50s-60s. Two males in their 20s-30s. There are now five presumptive cases and one confirmed case of COVID-19 in New Brunswick.,www.cbc.ca 
+NO.282,2020/3/15,Montréal,According to the most recent data from Santé-Québec. the province has 39 cases. four more than announced earlier in the day Sunday. The cases were spread across the province and included one in Montreal bringing the city s total number of cases to 10.,montreal.ctvnews.ca 
+NO.283-284,2020/3/15,Chaudière-Appalaches,According to the most recent data from Santé-Québec. the province has 39 cases. four more than announced earlier in the day Sunday. The cases were spread across the province and included two in Chaudière-Appalaches bringing the city s total number of cases to 3.,www.quebec.ca 
+NO.285,2020/3/15,Lanaudière,According to the most recent data from Santé-Québec. the province has 39 cases. four more than announced earlier in the day Sunday. The cases were spread across the province and included one in Lanaudière bringing the city s total number of cases to 2.,www.quebec.ca 
+NO.286-302,2020/3/15,Alberta,Alberta health officials announced 17 new cases. brinigng the total to 56. The new cases two that are believed to be  community cases  with no connection to international travel.,www.ctvnews.ca 
+NO.303-304,2020/3/15,Durham,Ontario confirms 42 new cases of COVID-19 bringing the total to 145 in the province. 2 of the 42 are from Durham.,www.ontario.ca 
+NO.305-306,2020/3/15,Grey Bruce,Ontario confirms 42 new cases of COVID-19 bringing the total to 145 in the province. 2 of the 42 are from Grey Bruce.,www.ontario.ca 
+NO.307,2020/3/15,Haliburton Kawartha Pineridge,Ontario confirms 42 new cases of COVID-19 bringing the total to 145 in the province. 1 of the 42 is from Haliburton Kawartha Pineridge.,www.ontario.ca 
+NO.308-310,2020/3/15,Hamilton,Ontario confirms 42 new cases of COVID-19 bringing the total to 145 in the province. 3 of the 42 are from Hamilton.,www.ontario.ca 
+NO.311,2020/3/15,Niagara,Ontario confirms 42 new cases of COVID-19 bringing the total to 145 in the province. 1 of the 42 are from Niagara.,globalnews.ca 
+NO.312-316,2020/3/15,Ottawa,Ontario confirms 42 new cases of COVID-19 bringing the total to 145 in the province. 5 of the 42 are from Ottawa.,globalnews.ca 
+NO.317-321,2020/3/15,Peel,Ontario confirms 42 new cases of COVID-19 bringing the total to 145 in the province. 5 of the 42 are from Peel.,globalnews.ca 
+NO.322,2020/3/15,Peterborough,Ontario confirms 42 new cases of COVID-19 bringing the total to 145 in the province. 1 of the 42 is from Peterborough.,globalnews.ca 
+NO.323-324,2020/3/15,Simcoe Muskoka,Ontario confirms 42 new cases of COVID-19 bringing the total to 145 in the province. 2 of the 42 are from Simcoe Muskoka.,globalnews.ca 
+NO.325-338,2020/3/15,Toronto,Ontario confirms 42 new cases of COVID-19 bringing the total to 145 in the province. 14 of the 42 are from Toronto.,globalnews.ca 
+NO.339-340,2020/3/15,Waterloo,Ontario confirms 42 new cases of COVID-19 bringing the total to 145 in the province. 2 of the 42 are from Waterloo.,globalnews.ca 
+NO.341-343,2020/3/15,York,Ontario confirms 42 new cases of COVID-19 bringing the total to 145 in the province. 3 of the 42 are from York.,globalnews.ca 
+NO.344-348,2020/3/16,York,Ontario confirms 32 new cases of COVID-19 bringing the total to 177. 5 of the 32 are from York.,www.ontario.ca 
+NO.349-353,2020/3/16,Montréal,5 new coronavirus cases in Quebec push state total to 41. two of them is in Montérégie.,www.cbc.ca 
+NO.354,2020/3/16,Nova Scotia. NS,Nova Scotia s chief medical officer of health. Dr. Robert Strang. has announced two new presumptive cases of the novel coronavirus. bringing the total number of presumptive COVID-19 cases in the province to five as of Monday. March 16.The case details include a male patient and a female patient. both in their 50s. who were in close contact with individuals who had recently travelled outside the country.,globalnews.ca 
+NO.355-361,2020/3/16,Vancouver. BC,There are three new deaths from COVID-19 in B.C.. as well as 30 new cases. 7 of them are in Vancouver.,www.richmond-news.com 
+NO.362,2020/3/16,Saskatchewan,The Saskatchewan government reported a seventh case of the COVID-19 coronavirus on Monday — a person who had recently travelled to Arizona.,www.cbc.ca 
+NO.363,2020/3/16,Nova Scotia. NS,3/16 Nova Scotia 1 more case,globalnews.ca 
+NO.364,2020/3/16,Chaudière-Appalaches,3/16 noon. Chaudière-Appalaches 1 more case,www.quebec.ca 
+NO.365,2020/3/16,Lanaudière,3/16 noon. Lanaudières 1 more case,www.quebec.ca 
+NO.366,2020/3/16,Montérégie,3/16 noon. Montérégie 1 more case,www.quebec.ca 
+NO.367-369,2020/3/16,Grand Princess,4 new repatriated Canadians from Grand Princess cruise ship have tested positive for COVID-19.,covid19tracker.ca 
+NO.370,2020/3/16,Durham,Ontario confirms 32 new cases of COVID-19 bringing the total to 177. One of the 32 new cases is from Durham.,www.ontario.ca 
+NO.371,2020/3/16,Halton,Ontario confirms 32 new cases of COVID-19 bringing the total to 177. One of the 32 is from Halton.,www.ontario.ca 
+NO.372-375,2020/3/16,Hamilton,Ontario confirms 32 new cases of COVID-19 bringing the total to 177. 4 of the 32 are from Hamilton.,www.ontario.ca 
+NO.376,2020/3/16,Niagara,Ontario confirms 32 new cases of COVID-19 bringing the total to 177. One of the 32 is from Niagara.,www.ontario.ca 
+NO.377-379,2020/3/16,Ottawa,Ontario confirms 32 new cases of COVID-19 bringing the total to 177. 3 of the 32 are from Ottawa.,www.ontario.ca 
+NO.380-383,2020/3/16,Peel,Ontario confirms 32 new cases of COVID-19 bringing the total to 177. 4 of the 32 are from Peel.,www.ontario.ca 
+NO.384,2020/3/16,Sudbury,Ontario confirms 32 new cases of COVID-19 bringing the total to 177. One of the 32 is from Sudbury.,www.ontario.ca 
+NO.385-395,2020/3/16,Toronto,Ontario confirms 32 new cases of COVID-19 bringing the total to 177. 11 of the 32 are from Toronto.,www.ontario.ca 
+NO.396,2020/3/16,Zone 2,One additional presumptive case of COVID-19 in the province. bringing the number of presumptive or positive cases in New Brunswick to seven. The new case is a female. between 20 and 30 years old in Zone 2 (in the southern part of the province). The patient was screened. her recent travel history to Greece was confirmed and the patient was treated. tested and is in self-isolation.,www2.gnb.ca 
+NO.397,2020/3/16,Wellington Dufferin Guelph,Ontario confirms 32 new cases of COVID-19 bringing the total to 177. One of the 32 is from Wellington Dufferin Guelph.,www.ontario.ca 
+NO.398-420,2020/3/16,British Columbia,There are three new deaths from COVID-19 in B.C.. as well as 30 new cases. All three deaths are residents at the Lynn Valley Care Centre in North Vancouver. where an elderly man recently died from the virus.  A significant number of new cases are related to the Pacific Dental Conference 2020 held at the Vancouver Convention Centre on March 6 and 7. 2020. We are asking anyone who attended to self-isolate until March 22. 2020.,www.richmond-news.com 
+NO.421,2020/3/16,Winnipeg. MB,Manitoba Public Health officials announced the province s most recent case of COVID-19 is a man in his 80s who lives in Winnipeg. who were exposed through recent travel.,winnipeg.ctvnews.ca 
+NO.422,2020/3/16,Grand Princess,Assunta Gerretsen. wife of former Kingston. Ont.. mayor and MPP John Gerretsen and mother of current Kingston and the Islands MP Mark Gerretsen. says she has tested positive for the novel coronavirus.,globalnews.ca 
+NO.423-440,2020/3/16,Alberta,Alberta confirms 18 new COVID-19 cases. total climbs to 74,edmonton.ctvnews.ca 
+NO.441-442,2020/3/16,Estrie,3/16 noon. Estrie 1 more case. total 2 cases.,www.quebec.ca 
+NO.443,2020/3/17,York,3/17 Ontario increased 8 cases. 1 in York. Travel related (Costa Rica).,www.ontario.ca 
+NO.444-445,2020/3/17,Nova Scotia. NS,There are now seven cases of COVID-19 in Nova Scotia. Six cases are presumed positive and one case has been confirmed positive by the National Microbiology Laboratory in Winnipeg. As of Tuesday. Nova Scotia has done 934 other tests that came back negative. In a release. the province said the two new presumptive cases are  travel-related and connected to earlier cases. ,globalnews.ca 
+NO.446-447,2020/3/17,Middlesex London,3/17 Ontario increased 8 cases. 2 in Middlesex London.,www.ontario.ca 
+NO.448-452,2020/3/17,Hamilton,3/17 Ontario increased 8 cases. 5 in Hamilton.,www.ontario.ca 
+NO.453,2020/3/17,Ontario,Ontario s Ministry of Health has confirmed the first death related to COVID-19 in the province. The 77-year-old man who died tested positive for the virus after coming in close contact with another positive case. [Death],globalnews.ca 
+NO.454-455,2020/3/17,Newfoundland and Labrador,Newfoundland and Labrador now has three cases of presumptive COVID-19. All three—two women and a man—reside in Labrador-Grenfell Health region. The woman who first tested positive had been on a Carribean cruise. and the latest two had contact with her. and were not unexpected.,vocm.com 
+NO.456-461,2020/3/17,Estrie,According to the Official Site. there are 9 confirmed cases in Estrie.,www.quebec.ca 
+NO.462-464,2020/3/17,Montréal,According to the Official Site. by 3/17. there are 21 confirmed cases in Montréal.,www.quebec.ca 
+NO.465-466,2020/3/17,Laurentides,According to the Official Site. by 3/17. there are in total 5 confirmed cases in Laurentides. increased by 2 since yesterday.,www.quebec.ca 
+NO.467,2020/3/17,Montérégie,By 3/17. 1 more case is confirmed in Montérégie. bringing the total number to 11.,www.quebec.ca 
+NO.468,2020/3/17,New Brunswick,New Brunswick has an eighth case of COVID-19. a boy under the age of 10 in the central part of the province who is a presumptive case linked to a previous travel-related case. Dr. Jennifer Russell. the chief medical officer of health announced Tuesday.,www.cbc.ca 
+No.469,2020/3/17,Quebec,According to the Official Site. a new case was confirmed since 3/16 2PM. The total number remains at 2.,www.quebec.ca 
+No.470,2020/3/17,British Columbia ,Provincial health officer Dr. Bonnie Henry said two of the new fatalities are linked to the same North Vancouver care home where B.C. s four previous deaths were recorded.The other new fatality is a man in his 80s from the Fraser Health region. British Columbia  186 confirmed. including seven deaths and five cases listed as resolved.,bc.ctvnews.ca 
+No.471-473,2020/3/17,Quebec,3/17 Quebec increased 11 cases. 3 in Lanaudière,www.quebec.ca 
+No.474-475,2020/3/17,Quebec,3/17 Quebec increased 11 cases. 2 in Laurentides.,www.quebec.ca 
+NO.476,2020/3/17,Quebec,3/17 Quebec increased 11 cases. 1 in Chaudière-Appalaches,www.quebec.ca 
+NO.477,2020/3/17,Quebec,3/17 Quebec increased 11 cases. 1 is Outside Québec,www.quebec.ca 
+NO.478-500,2020/3/17,AB,23 new cases of COVID-19 identified in Alberta over last 24 hours. brings new total to 97.,edmonton.ctvnews.ca 
+NO.501,2020/3/17,Saskatchewan,Saskatchewan records an 8th case of COVID-19. It is a person who travelled to a dental conference in Vancouver. much like one of the Regina cases.A person in their 50s who tested positive in Regina.,www.ckom.com 
+NO.502-504,2020/3/17,Ontario,3 new cases in the Kingston area were not included in the Ontario provincial report this morning. That means Ontario is up 11 for the day for a total of 188. and the Canada total is 469. There have been 4 deaths in B.C. and one in Ontario.,twitter.com 
+NO.505,2020/3/17,Manitoba,7 new cases of COVID-19 identified in Manitoba. bringing total to 15,www.cbc.ca 
+NO.506,2020/3/17,Manitoba,7 new cases of COVID-19 identified in Manitoba. bringing total to 15,www.cbc.ca 
+NO.507,2020/3/17,Manitoba,7 new cases of COVID-19 identified in Manitoba. bringing total to 15,www.cbc.ca 
+NO.508,2020/3/17,Manitoba,7 new cases of COVID-19 identified in Manitoba. bringing total to 15,www.cbc.ca 
+NO.509,2020/3/17,Manitoba,7 new cases of COVID-19 identified in Manitoba. bringing total to 15,www.cbc.ca 
+NO.510,2020/3/17,Manitoba,7 new cases of COVID-19 identified in Manitoba. bringing total to 15,www.cbc.ca 
+NO.511,2020/3/17,Manitoba,7 new cases of COVID-19 identified in Manitoba. bringing total to 15,www.cbc.ca 
+NO.512-594,2020/3/17,British Columbia ,British Columbia has declared a public health emergency after recording another three deaths related to COVID-19 and identifying another 83 infections on 3/17. British Columbia  186 confirmed. including seven deaths and five cases listed as resolved.,bc.ctvnews.ca 
+NO.595,2020/3/17,Ontario,Ontario  2 new cases. now total 190 confirmed cases. including one death and five cases listed as resolved. One of the 2 new cases is from Simcoe Muskoka.,www.cbc.ca 
+NO.596,2020/3/17,Grand Princess,1 new repatriated Canadians from Grand Princess cruise ship have tested positive for COVID-19. total now 9.,covid19tracker.ca 
+NO.597,2020/3/17,Ontario,Ontario  2 new cases. now total 190 confirmed cases. including one death and five cases listed as resolved. One of the 2 new cases is from Waterloo.,www.regionofwaterloo.ca 
+NO.598,2020/3/18,Quebec,3/18 Quebec reports first COVID-19 death. elderly victim had been in contact with travellers. [Death],nationalpost.com 
+NO.599-619,2020/3/18,Ontario,There are 211 total cases in Ontario by 3/18. One of the new cases confirmed is from Brant County. The patient is an employee at Woodstock General Hospital.,www.ontario.ca 
+NO.620-624,2020/3/18,Nova Scotia,The province announced on Wednesday that five new cases were identified yesterday. Four of the cases are travel-related and one is connected to an earlier case.,www.cbc.ca 
+NO.625,2020/3/18,Quebec,3/18 Quebec reported 94 total cases in the state. 20 new cases. 1 from Outaouais.,www.quebec.ca 
+NO.626,2020/3/18,New Brunswick,3 new cases bring total in New Brunswick to 11. One of the latest cases includes a woman in her 60s in health Zone 1. who had been on a cruise.,www.cbc.ca 
+NO.627,2020/3/18,New Brunswick,3 new cases bring total in New Brunswick to 11. One of the cases is a man in his 60s in health Zone 3. who had been in contact with a traveller.,www.cbc.ca 
+NO.628,2020/3/18,New Brunswick,3 new cases bring total in New Brunswick to 11. One of the patients includes a woman in her 60s in health Zone 3. who had travelled to the United Kingdom. said Dr. Jennifer Russell.,www.cbc.ca 
+NO.629-633,2020/3/18,Quebec,3/18 Quebec increased 20 cases. 5 in Capitale Nationale. 94 in total.,www.quebec.ca 
+NO.634-642,2020/3/18,Quebec,3/18 Quebec increased 20 cases. 9 in Estrie. 94 in total.,www.quebec.ca 
+NO.643-644,2020/3/18,Quebec,3/18 Quebec increased 20 cases. 2 in Montréal. 94 in total.,www.quebec.ca 
+NO.645-646,2020/3/18,Quebec,3/18 Quebec increased 20 cases. 2 in Chaudière-Appalaches. 94 in total.,www.quebec.ca 
+NO.647,2020/3/18,Quebec,3/18 Quebec increased 20 cases. total 94. 1 in Laurentides.,www.quebec.ca 
+NO.648-655,2020/3/18,Saskatchewan,8 new cases were reported in Saskatchewan. bringing the total to 16 in the province. 1 new case does not have demonstrated link to recent travel.,www.cbc.ca 
+NO.656-700,2020/3/18,British Columbia ,Provincial health officer Dr. Bonnie Henry has announced 45 new COVID-19 cases. There are now 231 cases in B.C.placeholder.,twitter.com 
+NO.701-722,2020/3/18,Alberta,Alberta has confirmed another 22 cases of COVID-19. bringing the province s total to 119.,edmonton.ctvnews.ca 
+NO.723-724,2020/3/18,Manitoba,The new cases announced late in the afternoon Wednesday brings the total number of lab-confirmed positive and presumptive positive cases of novel coronavirus in Manitoba to 17. Health officials say the new cases include a woman in her 50s and a man in his 70s. Both live in Winnipeg.,globalnews.ca 
+NO.725-742,2020/3/19,Ontario,An additional 43 cases of COVID-19 were confirmed in Ontario on Thursday. bringing the provincial total to 257 including at least one death and five resolved cases.,www.cbc.ca 
+NO.743-769,2020/3/19,Quebec,There are now 121 confirmed cases in Quebec. One person has died and one person has officially recovered.,www.cbc.ca 
+NO.770,2020/3/19,Ontario,Health officials in Halton Region have confirmed a second death in Ontario related to COVID-19. The patient. a man in his 50s. had an   underlying health condition.   officials stated on Thursday afternoon. He was receiving care at an Oakville. Ont. hospital leading up to his death. [Death],toronto.ctvnews.ca 
+NO.771,2020/3/19,Prince Edward Island,The second case of COVID-19 has been confirmed on P.E.I.. says Dr. Heather Morrison. The patient is a Queens County man in his 40s. He recently returned from the U.K.,www.cbc.ca 
+NO.772,2020/3/19,NS,Nova Scotia reported 14 total cases by 3/19 afternoon. [Update]Both cases are related to travel.,novascotia.ca 
+NO.773-776,2020/3/19,SK,There are four new presumptive positive cases of COVID-19 in Saskatchewan. bringing the total to 20 reported cases.,www.saskatchewan.ca 
+NO.777-803,2020/3/19,AB,Alberta has confirmed another 27 cases of COVID-19. bringing the province s total to 146. including the first death in the province.,www.alberta.ca 
+NO.804-843,2020/3/19,BC,40 new cases in BC. 1 new death. Total is 271 cases.,www.trailtimes.ca 
+NO.844-849,2020/3/19,QC,There are now 121 confirmed cases in Quebec. One person has died and one person has officially recovered. 27 new cases confirmed today. 6 of them from Montérégie.,www.quebec.ca 
+NO.850,2020/3/19,QC,There are now 121 confirmed cases in Quebec. One person has died and one person has officially recovered. 27 new cases confirmed today. 1 of them from Lanaudière.,www.quebec.ca 
+NO.851,2020/3/19,QC,There are now 121 confirmed cases in Quebec. One person has died and one person has officially recovered. 27 new cases confirmed today. 1 of them from Laval.,www.quebec.ca 
+NO.852-853,2020/3/19,QC,There are now 121 confirmed cases in Quebec. One person has died and one person has officially recovered. 27 new cases confirmed today. 4 of them from Montréal.,www.quebec.ca 
+NO.854-860,2020/3/19,QC,There are now 121 confirmed cases in Quebec. One person has died and one person has officially recovered. 27 new cases confirmed today. 7 of them from Estrie.,www.quebec.ca 
+NO.861-862,2020/3/19,QC,There are now 121 confirmed cases in Quebec. One person has died and one person has officially recovered. 27 new cases confirmed today. 2 of them from Capitale Nationale,www.quebec.ca 
+NO.863,2020/3/19,QC,There are now 121 confirmed cases in Quebec. One person has died and one person has officially recovered. 27 new cases confirmed today. 1 of them from Bas-Saint-Laurent.,www.quebec.ca 
+NO.864,2020/3/19,Grand Princess,1 new repatriated Canadians from Grand Princess cruise ship have tested positive for COVID-19. total now 10.,covid19tracker.ca 
+NO.865-880,2020/3/19,QC,QC has reported 139 cases in total. 18 cases to be determined,www.lapresse.ca 
+NO.881,2020/3/20,QC,3/20 QC total 139. 1st in Nord-du-Québec.,msss.gouv.qc.ca 
+NO.882-889,2020/3/20,QC,3/20 QC total 139. Montréal total 31,www.cbc.ca 
+NO.890-939,2020/3/20,ON,50 new cases of COVID-19 confirmed in Ontario. bringing total to 308,toronto.ctvnews.ca 
+NO.940,2020/3/20,NS,Nova Scotia has identified one new case of COVID-19 in the province.The new case is travel-related. according to a news release from the provincial Health Department.,www.cbc.ca 
+NO.941,2020/3/20,NL,4th N.L. case of COVID-19 was found in Eastern Health region.,www.cbc.ca 
+NO.942-948,2020/3/20,QC,3/20 QC total 139. Montérégie total 21,www.cbc.ca 
+NO.949-950,2020/3/20,QC,QC has reported 139 cases in total. 18 cases to be determined,www.lapresse.ca 
+NO.951-952,2020/3/20,Grand Princess,2 more Repatriated Canadians was reported by 3/20.,covid19tracker.ca 
+NO.953,2020/3/20,Diamond Princess,A Canadian in Japan from complications related to COVID19 [Death],mainichi.jp 
+NO.954-959,2020/3/20,SK,As of Friday. Saskatchewan has reported 26 cases of COVID-19  18 presumptive. eight confirmed by a lab in Winnipeg.,www.cbc.ca 
+NO.960-984,2020/3/20,AB,Alberta has confirmed another 49 cases of COVID-19. bringing the province s total to 195.,www.alberta.ca 
+NO.985-998,2020/3/20,AB,Alberta has confirmed another 49 cases of COVID-19. bringing the province s total to 195.,www.alberta.ca 
+NO.999-1005,2020/3/20,AB,Alberta has confirmed another 49 cases of COVID-19. bringing the province s total to 195.,www.alberta.ca 
+NO.1006-1007,2020/3/20,AB,Alberta has confirmed another 49 cases of COVID-19. bringing the province s total to 195.,www.alberta.ca 
+NO.1008,2020/3/20,AB,Alberta has confirmed another 49 cases of COVID-19. bringing the province s total to 195.,www.alberta.ca 
+NO.1009-1087,2020/3/20,BC,79 new cases in BC. Total is 350 cases.,www.cbc.ca 
+NO.1088,2020/3/20,ON,10 new cases of COVID019 confirmed in Ontario. bringing total to 318. 1 new in Porcupine.,www.ontario.ca 
+NO.1089,2020/3/20,ON,10 new cases of COVID019 confirmed in Ontario. bringing total to 318. 3 new in Haliburton Kawartha.,www.ontario.ca 
+NO.1090-1095,2020/3/20,ON,10 new cases of COVID019 confirmed in Ontario. bringing total to 318. 6 new in Middlesex London.,www.ontario.ca 
+NO.1096,2020/3/21,BC,Provincial health officials have released a correction following Friday s coronavirus briefing. saying the death toll in B.C. is now nine.Further information about where or when this additional death occurred has not yet been provided.[Death],www.citynews1130.com 
+NO.1097,2020/3/21,BC,Henry also announced one new death. bringing the total number to ten. That case is linked to the Lynn Valley Care Centre.[Death],www.cbc.ca 
+NO.1098,2020/3/21,ON,Ontario officials announce 3rd COVID-19-related death. 377 total cases[Death],globalnews.ca 
+NO.1099,2020/3/21,QC,QC has reported 4 new deaths due to COVID-19 at 1 pm on 3/21. The details are not available at the moment. [Death],www.assnat.qc.ca 
+NO.1100-1158,2020/3/21,ON,By 3/21 morning. there are 377 total cases in Ontario. placeholder.,www.ontario.ca 
+NO.1159-1200,2020/3/21,QC,QC has reported 181 cases at 1 pm on 3/21. The 42 new cases have not been assigned to any particular province yet.,www.assnat.qc.ca 
+NO.1201,2020/3/21,NB,A male. between 40 and 50. in zone 2 (south). who had been on a cruise.,www2.gnb.ca 
+NO.1202,2020/3/21,NB,A female. between 50 and 60 in zone 3 (central). who is a direct contact of a previously identified presumptive case.,www2.gnb.ca 
+NO.1203,2020/3/21,NB,A female. between 40 and 50. in zone 2 (south). who had been on a cruise.,www2.gnb.ca 
+NO.1204,2020/3/21,NB,A male. between 60 and 70. in zone 2 (south). who had been on a cruise.,www2.gnb.ca 
+NO.1205,2020/3/21,NB,A female. between 50 and 60. in zone 2 (south). who had been on a cruise.,www2.gnb.ca 
+NO.1206,2020/3/21,NB,A female. between 20 and 30. in zone 2 (south). who is a close contact to a travel-related presumptive case.,www2.gnb.ca 
+NO.1207,2020/3/21,NT,As of March 21 at 11 AM 1 confirmed case in the NWT. 299 tests performed.The person had travelled to British Columbia and Alberta. according to the release. and then returned home to Yellowknife. The individual. and their household. self-isolated after the person developed mild symptoms three days after returning.,www.hss.gov.nt.ca 
+NO.1208-1209,2020/3/21,NL,Currently there are 3 confirmed cases and 3 presumptive positive cases of COVID-19 in Newfoundland and Labrador. For a total of 6.,www.gov.nl.ca 
+NO.1210-1283,2020/3/21,BC,B.C. announces 74 new coronavirus cases. bringing total to 424. with 1 new death,www.cbc.ca 
+NO.1284-1301,2020/3/21,SK,There are 18 new cases of COVID-19 in Saskatchewan  17 new confirmed cases and one new presumptive positive case. bringing the total to 44 reported cases.,www.saskatchewan.ca 
 NO. 1302,2020/3/21,NS,Nova Scotia has identified 21 cases of COVID-19 in the province. Six new cases were identified Friday. March 20. All are travel-related.,novascotia.ca 
 NO. 1303-1333,2020/3/21,AB,31 new cases has been confirmed in Alberta on March 21. bringing the total to 226,www.alberta.ca 
 NO. 1334,2020/3/21,MB,An additional probable case of COVID-19 has been identified. bringing the number of lab-confirmed positive and probable positive cases in Manitoba to 19 at this time. Case 19 is a woman in her 30s who lives in Winnipeg. At this time. the public health investigation indicates the case is related to travel.,news.gov.mb.ca 
@@ -16,7 +310,7 @@ NO.1371-1372,2020/3/21,QC,3/21 There are now 181 confirmed cases in Quebec. 42 n
 NO.1373,2020/3/21,QC,3/21 There are now 181 confirmed cases in Quebec. 42 new cases. 1 of the 42 from Saguenay–Lac-Saint-Jean.,www.quebec.ca 
 NO.1374-1380,2020/3/22,NS,Nova Scotia reported 28 total cases by 3/22 morning.,novascotia.ca 
 NO.1381-1427,2020/3/22,ON,47 new cases of COVID-19 confirmed in Ontario. bringing total to 424. Ottawa s medical officer of health. Vera Etches. has confirmed there are five confirmed cases of community transmission of COVID-19 in the nation s capital.,www.ontario.ca 
-NO.1428-1430,2020/3/22,NL,As of March 22. 2020 at 2:30pm NDT: There are 3 confirmed cases and 6 presumptive positive cases of COVID-19 in Newfoundland and Labrador.,www.gov.nl.ca 
+NO.1428-1430,2020/3/22,NL,As of March 22. 2020 at 2 30pm NDT  There are 3 confirmed cases and 6 presumptive positive cases of COVID-19 in Newfoundland and Labrador.,www.gov.nl.ca 
 NO.1431-1433,2020/3/22,QC,3/22 There are now 219 confirmed cases in Quebec. 38 new cases. 3 of the 38 from Estrie.,www.quebec.ca 
 NO.1434-1435,2020/3/22,QC,3/22 QC has reported 219 cases. 38 new cases. 2 of 38 area detail have not been assigned.,www.quebec.ca 
 NO.1435-1440,2020/3/22,QC,3/22 There are now 219 confirmed cases in Quebec. 38 new cases confirmed today. 6 of them from Lanaudière.,www.quebec.ca 
@@ -28,3 +322,13 @@ NO.1461-1465,2020/3/22,QC,3/22 There are now 219 confirmed cases in Quebec.38 ne
 NO.1466-1467,2020/3/22,QC,3/22 There are now 219 confirmed cases in Quebec.38 new cases confirmed today. 2 of them from Outaouais.,www.quebec.ca 
 NO.1468,2020/3/22,PE,The third case of COVID-19 has been confirmed on P.E.I.. A Queens County woman in her 20s who returned from Spain. On March 16th she arrived in Moncton by WestJet 3456. and then travelled to P.E.I. in a car. She has  very mild symptoms  and had them before arriving in the province. She went directly into self-isolation upon returning to P.E.I.,www.youtube.com 
 NO.1469-1476,2020/3/22,SK,The total in the province is currently up to 52 reported cases. with 33 confirmed cases and 19 presumptive,www.cbc.ca 
+NO.1477,2020/3/22,AB,33 new cases has been confirmed in Alberta on March 22. bringing the total to 259,www.cbc.ca 
+NO.1478,2020/3/22,MB,Health officials said late Sunday afternoon they had identified a probable case involving a man in his 40s living in Winnipeg.,www.cbc.ca 
+NO.1479-1480,2020/3/22,YT,Yukon reported first 2 cases by 3/22 night.,yukon.ca 
+NO.1481,2020/3/23,BC,Three more people have died of complications related to COVID-19 in B.C. in the past two days. health officials confirmed Monday. bringing the total number of deaths in the province to 13.[Death],www.cbc.ca 
+NO.1482,2020/3/23,ON,3/23 Ontario confirms 6 Deceased of COVID-19.[Death],www.ontario.ca 
+NO.1483-1495,2020/3/23,NS,13 more cases confirmed in Nova Scotia. making 41 total cases in Nova Scotia by 3/23 morning.,novascotia.ca 
+NO.1496-1503,2020/3/23,ON,Ontario confirms 78 more cases of COVID-19. provincial total surpasses 500. The new patients include 15 in Toronto. eight in York Region. six in Peel Region. three in Hamilton. three in Durham Region. and two in Halton Region.,beta.ctvnews.ca 
+NO.1504-1512,2020/3/23,QC,The number of novel coronavirus cases in Quebec has spiked to 628. the province s premier announced on Monday afternoon.,globalnews.ca 
+NO.1513-1560,2020/3/23,BC,Provincial health officer Dr. Bonnie Henry confirmed 48 new cases of illness. for a total of 472,www.cbc.ca 
+NO.1561-1575,2020/3/23,NL,3/23 Newfoundland and Labrador confirmed 15 more cases. total in 24.,www.gov.nl.ca 
