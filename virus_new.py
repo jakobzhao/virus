@@ -1,34 +1,23 @@
-from selenium import webdriver
 from bs4 import BeautifulSoup
-import time
-from datetime import datetime
-import sqlite3
 from selenium.webdriver.chrome.options import Options
-import urllib.request
-#import shutil
-from selenium.webdriver.common.action_chains import ActionChains
-
-options = Options()
-options.add_argument('--headless')
-options.add_argument('--no-sandbox')
+from selenium import webdriver
+from datetime import datetime
+from urllib.request import urlopen
+import time
+import sqlite3
+import urllib
+import requests
 
 #browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver")
-browser = webdriver.Chrome("/Users/joshuaji/Desktop/chromedriver") #joshua's chromedrive location
+#browser = webdriver.Chrome("/Users/joshuaji/Desktop/chromedriver") #joshua's chromedrive location
 #browser = webdriver.Chrome("C:/workspace/chromedriver.exe")
-#browser = webdriver.Chrome("E:/dev/workspaces/chromedriver.exe")
+browser = webdriver.Chrome("E:/dev/workspaces/chromedriver.exe")
 #browser = webdriver.Chrome("/Users/stevenbao/dev/chromedriver")
 
+# Variable Preparation
 now = str(datetime.now())
 sqls = "INSERT OR REPLACE INTO virus ('datetime'"
 sqle = ") VALUES ('" + now + "', "
-
-citynames = []
-placeName = {}
-with open("assets/country_name.csv", "r", encoding="utf-8") as fp:
-    lines = fp.readlines()
-    for line in lines:
-        placeItem = line.replace("\n", "").split(",")
-        placeName[placeItem[0]] = placeItem[1]
 
 chineseCity = {}
 with open("assets/name.csv", "r", encoding="utf-8") as fp:
@@ -37,63 +26,21 @@ with open("assets/name.csv", "r", encoding="utf-8") as fp:
         placeItem = line.replace("\n", "").split(",")
         chineseCity[placeItem[0]] = placeItem[1]
 
-oldCity = {}
-with open("assets/old-name.csv", "r", encoding="utf-8") as fp:
-    lines = fp.readlines()
-    for line in lines:
-        placeItem = line.replace("\n", "").split(",")
-        oldCity[placeItem[0]] = placeItem[1]
-
-unitedStates = []
-with open("assets/united-states.txt", "r", encoding="utf-8") as fp:
-    states = fp.readlines()
-    for state in states:
-        unitedStates.append(state.replace("\n","").lower())
-
 canadacities = []
 with open("assets/canada-city.txt", "r", encoding="utf-8") as fp:
     states = fp.readlines()
     for state in states:
         canadacities.append(state.replace("\n","").lower())
 
-"""for city in placeName.values():
-    if city not in oldCity.values():
-        cursor.execute("ALTER TABLE virus ADD [" + city + "] CHAR(20);")"""
-
-
-# browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver") #fengyu's chromefrive location
-#browser = webdriver.Chrome("C:\Workspace\chromedriver.exe") # zhaobo's chromedrive location'
-#browser = webdriver.Chrome("/Users/joshuaji/Desktop/chromedriver") #joshua's chromedrive location
-
-
-# # China Provinces
-#
+# Chinese Provinces
 url = "https://voice.baidu.com/act/newpneumonia/newpneumonia"
 browser.get(url)
-
-unfolds = browser.find_elements_by_xpath("//div[starts-with(@class,'Common')]")
-for unfold in unfolds:
-    if unfold.text == "展开全部":
-        unfold.click()
-        time.sleep(2)
-
-unfolds2 = browser.find_elements_by_xpath('//*[@id="foreignTable"]/table/tbody/tr')
-for unfold in unfolds2[1:]:
-    if "欧洲" in unfold.text or "亚洲" in unfold.text or "北美洲" in unfold.text or "大洋洲" in unfold.text  or "南美洲" in unfold.text or "非洲" in unfold.text or "其他" in unfold.text:
-        browser.execute_script("window.scrollTo(0, document.body.scrollHeight/4);")
-        unfold.find_element_by_css_selector("div").click()
-        time.sleep(2)
-
-
-
 browser.find_element_by_xpath("//table[starts-with(@class,'VirusTable')]").find_elements_by_tag_name("tr")
-soup = BeautifulSoup(browser.page_source, 'html.parser')
-
-time.sleep(4)
-
+soup = BeautifulSoup(browser.page_source, "html.parser")
 
 items = soup.find_all("tr")
-for item in items:
+
+for item in items[1:35]:
     chname = ""
     confirmed, recovered, death = 0, 0, 0,
     try:
@@ -101,34 +48,59 @@ for item in items:
     except:
         pass
 
-    if (chname in placeName.keys()) and chname != "中国":
-        if chname not in chineseCity.keys():
-            confirmed = item.find_all("td")[2].text.strip()
-            recovered = item.find_all("td")[3].text.strip()
-            death = item.find_all("td")[4].text.strip()
-        else:
-            confirmed = item.find_all("td")[2].text.strip()
-            recovered = item.find_all("td")[3].text.strip()
-            death = item.find_all("td")[4].text.strip()
+    if chname in chineseCity.keys():
+        confirmed = item.find_all("td")[2].text.strip()
+        recovered = item.find_all("td")[3].text.strip()
+        death = item.find_all("td")[4].text.strip()
 
-        if recovered == "" or recovered == "-":
-            recovered = "0"
-        if death == "" or death == "-":
-            death = "0"
-        if confirmed == "" or confirmed == "-" :
-            confirmed = "0"
-        # if chname in chineseCity.keys():
-        #     confirmed = str(int(confirmed) + int(recovered) + int(death))
-        print(chname, placeName[chname], confirmed, recovered, death)
-        sqls += ", '" + placeName[chname].strip() + "'"
-        sqle += "'" + confirmed + "-0-" + recovered + "-" + death + "', "
+    if recovered == "" or recovered == "-":
+        recovered = "0"
+    if death == "" or death == "-":
+        death = "0"
+    if confirmed == "" or confirmed == "-" :
+        confirmed = "0"
+
+    print(chname, chineseCity[chname], confirmed, recovered, death)
+    sqls += ", '" + chineseCity[chname].strip() + "'"
+    sqle += "'" + confirmed + "-0-" + recovered + "-" + death + "', "
+
+# Countries
+url = "https://en.wikipedia.org/wiki/Template:2019%E2%80%9320_coronavirus_pandemic_data"
+
+soup = BeautifulSoup(urlopen(url), "html.parser")
+table = soup.find("tbody")
+
+items = soup.find_all("tr")
 
 
-# other places
+for item in items[3:]:
+    name, confirmed, recovered, death = "", "", "", ""
+    try:
+        name = item.find_all("th")[1].text.split("[")[0].split("\n")[0].lower()
+    except IndexError:
+        break
 
+    if name == "hong kong":
+        continue
+
+    if name == "china (mainland)":
+        continue
+
+    confirmed = item.find_all("td")[0].text.split("\n")[0].replace(",","")
+    death = item.find_all("td")[1].text.split("\n")[0].replace(",", "")
+    recovered = item.find_all("td")[2].text.split("\n")[0].replace(",", "")
+    if recovered == "–":
+        recovered = "0"
+
+
+    print(name, confirmed, death, recovered)
+
+    sqls += ", '" + name + "'"
+    sqle += "'" + confirmed + "-0-" + recovered + "-" + death + "', "
+
+# U.S. States
 conn = sqlite3.connect("assets/virus.db")
 cursor = conn.cursor()
-
 
 urllink = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdW9DsR5iffFcJvKAJXyOiNn4IYtavRIGslkcJIslHJC7UfrbChv-L4E89TeDEcWZS6QSzCuHWeMON/pub?gid=1879451031&single=true&output=csv"
 with urllib.request.urlopen(urllink) as url:
@@ -145,7 +117,9 @@ with urllib.request.urlopen(urllink) as url:
         sqle += "'" + cases + "', "
         print(name + " " + cases)
 
-# Canada
+
+
+# Canadian Provinces
 
 url = "https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html"
 browser.get(url)
@@ -178,47 +152,7 @@ for province in provinces[:-2]:
     sqls += ", '" + enName.strip() + "'"
     sqle += "'" + confirmed + "-0-" + recovered + "-" + death + "', "
 
-#india
-"""url = "https://www.mohfw.gov.in"
-browser.get(url)
-
-table = browser.find_element_by_tag_name("table")
-soup = BeautifulSoup(browser.page_source, 'html.parser')
-items = soup.find_all("tr")[1:-1]
-for item in items:
-    data = item.find_all("td")
-    name = data[1].text.lower()
-    if name == "union territory of ladakh":
-        kconfirmed = int(data[2].text) + int(data[3].text)
-        krecovered = int(data[4].text)
-        kdeath = int(data[5].text)
-    elif name == "union territory of jammu and kashmir":
-        kname = "jammu and kashmir"
-        kconfirmed += int(data[2].text) + int(data[3].text)
-        krecovered += int(data[4].text)
-        kdeath += int(data[5].text)
-        citynames.append(kname)
-        print(kname, str(kconfirmed), str(krecovered), str(kdeath))
-        sqls += ", '" + kname + "'"
-        sqle += "'" + str(kconfirmed) + "-0-" + str(krecovered) + "-" + str(kdeath) + "', "
-    else:
-        confirmed = int(data[2].text) + int(data[3].text)
-        recovered = data[4].text
-        death = data[5].text
-        citynames.append(name)
-        print(name,confirmed,recovered,death)
-        sqls += ", '" + name + "'"
-        sqle += "'" + str(confirmed) + "-0-" + recovered + "-" + death + "', "
-
-conn = sqlite3.connect("assets/virus.db")
-cursor = conn.cursor()
-
-for name in citynames:
-    cursor.execute("ALTER TABLE virus ADD [" + name + "] CHAR(20);")"""
-
 browser.close()
-
-
 
 insert_record_sql = sqls + sqle[0: len(sqle) -2] + ")"
 
