@@ -83,6 +83,9 @@ for item in items[3:]:
     if name == "hong kong":
         continue
 
+    if name == "china (mainland)":
+        continue
+
     confirmed = item.find_all("td")[0].text.split("\n")[0].replace(",","")
     death = item.find_all("td")[1].text.split("\n")[0].replace(",", "")
     recovered = item.find_all("td")[2].text.split("\n")[0].replace(",", "")
