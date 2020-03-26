@@ -1,0 +1,16 @@
+流感样症状数=19319.79 + 2555.61 * 流感阳性率(%)
+
+expected value: 58497
+actual value: 85284
+58497 * 1.2 = 70196
+
+1 - 70196/85284 = 0.177 the part that cannot be explained , might because of voronavirus
+
+883725000 - 167241000 = 716484000 Non-surgical visits per year
+716484000 / 52 = 13778538.46 Non-surgical visits per week
+0.058 * 13778538.46 = 799155.2308 Total visits with Influenza-like symptoms
+
+799155.2308 * 0.177 = 141374.3129 Total COVID-19 visits
+141374.3129 / 2 = 70687.15644 Total COVID-19 symptomatic patients by Mar. 14
+
+70687.15644 / 79.90% = 88469.53246 Total COVID-19 patients by Mar. 14 
