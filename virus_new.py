@@ -131,8 +131,8 @@ for province in provinces[:-2]:
     # enName = province.find_all("td")[0].text.lower().replace("british colombia", "british columbia")
     enName = province.find_all("td")[0].text.lower().replace("    ", " ")
     # print (province.text)
-    confirmed = province.find_all("td")[1].text
-    death = province.find_all("td")[3].text
+    confirmed = province.find_all("td")[1].text.replace(",","")
+    death = province.find_all("td")[3].text.replace(",","")
 
     if enName in canadacities:
         for row in cursor.execute("SELECT `" + enName + "` from virus order by rowid DESC limit 1"):
