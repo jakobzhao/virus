@@ -1174,8 +1174,16 @@
         bindto: "#total-chart"
       });
 
-      var firstLegend = $(".c3-legend-item");
-      var legendCon = $(firstLegend.node().parentNode);
+      // var firstLegend = $(".c3-legend-item");
+      // var legendCon = $(firstLegend.node().parentNode);
+      // var legendY = parseInt(firstLegend.select('text').attr('y'));
+      // legendCon
+      //   .append('text')
+      //   .text('toggle on/off the curve or scroll on the curves to change the date range')
+      //   .attr('y', legendY - 20);
+
+      var firstLegend = d3.select(".c3-legend-item");
+      var legendCon = d3.select(firstLegend.node().parentNode);
       var legendY = parseInt(firstLegend.select('text').attr('y'));
       legendCon
         .append('text')
