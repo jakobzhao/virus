@@ -70,7 +70,7 @@ url = "https://en.wikipedia.org/wiki/Template:2019%E2%80%9320_coronavirus_pandem
 soup = BeautifulSoup(urlopen(url), "html.parser")
 table = soup.find("tbody")
 items = table.find_all("tr")
-for item in items[3:]:
+for item in items[2:]:
     name, confirmed, recovered, death = "", "", "", ""
     try:
         name = item.find_all("th")[1].text.split("[")[0].split("\n")[0].lower()
