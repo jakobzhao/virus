@@ -371,7 +371,7 @@ text {
   left: -20px;
 }
 
-#rank-chart {
+/* #rank-chart {
   position: relative;
   top: 20px;
   left: -20px;
@@ -379,7 +379,7 @@ text {
 
 #rank-chart>div>table>tbody>tr>td>span {
   background-color: #dc3545 !important
-}
+} */
 
 #footer {
   position: relative;
@@ -392,10 +392,10 @@ text {
 }
 
 
-
-*/ #footer>div {
+/* 
+#footer>div {
   font-size: 13px;
-}
+} */
 
 .confirmed-count {
   color: #dc3545;

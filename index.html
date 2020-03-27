@@ -17,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css?family=Titillium+Web|Oswald" rel="stylesheet">
   <link href="css/c3.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/simplebar.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
   <link href="css/bootstrap4-toggle.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/mobile.css">
@@ -141,7 +141,7 @@
           </span>
         </div>
 
-        <div id="content-explain" > In the main map, an country or region's inflection level is measured by the # of today's active/remaining confirmed cases. The gray slash texture indicates no previous cases are discovered;
+        <div id="content-explain"> In the main map, an country or region's inflection level is measured by the # of today's active/remaining confirmed cases. The gray slash texture indicates no previous cases are discovered;
           the green
           texture means the region in which all the infected cases have recovered.</div>
 
@@ -459,89 +459,85 @@
   </div>
   <!-- <script src="js/main.js"></script> -->
   <script>
+    ///////////////////////////////accessary//////////////////////////////////
+
+    $(window).ready(function() {
+      $('.loader').fadeOut("slow");
+    });
 
 
+    var d3locale = d3.formatDefaultLocale({
+      "thousands": ",",
+      "grouping": [3],
+    });
 
-
-///////////////////////////////accessary//////////////////////////////////
-
-$(window).ready(function() {
-  $('.loader').fadeOut("slow");
-});
-
-
-var d3locale = d3.formatDefaultLocale({
-    "thousands": ",",
-    "grouping": [3],
-});
-
-L.TopoJSON = L.GeoJSON.extend({
-  addData: function(jsonData) {
-    if (jsonData.type === 'Topology') {
-      for (key in jsonData.objects) {
-        geojson = topojson.feature(jsonData, jsonData.objects[key]);
-        L.GeoJSON.prototype.addData.call(this, geojson);
+    L.TopoJSON = L.GeoJSON.extend({
+      addData: function(jsonData) {
+        if (jsonData.type === 'Topology') {
+          for (key in jsonData.objects) {
+            geojson = topojson.feature(jsonData, jsonData.objects[key]);
+            L.GeoJSON.prototype.addData.call(this, geojson);
+          }
+        } else {
+          L.GeoJSON.prototype.addData.call(this, jsonData);
+        }
       }
-    } else {
-      L.GeoJSON.prototype.addData.call(this, jsonData);
+    });
+    // Copyright (c) 2013 Ryan Clark
+
+    // var createLabelIcon = function(labelClass, labelText) {
+    //   return L.divIcon({
+    //     className: labelClass,
+    //     html: labelText
+    //   })
+    // }
+    //
+
+
+    var worldBounds = L.latLngBounds(
+      L.latLng(-60, -100), //Southwest
+      L.latLng(80, 15) //Northeast
+    );
+
+
+
+    //return the totalConfirmed number of given country
+    function tc(country) {
+      if (country == undefined) {
+        country = 0
+      } else {
+        country = +country.split("-")[0];
+      }
+      return country;
     }
-  }
-});
-// Copyright (c) 2013 Ryan Clark
 
-// var createLabelIcon = function(labelClass, labelText) {
-//   return L.divIcon({
-//     className: labelClass,
-//     html: labelText
-//   })
-// }
-//
+    //return the totalRecovered number of given country
+    function tr(country) {
+      if (country.split("-")[2] == undefined) {
+        country = 0
+      } else {
+        country = +country.split("-")[2];
+      }
+      return country;
+    }
 
+    //return the totalDeath number of given country
+    function td(country) {
+      if (country.split("-")[3] == undefined) {
+        country = 0
+      } else {
+        country = +country.split("-")[3];
+      }
+      return country;
+    }
 
-var worldBounds = L.latLngBounds(
-  L.latLng(-60, -100), //Southwest
-  L.latLng(80, 15) //Northeast
-);
-
-
-
-//return the totalConfirmed number of given country
-function tc(country) {
-  if (country == undefined) {
-    country = 0
-  } else {
-    country = +country.split("-")[0];
-  }
-  return country;
-}
-
-//return the totalRecovered number of given country
-function tr(country) {
-  if (country.split("-")[2] == undefined) {
-    country = 0
-  } else {
-    country = +country.split("-")[2];
-  }
-  return country;
-}
-
-//return the totalDeath number of given country
-function td(country) {
-  if (country.split("-")[3] == undefined) {
-    country = 0
-  } else {
-    country = +country.split("-")[3];
-  }
-  return country;
-}
-
-//////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////
 
 
 
 
-  //create the base map and set the initial view point
-  var mymap = L.map('map', {
+    //create the base map and set the initial view point
+    var mymap = L.map('map', {
       center: [38, -120],
       zoomControl: false,
       zoom: 4,
@@ -638,7 +634,7 @@ function td(country) {
 
 
     //load all datasets through d3 and store them in an array
-     Promise.all([
+    Promise.all([
       d3.csv('assets/virus.csv'), //datasets[0]
       d3.json("assets/all-topo-15.json"), //datasets[1]
       d3.csv('assets/communities.csv'), //chinese cases
@@ -916,13 +912,13 @@ function td(country) {
         //add ",CHINA" to every provinces in China
         if (datasets[7]["columns"].includes(name)) { //add ",CHINA" to every provinces in China
           $("#placename").text(name.toUpperCase() + ", CHINA");
-          if (name == "taiwan"){
+          if (name == "taiwan") {
             $("#placename").text("Taiwan");
           }
-          if (name == "hongkong"){
+          if (name == "hongkong") {
             $("#placename").text("Hong Kong");
           }
-          if (name == "macau"){
+          if (name == "macau") {
             $("#placename").text("Macau");
           }
 
@@ -1129,7 +1125,8 @@ function td(country) {
           }
         },
         zoom: {
-          enabled: true
+          enabled: true,
+           type: "scroll"
         },
         axis: {
           x: {
@@ -1164,11 +1161,6 @@ function td(country) {
             }
           }
         },
-        zoom: {
-          // rescale: true,
-          enabled: false,
-          type: "scroll",
-        },
         tooltip: {
           linked: true,
         },
@@ -1181,6 +1173,14 @@ function td(country) {
         },
         bindto: "#total-chart"
       });
+
+      var firstLegend = d3.select(".c3-legend-item");
+      var legendCon = d3.select(firstLegend.node().parentNode);
+      var legendY = parseInt(firstLegend.select('text').attr('y'));
+      legendCon
+        .append('text')
+        .text('toggle on/off the curve or scroll on the curves to change the date range')
+        .attr('y', legendY - 20);
 
       //this funtion take a place's name and load the linechart with that place's data
       function displayPlace(name) {
@@ -1238,7 +1238,7 @@ function td(country) {
 
 
           //place blocks into each cell based on the that day's data
-          for (var i = len - showLen-1; i < len; i++) {
+          for (var i = len - showLen - 1; i < len; i++) {
             // a.push(places[d].a[i]);
             //$("tr#" + d.replace(" ", "") + "-row").append('<th scope="col"><i class="cell">' + places[d].c[i] + '</i></th>');
             $("tr#" + d.replace(" ", "") + "-row").append('<th ><i class="cell cell-' + d.replace(" ", "") + '-' + i.toString() + '">' + "" + '</i></th>');
