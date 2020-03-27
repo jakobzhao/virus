@@ -929,17 +929,17 @@
         //add reference source for each place
         if (datasets[5]["columns"].includes(name)) {
           $("#source-website").html( //Unisted states
-            '<a target="_blank" href="#"> WHO</a>, <a target="_blank" href="#">CDC</a> and <a target="_blank" href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546">NBC News</a>.');
+            '<a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/"> WHO</a>, <a target="_blank" href="https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/cases-in-us.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fcases-in-us.html">CDC</a> and <a target="_blank" href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546">NBC News</a>.');
         } else if (datasets[6]["columns"].includes(name)) { //Canada
-          $("#source-website").html('<a target="_blank" href="#">Public Health Agency of Canada.</a>');
+          $("#source-website").html('<a target="_blank" href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html">Public Health Agency of Canada.</a>');
         } else if (datasets[7]["columns"].includes(name)) { //China
-          $("#source-website").html('WHO, China CDC, and Baidu.');
+          $("#source-website").html('<a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/"> WHO</a>, <a target="_blank" href="http://www.nhc.gov.cn/xcs/xxgzbd/gzbd_index.shtml">China CDC</a>, and <a target="_blank" href="https://voice.baidu.com/act/newpneumonia/newpneumonia">Baidu</a>.');
         } else if (name == "Global Trend") { //global
-          $("#source-website").html('WHO, NBC News, CDC, Baidu, Wikipedia, and etc.');
+          $("#source-website").html('<a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/"> WHO</a>, <a target="_blank" href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546">NBC News</a>, <a target="_blank" href="https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/cases-in-us.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fcases-in-us.html">CDC</a>, <a target="_blank" href="https://voice.baidu.com/act/newpneumonia/newpneumonia">Baidu</a>, <a target="_blank" href="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic">Wikipedia</a>, and etc.');
         } else if (name == "japan") { //japan
-          $("#source-website").html('WHO, Wikipedia, and Baidu. The discrepancy on the data in Japan between March 11th and March 12th comes from the disagreement of whether to include cases from the Princess Diamond cruise.');
+          $("#source-website").html('<a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/"> WHO</a>, <a target="_blank" href="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic">Wikipedia</a>, and <a target="_blank" href="https://voice.baidu.com/act/newpneumonia/newpneumonia">Baidu</a>. The discrepancy on the data in Japan between March 11th and March 12th comes from the disagreement of whether to include cases from the Princess Diamond cruise.');
         } else { //Other countries
-          $("#source-website").html('WHO, Wikipedia, and Baidu.');
+          $("#source-website").html('<a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/"> WHO</a>, <a target="_blank" href="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic">Wikipedia</a>, and <a target="_blank" href="https://voice.baidu.com/act/newpneumonia/newpneumonia">Baidu</a>.');
         }
       }
 
