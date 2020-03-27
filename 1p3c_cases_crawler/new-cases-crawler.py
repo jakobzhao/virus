@@ -1,10 +1,9 @@
 import requests
 import re
 import json
+import os
 import csv
-import sys
 
-# from https://github.com/stevenliuyi/covid19/blob/master/data/1p3a-data/crawler.py
 url = 'https://coronavirus.1point3acres.com'
 headers = {
     'User-Agent':
@@ -12,36 +11,47 @@ headers = {
 }
 
 html_txt = requests.get(url=url, headers=headers).text
-data = "{}"
+confirmed_data = "{}"
+deaths_data = "{}"
 
 js_files = re.findall(r'chunks[^"]+\.js', html_txt)
 
 for js_file in set(js_files):
     curr_html_txt = requests.get(url=url + '/_next/static/' + js_file,
                                  headers=headers).text
-    print('links/0' in curr_html_txt)
-    if ('"id":100' in curr_html_txt):
-        data = curr_html_txt.split("JSON.parse('")
-        data = curr_html_txt.split("JSON.parse('")[3]
-        data = data.split("')}")[0]
+    txt_splitted = curr_html_txt.split("JSON.parse('")
+    for txt in txt_splitted:
+        data = txt.split("')}")[0]
+        """if ('people_count' in data and '"confirmed_date":"1/21"' in data):
+            confirmed_data = data"""
+        if ('"die_count"' in data and '"confirmed_date":"2/28"' in data):
+            deaths_data = data
 
+#confirmed_data = confirmed_data.encode().decode('unicode_escape')
+#confirmed_data = json.loads(confirmed_data)
 
-data = data.encode().decode('unicode_escape')
-data = json.loads(data)
+deaths_data = deaths_data.encode().decode('unicode_escape')
+deaths_data = json.loads(deaths_data)
 
 # check
-if (data[0]['id'] != 1):
-    print('Data are not valid!')
-    exit(1)
+#test = next((x for x in confirmed_data if x["confirmed_date"] == "1/21"), None)
+#if test is None:
+    #print('Data crawled from 1P3A are not valid!')
+    #exit(1)
 
-data = json.dumps(
-    data,
+"""confirmed_data = json.dumps(
+    confirmed_data,
+    indent=2,
+    ensure_ascii=False,
+)"""
+
+deaths_data = json.dumps(
+    deaths_data,
     indent=2,
     ensure_ascii=False,
 )
 
-o = json.loads(data)
-
+o = json.loads(deaths_data)
 
 def loop_data(o, k=''):
     global json_ob, c_line
@@ -103,7 +113,7 @@ def json_to_csv(object_list):
             loop_data(ov)
             c_line += 1"""
     title, rows = get_title_rows(json_ob)
-    write_csv(title, rows, 'test.csv')
+    write_csv(title, rows, 'test3.csv')
 
 json_to_csv(o)
 
@@ -113,3 +123,11 @@ f = open('assets/1p3c.json', 'w', encoding='utf-8')
 f.write(data)
 f.close()
 print("finished!")
+
+f = open('test3.json', 'w')
+f.write(confirmed_data)
+f.close()
+
+"""f = open('test3d.json', 'w')
+f.write(deaths_data)
+f.close()"""
