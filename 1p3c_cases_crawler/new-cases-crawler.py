@@ -119,7 +119,7 @@ json_to_csv(o)
 
 print(o)
 
-f = open('assets/1p3c.json', 'w', encoding='utf-8')
+"""f = open('assets/1p3c.json', 'w', encoding='utf-8')
 f.write(data)
 f.close()
 print("finished!")
@@ -128,6 +128,6 @@ f = open('test3.json', 'w')
 f.write(confirmed_data)
 f.close()
 
-"""f = open('test3d.json', 'w')
+f = open('test3d.json', 'w')
 f.write(deaths_data)
 f.close()"""
