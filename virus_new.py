@@ -35,8 +35,18 @@ with open("assets/canada-city.txt", "r", encoding="utf-8") as fp:
 # Chinese Provinces
 url = "https://voice.baidu.com/act/newpneumonia/newpneumonia"
 browser.get(url)
+
+unfolds = browser.find_elements_by_xpath("//div[starts-with(@class,'Common')]")
+for unfold in unfolds:
+    if unfold.text == "展开全部":
+        unfold.click()
+        time.sleep(2)
+        break
+
 browser.find_element_by_xpath("//table[starts-with(@class,'VirusTable')]").find_elements_by_tag_name("tr")
-soup = BeautifulSoup(browser.page_source, "html.parser")
+soup = BeautifulSoup(browser.page_source, 'html.parser')
+
+time.sleep(4)
 
 items = soup.find_all("tr")
 
@@ -49,9 +59,9 @@ for item in items[1:35]:
         pass
 
     if chname in chineseCity.keys():
-        confirmed = item.find_all("td")[2].text.strip()
-        recovered = item.find_all("td")[3].text.strip()
-        death = item.find_all("td")[4].text.strip()
+        confirmed = item.find_all("td")[3].text.strip()
+        recovered = item.find_all("td")[4].text.strip()
+        death = item.find_all("td")[5].text.strip()
 
     if recovered == "" or recovered == "-":
         recovered = "0"
@@ -123,7 +133,7 @@ time.sleep(2)
 soup = BeautifulSoup(browser.page_source, 'html.parser')
 provinces = soup.find("tbody").find_all("tr")
 
-for province in provinces[:-2]:
+for province in provinces[1:-1]:
     # enName = province.find_all("td")[0].text.lower().replace("british colombia", "british columbia")
     enName = province.find_all("td")[0].text.lower().replace("    ", " ")
     # print (province.text)
