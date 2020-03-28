@@ -117,12 +117,11 @@ with urllib.request.urlopen(urllink) as url:
 
 
 # Canadian Provinces
-
-url = "https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html"
+url = "https://health-infobase.canada.ca/covid-19/iframe/table.html"
 browser.get(url)
-browser.find_element_by_css_selector('main.container')
+time.sleep(2)
 soup = BeautifulSoup(browser.page_source, 'html.parser')
-provinces = soup.find_all("table")[0].find("tbody").find_all("tr")
+provinces = soup.find("tbody").find_all("tr")
 
 for province in provinces[:-2]:
     # enName = province.find_all("td")[0].text.lower().replace("british colombia", "british columbia")
