@@ -113,7 +113,7 @@ def json_to_csv(object_list):
             loop_data(ov)
             c_line += 1"""
     title, rows = get_title_rows(json_ob)
-    write_csv(title, rows, 'test3.csv')
+    write_csv(title, rows, 'cases-current.csv')
 
 json_to_csv(o)
 

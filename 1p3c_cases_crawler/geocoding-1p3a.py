@@ -13,7 +13,7 @@ n = len(lines)
 
 id = 913
 outputs = []
-for line in lines[300:]:
+for line in lines[1:]:
     no = ""
     date = "2020/" + line.split(",")[0]
     state =  line.split(",")[-3]
