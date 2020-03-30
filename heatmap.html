@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="Bo Zhao">
-  <title>Damron Guide: Seattle</title>
+  <title>COVID-19 HeatMap (Beta)</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
@@ -33,14 +33,6 @@
         <div class="row">
           <div class="col-sm-8 col-md-7 py-4">
             <h4 class="text-white">About</h4>
-            <p class="text-muted">This website utilizes online maps to
-              visually explore Damron’s Travel Guide.</p>
-
-            <p class="text-muted">The guidebook’s author, Bob Damron, gave gay readers hope by fleshing out worlds that would’ve otherwise remained unknowable. His list confirmed that a gay America existed and that within this quasi-nation, many
-              smaller gay Americas proliferated. Each one was bound by unique affinities whose siren songs went muffled. With tact, Damron amplified these calls. His guidebook told where to find doorways flowing towards danger and joyful possibility.
-              It pinpointed thresholds leading to family, community, sex, and love.</p>
-
-
           </div>
           <div class="col-sm-4 offset-md-1 py-4">
             <h4 class="text-white">Contact</h4>
@@ -52,20 +44,6 @@
           </div>
         </div>
         <div class="navbar-expand-md navbar-dark bg-dark shadow-sm">
-          <!-- <ul class="navbar-nav mr-auto"> -->
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="seattle.html">Seattle</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="atlanta.html">Atlanta</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="omaha.html">Omaha</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="worcester.html">Worcester</a>
-            </li> -->
-          <!-- </ul> -->
         </div>
       </div>
     </div>
@@ -88,90 +66,15 @@
     <div id="upper_panel" class="d-flex align-items-start flex-column">
       <p><span id="year">COVID-19 </span> <span id="hint"> Hover on the dot to see the heat map of day. </span> </p>
       <div id="timeline-chart"></div>
-      <!-- <div id="mapToggle" class="col-md-5 align-items-center"> -->
-      <!-- <span id="mapType">Heatmap</span>
-        <label id="hmSwitcher" class="switch">
-          <input type="checkbox">
-          <span class="slider round"></span>
-        </label> -->
-      <!-- <div id="hmLegendContainer"></div> -->
     </div>
     </div>
-
-    <!-- <div id="info" class="d-flex flex-column">
-      <h4>Seattle <i class="showFrontPage fas fa-question-circle"></i></h4>
-      <p id="caseDesc"><img src="img/seattle2.png" align="left" style="width:70px; margin-right:10px"></img> This online map visualizes the spatial pattern and temporal changes of the LGBT related places in Seattle. The map was created and geo-referenced by the data
-        digitalized from Damron's Travel Guide, and the charts below was made by simulated datasets.
-      </p>
-      <div id="cloud"></div>
-      <div id="fChart"></div>
-      <div id="tChart"></div>
-
-    </div> -->
     <div id="map"></div>
   </main>
-
-  <!-- Modal -->
-  <!-- <div id="disclaimer" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document"  style="width:1250px!important">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Help</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <img class="img-fluid" src="img/help.png"></img>
-        </div>
-        <div class="modal-footer">
-          <div class="col-md-10">
-            <span id="mapType">Don't show this info again.</span>
-            <label id="nextTimeSwitcher" class="switch">
-              <input type="checkbox">
-              <span class="slider round"></span>
-            </label>
-          </div>
-          <button id="disclaimer-close" type="button" class="btn btn-primary col-md-2">close</button>
-        </div>
-      </div>
-    </div>
-  </div> -->
   <script>
     $(window).ready(function() {
       $('.loader').fadeOut("slow");
 
-
-      $("#nextTimeSwitcher input").on("click", function() {
-        if ($("#nextTimeSwitcher input:checked").val() === "on") {
-          localStorage.setItem('popState', 'shown');
-        } else {
-
-          localStorage.setItem('popState', 'notShown');
-        }
-      })
-
-      if (localStorage.getItem('popState') != 'shown') {
-        console.log("show disclaimer");
-        $('#disclaimer').modal('show');
-
-      } else {
-        console.log("hide disclaimer");
-        $('#disclaimer').modal('hide');
-      }
-      $('#disclaimer-close').click(function(e) // You are clicking the close button
-        {
-          $('#disclaimer').fadeOut(); // Now the pop up is hiden.
-          $('#disclaimer').modal('hide');
-        });
     });
-
-    $(".showFrontPage").on("click", function() {
-      $('#disclaimer').modal('show');
-      localStorage.setItem('popState', 'notShown');
-    })
-
-
 
 
     var mymap = L.map('map', {
