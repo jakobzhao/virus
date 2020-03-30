@@ -152,11 +152,13 @@
             which reported the case. The location is by no means identical to the exact address where the case was discovered.</span>
         </div>
 
+        <!--
         <div> <i class="fas fa-procedures" style="color:#dc3545"> </i> &nbsp; An Infected Community indicates a community or village where confirmed cases were found. The local governments in China have taken strict measures to isolate the residents
           of
           these
           places from the outside. The dataset of infected community can be found at <a href="https://lab.ahusmart.com/nCoV/api/detail" target="_blank">ahusmart</a>.
         </div>
+      -->
 
         <div>This map is made by the <a href="http://hgis.uw.edu" target="_blank">Humanistic GIS Lab at University of Washington - Seattle</a>.
           The data are mainly collected from <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/" target="_blank">WHO</a>,
@@ -264,9 +266,11 @@
               5. <a href="https://www.cdc.gov/coronavirus/2019-ncov/cases-in-us.html" target="_blank">Centers for Disease Control and Prevention</a> (CDC)
               6. <a href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html" target="_blank">Public Health Agency of Canada</a> (PHAC)
               7. <a href="https://voice.baidu.com/act/newpneumonia/newpneumonia" target="_blank">Baidu</a>.
+              <!--
               8. <a href="https://lab.ahusmart.com/nCoV/api/detail" target="_blank">ahusmart</a> - the infected community in China.
-              9. the state officals of different states in the U.S.
-              10. <a href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546" target="_blank">NBC News</a>.
+              -->
+              8. the state officals of different states in the U.S.
+              9. <a href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546" target="_blank">NBC News</a>.
 
               The dataset (in SQLite format) can be downloaded from <a href="http://hgis.uw.edu/virus/assets/virus.db" target="_blank">here</a>.
               You can view the data (in CSV format) at <a href="http://hgis.uw.edu/virus/assets/virus.csv" target="_blank">here</a>.</p>
@@ -637,7 +641,7 @@
     Promise.all([
       d3.csv('assets/virus.csv'), //datasets[0]
       d3.json("assets/all-topo-15.json"), //datasets[1]
-      d3.csv('assets/communities.csv'), //chinese cases
+      //d3.csv('assets/communities.csv'), //chinese cases
       d3.csv('assets/timestamp.txt'), //datasets[3]
       d3.csv('assets/cases.csv'), //America cases
       d3.csv('assets/united-states.txt'), //datasets[5]
@@ -647,25 +651,25 @@
     ]).then(function(datasets) {
 
       //read the timestamp in timestamp.txt and add it to map
-      $("#date").text(datasets[3][0].timestamp.split(".")[0] + " PST");
+      $("#date").text(datasets[2][0].timestamp.split(".")[0] + " PST");
 
       //read data from communities.csv and add each case on to the map with given information
       //cases in china
-      datasets[2].forEach(function(d) {
-        L.marker([parseFloat(d.lat), parseFloat(d.lng)]).bindPopup(d.name + "&nbsp;&nbsp;(<a target='_blank' href='https://translate.google.com/#view=home&op=translate&sl=zh-CN&tl=en&text=" + d.name + "'>Translate to English</a>)").addTo(
-          communities);
-      })
+      //datasets[2].forEach(function(d) {
+      //  L.marker([parseFloat(d.lat), parseFloat(d.lng)]).bindPopup(d.name + "&nbsp;&nbsp;(<a target='_blank' href='https://translate.google.com/#view=home&op=translate&sl=zh-CN&tl=en&text=" + d.name + "'>Translate to English</a>)").addTo(
+      //    communities);
+      //})
 
       //read data from cases.csv and add each case on to the map with given information
       //cases in America
-      datasets[4].forEach(function(d) {
+      datasets[3].forEach(function(d) {
         //console.log(d.id)
         L.marker([parseFloat(d.lat), parseFloat(d.lng)]).bindPopup("<b>" + d.no + "</b> <p>" + d.note + " identified on " + d.date + ", &nbsp;<a href='https://" + d.reference + "' target='_blank'>" + d.reference + "</a>.</p>").addTo(
           cases);
       })
 
       //cases in Canada
-      datasets[8].forEach(function(d) {
+      datasets[7].forEach(function(d) {
         //console.log(d.id)
         L.marker([parseFloat(d.lat), parseFloat(d.lng)]).bindPopup("<b>" + d.no + "</b> <p>" + d.note + " identified on " + d.date + ", &nbsp;<a href='https://" + d.reference + "' target='_blank'>" + d.reference + "</a>.</p>").addTo(
           cases);
@@ -683,15 +687,15 @@
       Object.keys(latest).forEach(function(d) {
         value = tc(datasets[0][datasets[0].length - 1][d]) - tr(datasets[0][datasets[0].length - 1][d]) - td(datasets[0][datasets[0].length - 1][d]);
         // value = tc(datasets[0][datasets[0].length - 1][d]);
-        if (datasets[7]["columns"].includes(d)) { //china
+        if (datasets[6]["columns"].includes(d)) { //china
           // console.log(value);
           // console.log(top["china"]);
           top["china"] += +value;
           cntop[d] = value;
 
-        } else if (datasets[6]["columns"].includes(d)) { //canada
+        } else if (datasets[5]["columns"].includes(d)) { //canada
           ;
-        } else if (datasets[5]["columns"].includes(d)) { //us
+        } else if (datasets[4]["columns"].includes(d)) { //us
           ustop[d] = value;
         } else if (d != "datetime") { //else
           top[d] = value;
@@ -801,7 +805,7 @@
 
             for (const [key, value] of Object.entries(current)) {
 
-              if (datasets[7]["columns"].includes(key)) {
+              if (datasets[6]["columns"].includes(key)) {
 
                 if (value == undefined) {
                   value = "0"
@@ -910,7 +914,7 @@
         }
 
         //add ",CHINA" to every provinces in China
-        if (datasets[7]["columns"].includes(name)) { //add ",CHINA" to every provinces in China
+        if (datasets[6]["columns"].includes(name)) { //add ",CHINA" to every provinces in China
           $("#placename").text(name.toUpperCase() + ", CHINA");
           if (name == "taiwan") {
             $("#placename").text("Taiwan");
@@ -927,12 +931,12 @@
         }
 
         //add reference source for each place
-        if (datasets[5]["columns"].includes(name)) {
+        if (datasets[4]["columns"].includes(name)) {
           $("#source-website").html( //Unisted states
             '<a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/"> WHO</a>, <a target="_blank" href="https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/cases-in-us.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fcases-in-us.html">CDC</a> and <a target="_blank" href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546">NBC News</a>.');
-        } else if (datasets[6]["columns"].includes(name)) { //Canada
+        } else if (datasets[5]["columns"].includes(name)) { //Canada
           $("#source-website").html('<a target="_blank" href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html">Public Health Agency of Canada.</a>');
-        } else if (datasets[7]["columns"].includes(name)) { //China
+        } else if (datasets[6]["columns"].includes(name)) { //China
           $("#source-website").html('<a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/"> WHO</a>, <a target="_blank" href="http://www.nhc.gov.cn/xcs/xxgzbd/gzbd_index.shtml">China CDC</a>, and <a target="_blank" href="https://voice.baidu.com/act/newpneumonia/newpneumonia">Baidu</a>.');
         } else if (name == "Global Trend") { //global
           $("#source-website").html('<a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/"> WHO</a>, <a target="_blank" href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546">NBC News</a>, <a target="_blank" href="https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/cases-in-us.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fcases-in-us.html">CDC</a>, <a target="_blank" href="https://voice.baidu.com/act/newpneumonia/newpneumonia">Baidu</a>, <a target="_blank" href="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic">Wikipedia</a>, and etc.');
@@ -1071,8 +1075,8 @@
       //control the display of infection level, cases and commnities icon
       new L.control.layers(baseLayers, {
         "Infection Level": areas,
-        "Infection Case(s) &nbsp;&nbsp; <i class='fas fa-users' style='color: #dc3545;'></i>": cases,
-        "Infected Community &nbsp;&nbsp; <i class='fas fa-procedures' style='color: #dc3545;'></i>": communities
+        "Infection Case(s) &nbsp;&nbsp; <i class='fas fa-users' style='color: #dc3545;'></i>": cases
+        //"Infected Community &nbsp;&nbsp; <i class='fas fa-procedures' style='color: #dc3545;'></i>": communities
       }, {
         collapsed: false
       }).addTo(mymap);
