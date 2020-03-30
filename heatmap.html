@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 
@@ -101,7 +100,7 @@
       </div>
     </div>
 
-    <div id="info" class="d-flex flex-column">
+    <!-- <div id="info" class="d-flex flex-column">
       <h4>Seattle <i class="showFrontPage fas fa-question-circle"></i></h4>
       <p id="caseDesc"><img src="img/seattle2.png" align="left" style="width:70px; margin-right:10px"></img> This online map visualizes the spatial pattern and temporal changes of the LGBT related places in Seattle. The map was created and geo-referenced by the data
         digitalized from Damron's Travel Guide, and the charts below was made by simulated datasets.
@@ -110,12 +109,12 @@
       <div id="fChart"></div>
       <div id="tChart"></div>
 
-    </div>
+    </div> -->
     <div id="map"></div>
   </main>
 
   <!-- Modal -->
-  <div id="disclaimer" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <!-- <div id="disclaimer" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document"  style="width:1250px!important">
       <div class="modal-content">
         <div class="modal-header">
@@ -139,51 +138,50 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <script>
+    $(window).ready(function() {
+      $('.loader').fadeOut("slow");
 
-    // $(window).ready(function() {
-    //   $('.loader').fadeOut("slow");
-    //
-    //
-    //   $("#nextTimeSwitcher input").on("click", function() {
-    //     if ($("#nextTimeSwitcher input:checked").val() === "on") {
-    //       localStorage.setItem('popState', 'shown');
-    //     } else {
-    //
-    //       localStorage.setItem('popState', 'notShown');
-    //     }
-    //   })
-    //
-    //   if (localStorage.getItem('popState') != 'shown') {
-    //     console.log("show disclaimer");
-    //     $('#disclaimer').modal('show');
-    //
-    //   } else {
-    //     console.log("hide disclaimer");
-    //     $('#disclaimer').modal('hide');
-    //   }
-    //   $('#disclaimer-close').click(function(e) // You are clicking the close button
-    //     {
-    //       $('#disclaimer').fadeOut(); // Now the pop up is hiden.
-    //       $('#disclaimer').modal('hide');
-    //     });
-    // });
-    //
-    // $(".showFrontPage").on("click", function() {
-    //   $('#disclaimer').modal('show');
-    //   localStorage.setItem('popState', 'notShown');
-    // })
+
+      $("#nextTimeSwitcher input").on("click", function() {
+        if ($("#nextTimeSwitcher input:checked").val() === "on") {
+          localStorage.setItem('popState', 'shown');
+        } else {
+
+          localStorage.setItem('popState', 'notShown');
+        }
+      })
+
+      if (localStorage.getItem('popState') != 'shown') {
+        console.log("show disclaimer");
+        $('#disclaimer').modal('show');
+
+      } else {
+        console.log("hide disclaimer");
+        $('#disclaimer').modal('hide');
+      }
+      $('#disclaimer-close').click(function(e) // You are clicking the close button
+        {
+          $('#disclaimer').fadeOut(); // Now the pop up is hiden.
+          $('#disclaimer').modal('hide');
+        });
+    });
+
+    $(".showFrontPage").on("click", function() {
+      $('#disclaimer').modal('show');
+      localStorage.setItem('popState', 'notShown');
+    })
 
 
 
 
     var mymap = L.map('map', {
-      center: [47.609, -122.342],
+      center: [37.609, -100],
       zoomControl: false,
-      zoom: 13,
+      zoom: 5,
       maxZoom: 18,
-      minZoom: 11
+      minZoom: 2
     });
 
     new L.Control.Zoom({
@@ -192,7 +190,7 @@
 
 
     // var dark = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png').addTo(mymap);
-    var grayscale = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}@2x.png').addTo(mymap);
+    var grayscale = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png').addTo(mymap);
     var streets = L.tileLayer('http://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}@2x.png');
     var satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}@2x');
 
@@ -204,36 +202,25 @@
     }
 
 
-    var mGroup = L.layerGroup().addTo(mymap);
-    var wGroup = L.layerGroup().addTo(mymap);
+    var Group = L.layerGroup().addTo(mymap);
+    // var wGroup = L.layerGroup().addTo(mymap);
     var mLayers, wLayers;
     var chart, fChart;
     var heatmapFlag = false;
     var colorscheme = chroma.scale('OrRd').colors(10).reverse(); //colorscheme = chroma.scale('OrRd').colors(5);
 
-    var mHeatmap = L.heatLayer([], {
-      radius: 60,
-      blur: 50,
-      gradient: {
-        0.45: "rgb(0,0,255)",
-        0.55: "rgb(0,255,255)",
-        0.65: "rgb(0,255,0)",
-        0.95: "rgb(255,255,0)",
-        1.0: "rgb(255,0,0)"
-      }
-    }).addTo(mymap);
-
-
-    var wHeatmap = L.heatLayer([], {
-      radius: 60,
-      blur: 50,
-      gradient: {
-        0.45: "rgb(0,0,255)",
-        0.55: "rgb(0,255,255)",
-        0.65: "rgb(0,255,0)",
-        0.95: "rgb(255,255,0)",
-        1.0: "rgb(255,0,0)"
-      }
+    var Heatmap = L.heatLayer([], {
+      minOpacity: 0.35,
+      // max: 10,
+      // radius: 12,
+      // blur: 10,
+      // gradient: {
+      //   0.1: "rgb(0,0,255)",
+      //   0.15: "rgb(0,255,255)",
+      //   0.16: "rgb(0,255,0)",
+      //   0.20: "rgb(255,255,0)",
+      //   0.30: "rgb(255,0,0)"
+      // }
     }).addTo(mymap);
 
 
@@ -241,200 +228,45 @@
     var acsColors = chroma.scale('YlOrRd').colors(8);
 
 
-    var overlays = {
-      "<i class='fas fa-circle fa-xs men'></i> <span style='color: rgb(0,40,255)'>Men</span>": mGroup,
-      "<i class='fas fa-circle fa-xs women'></i> <span style='color: rgb(255,0,255)'>Women</span>": wGroup,
-      "<span>Place Names</span>": L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}@2x.png').addTo(mymap)
-    }
-
-    L.control.layers(baseLayers, overlays, {
-      collapsed: false,
-      position: 'topright'
-    }).addTo(mymap);
-
-
-
-    Promise.all(d3.json("assets/cases-heatmap.csv")).then(function(datasets) {
+    // var overlays = {
+    //   "<i class='fas fa-circle fa-xs men'></i> <span style='color: rgb(0,40,255)'>Men</span>": mGroup,
+    //   "<i class='fas fa-circle fa-xs women'></i> <span style='color: rgb(255,0,255)'>Women</span>": wGroup,
+    //   "<span>Place Names</span>": L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}@2x.png').addTo(mymap)
+    // }
+    //
+    // L.control.layers(baseLayers, overlays, {
+    //   collapsed: false,
+    //   position: 'topright'
+    // }).addTo(mymap);
 
 
-      mLayers = {
-        1965: L.geoJSON(datasets[0], {
-          onEachFeature: function(feature, layer) {
-            layer.bindPopup("<p class='mapPopup'>" + feature.properties.Name + "</p>");
-          },
-          pointToLayer: function(feature, latlng) {
-            return L.marker(latlng, {
-              icon: L.divIcon({
-                className: 'fas fa-circle fa-xs men glow-effect'
-              })
-            });
-          }
-        }),
-        1975: L.geoJSON(datasets[1], {
-          onEachFeature: function(feature, layer) {
-            layer.bindPopup("<p class='mapPopup'>" + feature.properties.Name + "</p>");
-          },
-          pointToLayer: function(feature, latlng) {
-            return L.marker(latlng, {
-              icon: L.divIcon({
-                className: 'fas fa-circle fa-xs men glow-effect'
-              })
-            });
-          }
-        }),
-        1983: L.geoJSON(datasets[2], {
-          onEachFeature: function(feature, layer) {
-            layer.bindPopup("<p class='mapPopup'>" + feature.properties.Name + "</p>");
-          },
-          pointToLayer: function(feature, latlng) {
-            return L.marker(latlng, {
-              icon: L.divIcon({
-                className: 'fas fa-circle fa-xs men glow-effect'
-              })
-            });
-          }
-        }),
-        1995: L.geoJSON(datasets[3], {
-          onEachFeature: function(feature, layer) {
-            layer.bindPopup("<p class='mapPopup'>" + feature.properties.Name + "</p>");
-          },
-          pointToLayer: function(feature, latlng) {
-            return L.marker(latlng, {
-              icon: L.divIcon({
-                className: 'fas fa-circle fa-xs men glow-effect'
-              })
-            });
-          }
-        }),
-        2005: L.geoJSON(datasets[4], {
-          onEachFeature: function(feature, layer) {
-            layer.bindPopup("<p class='mapPopup'>" + feature.properties.Name + "</p>");
-          },
-          pointToLayer: function(feature, latlng) {
-            return L.marker(latlng, {
-              icon: L.divIcon({
-                className: 'fas fa-circle fa-xs men glow-effect'
-              })
-            });
-          }
-        }),
-        2009: L.geoJSON(datasets[4], {
-          onEachFeature: function(feature, layer) {
-            layer.bindPopup("<p class='mapPopup'>" + feature.properties.Name + "</p>");
-          },
-          pointToLayer: function(feature, latlng) {
-            return L.marker(latlng, {
-              icon: L.divIcon({
-                className: 'fas fa-circle fa-xs men glow-effect'
-              })
-            });
-          }
-        }),
-        2012: L.geoJSON(datasets[4], {
-          onEachFeature: function(feature, layer) {
-            layer.bindPopup("<p class='mapPopup'>" + feature.properties.Name + "</p>");
-          },
-          pointToLayer: function(feature, latlng) {
-            return L.marker(latlng, {
-              icon: L.divIcon({
-                className: 'fas fa-circle fa-xs men glow-effect'
-              })
-            });
-          }
-        }),
-        2014: L.geoJSON(datasets[5], {
-          onEachFeature: function(feature, layer) {
-            layer.bindPopup("<p class='mapPopup'>" + feature.properties.Name + "</p>");
-          },
-          pointToLayer: function(feature, latlng) {
-            return L.marker(latlng, {
-              icon: L.divIcon({
-                className: 'fas fa-circle fa-xs men glow-effect'
-              })
-            });
-          }
-        })
-      };
+    var dates = {}
+    Promise.all([d3.csv("assets/cases-heatmap.csv")]).then(function(datasets) {
 
-      wLayers = {
-        1995: L.geoJSON(datasets[6], {
-          onEachFeature: function(feature, layer) {
-            layer.bindPopup("<p class='mapPopup'>" + feature.properties.Name + "</p>");
-          },
-          pointToLayer: function(feature, latlng) {
-            return L.marker(latlng, {
-              icon: L.divIcon({
-                className: 'fas fa-circle fa-xs women glow-effect'
-              })
-            });
-          }
-        }),
-        2005: L.geoJSON(datasets[7], {
-          onEachFeature: function(feature, layer) {
-            layer.bindPopup("<p class='mapPopup'>" + feature.properties.Name + "</p>");
-          },
-          pointToLayer: function(feature, latlng) {
-            return L.marker(latlng, {
-              icon: L.divIcon({
-                className: 'fas fa-circle fa-xs women glow-effect'
-              })
-            });
-          }
-        }),
-        2009: L.geoJSON(datasets[8], {
-          onEachFeature: function(feature, layer) {
-            layer.bindPopup("<p class='mapPopup'>" + feature.properties.Name + "</p>");
-          },
-          pointToLayer: function(feature, latlng) {
-            return L.marker(latlng, {
-              icon: L.divIcon({
-                className: 'fas fa-circle fa-xs women glow-effect'
-              })
-            });
-          }
-        }),
-        2012: L.geoJSON(datasets[9], {
-          onEachFeature: function(feature, layer) {
-            layer.bindPopup("<p class='mapPopup'>" + feature.properties.Name + "</p>");
-          },
-          pointToLayer: function(feature, latlng) {
-            return L.marker(latlng, {
-              icon: L.divIcon({
-                className: 'fas fa-circle fa-xs women glow-effect'
-              })
-            });
-          }
-        }),
-        2014: L.geoJSON(datasets[10], {
-          onEachFeature: function(feature, layer) {
-            layer.bindPopup("<p class='mapPopup'>" + feature.properties.Name + "</p>");
-          },
-          pointToLayer: function(feature, latlng) {
-            return L.marker(latlng, {
-              icon: L.divIcon({
-                className: 'fas fa-circle fa-xs women glow-effect'
-              })
-            });
-          }
-        })
-      };
+      datasets[0].forEach(function(d) {
 
-      mLayers[2012].addTo(mGroup);
-      wLayers[2012].addTo(wGroup);
+        if (dates[d.date] == undefined) {
+          dates[d.date] = [
+            [d.lat, d.lng]
+          ]
+        } else {
+          dates[d.date].push([d.lat, d.lng]);
+        }
+
+      })
 
 
 
-      var t = ["t"];
-      var mPop = ["# Men"];
-      var wPop = ["# Women"];
+      var t = ["t"],
+        pop = ["pop"];
 
-      datasets[11].forEach(function(d) {
-        t.push(d["t"])
-        mPop.push(+d["m"])
-        wPop.push(+d["w"])
+
+      Object.keys(dates).forEach(function(d) {
+        t.push(new Date(d));
+        pop.push(dates[d].length);
       });
 
-
+      var a = 3;
       chart = c3.generate({
         size: {
           height: 80,
@@ -442,21 +274,43 @@
         },
         data: {
           x: "t",
-          columns: [t, mPop, wPop],
-          onmouseover: update,
-          type: 'area',
+          columns: [t, pop],
+          // onmouseover: update,
+          type: 'line',
           labels: false,
           colors: {
             "# Women": 'rgba(255, 0, 255, .6)',
             "# Men": 'rgba(0, 40, 255, .6)'
+          }
+        },
+        axis: {
+          x: {
+            type: "timeseries",
+            tick: {
+              format: "%b %d",
+              centered: true,
+              fit: true,
+              count: 8
+            }
           },
-          groups: [
-            ["# Women", "# Men"]
-          ]
+          y: {
+            label: {
+              text: 'Cases',
+              position: 'outer-middle'
+            },
+            min: 0,
+            padding: {
+              bottom: 0
+            },
+            // tick: {
+            //   format: d3locale.format(",")
+            // },
+            type: 'linear'
+          }
         },
-        area: {
-          zerobased: true
-        },
+        // area: {
+        //   zerobased: true
+        // },
         tooltip: {
           show: false
         },
@@ -475,164 +329,109 @@
       });
 
 
-      fChart = c3.generate({
-        size: {
-          height: 200
-        },
-        data: {
-          x: 'x',
-          columns: [
-            ['x', '$', '18+', 'Weelchair', 'Private CI'],
-            ['Men', 13, 20, 10, 30],
-            ['Women', 19, 10, 14, 20],
-          ],
-          groups: [
-            ['Men', 'Women']
-          ],
-          colors: {
-            "Women": 'rgba(255, 0, 255, .6)',
-            "Men": 'rgba(0, 40, 255, .6)'
-          },
-          type: 'bar'
-        },
-        axis: {
-          x: {
-            type: 'category' // this needed to load string x value
-          },
-          y: {
-            label: {
-              text: '# of places',
-              position: 'outer-middle'
-            }
-          }
-        },
-        legend: {
-          show: false
-        },
-        bindto: "#fChart"
-      });
-
-
-      tChart = c3.generate({
-        size: {
-          height: 200
-        },
-        data: {
-          x: 'x',
-          columns: [
-            ['x', 'Restaurants', 'Bar', 'Accommodation', 'Erotica', 'Cruisy Area'],
-            ['Men', 15, 13, 15, 30, 20],
-            ['Women', 30, 12, 20, 20, 14],
-          ],
-          groups: [
-            ['Men', 'Women']
-          ],
-          colors: {
-            "Women": 'rgba(255, 0, 255, .6)',
-            "Men": 'rgba(0, 40, 255, .6)'
-          },
-          type: 'bar'
-        },
-        axis: {
-          x: {
-            type: 'category' // this needed to load string x value
-          },
-          y: {
-            label: {
-              text: '# of places',
-              position: 'outer-middle'
-            }
-          }
-        },
-        // legend: {
-        //   position: 'inset',
-        //   inset: {
-        //     anchor: "top-left"
-        //   },
-        // },
-        bindto: "#tChart"
-      });
-
-      $($($("#timeline-chart svg").children()[1]).children()[6]).hide();
 
 
 
-      mymap.on('overlayadd', function(eventlayer) {
-        if (eventlayer.layer == wGroup) {
-
-          chart.load({
-            columns: [wPop]
-          });
-
-          fChart.load({
-            columns: [
-              ["Women", Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1]
-            ]
-          });
-
-          tChart.load({
-            columns: [
-              ["Women", Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1]
-            ]
-          });
-        }
-
-        if (eventlayer.layer == mGroup) {
-          chart.load({
-            columns: [mPop]
-          });
-
-          fChart.load({
-            columns: [
-              ["Men", Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1]
-            ]
-          });
-
-          tChart.load({
-            columns: [
-              ["Men", Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1]
-            ]
-          });
-        }
-
-      });
+      //
+      // datasets[0].forEach(function(d) {
+      //   //console.log(d.id)
+      //   // L.marker([parseFloat(d.lat), parseFloat(d.lng)]).bindPopup("<b>" + d.no + "</b> <p>" + d.note + " identified on " + d.date + ", &nbsp;<a href='https://" + d.reference + "' target='_blank'>" + d.reference + "</a>.</p>").addTo(Group);
+      //
+      //    Heatmap.addLatLng(new L.latLng(d.lat, d.lng));
+      // })
 
 
 
 
-      mymap.on('overlayremove', function(eventlayer) {
-        if (eventlayer.layer == wGroup) {
 
-          chart.unload({
-            ids: ['# Women']
-          });
+      // $.each(mLayers[d.x]._layers, function(i, d) {
+      //         mHeatmap.addLatLng(new L.latLng(d.feature.geometry.coordinates[1], d.feature.geometry.coordinates[0]));
+      //       });
 
-          fChart.unload({
-            ids: ['Women']
-          });
-          tChart.unload({
-            ids: ['Women']
-          });
 
-        }
 
-        if (eventlayer.layer == mGroup) {
 
-          chart.unload({
-            ids: ['# Men']
-          });
+      // wLayers[2012].addTo(wGroup);
 
-          fChart.unload({
-            ids: ['Men']
-          });
 
-          tChart.unload({
-            ids: ['Men']
-          });
 
-        }
 
-      });
+      // mymap.on('overlayadd', function(eventlayer) {
+      //   if (eventlayer.layer == wGroup) {
+      //
+      //     chart.load({
+      //       columns: [wPop]
+      //     });
+      //
+      //     fChart.load({
+      //       columns: [
+      //         ["Women", Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1]
+      //       ]
+      //     });
+      //
+      //     tChart.load({
+      //       columns: [
+      //         ["Women", Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1]
+      //       ]
+      //     });
+      //   }
+      //
+      //   if (eventlayer.layer == mGroup) {
+      //     chart.load({
+      //       columns: [mPop]
+      //     });
+      //
+      //     fChart.load({
+      //       columns: [
+      //         ["Men", Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1]
+      //       ]
+      //     });
+      //
+      //     tChart.load({
+      //       columns: [
+      //         ["Men", Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1]
+      //       ]
+      //     });
+      //   }
+      //
+      // });
+
+
+
+
+      // mymap.on('overlayremove', function(eventlayer) {
+      //   if (eventlayer.layer == wGroup) {
+      //
+      //     chart.unload({
+      //       ids: ['# Women']
+      //     });
+      //
+      //     fChart.unload({
+      //       ids: ['Women']
+      //     });
+      //     tChart.unload({
+      //       ids: ['Women']
+      //     });
+      //
+      //   }
+      //
+      //   if (eventlayer.layer == mGroup) {
+      //
+      //     chart.unload({
+      //       ids: ['# Men']
+      //     });
+      //
+      //     fChart.unload({
+      //       ids: ['Men']
+      //     });
+      //
+      //     tChart.unload({
+      //       ids: ['Men']
+      //     });
+      //
+      //   }
+      //
+      // });
 
     });
 
@@ -644,122 +443,122 @@
       // .css("right", "120px")
       // .css("font-size", "14px")
       .css("background-color", "transparent")
-      .html("<a class='rainbow' href='https://geography.washington.edu'>Supported by Geography @ University of Washington</a>");
+      .html("");
 
 
-    $("#hmSwitcher input").on("click", function() {
-      if ($("#hmSwitcher input:checked").val() === "on") {
-        heatmapFlag = true;
-        var colors = chroma.scale('Spectral').domain([0, 50]).colors(50); //colors = chroma.scale('OrRd').colors(5);
-        $("#hmLegendContainer").append("<div id='hmLegend'> </div>")
-        for (var j = 0; j < colors.length; j++) {
-          $("#hmLegend").append("<i style='background: " + colors[j] + " ; opacity:0.9'></i>");
-        }
-        $("#hmLegend").parent().append("<span>more</span>");
-        $("#hmLegend").parent().append("&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span>less</span>");
-
-      } else {
-        heatmapFlag = false;
-        $("#hmLegendContainer").empty();
-      }
-
-      update({
-        x: +$("#year").text()
-      });
-
-    });
-
-
-    function update(d) {
-      $("#year").text(d.x);
-
-      mGroup.clearLayers();
-      wGroup.clearLayers();
-      mHeatmap.setLatLngs([]);
-      wHeatmap.setLatLngs([]);
-
-
-
-      if (mymap.hasLayer(mGroup)) {
-        if (!heatmapFlag) {
-          mLayers[d.x].addTo(mGroup);
-        } else {
-          $.each(mLayers[d.x]._layers, function(i, d) {
-            mHeatmap.addLatLng(new L.latLng(d.feature.geometry.coordinates[1], d.feature.geometry.coordinates[0]));
-          });
-        }
-
-
-
-
-        fChart.load({
-          columns: [
-            ["Men", Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1]
-          ]
-        });
-
-
-        tChart.load({
-          columns: [
-            ["Men", Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1]
-          ]
-        });
-
-
-
-      }
-
-
-
-      if (mymap.hasLayer(wGroup)) {
-
-        if (d.x == 1965 || d.x == 1975 || d.x == 1983) {
-          fChart.load({
-            columns: [
-              ["Women", 0, 0, 0, 0]
-            ]
-          });
-
-          tChart.load({
-            columns: [
-              ["Women", 0, 0, 0, 0, 0]
-            ]
-          });
-
-        } else {
-
-          if (!heatmapFlag) {
-            wLayers[d.x].addTo(wGroup);
-          } else {
-            $.each(wLayers[d.x]._layers, function(i, d) {
-              wHeatmap.addLatLng(new L.latLng(d.feature.geometry.coordinates[1], d.feature.geometry.coordinates[0]));
-            });
-          }
-
-
-          fChart.load({
-            columns: [
-              ["Women", Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1]
-            ]
-          });
-
-
-          tChart.load({
-            columns: [
-              ["Women", Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1]
-            ]
-          });
-
-        }
-
-
-      }
-
-
-
-
-
-    }
+    // $("#hmSwitcher input").on("click", function() {
+    //   if ($("#hmSwitcher input:checked").val() === "on") {
+    //     heatmapFlag = true;
+    //     var colors = chroma.scale('Spectral').domain([0, 50]).colors(50); //colors = chroma.scale('OrRd').colors(5);
+    //     $("#hmLegendContainer").append("<div id='hmLegend'> </div>")
+    //     for (var j = 0; j < colors.length; j++) {
+    //       $("#hmLegend").append("<i style='background: " + colors[j] + " ; opacity:0.9'></i>");
+    //     }
+    //     $("#hmLegend").parent().append("<span>more</span>");
+    //     $("#hmLegend").parent().append("&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span>less</span>");
+    //
+    //   } else {
+    //     heatmapFlag = false;
+    //     $("#hmLegendContainer").empty();
+    //   }
+    //
+    //   update({
+    //     x: +$("#year").text()
+    //   });
+    //
+    // });
+    //
+    //
+    // function update(d) {
+    //   $("#year").text(d.x);
+    //
+    //   mGroup.clearLayers();
+    //   wGroup.clearLayers();
+    //   mHeatmap.setLatLngs([]);
+    //   wHeatmap.setLatLngs([]);
+    //
+    //
+    //
+    //   if (mymap.hasLayer(mGroup)) {
+    //     if (!heatmapFlag) {
+    //       mLayers[d.x].addTo(mGroup);
+    //     } else {
+    //       $.each(mLayers[d.x]._layers, function(i, d) {
+    //         mHeatmap.addLatLng(new L.latLng(d.feature.geometry.coordinates[1], d.feature.geometry.coordinates[0]));
+    //       });
+    //     }
+    //
+    //
+    //
+    //
+    //     fChart.load({
+    //       columns: [
+    //         ["Men", Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1]
+    //       ]
+    //     });
+    //
+    //
+    //     tChart.load({
+    //       columns: [
+    //         ["Men", Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1]
+    //       ]
+    //     });
+    //
+    //
+    //
+    //   }
+    //
+    //
+    //
+    //   if (mymap.hasLayer(wGroup)) {
+    //
+    //     if (d.x == 1965 || d.x == 1975 || d.x == 1983) {
+    //       fChart.load({
+    //         columns: [
+    //           ["Women", 0, 0, 0, 0]
+    //         ]
+    //       });
+    //
+    //       tChart.load({
+    //         columns: [
+    //           ["Women", 0, 0, 0, 0, 0]
+    //         ]
+    //       });
+    //
+    //     } else {
+    //
+    //       if (!heatmapFlag) {
+    //         wLayers[d.x].addTo(wGroup);
+    //       } else {
+    //         $.each(wLayers[d.x]._layers, function(i, d) {
+    //           wHeatmap.addLatLng(new L.latLng(d.feature.geometry.coordinates[1], d.feature.geometry.coordinates[0]));
+    //         });
+    //       }
+    //
+    //
+    //       fChart.load({
+    //         columns: [
+    //           ["Women", Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1]
+    //         ]
+    //       });
+    //
+    //
+    //       tChart.load({
+    //         columns: [
+    //           ["Women", Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1]
+    //         ]
+    //       });
+    //
+    //     }
+    //
+    //
+    //   }
+    //
+    //
+    //
+    //
+    //
+    // }
   </script>
 </body>
 
