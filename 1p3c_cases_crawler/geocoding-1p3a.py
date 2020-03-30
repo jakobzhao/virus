@@ -5,7 +5,7 @@ import geocoder
 from datetime import datetime
 import shutil
 
-fp = open("test3.csv", "r", encoding="utf-8")
+fp = open("cases-current.csv", "r", encoding="utf-8")
 lines = fp.readlines()
 fp.close()
 n = len(lines)
