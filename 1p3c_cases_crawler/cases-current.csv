@@ -1,428 +1,106 @@
-confirmed_date,gender,comments,comments_en,die_count,age_range,state_name,county,full_links
-3/25,,Orleans第27例死亡。,Orleans 27th death.,1,,LA,Orleans,http://ldh.la.gov/coronavirus/
-3/25,,Orleans第28例死亡。,Orleans 28th death.,1,,LA,Orleans,http://ldh.la.gov/coronavirus/
-3/25,,Orleans第29例死亡。,Orleans 29th death.,1,,LA,Orleans,http://ldh.la.gov/coronavirus/
-3/25,,Orleans第30例死亡。,Orleans 30th death.,1,,LA,Orleans,http://ldh.la.gov/coronavirus/
-3/25,,Orleans第31例死亡。,Orleans 31th death.,1,,LA,Orleans,http://ldh.la.gov/coronavirus/
-3/25,,Orleans第32例死亡。,Orleans 32th death.,1,,LA,Orleans,http://ldh.la.gov/coronavirus/
-3/25,,Orleans第33例死亡。,Orleans 33th death.,1,,LA,Orleans,http://ldh.la.gov/coronavirus/
-3/25,,Orleans第34例死亡。,Orleans 34th death.,1,,LA,Orleans,http://ldh.la.gov/coronavirus/
-3/25,,Orleans第35例死亡。,Orleans 35th death.,1,,LA,Orleans,http://ldh.la.gov/coronavirus/
-3/25,,Orleans第36例死亡。,Orleans 36th death.,1,,LA,Orleans,http://ldh.la.gov/coronavirus/
-3/25,,Orleans第37例死亡。,Orleans 37th death.,1,,LA,Orleans,http://ldh.la.gov/coronavirus/
-3/25,,Jefferson第7例死亡。,Jefferson 7th death.,1,,LA,Jefferson,http://ldh.la.gov/coronavirus/
-3/25,,East Baton Rouge第3例死亡。,East Baton Rouge 3rd death.,1,,LA,East Baton Rouge,http://ldh.la.gov/coronavirus/
-3/25,,St. John the Baptist 第1例死亡。,St. John the Baptist 1st death.,1,,LA,St. John the Baptist,http://ldh.la.gov/coronavirus/
-3/25,,St. John the Baptist 第2例死亡。,St. John the Baptist 2nd death.,1,,LA,St. John the Baptist,http://ldh.la.gov/coronavirus/
-3/25,,St. Bernard  Parish 第1例死亡。,St. Bernard  Parish 1st death.,1,,LA,St. Bernard,http://ldh.la.gov/coronavirus/
-3/25,,Lafourche  Parish 第1例死亡。,Lafourche  Parish 1st death.,1,,LA,Lafourche,http://ldh.la.gov/coronavirus/
-3/25,,St. Charles Parish 第1例死亡。,St. Charles Parish 1st death.,1,,LA,St. Charles,http://ldh.la.gov/coronavirus/
-3/25,,Bienville第1例死亡。,Bienville 1st death.,1,,LA,Bienville,http://ldh.la.gov/coronavirus/
-3/25,,截至3/25中午，Nassau累计死亡17例。,Nassau reported 17 total deaths by 3/25 noon.,3,,NY,Nassau,https://abc7ny.com/6021346/
-3/25,,"截止3/25 新泽西州州 累计死亡62例 新增18例。具体信息具体信息稍后更新。","NJ State  County has in total 62 death cases by 3/25 with 18 new cases added. [We will update the details later].",1,,NJ,Unassigned,https://www.nj.gov/health/
-3/25,,"截止3/25 乔治亚州 Unknown 确诊人数为160，死亡人数为47，具体信息待更新。","3/25 7:00pm there are 160 confirmed cases and 47 deaths in GA. More details to come. ",8,,GA,Unassigned,https://dph.georgia.gov/covid-19-daily-status-report
-3/25,,乔治亚州Clarke County出现第一例死亡。患者67岁，男，有病史，在Athens的医院去世。,"One resident of Clarke County a 67 year old male is known to have died in an Athens hospital. In addition to testing positive for COVID-19 he had existing medical conditions.",1,,GA,Clarke,https://www.accgov.com/coronavirus
-3/25,,Lucas新增10例确诊病例，1例死亡。【3/25下午俄亥俄州公布Lucas只有1例死亡，但是Lucas County发布共有2例死亡。】,"Lucas County reported 23 cases and 2 death by 3/25 higher than the one death reported by the state earlier.",1,,OH,Lucas,https://www.lucascountyhealth.com/coronavirusupdates/
-3/25,,密歇根州 Detroit City 新增142例，Detroit City 累计705例，新增4例死亡，累计12例死亡病例。,"MI Detroit City  new 142 cases   total 705 cases. New 4 cases total 12 deaths.",4,,MI,Wayne,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html"
-3/25,,密歇根州 Wayne County新增107例，累计417例。,Wayne County reported 107 new cases.,4,,MI,Wayne,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html"
-3/25,,密歇根州 Macomb 新增56，  累计281例。新增4例死亡，累计7例死亡病例。,"MI County Macomb new 56 cases   total 281 cases new 4 death making total death cases 7.",4,,MI,Macomb,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html"
-3/25,,密歇根州  Oakland新增115，  累计543例。新增6例死亡，累计10例死亡病例。,"MI County new 115 cases  total 543 cases . New 6 death cases total 10 death cases.",6,,MI,Oakland,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html"
-3/25,男,3/25 威斯康辛州Milwaukee County新增1例死亡，为一60多岁男性，总计4例。,"Milwaukee County's Medical Examiner on Wednesday announced the county's fourth death related to the coronavirus outbreak. A 60-year-old man from Milwaukee passed away at his home according to a tweet from the ME's Office.",1,60+,WI,Milwaukee,https://www.wbay.com/content/news/Dane-County-reports-coronavirus-related-death-statewide-deaths-at-6-569094291.html
-3/25,,Miami新增1例死亡。,Miami reports first death.,1,,OH,Miami,https://coronavirus.ohio.gov/wps/portal/gov/covid-19/
-3/25,,3/25佛蒙特州新增病患28例，死亡新增1人，具体细节待补充。,Vermont saw 28 new patients and 1 new death on 3/28. Details to come. ,1,,VT,Unassigned,https://www.healthvermont.gov/response/infectious-disease/2019-novel-coronavirus
-3/25,,Stark新增1例死亡病例。,1 more death case reported in Stark County.,1,,OH,Stark,https://coronavirus.ohio.gov/wps/portal/gov/covid-19/
-3/25,,3/25 Riverside 新增一例死亡，也来自Coachella Valley。,"One more death from Coachella Valley in Riverside bringing total to 7. ",1,,CA,Riverside,https://nbcpalmsprings.com/2020/03/25/ten-new-coronavirus-cases-confirmed-in-riverside-county-total-now-69/
-3/25,,3/25 威斯康辛州Dane County新增16例，死亡一例。,"3/25 Dane County WI reported 16 more cases and 1 death.",1,,WI,Dane,https://www.dhs.wisconsin.gov/outbreaks/index.htm
-3/25,男,3/25报道，一位70多岁在Eddy County的男性在3/22日送诊后于当日去世，次日病毒检查阳性。,"A male in his late 70s from Eddy County was transported to Artesia General Hospital on Sunday March 22 and died that same day. The man’s condition is said to have deteriorated rapidly. A COVID-19 test was performed on the man and was sent to the state laboratory which received the test on Tuesday March 24. The laboratory confirmed the positive test on the same day.",1,,NM,Eddy,https://www.krqe.com/health/coronavirus-new-mexico/first-covid-19-death-announced-in-new-mexico/
-3/25,Unknown,周三上午纽约州Orange County首例死亡，80多岁。,"An Orange County resident who was older than 80 and had multiple pre-existing medical problems died from the coronavirus on Wednesday morning becoming the first person in the county to succumb to the illness county officials announced.",1,80+,NY,Orange,https://www.recordonline.com/news/20200325/orange-county-announces-first-coronavirus-death
-3/25,,密歇根州 Livingston第1例死亡病例。,MI Livingston first death case.,1,,MI,Livingston,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html"
-3/25,男,堪萨斯州Wyandotte第2例死亡。一位70多岁男性。,"A man in his 70s is the second person to die in Wyandotte County from the coronavirus health officials say. The man passed away on March 23 after having been admitted to a hospital.",1,70+,KS,Wyandotte,https://www.kwch.com/content/news/Sedgwick-County-reports-7-coronavirus-cases-98-in-Kansas-569066911.html
-3/25,男,俄克拉荷马州新增2例死亡，均来自Oklahoma County。一例为40多岁男性。,Oklahoma State Department of Health reports 2 new deaths related to COVID-19 from Oklahoma County. The state health department said one victim was a man in his 70s and the other was a man in his 40s.,1,40+,OK,Oklahoma,https://www.newson6.com/story/41938023/164-total-coronavirus-cases-reported-in-oklahoma-5-virusrelated-deaths-health-officials-say
-3/25,男,一位80多岁男性。,"Male 80s Norfolk county preexisting conditions hospitalized",1,80+,MA,Norfolk,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-25-2020/download
-3/25,男,一位80多岁男性。,"Male 80s Barnstable county preexisting conditions hospitalized",1,80+,MA,Barnstable,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-25-2020/download
-3/25,男,一位70多岁男性。,"Male 70s Worcester county unknown preexisting conditions,
-hospitalized",1,70+,MA,Worcester,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-25-2020/download
-3/25,女,一位70多岁女性。,"Woman 70s Worcester county preexisting conditions hospitalized",1,70+,MA,Worcester,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-25-2020/download
-3/25,女,截至3/25，纽约州Suffolk新增3例死亡，共20例。,"By 3/25 there are three more death reported in Suffolk total 20.",1,70+,NY,Suffolk,https://suffolkcountyny.gov/Departments/Health-Services/Health-Bulletins/Novel-Coronavirus/covid-19-case-update-march-25-2020-230-pm
-3/25,女,截至3/25，纽约州Suffolk新增3例死亡，共20例。,"By 3/25 there are three more death reported in Suffolk total 20.",1,80+,NY,Suffolk,https://suffolkcountyny.gov/Departments/Health-Services/Health-Bulletins/Novel-Coronavirus/covid-19-case-update-march-25-2020-230-pm
-3/25,男,截至3/25，纽约州Suffolk新增3例死亡，共20例。,"By 3/25 there are three more death reported in Suffolk total 20.",1,80+,NY,Suffolk,https://suffolkcountyny.gov/Departments/Health-Services/Health-Bulletins/Novel-Coronavirus/covid-19-case-update-march-25-2020-230-pm
-3/25,,Montgomery County新增1例死亡。细节待补充。共两例。,There is 1 more reported death in Montgomery County. Details to be added later.,1,,PA,Montgomery,https://data-montcopa.opendata.arcgis.com/pages/covid-19
-3/25,,加州洛杉矶County新增3例死亡病例，均超过65岁。,"Los Angeles County has confirmed three new deaths and 138 new cases of 2019 Novel Coronavirus (COVID-19). All three individuals that died were over the age of 65 and had underlying health conditions. One resided in Gardena one in Wilmington and the other case is still under investigation. ",1,60+,CA,Los Angeles,http://ph.lacounty.gov/phcommon/public/media/mediapubhpdetail.cfm?prid=2282
-3/25,,加州洛杉矶County新增3例死亡病例，均超过65岁。,"Los Angeles County has confirmed three new deaths and 138 new cases of 2019 Novel Coronavirus (COVID-19). All three individuals that died were over the age of 65 and had underlying health conditions. One resided in Gardena one in Wilmington and the other case is still under investigation. ",1,60+,CA,Los Angeles,http://ph.lacounty.gov/phcommon/public/media/mediapubhpdetail.cfm?prid=2282
-3/25,,加州洛杉矶County新增3例死亡病例，均超过65岁。,"Los Angeles County has confirmed three new deaths and 138 new cases of 2019 Novel Coronavirus (COVID-19). All three individuals that died were over the age of 65 and had underlying health conditions. One resided in Gardena one in Wilmington and the other case is still under investigation. ",1,60+,CA,Los Angeles,http://ph.lacounty.gov/phcommon/public/media/mediapubhpdetail.cfm?prid=2282
-3/25,,康州Fairfield County3月25日死亡病例数增加至12。,"Total deaths in Fairfield County CT rose to 12.",1,,CT,Fairfield,https://portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary3252020.pdf?la=en
-3/25,,Lackawanna County新增一例死亡。细节待补充。共2例。,1 more reported death in Lackawanna County. Details to be added.,1,,PA,Lackawanna,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx
-3/25,,康州Fairfield County3月25日死亡病例数增加至12。,"Total deaths in Fairfield County CT rose to 12.",1,,CT,Fairfield,https://portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary3252020.pdf?la=en
-3/25,,康州Fairfield County3月25日死亡病例数增加至12。,"Total deaths in Fairfield County CT rose to 12.",1,,CT,Fairfield,https://portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary3252020.pdf?la=en
-3/25,,康州Fairfield County3月25日死亡病例数增加至12。,"Total deaths in Fairfield County CT rose to 12.",1,,CT,Fairfield,https://portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary3252020.pdf?la=en
-3/25,,康州Fairfield County3月25日死亡病例数增加至12。,"Total deaths in Fairfield County CT rose to 12.",1,,CT,Fairfield,https://portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary3252020.pdf?la=en
-3/25,,Luzerne County第一例死亡。细节待补充。,1 more reported death in Luzerne County. Details to be added.,1,,PA,Luzerne,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx
-3/25,,加州Shasta County确认第一例死亡。,"Shasta County reported the first death.
-",1,,CA,Shasta,https://krcrtv.com/news/coronavirus/shasta-county-coronavirus-update-following-first-death
-3/25,,加州 Sacramento County 累计死亡5例。,"3/25 Sacramento County report another death case making total death cases 5.",1,,CA,Sacramento,https://www.saccounty.net/COVID-19/Pages/default.aspx
-3/25,,Northampton County新增一例死亡。细节待补充。共3例。,1 more reported death in Northampton County. Details to be added.,1,,PA,Northampton,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx
-3/25,,Philadelphia County第一例死亡。细节待补充。,1 more reported death in Philadelphia County. Details to be added.,1,,PA,Philadelphia,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx
-3/25,,3/25 加州San Joaquin County新增1例死亡。,"One more death reported by San Joaquin County CA total 3.",1,,CA,San Joaquin,http://www.sjcphs.org/coronavirus.aspx
-3/25,,康州New Heaven County3月25日死亡病例人数增加至2。,"New Heaven County CT reported first 2 deaths on 3/25.",1,,CT,New Haven,https://portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary3252020.pdf?la=en
-3/25,,康州New Heaven County3月25日死亡病例人数增加至2。,"New Heaven County CT reported first 2 deaths on 3/25.",1,,CT,New Haven,https://portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary3252020.pdf?la=en
-3/25,,加州Santa Clara新增死亡一例。,"One new death is reported in Santa Clara placeholder.",1,,CA,Santa Clara,https://www.sccgov.org/sites/phd/DiseaseInformation/novel-coronavirus/Pages/home.aspx
-3/25,,Hamilton County出现首例死亡病例，截至3/25，田纳西州累计出现3例死亡。,"Hamilton County reported its first death case. As of 3/25 Tennessee reported 3 deaths in total.",1,,TN,Hamilton,https://www.newschannel5.com/news/covid-19-906-cases-confirmed-in-tennessee
-3/25,男,德州Smith郡3/25新增2例确诊，1例死亡，91岁男性，暂无更多信息。,"The Northeast Texas Public Health District (NET Health) updated its total of confirmed positive cases of COVID-19 in Smith County to 16 on 3/25. The death is a 91-year-old man according to NET Health CEO George Roberts.",1,,TX,Smith,https://tylerpaper.com/covid-19/breaking-first-coronavirus-death-in-smith-county-announced/article_431d8d96-6eb2-11ea-9403-af9010aa2e73.html
-3/25,男,密西西比州第三例死亡，男性，年龄在65-70岁，有过往病史。,the Mississippi State Department of Health (MSDH) reports the third death from coronavirus (COVID-19) in Mississippi. The case was a male 65-70 years old from Webster County with underlying health conditions. He died while hospitalized.,1,,MS,Webster,"https://msdh.ms.gov/msdhsite/_static/23,21900,341.html"
-3/25,,截止3/25 5:19 pm，根据当地媒体报道，弗吉尼亚州累计13人死亡。,"By 3/25 5:19 pm according to the local news 13 death cases were confirmed in VA.",4,,VA,Unknown,https://www.wsls.com/news/local/2020/03/25/virginia-reporting-12-coronavirus-related-deaths/
-3/25,,"3/25下午五点，阿拉巴马州Jackson County的官员证实了首例与新型冠状病毒（COVID-19）有关的死亡。杰克逊县委员会（JCC）在声明中确认死亡。 死亡者仅被确定为JCC的兼职雇员。（3/25 5:00 PM州官网暂未收录此例）
-",3/25 Jackson County officials confirmed Alabama’s first death related to the novel coronavirus (COVID-19) Wednesday afternoon. The Jackson County Commission (JCC) confirmed the death in the statement below. The person who died was identified only as a part-time employee with the JCC.（by 3/25 5:00PM the state website didn't take this case into account yet),1,,AL,Jackson,https://www.cbs42.com/news/health/coronavirus/1st-confirmed-covid-19-death-confirmed-in-jackson-county/
-3/25,,3/25 俄勒冈州新增一例死亡病例，死者是Claskamas County的一名80岁女性。,3/25 Oregon has a new death cases who was an 80-year-old woman from Clackamas County.,1,,OR,Clackamas,https://www.oregonlive.com/coronavirus/2020/03/coronavirus-in-oregon-10-now-dead-as-confirmed-cases-to-climb-to-266-health-officials-say.html
-3/25,,3/25 俄勒冈州新增一例死亡病例，死者是Marion County的一名73岁女性。,3/25 Oregon has a new death cases who was an 73-year-old woman from Marion County.,1,,OR,Marion,https://www.oregonlive.com/coronavirus/2020/03/coronavirus-in-oregon-10-now-dead-as-confirmed-cases-to-climb-to-266-health-officials-say.html
-3/25,男,,"Beshear also confirmed the fifth coronavirus-related death in Kentucky a 75-year-old male in Jefferson County.",1,70+,KY,Jefferson,https://www.lex18.com/kentucky-up-to-198-cases-of-covid-19
-3/25,,截止3/25，King County单日新增7人死亡，累计死亡人数为100。暂无详细信息。,"By 3/25 King County has another 6 death cases bringing the total death number to 100 the detail is not available yet.",6,,WA,King,https://www.kingcounty.gov/depts/health/communicable-diseases/disease-control/novel-coronavirus.aspx
-3/25,女,伊利诺伊州Will County累计2例死亡。死者为50岁左右女性。,A Will County woman in her 50s.,1,,IL,Will,https://newschannel20.com/news/local/330-new-covid-19-cases-in-illinois-3-more-deaths
-3/25,男,3/25，Kane County出现首例死亡案例，死者为90岁左右男性。,a Kane County man in his 90s.,1,,IL,Kane,https://newschannel20.com/news/local/330-new-covid-19-cases-in-illinois-3-more-deaths
-3/25,男,伊利诺伊州Cook County一患者死亡，死者为60岁左右男性。,A Cook County man in his 60s.,1,60+,IL,Cook,https://newschannel20.com/news/local/330-new-covid-19-cases-in-illinois-3-more-deaths
-3/25,,截至3/24，华盛顿州Pierce County累计2人死亡。,"By 3/25 Health department confirmed the second death case.",1,,WA,Pierce,https://www.tpchd.org/healthy-people/diseases/covid-19-pierce-county-cases
-3/25,,截至3/25上午，纽约市累计死亡199例。,"By 3/25 morning NYC reported 199 deaths in total.",7,,NY,New York,https://www1.nyc.gov/assets/doh/downloads/pdf/imm/covid-19-daily-data-summary.pdf
-3/25,,3/25 科罗拉多州Denver County新增38例确诊，死亡三例。,"3/25 Denver County,CO confirmed 38 more cases including 3 death cases.",3,,CO,Denver,https://covid19.colorado.gov/case-data
-3/25,,3/25 科罗拉多州El Paso County新增16例确诊，死亡一例。,"3/25 El Paso County,CO confirmed 16 more cases including 1 death case.",1,,CO,El Paso,https://covid19.colorado.gov/case-data
-3/25,,3/25 科罗拉多州Weld County新增11例确诊，死亡两例。,"3/25 Weld County,CO confirmed 11 more cases including 2 death cases.",2,,CO,Weld,https://covid19.colorado.gov/case-data
-3/25,,3/25 科罗拉多州Jefferson County新增20例确诊，死亡两例。,"3/25 Jefferson County,CO confirmed 20 more cases including 2 death cases.",2,,CO,Jefferson,https://covid19.colorado.gov/case-data
-3/25,,3/25 科罗拉多州Gunnison County新增12例确诊，一例死亡。,"3/25 Gunnison County,CO confirmed 12 more cases and 1 death case.",1,,CO,Gunnison,https://covid19.colorado.gov/case-data
-3/25,,3/25 科罗拉多州Larimer County新增2例确诊，一例死亡。,"3/25 Larimer County,CO confirmed 2 more cases and 1 death case.",1,,CO,Larimer,https://covid19.colorado.gov/case-data
-3/25,,3/25 科罗拉多州Teller County新增2例确诊，一例死亡。,"3/25 Teller County,CO confirmed 2 more cases and 1 death case.",1,,CO,Teller,https://covid19.colorado.gov/case-data
-3/25,,3/25 Dallas County新增1例死亡，总计7例.,"COVID-19 cases in Dallas County took a massive jump from Tuesday to Wednesday with 78 new cases of the virus confirmed along with the county's sixth and seventh deaths. County health officials said the additional cases brings the county's total number of infected to 247 an overnight increase of 46%. The county confirmed the sixth death after a Garland woman in her 80s who did not have high-risk chronic health conditions died in the hospital after contracting the virus.",1,,TX,Dallas,https://www.nbcdfw.com/news/coronavirus/covid-19-cases-explode-in-dallas-78-new-cases-1-death-wednesday/2338575/
-3/25,男,截至3/25日， Wilkinson County首例死亡，系85-90岁男性。,Tonight the Mississippi State Department of Health (MSDH) reports two new deaths from coronavirus (COVID-19) in Mississippi.The first cases were a Wilkinson County male 85-90 years old with underlying conditions who died while hospitalized,1,80+,MS,Wilkinson,"https://msdh.ms.gov/msdhsite/_static/23,21905,341.html"
-3/25,女,"截至3/25日晚Tunica County MS首例死亡，系75-80岁女性。","JACKSON Miss. – Tonight the Mississippi State Department of Health (MSDH) reports two new deaths from coronavirus (COVID-19) in Mississippi.The second cases were  a Tunica County female 75-80 who died in a long-term care facility.",1,70+,MS,Tunica,"https://msdh.ms.gov/msdhsite/_static/23,21905,341.html"
-3/25,,截止3/25 9PM（EST），哥伦比亚特区累计死亡3例。,"As of 9 pm on 3/25 the total number of confirmed death was 3 in DC",1,,DC,District of Columbia,https://coronavirus.dc.gov/page/coronavirus-data
-3/25,,截至3/25下午，纽约市累计死亡280例。,"By 3/25 5:30 PM EST NYC reported 280 deaths in total.",81,,NY,New York,https://www1.nyc.gov/assets/doh/downloads/pdf/imm/covid-19-daily-data-summary.pdf
-3/25,,"截至3/25， 华盛顿州Benton County WA 新增一例死亡，系90多岁女性。","Benton County WA  reported one more death on 3/25 a woman in her 90s.",1,,WA,Benton,https://www.bfhd.wa.gov/UserFiles/Servers/Server_10765972/File/3.25.20%20Daily%20Case%20Report.pdf
-3/25,,Bexar 3/25晚上，累计3例死亡。,Bexar reported 3 total deaths by 3/25 night.,1,,TX,Bexar,https://www.sanantonio.gov/Health/News/Alerts/CoronaVirus
-3/25,男,"加州San Bernardino County 新增一例死亡  系46岁男性有潜在健康问题。","Another death is reported in San Bernardino County a 46-year-old man with underlying health conditions",1,40+,CA,San Bernardino,https://www.sbsun.com/2020/03/25/san-bernardino-county-reports-2nd-coronavirus-death/
-3/25,男,"截至3/25 5:00PM，加州riverside新增1例死亡 系70多岁男性。","As of 3/25 5:00 PM Riverside confirmed 1 more death a man in his 70s living in an area public health officials call the county's mid-region",1,70+,CA,Riverside,https://www.rivcoph.org/coronavirus
-3/25,女,3/25 俄克拉荷马州Cleveland County累计27例确诊。现死亡两例。最近一位死亡病例为养老院的居民。,"The second Norman nursing home resident hospitalized after testing positive for coronavirus has died Mayor Breea Clark confirmed to News 9 Wednesday. The two cases were from Grace Skilled Nursing and Therapy Norman.The reported case was a woman in her 90s.",1,90+,OK,Cleveland,https://www.news9.com/story/41942455/248-total-coronavirus-cases-reported-in-state-virusrelated-deaths-up-to-7-osdh-reports
-3/25,男,60多岁男性，患有基础疾病。,A man in his 60s with underlying medical conditions.,1,60+,NV,Clark,https://www.southernnevadahealthdistrict.org/news-release/march-26-2020-covid-19-update/
-3/25,,"截至3/25早上，加州San Mateo County CA新增4例死亡中一例。","San Mateo County CA reported 4 new deaths on 3/25. Three of the new deaths were older adults and one was an adult according to county health officials.",1,,CA,San Mateo,https://www.smchealth.org/coronavirus
-3/25,,"截至3/25早上，加州San Mateo County CA新增4例死亡中一例。","San Mateo County CA reported 4 new deaths on 3/25. Three of the new deaths were older adults and one was an adult according to county health officials.",1,,CA,San Mateo,https://www.smchealth.org/coronavirus
-3/25,男,,"The Franklin County Sheriff's Department announced the death stating the man was in his 60s and had been hospitalized since March 13. ",1,60+,IN,Franklin,https://www.cincinnati.com/story/news/2020/03/25/coronavirus-franklin-county-indiana-reports-first-covid-19-death/5083182002/
-3/25,,,"The adult from Putnam County passed away at an outlying facility on Wednesday morning. The person who was over age 60 had been hospitalized as COVID-19 patient and also suffered from underlying medical conditions. ",1,60+,IN,Putnam,https://www.bannergraphic.com/story/2678138.html
-3/25,男,,"Monroe County on Wednesday night reported its second COVID-19 death.A 49-year-old man from East Stroudsburg who tested positive for the coronavirus died of complications from the COVID-19 illness county Coroner Thomas Yanac Jr. said in a news release.The patient died Wednesday at the St. Luke's Hospital Monroe Campus in Stroud Township where he'd been treated for several days prior Yanac said.",1,40+,PA,Monroe,https://www.lehighvalleylive.com/coronavirus/2020/03/man-49-is-2nd-todiefrom-coronavirus-in-monroe-county-coroner-says.html
-3/25,男,,"Buffalo NY (WBEN) Erie County records its second death as a result of coronavirus. The county says a man in his 70s died within the past 24 hour. No other details about this individual will be released.",1,70+,NY,Erie,http://erieny.maps.arcgis.com/apps/opsdashboard/index.html#/dd7f1c0c352e4192ab162a1dfadc58e1
-3/25,男,Denton首例死亡。40多岁男性，来自Lewisville，于周三晚上去世，是Denton首例社区传播。,"Denton County Judge Andy Eads says there are 13 new cases of COVID-19 in the county and that a Lewisville man in his 40s is the first person in the county to have died after becoming infected with COVID-19. Few details about the man were released but Eads said the man died Wednesday night and he was the county's first case of community-transmitted COVID-19.",1,40+,TX,Denton,https://www.nbcdfw.com/news/coronavirus/denton-county-judge-to-provide-update-thursday-on-covid-19-efforts/2339531/
-3/25,男,80多岁男性，患有基础疾病。,A man in his 80s with underlying medical conditions.,1,80+,NV,Clark,https://www.southernnevadahealthdistrict.org/news-release/march-26-2020-covid-19-update/
-3/25,男,30多岁男性，患有基础疾病。,A man in his 30s with underlying medical conditions.,1,30+,NV,Clark,https://www.southernnevadahealthdistrict.org/news-release/march-26-2020-covid-19-update/
-3/25,男,60多岁男性，无基础疾病。,A man in his 60s with no reported underlying medical conditions.,1,60+,NV,Clark,https://www.southernnevadahealthdistrict.org/news-release/march-26-2020-covid-19-update/
-3/25,男,,A 64-year-old man passed away at the local hospital 3/25.,1,60+,NJ,Hudson,https://hudsoncountyview.com/after-1st-fatality-city-of-bayonne-has-26-coronavirus-patients-oem-says/
-3/25,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/25,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/25,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/25,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/25,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/25,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/25,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/25,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/25,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/25,,,,1,,NJ,Passaic,https://www.passaiccountynj.org/government/departments/health/current_health_alerts.php
-3/25,,,,1,,NJ,Passaic,https://www.passaiccountynj.org/government/departments/health/current_health_alerts.php
-3/25,,,,1,,NJ,Passaic,https://www.passaiccountynj.org/government/departments/health/current_health_alerts.php
-3/25,,,,1,,NJ,Passaic,https://www.passaiccountynj.org/government/departments/health/current_health_alerts.php
-3/25,,,,1,,NJ,Passaic,https://www.passaiccountynj.org/government/departments/health/current_health_alerts.php
-3/25,,,,1,,NJ,Passaic,https://www.passaiccountynj.org/government/departments/health/current_health_alerts.php
-3/25,,,,1,,NJ,Passaic,https://www.passaiccountynj.org/government/departments/health/current_health_alerts.php
-3/25,男,,"Madison County Health Department announced today the first death from the novel coronavirus (COVID-19). The individual was an older male from Madison County. The man from Madison County died at a Hamilton County hospital on March 25 2020. The person who was over 70 had been hospitalized as a COVID-19 patient. No further information about the patient will be released due to privacy laws",1,70+,IN,Madison,https://5ad2f38c-85c6-4702-b0a8-4b8a6b4c1687.filesusr.com/ugd 9bf4fe_0b22805739ed46eeb324acb179d0b2cb.pdf
-3/25,女,,The three deaths followed two other Milwaukee County deaths on Wednesday: a 57-year-old woman from West Allis,1,50+,WI,Milwaukee,https://www.jsonline.com/story/news/2020/03/26/wisconsin-coronavirus-cases-hit-707-10-deaths/2922292001/
-3/26,男,,"According to Dep. Coroner Andy Boersma the CDC released information that the person who died was a male from DeMotte and was hospitalized in Lake County.",1,,IN,Jasper,http://www.newsbug.info/monticello_herald_journal/news/local/jasper-county-reports-coronavirus-death/article_e035346d-187e-5134-ab1f-c0cdb5f84318.html
-3/26,,截至3/26中午纽约累计死亡385例。,"By 3/26 noon New York reported 385 total deaths. palceholder.",0,,NY,Unassigned,https://www.forexlive.com/news/!/new-york-coronavirus-cases-march-26-20200326
-3/26,,"3/26 San Francisco 新增第一例死亡 具体信息待更新。",One more death is reported in San Francisco.,1,,CA,San Francisco,https://www.sfdph.org/dph/alerts/coronavirus.asp
-3/26,男,,1 new death was reported in Cleveland County. A man in his 60s. This is the third death in Cleveland County. ,1,60+,OK,Cleveland,https://www.news9.com/story/41942455/248-total-coronavirus-cases-reported-in-state-virusrelated-deaths-up-to-7-osdh-reports
-3/26,Unknown,,,1,Unknown,PA,Butler,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Coronavirus.aspx
-3/26,,"3/26 佛蒙特州新增第一例死亡 具体信息待更新。",One more death is reported in VT.,1,,VT,Unassigned,https://www.healthvermont.gov/response/infectious-disease/2019-novel-coronavirus
-3/26,,,"By 3/26 5:30 PM EST NYC reported 365 deaths in total.",85,,NY,New York,https://www1.nyc.gov/assets/doh/downloads/pdf/imm/covid-19-daily-data-summary.pdf
-3/26,,,,1,,LA,De Soto,http://ldh.la.gov/coronavirus/
-3/26,,,,1,,LA,East Baton Rouge,http://ldh.la.gov/coronavirus/
-3/26,,,,1,,LA,Jefferson,http://ldh.la.gov/coronavirus/
-3/26,,,,1,,LA,Jefferson,http://ldh.la.gov/coronavirus/
-3/26,,,,1,,LA,Jefferson,http://ldh.la.gov/coronavirus/
-3/26,,,,1,,LA,Jefferson,http://ldh.la.gov/coronavirus/
-3/26,,,,1,,LA,Jefferson,http://ldh.la.gov/coronavirus/
-3/26,,,,1,,LA,Orleans,http://ldh.la.gov/coronavirus/
-3/26,,,,1,,LA,Orleans,http://ldh.la.gov/coronavirus/
-3/26,,,,1,,LA,Orleans,http://ldh.la.gov/coronavirus/
-3/26,,,,1,,LA,Orleans,http://ldh.la.gov/coronavirus/
-3/26,,,,1,,LA,Orleans,http://ldh.la.gov/coronavirus/
-3/26,,,,1,,LA,Orleans,http://ldh.la.gov/coronavirus/
-3/26,,,,1,,LA,Orleans,http://ldh.la.gov/coronavirus/
-3/26,,,,1,,LA,Orleans,http://ldh.la.gov/coronavirus/
-3/26,,,,1,,LA,Orleans,http://ldh.la.gov/coronavirus/
-3/26,,,,1,,LA,St. Charles,http://ldh.la.gov/coronavirus/
-3/26,,,,1,,LA,Caddo,http://ldh.la.gov/coronavirus/
-3/26,,3/26 乔治亚州累计死亡56例。,"3/26 Coronavirus deaths in Georgia reached 5. Placeholder for further information.",9,,GA,Unassigned,https://dph.georgia.gov/covid-19-daily-status-report
-3/26,,北卡居民第二例死亡。,The Harnett County resident is the second North Carolinian to die from the coronavirus. A Virginia resident who was traveling through North Carolina also died.,1,,NC,Harnett,https://www.fayobserver.com/news/20200326/harnett-county-resident-dies-from-coronavirus
-3/26,,,,19,,NJ,Unassigned,https://www.nj.gov/health/
-3/26,男,Clay 第3例死亡，65岁男性，有接触史。,"Clay County 3rd death case 65 year old man contact with confirmed case.",1,60+,FL,Clay,https://floridadisaster.org/globalassets/covid19/dailies/covid-19-data---daily-report-2020-03-26-1107.pdf
-3/26,女,Clay 第4例死亡，77岁女性，无接触史无旅行。,"Clay County 4th death case 77 year female no travel no contact.",1,70+,FL,Clay,https://floridadisaster.org/globalassets/covid19/dailies/covid-19-data---daily-report-2020-03-26-1107.pdf
-3/26,男,佛罗里达 Orange County 第3例死亡病例，90岁男性。,"FL Orange County 3rd death case 90 year old man.",1,90+,FL,Orange,https://floridadisaster.org/globalassets/covid19/dailies/covid-19-data---daily-report-2020-03-26-1107.pdf
-3/26,女,佛罗里达 Orange County 第4例死亡病例，68岁女性。,"FL Orange County 4th death case 68 year old female.",1,60+,FL,Orange,https://floridadisaster.org/globalassets/covid19/dailies/covid-19-data---daily-report-2020-03-26-1107.pdf
-3/26,男,,,1,,MI,Genesee,https://www.mlive.com/news/flint/2020/03/2-coronavirus-deaths-reported-in-genesee-county-1-death-in-tuscola.html
-3/26,男,,,1,,MI,Genesee,https://www.mlive.com/news/flint/2020/03/2-coronavirus-deaths-reported-in-genesee-county-1-death-in-tuscola.html
-3/26,,,,2,,MI,Wayne,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html"
-3/26,,,,4,,MI,Macomb,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html"
-3/26,男,,,1,80+,MI,Mecosta,https://upnorthlive.com/news/local/first-northern-michigan-coronavirus-death-reported-in-mecosta-county
-3/26,,,,5,,MI,Oakland,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html"
-3/26,男,,,1,70+,MI,Tuscola,https://nbc25news.com/news/coronavirus/tuscola-county-health-department-confirms-first-death-in-county-from-covid-19
-3/26,,,,3,,MI,Wayne,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html"
-3/26,男,Montgomery County新增1例死亡。共三例。,,1,70+,PA,Montgomery,https://www.pennlive.com/news/2020/03/pennsylvania-records-third-death-from-coronavirus.html
-3/26,女,,"A woman in her 60s was announced as the first person to die of coronavirus in the Houston area. An autopsy revealed the woman had the virus which officials said was traveled related. The woman’s death brings the area total deaths to three",1,60+,TX,Harris,https://www.click2houston.com/health/2020/03/07/latest-follow-the-developments-of-the-coronavirus-cases-in-the-houston-area/
-3/26,男,3/26 威斯康辛州Milwaukee County新增1例死亡,Milwaukee County's Medical Examiner on Thursday announced the county's fifth death related to the coronavirus outbreak. Then a 69-year-old man died Thursday night.,1,60+,WI,Milwaukee,https://www.jsonline.com/story/news/2020/03/26/wisconsin-coronavirus-cases-hit-707-10-deaths/2922292001/
-3/26,女,威斯康辛州Milwaukee County第6例死亡。79岁女性，住院十多天，于周四上午在医院去世。【该例尚未计入WI官网统计】。,"The Milwaukee County Medical Examiner's Office reported the state's 9th death from the coronavirus after the state's report came out. The patient was a 79-year-old Milwaukee woman who died from complications from the coronavirus Thursday morning. She was in the hospital for 10 days.State health officials said most people fully recover from the coronavirus in a week or two. Twenty to 25 percent of people are hospitalized after their diagnosis. About 10 percent go into ICU.",1,70+,WI,Milwaukee,https://www.wbay.com/content/news/Dane-County-reports-coronavirus-related-death-statewide-deaths-at-6-569094291.html
-3/26,,,,1,,OH,Columbiana,https://twitter.com/GovMikeDeWine/status/1243236373043216384/photo/1
-3/26,,,,1,,OH,Mahoning,https://twitter.com/GovMikeDeWine/status/1243236373043216384/photo/1
-3/26,,,,1,,OH,Miami,https://twitter.com/GovMikeDeWine/status/1243236373043216384/photo/1
-3/26,,,,1,,OH,Trumbull,https://twitter.com/GovMikeDeWine/status/1243236373043216384/photo/1
-3/26,男,3/26，McHenry County出现首例死亡病例。,First death in McHenry County.,1,70+,IL,McHenry,https://www.nwherald.com/2020/03/26/mchenry-county-confirms-35-covid-19-cases-70-year-old-crystal-lake-man-first-confirmed-death/angiezz/
-3/26,女,3/26，DuPage County出现首例死亡病例。,First death in DuPage County.,1,90+,IL,DuPage,http://dph.illinois.gov/topics-services/diseases-and-conditions/diseases-a-z-list/coronavirus
-3/26,女,Will County第3例死亡。,Will County 3rd death.,1,60+,IL,Will,https://www.theherald-news.com/2020/03/26/another-coronavirus-death-in-will-county-total-cases-reach-77/ackg5mo/
-3/26,男,Cook County 第15例死亡。,Cook County 15th death.,1,50+,IL,Cook,http://dph.illinois.gov/topics-services/diseases-and-conditions/diseases-a-z-list/coronavirus
-3/26,男,Cook County 第16例死亡。,Cook County 16th death.,1,60+,IL,Cook,http://dph.illinois.gov/topics-services/diseases-and-conditions/diseases-a-z-list/coronavirus
-3/26,男,Cook County 第17例死亡。,Cook County 17th death.,1,60+,IL,Cook,http://dph.illinois.gov/topics-services/diseases-and-conditions/diseases-a-z-list/coronavirus
-3/26,女,Cook County 第18例死亡。,Cook County 18th death.,1,60+,IL,Cook,http://dph.illinois.gov/topics-services/diseases-and-conditions/diseases-a-z-list/coronavirus
-3/26,男,3/26 Clark County 新增1例死亡，80来岁男性，未知曾与确诊病例接触。,3/26/2020 A fifth Clark County resident – a man in his 80s – has died from COVID-19. He was previously hospitalized and had no known contact with a confirmed case.,1,80+,WA,Clark,http://granthealth.org/updates-for-covid-19-in-grant-county/
-3/26,,加州洛杉矶County新增8例死亡病例，其中一例。,"Los Angeles County has confirmed 8 new deaths placeholder.",1,,CA,Los Angeles,http://www.publichealth.lacounty.gov/media/Coronavirus/
-3/26,,加州洛杉矶County新增8例死亡病例，其中一例。,"Los Angeles County has confirmed 8 new deaths placeholder.",1,,CA,Los Angeles,http://www.publichealth.lacounty.gov/media/Coronavirus/
-3/26,,加州洛杉矶County新增8例死亡病例，其中一例。,"Los Angeles County has confirmed 8 new deaths placeholder.",1,,CA,Los Angeles,http://www.publichealth.lacounty.gov/media/Coronavirus/
-3/26,,加州洛杉矶County新增8例死亡病例，其中一例。,"Los Angeles County has confirmed 8 new deaths placeholder.",1,,CA,Los Angeles,http://www.publichealth.lacounty.gov/media/Coronavirus/
-3/26,女,Bell County首例死亡，一名女性。,The Bell County Public Health District has reported that one woman has died from COVID-19.,1,80+,TX,Bell,https://www.kxxv.com/your-hometown/bell-county/bell-county-woman-dies-from-covid-19
-3/26,,加州洛杉矶County新增8例死亡病例，其中一例。,"Los Angeles County has confirmed 8 new deaths placeholder.",1,,CA,Los Angeles,http://www.publichealth.lacounty.gov/media/Coronavirus/
-3/26,,加州洛杉矶County新增8例死亡病例，其中一例。,"Los Angeles County has confirmed 8 new deaths placeholder.",1,,CA,Los Angeles,http://www.publichealth.lacounty.gov/media/Coronavirus/
-3/26,,加州洛杉矶County新增8例死亡病例，其中一例。,"Los Angeles County has confirmed 8 new deaths placeholder.",1,,CA,Los Angeles,http://www.publichealth.lacounty.gov/media/Coronavirus/
-3/26,,加州洛杉矶County新增8例死亡病例，其中一例。,"Los Angeles County has confirmed 8 new deaths placeholder.",1,,CA,Los Angeles,http://www.publichealth.lacounty.gov/media/Coronavirus/
-3/26,男,50多岁男性，患有基础疾病，住院。,"Male 50s Essex county preexisting conditions hospitalized.",1,50+,MA,Essex,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-26-2020/download
-3/26,男,80多岁男性，患有基础疾病，住院。,"Male 80s Essex county preexisting conditions hospitalized.",1,80+,MA,Essex,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-26-2020/download
-3/26,男,70多岁男性，患有基础疾病，住院观察。,"Male 70s Middlesex county preexisting condition hospitalization status under investigation.",1,70+,MA,Middlesex,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-26-2020/download
-3/26,男,80多岁男性，尚不清楚是否患有基础疾病，住院观察。,"Male 80s Hampden county unknown preexisting conditions hospitalization status under investigation.",1,80+,MA,Hampden,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-26-2020/download
-3/26,男,90多岁男性，患有基础疾病，住院。,"Male 90s Suffolk county preexisting conditions hospitalized.",1,90+,MA,Suffolk,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-26-2020/download
-3/26,男,80多岁男性，患有基础疾病，住院。,"Male 80s Worcester county preexisting conditions hospitalized.",1,80+,MA,Worcester,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-26-2020/download
-3/26,女,70多岁女性，患有基础疾病，住院观察。,"Female 70s Norfolk County preexisting conditions hospitalization status under investigation.",1,70+,MA,Norfolk,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-26-2020/download
-3/26,,Jefferson County首例死亡，一名男性。,"Jefferson County Judge Jeff Branick confirms to 12News that there has been a death linked to COVID-19 the areas first but would not confirm a name. ",1,,TX,Jefferson,https://www.12newsnow.com/article/news/health/coronavirus/hjisd-employee-diagnosed-with-covid-19/502-e32d83c8-fabf-4da0-968a-633aba86908d
-3/26,男,80多岁男性，尚不清楚是否患有基础疾病，住院观察。,"Male 80s Franklin County unknown preexisting conditions hospitalization status under investigation.",1,80+,MA,Franklin,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-26-2020/download
-3/26,,3/26 加州Alameda County新增2例死亡病例，其中一例。,Two more deaths in Alameda County.,1,,CA,Alameda,http://www.acphd.org/2019-ncov.aspx
-3/26,,3/26 加州Alameda County新增2例死亡病例，其中一例。,Two more deaths in Alameda County.,1,,CA,Alameda,http://www.acphd.org/2019-ncov.aspx
-3/26,女,80多岁女性，患有基础疾病，住院。,"Female 80s Middlesex county preexisting conditions hospitalized.",1,80+,MA,Middlesex,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-26-2020/download
-3/26,男,80多岁男性，尚不清楚是否患有基础疾病，住院。,"Male 80s Middlesex county unknown preexisting conditions hospitalized.",1,80+,MA,Middlesex,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-26-2020/download
-3/26,女,威斯康辛州Milwaukee County第7例死亡。65岁女性，周六住院，于周四下午2:06去世。【该例尚未计入WI官网统计】。,A 65-year-old Milwaukee woman hospitalized on Saturday died at 2:06 p.m. Thursday.,1,60+,WI,Milwaukee,https://www.wbay.com/content/news/Dane-County-reports-coronavirus-related-death-statewide-deaths-at-6-569094291.html
-3/26,,康州Fairfield County3月26日死亡病例数增加至13，新增死亡病例年龄在70-79岁间。,Fairfield County confirmed a new death in his/her 70s on 3/26.,1,70+,CT,Fairfield,https://portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary3262020.pdf?la=en
-3/26,,康州Middlesex County3月26日出现首例死亡病例，新增死亡病例年龄在70-79岁间。,Middlesex County confirmed its first death in his/her 70s on 3/26.,1,70+,CT,Middlesex,https://portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary3262020.pdf?la=en
-3/26,男,,"By 3/26 there are two more death reported in Suffolk total 22.",1,80+,NY,Suffolk,https://suffolkcountyny.gov/Departments/Health-Services/Health-Bulletins/Novel-Coronavirus/covid-19-case-update-march-26-2020-230-pm
-3/26,男,,"By 3/26 there are two more death reported in Suffolk total 22.",1,80+,NY,Suffolk,https://suffolkcountyny.gov/Departments/Health-Services/Health-Bulletins/Novel-Coronavirus/covid-19-case-update-march-26-2020-230-pm
-3/26,男,特拉华州首例死亡病例。66岁男性，来自Sussex County，在州外住院治疗不幸去世。,Delaware is reporting its first coronavirus-related death in the state. Health officials say a 66-year-old man from Sussex County passed away while hospitalized out of state.,1,60+,DE,Sussex,https://coronavirus.delaware.gov/
-3/26,,,First death in Loudoun County. ,1,,VA,Loudoun,https://www.loudoun.gov/CivicAlerts.aspx?AID=5637
-3/26,,亚利桑那州 新增2例死亡病例，具体待查， 累计8例死亡病例。,1 case of 2 in AZ was from Coconino County.,1,,AZ,Coconino,https://www.coconino.az.gov/2294/COVID-19-Information
-3/26,,,3/26 2:27 PST +1,1,,WA,King,https://www.kingcounty.gov/depts/health/communicable-diseases/disease-control/novel-coronavirus.aspx
-3/26,,,3/26 2:27 PST +1,1,,WA,King,https://www.kingcounty.gov/depts/health/communicable-diseases/disease-control/novel-coronavirus.aspx
-3/26,,,3/26 2:27 PST +1,1,,WA,King,https://www.kingcounty.gov/depts/health/communicable-diseases/disease-control/novel-coronavirus.aspx
-3/26,,,3/26 2:27 PST +1,1,,WA,King,https://www.kingcounty.gov/depts/health/communicable-diseases/disease-control/novel-coronavirus.aspx
-3/26,,,3/26 2:27 PST +1,1,,WA,King,https://www.kingcounty.gov/depts/health/communicable-diseases/disease-control/novel-coronavirus.aspx
-3/26,,,3/26 2:27 PST +1,1,,WA,King,https://www.kingcounty.gov/depts/health/communicable-diseases/disease-control/novel-coronavirus.aspx
-3/26,,,3/26 2:27 PST +1,1,,WA,King,https://www.kingcounty.gov/depts/health/communicable-diseases/disease-control/novel-coronavirus.aspx
-3/26,,,3/26 2:27 PST +1,1,,WA,King,https://www.kingcounty.gov/depts/health/communicable-diseases/disease-control/novel-coronavirus.aspx
-3/26,,,3/26 2:27 PST +1,1,,WA,King,https://www.kingcounty.gov/depts/health/communicable-diseases/disease-control/novel-coronavirus.aspx
-3/26,男,3/26 明尼苏达第二个死亡病例。,"Minnesota has recorded its second death from coronavirus on Thursday March 26. The individual was a resident of Ramsey County in their 80s.",1,80+,MN,Ramsey,https://www.duluthnewstribune.com/lifestyle/health/5016724-Minnesota-records-second-death-in-state-from-coronavirus
-3/26,女,," a female in her 90s was a resident at Shuksan Healthcare Center. She passed away at the facility on March 25. ",1,90+,WA,Whatcom,https://www.whatcomcounty.us/CivicAlerts.aspx?AID=1737
-3/26,男,," a male in his 90s was previously a resident at Summit Place Assisted Living also in Bellingham. He died while in hospital being treated for COVID-19.",1,90+,WA,Whatcom,https://www.whatcomcounty.us/CivicAlerts.aspx?AID=1737
-3/26,男,爱达荷州3/26首3例死亡病例。,Two Blaine County residents and one Canyon County resident — all men over the age of 60 — have died in connection with COVID-19,1,60+,ID,Blaine,https://www.idahostatesman.com/news/coronavirus/article241535426.html
-3/26,,3/26 加州Santa Clara County新增2例死亡病例。,Two more deaths in Santa Clara County.,2,,CA,Santa Clara,https://www.sccgov.org/sites/phd/DiseaseInformation/novel-coronavirus/Pages/home.aspx
-3/26,男,爱达荷州3/26首3例死亡病例。,Two Blaine County residents and one Canyon County resident — all men over the age of 60 — have died in connection with COVID-19,1,60+,ID,Blaine,https://www.idahostatesman.com/news/coronavirus/article241535426.html
-3/26,男,爱达荷州3/26首3例死亡病例。,Two Blaine County residents and one Canyon County resident — all men over the age of 60 — have died in connection with COVID-19,1,60+,ID,Canyon,https://www.idahostatesman.com/news/coronavirus/article241535426.html
-3/26,女,,"Woman in her 80s died 3/23/20",1,80+,WA,Snohomish,https://www.snohd.org/499/COVID-19-Case-Count-Info
-3/26,女,,"Woman in her 60s with underlying health conditions died 3/23/20",1,60+,WA,Snohomish,https://www.snohd.org/499/COVID-19-Case-Count-Info
-3/26,Unknown,,Monroe County officials announced a fourth COVID-19 related death in our community Thursday afternoon.,1,Unknown,NY,Monroe,https://www2.monroecounty.gov/files/health/coronavirus/2020.03.26%20COVID19%20PM%20Update1.pdf
-3/26,女,3/26 俄勒冈州新增一例死亡病例，死者是Washington County的一名69岁女性。,3/26 Oregon has a new death cases who was an 69-year-old woman from Washington County.,1,60+,OR,Washington,https://content.govdelivery.com/accounts/ORDHS/bulletins/2836495
-3/26,女,圣地亚哥确诊第3例死亡案例，是一名87岁女性,"San Diego County confirms 3rd coronavirus death an 87-year-old woman",1,80+,CA,San Diego,https://fox5sandiego.com/news/coronavirus/san-diego-county-confirms-3rd-coronavirus-death/
-3/26,男,佛州 Citrus 第1例死亡病例，80岁男性，DE 旅行。,"FL Citrus 1st death 80 year old man traveled to DE.",1,80+,FL,Citrus,https://floridadisaster.org/globalassets/covid19/dailies/covid-19-data---daily-report-2020-03-26-1107.pdf
-3/26,男,佛州 Hillsborough 第1例死亡病例，69岁男性 ，无接触史。,"FL Hillsborough 1st death 69 year old man no contact travel unknown.",1,60+,FL,Hillsborough,https://floridadisaster.org/globalassets/covid19/dailies/covid-19-data---daily-report-2020-03-26-1107.pdf
-3/26,男,3/26 密西西比州新增死亡一例，该州累计6例死亡。 该死者来自Rankin County，男性，年龄80-85岁。,"3/26 The Mississippi State Department of Health (MSDH) reports one new death from coronavirus (COVID-19) in Mississippi bringing the state total to six. The case was a Rankin County male 80-85 with underlying conditions. He died while hospitalized.",1,80+,MS,Rankin,"https://msdh.ms.gov/msdhsite/_static/23,21905,341.html"
-3/26,,,,2,,SC,Sumter,https://scdhec.gov/infectious-diseases/viruses/coronavirus-disease-2019-covid-19/monitoring-testing-covid-19
-3/26,女,"密苏里州St. Louis County MO第2例死亡，系80多岁女性。","Two deaths. 3/26 St Louis County DPH received notification of a death of a 80-89 female with chronic medical conditions.",1,80+,MO,St. Louis,https://www.stlouisco.com/Your-Government/County-Executive/COVID-19
-3/26,,,+1 PST 4:37,1,,WA,Pierce,https://www.tpchd.org/healthy-people/diseases/covid-19-pierce-county-cases
-3/26,,,+1 PST 4:37,1,,WA,Pierce,https://www.tpchd.org/healthy-people/diseases/covid-19-pierce-county-cases
-3/26,,,+1 PST 4:39,1,,WA,Yakima,https://www.doh.wa.gov/Emergencies/Coronavirus
-3/26,,,"3 COVID-19 ASSOCIATED DEATH IN SAN BERNARDINO COUNTY by 3/26 evening.",1,,CA,San Bernardino,http://wp.sbcounty.gov/dph/coronavirus/
-3/26,男,,The county says a New Braunfels man in his 40s died Thursday afternoon at Ascension Seton Medical Center in Austin where he was being treated.,1,40+,TX,Comal,https://www.fox7austin.com/news/comal-county-reports-first-covid-19-death
-3/26,,Bexar 3/26晚上，累计5例死亡。,Bexar reported 5 total deaths by 3/26 night.,2,,TX,Bexar,https://www.sanantonio.gov/Health/News/Alerts/CoronaVirus
-3/26,女,纽约州Erie County累计5例死亡。其中最新的三名受害者分别为70多岁的女性、80多岁的男性和70多岁的男性。,"Three more Erie County residents died from Covid-19 bringing the county's death toll to five. Thursday's victims: a female in her 70s a male in his 70s and a male in his 80s.",1,70+,NY,Erie,https://buffalonews.com/2020/03/26/erie-county-coronavirus-cases-increase-by-20-to-total-of-166/
-3/26,男,纽约州Erie County累计5例死亡。其中最新的三名受害者分别为70多岁的女性、80多岁的男性和70多岁的男性。,"Three more Erie County residents died from Covid-19 bringing the county's death toll to five. Thursday's victims: a female in her 70s a male in his 70s and a male in his 80s.",1,70+,NY,Erie,https://buffalonews.com/2020/03/26/erie-county-coronavirus-cases-increase-by-20-to-total-of-166/
-3/26,男,纽约州Erie County累计5例死亡。其中最新的三名受害者分别为70多岁的女性、80多岁的男性和70多岁的男性。,"Three more Erie County residents died from Covid-19 bringing the county's death toll to five.Thursday's victims: a female in her 70s a male in his 70s and a male in his 80s.",1,80+,NY,Erie,https://buffalonews.com/2020/03/26/erie-county-coronavirus-cases-increase-by-20-to-total-of-166/
-3/26,,,Governor Steve Bullock announced the first death in Montana of a COVID-19 patient. No additional information will be provided at this time,1,,MT,Unassigned,https://www.kpax.com/news/local-news/helena-news/governor-bullock-announces-first-covid-19-death-in-montana
-3/26,Unknown,纽约州Rockland County确认死亡7人。第六例和第七例发生在3月23日，一名受害者72岁，另一名82岁，两者都有其他重大的健康问题。,"Rockland County confirmed 7 death 2 new on Monday. One was 72 and the other 82 county health officials said. Both had other significant health problems.",1,70+,NY,Rockland,https://www.lohud.com/story/news/coronavirus/2020/03/25/coronavirus-rockland-isolation-deaths-cases-rise/5077892002/
-3/26,Unknown,纽约州Rockland County确认死亡7人。第六例和第七例发生在3月23日，一名受害者72岁，另一名82岁，两者都有其他重大的健康问题。,"Rockland County confirmed 7 death 2 new on Monday. One was 72 and the other 82 county health officials said. Both had other significant health problems.",1,80+,NY,Rockland,https://www.lohud.com/story/news/coronavirus/2020/03/25/coronavirus-rockland-isolation-deaths-cases-rise/5077892002/
-3/26,,截至3/26晚上，Nassau累计死亡19例。,Nassau reported 19 total deaths by 3/26 evening.,2,,NY,Nassau,https://abc7ny.com/health/li-coronavirus-cases-surge-past-600-including-police-officer/6021346/
-3/26,,,"As millions of Coloradans spent their first day under a statewide stay-at-home mandate Thursday public health officials announced that at least 27 people have now died in connection with the novel coronavirus and more than 1,400 have tested positive for the highly infectious respiratory illness.",1,,CO,El Paso,https://www.denverpost.com/2020/03/26/coronavirus-new-cases-deaths-colorado-march-26/
-3/26,,,"As millions of Coloradans spent their first day under a statewide stay-at-home mandate Thursday public health officials announced that at least 27 people have now died in connection with the novel coronavirus and more than 1,400 have tested positive for the highly infectious respiratory illness.",1,,CO,Arapahoe,https://www.denverpost.com/2020/03/26/coronavirus-new-cases-deaths-colorado-march-26/
-3/26,,,"As millions of Coloradans spent their first day under a statewide stay-at-home mandate Thursday public health officials announced that at least 27 people have now died in connection with the novel coronavirus and more than 1,400 have tested positive for the highly infectious respiratory illness.",1,,CO,Boulder,https://www.denverpost.com/2020/03/26/coronavirus-new-cases-deaths-colorado-march-26/
-3/26,,,"As millions of Coloradans spent their first day under a statewide stay-at-home mandate Thursday public health officials announced that at least 27 people have now died in connection with the novel coronavirus and more than 1,400 have tested positive for the highly infectious respiratory illness.",1,,CO,Chaffee,https://www.denverpost.com/2020/03/26/coronavirus-new-cases-deaths-colorado-march-26/
-3/26,,,"As millions of Coloradans spent their first day under a statewide stay-at-home mandate Thursday public health officials announced that at least 27 people have now died in connection with the novel coronavirus and more than 1,400 have tested positive for the highly infectious respiratory illness.",1,,CO,Pueblo,https://www.denverpost.com/2020/03/26/coronavirus-new-cases-deaths-colorado-march-26/
-3/26,男,,"A 78-year-old man from Lauderdale County became the state's second death victim of the novel coronavirus COVID-19 according to media reports and social media posts from his family.",1,70+,AL,Lauderdale,https://www.montgomeryadvertiser.com/story/news/2020/03/26/second-alabama-coronavirus-death-lauderdale-county-albert-trousdale/5082688002/
-3/26,,,"By 3/26 6:00PM Harrison County confirmed the first death.",1,,MS,Harrison,"https://msdh.ms.gov/msdhsite/_static/14,0,420.html"
-3/26,,,"By 3/26 6:00PM Tippah County confirmed the first death.",1,,MS,Tippah,"https://msdh.ms.gov/msdhsite/_static/14,0,420.html"
-3/26,,一位80多岁老人，来自Poweshiek，于周四晚上去世。,"According to the IDPH two Iowans with COVID-19 passed away Thursday night. One elderly adult (81+ years) from Poweshiek County and one older adult (61-80 years) from Allamakee County. Three people in total have died from coronavirus in Iowa to date.",1,,IA,Poweshiek,https://www.kcrg.com/content/news/Two-more-coronavirus-related-deaths-in-eastern-Iowa-56-additional-positive-cases-569161991.html
-3/26,,一位61-80岁老人，来自Allamakee，于周四晚上去世。,"According to the IDPH two Iowans with COVID-19 passed away Thursday night. One elderly adult (81+ years) from Poweshiek County and one older adult (61-80 years) from Allamakee County. Three people in total have died from coronavirus in Iowa to date.",1,,IA,Allamakee,https://www.kcrg.com/content/news/Two-more-coronavirus-related-deaths-in-eastern-Iowa-56-additional-positive-cases-569161991.html
-3/26,男,,"Dearborn County reported its first COVID-19-related death Thursday evening according to Dearborn County Coroner Steven Callahan.Callahan says the death is an 83-year-old man with “significant underlying conditions.”",1,80+,IN,Dearborn,https://www.fox19.com/2020/03/27/first-reported-covid-death-dearborn-county/
-3/26,,,"The state's 12th death was reported late Thursday in Iron County. It's also the northern Wisconsin county's first confirmed coronavirus case according to a release.",1,,WI,Iron,https://www.jsonline.com/story/news/2020/03/26/wisconsin-coronavirus-cases-hit-707-10-deaths/2922292001/
-3/26,,,This case confirmed on 3/27.,1,,AZ,Maricopa,https://www.maricopa.gov/5460/Coronavirus-Disease-2019
-3/26,,,"As millions of Coloradans spent their first day under a statewide stay-at-home mandate Thursday public health officials announced that at least 27 people have now died in connection with the novel coronavirus and more than 1,400 have tested positive for the highly infectious respiratory illness.",1,,CO,Jefferson,https://www.denverpost.com/2020/03/26/coronavirus-new-cases-deaths-colorado-march-26/
-3/26,,,"As millions of Coloradans spent their first day under a statewide stay-at-home mandate Thursday public health officials announced that at least 27 people have now died in connection with the novel coronavirus and more than 1,400 have tested positive for the highly infectious respiratory illness.",1,,CO,Weld,https://www.denverpost.com/2020/03/26/coronavirus-new-cases-deaths-colorado-march-26/
-3/26,,,"As millions of Coloradans spent their first day under a statewide stay-at-home mandate Thursday public health officials announced that at least 27 people have now died in connection with the novel coronavirus and more than 1,400 have tested positive for the highly infectious respiratory illness.",1,,CO,Unassigned,https://www.denverpost.com/2020/03/26/coronavirus-new-cases-deaths-colorado-march-26/
-3/27,女,,48-year-old woman is the third death from coronavirus in Puerto Rico,1,40+,PR,Puerto Rico,https://www.elnuevodia.com/noticias/locales/nota/unamujerde48anoseslaterceramuerteporcoronavirusenpuertorico-2556277/
-3/27,男,,The second Delawarean was an 86-year-old man who was a resident of Little Sisters of the Poor Jeanne Jugan Residence in Ogletown.,1,80+,DE,Unassigned,https://www.delawareonline.com/story/news/coronavirus-in-delaware/2020/03/27/coronavirus-delaware-state-reaches-143-cases-and-2-deaths-more-updates-covid-19-in-delaware-testing/2923932001/
-3/27,,,,1,,CA,Sacramento,https://www.latimes.com/projects/california-coronavirus-cases-tracking-outbreak/
-3/27,Unknown,,"Friday morning the Alabama Department of Public Health confirmed three people had died in the state due to COVID-19. One is in Jackson County another in Lauderdale County and the other in Madison County.",1,Unknown,AL,Madison,https://www.newsbreak.com/news/0OZDdgKe/coronavirus-related-deaths-reported-in-jackson-lauderdale-and-madison-counties?s=oldSite&ss=a99
-3/27,Unknown,,"Johnston County Public Health is reporting the first COVID-19 associated death in a Johnston County resident.The individual died on March 26 2020 from complications associated with the virus. The patient was in their mid-sixties and had underlying medical conditions. To protect the family’s privacy no further information about this patient will be released.",1,60+,NC,Johnston,https://www.johnstonnc.com/content.cfm?id=1448
-3/27,,,"By 3/27 Arkansas has 3 deaths.",1,,AR,Unassigned,https://adem.maps.arcgis.com/apps/opsdashboard/index.html#/f533ac8a8b6040e5896b05b47b17a647
-3/27,,,fifth death reported in Md.,1,,MD,Unassigned,https://www.washingtonpost.com/dc-md-va/2020/03/27/coronavirus-dc-maryland-virginia-updates/
-3/27,,,San Mateo County  reported 6th death by 3/27 morning.,1,,CA,San Mateo,https://www.smchealth.org/coronavirus
-3/27,,,"By 3/27 noon New York reoorted 519 total deaths placeholder.",57,,NY,Unassigned,https://www.nytimes.com/2020/03/27/nyregion/coronavirus-new-york-update.html
-3/27,,,,2,,FL,Broward,https://experience.arcgis.com/experience/96dd742462124fa0b38ddedb9b25e429
-3/27,,,,1,,FL,Miami-Dade,https://experience.arcgis.com/experience/96dd742462124fa0b38ddedb9b25e429
-3/27,,,,1,,FL,Highlands,https://experience.arcgis.com/experience/96dd742462124fa0b38ddedb9b25e429
-3/27,,,,1,,FL,Lee,https://experience.arcgis.com/experience/96dd742462124fa0b38ddedb9b25e429
-3/27,,,,1,,FL,Sarasota,https://experience.arcgis.com/experience/96dd742462124fa0b38ddedb9b25e429
-3/27,,,,1,,FL,St. Lucie,https://experience.arcgis.com/experience/96dd742462124fa0b38ddedb9b25e429
-3/27,,,San Francisco reported 3rd death by 3/27 morning.,1,,CA,San Francisco,https://www.sfdph.org/dph/alerts/coronavirus.asp
-3/27,,,,1,,OK,Creek,https://coronavirus.health.ok.gov/
-3/27,,,,1,,PA,Delaware,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx
-3/27,,,,1,,PA,Lehigh,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx
-3/27,,,,1,,PA,Luzerne,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx
-3/27,,,,1,,PA,Philadelphia,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx
-3/27,男,,"St. Joseph County health officials are announcing the county's first death from coronavirus. The patient a man in his 80s had multiple underlying medical conditions.",1,80+,IN,St. Joseph,https://www.wndu.com/content/news/St-Joseph-County-announces-first-coronavirus-death-569134401.html
-3/27,男,,"The Maine Center for Disease Control and Prevention (Maine CDC) today reported the first death of an individual who had tested positive for the disease caused by the 2019 novel coronavirus (COVID-19). The individual was a man in his 80s from Cumberland County. Due to privacy laws Maine CDC is limited in releasing further details.",1,80+,ME,Cumberland,https://www.maine.gov/dhhs/press-release.shtml?id=2293683
-3/27,,3/27 亚利桑那州 新增5例死亡病例，具体待查， 累计13例死亡病例。,"AZ adds 5 more deaths total death cases 13.",1,,AZ,Unassigned,https://www.azdhs.gov/preparedness/epidemiology-disease-control/infectious-disease-epidemiology/index.php#novel-coronavirus-home
-3/27,,,,1,,LA,Acadia,http://ldh.la.gov/coronavirus/
-3/27,,,,1,,LA,Caddo,http://ldh.la.gov/coronavirus/
-3/27,,,,12,,LA,Jefferson,http://ldh.la.gov/coronavirus/
-3/27,,,,1,,LA,Lafourche,http://ldh.la.gov/coronavirus/
-3/27,,,,11,,LA,Orleans,http://ldh.la.gov/coronavirus/
-3/27,,,,2,,LA,Plaquemines,http://ldh.la.gov/coronavirus/
-3/27,,,,2,,LA,St. James,http://ldh.la.gov/coronavirus/
-3/27,,,,1,,LA,St. John the Baptist,http://ldh.la.gov/coronavirus/
-3/27,,,,1,,LA,St. Tammany,http://ldh.la.gov/coronavirus/
-3/27,,,,3,,LA,St. Martin,http://ldh.la.gov/coronavirus/
-3/27,,,,1,,LA,Terrebonne,http://ldh.la.gov/coronavirus/
-3/27,Unknown,,"Hendricks County IN reported its first two deaths. No further detail right now.",1,Unknown,IN,Hendricks,https://www.in.gov/isdh/28470.htm?utm_source=agency-website&utm_medium=&utm_campaign=&utm_term=&utm_content=
-3/27,Unknown,,"Hendricks County IN reported its first two deaths. No further detail right now.",1,Unknown,IN,Hendricks,https://www.in.gov/isdh/28470.htm?utm_source=agency-website&utm_medium=&utm_campaign=&utm_term=&utm_content=
-3/27,Unknown,,"By 3/27 Marion County IN reported 8 death in total. No further detail right now.",1,Unknown,IN,Marion,https://www.in.gov/isdh/28470.htm?utm_source=agency-website&utm_medium=&utm_campaign=&utm_term=&utm_content=
-3/27,Unknown,,"By 3/27 Marion County IN reported 8 death in total. No further detail right now.",1,Unknown,IN,Marion,https://www.in.gov/isdh/28470.htm?utm_source=agency-website&utm_medium=&utm_campaign=&utm_term=&utm_content=
-3/27,,堪萨斯州Wyandotte第3例死亡，暂无详细信息。,"A third person has now died in Wyandotte County of COVID-19. The Unified Government of Wyandotte County/Kansas City Kansas Public Health Department confirmed the news Friday 3/27 morning.",1,,KS,Wyandotte,https://fox4kc.com/tracking-coronavirus/health-officials-confirm-third-covid-19-death-in-wyandotte-county/
-3/27,,"3/27 佛蒙特州新增第一例死亡 具体信息待更新。",One more death is reported in VT.,1,,VT,Unassigned,https://www.healthvermont.gov/response/infectious-disease/2019-novel-coronavirus
-3/27,,,"By 3/27 14:30 PM EST NYC reported 366 deaths in total.",85,,NY,New York,https://www1.nyc.gov/assets/doh/downloads/pdf/imm/covid-19-daily-data-summary.pdf
-3/27,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/27,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/27,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/27,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/27,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/27,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/27,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/27,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/27,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/27,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/27,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/27,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/27,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/27,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/27,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/27,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/27,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/27,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/27,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/27,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/27,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/27,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/27,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/27,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/27,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/27,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/27,,,,1,,NJ,Unassigned,https://www.nj.gov/health/
-3/27,,,Mahoning reports another death.,1,,OH,Mahoning,https://www.nbc4i.com/community/health/coronavirus/coronavirus-in-ohio-friday-update-gov-dewine-schedules-daily-update-on-covid-19/
-3/27,,,,2,,OH,Miami,https://www.nbc4i.com/community/health/coronavirus/coronavirus-in-ohio-friday-update-gov-dewine-schedules-daily-update-on-covid-19/
-3/27,,,,1,,OH,Summit,https://www.nbc4i.com/community/health/coronavirus/coronavirus-in-ohio-friday-update-gov-dewine-schedules-daily-update-on-covid-19/
-3/27,女, Two Ozaukee County residents died early Friday.,2,70+,WI,Ozaukee,https://www.jsonline.com/story/news/2020/03/26/wisconsin-coronavirus-cases-hit-707-10-deaths/2922292001/
-3/27,,,"2 more people have died from the coronavirus in Minnesota bringing the total number of deaths in the state to 4.",2,,MN,Unassigned,https://www.fox9.com/news/4-deaths-from-covid-19-reported-in-minnesota-number-of-cases-jumps-to-nearly-400
-3/27,男,,"The Mobile County Health Department reported the death of a 66-year-old man from coronavirus. The man had under underlying health conditions and had recently traveled out of state.",1,60+,AL,Mobile,https://www.al.com/news/2020/03/3-coronavirus-deaths-in-alabama-what-we-know.html
-3/27,女,,"Utah’s 2nd COVID-19 death was confirmed Friday in the Uintah county. The woman an older adult under the age of 60 passed away yesterday in a Salt Lake area hospital. ",1,Unknown,UT,TriCounty,https://swuhealth.org/wp-content/uploads/2020/03/SWCOVID-19-March-27.pdf
-3/27,女,,"CLARK COUNTY WA (KPTV) - Clark County Public Health announced another death from COVID-19 bringing the county's death toll to six.The latest death was a woman in her 80s. Health officials did not provide information about whether she was previously hospitalized or had contact with a confirmed case.",1,80+,WA,Clark,https://www.kptv.com/news/health-officials-report-sixth-covid--death-in-clark-county/article_f39ca7de-705f-11ea-a821-8738c82baa7a.amp.html?utm_medium=social&utm_source=twitter&utm_campaign=user-share&__twitter_impression=true
-3/27,女,,,1,80+,OR,Marion,https://www.kezi.com/content/news/Nearly-100-new-coronavirus-cases-in-Oregon-OHA-says-569167421.html?fbclid=IwAR0ae4aKVf24YMsHaTrr7nCDZ3_zdGxYcbT4M7y7fAZXjq67S6zTV7bBepo
-3/27,,田纳西累计出现6例死亡。暂无患者信息。,"As of 3/27 Tennessee reported 6 deaths in total.",1,,TN,Unassigned,https://www.tn.gov/health/cedep/ncov.html
-3/27,,田纳西累计出现6例死亡。暂无患者信息。,"As of 3/27 Tennessee reported 6 deaths in total.",1,,TN,Unassigned,https://www.tn.gov/health/cedep/ncov.html
-3/27,,田纳西累计出现6例死亡。暂无患者信息。,"As of 3/27 Tennessee reported 6 deaths in total.",1,,TN,Unassigned,https://www.tn.gov/health/cedep/ncov.html
-3/27,男,,A male in his 80s with underlying health conditions who was in mandatory isolation at a local hospital.,1,80+,NY,Suffolk,https://www.suffolkcountyny.gov/Departments/Health-Services/Health-Bulletins/Novel-Coronavirus/covid-19-case-update-march-27-2020-230-pm
-3/27,男,60多岁男性，患有基础疾病，住院。,"Male 60s Berkshire county preexisting conditions hospitalized.",1,60+,MA,Berkshire,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-27-2020/download
-3/27,女,,A female in her 80s with underlying health conditions who was in mandatory isolation at a local hospital.,1,80+,NY,Suffolk,https://www.suffolkcountyny.gov/Departments/Health-Services/Health-Bulletins/Novel-Coronavirus/covid-19-case-update-march-27-2020-230-pm
-3/27,女,80多岁女性，尚不清楚是否患有基础疾病以及是否住院。,"Female 80s Norfolk county unknown preexisting condition hospitalization unknown.",1,80+,MA,Norfolk,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-27-2020/download
-3/27,女,,A female in her 90s with underlying health conditions who was in mandatory isolation at a local hospital.,1,90+,NY,Suffolk,https://www.suffolkcountyny.gov/Departments/Health-Services/Health-Bulletins/Novel-Coronavirus/covid-19-case-update-march-27-2020-230-pm
-3/27,男,,A male in his 40s with underlying health conditions who was in mandatory isolation at a local hospital.,1,40+,NY,Suffolk,https://www.suffolkcountyny.gov/Departments/Health-Services/Health-Bulletins/Novel-Coronavirus/covid-19-case-update-march-27-2020-230-pm
-3/27,女,,A female in her 80s with underlying health conditions who was in mandatory isolation at a local hospital.,1,80+,NY,Suffolk,https://www.suffolkcountyny.gov/Departments/Health-Services/Health-Bulletins/Novel-Coronavirus/covid-19-case-update-march-27-2020-230-pm
-3/27,女,80多岁女性，尚不清楚是否患有基础疾病，住院。,"Female 80s Norfolk county unknown preexisting condition hospitalized.",1,80+,MA,Norfolk,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-27-2020/download
-3/27,女,,A female in her 80s with underlying health conditions who was in mandatory isolation at a local hospital.,1,80+,NY,Suffolk,https://www.suffolkcountyny.gov/Departments/Health-Services/Health-Bulletins/Novel-Coronavirus/covid-19-case-update-march-27-2020-230-pm
-3/27,女,80多岁女性，患有基础疾病，尚不清楚是否住院。,"Female 80s Norfolk county preexisting conditions hospitalization unknown.",1,80+,MA,Norfolk,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-27-2020/download
-3/27,女,90多岁女性，尚不清楚是否患有基础疾病，住院。,"Female 90s Berkshire county unknown preexisting condition hospitalized.",1,90+,MA,Berkshire,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-27-2020/download
-3/27,男,60多岁男性，尚不清楚是否患有基础疾病以及是否住院。,"Male 60s Norfolk county unknown preexisting condition hospitalization unknown.",1,60+,MA,Norfolk,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-27-2020/download
-3/27,女,90多岁女性，尚不清楚是否患有基础疾病以及是否住院。,"Female 90s Franklin county unknown preexisting condition hospitalization unknown.",1,90+,MA,Franklin,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-27-2020/download
-3/27,男,80多岁男性，患有基础疾病，尚不清楚是否住院。,"Male 80s Middlesex county preexisting conditions hospitalization unknown.",1,80+,MA,Middlesex,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-27-2020/download
-3/27,男,90多岁男性，尚不清楚是否患有基础疾病，住院。,"Male 90s Barnstable county unknown preexisting condition,hospitalized.",1,90+,MA,Barnstable,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-27-2020/download
-3/27,男,,A male in his 60s with underlying health conditions who was in mandatory isolation at a local hospital.,1,60+,NY,Suffolk,https://www.suffolkcountyny.gov/Departments/Health-Services/Health-Bulletins/Novel-Coronavirus/covid-19-case-update-march-27-2020-230-pm
-3/27,女,,A female in her 80s with underlying health conditions who was in mandatory isolation at a local hospital.,1,,NY,Suffolk,https://www.suffolkcountyny.gov/Departments/Health-Services/Health-Bulletins/Novel-Coronavirus/covid-19-case-update-march-27-2020-230-pm
-3/27,,,,2,,MI,Genesee,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html"
-3/27,女,90多岁女性，患有基础疾病，尚不清楚是否住院。,"Female 90s Bristol county preexisting conditions hospitalization unknown.",1,90+,MA,Bristol,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-27-2020/download
-3/27,,,,3,,MI,Macomb,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html"
-3/27,,,,11,,MI,Oakland,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html"
-3/27,,,Wayne in total 14 by 3/27,6,,MI,Wayne,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html"
-3/27,,3/27 洛杉矶新增死亡5例，其中一例。,"Los Angeles County has confirmed 5 new deaths placeholder.",1,,CA,Los Angeles,http://www.publichealth.lacounty.gov/media/Coronavirus/
-3/27,,3/27 洛杉矶新增死亡5例，其中一例。,"Los Angeles County has confirmed 5 new deaths placeholder.",1,,CA,Los Angeles,http://www.publichealth.lacounty.gov/media/Coronavirus/
-3/27,,3/27 洛杉矶新增死亡5例，其中一例。,"Los Angeles County has confirmed 5 new deaths placeholder.",1,,CA,Los Angeles,http://www.publichealth.lacounty.gov/media/Coronavirus/
-3/27,,3/27 洛杉矶新增死亡5例，其中一例。,"Los Angeles County has confirmed 5 new deaths placeholder.",1,,CA,Los Angeles,http://www.publichealth.lacounty.gov/media/Coronavirus/
-3/27,,,Detroit in total 23 by 3/27,5,,MI,Wayne,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html"
-3/27,,3/27 洛杉矶新增死亡5例，其中一例。,"Los Angeles County has confirmed 5 new deaths placeholder.",1,,CA,Los Angeles,http://www.publichealth.lacounty.gov/media/Coronavirus/
-3/27,男,,A Cass County man in his 90s has died of COVID-19. The man had underlying health conditions and became infected through community spread.,1,90+,ND,Cass,https://bismarcktribune.com/news/local/health/north-dakota-has-first-covid--death/article_8bc9a234-7249-5ca2-a981-8b442645a25a.html#tracking-source=home-top-story
-3/27,,,,1,,MI,Gogebic,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html"
-3/27,,,,1,,MI,Ingham,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html"
-3/27,,,,6,,GA,Dougherty,https://www.usnews.com/news/best-states/georgia/articles/2020-03-27/coronavirus-infections-exceed-2-000-in-georgia-deaths-at-64
-3/27,,,,2,,MI,Muskegon,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html"
-3/27,,,,2,,GA,Unassigned,https://www.usnews.com/news/best-states/georgia/articles/2020-03-27/coronavirus-infections-exceed-2-000-in-georgia-deaths-at-64
-3/27,女,,"The patient was a woman over the age of 70 with significant underlying health conditions APH officials said. To protect the family’s privacy health officials said they would not release any further information about the patient.",1,70+,TX,Travis,https://www.kvue.com/article/news/health/coronavirus/cornoavirus-travis-county-death-count-austin/269-d6ccab07-7450-4766-9fa0-7a0d660ca708
-3/27,,,Fort Bend County officials announced its first coronavirus related death. No details on the patient were provided.,1,,TX,Fort Bend,https://www.click2houston.com/health/2020/03/07/latest-follow-the-developments-of-the-coronavirus-cases-in-the-houston-area/
-3/27,男,,"Virginia's death toll from coronavirus-related causes is 15 as of Thursday afternoon with the death of a fourth resident of Canterbury Rehabilitation and Healthcare Center in Henrico. The patient was a man in his 70s.",0,70+,VA,Henrico,https://www.wdbj7.com/content/news/Virginia-Department-of-Health-reports-xxx-coronavirus-cases-569126931.html
-3/27,,,This case confirmed on 3/27.,1,,AZ,Pima,https://webcms.pima.gov/cms/One.aspx?portalId=169&pageId=527452
-3/27,,,This case confirmed on 3/27.,1,,AZ,Pima,https://webcms.pima.gov/cms/One.aspx?portalId=169&pageId=527452
-3/27,,,This case confirmed on 3/27.,1,,AZ,Pima,https://www.azdhs.gov/preparedness/epidemiology-disease-control/infectious-disease-epidemiology/index.php#novel-coronavirus-home
-3/27,,,This case confirmed on 3/27.,1,,AZ,Maricopa,https://www.maricopa.gov/5460/Coronavirus-Disease-2019
-3/27,男,," Updated: Mar 27 2020 / 04:42 PM EDT The Tippecanoe County Health Department announced the first death in the county related to the coronavirus. He was over the age of 60 and had been hospitalized as a COVID-19 patient and died at IU Arnett on Friday..",1,60+,IN,Tippecanoe,https://fox59.com/news/health-officials-announce-first-coronavirus-death-in-tippecanoe-county/
-3/27,,3/27 康涅狄格新增6例死亡，其中两例在Fairfield County。,"3/27 2 more death cases confirmed in Fairfield County CT.",2,,CT,Fairfield,https://www.wfsb.com/news/the-latest-more-than-covid--cases-deaths/article_54edec52-67ad-11ea-8482-877cb5d00dcd.html
-3/27,,3/27 康涅狄格新增6例死亡，其中4例在New Haven county。,"3/27 4 more death cases confirmed in New Haven County CT.",4,,CT,New Haven,https://www.wfsb.com/news/the-latest-more-than-covid--cases-deaths/article_54edec52-67ad-11ea-8482-877cb5d00dcd.html
-3/27,,,"On Friday Illinois Department of Health officials announced 488 new cases of COVID-19 including eight deaths. The total number of cases in Illinois is now at 3,026 and the number of fatalities is at 34. Friday’s new cases are a drop from Thursday’s 673.",1,,IL,Kane,http://dph.illinois.gov/topics-services/diseases-and-conditions/diseases-a-z-list/coronavirus
-3/27,,,"On Friday Illinois Department of Health officials announced 488 new cases of COVID-19 including eight deaths. The total number of cases in Illinois is now at 3,026 and the number of fatalities is at 34. Friday’s new cases are a drop from Thursday’s 673.",1,,IL,Cook,http://dph.illinois.gov/topics-services/diseases-and-conditions/diseases-a-z-list/coronavirus
-3/27,,,"On Friday Illinois Department of Health officials announced 488 new cases of COVID-19 including eight deaths. The total number of cases in Illinois is now at 3,026 and the number of fatalities is at 34. Friday’s new cases are a drop from Thursday’s 673.",1,,IL,Cook,http://dph.illinois.gov/topics-services/diseases-and-conditions/diseases-a-z-list/coronavirus
-3/27,,,"On Friday Illinois Department of Health officials announced 488 new cases of COVID-19 including eight deaths. The total number of cases in Illinois is now at 3,026 and the number of fatalities is at 34. Friday’s new cases are a drop from Thursday’s 673.",1,,IL,DuPage,http://dph.illinois.gov/topics-services/diseases-and-conditions/diseases-a-z-list/coronavirus
-3/27,,,"On Friday Illinois Department of Health officials announced 488 new cases of COVID-19 including eight deaths. The total number of cases in Illinois is now at 3,026 and the number of fatalities is at 34. Friday’s new cases are a drop from Thursday’s 673.",1,,IL,DuPage,http://dph.illinois.gov/topics-services/diseases-and-conditions/diseases-a-z-list/coronavirus
-3/27,,,"On Friday Illinois Department of Health officials announced 488 new cases of COVID-19 including eight deaths. The total number of cases in Illinois is now at 3,026 and the number of fatalities is at 34. Friday’s new cases are a drop from Thursday’s 673.",1,,IL,DuPage,http://dph.illinois.gov/topics-services/diseases-and-conditions/diseases-a-z-list/coronavirus
-3/27,,,"On Friday Illinois Department of Health officials announced 488 new cases of COVID-19 including eight deaths. The total number of cases in Illinois is now at 3,026 and the number of fatalities is at 34. Friday’s new cases are a drop from Thursday’s 673.",1,,IL,DuPage,http://dph.illinois.gov/topics-services/diseases-and-conditions/diseases-a-z-list/coronavirus
-3/27,,,"On Friday Illinois Department of Health officials announced 488 new cases of COVID-19 including eight deaths. The total number of cases in Illinois is now at 3,026 and the number of fatalities is at 34. Friday’s new cases are a drop from Thursday’s 673.",1,,IL,DuPage,http://dph.illinois.gov/topics-services/diseases-and-conditions/diseases-a-z-list/coronavirus
-3/27,,,,1,,CA,Orange,https://www.latimes.com/projects/california-coronavirus-cases-tracking-outbreak/
-3/27,,,,1,,CA,Orange,https://www.latimes.com/projects/california-coronavirus-cases-tracking-outbreak/
-3/27,,加州Santa Clara新增死亡一例。,One new death is reported in Santa Clara.,1,,CA,Santa Clara,https://www.sccgov.org/sites/phd/DiseaseInformation/novel-coronavirus/Pages/dashboard.aspx
-3/27,男,,"Man in his 70s died 3/26/20",1,70+,WA,Snohomish,https://www.snohd.org/499/COVID-19-Case-Count-Info
-3/27,男,,"Man in his 40s with underlying health conditions died 3/26/20",1,40+,WA,Snohomish,https://www.snohd.org/499/COVID-19-Case-Count-Info
-3/27,男,,"Man in his 70s with underlying health conditions died 3/25/20",1,70+,WA,Snohomish,https://www.snohd.org/499/COVID-19-Case-Count-Info
-3/27,男,,"Man in his 70s with underlying health conditions died 3/24/20",1,70+,WA,Snohomish,https://www.snohd.org/499/COVID-19-Case-Count-Info
-3/27,女,,"Woman in her 80s with underlying health conditions died 3/21/20",1,80+,WA,Snohomish,https://www.snohd.org/499/COVID-19-Case-Count-Info
-3/27,,,Pierce reported 5 deaths by 3/27.,1,,WA,Pierce,https://www.tpchd.org/healthy-people/diseases/covid-19-pierce-county-cases/
-3/27,,,,1,,SC,Charleston,https://www.scdhec.gov/infectious-diseases/viruses/coronavirus-disease-2019-covid-19/monitoring-testing-covid-19
-3/27,,,,1,,SC,Florence,https://www.scdhec.gov/infectious-diseases/viruses/coronavirus-disease-2019-covid-19/monitoring-testing-covid-19
-3/27,女,,"At his daily briefing Friday the Beshear also reported two more deaths -- a 75-year-old woman from Fayette County ",1,70+,KY,Fayette,https://www.wave3.com/2020/03/27/beshear-confirms-new-cases/
-3/27,,,,1,,SC,Greenville,https://www.scdhec.gov/infectious-diseases/viruses/coronavirus-disease-2019-covid-19/monitoring-testing-covid-19
-3/27,,,,1,,SC,Kershaw,https://www.scdhec.gov/infectious-diseases/viruses/coronavirus-disease-2019-covid-19/monitoring-testing-covid-19
-3/27,男,,"At his daily briefing Friday the Beshear also reported two more deaths --a 77-year-old man from Hopkins County",1,70+,KY,Hopkins,https://www.wave3.com/2020/03/27/beshear-confirms-new-cases/
-3/27,,,,1,,SC,Richland,https://www.scdhec.gov/infectious-diseases/viruses/coronavirus-disease-2019-covid-19/monitoring-testing-covid-19
-3/27,男,哥伦比亚特区首例死亡病例，为华盛顿市长的幕僚成员，市长办公室首席法律顾问。,"Member of DC mayor's staff dies from coronavirus. Bowser later identified the victim as George Valentine deputy director of the mayor's office of legal counsel.",1,60+,DC,District of Columbia,https://wamu.org/story/20/03/27/a-deputy-director-in-d-c-mayors-office-has-died-of-covid-19/
-3/27,男,内布拉斯加首例死亡，50多岁男性居民。有外州旅行史。,"Douglas County Health Department confirmed Friday that a county resident in his 50s has died from COVID-19. The man thought to be the state's first death also suffered from serious underlying health conditions The man who had self-quarantined at home since March 11 had contact with a known COVID-19 case out of state.",1,50+,NE,Douglas,https://www.wowt.com/content/news/Reports-of-COVID-19-cases-in-Nebraska-and-Iowa-for-March-27-2020-569162561.html
-3/27,,,"As of 3/27 a total of 31 deaths related to COVID-19 in Colorado State. ",1,,CO,El Paso,https://covid19.colorado.gov/case-data
-3/27,,,"As of 3/27 a total of 31 deaths related to COVID-19 in Colorado State. ",1,,CO,Weld,https://covid19.colorado.gov/case-data
-3/27,,,"As of 3/27 a total of 31 deaths related to COVID-19 in Colorado State. ",2,,CO,Jefferson,https://covid19.colorado.gov/case-data
-3/27,,,,1,,WA,Benton,https://www.doh.wa.gov/Emergencies/Coronavirus
-3/27,,,,16,,WA,King,https://www.doh.wa.gov/Emergencies/Coronavirus
-3/27,男,3/25新罕布什尔州Hillsborough Count第二例死亡。系60多岁男性。,"The New Hampshire Department of Health and Human Services announced Friday that a second person has died from the new coronavirus. The man over 60 lived in Hillsborough County and had ""multiple underlying health issues,"" ",1,60+,NH,Hillsborough,https://patch.com/new-hampshire/concord-nh/nh-coronavirus-update-2nd-death-announced-187-positive-cases
+3/29,,,There are now 890 confirmed COVID-19 cases in Virginia with 122 patients hospitalized and at least 22 people dead.,5,,VA,Unassigned,https://www.nbc12.com/2020/03/29/almost-covid-cases-virginia-with-deaths/
+3/29,,,"Wyandotte County health officials are reporting their fourth death related to coronavirus COVID-19. This also marks the six death in Kansas with one death in Johnson County Kansas and one death in Shawnee County.",1,,KS,Wyandotte,https://fox4kc.com/tracking-coronavirus/a-4th-person-in-wyandotte-county-has-died-from-covid-19/
+3/29,,,Buncombe County Health and Human Services (BCHHS) is reporting the first COVID-19 associated death in a Buncombe County resident.,1,,NC,Buncombe,https://wlos.com/news/local/buncombe-county-reports-first-covid-19-related-fatality
+3/29,,,"By 3/29 12:20 PM EST NYC reported 776 deaths in total.",104,,NY,New York,https://www1.nyc.gov/assets/doh/downloads/pdf/imm/covid-19-daily-data-summary.pdf
+3/29,,,"By 3/29 noon New York reported 965 total deaths placeholder.",17,,NY,Unassigned,https://www.cbsnews.com/live-updates/coronavirus-disease-covid-19-latest-news-2020-03-29/
+3/29,Unknown,,,1,Unknown,PA,Lancaster,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx
+3/29,Unknown,,,1,Unknown,PA,Lawrence,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx
+3/29,Unknown,,,1,Unknown,PA,Monroe,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx
+3/29,,,,1,,LA,Ascension,http://ldh.la.gov/coronavirus/
+3/29,,,,3,,LA,Caddo,http://ldh.la.gov/coronavirus/
+3/29,,,,3,,LA,East Baton Rouge,http://ldh.la.gov/coronavirus/
+3/29,,,,2,,LA,Jefferson,http://ldh.la.gov/coronavirus/
+3/29,,,,3,,LA,Orleans,http://ldh.la.gov/coronavirus/
+3/29,,,,2,,LA,St. John the Baptist,http://ldh.la.gov/coronavirus/
+3/29,Unknown,,No specific information about this patient. ,1,Unknown,GA,Floyd,https://dph.georgia.gov/covid-19-daily-status-report
+3/29,,,,1,,LA,St. Tammany,http://ldh.la.gov/coronavirus/
+3/29,,3/28 亚利桑那州 新增2例死亡病例，具体待查， 累计15例死亡病例。,"AZ adds 2 more deaths total death cases 15.",2,,AZ,Unassigned,https://www.azdhs.gov/preparedness/epidemiology-disease-control/infectious-disease-epidemiology/index.php#novel-coronavirus-home
+3/29,女,,The second person killed by the virus is a woman in her 90s. Health officials said the woman had been in the hospital.,1,90+,TX,Brazos,https://www.kbtx.com/content/news/Second-COVID-19-death-four-new-cases-in-Brazos-County-569202221.html
+3/29,,,,21,,NJ,Unassigned,https://www.nj.gov/health/
+3/29,,,,1,,OK,Oklahoma,https://coronavirus.health.ok.gov/
+3/29,Unknown,,The individual was 60-years-old and passed away Sunday morning.,1,60+,NC,Mecklenburg,https://www.charlotteobserver.com/news/coronavirus/article241602416.html
+3/29,,,a third person in Rhode Island has died from COVID-19.,1,,RI,Unassigned,https://www.wpri.com/health/coronavirus/march-29-ri-coronavirus-update/
+3/29,女,,The St. Clair County Health Department announced the second COVID-19 death in the county. Officials said the woman was in her 30s. There are 24 cases of the novel coronavirus in the county. ,1,30+,IL,St. Clair,https://www.kmov.com/news/coronavirus-covid-latest-info-in-st-louis/article_f35c5f16-7038-11ea-9c06-f30dcb4bc9eb.html?utm_source=KMOV%20News&utm_medium=referral&utm_campaign=Breaking%20News
+3/29,女,,The10th death is being reported of a woman in her 80's who had been a resident of a long-term care facility. ,1,80+,TX,Dallas,
+3/29,男,,,1,80+,OH,Miami,https://coronavirus.ohio.gov/wps/portal/gov/covid-19/home/dashboard
+3/29,,,"As of 3/29 at 3:00 pm Washtenaw County MI reported 5 total death.",2,,MI,Washtenaw,https://www.washtenaw.org/3108/Cases
+3/29,Unknown,,"Four new deaths related to COVID-19 were reported in Minnesota on Sunday including three new fatal cases among residents of long-term care facilities in Hennepin County.",1,80+,MN,Hennepin,https://www.health.state.mn.us/diseases/coronavirus/situation.html
+3/29,Unknown,,"Four new deaths related to COVID-19 were reported in Minnesota on Sunday including three new fatal cases among residents of long-term care facilities in Hennepin County.",1,80+,MN,Hennepin,https://www.health.state.mn.us/diseases/coronavirus/situation.html
+3/29,Unknown,,"Four new deaths related to COVID-19 were reported in Minnesota on Sunday including three new fatal cases among residents of long-term care facilities in Hennepin County.",1,90+,MN,Hennepin,https://www.startribune.com/4-more-coronavirus-deaths-in-minnesota-health-officials-say/569202192/
+3/29,Unknown,,"The fourth death reported Sunday happened in Martin County in southern Minnesota and did not involve a long-term care facility Minnesota Health Department Commissioner Jan Malcolm said in a media briefing Sunday.",1,50+,MN,Martin,https://www.health.state.mn.us/diseases/coronavirus/situation.html
+3/29,,,,1,,MI,Hillsdale,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html"
+3/29,,,,3,,MI,Oakland,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html"
+3/29,,,,5,,MI,Wayne,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html"
+3/29,,,,5,,MI,Wayne--Detroit,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html"
+3/29,,,,3,,MI,Macomb,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html"
+3/29,,,,1,,MI,Isabella,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html"
+3/29,男,"3/29 The Santa Cruz County Health Department has announced the county's first death due to COVID-19. The individual was an adult male in his early 70’s with an underlying health condition.","3/29 The Santa Cruz County Health Department has announced the county's first death due to COVID-19. The individual was an adult male in his early 70’s with an underlying health condition.",1,70+,CA,Santa Cruz,https://www.ksbw.com/article/first-covid-19-death-announced-in-santa-cruz-county/31969605#
+3/29,Unknown,截至3/29下午， Erie County累计死亡7例。,"Seven people have died from coronavirus in Erie County according to the latest data from the county’s COVID-19 map. No further details right now.",1,Unknown,NY,Erie,https://www.wivb.com/health/erie-county-coronavirus-deaths-up-to-seven-county-now-has-414-confirmed-cases/
+3/29,女,,A fifth person has died in Orange County from the coronavirus. County officials announced the death Saturday afternoon. The victim was a woman over the age of 90.,1,90+,NY,Orange,https://midhudsonnews.com/2020/03/29/fifth-person-dies-of-covid-19-in-orange-county/
+3/29,男,80多岁男性，尚不清楚是否患有基础疾病,"Male 80s Essex county unknown preexisting conditions hospitalized",1,80+,MA,Essex,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-29-2020/download
+3/29,,,The Shelby County Health Department is confirming the first coronavirus death in Shelby County.,1,,TN,Shelby,https://wreg.com/news/first-coronavirus-death-reported-in-shelby-county/
+3/29,女,90多岁女性，患有基础病，住院治疗。,"Female 90s Middlesex county preexisting conditions hospitalized",1,90+,MA,Middlesex,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-29-2020/download
+3/29,男,,A male in his 30s with underlying medical conditions who was in mandatory isolation at a local hospital,1,30+,NY,Suffolk,https://www.suffolkcountyny.gov/Departments/Health-Services/Health-Bulletins/Novel-Coronavirus/covid-19-case-update-march-29-2020-230-pm
+3/29,男,,A male in his 70s with underlying health conditions who was in mandatory isolation at a local hospital,1,70+,NY,Suffolk,https://www.suffolkcountyny.gov/Departments/Health-Services/Health-Bulletins/Novel-Coronavirus/covid-19-case-update-march-29-2020-230-pm
+3/29,男,,A male in his 60s with underlying health conditions who died at home. COVID-19 was confirmed by the Suffolk County Medical Examiner.,1,60+,NY,Suffolk,https://www.suffolkcountyny.gov/Departments/Health-Services/Health-Bulletins/Novel-Coronavirus/covid-19-case-update-march-29-2020-230-pm
+3/29,女,70多岁女性，尚不清楚是否患有基础疾病以及是否住院。,"Female 70s Norfolk county unknown preexisting conditions hospitalized",1,70+,MA,Norfolk,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-29-2020/download
+3/29,女,截止3/29，Nassau累计死亡39例。,"Nassau County Executive Laura Curran's office said Sunday that the coronavirus death toll in the county has climbed by five for a total of 39. The new deaths include two women and three men each of whom had underlying health conditions. Further details on the victims were not provided.",1,Unknown,NY,Nassau,http://longisland.news12.com/story/41949941/curran-nassau-coronavirus-death-toll-at-39
+3/29,女,80多岁女性，患有基础疾病，未住院。,"Female 80s Berkshire county preexisting conditions not hospitalized",1,80+,MA,Berkshire,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-29-2020/download
+3/29,,,The most recent death is from New Castle County. State health officials did not immediately release further details.,1,,DE,New Castle,https://www.delawareonline.com/story/news/coronavirus-in-delaware/2020/03/29/coronavirus-delaware-six-deaths-232-cases-early-sunday-afternoon/2935558001/?utm_source=delawareonline-Coronavirus%20Watch&utm_medium=email&utm_campaign=baseline_greeting&utm_term=newsletter_greeting
+3/29,,Placer County第二例死亡。," The person an elderly adult with several underlying health conditions was a resident of south Placer County. ",1,,CA,Placer,https://www.placer.ca.gov/6512/Placer-County-reports-second-COVID-19-de?fbclid=IwAR06xzbd1VbwzMG7lYqPAjMIBgPBmWCuVxCGj1G_vmCK5LtLzf0_5uyN-xo
+3/29,,,,5,,WA,King,https://www.kingcounty.gov/depts/health/communicable-diseases/disease-control/novel-coronavirus.aspx
+3/29,女,截止3/29，Nassau累计死亡39例。,"Nassau County Executive Laura Curran's office said Sunday that the coronavirus death toll in the county has climbed by five for a total of 39. The new deaths include two women and three men each of whom had underlying health conditions. Further details on the victims were not provided.",1,Unknown,NY,Nassau,http://longisland.news12.com/story/41949941/curran-nassau-coronavirus-death-toll-at-39
+3/29,男,截止3/29，Nassau累计死亡39例。,"Nassau County Executive Laura Curran's office said Sunday that the coronavirus death toll in the county has climbed by five for a total of 39. The new deaths include two women and three men each of whom had underlying health conditions. Further details on the victims were not provided.",1,Unknown,NY,Nassau,http://longisland.news12.com/story/41949941/curran-nassau-coronavirus-death-toll-at-39
+3/29,男,截止3/29，Nassau累计死亡39例。,"Nassau County Executive Laura Curran's office said Sunday that the coronavirus death toll in the county has climbed by five for a total of 39. The new deaths include two women and three men each of whom had underlying health conditions. Further details on the victims were not provided.",1,Unknown,NY,Nassau,http://longisland.news12.com/story/41949941/curran-nassau-coronavirus-death-toll-at-39
+3/29,男,截止3/29，Nassau累计死亡39例。,"Nassau County Executive Laura Curran's office said Sunday that the coronavirus death toll in the county has climbed by five for a total of 39. The new deaths include two women and three men each of whom had underlying health conditions. Further details on the victims were not provided.",1,Unknown,NY,Nassau,http://longisland.news12.com/story/41949941/curran-nassau-coronavirus-death-toll-at-39
+3/29,,,,1,,SC,Horry,https://www.scdhec.gov/infectious-diseases/viruses/coronavirus-disease-2019-covid-19/monitoring-testing-covid-19
+3/29,男,"3/29 The Henry County Health Center announce a Henry County Missouri resident has died following testing positive for COVID-19. Reported on March 13 this case was a male in his seventies and was one of Missouri’s first positive cases of COVID-19.","3/29 The Henry County Health Center announce a Henry County Missouri resident has died following testing positive for COVID-19. Reported on March 13 this case was a male in his seventies and was one of Missouri’s first positive cases of COVID-19.",1,70+,MO,Henry,https://www.facebook.com/henrycountyhealth/posts/3118511144855056
+3/29,,,"The Health Department confirms four additional fatalities in Philadelphia all in their 70s and 80s. This brings to eight the number of residents who have succumbed to the virus in Philadelphia.",3,,PA,Philadelphia,https://www.phila.gov/2020-03-29-ciudad-ofrece-actualizacion-sobre-el-covid-19-para-el-sabado-29-de-marzo-de-2020/
+3/29,女,,"A woman in her 80s and a man in his 60s both from Cumberland County are the second and third people in the state to die from COVID-19 the disease caused by the coronavirus according to the Maine Center for Disease Control and Prevention.",1,80+,ME,Cumberland,https://www.pressherald.com/2020/03/29/coronavirus-case-reports-up-to-253-in-maine/
+3/29,男,,"A woman in her 80s and a man in his 60s both from Cumberland County are the second and third people in the state to die from COVID-19 the disease caused by the coronavirus according to the Maine Center for Disease Control and Prevention.",1,60+,ME,Cumberland,https://www.pressherald.com/2020/03/29/coronavirus-case-reports-up-to-253-in-maine/
+3/29,男,,a North Pierce County man in his 60s with an underlying health condition—bringing our total deaths to 6.,1,60+,WA,Pierce,https://www.tpchd.org/healthy-people/diseases/covid-19-pierce-county-cases/
+3/29,,,,1,,CT,Fairfield,https://portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary3292020.pdf?la=en
+3/29,男,,The case was a male in his 40s and is under investigation. It is not known if the case had underlying health conditions.,1,40+,NV,Washoe,https://www.washoecounty.us/outreach/2020/03/2020-03-29-ji-0329-update.php
+3/29,,,"Milwaukee County reported a new death on Sunday bringing the total number of confirmed deaths due to coronavirus in the state of Wisconsin to 18.",1,,WI,Milwaukee,https://www.jsonline.com/story/news/local/wisconsin/2020/03/27/coronavirus-wisconsin-latest-updates-cases-cancellations/2924044001/
+3/29,,,,1,,AR,Unassigned,https://adem.maps.arcgis.com/apps/opsdashboard/index.html#/f533ac8a8b6040e5896b05b47b17a647
+3/29,,,,1,,KS,Johnson,https://www.kshb.com/news/coronavirus/covid-19-case-tracker-where-we-stand-in-mo-ks-nationwide
+3/29,,,"Arlington County announced the deaths Sunday afternoon. The victims were older and had “chronic medical conditions,” the county said. “The first patient was a 72-year-old with chronic medical conditions who had been ill with COVID-19 for a few weeks,” the county said in a press release. ",1,70+,VA,Arlington,https://www.arlnow.com/2020/03/29/breaking-arlington-county-announces-first-coronavirus-deaths/
+3/29,,,"“The second was a 60-year-old with chronic medical conditions identified with COVID-19 this past week. The close contacts of both patients have been identified.”",1,60+,VA,Arlington,https://www.arlnow.com/2020/03/29/breaking-arlington-county-announces-first-coronavirus-deaths/
+3/29,,,,1,,CO,El Paso,https://covid19.colorado.gov/case-data
+3/29,,,,2,,CO,Weld,https://covid19.colorado.gov/case-data
+3/29,,,,3,,WA,Whatcom,https://www.whatcomcounty.us/3329/Novel-Coronavirus-COVID-19#case
+3/29,,,,2,,IL,Kane,http://www.dph.illinois.gov/topics-services/diseases-and-conditions/diseases-a-z-list/coronavirus
+3/29,,,,12,,IL,Cook,http://www.dph.illinois.gov/topics-services/diseases-and-conditions/diseases-a-z-list/coronavirus
+3/29,,,,1,,IL,DuPage,http://www.dph.illinois.gov/topics-services/diseases-and-conditions/diseases-a-z-list/coronavirus
+3/29,,,,1,,IL,Kendall,http://www.dph.illinois.gov/topics-services/diseases-and-conditions/diseases-a-z-list/coronavirus
+3/29,,,,1,,IL,La Salle,http://www.dph.illinois.gov/topics-services/diseases-and-conditions/diseases-a-z-list/coronavirus
+3/29,女,3/29，Rockingham County新增1例死亡，累计3例。该新增为60多岁女性，有基础病。,A third New Hampshire resident has died due to the outbreak of COVID-19.The victim was a Rockingham County woman described as over 60 years old with underlying health issues.,1,60+,NH,Rockingham,https://www.necn.com/news/coronavirus/new-hampshire-coronavirus-death-brings-total-to-3/2252776/
+3/29,,3/28 加州Los Anegeles新增6例死亡，具体信息待更新。,3/29 5 new deaths in Los Angels.,5,,CA,Los Angeles,https://content.govdelivery.com/bulletins/gd/CALACOUNTY-283beb8?from=groupmessage&isappinstalled=0
+3/29,男,,55 St. Lucie 59 Male Unknown No FL resident 03/27/20,1,50+,FL,St. Lucie,https://floridadisaster.org/globalassets/covid19/dailies/covid-19-data---daily-report-2020-03-29-1002.pdf
+3/29,,,,1,,FL,Palm Beach,https://fdoh.maps.arcgis.com/apps/opsdashboard/index.html#/8d0de33f260d444c852a615dc7837c86
+3/29,,,,1,,FL,Collier,https://fdoh.maps.arcgis.com/apps/opsdashboard/index.html#/8d0de33f260d444c852a615dc7837c86
+3/29,,,,1,,FL,Unassigned,https://fdoh.maps.arcgis.com/apps/opsdashboard/index.html#/8d0de33f260d444c852a615dc7837c86
+3/29,女,3/29 Marion County新增1例死亡。该例为88岁女性。,"West Virginia has reported the state’s first death linked to the new coronavirus pandemic health officials said. The fatality involved an 88-year-old woman from Marion County.",1,80+,WV,Marion,https://www.usnews.com/news/best-states/west-virginia/articles/2020-03-29/west-virginia-reports-first-coronavirus-death
+3/29,男,,a Carroll County man in his 90s with underlying medical conditions,1,90+,MD,Carroll,https://health.maryland.gov/newsroom/Pages/Maryland-Department-of-Health-announces-5-more-deaths-due-to-COVID-19
+3/29,,,,2,,PR,Puerto Rico,http://www.salud.gov.pr/Pages/coronavirus.aspx
+3/29,男,,a Howard County man in his 70s with underlying medical conditions,1,70+,MD,Howard,https://health.maryland.gov/newsroom/Pages/Maryland-Department-of-Health-announces-5-more-deaths-due-to-COVID-19
+3/29,男,,a Prince George’s County man in his 30s with underlying medical conditions,1,30+,MD,Prince George's,https://health.maryland.gov/newsroom/Pages/Maryland-Department-of-Health-announces-5-more-deaths-due-to-COVID-19
+3/29,女,,a Prince George’s County woman is her 50s with underlying medical conditions,1,50+,MD,Prince George's,https://health.maryland.gov/newsroom/Pages/Maryland-Department-of-Health-announces-5-more-deaths-due-to-COVID-19
+3/29,男,,a Prince George’s County man is his 70s with underlying medical conditions,1,70+,MD,Prince George's,https://health.maryland.gov/newsroom/Pages/Maryland-Department-of-Health-announces-5-more-deaths-due-to-COVID-19
+3/29,,,,1,,CA,San Francisco,https://www.sfdph.org/dph/alerts/coronavirus.asp
+3/29,男,,,2,60+,PA,Bucks,https://covid19-bucksgis.hub.arcgis.com
+3/29,,,,1,,GA,Henry,https://dph.georgia.gov/covid-19-daily-status-report
+3/29,,,,1,,GA,Peach,https://dph.georgia.gov/covid-19-daily-status-report
+3/29,,,,2,,GA,Whitfield,https://dph.georgia.gov/covid-19-daily-status-report
+3/29,,,3/29 9PM EST Cumulative number of deaths to date:  0​3,1,,AK,Unassigned,http://dhss.alaska.gov/dph/Epi/id/Pages/COVID-19/monitoring.aspx
+3/29,男,,"The District reported four new deaths on Sunday night: a 39-year-old male a 65-year-old male a 68-year-old male and a 73-year-old male. D.C. officials could not say whether the 39-year-old had underlying health conditions.",1,30+,DC,District of Columbia,https://coronavirus.dc.gov/page/coronavirus-data
+3/29,男,,"The District reported four new deaths on Sunday night: a 39-year-old male a 65-year-old male a 68-year-old male and a 73-year-old male. D.C. officials could not say whether the 39-year-old had underlying health conditions.",1,60+,DC,District of Columbia,https://coronavirus.dc.gov/page/coronavirus-data
+3/29,男,,"The District reported four new deaths on Sunday night: a 39-year-old male a 65-year-old male a 68-year-old male and a 73-year-old male. D.C. officials could not say whether the 39-year-old had underlying health conditions.",1,60+,DC,District of Columbia,https://coronavirus.dc.gov/page/coronavirus-data
+3/29,男,,"The District reported four new deaths on Sunday night: a 39-year-old male a 65-year-old male a 68-year-old male and a 73-year-old male. D.C. officials could not say whether the 39-year-old had underlying health conditions.",1,70+,DC,District of Columbia,https://coronavirus.dc.gov/page/coronavirus-data
+3/29,,,,1,,WA,Spokane,https://srhd.org/covid19
+3/29,,,,1,,WA,Spokane,https://srhd.org/covid19
+3/29,,,"The new death reported Sunday was a person in his or her 80s with preexisting conditions said Ashley Bautista the county's spokeswoman.",1,80+,CA,Ventura,https://www.vcstar.com/story/news/local/communities/county/2020/03/29/coronavirus-ventura-county-109-cases-four-fatalities-sundays-update-shows/2937508001/
+3/29,,,,1,,CA,San Joaquin,http://www.sjcphs.org/
+3/29,Unknown,,,1,,NY,Monroe,https://www2.monroecounty.gov/files/health/coronavirus/2020.03.39%20PM%20COVID%20.pdf
+3/29,男,犹他州第3例死亡病例Robert H. Garff是一位77岁的老人，当地一位知名商人。,"3rd death case confirmed in UT. Bob Garff auto exec and former Utah House speaker died of the coronavirus on 3/29. He was 77.",1,70+,UT,Salt Lake,https://www.sltrib.com/news/2020/03/29/bob-garff-auto-exec/
+3/29,女,犹他州第4例死亡病例是一位24岁的年轻女性，是一位糖尿病患者并曾经有过心脏手术。,4th death in Utah: a 24 year old female who was diabetic and had undergone heart surgery.,1,20+,UT,Salt Lake,https://www.sltrib.com/news/2020/03/29/family-says-year-old/
