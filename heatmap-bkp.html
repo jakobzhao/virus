@@ -52,8 +52,9 @@
           </div>
         </div>
         <div class="navbar-expand-md navbar-dark bg-dark shadow-sm">
-          <!-- <ul class="navbar-nav mr-auto"> -->
-            <!-- <li class="nav-item">
+          <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item">
               <a class="nav-link" href="seattle.html">Seattle</a>
             </li>
             <li class="nav-item">
@@ -64,17 +65,17 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="worcester.html">Worcester</a>
-            </li> -->
-          <!-- </ul> -->
+            </li>
+          </ul>
         </div>
       </div>
     </div>
 
     <div class="navbar navbar-dark bg-dark shadow-sm">
       <div class="container-fluid d-flex justify-content-between">
-        <a href="heatmap.html" class="navbar-brand d-flex align-items-center">
-          <!-- <img src="img/logo.png" class="img-responsive" height="30"></img> -->
-          <strong> COVID-19 HeatMap (beta) </strong>
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+          <img src="img/logo.png" class="img-responsive" height="30"></img>
+          <strong>&nbsp;&nbsp; COVID-19 HeatMap (beta) </strong>
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
@@ -86,16 +87,16 @@
   <main>
     <div class="loader"></div>
     <div id="upper_panel" class="d-flex align-items-start flex-column">
-      <p><span id="year">COVID-19 </span> <span id="hint"> Hover on the dot to see the heat map of day. </span> </p>
+      <!-- <span id="year">COVID-19 </span> -->
       <div id="timeline-chart"></div>
-      <!-- <div id="mapToggle" class="col-md-5 align-items-center"> -->
-      <!-- <span id="mapType">Heatmap</span>
+      <div id="mapToggle" class="col-md-5 align-items-center">
+        <span id="mapType">Heatmap</span>
         <label id="hmSwitcher" class="switch">
           <input type="checkbox">
           <span class="slider round"></span>
-        </label> -->
-      <!-- <div id="hmLegendContainer"></div> -->
-    </div>
+        </label>
+        <div id="hmLegendContainer"></div>
+      </div>
     </div>
 
     <!-- <div id="info" class="d-flex flex-column">
@@ -201,6 +202,7 @@
 
 
     var Group = L.layerGroup().addTo(mymap);
+    // var wGroup = L.layerGroup().addTo(mymap);
     var mLayers, wLayers;
     var chart, fChart;
     var heatmapFlag = false;
@@ -221,6 +223,21 @@
     }).addTo(mymap);
 
 
+    var zoningColors = chroma.scale('Set2').mode('lch').colors(11);
+    var acsColors = chroma.scale('YlOrRd').colors(8);
+
+
+    // var overlays = {
+    //   "<i class='fas fa-circle fa-xs men'></i> <span style='color: rgb(0,40,255)'>Men</span>": mGroup,
+    //   "<i class='fas fa-circle fa-xs women'></i> <span style='color: rgb(255,0,255)'>Women</span>": wGroup,
+    //   "<span>Place Names</span>": L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}@2x.png').addTo(mymap)
+    // }
+    //
+    // L.control.layers(baseLayers, overlays, {
+    //   collapsed: false,
+    //   position: 'topright'
+    // }).addTo(mymap);
+
 
     var dates = {}
     Promise.all([d3.csv("assets/cases-heatmap.csv")]).then(function(datasets) {
@@ -239,11 +256,11 @@
 
 
       var t = ["t"],
-        pop = ["# of Cases"];
+        pop = ["pop"];
 
 
       Object.keys(dates).forEach(function(d) {
-        t.push(new Date(d));
+        t.push(d);
         pop.push(dates[d].length);
       });
 
@@ -251,32 +268,36 @@
       chart = c3.generate({
         size: {
           height: 80,
-          width: 700
+          width: 480
         },
         data: {
           x: "t",
           columns: [t, pop],
-          onmouseover: update,
+          // onmouseover: update,
           type: 'line',
           // labels: false,
           colors: {
-            "# of Cases": 'rgba(0, 40, 255, .6)'
+            "pop": 'rgba(0, 40, 255, .6)'
           }
         },
         axis: {
           x: {
-            type: "timeseries",
+            type: "category",
+
             tick: {
               format: "%b %d",
               centered: true,
               fit: true,
-              count: 8
+              // count: 4,
+              rotate: -60,
+              multiline: false
+
             }
           },
           y: {
             label: {
               text: 'Cases',
-              position: 'inner-middle'
+              position: 'outer-middle'
             },
             min: 0,
             padding: {
@@ -288,17 +309,17 @@
             type: 'linear'
           }
         },
-        area: {
-          zerobased: true
-        },
+        // area: {
+        //   zerobased: true
+        // },
         tooltip: {
-          show: true
+          show: false
         },
         legend: {
           show: false
         },
         point: {
-          r: 5,
+          r: 3,
           focus: {
             expand: {
               r: 10
@@ -310,32 +331,108 @@
 
 
 
-      function update(d) {
-        $("#year").text(d.x.toLocaleDateString());
-
-        Heatmap.setLatLngs([]);
-
-        datasets[0].forEach(function(r) {
-
-          if ((new Date(r.date).toLocaleDateString()) == (new Date(d.x)).toLocaleDateString()) {
-            Heatmap.addLatLng(new L.latLng(r.lat, r.lng));
-          }
-        })
-
-      }
 
 
-      $("#year").text("3/21/2020");
-
-      datasets[0].forEach(function(r) {
-
-        if ((new Date(r.date).toLocaleDateString()) == (new Date("3/21/2020")).toLocaleDateString()) {
-          Heatmap.addLatLng(new L.latLng(r.lat, r.lng));
-        }
-      })
+      //
+      // datasets[0].forEach(function(d) {
+      //   //console.log(d.id)
+      //   // L.marker([parseFloat(d.lat), parseFloat(d.lng)]).bindPopup("<b>" + d.no + "</b> <p>" + d.note + " identified on " + d.date + ", &nbsp;<a href='https://" + d.reference + "' target='_blank'>" + d.reference + "</a>.</p>").addTo(Group);
+      //
+      //    Heatmap.addLatLng(new L.latLng(d.lat, d.lng));
+      // })
 
 
 
+
+
+      // $.each(mLayers[d.x]._layers, function(i, d) {
+      //         mHeatmap.addLatLng(new L.latLng(d.feature.geometry.coordinates[1], d.feature.geometry.coordinates[0]));
+      //       });
+
+
+
+
+      // wLayers[2012].addTo(wGroup);
+
+
+
+
+      // mymap.on('overlayadd', function(eventlayer) {
+      //   if (eventlayer.layer == wGroup) {
+      //
+      //     chart.load({
+      //       columns: [wPop]
+      //     });
+      //
+      //     fChart.load({
+      //       columns: [
+      //         ["Women", Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1]
+      //       ]
+      //     });
+      //
+      //     tChart.load({
+      //       columns: [
+      //         ["Women", Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1]
+      //       ]
+      //     });
+      //   }
+      //
+      //   if (eventlayer.layer == mGroup) {
+      //     chart.load({
+      //       columns: [mPop]
+      //     });
+      //
+      //     fChart.load({
+      //       columns: [
+      //         ["Men", Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1]
+      //       ]
+      //     });
+      //
+      //     tChart.load({
+      //       columns: [
+      //         ["Men", Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1]
+      //       ]
+      //     });
+      //   }
+      //
+      // });
+
+
+
+
+      // mymap.on('overlayremove', function(eventlayer) {
+      //   if (eventlayer.layer == wGroup) {
+      //
+      //     chart.unload({
+      //       ids: ['# Women']
+      //     });
+      //
+      //     fChart.unload({
+      //       ids: ['Women']
+      //     });
+      //     tChart.unload({
+      //       ids: ['Women']
+      //     });
+      //
+      //   }
+      //
+      //   if (eventlayer.layer == mGroup) {
+      //
+      //     chart.unload({
+      //       ids: ['# Men']
+      //     });
+      //
+      //     fChart.unload({
+      //       ids: ['Men']
+      //     });
+      //
+      //     tChart.unload({
+      //       ids: ['Men']
+      //     });
+      //
+      //   }
+      //
+      // });
 
     });
 
@@ -348,6 +445,121 @@
       // .css("font-size", "14px")
       .css("background-color", "transparent")
       .html("");
+
+
+    // $("#hmSwitcher input").on("click", function() {
+    //   if ($("#hmSwitcher input:checked").val() === "on") {
+    //     heatmapFlag = true;
+    //     var colors = chroma.scale('Spectral').domain([0, 50]).colors(50); //colors = chroma.scale('OrRd').colors(5);
+    //     $("#hmLegendContainer").append("<div id='hmLegend'> </div>")
+    //     for (var j = 0; j < colors.length; j++) {
+    //       $("#hmLegend").append("<i style='background: " + colors[j] + " ; opacity:0.9'></i>");
+    //     }
+    //     $("#hmLegend").parent().append("<span>more</span>");
+    //     $("#hmLegend").parent().append("&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span>less</span>");
+    //
+    //   } else {
+    //     heatmapFlag = false;
+    //     $("#hmLegendContainer").empty();
+    //   }
+    //
+    //   update({
+    //     x: +$("#year").text()
+    //   });
+    //
+    // });
+    //
+    //
+    // function update(d) {
+    //   $("#year").text(d.x);
+    //
+    //   mGroup.clearLayers();
+    //   wGroup.clearLayers();
+    //   mHeatmap.setLatLngs([]);
+    //   wHeatmap.setLatLngs([]);
+    //
+    //
+    //
+    //   if (mymap.hasLayer(mGroup)) {
+    //     if (!heatmapFlag) {
+    //       mLayers[d.x].addTo(mGroup);
+    //     } else {
+    //       $.each(mLayers[d.x]._layers, function(i, d) {
+    //         mHeatmap.addLatLng(new L.latLng(d.feature.geometry.coordinates[1], d.feature.geometry.coordinates[0]));
+    //       });
+    //     }
+    //
+    //
+    //
+    //
+    //     fChart.load({
+    //       columns: [
+    //         ["Men", Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1]
+    //       ]
+    //     });
+    //
+    //
+    //     tChart.load({
+    //       columns: [
+    //         ["Men", Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1]
+    //       ]
+    //     });
+    //
+    //
+    //
+    //   }
+    //
+    //
+    //
+    //   if (mymap.hasLayer(wGroup)) {
+    //
+    //     if (d.x == 1965 || d.x == 1975 || d.x == 1983) {
+    //       fChart.load({
+    //         columns: [
+    //           ["Women", 0, 0, 0, 0]
+    //         ]
+    //       });
+    //
+    //       tChart.load({
+    //         columns: [
+    //           ["Women", 0, 0, 0, 0, 0]
+    //         ]
+    //       });
+    //
+    //     } else {
+    //
+    //       if (!heatmapFlag) {
+    //         wLayers[d.x].addTo(wGroup);
+    //       } else {
+    //         $.each(wLayers[d.x]._layers, function(i, d) {
+    //           wHeatmap.addLatLng(new L.latLng(d.feature.geometry.coordinates[1], d.feature.geometry.coordinates[0]));
+    //         });
+    //       }
+    //
+    //
+    //       fChart.load({
+    //         columns: [
+    //           ["Women", Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1]
+    //         ]
+    //       });
+    //
+    //
+    //       tChart.load({
+    //         columns: [
+    //           ["Women", Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1]
+    //         ]
+    //       });
+    //
+    //     }
+    //
+    //
+    //   }
+    //
+    //
+    //
+    //
+    //
+    // }
   </script>
 </body>
 
