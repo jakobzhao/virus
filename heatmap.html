@@ -1,0 +1,766 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Bo Zhao">
+  <title>Damron Guide: Seattle</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.14/c3.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/heatmap.css">
+  <!-- <link rel="stylesheet" href="css/jqcloud.css"> -->
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <script src="https://unpkg.com/d3@5/dist/d3.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.14/c3.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+  <script src="js/leaflet.heat.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.3.4/chroma.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- <script src="js/jqcloud.js"></script> -->
+</head>
+
+<body>
+  <header>
+    <div class="collapse bg-dark" id="navbarHeader">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-8 col-md-7 py-4">
+            <h4 class="text-white">About</h4>
+            <p class="text-muted">This website utilizes online maps to
+              visually explore Damron’s Travel Guide.</p>
+
+            <p class="text-muted">The guidebook’s author, Bob Damron, gave gay readers hope by fleshing out worlds that would’ve otherwise remained unknowable. His list confirmed that a gay America existed and that within this quasi-nation, many
+              smaller gay Americas proliferated. Each one was bound by unique affinities whose siren songs went muffled. With tact, Damron amplified these calls. His guidebook told where to find doorways flowing towards danger and joyful possibility.
+              It pinpointed thresholds leading to family, community, sex, and love.</p>
+
+
+          </div>
+          <div class="col-sm-4 offset-md-1 py-4">
+            <h4 class="text-white">Contact</h4>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white">Follow on Twitter</a></li>
+              <li><a href="#" class="text-white">Like on Facebook</a></li>
+              <li><a href="#" class="text-white">Email me</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="navbar-expand-md navbar-dark bg-dark shadow-sm">
+          <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item">
+              <a class="nav-link" href="seattle.html">Seattle</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="atlanta.html">Atlanta</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="omaha.html">Omaha</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="worcester.html">Worcester</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+      <div class="container-fluid d-flex justify-content-between">
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+          <img src="img/logo.png" class="img-responsive" height="30"></img>
+          <strong>&nbsp;&nbsp;Damron Guide</strong>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="loader"></div>
+    <div id="upper_panel" class="d-flex align-items-start flex-column">
+      <span id="year">2012</span>
+      <div id="timeline-chart"></div>
+      <div id="mapToggle" class="col-md-5 align-items-center">
+        <span id="mapType">Heatmap</span>
+        <label id="hmSwitcher" class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <div id="hmLegendContainer"></div>
+      </div>
+    </div>
+
+    <div id="info" class="d-flex flex-column">
+      <h4>Seattle <i class="showFrontPage fas fa-question-circle"></i></h4>
+      <p id="caseDesc"><img src="img/seattle2.png" align="left" style="width:70px; margin-right:10px"></img> This online map visualizes the spatial pattern and temporal changes of the LGBT related places in Seattle. The map was created and geo-referenced by the data
+        digitalized from Damron's Travel Guide, and the charts below was made by simulated datasets.
+      </p>
+      <div id="cloud"></div>
+      <div id="fChart"></div>
+      <div id="tChart"></div>
+
+    </div>
+    <div id="map"></div>
+  </main>
+
+  <!-- Modal -->
+  <div id="disclaimer" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document"  style="width:1250px!important">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Help</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img class="img-fluid" src="img/help.png"></img>
+        </div>
+        <div class="modal-footer">
+          <div class="col-md-10">
+            <span id="mapType">Don't show this info again.</span>
+            <label id="nextTimeSwitcher" class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <button id="disclaimer-close" type="button" class="btn btn-primary col-md-2">close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+
+    // $(window).ready(function() {
+    //   $('.loader').fadeOut("slow");
+    //
+    //
+    //   $("#nextTimeSwitcher input").on("click", function() {
+    //     if ($("#nextTimeSwitcher input:checked").val() === "on") {
+    //       localStorage.setItem('popState', 'shown');
+    //     } else {
+    //
+    //       localStorage.setItem('popState', 'notShown');
+    //     }
+    //   })
+    //
+    //   if (localStorage.getItem('popState') != 'shown') {
+    //     console.log("show disclaimer");
+    //     $('#disclaimer').modal('show');
+    //
+    //   } else {
+    //     console.log("hide disclaimer");
+    //     $('#disclaimer').modal('hide');
+    //   }
+    //   $('#disclaimer-close').click(function(e) // You are clicking the close button
+    //     {
+    //       $('#disclaimer').fadeOut(); // Now the pop up is hiden.
+    //       $('#disclaimer').modal('hide');
+    //     });
+    // });
+    //
+    // $(".showFrontPage").on("click", function() {
+    //   $('#disclaimer').modal('show');
+    //   localStorage.setItem('popState', 'notShown');
+    // })
+
+
+
+
+    var mymap = L.map('map', {
+      center: [47.609, -122.342],
+      zoomControl: false,
+      zoom: 13,
+      maxZoom: 18,
+      minZoom: 11
+    });
+
+    new L.Control.Zoom({
+      position: 'topright'
+    }).addTo(mymap);
+
+
+    // var dark = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png').addTo(mymap);
+    var grayscale = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}@2x.png').addTo(mymap);
+    var streets = L.tileLayer('http://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}@2x.png');
+    var satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}@2x');
+
+    var baseLayers = {
+      // 'Dark': dark,
+      'Grayscale': grayscale,
+      'Streets': streets,
+      'Satellite': satellite
+    }
+
+
+    var mGroup = L.layerGroup().addTo(mymap);
+    var wGroup = L.layerGroup().addTo(mymap);
+    var mLayers, wLayers;
+    var chart, fChart;
+    var heatmapFlag = false;
+    var colorscheme = chroma.scale('OrRd').colors(10).reverse(); //colorscheme = chroma.scale('OrRd').colors(5);
+
+    var mHeatmap = L.heatLayer([], {
+      radius: 60,
+      blur: 50,
+      gradient: {
+        0.45: "rgb(0,0,255)",
+        0.55: "rgb(0,255,255)",
+        0.65: "rgb(0,255,0)",
+        0.95: "rgb(255,255,0)",
+        1.0: "rgb(255,0,0)"
+      }
+    }).addTo(mymap);
+
+
+    var wHeatmap = L.heatLayer([], {
+      radius: 60,
+      blur: 50,
+      gradient: {
+        0.45: "rgb(0,0,255)",
+        0.55: "rgb(0,255,255)",
+        0.65: "rgb(0,255,0)",
+        0.95: "rgb(255,255,0)",
+        1.0: "rgb(255,0,0)"
+      }
+    }).addTo(mymap);
+
+
+    var zoningColors = chroma.scale('Set2').mode('lch').colors(11);
+    var acsColors = chroma.scale('YlOrRd').colors(8);
+
+
+    var overlays = {
+      "<i class='fas fa-circle fa-xs men'></i> <span style='color: rgb(0,40,255)'>Men</span>": mGroup,
+      "<i class='fas fa-circle fa-xs women'></i> <span style='color: rgb(255,0,255)'>Women</span>": wGroup,
+      "<span>Place Names</span>": L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}@2x.png').addTo(mymap)
+    }
+
+    L.control.layers(baseLayers, overlays, {
+      collapsed: false,
+      position: 'topright'
+    }).addTo(mymap);
+
+
+
+    Promise.all(d3.json("assets/cases-heatmap.csv")).then(function(datasets) {
+
+
+      mLayers = {
+        1965: L.geoJSON(datasets[0], {
+          onEachFeature: function(feature, layer) {
+            layer.bindPopup("<p class='mapPopup'>" + feature.properties.Name + "</p>");
+          },
+          pointToLayer: function(feature, latlng) {
+            return L.marker(latlng, {
+              icon: L.divIcon({
+                className: 'fas fa-circle fa-xs men glow-effect'
+              })
+            });
+          }
+        }),
+        1975: L.geoJSON(datasets[1], {
+          onEachFeature: function(feature, layer) {
+            layer.bindPopup("<p class='mapPopup'>" + feature.properties.Name + "</p>");
+          },
+          pointToLayer: function(feature, latlng) {
+            return L.marker(latlng, {
+              icon: L.divIcon({
+                className: 'fas fa-circle fa-xs men glow-effect'
+              })
+            });
+          }
+        }),
+        1983: L.geoJSON(datasets[2], {
+          onEachFeature: function(feature, layer) {
+            layer.bindPopup("<p class='mapPopup'>" + feature.properties.Name + "</p>");
+          },
+          pointToLayer: function(feature, latlng) {
+            return L.marker(latlng, {
+              icon: L.divIcon({
+                className: 'fas fa-circle fa-xs men glow-effect'
+              })
+            });
+          }
+        }),
+        1995: L.geoJSON(datasets[3], {
+          onEachFeature: function(feature, layer) {
+            layer.bindPopup("<p class='mapPopup'>" + feature.properties.Name + "</p>");
+          },
+          pointToLayer: function(feature, latlng) {
+            return L.marker(latlng, {
+              icon: L.divIcon({
+                className: 'fas fa-circle fa-xs men glow-effect'
+              })
+            });
+          }
+        }),
+        2005: L.geoJSON(datasets[4], {
+          onEachFeature: function(feature, layer) {
+            layer.bindPopup("<p class='mapPopup'>" + feature.properties.Name + "</p>");
+          },
+          pointToLayer: function(feature, latlng) {
+            return L.marker(latlng, {
+              icon: L.divIcon({
+                className: 'fas fa-circle fa-xs men glow-effect'
+              })
+            });
+          }
+        }),
+        2009: L.geoJSON(datasets[4], {
+          onEachFeature: function(feature, layer) {
+            layer.bindPopup("<p class='mapPopup'>" + feature.properties.Name + "</p>");
+          },
+          pointToLayer: function(feature, latlng) {
+            return L.marker(latlng, {
+              icon: L.divIcon({
+                className: 'fas fa-circle fa-xs men glow-effect'
+              })
+            });
+          }
+        }),
+        2012: L.geoJSON(datasets[4], {
+          onEachFeature: function(feature, layer) {
+            layer.bindPopup("<p class='mapPopup'>" + feature.properties.Name + "</p>");
+          },
+          pointToLayer: function(feature, latlng) {
+            return L.marker(latlng, {
+              icon: L.divIcon({
+                className: 'fas fa-circle fa-xs men glow-effect'
+              })
+            });
+          }
+        }),
+        2014: L.geoJSON(datasets[5], {
+          onEachFeature: function(feature, layer) {
+            layer.bindPopup("<p class='mapPopup'>" + feature.properties.Name + "</p>");
+          },
+          pointToLayer: function(feature, latlng) {
+            return L.marker(latlng, {
+              icon: L.divIcon({
+                className: 'fas fa-circle fa-xs men glow-effect'
+              })
+            });
+          }
+        })
+      };
+
+      wLayers = {
+        1995: L.geoJSON(datasets[6], {
+          onEachFeature: function(feature, layer) {
+            layer.bindPopup("<p class='mapPopup'>" + feature.properties.Name + "</p>");
+          },
+          pointToLayer: function(feature, latlng) {
+            return L.marker(latlng, {
+              icon: L.divIcon({
+                className: 'fas fa-circle fa-xs women glow-effect'
+              })
+            });
+          }
+        }),
+        2005: L.geoJSON(datasets[7], {
+          onEachFeature: function(feature, layer) {
+            layer.bindPopup("<p class='mapPopup'>" + feature.properties.Name + "</p>");
+          },
+          pointToLayer: function(feature, latlng) {
+            return L.marker(latlng, {
+              icon: L.divIcon({
+                className: 'fas fa-circle fa-xs women glow-effect'
+              })
+            });
+          }
+        }),
+        2009: L.geoJSON(datasets[8], {
+          onEachFeature: function(feature, layer) {
+            layer.bindPopup("<p class='mapPopup'>" + feature.properties.Name + "</p>");
+          },
+          pointToLayer: function(feature, latlng) {
+            return L.marker(latlng, {
+              icon: L.divIcon({
+                className: 'fas fa-circle fa-xs women glow-effect'
+              })
+            });
+          }
+        }),
+        2012: L.geoJSON(datasets[9], {
+          onEachFeature: function(feature, layer) {
+            layer.bindPopup("<p class='mapPopup'>" + feature.properties.Name + "</p>");
+          },
+          pointToLayer: function(feature, latlng) {
+            return L.marker(latlng, {
+              icon: L.divIcon({
+                className: 'fas fa-circle fa-xs women glow-effect'
+              })
+            });
+          }
+        }),
+        2014: L.geoJSON(datasets[10], {
+          onEachFeature: function(feature, layer) {
+            layer.bindPopup("<p class='mapPopup'>" + feature.properties.Name + "</p>");
+          },
+          pointToLayer: function(feature, latlng) {
+            return L.marker(latlng, {
+              icon: L.divIcon({
+                className: 'fas fa-circle fa-xs women glow-effect'
+              })
+            });
+          }
+        })
+      };
+
+      mLayers[2012].addTo(mGroup);
+      wLayers[2012].addTo(wGroup);
+
+
+
+      var t = ["t"];
+      var mPop = ["# Men"];
+      var wPop = ["# Women"];
+
+      datasets[11].forEach(function(d) {
+        t.push(d["t"])
+        mPop.push(+d["m"])
+        wPop.push(+d["w"])
+      });
+
+
+      chart = c3.generate({
+        size: {
+          height: 80,
+          width: 480
+        },
+        data: {
+          x: "t",
+          columns: [t, mPop, wPop],
+          onmouseover: update,
+          type: 'area',
+          labels: false,
+          colors: {
+            "# Women": 'rgba(255, 0, 255, .6)',
+            "# Men": 'rgba(0, 40, 255, .6)'
+          },
+          groups: [
+            ["# Women", "# Men"]
+          ]
+        },
+        area: {
+          zerobased: true
+        },
+        tooltip: {
+          show: false
+        },
+        legend: {
+          show: false
+        },
+        point: {
+          r: 3,
+          focus: {
+            expand: {
+              r: 10
+            }
+          }
+        },
+        bindto: "#timeline-chart"
+      });
+
+
+      fChart = c3.generate({
+        size: {
+          height: 200
+        },
+        data: {
+          x: 'x',
+          columns: [
+            ['x', '$', '18+', 'Weelchair', 'Private CI'],
+            ['Men', 13, 20, 10, 30],
+            ['Women', 19, 10, 14, 20],
+          ],
+          groups: [
+            ['Men', 'Women']
+          ],
+          colors: {
+            "Women": 'rgba(255, 0, 255, .6)',
+            "Men": 'rgba(0, 40, 255, .6)'
+          },
+          type: 'bar'
+        },
+        axis: {
+          x: {
+            type: 'category' // this needed to load string x value
+          },
+          y: {
+            label: {
+              text: '# of places',
+              position: 'outer-middle'
+            }
+          }
+        },
+        legend: {
+          show: false
+        },
+        bindto: "#fChart"
+      });
+
+
+      tChart = c3.generate({
+        size: {
+          height: 200
+        },
+        data: {
+          x: 'x',
+          columns: [
+            ['x', 'Restaurants', 'Bar', 'Accommodation', 'Erotica', 'Cruisy Area'],
+            ['Men', 15, 13, 15, 30, 20],
+            ['Women', 30, 12, 20, 20, 14],
+          ],
+          groups: [
+            ['Men', 'Women']
+          ],
+          colors: {
+            "Women": 'rgba(255, 0, 255, .6)',
+            "Men": 'rgba(0, 40, 255, .6)'
+          },
+          type: 'bar'
+        },
+        axis: {
+          x: {
+            type: 'category' // this needed to load string x value
+          },
+          y: {
+            label: {
+              text: '# of places',
+              position: 'outer-middle'
+            }
+          }
+        },
+        // legend: {
+        //   position: 'inset',
+        //   inset: {
+        //     anchor: "top-left"
+        //   },
+        // },
+        bindto: "#tChart"
+      });
+
+      $($($("#timeline-chart svg").children()[1]).children()[6]).hide();
+
+
+
+      mymap.on('overlayadd', function(eventlayer) {
+        if (eventlayer.layer == wGroup) {
+
+          chart.load({
+            columns: [wPop]
+          });
+
+          fChart.load({
+            columns: [
+              ["Women", Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1]
+            ]
+          });
+
+          tChart.load({
+            columns: [
+              ["Women", Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1]
+            ]
+          });
+        }
+
+        if (eventlayer.layer == mGroup) {
+          chart.load({
+            columns: [mPop]
+          });
+
+          fChart.load({
+            columns: [
+              ["Men", Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1]
+            ]
+          });
+
+          tChart.load({
+            columns: [
+              ["Men", Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1]
+            ]
+          });
+        }
+
+      });
+
+
+
+
+      mymap.on('overlayremove', function(eventlayer) {
+        if (eventlayer.layer == wGroup) {
+
+          chart.unload({
+            ids: ['# Women']
+          });
+
+          fChart.unload({
+            ids: ['Women']
+          });
+          tChart.unload({
+            ids: ['Women']
+          });
+
+        }
+
+        if (eventlayer.layer == mGroup) {
+
+          chart.unload({
+            ids: ['# Men']
+          });
+
+          fChart.unload({
+            ids: ['Men']
+          });
+
+          tChart.unload({
+            ids: ['Men']
+          });
+
+        }
+
+      });
+
+    });
+
+
+
+
+    $(".leaflet-control-attribution")
+      .css("bottom", "60px")
+      // .css("right", "120px")
+      // .css("font-size", "14px")
+      .css("background-color", "transparent")
+      .html("<a class='rainbow' href='https://geography.washington.edu'>Supported by Geography @ University of Washington</a>");
+
+
+    $("#hmSwitcher input").on("click", function() {
+      if ($("#hmSwitcher input:checked").val() === "on") {
+        heatmapFlag = true;
+        var colors = chroma.scale('Spectral').domain([0, 50]).colors(50); //colors = chroma.scale('OrRd').colors(5);
+        $("#hmLegendContainer").append("<div id='hmLegend'> </div>")
+        for (var j = 0; j < colors.length; j++) {
+          $("#hmLegend").append("<i style='background: " + colors[j] + " ; opacity:0.9'></i>");
+        }
+        $("#hmLegend").parent().append("<span>more</span>");
+        $("#hmLegend").parent().append("&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span>less</span>");
+
+      } else {
+        heatmapFlag = false;
+        $("#hmLegendContainer").empty();
+      }
+
+      update({
+        x: +$("#year").text()
+      });
+
+    });
+
+
+    function update(d) {
+      $("#year").text(d.x);
+
+      mGroup.clearLayers();
+      wGroup.clearLayers();
+      mHeatmap.setLatLngs([]);
+      wHeatmap.setLatLngs([]);
+
+
+
+      if (mymap.hasLayer(mGroup)) {
+        if (!heatmapFlag) {
+          mLayers[d.x].addTo(mGroup);
+        } else {
+          $.each(mLayers[d.x]._layers, function(i, d) {
+            mHeatmap.addLatLng(new L.latLng(d.feature.geometry.coordinates[1], d.feature.geometry.coordinates[0]));
+          });
+        }
+
+
+
+
+        fChart.load({
+          columns: [
+            ["Men", Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1]
+          ]
+        });
+
+
+        tChart.load({
+          columns: [
+            ["Men", Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1]
+          ]
+        });
+
+
+
+      }
+
+
+
+      if (mymap.hasLayer(wGroup)) {
+
+        if (d.x == 1965 || d.x == 1975 || d.x == 1983) {
+          fChart.load({
+            columns: [
+              ["Women", 0, 0, 0, 0]
+            ]
+          });
+
+          tChart.load({
+            columns: [
+              ["Women", 0, 0, 0, 0, 0]
+            ]
+          });
+
+        } else {
+
+          if (!heatmapFlag) {
+            wLayers[d.x].addTo(wGroup);
+          } else {
+            $.each(wLayers[d.x]._layers, function(i, d) {
+              wHeatmap.addLatLng(new L.latLng(d.feature.geometry.coordinates[1], d.feature.geometry.coordinates[0]));
+            });
+          }
+
+
+          fChart.load({
+            columns: [
+              ["Women", Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1, Math.floor(Math.random() * 40) + 1]
+            ]
+          });
+
+
+          tChart.load({
+            columns: [
+              ["Women", Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1, Math.floor(Math.random() * 25) + 1]
+            ]
+          });
+
+        }
+
+
+      }
+
+
+
+
+
+    }
+  </script>
+</body>
+
+</html>
