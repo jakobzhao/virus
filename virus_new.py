@@ -90,7 +90,7 @@ for item in items[2:]:
     if name == "hong kong":
         continue
 
-    if name == "china (mainland)":
+    if name == "china":
         continue
 
     confirmed = item.find_all("td")[0].text.split("\n")[0].replace(",","")
