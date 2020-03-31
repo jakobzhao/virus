@@ -307,7 +307,7 @@
         <div class="modal-body">
           <div id="demo" class="carousel " data-ride="carousel">
             <h5>Coronavirus information resources</h5>
-            <br><b> China - Official Websites</b>
+            <!-- <br><b> China - Official Websites</b> -->
             <table style="width:100%">
               <tr>
                 <td><a href="http://wjw.beijing.gov.cn/xwzx_20031/wnxw/" target="_blank"> Beijing</a></td>
@@ -346,20 +346,21 @@
                 <td><a href="http://wjw.xizang.gov.cn/xwzx/wsjkdt/" target="_blank"> Xizang</a></td>
               </tr>
               <tr>
-                <td><a href="https://www.ssm.gov.mo/apps1/PreventWuhanInfection/ch.aspx#clg17046" target="_blank"> Macau</a></td>
-                <td><a href="https://sites.google.com/cdc.gov.tw/2019ncov/taiwan" target="_blank"> Taiwan</a></td>
+                <td><a href="http://wjw.nmg.gov.cn/xwzx/xwfb/index.shtml" target="_blank"> Neimenggu</a></td>
+                <td><a href="http://wsjkw.sc.gov.cn/scwsjkw/gzbd01/ztwzlmgl.shtml" target="_blank"> Sichuan</a></td>
                 <td><a href="http://wsjkw.hlj.gov.cn/index.php/Home/Zwgk/all/typeid/42" target="_blank"> Heilongjiang</a></td>
                 <td><a href="https://v.gxnews.com.cn/zt/2020yq" target="_blank"> Guangxi</a></td>
               </tr>
               <tr>
                 <td><a href="http://wjw.ah.gov.cn/news_list_477_1.html" target="_blank"> Anhui</a></td>
-                <td><a href="http://wjw.nmg.gov.cn/xwzx/xwfb/index.shtml" target="_blank"> Neimenggu</a></td>
-                <td><a href="http://wsjkw.sc.gov.cn/scwsjkw/gzbd01/ztwzlmgl.shtml" target="_blank"> Sichuan</a></td>
+
+                <td><a href="https://www.ssm.gov.mo/apps1/PreventWuhanInfection/ch.aspx#clg17046" target="_blank"> Macau</a></td>
+                <td><a href="https://sites.google.com/cdc.gov.tw/2019ncov/taiwan" target="_blank"> Taiwan</a></td>
                 <td><a href="https://www.chp.gov.hk/files/pdf/enhanced_sur_pneumonia_wuhan_chi.pdf" target="_blank"> Hongkong</a></td>
               </tr>
-            </table>
+              <!-- </table>
             <br><b> the US - Official Websites</b>
-            <table style="width:100%">
+            <table style="width:100%"> -->
               <tr>
                 <td><a href="http://www.alabamapublichealth.gov/infectiousdiseases/2019-coronavirus.html" target="_blank">Alabama</a></td>
                 <td><a href="https://dphhs.mt.gov/publichealth/cdepi/diseases/coronavirusmt" target="_blank">Montana</a></td>
@@ -427,7 +428,7 @@
                 <td><a href="https://health.mo.gov/living/healthcondiseases/communicable/novel-coronavirus/" target="_blank">Missouri</a></td>
               </tr>
             </table>
-            <br><b>Other Countries - Official Websites</b>
+            <br><b>Other Official Websites</b>
             <table style="width:100%">
               <tr>
                 <td><a href="https://www.cdc.gov/coronavirus/2019-ncov/cases-in-us.html" target="_blank"> the U.S.</a></td>
@@ -933,17 +934,26 @@
         //add reference source for each place
         if (datasets[4]["columns"].includes(name)) {
           $("#source-website").html( //Unisted states
-            '<a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/"> WHO</a>, <a target="_blank" href="https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/cases-in-us.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fcases-in-us.html">CDC</a> and <a target="_blank" href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546">NBC News</a>.');
+            '<a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/"> WHO</a>, <a target="_blank" href="https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/cases-in-us.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fcases-in-us.html">CDC</a> and <a target="_blank" href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546">NBC News</a>.'
+            );
         } else if (datasets[5]["columns"].includes(name)) { //Canada
           $("#source-website").html('<a target="_blank" href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html">Public Health Agency of Canada.</a>');
         } else if (datasets[6]["columns"].includes(name)) { //China
-          $("#source-website").html('<a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/"> WHO</a>, <a target="_blank" href="http://www.nhc.gov.cn/xcs/xxgzbd/gzbd_index.shtml">China CDC</a>, and <a target="_blank" href="https://voice.baidu.com/act/newpneumonia/newpneumonia">Baidu</a>.');
+          $("#source-website").html(
+            '<a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/"> WHO</a>, <a target="_blank" href="http://www.nhc.gov.cn/xcs/xxgzbd/gzbd_index.shtml">China CDC</a>, and <a target="_blank" href="https://voice.baidu.com/act/newpneumonia/newpneumonia">Baidu</a>.'
+            );
         } else if (name == "Global Trend") { //global
-          $("#source-website").html('<a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/"> WHO</a>, <a target="_blank" href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546">NBC News</a>, <a target="_blank" href="https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/cases-in-us.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fcases-in-us.html">CDC</a>, <a target="_blank" href="https://voice.baidu.com/act/newpneumonia/newpneumonia">Baidu</a>, <a target="_blank" href="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic">Wikipedia</a>, and etc.');
+          $("#source-website").html(
+            '<a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/"> WHO</a>, <a target="_blank" href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546">NBC News</a>, <a target="_blank" href="https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/cases-in-us.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fcases-in-us.html">CDC</a>, <a target="_blank" href="https://voice.baidu.com/act/newpneumonia/newpneumonia">Baidu</a>, <a target="_blank" href="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic">Wikipedia</a>, and etc.'
+            );
         } else if (name == "japan") { //japan
-          $("#source-website").html('<a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/"> WHO</a>, <a target="_blank" href="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic">Wikipedia</a>, and <a target="_blank" href="https://voice.baidu.com/act/newpneumonia/newpneumonia">Baidu</a>. The discrepancy on the data in Japan between March 11th and March 12th comes from the disagreement of whether to include cases from the Princess Diamond cruise.');
+          $("#source-website").html(
+            '<a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/"> WHO</a>, <a target="_blank" href="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic">Wikipedia</a>, and <a target="_blank" href="https://voice.baidu.com/act/newpneumonia/newpneumonia">Baidu</a>. The discrepancy on the data in Japan between March 11th and March 12th comes from the disagreement of whether to include cases from the Princess Diamond cruise.'
+            );
         } else { //Other countries
-          $("#source-website").html('<a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/"> WHO</a>, <a target="_blank" href="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic">Wikipedia</a>, and <a target="_blank" href="https://voice.baidu.com/act/newpneumonia/newpneumonia">Baidu</a>.');
+          $("#source-website").html(
+            '<a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/"> WHO</a>, <a target="_blank" href="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic">Wikipedia</a>, and <a target="_blank" href="https://voice.baidu.com/act/newpneumonia/newpneumonia">Baidu</a>.'
+            );
         }
       }
 
@@ -1130,7 +1140,7 @@
         },
         zoom: {
           enabled: true,
-           type: "scroll"
+          type: "scroll"
         },
         axis: {
           x: {
