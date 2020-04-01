@@ -1,27 +1,15 @@
-﻿Cases,Date,Location,Notes,News Reference
-NO.1576,2020/3/23,SK,3/23 North Region total 3 cases.,www.saskatchewan.ca 
-NO.1577-1588,2020/3/23,SK,3/23 Regina Region total 20 cases.,www.saskatchewan.ca 
-NO.1589-1630,2020/3/23,AB,3/23 42 new cases of coronavirus confirmed in Alberta,dailyhive.com 
-NO.1631-1632,2020/3/23,QC,By 3/22.  threre are 3 cases in Bas-Saint-Laurent.,www.quebec.ca 
-NO.1633-1652,2020/3/23,QC,3/23 There are now 628 confirmed cases in Quebec. 33 from Capitale Nationale.,www.quebec.ca 
-NO.1653-1654,2020/3/23,QC,3/23 There are now 628 confirmed cases in Quebec.  15 from Chaudière-Appalaches.,www.quebec.ca 
-NO.1655-1672,2020/3/23,QC,3/22 There are now 628 confirmed cases in Quebec.  48 from Estrie.,www.quebec.ca 
-NO.1673-1707,2020/3/23,QC,3/23 There are now 628 confirmed cases in Quebec.  50 from Lanaudière.,www.quebec.ca 
-NO.1708-1720,2020/3/23,QC,3/23 There are now 628 confirmed cases in Quebec. 30 from Laurentides.,www.quebec.ca 
-NO.1721-1737,2020/3/23,QC,3/23 There are now 628confirmed cases in Quebec. 21 from Laval.,www.quebec.ca 
-NO.1738-1746,2020/3/23,QC,3/23 There are now 628 confirmed cases in Quebec.  16 from Mauricie - Centre du Québec.,www.quebec.ca 
-NO.1747-1772,2020/3/23,QC,3/21 There are now 628 confirmed cases in Quebec.  66 from Montérégie.,www.quebec.ca 
-NO.1773-1991,2020/3/23,QC,3/23 There are now 628 confirmed cases in Quebec.  265 from Montréal.,www.quebec.ca 
-NO.1992-1994,2020/3/23,QC,3/23 There are now 628confirmed cases in Quebec.  8 from Outaouais.,www.quebec.ca 
-NO.1995,2020/3/23,QC,3/23 QC increased 11 cases.  1 is Outside Québec,www.quebec.ca 
-NO.1996-2033,2020/3/23,QC,3/23 QC has reported 628cases.  62 cases area detail have not been assigned.,www.quebec.ca 
-NO.2034-2036,2020/3/23,QC,The number of novel coronavirus cases in Quebec has spiked to 628.  Gaspésie-Îles-de-la-Madeleine has 3 of them.,globalnews.ca 
-NO.2037,2020/3/24,ON,On 3/24 Ontario confirms that 7 people have died from COVID-17. [Death],www.cbc.ca 
-NO.2038,2020/3/24,MB,The newest probable positive case is a man in his 40s who lives in Winnipeg.,news.gov.mb.ca 
-NO.2039-2048,2020/3/24,NS,Ten new cases were identified Monday.  March 23. The cases are travel-related or connected to earlier reported cases.,novascotia.ca 
-NO.2049-2051,2020/3/24,ON,Health officials in Ontario say there are three new confirmed cases of COVID-19 in Ottawa. (A woman in her 30s and a man in his 40s in Ottawa who had been in close contact with a confirmed case. A man in his 50s in Ottawa who had been in the U.S.),www.cbc.ca 
-NO.2052-2054,2020/3/24,ON,Health officials in Ontario say there are three new confirmed cases of COVID-19 in the Kingston area. (A man in his 30s in the Kingston area who returned from the U.K. A man and woman in their 70s in the Kingston area who had been in Singapore.),www.cbc.ca 
-NO.2055-2133,2020/3/24,ON,Ontario reported 85 new cases today.  resulting in a total of 588 cases for the province. 6 new confirmed cases are reported from Ottawa and Kingston.  where 79 new cases have not been assigned yet.,www.cbc.ca 
-NO.2134-2144,2020/3/24,NL,Mar 24.  2020 1:22 PM.  Newfoundland and Labrador has 11 new presumptive cases of COVID-19 in the last 24 hours.  says the province's chief medical officer of health. The total number of presumptive and confirmed cases is now 35. The 11 new cases are all within the Eastern Health region of Newfoundland.,www.cbc.ca 
-NO.2145,2020/3/24,NB,Testing has identified one additional case of COVID-19.  bringing the number of cases in New Brunswick to 18.,twitter.com 
-NO.2146-2530,2020/3/24,QC,There are 1. 013 confirmed cases of COVID-19 in Quebec as of Tuesday afternoon.  Quebec health authorities have announced. That's up sharply from the 628 cases that were confirmed as of Monday afternoon.,montreal.ctvnews.ca 
+﻿NO.,Date,State,Notes,News Reference
+,2020/3/29,ON,3/29 Ontario reported one more death. total in 21.,www.cbc.ca 
+,2020/3/29,AB,In a 3/29 update. Alberta officials announced that another person in the province had died due to COVID-19. bringing the death toll to three. The person who died was an 80-year-old woman in the Calgary zone. AHS could not confirm whether or not she was in a care home.,globalnews.ca 
+,2020/3/29,NL,Fitzgerald said the individual was 78 years old. had underlying health issues and was admitted to hospital from home. She also said that person s case is linked to the Caul's Funeral Home cluster. The patient — a retired man in the Eastern Health region — died Sunday. about three days after being hospitalized. Sources tell CBC News his condition deteriorated quickly.,www.cbc.ca 
+,2020/3/30,BC,One more death in BC. 19 deaths in BC by 3/30.,www.cbc.ca 
+,2020/3/30,BC,One more death in BC. 19 deaths in BC by 3/30.,www.cbc.ca 
+,2020/3/30,ON,3/30 Ontario reported its largest single-day increase by far. including 10 new deaths,nationalpost.com 
+,2020/3/30,SK,Saskatchewan recoded its first two virus deaths on Monday.,nationalpost.com 
+,2020/3/30,AB,No further details. please check source link,www.alberta.ca 
+,2020/3/30,QC,In Québec. to date. 3 430 confirmed cases of COVID‑19. including 25 deaths. have been reported.,www.quebec.ca 
+,2020/3/30,AB,No further details. please check source link,www.alberta.ca 
+,2020/3/31,QC,Au Québec. à ce jour. 4 162 cas confirmé de COVID‑19. dont 31 personnes décédées. ont été signalés.,www.quebec.ca 
+,2020/3/31,ON,Region of Waterloo Public Health has confirmed the region s first death related to COVID-19. A man. in his 40s. passed away at St. Mary s General Hospital in Kitchener. Health officials say the man had pre-existing medical conditions.,www.kitchenertoday.com 
+,2020/3/31,BC,No further details. please check source link,bc.ctvnews.ca 
+,2020/3/31,AB,No further details. please check source link,www.alberta.ca 
