@@ -83,7 +83,7 @@ items = table.find_all("tr")
 for item in items[2:]:
     name, confirmed, recovered, death = "", "", "", ""
     try:
-        name = item.find_all("th")[1].text.split("[")[0].split("\n")[0].lower()
+        name = item.find_all("th")[1].text.split("[")[0].split("\n")[0].lower().strip()
     except IndexError:
         break
 
@@ -152,7 +152,7 @@ for province in provinces[1:-1]:
         recovered = "0"
     if death == "" or death == "-":
         death = "0"
-    if confirmed == "" or confirmed == "-" :
+    if confirmed == "" or confirmed == "-":
         confirmed = "0"
     print(enName, confirmed, recovered, death)
     sqls += ", '" + enName.strip() + "'"
