@@ -9,10 +9,10 @@ import urllib
 import requests
 
 #browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver")
-#browser = webdriver.Chrome("/Users/joshuaji/Desktop/chromedriver") #joshua's chromedrive location
+browser = webdriver.Chrome("/Users/joshuaji/Desktop/chromedriver") #joshua's chromedrive location
 #browser = webdriver.Chrome("C:/workspace/chromedriver.exe")
 #browser = webdriver.Chrome("E:/dev/workspaces/chromedriver.exe")
-browser = webdriver.Chrome("/Users/stevenbao/dev/chromedriver")
+#browser = webdriver.Chrome("/Users/stevenbao/dev/chromedriver")
 
 # Variable Preparation
 now = str(datetime.now())
@@ -90,7 +90,8 @@ for item in items[2:]:
     if name == "hong kong":
         continue
 
-    if name == "china":
+    if name == "china (mainland)":
+        name = 'china'
         continue
 
     confirmed = item.find_all("td")[0].text.split("\n")[0].replace(",","")
