@@ -99,8 +99,8 @@ for item in items[2:]:
     if name =="saint vincent and the grenadines":
         name ='st. vincent and the grenadines'
 
-    if name == "china (mainland)":
-        name = 'china'
+    if name == "china (mainland)" or name == "china":
+        continue
 
     if name == "united kingdom":
         name = "uk"
