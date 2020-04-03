@@ -15,15 +15,20 @@ id = 913
 outputs = []
 for line in lines[1:]:
     no = ""
+    ref = line.split(",")
     date = "2020/" + line.split(",")[0]
-    state =  line.split(",")[-3]
-    county = line.split(",")[-2]
     try:
-        note = line.split(",")[3].replace("\n", " ").replace("\r", " ").replace("\t", " ").replace('"', '').replace('"', '').replace('  ', ' ').replace('  ', ' ').replace('  ', ' ').strip()
+        state = line.split(",")[-4]
+        county = line.split(",")[-5]
+    except:
+        state = ""
+        county = ""
+    try:
+        note = line.split(",")[-1].replace("\n", " ").replace("\r", " ").replace("\t", " ").replace('"', '').replace('"', '').replace('  ', ' ').replace('  ', ' ').replace('  ', ' ').strip()
     except:
         note = ""
     try:
-        reference = line.split(",")[-1].strip().replace("\n", " ")
+        reference = line.split(",")[-3].strip().replace("\n", " ")
     except:
         reference = ""
 
