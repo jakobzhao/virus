@@ -1017,7 +1017,7 @@
 
       //this function takes a place's name, set the color background and opacitiy for the place area on the map
       function style(feature) {
-        if (feature.properties.enname == "united states" || feature.properties.enname == "canada") {
+        if (feature.properties.enname == "us" || feature.properties.enname == "canada") {
           return {
             fillOpacity: 0,
             opacity: 0,
@@ -1050,7 +1050,7 @@
         });
         // bring the layer to the front.
         layer.bringToFront();
-        if (e.target.feature.properties.enname == "united states" || e.target.feature.properties.enname == "canada") {
+        if (e.target.feature.properties.enname == "us" || e.target.feature.properties.enname == "canada") {
           layer.bringToBack();
         }
       }

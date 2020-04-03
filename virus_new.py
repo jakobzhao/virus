@@ -9,10 +9,10 @@ import urllib
 import requests
 
 #browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver")
-browser = webdriver.Chrome("/Users/joshuaji/Desktop/chromedriver") #joshua's chromedrive location
+#browser = webdriver.Chrome("/Users/joshuaji/Desktop/chromedriver") #joshua's chromedrive location
 #browser = webdriver.Chrome("C:/workspace/chromedriver.exe")
 #browser = webdriver.Chrome("E:/dev/workspaces/chromedriver.exe")
-#browser = webdriver.Chrome("/Users/stevenbao/dev/chromedriver")
+browser = webdriver.Chrome("/Users/stevenbao/dev/chromedriver")
 
 # Variable Preparation
 now = str(datetime.now())
@@ -90,21 +90,26 @@ for item in items[2:]:
     if name == "hong kong":
         continue
 
-    if name == "usa":
-        name = 'united states'
-        continue
+    if name == "usa" or name == "united states":
+        name = "us"
 
     if name =="swaziland":
         name = 'eswatini'
-        continue
 
     if name =="saint vincent and the grenadines":
         name ='st. vincent and the grenadines'
-        continue
 
     if name == "china (mainland)":
         name = 'china'
-        continue
+
+    if name == "united kingdom":
+        name = "uk"
+
+    if name == "czech republic":
+        name = "czechia"
+
+    if name == "united arab emirates":
+        name = "united arab"
 
     confirmed = item.find_all("td")[0].text.split("\n")[0].replace(",","")
     death = item.find_all("td")[1].text.split("\n")[0].replace(",", "")
