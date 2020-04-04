@@ -127,7 +127,7 @@
 
       <div class="dropdown">
         <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          y-aixs type
+          y-axis type
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <a class="dropdown-item" id = "linear">linear</a>
@@ -1480,17 +1480,16 @@
 
     $("#logarithm").on("click",function() {
       console.log("test");
-      chart.axis.y = {
-        type: 'logarithm',
-      }
-      /*chart.load({
-        bindto: "#total-chart",
-        axis:{
-          y:{
-            type:'logarithm'
-          }
-        }
-      });*/
+      chart.axis.types({
+        y: 'log',
+      });
+    });
+
+    $("#linear").on("click",function() {
+      console.log("test");
+      chart.axis.types({
+        y: 'linear',
+      });
     });
 
   </script>

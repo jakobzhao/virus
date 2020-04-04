@@ -551,10 +551,10 @@ text {
 }
 
 .chart-legend{
-  width: 340px;
+  width: 355px;
   position: absolute;
-  top: 345px;
-  left: 135px;
+  top: 347px;
+  left: 122px;
   font-size: 14px;
   color: grey;
   line-height: 15px;
