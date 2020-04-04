@@ -33,6 +33,7 @@
   <script type="text/javascript" src="js/jquery.sparkline.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/bootstrap4-toggle.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/simplebar.min.js"></script>
 </head>
 
@@ -123,6 +124,18 @@
           </div>
         </div>
       </div>
+
+      <div class="dropdown">
+        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           linear type
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" id = "linear">linear</a>
+          <a class="dropdown-item" id = "logarithm">logarithm</a>
+        </div>
+      </div>
+
+      <p class="chart-legend"> toggle on/off the curve or scroll on the curves to change the date range </P>
 
       <div id="timeline-chart"></div>
       <div id="total-chart"></div>
@@ -1017,7 +1030,7 @@
 
       //this function takes a place's name, set the color background and opacitiy for the place area on the map
       function style(feature) {
-        if (feature.properties.enname == "us" || feature.properties.enname == "canada") {
+        if (feature.properties.enname == "united states" || feature.properties.enname == "canada") {
           return {
             fillOpacity: 0,
             opacity: 0,
@@ -1050,7 +1063,7 @@
         });
         // bring the layer to the front.
         layer.bringToFront();
-        if (e.target.feature.properties.enname == "us" || e.target.feature.properties.enname == "canada") {
+        if (e.target.feature.properties.enname == "united states" || e.target.feature.properties.enname == "canada") {
           layer.bringToBack();
         }
       }
@@ -1136,8 +1149,8 @@
             'Aggr. Confirmed': '#dc3545',
             // Suspected: 'orange',
             'Active Confirmed': 'orange',
-            Recovered: '#28a745',
-            Death: 'SlateBlue'
+            'Recovered': '#28a745',
+            'Death': 'SlateBlue'
           }
         },
         zoom: {
@@ -1184,7 +1197,8 @@
           position: 'inset',
           inset: {
             anchor: "top-left",
-            y: 10
+            y: 0,
+            step: 20
           },
         },
         bindto: "#total-chart"
@@ -1459,6 +1473,27 @@
 
 
     });
+
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    $('.dropdown-toggle').dropdown()
+
+    $("#logarithm").on("click",function() {
+      $(".chart-legend").css({"left": "139px", "width":"345px"});
+      $(".dropdown-toggle").text('logarithm type');
+      chart.axis.types({
+        y: 'log',
+      });
+    });
+
+    $("#linear").on("click",function() {
+      $(".chart-legend").css({"left": "122px", "width":"355px"});
+      $(".dropdown-toggle").text('linear type');
+      chart.axis.types({
+        y: 'linear',
+      });
+    });
+
   </script>
 
   <!-- Google Analytics -->
