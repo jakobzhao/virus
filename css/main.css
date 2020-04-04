@@ -552,13 +552,19 @@ text {
 }
 
 .chart-legend{
-  width: 355px;
+  width: 345px;
   position: relative;
   top: -57px;
-  left: 102px;
+  left: 106px;
   font-size: 14px;
   color: grey;
   line-height: 15px;
   margin: 0;
   height: 1px;
+}
+
+.btn-secondary {
+    color: grey;
+    border-color: grey;
+    background-color:transparent;
 }

@@ -1478,7 +1478,7 @@
 
     $("#logarithm").on("click",function() {
       chart.internal.config.axis_y_tick_format = d3.format(",.2r");
-      $(".chart-legend").css({"left": "123px", "width":"345px"});
+      $(".chart-legend").css({"left": "130px", "width":"325px"});
       $(".dropdown-toggle").text('logarithm type');
       chart.axis.types({
         y: 'log',
@@ -1486,7 +1486,7 @@
     });
 
     $("#linear").on("click",function() {
-      $(".chart-legend").css({"left": "102px", "width":"355px"});
+      $(".chart-legend").css({"left": "106px", "width":"345px"});
       $(".dropdown-toggle").text('linear type');
       chart.axis.types({
         y: 'linear',
