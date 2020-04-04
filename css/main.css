@@ -543,6 +543,7 @@ text {
 .dropdown-item{
   margin: 0;
   color: lightgrey;
+  font-size: 14px;
 }
 
 .dropdown-menu{
@@ -554,7 +555,7 @@ text {
   width: 355px;
   position: absolute;
   top: 347px;
-  left: 122px;
+  left: 119px;
   font-size: 14px;
   color: grey;
   line-height: 15px;
