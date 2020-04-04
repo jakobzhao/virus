@@ -553,11 +553,12 @@ text {
 
 .chart-legend{
   width: 355px;
-  position: absolute;
-  top: 347px;
-  left: 119px;
+  position: relative;
+  top: -57px;
+  left: 102px;
   font-size: 14px;
   color: grey;
   line-height: 15px;
   margin: 0;
+  height: 1px;
 }
