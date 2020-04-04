@@ -224,33 +224,33 @@
 
       <div class="card">
         <div class="card-body legend-color-2">
-          <h5 class="card-title" style="color:black">10</h5>
+          <h5 class="card-title" style="color:black">100</h5>
 
         </div>
       </div>
       <div class="card">
+        <h5 class="card-title" style="color:black">1,000</h5>
         <div class="card-body  legend-color-3">
-          <h5 class="card-title" style="color:black">100</h5>
 
         </div>
       </div>
 
       <div class="card">
         <div class="card-body  legend-color-4">
-          <h5 class="card-title" style="color:black">250</h5>
+          <h5 class="card-title" style="color:black">5,000</h5>
 
         </div>
       </div>
 
       <div class="card">
         <div class="card-body legend-color-5">
-          <h5 class="card-title" style="color:black">1,000</h5>
+          <h5 class="card-title" style="color:black">10,000</h5>
         </div>
       </div>
 
       <div class="card">
         <div class="card-body legend-color-6">
-          <h5 class="card-title" style="color:black">10,000+</h5>
+          <h5 class="card-title" style="color:black">50,000+</h5>
         </div>
       </div>
     </div>
@@ -1007,17 +1007,17 @@
           // return "#00000000";
         }
 
-        if (pop >= 10000) {
+        if (pop >= 50000) {
           id = 5;
-        } else if (pop > 1000 && pop <= 10000) {
+        } else if (pop > 10000 && pop <= 50000) {
           id = 4;
-        } else if (pop > 250 && pop <= 1000) {
+        } else if (pop > 5000 && pop <= 10000) {
           id = 3;
-        } else if (pop > 100 && pop <= 250) {
+        } else if (pop > 1000 && pop <= 5000) {
           id = 2;
-        } else if (pop > 10 && pop <= 100) {
+        } else if (pop > 100 && pop <= 1000) {
           id = 1;
-        } else if (pop > 0 && pop <= 10) {
+        } else if (pop > 0 && pop <= 100) {
           id = 0;
         } else {
           id = -1;
