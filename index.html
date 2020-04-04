@@ -127,7 +127,7 @@
 
       <div class="dropdown">
         <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-           linear type
+           linear option
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <a class="dropdown-item" id = "linear">linear</a>
@@ -1479,7 +1479,7 @@
     $("#logarithm").on("click",function() {
       chart.internal.config.axis_y_tick_format = d3.format(",.2r");
       $(".chart-legend").css({"left": "130px", "width":"325px"});
-      $(".dropdown-toggle").text('logarithm type');
+      $(".dropdown-toggle").text('logarithm option');
       chart.axis.types({
         y: 'log',
       });
@@ -1487,7 +1487,7 @@
 
     $("#linear").on("click",function() {
       $(".chart-legend").css({"left": "106px", "width":"345px"});
-      $(".dropdown-toggle").text('linear type');
+      $(".dropdown-toggle").text('linear option');
       chart.axis.types({
         y: 'linear',
       });
