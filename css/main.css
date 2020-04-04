@@ -392,7 +392,7 @@ text {
 }
 
 
-/* 
+/*
 #footer>div {
   font-size: 13px;
 } */
@@ -531,4 +531,32 @@ text {
   top: -116px;
   left: 38px;
   width: 275px;
+}
+
+/* Dropdown Button */
+.dropdown{
+  position: relative;
+  bottom: 25px;
+  color:lightgrey;
+}
+
+.dropdown-item{
+  margin: 0;
+  color: lightgrey;
+}
+
+.dropdown-menu{
+  padding: 0;
+  background-color: #6c757d;
+}
+
+.chart-legend{
+  width: 340px;
+  position: absolute;
+  top: 345px;
+  left: 135px;
+  font-size: 14px;
+  color: grey;
+  line-height: 15px;
+  margin: 0;
 }
