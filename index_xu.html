@@ -1479,6 +1479,7 @@
     $('.dropdown-toggle').dropdown()
 
     $("#logarithm").on("click",function() {
+      chart.internal.config.axis_y_tick_format = d3.format(",.2r");
       $(".chart-legend").css({"left": "139px", "width":"345px"});
       $(".dropdown-toggle").text('logarithm type');
       chart.axis.types({
