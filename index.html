@@ -531,7 +531,9 @@
 
     //return the totalRecovered number of given country
     function tr(country) {
-      if (country.split("-")[2] == undefined) {
+      if (country == undefined) {
+        country = 0
+      } else if (country.split("-")[2] == undefined) {
         country = 0
       } else {
         country = +country.split("-")[2];
@@ -541,7 +543,9 @@
 
     //return the totalDeath number of given country
     function td(country) {
-      if (country.split("-")[3] == undefined) {
+      if (country == undefined) {
+        country = 0
+      } else if (country.split("-")[3] == undefined) {
         country = 0
       } else {
         country = +country.split("-")[3];
@@ -794,6 +798,12 @@
                 "texas"]) +
               tc(current["utah"]) + tc(current["vermont"]) + tc(current["virginia"]) + tc(current["washington"]) + tc(current["west virginia"]) + tc(current["canada"]));
 
+            cf -= (tc(current["anhui"]) + tc(current["beijing"]) + tc(current["chongqing"]) + tc(current["fujian"]) + tc(current["gansu"]) + tc(current["guangdong"]) + tc(current["guangxi"]) + tc(current["guizhou"]) + tc(current[
+                "hainan"]) + tc(current["hainan"]) + tc(current["hebei"]) + tc(current["heilongjiang"]) + tc(current["henan"]) + tc(current["hubei"]) + tc(current["hunan"]) + tc(current["neimenggu"]) + tc(current["jiangsu"]) + tc(current[
+                "jiangxxi"]) + tc(current["jilin"]) + tc(current["liaoning"]) + tc(current["ningxia"]) + tc(current["qinghai"]) + tc(current["shaanxi"]) + tc(current["shandong"]) + tc(current["shanghai"]) + tc(current[
+                "shanxi"]) + tc(
+                current["sichuan"]) + tc(current["tianjin"]) + tc(current["xinjiang"]) + tc(current["yunnan"]) + tc(current["zhejiang"]) + tc(current["xizang"]));
+
             rc -= (tr(current["alabama"]) + tr(current["alaska"]) + tr(current["arizona"]) + tr(current["arkansas"]) + tr(current["california"]) + tr(current["colorado"]) + tr(current["connecticut"]) + tr(current["delaware"]) + tr(current[
                 "florida"]) + tr(current["georgia usa"]) + tr(current["hawaii"]) + tr(current["idaho"]) + tr(current["illinois"]) + tr(current["indiana"]) + tr(current["iowa"]) + tr(current["kansas"]) + tr(current["kentucky"]) + tr(current[
                 "louisiana"]) + tr(current["maine"]) + tr(current["maryland"]) + tr(current["massachusetts"]) + tr(current["michigan"]) + tr(current["minnesota"]) + tr(current["mississippi"]) + tr(current["missouri"]) + tr(current[
@@ -804,6 +814,12 @@
                 "texas"]) +
               tr(current["utah"]) + tr(current["vermont"]) + tr(current["virginia"]) + tr(current["washington"]) + tr(current["west virginia"]) + tr(current["canada"]));
 
+            rc -= (tr(current["anhui"]) + tr(current["beijing"]) + tr(current["chongqing"]) + tr(current["fujian"]) + tr(current["gansu"]) + tr(current["guangdong"]) + tr(current["guangxi"]) + tr(current["guizhou"]) + tr(current[
+                "hainan"]) + tr(current["hainan"]) + tr(current["hebei"]) + tr(current["heilongjiang"]) + tr(current["henan"]) + tr(current["hubei"]) + tr(current["hunan"]) + tr(current["neimenggu"]) + tr(current["jiangsu"]) + tr(current[
+                "jiangxxi"]) + tr(current["jilin"]) + tr(current["liaoning"]) + tr(current["ningxia"]) + tr(current["qinghai"]) + tr(current["shaanxi"]) + tr(current["shandong"]) + tr(current["shanghai"]) + tr(current[
+                "shanxi"]) + tr(
+                current["sichuan"]) + tr(current["tianjin"]) + tr(current["xinjiang"]) + tr(current["yunnan"]) + tr(current["zhejiang"]) + tr(current["xizang"]));
+
             dd -= (td(current["alabama"]) + td(current["alaska"]) + td(current["arizona"]) + td(current["arkansas"]) + td(current["california"]) + td(current["colorado"]) + td(current["connecticut"]) + td(current["delaware"]) + td(current[
                 "florida"]) + td(current["georgia usa"]) + td(current["hawaii"]) + td(current["idaho"]) + td(current["illinois"]) + td(current["indiana"]) + td(current["iowa"]) + td(current["kansas"]) + td(current["kentucky"]) + td(current[
                 "louisiana"]) + td(current["maine"]) + td(current["maryland"]) + td(current["massachusetts"]) + td(current["michigan"]) + td(current["minnesota"]) + td(current["mississippi"]) + td(current["missouri"]) + td(current[
@@ -813,6 +829,12 @@
                 "ohio"]) + td(current["oklahoma"]) + td(current["oregon"]) + td(current["pennsylvania"]) + td(current["rhode island"]) + td(current["south carolina"]) + td(current["south dakota"]) + td(current["tennessee"]) + td(current[
                 "texas"]) +
               td(current["utah"]) + td(current["vermont"]) + td(current["virginia"]) + td(current["washington"]) + td(current["west virginia"]) + td(current["canada"]));
+
+            dd -= (td(current["anhui"]) + td(current["beijing"]) + td(current["chongqing"]) + td(current["fujian"]) + td(current["gansu"]) + td(current["guangdong"]) + td(current["guangxi"]) + td(current["guizhou"]) + td(current[
+                "hainan"]) + td(current["hainan"]) + td(current["hebei"]) + td(current["heilongjiang"]) + td(current["henan"]) + td(current["hubei"]) + td(current["hunan"]) + td(current["neimenggu"]) + td(current["jiangsu"]) + td(current[
+                "jiangxxi"]) + td(current["jilin"]) + td(current["liaoning"]) + td(current["ningxia"]) + td(current["qinghai"]) + td(current["shaanxi"]) + td(current["shandong"]) + td(current["shanghai"]) + td(current[
+                "shanxi"]) + td(
+                current["sichuan"]) + td(current["tianjin"]) + td(current["xinjiang"]) + td(current["yunnan"]) + td(current["zhejiang"]) + td(current["xizang"]));
 
           } else if (name == "china") {
 
