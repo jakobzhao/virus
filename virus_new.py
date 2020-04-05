@@ -32,7 +32,6 @@ with open("assets/canada-city.txt", "r", encoding="utf-8") as fp:
     for state in states:
         canadacities.append(state.replace("\n","").lower())
 
-'''
 # Chinese Provinces
 url = "https://voice.baidu.com/act/newpneumonia/newpneumonia"
 browser.get(url)
@@ -75,8 +74,6 @@ for item in items[1:35]:
     sqls += ", '" + chineseCity[chname].strip() + "'"
     sqle += "'" + confirmed + "-0-" + recovered + "-" + death + "', "
 
-'''
-
 # Countries
 url = "https://en.wikipedia.org/wiki/Template:2019%E2%80%9320_coronavirus_pandemic_data"
 
@@ -90,6 +87,9 @@ for item in items[2:]:
     except IndexError:
         break
 
+    if name == "hong kong":
+        continue
+
     if name == "usa" or name == "united states":
         name = "us"
 
@@ -99,8 +99,8 @@ for item in items[2:]:
     if name =="saint vincent and the grenadines":
         name ='st. vincent and the grenadines'
 
-    if name == "china":
-        name = "china (mainland)"
+    if name == "china (mainland)" or name == "china":
+        continue
 
     if name == "united kingdom":
         name = "uk"
