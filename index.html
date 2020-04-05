@@ -953,13 +953,15 @@
         if (datasets[6]["columns"].includes(name)) { //add ",CHINA" to every provinces in China
           $("#placename").text(name.toUpperCase() + ", CHINA");
           if (name == "taiwan") {
-            $("#placename").text("Taiwan");
+            $("#placename").text("TAIWAN");
           }
+          ```
           if (name == "hongkong") {
             $("#placename").text("Hong Kong");
           }
+          ```
           if (name == "macau") {
-            $("#placename").text("Macau");
+            $("#placename").text("MACAU");
           }
 
         } else {

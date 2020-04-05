@@ -90,9 +90,6 @@ for item in items[2:]:
     except IndexError:
         break
 
-    if name == "hong kong":
-        continue
-
     if name == "usa" or name == "united states":
         name = "us"
 
