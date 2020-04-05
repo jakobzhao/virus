@@ -9,10 +9,10 @@ import urllib
 import requests
 
 #browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver")
-browser = webdriver.Chrome("/Users/joshuaji/Desktop/chromedriver") #joshua's chromedrive location
+#browser = webdriver.Chrome("/Users/joshuaji/Desktop/chromedriver") #joshua's chromedrive location
 #browser = webdriver.Chrome("C:/workspace/chromedriver.exe")
 #browser = webdriver.Chrome("E:/dev/workspaces/chromedriver.exe")
-#browser = webdriver.Chrome("/Users/stevenbao/dev/chromedriver")
+browser = webdriver.Chrome("/Users/stevenbao/dev/chromedriver")
 
 # Variable Preparation
 now = str(datetime.now())
@@ -32,6 +32,7 @@ with open("assets/canada-city.txt", "r", encoding="utf-8") as fp:
     for state in states:
         canadacities.append(state.replace("\n","").lower())
 
+'''
 # Chinese Provinces
 url = "https://voice.baidu.com/act/newpneumonia/newpneumonia"
 browser.get(url)
@@ -74,6 +75,8 @@ for item in items[1:35]:
     sqls += ", '" + chineseCity[chname].strip() + "'"
     sqle += "'" + confirmed + "-0-" + recovered + "-" + death + "', "
 
+'''
+
 # Countries
 url = "https://en.wikipedia.org/wiki/Template:2019%E2%80%9320_coronavirus_pandemic_data"
 
@@ -99,8 +102,8 @@ for item in items[2:]:
     if name =="saint vincent and the grenadines":
         name ='st. vincent and the grenadines'
 
-    if name == "china (mainland)" or name == "china":
-        continue
+    if name == "china":
+        name = "china (mainland)"
 
     if name == "united kingdom":
         name = "uk"
