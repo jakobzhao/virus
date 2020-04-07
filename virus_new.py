@@ -9,9 +9,9 @@ import urllib
 import requests
 
 #browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver")
-#browser = webdriver.Chrome("/Users/joshuaji/Desktop/chromedriver") #joshua's chromedrive location
+browser = webdriver.Chrome("/Users/joshuaji/Desktop/chromedriver") #joshua's chromedrive location
 #browser = webdriver.Chrome("C:/workspace/chromedriver.exe")
-browser = webdriver.Chrome("E:/dev/workspaces/chromedriver.exe")
+#browser = webdriver.Chrome("E:/dev/workspaces/chromedriver.exe")
 #browser = webdriver.Chrome("/Users/stevenbao/dev/chromedriver")
 
 # Variable Preparation
