@@ -11,8 +11,8 @@ import requests
 #browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver")
 #browser = webdriver.Chrome("/Users/joshuaji/Desktop/chromedriver") #joshua's chromedrive location
 #browser = webdriver.Chrome("C:/workspace/chromedriver.exe")
-browser = webdriver.Chrome("E:/dev/workspaces/chromedriver.exe")
-#browser = webdriver.Chrome("/Users/stevenbao/dev/chromedriver")
+#browser = webdriver.Chrome("E:/dev/workspaces/chromedriver.exe")
+browser = webdriver.Chrome("/Users/stevenbao/dev/chromedriver")
 
 # Variable Preparation
 now = str(datetime.now())
@@ -96,6 +96,12 @@ for item in items[2:]:
     if name =="swaziland":
         name = 'eswatini'
 
+    if name == "theodore roosevelt":
+        name = "uss theodore roosevelt"
+
+    if name == "donetsk people's republic":
+        name = "donetsk pr"
+
     if name =="saint vincent and the grenadines":
         name ='st. vincent and the grenadines'
 
@@ -110,6 +116,15 @@ for item in items[2:]:
 
     if name == "united arab emirates":
         name = "united arab"
+
+    if name == "ms zaandam":
+        name = "ms zaandam & rotterdam"
+
+    if name == "st. vincent":
+        name = "st. vincent & the grenadines"
+
+    if name == "n. mariana islands":
+        name = "northern mariana islands"
 
     confirmed = item.find_all("td")[0].text.split("\n")[0].replace(",","")
     death = item.find_all("td")[1].text.split("\n")[0].replace(",", "")
