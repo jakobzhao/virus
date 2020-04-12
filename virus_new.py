@@ -87,44 +87,47 @@ for item in items[2:]:
     except IndexError:
         break
 
+    name = name.replace("&", "and")
+
     if name == "hong kong":
         continue
-
-    if name == "usa" or name == "united states":
+    elif name == "usa" or name == "united states":
         name = "us"
-
-    if name =="swaziland":
-        name = 'eswatini'
-
-    if name == "theodore roosevelt":
+    elif name == "swaziland":
+        name = "eswatini"
+    elif name == "theodore roosevelt":
         name = "uss theodore roosevelt"
-
-    if name == "donetsk people's republic":
+    elif name == "donetsk people's republic":
         name = "donetsk pr"
-
-    if name =="saint vincent and the grenadines":
-        name ='st. vincent and the grenadines'
-
-    if name == "china (mainland)" or name == "china":
+    elif name == "china (mainland)" or name == "china":
         continue
-
-    if name == "united kingdom":
+    elif name == "united kingdom":
         name = "uk"
-
-    if name == "czech republic":
+    elif name == "czech republic":
         name = "czechia"
-
-    if name == "united arab emirates":
+    elif name == "united arab emirates":
         name = "united arab"
-
-    if name == "ms zaandam":
+    elif name == "ms zaandam":
         name = "ms zaandam & rotterdam"
-
-    if name == "st. vincent":
+    elif name == "st. vincent" or name == "saint vincent" or name == "saint vincent and the grenadines":
         name = "st. vincent & the grenadines"
-
-    if name == "n. mariana islands":
+    elif name == "n. mariana islands":
         name = "northern mariana islands"
+
+    '''
+    elif name == "bosnia & herzegovina":
+        name = "bosnia and herzegovina"
+    elif name == "trinidad & tobago":
+        name = "trinidad and tobago"
+    elif name == "antigua & barbuda":
+        name = "antigua and barbuda"
+    elif name == "saint kitts & nevis":
+        name = "saint kitts and nevis"
+    elif name == "akrotiri & dhekelia":
+        name = "akrotiri and dhekelia"
+    elif name == "são tomé & príncipe":
+        name = "sao tome and principe"
+    '''
 
     confirmed = item.find_all("td")[0].text.split("\n")[0].replace(",","")
     death = item.find_all("td")[1].text.split("\n")[0].replace(",", "")
