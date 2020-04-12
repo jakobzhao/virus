@@ -1,320 +1,386 @@
 confirmed_date,gender,die_count,age_range,state_name,county,full_links,comments,comments_en
-4/10,,1,,CA,Yuba, www.suttercounty.org/doc/government/depts/cao/em/coronavirus,,
-4/10,,2,,IA,Unassigned, idph.iowa.gov/Emerging-Health-Issues/Novel-Coronavirus,,
-4/10,,1,,CO,Unassigned, covid19.colorado.gov/case-data,,
-4/10,,1,,NC,Henderson, www.hendersoncountync.gov/health/page/public-health-advisory-coronavirus-covid-19,,
-4/10,男,1,80+,PR,Puerto Rico, www.elnuevodia.com/noticias/locales/nota/seelevana39lasmuertesya725loscontagiosporcoronavirusenlaisla-2560059/,,One more death was reported by 4/10 in PR.
-4/10,男,1,80+,PR,Puerto Rico, www.elnuevodia.com/noticias/locales/nota/seelevana39lasmuertesya725loscontagiosporcoronavirusenlaisla-2560059/,,One more death was reported by 4/10 in PR.
-4/10,男,1,40+,PR,Puerto Rico, www.elnuevodia.com/noticias/locales/nota/seelevana39lasmuertesya725loscontagiosporcoronavirusenlaisla-2560059/,,One more death was reported by 4/10 in PR.
-4/10,男,1,80+,PR,Puerto Rico, www.elnuevodia.com/noticias/locales/nota/seelevana39lasmuertesya725loscontagiosporcoronavirusenlaisla-2560059/,,One more death was reported by 4/10 in PR.
-4/10,男,1,90+,PR,Puerto Rico, www.elnuevodia.com/noticias/locales/nota/seelevana39lasmuertesya725loscontagiosporcoronavirusenlaisla-2560059/,,One more death was reported by 4/10 in PR.
-4/10,女,1,70+,PR,Puerto Rico, www.elnuevodia.com/noticias/locales/nota/seelevana39lasmuertesya725loscontagiosporcoronavirusenlaisla-2560059/,,One more death was reported by 4/10 in PR.
-4/10,,1,,NV,Unassigned, app.powerbigov.us/view?r=eyJrIjoiMjA2ZThiOWUtM2FlNS00MGY5LWFmYjUtNmQwNTQ3Nzg5N2I2IiwidCI6ImU0YTM0MGU2LWI4OWUtNGU2OC04ZWFhLTE1NDRkMjcwMzk4MCJ9,,NV reported 86 deaths by 4/10 morning.
-4/10,女,3,80+,MD,Anne Arundel, twitter.com/MDHealthDept/status/1248664001036406787,,3 Anne Arundel Co. women who were all over 80 years of age.
-4/10,女,3,80+,MD,Baltimore, twitter.com/MDHealthDept/status/1248664002277920773,,3 Baltimore Co. women who were all over 80 years of age
-4/10,女,1,80+,MD,Baltimore City, twitter.com/MDHealthDept/status/1248664002277920773, A Baltimore City woman over 80 years of age
-4/10,男,1,60+,MD,Carroll, twitter.com/MDHealthDept/status/1248664003359932417,,"A Carroll Co. man in his 60s"
-4/10,男,1,50+,MD,Charles, twitter.com/MDHealthDept/status/1248664003359932417,,"A Charles Co. man in his 50s"
-4/10,女,3,70+,MD,Frederick, twitter.com/MDHealthDept/status/1248664003359932417,,3 Frederick Co. women who were all in their 70s
-4/10,女,1,80+,MD,Montgomery, twitter.com/MDHealthDept/status/1248664004601556992,,"A Montgomery Co. woman over 80 years of age"
-4/10,女,2,80+,MD,Prince George's, twitter.com/MDHealthDept/status/1248664005616508932,,"2 Prince George's Co. women who were both over 80 years of age"
-4/10,,6,,DC,District of Columbia, coronavirus.dc.gov/page/coronavirus-data,,The District reported 38 total deaths by 4/10.
-4/10,,1,,AL,Montgomery, alpublichealth.maps.arcgis.com/apps/opsdashboard/index.html#/6d2771faa9da4a2786a509d82c8cf0f7,,
-4/10,,3,,VA,Fairfax, www.fairfaxcounty.gov/covid19/case-information,,
-4/10,,9,,VA,Unassigned, www.vdh.virginia.gov/coronavirus/,,
-4/10,,2,,NJ,Atlantic, www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
-4/10,,45,,NJ,Bergen, www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
-4/10,,1,,NJ,Burlington, www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
-4/10,,6,,NJ,Camden, www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
-4/10,,2,,NJ,Cape May, www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
-4/10,,31,,NJ,Essex, www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
-4/10,,31,,NJ,Hudson, www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
-4/10,,3,,NJ,Hunterdon, www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
-4/10,,3,,NJ,Mercer, www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
-4/10,,16,,NJ,Middlesex, www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
-4/10,,9,,NJ,Monmouth, www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
-4/10,,18,,NJ,Morris, www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
-4/10,,2,,NJ,Ocean, www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
-4/10,,19,,NJ,Passaic, www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
-4/10,,10,,NJ,Somerset, www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
-4/10,,5,,NJ,Sussex, www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
-4/10,,16,,NJ,Union, www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
-4/10,,6,,NJ,Warren, www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
-4/10,,2,,IN,Allen, coronavirus.in.gov/,,
-4/10,,1,,IN,Clark, coronavirus.in.gov/,,
-4/10,,1,,IN,Dearborn, coronavirus.in.gov/,,
-4/10,,2,,IN,Decatur, coronavirus.in.gov/,,
-4/10,,1,,IN,Greene, coronavirus.in.gov/,,
-4/10,,3,,IN,Hamilton, coronavirus.in.gov/,,
-4/10,,2,,IN,Hancock, coronavirus.in.gov/,,
-4/10,,5,,IN,Johnson, coronavirus.in.gov/,,
-4/10,,4,,IN,Lake, coronavirus.in.gov/,,
-4/10,,2,,IN,Madison, coronavirus.in.gov/,,
-4/10,,26,,IN,Marion, coronavirus.in.gov/,,
-4/10,,1,,IN,Morgan, coronavirus.in.gov/,,
-4/10,,1,,IN,Owen, coronavirus.in.gov/,,
-4/10,,1,,IN,Putnam, coronavirus.in.gov/,,
-4/10,,1,,IN,St. Joseph, coronavirus.in.gov/,,
-4/10,,2,,IN,Warrick, coronavirus.in.gov/,,
-4/10,,5,,FL,Broward, fdoh.maps.arcgis.com/apps/opsdashboard/index.html#/8d0de33f260d444c852a615dc7837c86,,
-4/10,,1,,FL,Hernando, fdoh.maps.arcgis.com/apps/opsdashboard/index.html#/8d0de33f260d444c852a615dc7837c86,,
-4/10,,1,,FL,Indian River, fdoh.maps.arcgis.com/apps/opsdashboard/index.html#/8d0de33f260d444c852a615dc7837c86,,
-4/10,,1,,FL,Martin, fdoh.maps.arcgis.com/apps/opsdashboard/index.html#/8d0de33f260d444c852a615dc7837c86,,
-4/10,,19,,FL,Miami-Dade, fdoh.maps.arcgis.com/apps/opsdashboard/index.html#/8d0de33f260d444c852a615dc7837c86,,
-4/10,,4,,FL,Palm Beach, fdoh.maps.arcgis.com/apps/opsdashboard/index.html#/8d0de33f260d444c852a615dc7837c86,,
-4/10,,1,,FL,Polk, fdoh.maps.arcgis.com/apps/opsdashboard/index.html#/8d0de33f260d444c852a615dc7837c86,,
-4/10,,1,,FL,Seminole, fdoh.maps.arcgis.com/apps/opsdashboard/index.html#/8d0de33f260d444c852a615dc7837c86,,
-4/10,,2,,MS,Hancock, msdh.ms.gov/msdhsite/_static/14,,
-4/10,,1,,MS,Harrison, msdh.ms.gov/msdhsite/_static/14,,
-4/10,,1,,MS,Lauderdale, msdh.ms.gov/msdhsite/_static/14,,
-4/10,,1,,MS,Lincoln, msdh.ms.gov/msdhsite/_static/14,,
-4/10,,1,,MS,Smith, msdh.ms.gov/msdhsite/_static/14,,
-4/10,,1,,NC,Buncombe, www.ncdhhs.gov/divisions/public-health/covid19/covid-19-nc-case-count#by-counties,,
-4/10,,1,,ME,Sagadahoc, www.maine.gov/dhhs/mecdc/infectious-disease/epi/airborne/coronavirus.shtml,,
-4/10,,3,,CA,San Francisco, www.sfdph.org/dph/alerts/coronavirus.asp,,
-4/10,,8,,AZ,Unassigned, www.azdhs.gov/preparedness/epidemiology-disease-control/infectious-disease-epidemiology/index.php#novel-coronavirus-home,,
-4/10,男,1,50+,GA,Chatham, www.11alive.com/article/news/health/coronavirus/coronavirus-deaths-in-georgia/85-e9bb2324-2e27-43ca-a347-ced78cbb186b,,
-4/10,男,1,70+,GA,Cherokee, www.11alive.com/article/news/health/coronavirus/coronavirus-deaths-in-georgia/85-e9bb2324-2e27-43ca-a347-ced78cbb186b,,
-4/10,男,1,80+,GA,Laurens, www.11alive.com/article/news/health/coronavirus/coronavirus-deaths-in-georgia/85-e9bb2324-2e27-43ca-a347-ced78cbb186b,,
-4/10,,1,,GA,Pierce, dph.georgia.gov/covid-19-daily-status-report,,
-4/10,女,1,60+,GA,Randolph, www.11alive.com/article/news/health/coronavirus/coronavirus-deaths-in-georgia/85-e9bb2324-2e27-43ca-a347-ced78cbb186b,,
-4/10,男,1,60+,GA,Wilkinson, www.11alive.com/article/news/health/coronavirus/coronavirus-deaths-in-georgia/85-e9bb2324-2e27-43ca-a347-ced78cbb186b,,
-4/10,,6,,PA,Allegheny, www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
-4/10,,1,,PA,Butler, www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
-4/10,,1,,PA,​Carbon, www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
-4/10,,2,,PA,Chester, www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
-4/10,,4,,PA,Delaware, www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
-4/10,,4,,PA,Lancaster, www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
-4/10,,1,,PA,Lawrence, www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
-4/10,,1,,PA,Lebanon, www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
-4/10,,3,,PA,Lehigh, www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
-4/10,,3,,PA,Luzerne, www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
-4/10,,13,,PA,Montgomery, www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
-4/10,,1,,PA,Northampton, www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
-4/10,,6,,PA,Philadelphia, www.phila.gov/programs/coronavirus-disease-2019-covid-19/,,
-4/10,,1,,PA,Susquehanna, www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
-4/10,,5,,PA,Westmoreland, www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
-4/10,,1,,OK,Creek, coronavirus.health.ok.gov/,,
-4/10,,1,,OK,Garfield, coronavirus.health.ok.gov/,,
-4/10,,2,,OK,Oklahoma, coronavirus.health.ok.gov/,,
-4/10,,2,,OK,Osage, coronavirus.health.ok.gov/,,
-4/10,,1,,OK,Pawnee, coronavirus.health.ok.gov/,截至3/22 7:00am，俄克拉荷马州Pawnee County新增1例死亡病例，为当地首例，为50多岁男性。,"As of 2020-03-22 at 7:00 AM An additional person has passed away due to COVID-19 a male in his 50s from Pawnee County. This brings the total number of fatalities to two."
-4/10,,1,,OK,Pottawatomie, coronavirus.health.ok.gov/,,
-4/10,,1,,VT,Unassigned, www.healthvermont.gov/response/coronavirus-covid-19/current-activity-vermont,,
-4/10,,4,,NV,Clark, media.southernnevadahealthdistrict.org/download/COVID-19/updates/20200409-Daily-Aggregate-COVID-19.pdf,,
-4/10,,1,,MN,Brown, www.health.state.mn.us/diseases/coronavirus/situation.html#map1,,
-4/10,,1,,MN,Dakota, www.health.state.mn.us/diseases/coronavirus/situation.html#map1,,
-4/10,,2,,MN,Hennepin, www.health.state.mn.us/diseases/coronavirus/situation.html,,
-4/10,,3,,MN,St. Louis, www.health.state.mn.us/diseases/coronavirus/situation.html,,
-4/10,男,1,70+,ND,Stark, bismarcktribune.com/news/local/health/stark-county-has-second-covid-19-death-statewide-case-total-rises-to-278/article_49258717-3fb8-59ef-8e96-2c544f703639.html,,The state's sixth victim was a man in his 70s with underlying health conditions who acquired the coronavirus disease through community spread.
-4/10,,1,,TX,El Paso, txdshs.maps.arcgis.com/apps/opsdashboard/index.html#/ed483ecd702b4298ab01e8b9cafc8b83,,
-4/10,,90,,NY,Nassau, covid19tracker.health.ny.gov/views/NYS-COVID19-Tracker/NYSDOHCOVID-19Tracker-Fatalities?%3Aembed=yes&%3Atoolbar=no,,Nassau County death number is consistent with NY.gov's residence of individual fatalities.
-4/10,,30,,NY,Westchester, covid19tracker.health.ny.gov/views/NYS-COVID19-Tracker/NYSDOHCOVID-19Tracker-Fatalities?%3Aembed=yes&%3Atoolbar=no,,Westchester County death number is consistent with NY.gov's residence of individual fatalities.
-4/10,,1,,TX,McLennan, txdshs.maps.arcgis.com/apps/opsdashboard/index.html#/ed483ecd702b4298ab01e8b9cafc8b83,,
-4/10,,3,,TX,Fort Bend, txdshs.maps.arcgis.com/apps/opsdashboard/index.html#/ed483ecd702b4298ab01e8b9cafc8b83,,
-4/10,,1,,LA,Acadia, ldh.la.gov/coronavirus/,,
-4/10,,599,,NY,New York, covid19tracker.health.ny.gov/views/NYS-COVID19-Tracker/NYSDOHCOVID-19Tracker-Fatalities?%3Aembed=yes&%3Atoolbar=no&%3Atabs=n,,"According to New York State Department of Health NYC reached 5,820 deaths in total."
-4/10,,2,,LA,Ascension, ldh.la.gov/coronavirus/,,
-4/10,,13,,LA,Caddo, ldh.la.gov/coronavirus/,,
-4/10,,1,,LA,Calcasieu, ldh.la.gov/coronavirus/,,
-4/10,,3,,LA,East Baton Rouge, ldh.la.gov/coronavirus/,,
-4/10,,1,,LA,Franklin, ldh.la.gov/coronavirus/,,
-4/10,,1,,LA,Iberville, ldh.la.gov/coronavirus/,,
-4/10,,7,,LA,Jefferson, ldh.la.gov/coronavirus/,,
-4/10,,1,,LA,Lafayette, ldh.la.gov/coronavirus/,,
-4/10,,2,,LA,Lafourche, ldh.la.gov/coronavirus/,,
-4/10,,2,,LA,Morehouse, ldh.la.gov/coronavirus/,,
-4/10,,1,,LA,Orleans, ldh.la.gov/coronavirus/,,
-4/10,,1,,LA,Ouachita, ldh.la.gov/coronavirus/,,
-4/10,,1,,LA,Pointe Coupee, ldh.la.gov/coronavirus/,,
-4/10,,1,,LA,St. Charles, ldh.la.gov/coronavirus/,,
-4/10,,2,,LA,St. James, ldh.la.gov/coronavirus/,,
-4/10,,2,,LA,St. John the Baptist, ldh.la.gov/coronavirus/,,
-4/10,,2,,LA,St. Landry, ldh.la.gov/coronavirus/,,
-4/10,,8,,LA,St. Tammany, ldh.la.gov/coronavirus/,,
-4/10,,1,,LA,Tangipahoa, ldh.la.gov/coronavirus/,,
-4/10,,19,,CA,Los Angeles, www.latimes.com/projects/california-coronavirus-cases-tracking-outbreak/,,
-4/10,,1,,KY,Daviess, www.owensborotimes.com/news/2020/04/2nd-covid-19-related-death-announced-in-daviess-county/amp/?__twitter_impression=true,,2nd COVID-19 related death announced in Daviess County
-4/10,,2,,CA,Sacramento, www.latimes.com/projects/california-coronavirus-cases-tracking-outbreak/,,
-4/10,,3,,TX,Dallas, www.dallascounty.org/departments/dchhs/2019-novel-coronavirus.php,,
-4/10,,1,,Military,Unassigned, taskandpurpose.com/news/covid-19-military,,
-4/10,,1,,TX,Tarrant, www.tarrantcounty.com/en/public-health/disease-control---prevention/coronaviruas.html?linklocation=homecarousel&linkname=COVID-19,,
-4/10,,18,,OH,Unassigned, coronavirus.ohio.gov/wps/portal/gov/covid-19/home,,
-4/10,,1,,AL,Mobile, www.alabamapublichealth.gov/infectiousdiseases/2019-coronavirus.html,,
-4/10,,1,,MI,Branch," www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html",,
-4/10,,1,,MI,Chippewa," www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html",,
-4/10,,1,,MI,Clare," www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html",,
-4/10,,2,,MI,Clinton," www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html",,
-4/10,,1,,MI,Eaton," www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html",,
-4/10,,9,,MI,Genesee," www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html",,
-4/10,,1,,MI,Ionia," www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html",,
-4/10,,1,,MI,Kalamazoo," www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html",,
-4/10,,4,,MI,Kent," www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html",,
-4/10,,1,,MI,Lapeer," www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html",,
-4/10,,1,,MI,Livingston," www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html",,
-4/10,,32,,MI,Macomb," www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html",,
-4/10,,3,,MI,Monroe," www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html",,
-4/10,,36,,MI,Oakland," www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html",,
-4/10,男,1,50+,GA,Cobb, www.11alive.com/article/news/health/coronavirus/coronavirus-deaths-in-georgia/85-e9bb2324-2e27-43ca-a347-ced78cbb186b,,
-4/10,,1,,MI,Michigan Department of Corrections (MDOC)," www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html",,
-4/10,,1,,MI,Unassigned,""" www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html""",,
-4/10,,2,,MI,Saginaw,""" www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html""",,
-4/10,,2,,MI,Tuscola,""" www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html""",,
-4/10,,53,,MI,Wayne,""" www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html""",,
-4/10,,52,,MI,Wayne--Detroit,""" www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html""",,
-4/10,男,1,60+,NY,Onondaga, www.syracuse.com/coronavirus/2020/04/8th-person-dies-in-onondaga-county-from-coronavirus.html,,"Onondaga County health officials today announced that an eighth person in the county has died from COVID-19 the disease caused by the novel coronavirus. This person was a white male in his late sixties who had underlying health conditions officials said. He had been hospitalized before he died."
-4/10,,52,,NY,Suffolk, suffolkcountyny.gov/Departments/Health-Services/Health-Bulletins/Novel-Coronavirus/covid-19-case-update-april-10-2020-230-pm,,"414 individuals have died up 52 from 362 on April 9"
-4/10,,4,,UT,unassigned, coronavirus.utah.gov/case-counts/,,
-4/10,,28,,NY,Rockland, rockland.maps.arcgis.com/apps/opsdashboard/index.html#/d074e0336e81449393a76d1768ceb096,,"Reported by Rockland County Coronavirus COVID-19 Dashboard may not include in NY total death right now."
-4/10,男,1,20+,IL,Cook, www.dph.illinois.gov/news/202004,,1 male 20s
-4/10,女,1,30+,IL,Cook, www.dph.illinois.gov/news/202004,,1 female 30s
-4/10,女,1,50+,IL,Cook, www.dph.illinois.gov/news/202004,,1 female 50s
-4/10,男,7,50+,IL,Cook, www.dph.illinois.gov/news/202004,,7 males 50s
-4/10,女,3,60+,IL,Cook, www.dph.illinois.gov/news/202004,,3 females 60s
-4/10,男,5,60+,IL,Cook, www.dph.illinois.gov/news/202004,,5 males 60s
-4/10,女,4,70+,IL,Cook, www.dph.illinois.gov/news/202004,,4 females 70s
-4/10,男,10,70+,IL,Cook, www.dph.illinois.gov/news/202004,,10 males 70s
-4/10,女,3,80+,IL,Cook, www.dph.illinois.gov/news/202004,,3 females 80s
-4/10,男,6,80+,IL,Cook, www.dph.illinois.gov/news/202004,,6 males 80s
-4/10,女,4,90+,IL,Cook, www.dph.illinois.gov/news/202004,,4 females 90s
-4/10,男,2,90+,IL,Cook, www.dph.illinois.gov/news/202004,,2 males 90s
-4/10,,2,,WA,Whatcom, www.whatcomcounty.us/3329/Novel-Coronavirus-COVID-19,,
-4/10,男,1,60+,IL,DuPage, www.dph.illinois.gov/news/202004,,1 male 60s
-4/10,男,3,70+,IL,DuPage, www.dph.illinois.gov/news/202004,,3 males 70s
-4/10,女,1,80+,IL,DuPage, www.dph.illinois.gov/news/202004,,1 female 80s
-4/10,男,1,80+,IL,DuPage, www.dph.illinois.gov/news/202004,,1 male 80s
-4/10,男,2,70+,IL,Kane, www.dph.illinois.gov/news/202004,,2 males 70s
-4/10,男,1,50+,IL,Kankakee, www.dph.illinois.gov/news/202004,,1 male 50s
-4/10,男,1,50+,IL,Lake, www.dph.illinois.gov/news/202004,,1 male 50s
-4/10,男,1,70+,IL,Lake, www.dph.illinois.gov/news/202004,,1 male 70s
-4/10,女,1,90+,IL,Lake, www.dph.illinois.gov/news/202004,,1 female 90s
-4/10,男,1,90+,IL,Lake, www.dph.illinois.gov/news/202004,,1 male 90s
-4/10,,1,,TN,Bedford, www.tn.gov/health/cedep/ncov.html,,
-4/10,女,1,60+,IL,Rock Island, www.dph.illinois.gov/news/202004,,1 female 60s
-4/10,男,1,50+,IL,St. Clair, www.dph.illinois.gov/news/202004,,1 male 50s
-4/10,女,1,60+,IL,Will, www.dph.illinois.gov/news/202004, 1 female 60s
-4/10,男,1,60+,IL,Will, www.dph.illinois.gov/news/202004,,1 male 60s
-4/10,,1,,TN,Macon, www.tn.gov/health/cedep/ncov.html,,
-4/10,男,2,70+,IL,Will, www.dph.illinois.gov/news/202004,,2 males 70s
-4/10,女,1,90+,IL,Will, www.dph.illinois.gov/news/202004,,1 female 90s
-4/10,男,1,90+,IL,Will, www.dph.illinois.gov/news/202004,,1 male 90s
-4/10,,1,,TN,Sumner, www.tn.gov/health/cedep/ncov.html,,
-4/10,,1,,TN,Williamson, www.tn.gov/health/cedep/ncov.html,,
-4/10,,1,,WI,Brown, www.dhs.wisconsin.gov/covid-19/county.htm,,
-4/10,,1,,WI,Dane, www.dhs.wisconsin.gov/covid-19/county.htm,,
-4/10,,1,,WI,Grant, www.dhs.wisconsin.gov/covid-19/county.htm,,
-4/10,,12,,WI,Milwaukee, www.dhs.wisconsin.gov/covid-19/county.htm,,
-4/10,,1,,WI,Ozaukee, www.dhs.wisconsin.gov/covid-19/county.htm,,
-4/10,,1,,WI,Racine, www.dhs.wisconsin.gov/covid-19/county.htm,,
-4/10,,2,,SC,Greenville, www.wistv.com/2020/04/10/dhec-announces-additional-deaths-related-covid-sc-surpasses-total-positive-cases/,,two deaths were elderly individuals with underlying health conditions from Greenville County.
-4/10,,1,,SC,Berkeley, www.wistv.com/2020/04/10/dhec-announces-additional-deaths-related-covid-sc-surpasses-total-positive-cases/,,A middle-aged individual with underlying health conditions from Berkeley
-4/10,,1,,SC,Florence, www.wistv.com/2020/04/10/dhec-announces-additional-deaths-related-covid-sc-surpasses-total-positive-cases/,,A middle-aged individual with underlying health conditions
-4/10,,1,,SC,Greenville, www.wistv.com/2020/04/10/dhec-announces-additional-deaths-related-covid-sc-surpasses-total-positive-cases/,,A middle-aged individual with underlying health conditions
-4/10,,1,,CA,Contra Costa, www.latimes.com/projects/california-coronavirus-cases-tracking-outbreak/,,
-4/10,,3,,CA,Alameda, www.latimes.com/projects/california-coronavirus-cases-tracking-outbreak/,,
-4/10,,2,,WA,Pierce, www.tpchd.org/healthy-people/diseases/covid-19-pierce-county-cases/,,
-4/10,,4,,TX,Harris--Non Houston, publichealth.harriscountytx.gov/Resources/2019-Novel-Coronavirus,,
-4/10,女,1,90+,TX,Harris--Houston, houstonemergency.org/covid19/,,"Female | Age 90-99 | Black Non-Hispanic | Underlying Health Conditions |  Death: 04/05/20"
-4/10,男,1,50+,TX,Harris--Houston, houstonemergency.org/covid19/,,"Male | Age 50-60 | White Hispanic | Underlying Health Conditions | Death: 04/04/20"
-4/10,,1,,CA,Tulare, www.latimes.com/projects/california-coronavirus-cases-tracking-outbreak/,,
-4/10,,4,,Military,Navy, navylive.dodlive.mil/2020/03/15/u-s-navy-covid-19-updates/,,
-4/10,,96,,MA,Unassigned, www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-10-2020/download,,
-4/10,,1,,MO,Greene, www.kshb.com/news/coronavirus/covid-19-case-tracker-where-we-stand-in-mo-ks-nationwide,,
-4/10,,1,,MO,St. Charles, www.kshb.com/news/coronavirus/covid-19-case-tracker-where-we-stand-in-mo-ks-nationwide,,
-4/10,,5,,MO,St. Louis, www.kshb.com/news/coronavirus/covid-19-case-tracker-where-we-stand-in-mo-ks-nationwide,,
-4/10,,25,,CT,Fairfield, portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary4102020.pdf?la=en,,
-4/10,,20,,CT,New Haven, portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary4102020.pdf?la=en,,
-4/10,,13,,CT,Hartford, portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary4102020.pdf?la=en,,
-4/10,,2,,CT,Unassigned, portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary4102020.pdf?la=en,,
-4/10,,3,,CT,Litchfield, portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary4102020.pdf?la=en,,
-4/10,,3,,CT,Middlesex, portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary4102020.pdf?la=en,,
-4/10,,1,,CT,New London, portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary4102020.pdf?la=en,,
-4/10,,1,,CT,Tolland, portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary4102020.pdf?la=en,,
-4/10,,3,,CA,Ventura, www.vcemergency.com/,,Ventura reported 10 total deaths by 4/10.
-4/10,,6,,CA,Riverside, www.rivcoph.org/coronavirus,,
-4/10,,10,,KY,Unassigned, govstatus.egov.com/kycovid19,,
-4/10,,19,,WA,King, www.kingcounty.gov/depts/health/communicable-diseases/disease-control/novel-coronavirus.aspx,,
-4/10,,9,,DE,Unassigned, coronavirus.delaware.gov/latest-data/,,
-4/10,,4,,CO,Denver, covid19.colorado.gov/case-data,,
-4/10,,1,,CO,El Paso, covid19.colorado.gov/case-data,,
-4/10,,4,,CO,Weld, covid19.colorado.gov/case-data,,
-4/10,,6,,CO,Arapahoe, covid19.colorado.gov/case-data,,
-4/10,,7,,CO,Adams, covid19.colorado.gov/case-data,,
-4/10,,1,,CO,Teller, covid19.colorado.gov/case-data,,
-4/10,,17,,NY,Orange, www.orangecountygov.com/1936/Coronavirus,,"Reported by Orange County Health Department may not include in NY total death right now."
-4/10,,2,,HI,Maui, health.hawaii.gov/coronavirusdisease2019/what-you-should-know/current-situation-in-hawaii/,,
-4/10,,3,,WA,Snohomish, www.snohd.org/499/COVID-19-Case-Count-Info,,
-4/10,,1,,OR,Benton, govstatus.egov.com/OR-OHA-COVID-19,,
-4/10,,4,,OR,Multnomah, govstatus.egov.com/OR-OHA-COVID-19,,
-4/10,,1,,WA,Yakima, www.yakimacounty.us/2323/COVID-19,,
-4/10,,1,,CA,Stanislaus, www.latimes.com/projects/california-coronavirus-cases-tracking-outbreak/,,
-4/10,,2,,TX,Travis, austin.maps.arcgis.com/apps/opsdashboard/index.html#/43b91f7147934b0190119781f81aa896,,
-4/10,,2,,TX,Bexar, cosagis.maps.arcgis.com/apps/opsdashboard/index.html#/d2c7584fe9fd4da1b30cb9d6cc311163,,
-4/10,,1,,ID,Canyon, public.tableau.com/profile/idaho.division.of.public.health#!/vizhome/DPHIdahoCOVID-19Dashboard_V2/DPHCOVID19Dashboard2,,
-4/10,男,1,80+,MD,Anne Arundel, twitter.com/MDHealthDept/status/1248664001036406787,,"An Anne Arundel Co. man over 80 years of age"
-4/10,,12,,NV,Unassigned, thenevadaindependent.com/article/coronavirus-maps-tracking-the-pandemic-in-nevada-and-beyond,,
-4/10,,1,,AR,Jefferson, public.tableau.com/profile/idaho.division.of.public.health#!/vizhome/DPHIdahoCOVID-19Dashboard_V2/DPHCOVID19Dashboard2,,
-4/10,,1,,AR,Van Buren, public.tableau.com/profile/idaho.division.of.public.health#!/vizhome/DPHIdahoCOVID-19Dashboard_V2/DPHCOVID19Dashboard2,,
-4/10,,1,,AR,Drew, public.tableau.com/profile/idaho.division.of.public.health#!/vizhome/DPHIdahoCOVID-19Dashboard_V2/DPHCOVID19Dashboard2,,
-4/10,,1,,NH,Unassigned, www.nh.gov/covid19/,,
-4/10,男,1,60+,MD,Baltimore City, twitter.com/MDHealthDept/status/1248664002277920773,,"A Baltimore City man in his 60s"
-4/10,男,1,40+,MD,Baltimore City, twitter.com/MDHealthDept/status/1248664002277920773,,"A Baltimore City man in his 40s"
-4/10,女,1,50+,MD,Baltimore, twitter.com/MDHealthDept/status/1248664002277920773,,"A Baltimore Co. woman in her 50s"
-4/10,男,1,60+,MD,Baltimore, twitter.com/MDHealthDept/status/1248664003359932417,,"A Baltimore Co. man in his 60s"
-4/10,男,1,70+,MD,Baltimore, twitter.com/MDHealthDept/status/1248664003359932417,,"A Baltimore Co. man in his 70s"
-4/10,女,1,80+,MD,Frederick, twitter.com/MDHealthDept/status/1248664004601556992,,"A Frederick Co. woman over 80 years of age"
-4/10,男,1,80+,MD,Frederick, twitter.com/MDHealthDept/status/1248664004601556992,,"A Frederick Co. man over 80 years of age"
-4/10,男,1,30+,MD,Howard, twitter.com/MDHealthDept/status/1248664004601556992,,"A Howard Co. man in his 30s"
-4/10,,1,,GA,Dawson, dph.georgia.gov/covid-19-daily-status-report,,
-4/10,男,2,80+,MD,Montgomery, twitter.com/MDHealthDept/status/1248664004601556992,,"2 Montgomery Co. men who were both over 80 years of age"
-4/10,,1,,GA,Dougherty, dph.georgia.gov/covid-19-daily-status-report,,
-4/10,,1,,GA,Early, dph.georgia.gov/covid-19-daily-status-report,,
-4/10,男,1,70+,MD,Montgomery, twitter.com/MDHealthDept/status/1248664005616508932,,"A Montgomery Co. man in his 70s"
-4/10,,2,,GA,Forsyth, dph.georgia.gov/covid-19-daily-status-report,,
-4/10,,2,,GA,Fulton, dph.georgia.gov/covid-19-daily-status-report,,
-4/10,,1,,GA,Lowndes, dph.georgia.gov/covid-19-daily-status-report,,
-4/10,男,1,60+,MD,Montgomery, twitter.com/MDHealthDept/status/1248664005616508932,,"A Montgomery Co. man in his 60s"
-4/10,,1,,GA,Unassigned, dph.georgia.gov/covid-19-daily-status-report,,
-4/10,,3,,CA,Santa Clara, www.sccgov.org/sites/phd/DiseaseInformation/novel-coronavirus/Pages/dashboard.aspx,,
-4/10,男,2,50+,MD,Prince George's, twitter.com/MDHealthDept/status/1248664005616508932,,"2 Prince George's Co. men who were both in their 50s"
-4/10,男,2,70+,MD,Prince George's, twitter.com/MDHealthDept/status/1248664006635765763,,"2 Prince George's Co. men who were both in their 70s"
-4/10,女,1,70+,MD,Prince George's, twitter.com/MDHealthDept/status/1248664006635765763,,"A Prince George's Co. woman in her 70s"
-4/10,,1,,FL,Charlotte, fdoh.maps.arcgis.com/apps/opsdashboard/index.html#/8d0de33f260d444c852a615dc7837c86,,
-4/10,,1,,FL,Clay, fdoh.maps.arcgis.com/apps/opsdashboard/index.html#/8d0de33f260d444c852a615dc7837c86,,
-4/10,,3,,FL,Hillsborough, fdoh.maps.arcgis.com/apps/opsdashboard/index.html#/8d0de33f260d444c852a615dc7837c86,,
-4/10,,1,,FL,Lake, fdoh.maps.arcgis.com/apps/opsdashboard/index.html#/8d0de33f260d444c852a615dc7837c86,,
-4/10,,2,,FL,Lee, fdoh.maps.arcgis.com/apps/opsdashboard/index.html#/8d0de33f260d444c852a615dc7837c86,,
-4/10,,2,,FL,Manatee, fdoh.maps.arcgis.com/apps/opsdashboard/index.html#/8d0de33f260d444c852a615dc7837c86,,
-4/10,,1,,FL,Martin, fdoh.maps.arcgis.com/apps/opsdashboard/index.html#/8d0de33f260d444c852a615dc7837c86,,
-4/10,,2,,FL,Pinellas, floridadisaster.org/covid19/covid-19-data-reports,,
-4/10,,1,,FL,Santa Rosa, floridadisaster.org/covid19/covid-19-data-reports,,
-4/10,,2,,FL,Sumter, floridadisaster.org/covid19/covid-19-data-reports,,
-4/10,,1,,FL,Volusia, floridadisaster.org/covid19/covid-19-data-reports,,
-4/10,,1,,TX,Collin, experience.arcgis.com/experience/c00baf45f12a4899aae1c812e29d6cde,,
-4/10,,1,,TX,Galveston, www.gchd.org/about-us/news-and-events/coronavirus-disease-2019-covid-19/galveston-county-confirmed-covid-19-cases,,
-4/10,,4,,TX,Lubbock, ci.lubbock.tx.us/departments/health-department/about-us/coronavirus-disease-2019-covid-19,,
-4/10,,1,,KS,Johnson, www.kshb.com/news/coronavirus/covid-19-case-tracker-where-we-stand-in-mo-ks-nationwide,,
-4/10,,7,,KS,Wyandotte, www.kshb.com/news/coronavirus/covid-19-case-tracker-where-we-stand-in-mo-ks-nationwide,,
-4/10,,6,,RI,Unassigned, health.ri.gov/data/covid-19/,,
-4/10,,1,,KS,Cowley, www.kshb.com/news/coronavirus/covid-19-case-tracker-where-we-stand-in-mo-ks-nationwide,,
-4/10,,1,,KS,Sumner, www.kshb.com/news/coronavirus/covid-19-case-tracker-where-we-stand-in-mo-ks-nationwide,,
-4/10,,4,,PA,Bucks, covid19-bucksgis.hub.arcgis.com/,,
-4/10,,27,,PA,Philadelphia, www.phila.gov/programs/coronavirus-disease-2019-covid-19/,,
-4/10,,2,,CA,Fresno, www.co.fresno.ca.us/departments/public-health/covid-19,,
-4/10,男,1,50+,NY,Albany, www.albanycounty.com/Home/Components/News/News/143/3769,,"Since yesterday there has been an additional death due to the coronavirus – a man in his 50’s with multiple underlying medical conditions. The death toll for the county now stands at twelve."
-4/10,,1,,NY,Chautauqua, chautauquacounty.maps.arcgis.com/apps/opsdashboard/index.html#/012d07321ad6415c8cf17c4f673643c9,,
-4/10,,1,,NY,Dutchess, dcny.maps.arcgis.com/apps/opsdashboard/index.html#/8905f4428f3148d0bffd50a2f3e4db11,,
-4/10,,1,,NM,Bernalillo, cv.nmhealth.org/cases-by-county/,,
-4/10,,1,,NM,Sandoval, cv.nmhealth.org/cases-by-county/,,
-4/10,男,1,70+,NE,Hall, www.ketv.com/article/man-woman-in-their-70s-die-at-hospital-bringing-nebraska-covid-19-death-toll-to-17/32111251#,,"Both individuals a man and a woman were in their 70s"
-4/10,女,1,70+,NE,Hall, www.ketv.com/article/man-woman-in-their-70s-die-at-hospital-bringing-nebraska-covid-19-death-toll-to-17/32111251#,,"Both individuals a man and a woman were in their 70s"
-4/10,,1,,CA,San Bernardino, wp.sbcounty.gov/dph/coronavirus/,,
-4/10,,4,,MO,St. Louis City, www.nytimes.com/interactive/2020/us/missouri-coronavirus-cases.html,,
-4/10,,1,,MO,Jefferson, www.nytimes.com/interactive/2020/us/missouri-coronavirus-cases.html,,
-4/10,,1,,MO,Cass, www.nytimes.com/interactive/2020/us/missouri-coronavirus-cases.html,,
-4/10,,1,,CA,Sutter, www.latimes.com/projects/california-coronavirus-cases-tracking-outbreak/,,
-4/10,,1,,CA,Sonoma, www.latimes.com/projects/california-coronavirus-cases-tracking-outbreak/,,
-4/10,,4,,CA,San Diego, dph.georgia.gov/covid-19-daily-status-report,,
-4/10,,2,,CA,Los Angeles, www.latimes.com/projects/california-coronavirus-cases-tracking-outbreak/,,
-4/10,,2,,NC,Mecklenburg, www.charlotteobserver.com/news/coronavirus/article241929031.html,,"Friday Mecklenburg County announced two more people have died from COVID-19. The county’s total number of deaths is at 12."
-4/10,,1,,NC,Richmond, www.wcnc.com/article/news/health/coronavirus/richmond-county-reports-first-coronavirus-related-death/275-8960381d-0381-4e42-bcdf-33a8d38ca387,,Health officials in Richmond County have just confirmed its first coronavirus-related death.
+4/11,,1,,MN,Unassigned,https://www.health.state.mn.us/diseases/coronavirus/situation.html,,
+4/11,,2,,PA,Monroe,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
+4/11,男,1,60+,PR,Puerto Rico,https://www.elnuevodia.com/noticias/locales/nota/subea42eltotaldevictimasmortalesporcoronavirusenpuertorico-2560281/,,
+4/11,女,1,80+,PR,Puerto Rico,https://www.elnuevodia.com/noticias/locales/nota/subea42eltotaldevictimasmortalesporcoronavirusenpuertorico-2560281/,,
+4/11,女,1,80+,PR,Puerto Rico,https://www.elnuevodia.com/noticias/locales/nota/subea42eltotaldevictimasmortalesporcoronavirusenpuertorico-2560281/,,
+4/11,,1,,WA,Skagit,https://www.skagitcounty.net/Departments/HealthDiseases/coronavirus.htm,,
+4/11,,1,,IN,Allen,https://coronavirus.in.gov/2393.htm,,
+4/11,,2,,IN,Decatur,https://coronavirus.in.gov/2393.htm,,
+4/11,,1,,IN,Delaware,https://coronavirus.in.gov/2393.htm,,
+4/11,,1,,IN,Floyd,https://coronavirus.in.gov/2393.htm,,
+4/11,,3,,IN,Hamilton,https://coronavirus.in.gov/2393.htm,,
+4/11,,2,,IN,Hancock,https://coronavirus.in.gov/2393.htm,,
+4/11,,1,,IN,Harrison,https://coronavirus.in.gov/2393.htm,,
+4/11,,1,,IN,Hendricks,https://coronavirus.in.gov/2393.htm,,
+4/11,,3,,IN,Johnson,https://coronavirus.in.gov/2393.htm,,
+4/11,,2,,IN,Lake,https://coronavirus.in.gov/2393.htm,,
+4/11,,11,,IN,Marion,https://coronavirus.in.gov/2393.htm,,
+4/11,,1,,IN,Orange,https://coronavirus.in.gov/2393.htm,,
+4/11,,1,,IN,Porter,https://coronavirus.in.gov/2393.htm,,
+4/11,,1,,IN,St. Joseph,https://coronavirus.in.gov/2393.htm,,
+4/11,,1,,VT,Chittenden,https://www.healthvermont.gov/response/coronavirus-covid-19,,
+4/11,,1,,VA,Fairfax,https://www.fairfaxcounty.gov/covid19/case-information,,
+4/11,,6,,VA,Unassigned,http://www.vdh.virginia.gov/coronavirus/,,
+4/11,男,1,80+,MD,Anne Arundel,https://twitter.com/MDHealthDept/status/1248980192334434312,,
+4/11,男,2,80+,MD,Baltimore,https://twitter.com/MDHealthDept/status/1248980192334434312,,
+4/11,,2,,MD,Baltimore City,https://coronavirus.maryland.gov/,,
+4/11,男,2,60+,MD,Carroll,https://twitter.com/MDHealthDept/status/1248980192334434312,,
+4/11,女,1,70+,MD,Charles,https://twitter.com/MDHealthDept/status/1248980192334434312,,
+4/11,男,1,80+,MD,Frederick,https://coronavirus.maryland.gov/,,
+4/11,男,1,60+,MD,Harford,https://twitter.com/MDHealthDept/status/1248980192334434312,,
+4/11,男,1,80+,MD,Montgomery,https://twitter.com/MDHealthDept/status/1248980192334434312,,
+4/11,,1,,MD,Prince George's,https://coronavirus.maryland.gov/,,
+4/11,女,1,20+,MD,Washington,https://twitter.com/MDHealthDept/status/1248980192334434312,,
+4/11,,2,,WA,Chelan,https://cdhd.wa.gov/covid-19/,,
+4/11,,1,,ME,Cumberland,https://www.maine.gov/dhhs/mecdc/infectious-disease/epi/airborne/coronavirus.shtml,,
+4/11,,1,,ME,York,https://www.maine.gov/dhhs/mecdc/infectious-disease/epi/airborne/coronavirus.shtml,,
+4/11,,9,,DC,District of Columbia,https://coronavirus.dc.gov/page/coronavirus-data,,
+4/11,,1,,GU,Guam,http://dphss.guam.gov/covid-19/,,
+4/11,,2,,AL,Tallapoosa,https://alpublichealth.maps.arcgis.com/apps/opsdashboard/index.html#/6d2771faa9da4a2786a509d82c8cf0f7,,
+4/11,女,1,80+,FL,Broward,https://floridadisaster.org/globalassets/covid19/dailies/covid-19-data---daily-report-2020-04-11-1725.pdf,,
+4/11,男,1,80+,FL,Collier,https://floridadisaster.org/globalassets/covid19/dailies/covid-19-data---daily-report-2020-04-11-1725.pdf,,
+4/11,男,1,60+,FL,Hillsborough,https://floridadisaster.org/globalassets/covid19/dailies/covid-19-data---daily-report-2020-04-11-1725.pdf,,
+4/11,男,1,80+,FL,Lake,https://floridadisaster.org/globalassets/covid19/dailies/covid-19-data---daily-report-2020-04-11-1725.pdf,,
+4/11,男,2,50+,FL,Miami-Dade,https://floridadisaster.org/globalassets/covid19/dailies/covid-19-data---daily-report-2020-04-11-1725.pdf,,
+4/11,女,1,40+,FL,Orange,https://floridadisaster.org/globalassets/covid19/dailies/covid-19-data---daily-report-2020-04-11-1725.pdf,,
+4/11,男,1,70+,FL,Palm Beach,https://floridadisaster.org/globalassets/covid19/dailies/covid-19-data---daily-report-2020-04-11-1725.pdf,,
+4/11,男,1,80+,FL,Sarasota,https://floridadisaster.org/globalassets/covid19/dailies/covid-19-data---daily-report-2020-04-11-1725.pdf,,
+4/11,,1,,MS,DeSoto,"https://msdh.ms.gov/msdhsite/_static/14,0,420.html#Mississippi",,
+4/11,,1,,MS,Harrison,"https://msdh.ms.gov/msdhsite/_static/14,0,420.html#Mississippi",,
+4/11,,2,,MS,Lauderdale,"https://msdh.ms.gov/msdhsite/_static/14,0,420.html#Mississippi",,
+4/11,,1,,MS,Lee,"https://msdh.ms.gov/msdhsite/_static/14,0,420.html#Mississippi",,
+4/11,,1,,MS,Marshall,"https://msdh.ms.gov/msdhsite/_static/14,0,420.html#Mississippi",,
+4/11,,1,,MS,Monroe,"https://msdh.ms.gov/msdhsite/_static/14,0,420.html#Mississippi",,
+4/11,,1,,MS,Panola,"https://msdh.ms.gov/msdhsite/_static/14,0,420.html#Mississippi",,
+4/11,,2,,MS,Pearl River,"https://msdh.ms.gov/msdhsite/_static/14,0,420.html#Mississippi",,
+4/11,,1,,MS,Union,"https://msdh.ms.gov/msdhsite/_static/14,0,420.html#Mississippi",,
+4/11,女,1,70+,ND,Cass,https://www.kvrr.com/2020/04/11/north-dakota-reports-7-covid-19-deaths/,,The latest fatality is a woman in her 70s from Cass County with underlying health conditions who acquired COVID-19 through community spread.
+4/11,,1,,NC,Forsyth,https://www.ncdhhs.gov/divisions/public-health/covid19/covid-19-nc-case-count#by-counties,,
+4/11,,1,,NC,Jones,https://www.ncdhhs.gov/divisions/public-health/covid19/covid-19-nc-case-count#by-counties,,
+4/11,,1,,NC,Orange,https://www.ncdhhs.gov/divisions/public-health/covid19/covid-19-nc-case-count#by-counties,,
+4/11,,1,,PA,Allegheny,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
+4/11,,1,,PA,​Armstrong,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
+4/11,,1,,PA,Bedford,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
+4/11,,7,,PA,Berks,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
+4/11,,6,,PA,Chester,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
+4/11,,1,,PA,Cumberland,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
+4/11,,1,,PA,Dauphin,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
+4/11,,10,,PA,Delaware,https://chesco.maps.arcgis.com/apps/opsdashboard/index.html#/bce5af8a6f454ee78e00b5adc67f4c4a,,
+4/11,,2,,PA,Fayette,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
+4/11,,2,,PA,Lackawanna,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
+4/11,,2,,PA,Lancaster,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
+4/11,,1,,PA,Lawrence,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
+4/11,,2,,PA,Luzerne,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
+4/11,,10,,PA,Montgomery,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
+4/11,,2,,PA,Northampton,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
+4/11,,1,,PA,Schuylkill,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
+4/11,,1,,PA,Tioga,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
+4/11,,1,,PA,Westmoreland,https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx,,
+4/11,,3,,OK,Cleveland,https://coronavirus.health.ok.gov/,,
+4/11,,2,,OK,Oklahoma,https://coronavirus.health.ok.gov/,,
+4/11,,1,,OK,Pottawatomie,https://coronavirus.health.ok.gov/,,
+4/11,,1,,AL,Etowah,https://alpublichealth.maps.arcgis.com/apps/opsdashboard/index.html#/6d2771faa9da4a2786a509d82c8cf0f7,,
+4/11,,1,,AL,Jefferson,https://alpublichealth.maps.arcgis.com/apps/opsdashboard/index.html#/6d2771faa9da4a2786a509d82c8cf0f7,,
+4/11,,1,,AL,Lauderdale,https://alpublichealth.maps.arcgis.com/apps/opsdashboard/index.html#/6d2771faa9da4a2786a509d82c8cf0f7,,
+4/11,,2,,AL,Lee,https://alpublichealth.maps.arcgis.com/apps/opsdashboard/index.html#/6d2771faa9da4a2786a509d82c8cf0f7,,
+4/11,,4,,AL,Mobile,https://alpublichealth.maps.arcgis.com/apps/opsdashboard/index.html#/6d2771faa9da4a2786a509d82c8cf0f7,,
+4/11,,1,,AL,Randolph,https://alpublichealth.maps.arcgis.com/apps/opsdashboard/index.html#/6d2771faa9da4a2786a509d82c8cf0f7,,
+4/11,,1,,GA,Bulloch,https://www.11alive.com/article/news/health/coronavirus/coronavirus-deaths-in-georgia/85-e9bb2324-2e27-43ca-a347-ced78cbb186b,,
+4/11,,1,,GA,Clarke,https://dph.georgia.gov/covid-19-daily-status-report,,
+4/11,,4,,GA,Dougherty,https://dph.georgia.gov/covid-19-daily-status-report,,
+4/11,,1,,GA,Gwinnett,https://dph.georgia.gov/covid-19-daily-status-report,,
+4/11,,1,,GA,Habersham,https://dph.georgia.gov/covid-19-daily-status-report,,
+4/11,,1,,GA,Muscogee,https://dph.georgia.gov/covid-19-daily-status-report,,
+4/11,,1,,GA,Upson,https://dph.georgia.gov/covid-19-daily-status-report,,
+4/11,,1,,TX,El Paso,https://txdshs.maps.arcgis.com/apps/opsdashboard/index.html#/ed483ecd702b4298ab01e8b9cafc8b83,,
+4/11,,1,,TX,Fort Bend,https://txdshs.maps.arcgis.com/apps/opsdashboard/index.html#/ed483ecd702b4298ab01e8b9cafc8b83,,
+4/11,,1,,TX,Hale,https://txdshs.maps.arcgis.com/apps/opsdashboard/index.html#/ed483ecd702b4298ab01e8b9cafc8b83,,
+4/11,,1,,TX,Hardin,https://txdshs.maps.arcgis.com/apps/opsdashboard/index.html#/ed483ecd702b4298ab01e8b9cafc8b83,,
+4/11,,2,,LA,Allen,http://ldh.la.gov/coronavirus/,,
+4/11,,1,,LA,Ascension,http://ldh.la.gov/coronavirus/,,
+4/11,,2,,LA,Bossier,http://ldh.la.gov/coronavirus/,,
+4/11,,1,,TX,Howard,https://txdshs.maps.arcgis.com/apps/opsdashboard/index.html#/ed483ecd702b4298ab01e8b9cafc8b83,,
+4/11,,3,,LA,Calcasieu,http://ldh.la.gov/coronavirus/,,
+4/11,,1,,LA,Claiborne,http://ldh.la.gov/coronavirus/,,
+4/11,,6,,LA,East Baton Rouge,http://ldh.la.gov/coronavirus/,,
+4/11,,2,,LA,Iberville,http://ldh.la.gov/coronavirus/,,
+4/11,,1,,TX,Palo Pinto,https://txdshs.maps.arcgis.com/apps/opsdashboard/index.html#/ed483ecd702b4298ab01e8b9cafc8b83,,
+4/11,,1,,LA,Jefferson,http://ldh.la.gov/coronavirus/,,
+4/11,,5,,LA,Jefferson Davis,http://ldh.la.gov/coronavirus/,,
+4/11,,1,,TX,Potter,https://txdshs.maps.arcgis.com/apps/opsdashboard/index.html#/ed483ecd702b4298ab01e8b9cafc8b83,,
+4/11,,7,,LA,Orleans,http://ldh.la.gov/coronavirus/,,
+4/11,,1,,TX,Randall,https://txdshs.maps.arcgis.com/apps/opsdashboard/index.html#/ed483ecd702b4298ab01e8b9cafc8b83,,
+4/11,,1,,LA,Unassigned,http://ldh.la.gov/coronavirus/,,
+4/11,,3,,LA,Plaquemines,http://ldh.la.gov/coronavirus/,,
+4/11,,1,,LA,Rapides,http://ldh.la.gov/coronavirus/,,
+4/11,,1,,LA,St. Charles,http://ldh.la.gov/coronavirus/,,
+4/11,,1,,LA,St. John the Baptist,http://ldh.la.gov/coronavirus/,,
+4/11,,5,,LA,St. Landry,http://ldh.la.gov/coronavirus/,,
+4/11,,1,,LA,St. Martin,http://ldh.la.gov/coronavirus/,,
+4/11,,1,,LA,St. Mary,http://ldh.la.gov/coronavirus/,,
+4/11,,5,,LA,St. Tammany,http://ldh.la.gov/coronavirus/,,
+4/11,,1,,LA,Tangipahoa,http://ldh.la.gov/coronavirus/,,
+4/11,,1,,LA,Terrebonne,http://ldh.la.gov/coronavirus/,,
+4/11,,6,,AZ,Maricopa,https://www.maricopa.gov/5460/Coronavirus-Disease-2019,,
+4/11,,547,,NY,New York,https://covid19tracker.health.ny.gov/views/NYS-COVID19-Tracker/NYSDOHCOVID-19Tracker-Fatalities?%3Aembed=yes&%3Atoolbar=no,,"According to New York State Department of Health, NYC reached 6,367 deaths in total."
+4/11,,89,,NY,Nassau,https://covid19tracker.health.ny.gov/views/NYS-COVID19-Tracker/NYSDOHCOVID-19Tracker-Fatalities?%3Aembed=yes&%3Atoolbar=no,,Nassau County death number is consistent with NY.gov's residence of individual fatalities.
+4/11,,72,,NY,Westchester,https://covid19tracker.health.ny.gov/views/NYS-COVID19-Tracker/NYSDOHCOVID-19Tracker-Fatalities?%3Aembed=yes&%3Atoolbar=no,,Westchester County death number is consistent with NY.gov's residence of individual fatalities.
+4/11,,5,,AZ,Unassigned,https://www.azdhs.gov/preparedness/epidemiology-disease-control/infectious-disease-epidemiology/index.php#novel-coronavirus-home,,
+4/11,,45,,NJ,Bergen,https://www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
+4/11,,60,,NJ,Essex,https://covid19.nj.gov/index.html#live-updates,,
+4/11,,20,,NJ,Hudson,https://www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
+4/11,,34,,NJ,Union,https://www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
+4/11,,9,,NJ,Middlesex,https://www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
+4/11,,18,,NJ,Passaic,https://www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
+4/11,,8,,NJ,Monmouth,https://www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
+4/11,,11,,NJ,Ocean,https://www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
+4/11,,17,,NJ,Morris,https://www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
+4/11,,9,,NJ,Somerset,https://www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
+4/11,,10,,NJ,Mercer,https://www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
+4/11,,1,,NJ,Gloucester,https://covid19.nj.gov/index.html#live-updates,,
+4/11,,1,,NJ,Sussex,https://www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
+4/11,,3,,NJ,Warren,https://www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
+4/11,,4,,NJ,Hunterdon,https://www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
+4/11,,1,,NJ,Atlantic,https://www.nj.gov/health/cd/topics/covid2019_dashboard.shtml,,
+4/11,男,1,60+,TX,Tarrant,https://www.nbcdfw.com/news/coronavirus/tarrant-county-confirms-4-additional-covid-19-deaths/2349713/,,"Four more Tarrant County residents have died of COVID-19, county health officials confirmed Saturday. The patients include three people from Fort Worth — a man in his 60s, a man in his 70s and a woman in her late 40s — and a man in his 80s from Sansom Park."
+4/11,男,1,70+,TX,Tarrant,https://www.nbcdfw.com/news/coronavirus/tarrant-county-confirms-4-additional-covid-19-deaths/2349713/,,"Four more Tarrant County residents have died of COVID-19, county health officials confirmed Saturday. The patients include three people from Fort Worth — a man in his 60s, a man in his 70s and a woman in her late 40s — and a man in his 80s from Sansom Park."
+4/11,男,1,80+,TX,Tarrant,https://www.nbcdfw.com/news/coronavirus/tarrant-county-confirms-4-additional-covid-19-deaths/2349713/,,"Four more Tarrant County residents have died of COVID-19, county health officials confirmed Saturday. The patients include three people from Fort Worth — a man in his 60s, a man in his 70s and a woman in her late 40s — and a man in his 80s from Sansom Park."
+4/11,女,1,50+,TX,Tarrant,https://www.nbcdfw.com/news/coronavirus/tarrant-county-confirms-4-additional-covid-19-deaths/2349713/,,"Four more Tarrant County residents have died of COVID-19, county health officials confirmed Saturday. The patients include three people from Fort Worth — a man in his 60s, a man in his 70s and a woman in her late 40s — and a man in his 80s from Sansom Park."
+4/11,男,1,60+,TX,Dallas,https://www.nbcdfw.com/news/coronavirus/dallas-county-reports-2-additional-deaths-107-new-covid-19-cases/2349722/,,The two residents included a Garland man in his 60s and a Grand Prairie man in his 70s. Both men had underlying health conditions.
+4/11,男,1,70+,TX,Dallas,https://www.nbcdfw.com/news/coronavirus/dallas-county-reports-2-additional-deaths-107-new-covid-19-cases/2349722/,,The two residents included a Garland man in his 60s and a Grand Prairie man in his 70s. Both men had underlying health conditions.
+4/11,,3,,MN,Hennepin,https://www.health.state.mn.us/diseases/coronavirus/situation.html#cases1,,
+4/11,,1,,MN,Ramsey,https://www.health.state.mn.us/diseases/coronavirus/situation.html#cases1,,
+4/11,,1,,NY,Clinton,http://www.clintonhealth.org/BulletinsPress/PR04112020.pdf,,"On Friday, CVPH Medical Center reported the first COVID-19 death in Clinton County as that of an 80-year-old woman, who entered the hospital on April 2nd. On Saturday, a second COVID-19 patient passed away. "
+4/11,,1,80+,MN,Wright,https://www.hometownsource.com/monticello_times/coronavirus/first-wright-county-death-from-covid-19-reported/article_e9cf93d2-7c13-11ea-845d-e7603d0f25ce.html,,
+4/11,女,1,70+,TX,Brazos,https://www.kbtx.com/content/news/Brazos-County-reports-10th-death-18-new-cases-569567261.html,,"The Brazos County Health District is reporting the 10th death from COVID-19 and 18 new cases. The woman who died was in her 70s and was in the hospital."
+4/11,,1,,OH,Belmont,https://coronavirus.ohio.gov/wps/portal/gov/covid-19/dashboards,,
+4/11,,1,,OH,Champaign,https://coronavirus.ohio.gov/wps/portal/gov/covid-19/dashboards,,
+4/11,,1,,OH,Darke,https://coronavirus.ohio.gov/wps/portal/gov/covid-19/dashboards/overview/,,
+4/11,,1,,OH,Geauga,https://coronavirus.ohio.gov/wps/portal/gov/covid-19/dashboards/overview/,,
+4/11,,3,,OH,Hamilton,https://coronavirus.ohio.gov/wps/portal/gov/covid-19/dashboards,,
+4/11,,1,,OH,Madison,https://coronavirus.ohio.gov/wps/portal/gov/covid-19/dashboards,,
+4/11,,2,,OH,Medina,https://coronavirus.ohio.gov/wps/portal/gov/covid-19/dashboards,,
+4/11,,1,,OH,Miami,https://coronavirus.ohio.gov/wps/portal/gov/covid-19/dashboards/overview/,,
+4/11,,1,,OH,Montgomery,https://coronavirus.ohio.gov/wps/portal/gov/covid-19/dashboards,,
+4/11,,1,,OH,Sandusky,https://coronavirus.ohio.gov/wps/portal/gov/covid-19/dashboards/overview/,,
+4/11,,1,,OH,Summit,https://coronavirus.ohio.gov/wps/portal/gov/covid-19/dashboards,,
+4/11,,1,,OH,Wyandot,https://coronavirus.ohio.gov/wps/portal/gov/covid-19/dashboards,,
+4/11,,1,,OH,Lucas,https://coronavirus.ohio.gov/wps/portal/gov/covid-19/dashboards,,
+4/11,,44,,NY,Suffolk,https://suffolkcountyny.gov/Departments/Health-Services/Health-Bulletins/Novel-Coronavirus/covid-19-case-update-april-11-2020-230-pm,,"458 individuals have died, up 44 from 414 on April 10."
+4/11,,1,,MI,Berrien,https://www.michigan.gov/coronavirus/,,
+4/11,,1,,MI,Dickinson,https://content.govdelivery.com/accounts/ILLAKE/bulletins/283966a,,
+4/11,,5,,MI,Genesee,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html",,
+4/11,,21,,MI,Wayne--Detroit,"""https://www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html""",,
+4/11,,1,,MI,Isabella,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html",,
+4/11,,12,,MI,Macomb,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html",,
+4/11,,1,,MI,Monroe,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html",,
+4/11,,34,,MI,Oakland,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html",,
+4/11,,1,,MI,Ottawa,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html",,
+4/11,,1,,MI,Tuscola,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html",,
+4/11,,5,,MI,Unassigned,"""https://www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html""",,
+4/11,,3,,MI,Washtenaw,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html",,
+4/11,,22,,MI,Wayne,"""https://www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html""",,
+4/11,,1,,MI,Wexford,"https://www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html",,
+4/11,,3,,MI,Michigan Department of Corrections (MDOC),"https://www.michigan.gov/coronavirus/0,9753,7-406-98163_98173---,00.html",,
+4/11,,4,,KS,Unassigned,https://khap2.kdhe.state.ks.us/NewsRelease/COVID19/4-11-20_update_numbers.pdf,,
+4/11,,7,,RI,Unassigned,https://health.ri.gov/data/covid-19/,,
+4/11,,1,,UT,unassigned,https://coronavirus.utah.gov/case-counts/,,
+4/11,,1,,AK,Unassigned,https://coronavirus-response-alaska-dhss.hub.arcgis.com/datasets/daily-cases-hospitalizations-and-deaths-04apr2020-1,,
+4/11,,6,,TN,Shelby,https://insight.livestories.com/s/v2/shelby-county-health-department-covid-19/db01f01b-3f9d-460a-9548-1db37ed0ccbd,,
+4/11,,1,,TN,Hawkins,https://www.tn.gov/health/cedep/ncov.html,,"1 new death in Hawkins county, with 2 in total."
+4/11,,1,,TN,Sumner,https://www.tn.gov/health/cedep/ncov.html,,"1 new death in Sumner county, with 22 in total."
+4/11,男,1,70+,IL,Champaign,http://www.dph.illinois.gov/news/202004,,Champaign County: 1 male 70s
+4/11,女,1,30+,IL,Cook,http://www.dph.illinois.gov/news/202004,,1 female 30s
+4/11,男,2,40+,IL,Cook,http://www.dph.illinois.gov/news/202004,,2 male 40s
+4/11,女,1,50+,IL,Cook,http://www.dph.illinois.gov/news/202004,,1 female 50s
+4/11,男,3,50+,IL,Cook,http://www.dph.illinois.gov/news/202004,,3 male 50s
+4/11,女,3,60+,IL,Cook,http://www.dph.illinois.gov/news/202004,,3 female 60s
+4/11,男,7,60+,IL,Cook,http://www.dph.illinois.gov/news/202004,,7 male 60s
+4/11,女,9,70+,IL,Cook,http://www.dph.illinois.gov/news/202004,,9 female 70s
+4/11,男,4,70+,IL,Cook,http://www.dph.illinois.gov/news/202004,,4 male 70s
+4/11,女,7,80+,IL,Cook,http://www.dph.illinois.gov/news/202004,,7 female 80s
+4/11,男,9,80+,IL,Cook,http://www.dph.illinois.gov/news/202004,,9 male 80s
+4/11,女,7,90+,IL,Cook,http://www.dph.illinois.gov/news/202004,,7 female 90s
+4/11,男,2,90+,IL,Cook,http://www.dph.illinois.gov/news/202004,,2 male 90s
+4/11,女,1,90+,IL,Cook,http://www.dph.illinois.gov/news/202004,,1 female 100s
+4/11,男,1,60+,IL,DuPage,http://www.dph.illinois.gov/news/202004,,1 male 60s
+4/11,女,1,80+,IL,DuPage,http://www.dph.illinois.gov/news/202004,,1 female 80s
+4/11,男,2,80+,IL,DuPage,http://www.dph.illinois.gov/news/202004,,2 male 80s
+4/11,女,1,90+,IL,DuPage,http://www.dph.illinois.gov/news/202004,,1 female 90s
+4/11,女,1,90+,IL,Jackson,http://www.dph.illinois.gov/news/202004,,1 female 90s
+4/11,女,1,60+,IL,Kankakee,http://www.dph.illinois.gov/news/202004,,1 female 60s
+4/11,女,1,80+,IL,Kankakee,http://www.dph.illinois.gov/news/202004,,1 female 80s
+4/11,男,2,60+,IL,Lake,http://www.dph.illinois.gov/news/202004,,2 male 60s
+4/11,女,1,70+,IL,Lake,http://www.dph.illinois.gov/news/202004,,1 female 70s
+4/11,男,1,70+,IL,Lake,http://www.dph.illinois.gov/news/202004,,1 male 70s
+4/11,女,2,80+,IL,Lake,http://www.dph.illinois.gov/news/202004,,2 female 80s
+4/11,男,1,80+,IL,Lake,http://www.dph.illinois.gov/news/202004,,1 male 80s
+4/11,女,1,90+,IL,Lake,http://www.dph.illinois.gov/news/202004,,1 female 90s
+4/11,男,1,60+,IL,McHenry,http://www.dph.illinois.gov/news/202004,,1 male 60s
+4/11,女,1,80+,IL,St. Clair,http://www.dph.illinois.gov/news/202004,,1 female 80s
+4/11,女,1,90+,IL,St. Clair,http://www.dph.illinois.gov/news/202004,,1 female 90s
+4/11,女,1,70+,IL,Will,http://www.dph.illinois.gov/news/202004,,1 female 70s
+4/11,男,2,70+,IL,Will,http://www.dph.illinois.gov/news/202004,,2 males 70s
+4/11,男,1,80+,IL,Will,http://www.dph.illinois.gov/news/202004,,1 male 80s
+4/11,女,1,90+,IL,Will,http://www.dph.illinois.gov/news/202004,,1 female 90s
+4/11,女,1,90+,IL,Winnebago,http://www.dph.illinois.gov/news/202004,,1 female 90s
+4/11,,1,,SC,Florence,https://www.scdhec.gov/infectious-diseases/viruses/coronavirus-disease-2019-covid-19/testing-sc-data-covid-19,,
+4/11,,1,,SC,Greenville,https://www.scdhec.gov/infectious-diseases/viruses/coronavirus-disease-2019-covid-19/testing-sc-data-covid-19,,
+4/11,,1,,SC,Beaufort,https://www.scdhec.gov/infectious-diseases/viruses/coronavirus-disease-2019-covid-19/testing-sc-data-covid-19,,
+4/11,,1,,SC,Clarendon,https://www.scdhec.gov/infectious-diseases/viruses/coronavirus-disease-2019-covid-19/testing-sc-data-covid-19,,
+4/11,,1,,CA,Orange,https://occovid19.ochealthinfo.com/coronavirus-in-oc,,
+4/11,,1,,SC,Kershaw,https://www.scdhec.gov/infectious-diseases/viruses/coronavirus-disease-2019-covid-19/testing-sc-data-covid-19,,
+4/11,,1,,SC,Sumter,https://www.scdhec.gov/infectious-diseases/viruses/coronavirus-disease-2019-covid-19/testing-sc-data-covid-19,,
+4/11,,1,,SC,York,https://www.scdhec.gov/infectious-diseases/viruses/coronavirus-disease-2019-covid-19/testing-sc-data-covid-19,,
+4/11,,1,,SC,Dorchester,https://www.scdhec.gov/infectious-diseases/viruses/coronavirus-disease-2019-covid-19/testing-sc-data-covid-19,,
+4/11,,8,,WI,Milwaukee,https://www.dhs.wisconsin.gov/outbreaks/index.htm,,
+4/11,,1,,WI,Rock,https://www.dhs.wisconsin.gov/outbreaks/index.htm,,
+4/11,男,1,40+,MA,Middlesex,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,女,1,50+,MA,Bristol,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,男,2,60+,MA,Plymouth,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,男,1,60+,MA,Bristol,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,男,2,60+,MA,Norfolk,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,男,1,60+,MA,Suffolk,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,男,1,60+,MA,Essex,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,女,1,60+,MA,Norfolk,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,女,1,60+,MA,Essex,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,女,1,60+,MA,Suffolk,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,女,1,60+,MA,Middlesex,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,女,1,60+,MA,Hampden,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,男,1,70+,MA,Franklin,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,男,5,70+,MA,Middlesex,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,女,1,70+,MA,Barnstable,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,男,1,70+,MA,Plymouth,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,女,4,70+,MA,Middlesex,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,女,1,70+,MA,Worcester,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,女,1,70+,MA,Hampden,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,女,1,70+,MA,Bristol,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,,1,,CA,Alameda,http://www.acphd.org/2019-ncov.aspx,,
+4/11,男,1,70+,MA,Essex,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,男,2,70+,MA,Bristol,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,女,2,80+,MA,Suffolk,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,男,2,80+,MA,Norfolk,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,男,3,80+,MA,Essex,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,女,2,80+,MA,Essex,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,女,8,80+,MA,Middlesex,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,男,1,80+,MA,Suffolk,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,男,1,80+,MA,Bristol,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,女,2,80+,MA,Norfolk,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,男,1,80+,MA,Plymouth,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,男,6,80+,MA,Middlesex,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,男,2,80+,MA,Hampden,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,男,1,80+,MA,Barnstable,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,女,1,80+,MA,Hampden,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,男,1,80+,MA,Hampshire,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,女,1,80+,MA,Worcester,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,女,3,90+,MA,Essex,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,女,2,90+,MA,Worcester,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,男,1,90+,MA,Suffolk,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,女,2,90+,MA,Suffolk,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,女,7,90+,MA,Norfolk,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,男,2,90+,MA,Middlesex,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,男,1,90+,MA,Norfolk,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,男,1,90+,MA,Hampden,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,男,1,90+,MA,Essex,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,女,1,90+,MA,Middlesex,https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-april-11-2020/download,,
+4/11,,1,,TX,Harris--Non Houston,http://publichealth.harriscountytx.gov/Resources/2019-Novel-Coronavirus,,
+4/11,,9,,MO,St. Louis,https://stlcogis.maps.arcgis.com/apps/MapSeries/index.html?appid=6ae65dea4d804f2ea4f5d8ba79e96df1,,
+4/11,,1,,AR,Pulaski,https://adem.maps.arcgis.com/apps/opsdashboard/index.html#/f533ac8a8b6040e5896b05b47b17a647,,
+4/11,,17,,CT,Fairfield,https://portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary4112020.pdf?la=en,,
+4/11,,13,,CT,Hartford,https://portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary4112020.pdf?la=en,,
+4/11,,4,,CT,Litchfield,https://portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary4112020.pdf?la=en,,
+4/11,,1,,CT,Middlesex,https://portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary4112020.pdf?la=en,,
+4/11,,9,,CT,New Haven,https://portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary4112020.pdf?la=en,,
+4/11,,1,,CT,Tolland,https://portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary4112020.pdf?la=en,,
+4/11,,1,,CT,Unassigned,https://portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary4112020.pdf?la=en,,
+4/11,女,1,90+,DE,Sussex,https://news.delaware.gov/2020/04/11/covid-19-update-for-april-11-2020-dph-announces-153-additional-positive-cases-1-new-death/,,The most recent death involves a 96-year-old female long-term care resident from Sussex County who had underlying health conditions.
+4/11,,1,,WA,Snohomish,https://www.snohd.org/499/COVID-19-Case-Count-Info,,
+4/11,,7,,WA,King,https://www.kingcounty.gov/depts/health/communicable-diseases/disease-control/novel-coronavirus.aspx,,
+4/11,,2,,CA,Riverside,https://www.rivcoph.org/coronavirus,,
+4/11,,2,,CA,Contra Costa,https://www.coronavirus.cchealth.org,,
+4/11,,21,,NV,Clark,http://media.southernnevadahealthdistrict.org/download/COVID-19/updates/20200410-Daily-Aggregate-COVID19.pdf,,
+4/11,,1,,NV,Washoe,https://covid19washoe.com/,,
+4/11,,13,,NY,Orange,https://www.facebook.com/336752263752/posts/10157377047208753/?vh=e&d=n,,"Reported by Orange County Health Department, may not include in NY total death right now."
+4/11,,2,,CA,Sacramento,https://www.saccounty.net/COVID-19/Pages/default.aspx,,
+4/11,,23,,CA,Los Angeles,https://www.latimes.com/projects/california-coronavirus-cases-tracking-outbreak/,,
+4/11,,1,,CA,Stanislaus,http://www.schsa.org/publichealth/pages/corona-virus/,,
+4/11,,1,,NY,Delaware,http://www.co.delaware.ny.us/alerts/20200411%20PR%20BOS.pdf,,
+4/11,,1,,NY,Dutchess,https://dcny.maps.arcgis.com/apps/opsdashboard/index.html#/8905f4428f3148d0bffd50a2f3e4db11,,
+4/11,,4,,NY,Erie,http://erieny.maps.arcgis.com/apps/opsdashboard/index.html#/dd7f1c0c352e4192ab162a1dfadc58e1,,
+4/11,,1,,NM,San Juan,https://cv.nmhealth.org/cases-by-county/,,
+4/11,,1,,OR,Josephine,https://govstatus.egov.com/OR-OHA-COVID-19,,
+4/11,,1,,OR,Multnomah,https://govstatus.egov.com/OR-OHA-COVID-19,,
+4/11,,1,,OR,Yamhill,https://govstatus.egov.com/OR-OHA-COVID-19,,
+4/11,,1,,ID,Twin Falls,https://public.tableau.com/profile/idaho.division.of.public.health#!/vizhome/DPHIdahoCOVID-19Dashboard_V2/DPHCOVID19Dashboard2,,
+4/11,,1,,ID,Payette,https://public.tableau.com/profile/idaho.division.of.public.health#!/vizhome/DPHIdahoCOVID-19Dashboard_V2/DPHCOVID19Dashboard2,,
+4/11,,2,,CO,Adams,https://covid19.colorado.gov/data,,
+4/11,,7,,CO,Arapahoe,https://covid19.colorado.gov/data,,
+4/11,,1,,CO,Boulder,https://covid19.colorado.gov/data,,
+4/11,,4,,CO,Denver,https://covid19.colorado.gov/data,,
+4/11,,2,,CO,El Paso,https://covid19.colorado.gov/data,,
+4/11,,2,,CO,Gunnison,https://covid19.colorado.gov/data,,
+4/11,,1,,CO,Montezuma,https://covid19.colorado.gov/data,,
+4/11,,1,,CO,Montrose,https://covid19.colorado.gov/data,,
+4/11,,1,,CO,Pueblo,https://covid19.colorado.gov/data,,
+4/11,,3,,CO,Weld,https://covid19.colorado.gov/data,,
+4/11,男,1,80+,PA,Bucks,http://www.buckscounty.org/news/2020News/2020/04/12/pa-health-official-sounds-hopeful-note-as-covid-19-numbers-slow-down,,"4/11, The county had three additional coronavirus-related deaths reported today, bringing the countywide total to 35. The decedents were an 89-year-old man, a 73-year-old woman and a 64-year-old man, all with underlying health conditions."
+4/11,,1,,AL,Etowah,https://alpublichealth.maps.arcgis.com/apps/opsdashboard/index.html#/6d2771faa9da4a2786a509d82c8cf0f7,,
+4/11,,3,,NY,Ulster,https://ulstercounty.maps.arcgis.com/apps/opsdashboard/index.html#/5ed7eff6a8e3441fabd1cbcc05e4db37,,"Reported by Ulster County Health Department, may not include in NY total death right now."
+4/11,,4,,NY,Steuben,https://www.steubencony.org/,,"Reported by Steuben County Health Department, may not include in NY total death right now."
+4/11,,1,,CA,Santa Clara,https://www.sccgov.org/sites/phd/DiseaseInformation/novel-coronavirus/Pages/dashboard.aspx,,
+4/11,,1,,NY,Onondaga,https://www.syracuse.com/coronavirus/2020/04/coronavirus-in-onondaga-county-nearly-half-in-hospitals-are-critical-as-confirmed-cases-reach-481.html,,
+4/11,,1,,GA,DeKalb,https://www.11alive.com/article/news/health/coronavirus/coronavirus-deaths-in-georgia/85-e9bb2324-2e27-43ca-a347-ced78cbb186b,,
+4/11,,1,,NH,Unassigned,https://www.nh.gov/covid19/,,
+4/11,女,1,80+,FL,Duval,https://floridadisaster.org/globalassets/covid19/dailies/covid-19-data---daily-report-2020-04-11-1725.pdf,,
+4/11,女,1,60+,FL,Highlands,https://floridadisaster.org/globalassets/covid19/dailies/covid-19-data---daily-report-2020-04-11-1725.pdf,,
+4/11,男,1,80+,FL,Volusia,https://floridadisaster.org/globalassets/covid19/dailies/covid-19-data---daily-report-2020-04-11-1725.pdf,,
+4/11,男,2,,TX,Bexar,https://cosagis.maps.arcgis.com/apps/opsdashboard/index.html#/d2c7584fe9fd4da1b30cb9d6cc311163,,
+4/11,女,1,,TX,Bexar,https://cosagis.maps.arcgis.com/apps/opsdashboard/index.html#/d2c7584fe9fd4da1b30cb9d6cc311163,,
+4/11,,1,,WV,Unassigned,https://dhhr.wv.gov/COVID-19/Pages/default.aspx,,
+4/11,,23,,PA,Philadelphia,https://whyy.org/articles/coronavirus-update-pa-rolls-out-federal-unemployment-benefits/,,
+4/11,,1,,TX,Lubbock,https://ci.lubbock.tx.us/departments/health-department/about-us/coronavirus-disease-2019-covid-19,,
+4/11,男,1,70+,FL,Brevard,https://floridadisaster.org/globalassets/covid19/dailies/covid-19-data---daily-report-2020-04-11-1725.pdf,,74 Male
+4/11,女,1,60+,TX,Denton,https://www.nbcdfw.com/news/coronavirus/denton-county-reports-3-coronavirus-related-deaths-13-total-in-county/2349786/,,One of the individuals was a woman in her 60s
+4/11,女,1,80+,TX,Denton,https://www.nbcdfw.com/news/coronavirus/denton-county-reports-3-coronavirus-related-deaths-13-total-in-county/2349786/,,a woman over 80 years old
+4/11,男,1,80+,TX,Denton,https://www.nbcdfw.com/news/coronavirus/denton-county-reports-3-coronavirus-related-deaths-13-total-in-county/2349786/,,the third was a man over 80 years old
+4/11,,1,,KS,Montgomery,https://khap2.kdhe.state.ks.us/NewsRelease/COVID19/4-11-20_update_numbers.pdf,,
+4/11,,4,,KY,Unassigned,https://www.kentucky.com/news/coronavirus/article241943791.html,,
+4/11,男,2,60+,FL,Broward,https://floridadisaster.org/globalassets/covid19/dailies/covid-19-data---daily-report-2020-04-11-1725.pdf,,
+4/11,男,1,50+,FL,Broward,https://floridadisaster.org/globalassets/covid19/dailies/covid-19-data---daily-report-2020-04-11-1725.pdf,,
+4/11,男,3,80+,FL,Miami-Dade,https://floridadisaster.org/globalassets/covid19/dailies/covid-19-data---daily-report-2020-04-11-1725.pdf,,
+4/11,男,2,40+,FL,Miami-Dade,https://floridadisaster.org/globalassets/covid19/dailies/covid-19-data---daily-report-2020-04-11-1725.pdf,,
+4/11,Unknown,1,70+,FL,Miami-Dade,https://floridadisaster.org/globalassets/covid19/dailies/covid-19-data---daily-report-2020-04-11-1725.pdf,,
+4/11,男,1,30+,FL,Miami-Dade,https://floridadisaster.org/globalassets/covid19/dailies/covid-19-data---daily-report-2020-04-11-1725.pdf,,
+4/11,女,1,70+,FL,Duval,https://floridadisaster.org/globalassets/covid19/dailies/covid-19-data---daily-report-2020-04-11-1725.pdf,,
+4/11,女,1,90+,FL,Hillsborough,https://floridadisaster.org/globalassets/covid19/dailies/covid-19-data---daily-report-2020-04-11-1725.pdf,,
+4/11,女,1,60+,FL,Hillsborough,https://floridadisaster.org/globalassets/covid19/dailies/covid-19-data---daily-report-2020-04-11-1725.pdf,,
+4/11,女,1,80+,FL,Sarasota,https://floridadisaster.org/globalassets/covid19/dailies/covid-19-data---daily-report-2020-04-11-1725.pdf,,
+4/11,女,1,80+,MD,Anne Arundel,https://twitter.com/MDHealthDept/status/1248980192334434312,,
+4/11,男,1,60+,MD,Anne Arundel,https://twitter.com/MDHealthDept/status/1248980192334434312,,
+4/11,女,1,30+,MD,Baltimore,https://twitter.com/MDHealthDept/status/1248980192334434312,,
+4/11,男,1,60+,MD,Baltimore,https://twitter.com/MDHealthDept/status/1248980192334434312,,
+4/11,女,2,80+,MD,Baltimore City,https://twitter.com/MDHealthDept/status/1248980192334434312,,
+4/11,女,1,60+,MD,Baltimore City,https://twitter.com/MDHealthDept/status/1248980192334434312,,
+4/11,男,1,60+,MD,Baltimore City,https://twitter.com/MDHealthDept/status/1248980192334434312,,
+4/11,男,1,70+,MD,Baltimore City,https://twitter.com/MDHealthDept/status/1248980192334434312,,
+4/11,男,1,70+,MD,Carroll,https://twitter.com/MDHealthDept/status/1248980192334434312,,
+4/11,男,1,80+,MD,Carroll,https://twitter.com/MDHealthDept/status/1248980192334434312,,
+4/11,女,1,70+,MD,Carroll,https://twitter.com/MDHealthDept/status/1248980192334434312,,
+4/11,女,1,60+,MD,Carroll,https://twitter.com/MDHealthDept/status/1248980192334434312,,
+4/11,女,1,80+,MD,Frederick,https://coronavirus.maryland.gov/,,
+4/11,女,2,50+,MD,Prince George's,https://coronavirus.maryland.gov/,,
+4/11,男,1,70+,MD,Prince George's,https://coronavirus.maryland.gov/,,
+4/11,女,1,30+,MD,Prince George's,https://coronavirus.maryland.gov/,,
+4/11,男,1,30+,MD,Prince George's,https://coronavirus.maryland.gov/,,
+4/11,女,1,70+,MD,Prince George's,https://coronavirus.maryland.gov/,,
+4/11,男,1,60+,MD,Prince George's,https://coronavirus.maryland.gov/,,
+4/11,男,1,80+,MD,Prince George's,https://coronavirus.maryland.gov/,,
+4/11,,1,,WA,Yakima,https://www.yakimacounty.us/2323/COVID-19,,
+4/11,,25,,NY,Rockland,http://rockland.maps.arcgis.com/apps/opsdashboard/index.html#/d074e0336e81449393a76d1768ceb096,,"Reported by Rockland County Coronavirus COVID-19 Dashboard, may not include in NY total death right now."
+4/11,,1,,CA,San Diego,https://www.sandiegocounty.gov/content/sdc/hhsa/programs/phs/community_epidemiology/dc/2019-nCoV/status.html#Table,,
+4/11,,1,,CA,Kings,https://www.countyofkings.com/departments/health-welfare/public-health/coronavirus-disease-2019-covid-19,,
+4/11,,2,,VA,Henrico,https://www.richmond.com/news/virginia-sees-largest-one-day-increase-in-confirmed-covid-19-cases-death-toll-at-henricos/article_08148f20-ba05-5cc6-9197-e267a566550c.html,,"The death toll at Canterbury Rehabilitation & Healthcare Center in Henrico is now 42, according to its medical director, Dr. James Wright. That is two higher than on Friday "
+4/11,,3,,NV,Unassigned,https://app.powerbigov.us/view?r=eyJrIjoiMjA2ZThiOWUtM2FlNS00MGY5LWFmYjUtNmQwNTQ3Nzg5N2I2IiwidCI6ImU0YTM0MGU2LWI4OWUtNGU2OC04ZWFhLTE1NDRkMjcwMzk4MCJ9,,
+4/11,女,1,70+,PA,Bucks,http://www.buckscounty.org/news/2020News/2020/04/12/pa-health-official-sounds-hopeful-note-as-covid-19-numbers-slow-down,,"4/11, The county had three additional coronavirus-related deaths reported today, bringing the countywide total to 35. The decedents were an 89-year-old man, a 73-year-old woman and a 64-year-old man, all with underlying health conditions."
+4/11,男,1,60+,PA,Bucks,http://www.buckscounty.org/news/2020News/2020/04/12/pa-health-official-sounds-hopeful-note-as-covid-19-numbers-slow-down,,"4/11, The county had three additional coronavirus-related deaths reported today, bringing the countywide total to 35. The decedents were an 89-year-old man, a 73-year-old woman and a 64-year-old man, all with underlying health conditions."
