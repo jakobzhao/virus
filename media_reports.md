@@ -1,6 +1,6 @@
 # Media Mentions
 
-A big thanks to all the users who use our website to monitor COVID-19 spread. Your feedback is very important to us and we have recieved many honorable mentions through different media. Below is a list of major media mentions by users and organizations who acknowledge our team's achievement and effort.
+A big thanks to all the users who use our website to monitor COVID-19 spread. Your feedback is critical to us, and we have received many honorable mentions through different media. Below is a list of major media mentions by users and organizations that acknowledge our team's achievement and effort.
 
 -   University of Minnesota CIDRAP (Center for Infectious Disease Research and Policy): <https://www.cidrap.umn.edu/covid-19/maps-visuals>
 -   University of Washington News: <https://www.washington.edu/news/2020/02/07/interactive-map-shows-worldwide-spread-of-coronavirus/>
