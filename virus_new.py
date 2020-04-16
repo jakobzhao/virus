@@ -9,10 +9,10 @@ import urllib
 import requests
 
 #browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver")
-browser = webdriver.Chrome("/Users/joshuaji/Desktop/chromedriver") #joshua's chromedrive location
+#browser = webdriver.Chrome("/Users/joshuaji/Desktop/chromedriver") #joshua's chromedrive location
 #browser = webdriver.Chrome("C:/workspace/chromedriver.exe")
 #browser = webdriver.Chrome("E:/dev/workspaces/chromedriver.exe")
-#browser = webdriver.Chrome("/Users/stevenbao/dev/chromedriver")
+browser = webdriver.Chrome("/Users/stevenbao/dev/chromedriver")
 
 # Variable Preparation
 now = str(datetime.now())
@@ -153,6 +153,8 @@ with urllib.request.urlopen(urllink) as url:
     for state in states:
         data = state.split(",")
         name = data[0].lower()
+        if name == "":
+            continue
         if name == 'georgia':
             name = 'georgia usa'
         cases = data[3] + "-0-" + data[5] + "-" + data[4]
