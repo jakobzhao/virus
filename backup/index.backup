@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <meta name="authors" content="Bo Zhao, Fengyu Xu, Lola Kang, Joshua Ji, and Steven Bao">
+  <meta name="authors" content="Bo Zhao, Fengyu Xu, Le Kang, Joshua Ji, and Steven Bao">
   <title>Novel Coronavirus Infection Map</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
@@ -185,7 +185,7 @@
 
             <h5>Acknowledgment</h5>
             <p>
-              <li>Team members: Bo Zhao, Fengyu Xu, Lola Kang, Joshua Ji, and Steven Bao.</li>
+              <li>Team members: Bo Zhao, Fengyu Xu, Le Kang, Joshua Ji, and Steven Bao.</li>
               <li>The Server is hosted at UW’s <a href="https://https://csde.washington.edu/" target="_blank">Center for Studies in Demography and Ecology (CSDE)</a>.</li>
             </p>
           </div>
