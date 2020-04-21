@@ -152,7 +152,7 @@ with urllib.request.urlopen(urllink) as url:
     states = content.split("\r\n")[1:None]
     for state in states:
         data = state.split(",")
-        name = data[0].lower()
+        name = data[2].lower()
         if name == "":
             continue
         if name == 'georgia':
