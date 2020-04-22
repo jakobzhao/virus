@@ -80,7 +80,7 @@
       <div id="deck-1" class="card-deck counts">
         <div class="card">
           <div class="card-body confirmed">
-            <h5 class="card-title">Confirmed
+            <h5 class="card-title">Aggregated Confirmed
               <i class="nav fas fa-exclamation-circle tooltip">
                 <span class="tooltiptext">All the confirmed cases ever since the discovery of the COVID-19 in the statistical area.</span>
               </i>
@@ -90,20 +90,6 @@
             <span class="confirmed-count"></span><span class="confirmed-new-count">
             </span>
           </p>
-        </div>
-        <div class="card">
-          <div class="card-body death">
-            <h5 class="card-title">Death</h5>
-            <p class="card-text"><span class="death-count"></span><span class="death-new-count"></span></p>
-          </div>
-        </div>
-      </div>
-      <div id="deck-2" class="card-deck counts">
-        <div class="card">
-          <div class="card-body recovered">
-            <h5 class="card-title">Recovered</h5>
-            <p class="card-text"><span class="recovered-count"></span><span class="recovered-new-count"></span></p>
-          </div>
         </div>
         <div class="card">
           <div class="card-body active">
@@ -121,6 +107,21 @@
             </i>
 
           </p>
+        </div>
+      </div>
+      <div id="deck-2" class="card-deck counts">
+        <div class="card">
+          <div class="card-body recovered">
+            <h5 class="card-title">Recovered</h5>
+            <p class="card-text"><span class="recovered-count"></span><span class="recovered-new-count"></span></p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body death">
+            <h5 class="card-title">Death</h5>
+            <p class="card-text"><span class="death-count"></span><span class="death-new-count"></span></p>
+          </div>
         </div>
       </div>
 
@@ -1109,8 +1110,8 @@
         showPlace("Global Trend");
         // calCounts(global);
         chart.load({
-          columns: [places["Global Trend"].c, places["Global Trend"].d],
-          unload: ['Aggr. Confirmed', 'Death'],
+          columns: [places["Global Trend"].c, places["Global Trend"].a, places["Global Trend"].r, places["Global Trend"].d],
+          unload: ['Aggr. Confirmed', 'Active Confirmed', 'Recovered', 'Death'],
         });
 
         $("#hint").text("Click a place to review local trend.");
@@ -1137,7 +1138,7 @@
         data: {
           x: "t",
           y: "confirmed",
-          columns: [places["Global Trend"].t, places["Global Trend"].c, places["Global Trend"].d],
+          columns: [places["Global Trend"].t, places["Global Trend"].c, places["Global Trend"].a, places["Global Trend"].r, places["Global Trend"].d],
           type: 'line',
           axes: {
             confirmed: 'y'
@@ -1145,8 +1146,8 @@
           colors: {
             'Aggr. Confirmed': '#dc3545',
             // Suspected: 'orange',
-            //'Active Confirmed': 'orange',
-            //'Recovered': '#28a745',
+            'Active Confirmed': 'orange',
+            'Recovered': '#28a745',
             'Death': 'SlateBlue'
           }
         },
@@ -1224,8 +1225,8 @@
         showPlace(name);
 
         chart.load({
-          columns: [places[name].c, places[name].d],
-          unload: ['Aggr. Confirmed', 'Death'],
+          columns: [places[name].c, places[name].a, places[name].r, places[name].d],
+          unload: ['Aggr. Confirmed', 'Active Confirmed', 'Recovered', 'Death'],
         });
 
       }
@@ -1363,8 +1364,8 @@
             showPlace(d);
 
             chart.load({
-              columns: [places[d].c,places[d].d],
-              unload: ['Aggr. Confirmed','Death'],
+              columns: [places[d].c, places[d].a, places[d].r, places[d].d],
+              unload: ['Aggr. Confirmed', 'Active Confirmed', 'Recovered', 'Death'],
             });
           })
 
