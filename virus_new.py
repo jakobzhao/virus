@@ -113,6 +113,8 @@ for item in items[2:]:
         name = "st. vincent & the grenadines"
     elif name == "n. mariana islands":
         name = "northern mariana islands"
+    elif name == "the gambia":
+        name = "gambia"
 
     '''
     elif name == "bosnia & herzegovina":
@@ -152,7 +154,7 @@ with urllib.request.urlopen(urllink) as url:
     states = content.split("\r\n")[1:None]
     for state in states:
         data = state.split(",")
-        name = data[2].lower()
+        name = data[0].lower()
         if name == "":
             continue
         if name == 'georgia':
