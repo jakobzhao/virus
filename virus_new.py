@@ -136,6 +136,8 @@ for item in items[2:]:
     recovered = item.find_all("td")[2].text.split("\n")[0].replace(",", "")
     if recovered == "–" or recovered == "—":
         recovered = "0"
+    if death == "–" or death == "—":
+        death = "0"
 
 
     print(name, confirmed, death, recovered)
