@@ -115,6 +115,8 @@ for item in items[2:]:
         name = "northern mariana islands"
     elif name == "the gambia":
         name = "gambia"
+    elif name == "congo":
+        name = "republic of the congo"
 
     '''
     elif name == "bosnia & herzegovina":
