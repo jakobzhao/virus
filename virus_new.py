@@ -118,6 +118,7 @@ for item in items[2:]:
     elif name == "congo":
         name = "republic of the congo"
 
+
     '''
     elif name == "bosnia & herzegovina":
         name = "bosnia and herzegovina"
@@ -147,7 +148,29 @@ for item in items[2:]:
     sqls += ", '" + name.replace("'", "''") + "'"
     sqle += "'" + confirmed + "-0-" + recovered + "-" + death + "', "
 
-# U.S. States
+# U.S. States - new data source nyt
+conn = sqlite3.connect("assets/virus.db")
+cursor = conn.cursor()
+urllink = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv"
+
+with urllib.request.urlopen(urllink) as url:
+    content = url.read().decode()
+    states = content.split("\n")[-55:]
+    for state in states:
+        data = state.split(",")
+        name = data[1].lower()
+        if name == 'georgia':
+            name = 'georgia usa'
+        elif name == 'virgin islands':
+            continue
+        cases = data[3] + "-0-0-" + data[4]
+        sqls += ", '" + name + "'"
+        sqle += "'" + cases + "', "
+        print(name + " " + cases)
+
+
+'''
+# U.S. States - old version which uses NBC data
 conn = sqlite3.connect("assets/virus.db")
 cursor = conn.cursor()
 
@@ -167,7 +190,7 @@ with urllib.request.urlopen(urllink) as url:
         sqls += ", '" + name + "'"
         sqle += "'" + cases + "', "
         print(name + " " + cases)
-
+'''
 
 
 # Canadian Provinces
