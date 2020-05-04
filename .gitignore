@@ -4,3 +4,6 @@
 
 # IDEA config files
 .idea/
+
+# atom-live-server configuration file
+.atom-live-server.json
