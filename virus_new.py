@@ -137,7 +137,7 @@ for item in items[2:]:
     confirmed = item.find_all("td")[0].text.split("\n")[0].replace(",","")
     death = item.find_all("td")[1].text.split("\n")[0].replace(",", "")
     recovered = item.find_all("td")[2].text.split("\n")[0].replace(",", "")
-    if recovered == "–" or recovered == "—":
+    if recovered == "–" or recovered == "—" or recovered == "No data":
         recovered = "0"
     if death == "–" or death == "—":
         death = "0"
@@ -196,7 +196,7 @@ with urllib.request.urlopen(urllink) as url:
 # Canadian Provinces
 url = "https://health-infobase.canada.ca/covid-19/iframe/table.html"
 browser.get(url)
-time.sleep(2)
+time.sleep(4)
 soup = BeautifulSoup(browser.page_source, 'html.parser')
 provinces = soup.find("tbody").find_all("tr")
 
