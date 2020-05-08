@@ -198,6 +198,7 @@ div#footer>div {
   padding: 40px 15px 20px 15px;
 }
 
+
 .card-deck .card {
   top: -40px;
   background: #343a40;
@@ -567,4 +568,9 @@ text {
     color: grey;
     border-color: grey;
     background-color:transparent;
+}
+
+#deck-2{
+  visibility: hidden;
+  height: 0;
 }

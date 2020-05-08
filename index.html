@@ -80,7 +80,7 @@
       <div id="deck-1" class="card-deck counts">
         <div class="card">
           <div class="card-body confirmed">
-            <h5 class="card-title">Confirmed
+            <h5 class="card-title">Aggregated Confirmed
               <i class="nav fas fa-exclamation-circle tooltip">
                 <span class="tooltiptext">All the confirmed cases ever since the discovery of the COVID-19 in the statistical area.</span>
               </i>
@@ -100,12 +100,6 @@
       </div>
       <div id="deck-2" class="card-deck counts">
         <div class="card">
-          <div class="card-body recovered">
-            <h5 class="card-title">Recovered</h5>
-            <p class="card-text"><span class="recovered-count"></span><span class="recovered-new-count"></span></p>
-          </div>
-        </div>
-        <div class="card">
           <div class="card-body active">
             <h5 class="card-title">Active Confirmed
               <i class="nav fas fa-exclamation-circle tooltip">
@@ -119,8 +113,13 @@
             <i id="counticon" class="nav fas fa-exclamation-circle tooltip counticon active-new-count-tooltip">
               <span class="tooltiptext">The newly increased/decreased confirmed cases: the # of today's active confirmed cases subtract the # of yesterday's.</span>
             </i>
-
           </p>
+        </div>
+        <div class="card">
+          <div class="card-body recovered">
+            <h5 class="card-title">Recovered</h5>
+            <p class="card-text"><span class="recovered-count"></span><span class="recovered-new-count"></span></p>
+          </div>
         </div>
       </div>
 
@@ -178,9 +177,9 @@
           <a href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html" target="_blank">PHA</a> ,
           <a href="http://2019ncov.chinacdc.cn/2019-nCoV/" target="_blank">China CDC</a>,
           <a href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546" target="_blank">NBC News</a>,
-          <a href="https://en.wikipedia.org/wiki/Template:2019%E2%80%9320_coronavirus_pandemic_data" target="_blank">Wikipedia</a>, <a target="_blank" href="https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html">New York Times</a>,
-          and <a href="https://voice.baidu.com/act/newpneumonia/newpneumonia" target="_blank">Baidu</a>. Regarding the state level data in the U.S., they are collected from CDC, state officials, <a target="_blank" href="https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html">New York Times</a>, and <a
-          href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546" target="_blank">NBC News</a>.
+          <a href="https://en.wikipedia.org/wiki/Template:2019%E2%80%9320_coronavirus_pandemic_data" target="_blank">Wikipedia</a>,
+          and <a href="https://voice.baidu.com/act/newpneumonia/newpneumonia" target="_blank">Baidu</a>. Regarding the state level data in the U.S., they are collected from CDC, state officials and <a
+            href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546" target="_blank">NBC News</a>.
           The computational resources are provided by <a href="https://csde.washington.edu/" target="_blank">UW's Center for Studies in Demography and Ecology</a>. The base maps are from <a target="_blank"
             href="https://github.com/CartoDB/cartodb/wiki/BaseMaps-available">Carto</a> and <a href="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/" target="_blank">ESRI</a>, and the geospatial data for the base maps
           are acquired from the <a href="openstreetmap.org/copyright" target="_blank"> OpenStreetMap</a>.
@@ -281,7 +280,6 @@
               -->
               8. the state officals of different states in the U.S.
               9. <a href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546" target="_blank">NBC News</a>.
-              10.  <a target="_blank" href="https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html">New York Times</a>
 
               The dataset (in SQLite format) can be downloaded from <a href="http://hgis.uw.edu/virus/assets/virus.db" target="_blank">here</a>.
               You can view the data (in CSV format) at <a href="http://hgis.uw.edu/virus/assets/virus.csv" target="_blank">here</a>.</p>
@@ -947,7 +945,7 @@
         //add reference source for each place
         if (datasets[4]["columns"].includes(name)) {
           $("#source-website").html( //Unisted states
-            '<a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/"> WHO</a>, <a target="_blank" href="https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/cases-in-us.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fcases-in-us.html">CDC</a>, <a target="_blank" href="https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html">New York Times</a>, and <a target="_blank" href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546">NBC News</a>.'
+            '<a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/"> WHO</a>, <a target="_blank" href="https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/cases-in-us.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fcases-in-us.html">CDC</a> and <a target="_blank" href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546">NBC News</a>.'
             );
         } else if (datasets[5]["columns"].includes(name)) { //Canada
           $("#source-website").html('<a target="_blank" href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html">Public Health Agency of Canada.</a>');
@@ -957,7 +955,7 @@
             );
         } else if (name == "Global Trend") { //global
           $("#source-website").html(
-            '<a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/"> WHO</a>, <a target="_blank" href="https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html">New York Times</a>, <a target="_blank" href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546">NBC News</a>, <a target="_blank" href="https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/cases-in-us.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fcases-in-us.html">CDC</a>, <a target="_blank" href="https://voice.baidu.com/act/newpneumonia/newpneumonia">Baidu</a>, <a target="_blank" href="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic">Wikipedia</a>, and etc.'
+            '<a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/"> WHO</a>, <a target="_blank" href="https://www.nbcnews.com/health/health-news/coronavirus-u-s-map-where-virus-has-been-confirmed-across-n1124546">NBC News</a>, <a target="_blank" href="https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/cases-in-us.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fcases-in-us.html">CDC</a>, <a target="_blank" href="https://voice.baidu.com/act/newpneumonia/newpneumonia">Baidu</a>, <a target="_blank" href="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic">Wikipedia</a>, and etc.'
             );
         } else if (name == "japan") { //japan
           $("#source-website").html(
@@ -1110,8 +1108,8 @@
         showPlace("Global Trend");
         // calCounts(global);
         chart.load({
-          columns: [places["Global Trend"].c, places["Global Trend"].d],
-          unload: ['Aggr. Confirmed', 'Death'],
+          columns: [places["Global Trend"].c, places["Global Trend"].a, places["Global Trend"].r, places["Global Trend"].d],
+          unload: ['Aggr. Confirmed', 'Active Confirmed', 'Recovered', 'Death'],
         });
 
         $("#hint").text("Click a place to review local trend.");
@@ -1138,7 +1136,7 @@
         data: {
           x: "t",
           y: "confirmed",
-          columns: [places["Global Trend"].t, places["Global Trend"].c, places["Global Trend"].d],
+          columns: [places["Global Trend"].t, places["Global Trend"].c, places["Global Trend"].a, places["Global Trend"].r, places["Global Trend"].d],
           type: 'line',
           axes: {
             confirmed: 'y'
@@ -1146,8 +1144,8 @@
           colors: {
             'Aggr. Confirmed': '#dc3545',
             // Suspected: 'orange',
-            //'Active Confirmed': 'orange',
-            //'Recovered': '#28a745',
+            'Active Confirmed': 'orange',
+            'Recovered': '#28a745',
             'Death': 'SlateBlue'
           }
         },
@@ -1222,13 +1220,23 @@
       function displayPlace(name) {
 
         places[name] = calPlace(name);
+        var deck2 = document.getElementById('deck-2')
+        if(datasets[4]["columns"].includes(name)){
+          deck2.style.visibility = 'hidden';
+          deck2.style.height = '0';
+          chart.load({
+            columns: [places[name].c,places[name].c,places[name].d, places[name].d],
+            unload: ['Aggr. Confirmed', 'Active Confirmed', 'Recovered', 'Death'],
+          });
+        }else{
+          deck2.style.visibility = 'visible';
+          deck2.style.height = 'auto';
+          chart.load({
+            columns: [places[name].c, places[name].a, places[name].r, places[name].d],
+            unload: ['Aggr. Confirmed', 'Active Confirmed', 'Recovered', 'Death'],
+          });
+        }
         showPlace(name);
-
-        chart.load({
-          columns: [places[name].c, places[name].d],
-          unload: ['Aggr. Confirmed', 'Death'],
-        });
-
       }
 
       //this function generate the situational-heatmap table
@@ -1361,16 +1369,24 @@
           //when lick on a country's row, the info panel will show the information related to that country/place
           $("tr#" + d.replace(" ", "") + "-row").on("click", function() {
             // places[d] = calPlace(d);
+            var deck2 = document.getElementById('deck-2')
+            if(datasets[4]["columns"].includes(d)){
+              deck2.style.visibility = 'hidden';
+              deck2.style.height = '0';
+              chart.load({
+                columns: [places[d].c,places[d].c,places[d].d, places[d].d],
+                unload: ['Aggr. Confirmed', 'Active Confirmed', 'Recovered', 'Death'],
+              });
+            }else{
+              deck2.style.visibility = 'hidden';
+              deck2.style.height = '0';
+              chart.load({
+                columns: [places[d].c, places[d].a, places[d].r, places[d].d],
+                unload: ['Aggr. Confirmed', 'Active Confirmed', 'Recovered', 'Death'],
+              });
+            }
             showPlace(d);
-
-            chart.load({
-              columns: [places[d].c,places[d].d],
-              unload: ['Aggr. Confirmed','Death'],
-            });
           })
-
-
-
         })
 
       }
