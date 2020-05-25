@@ -2,6 +2,8 @@
 *.war
 *.ear
 
+.DS_Store
+
 # IDEA config files
 .idea/
 
