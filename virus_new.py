@@ -204,26 +204,30 @@ for province in provinces[1:-1]:
     # enName = province.find_all("td")[0].text.lower().replace("british colombia", "british columbia")
     enName = province.find_all("td")[0].text.lower().replace("    ", " ")
     # print (province.text)
-    confirmed = province.find_all("td")[3].text.replace(",","")
+    confirmed = province.find_all("td")[1].text.replace(",","")
+    probable = province.find_all("td")[2].text.replace(",","")
+    recovered = province.find_all("td")[3].text.replace(",","")
     death = province.find_all("td")[4].text.replace(",","")
 
-    if enName in canadacities:
-        for row in cursor.execute("SELECT `" + enName + "` from virus order by rowid DESC limit 1"):
-            latest = row[0]
-        # recovered = latest.split("-")[2]
-        # death = latest.split("-")[3]
-    else:
-        recovered = '0'
+    # if enName in canadacities:
+    #     for row in cursor.execute("SELECT `" + enName + "` from virus order by rowid DESC limit 1"):
+    #         latest = row[0]
+    #     # recovered = latest.split("-")[2]
+    #     # death = latest.split("-")[3]
+    # else:
+    #     recovered = '0'
 
     if recovered == "" or recovered == "-":
         recovered = "0"
+    if probable == "" or recovered == "-":
+        probable = "0"
     if death == "" or death == "-":
         death = "0"
     if confirmed == "" or confirmed == "-":
         confirmed = "0"
     print(enName, confirmed, recovered, death)
     sqls += ", '" + enName.strip() + "'"
-    sqle += "'" + confirmed + "-0-" + recovered + "-" + death + "', "
+    sqle += "'" + confirmed + "-" + probable + "-" + recovered + "-" + death + "', "
 
 browser.close()
 
