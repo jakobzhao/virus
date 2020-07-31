@@ -8,11 +8,11 @@ import sqlite3
 import urllib
 import requests
 
-#browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver")
-#browser = webdriver.Chrome("/Users/joshuaji/Desktop/chromedriver") #joshua's chromedrive location
-#browser = webdriver.Chrome("C:/workspace/chromedriver.exe")
-#browser = webdriver.Chrome("E:/dev/workspaces/chromedriver.exe")
-#browser = webdriver.Chrome("C:/Users/Steven/workspaces/chromedriver.exe")
+# browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver")
+# browser = webdriver.Chrome("/Users/joshuaji/Desktop/chromedriver") #joshua's chromedrive location
+# browser = webdriver.Chrome("C:/workspace/chromedriver.exe")
+# browser = webdriver.Chrome("E:/dev/workspaces/chromedriver.exe")
+# browser = webdriver.Chrome("C:/Users/Steven/workspaces/chromedriver.exe")
 browser = webdriver.Chrome("/Users/stevenbao/dev/chromedriver")
 
 # Variable Preparation
@@ -31,7 +31,9 @@ canadacities = []
 with open("assets/canada-city.txt", "r", encoding="utf-8") as fp:
     states = fp.readlines()
     for state in states:
-        canadacities.append(state.replace("\n","").lower())
+        canadacities.append(state.replace("\n", "").lower())
+
+potential_error = []
 
 # Chinese Provinces
 url = "https://voice.baidu.com/act/newpneumonia/newpneumonia"
@@ -68,7 +70,7 @@ for item in items[1:35]:
         recovered = "0"
     if death == "" or death == "-":
         death = "0"
-    if confirmed == "" or confirmed == "-" :
+    if confirmed == "" or confirmed == "-":
         confirmed = "0"
 
     print(chname, chineseCity[chname], confirmed, recovered, death)
@@ -119,7 +121,6 @@ for item in items[2:]:
     elif name == "congo":
         name = "republic of the congo"
 
-
     '''
     elif name == "bosnia & herzegovina":
         name = "bosnia and herzegovina"
@@ -135,7 +136,7 @@ for item in items[2:]:
         name = "sao tome and principe"
     '''
 
-    confirmed = item.find_all("td")[0].text.split("\n")[0].replace(",","").replace("No data", "0")
+    confirmed = item.find_all("td")[0].text.split("\n")[0].replace(",", "").replace("No data", "0")
     death = item.find_all("td")[1].text.split("\n")[0].replace(",", "").replace("No data", "0")
     recovered = item.find_all("td")[2].text.split("\n")[0].replace(",", "").replace("No data", "0")
     if recovered == "–" or recovered == "—":
@@ -143,6 +144,8 @@ for item in items[2:]:
     if death == "–" or death == "—":
         death = "0"
 
+    if (int(death) > int(confirmed)) or (int(recovered) > int(confirmed)):
+        potential_error.append((name + " Confirmed: " + confirmed + ", Recovered: " + recovered + ", Death: " + death))
 
     print(name, confirmed, death, recovered)
 
@@ -169,7 +172,6 @@ with urllib.request.urlopen(urllink) as url:
         sqle += "'" + cases + "', "
         print(name + " " + cases)
 
-
 '''
 # U.S. States - old version which uses NBC data
 conn = sqlite3.connect("assets/virus.db")
@@ -193,7 +195,6 @@ with urllib.request.urlopen(urllink) as url:
         print(name + " " + cases)
 '''
 
-
 # Canadian Provinces
 url = "https://health-infobase.canada.ca/covid-19/iframe/table.html"
 browser.get(url)
@@ -205,10 +206,10 @@ for province in provinces[1:-1]:
     # enName = province.find_all("td")[0].text.lower().replace("british colombia", "british columbia")
     enName = province.find_all("td")[0].text.lower().replace("    ", " ")
     # print (province.text)
-    confirmed = province.find_all("td")[1].text.replace(",","")
-    probable = province.find_all("td")[2].text.replace(",","")
-    recovered = province.find_all("td")[3].text.replace(",","")
-    death = province.find_all("td")[4].text.replace(",","")
+    confirmed = province.find_all("td")[1].text.replace(",", "")
+    # probable = province.find_all("td")[2].text.replace(",","")
+    recovered = province.find_all("td")[5].text.replace(",", "").replace("***", "")
+    death = province.find_all("td")[6].text.replace(",", "")
 
     # if enName in canadacities:
     #     for row in cursor.execute("SELECT `" + enName + "` from virus order by rowid DESC limit 1"):
@@ -220,35 +221,34 @@ for province in provinces[1:-1]:
 
     if recovered == "" or recovered == "-":
         recovered = "0"
-    if probable == "" or recovered == "-":
-        probable = "0"
     if death == "" or death == "-":
         death = "0"
     if confirmed == "" or confirmed == "-":
         confirmed = "0"
     print(enName, confirmed, recovered, death)
     sqls += ", '" + enName.strip() + "'"
-    sqle += "'" + confirmed + "-" + probable + "-" + recovered + "-" + death + "', "
+    sqle += "'" + confirmed + "-0-" + recovered + "-" + death + "', "
 
 browser.close()
 
-insert_record_sql = sqls + sqle[0: len(sqle) -2] + ")"
+insert_record_sql = sqls + sqle[0: len(sqle) - 2] + ")"
 
 cursor.execute(insert_record_sql)
 conn.commit()
 cursor.execute("SELECT * from virus")
 col_name_list = [tuple[0] for tuple in cursor.description]
 
-
 flag, confirmed, priorConfirmed = "", 0, 0
 prior_row = str(list(cursor.execute("SELECT * FROM virus WHERE rowid = 1")))
-prior_row = prior_row[2:(len(prior_row)-5)]
+prior_row = prior_row[2:(len(prior_row) - 5)]
 priorFlag = prior_row[1:11]
 
 with open("assets/virus.csv", "w", encoding="utf-8") as fp:
-    fp.write(str(col_name_list)[1:len(str(col_name_list))-1].replace("\'", "").replace(", ", ",").replace("(null)", "") + "\n")
+    fp.write(str(col_name_list)[1:len(str(col_name_list)) - 1].replace("\'", "").replace(", ", ",").replace("(null)",
+                                                                                                            "") + "\n")
     for row in cursor.execute("SELECT * from virus"):
-        line = str(row)[1:len(str(row))-1].replace("\'", "").replace("None", "").replace(", ", ",").replace("(null)", "") + "\n"
+        line = str(row)[1:len(str(row)) - 1].replace("\'", "").replace("None", "").replace(", ", ",").replace("(null)",
+                                                                                                              "") + "\n"
         flag = line[0:10]
         for area in line.split(",")[1:]:
             if area == "" or area == "(null)" or area == "None" or area == "\n":
@@ -258,13 +258,16 @@ with open("assets/virus.csv", "w", encoding="utf-8") as fp:
             confirmed += area
 
         if flag != priorFlag:
-            fp.write(str(prior_row)[1:len(str(prior_row)) - 1].replace("\'", "").replace("None", "").replace(", ", ",").replace("(null)", "") + "\n")
+            fp.write(str(prior_row)[1:len(str(prior_row)) - 1].replace("\'", "").replace("None", "").replace(", ",
+                                                                                                             ",").replace(
+                "(null)", "") + "\n")
             priorFlag = flag
             priorConfirmed = confirmed
         prior_row = row
 
     for row in cursor.execute("SELECT * from virus order by rowid DESC limit 1"):
-        line = str(row)[1:len(str(row))-1].replace("\'", "").replace("None", "").replace(", ", ",").replace("(null)", "") + "\n"
+        line = str(row)[1:len(str(row)) - 1].replace("\'", "").replace("None", "").replace(", ", ",").replace("(null)",
+                                                                                                              "") + "\n"
         flag = line[0:10]
         for area in line.split(",")[1:]:
             if area == "" or area == "(null)" or area == "None" or area == "\n":
@@ -273,7 +276,9 @@ with open("assets/virus.csv", "w", encoding="utf-8") as fp:
                 area = int(area.split("-")[0])
             confirmed += area
         if confirmed != priorConfirmed:
-            fp.write(str(row)[1:len(str(row)) - 1].replace("\'", "").replace("None", "").replace(", ", ",").replace("(null)", "") + "\n")
+            fp.write(
+                str(row)[1:len(str(row)) - 1].replace("\'", "").replace("None", "").replace(", ", ",").replace("(null)",
+                                                                                                               "") + "\n")
 
 conn.close()
 
@@ -282,23 +287,27 @@ fp = open("assets/virus.csv", "r", encoding="utf-8")
 lines = fp.readlines()
 fp.close()
 n = len(lines)
-if lines[n-1][0:10] == lines[n-2][0:10]:
-    lines.pop(n-2)
+if lines[n - 1][0:10] == lines[n - 2][0:10]:
+    lines.pop(n - 2)
 
 with open("assets/virus.csv", "w", encoding="utf-8") as fp:
     start = 10
     stop = 26
     id = 0
     for line in lines:
-        if id !=0:
+        if id != 0:
             fp.write(line[0: 10:] + line[26::])
         else:
             fp.write(line)
         id += 1
-
 
 with open("assets/timestamp.txt", "w", encoding="utf-8") as fp:
     fp.write("timestamp\n")
     fp.write(now)
 
 print("finished!")
+
+if potential_error:
+    print("Potential Error:")
+    for x in range(len(potential_error)):
+        print(potential_error[x])
