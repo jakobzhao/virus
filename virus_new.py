@@ -10,9 +10,9 @@ import requests
 
 # browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver")
 # browser = webdriver.Chrome("C:/workspace/chromedriver.exe")
-# browser = webdriver.Chrome("E:/dev/workspaces/chromedriver.exe")
+browser = webdriver.Chrome("E:/dev/workspaces/chromedriver.exe")
 # browser = webdriver.Chrome("/Users/stevenbao/dev/chromedriver")
-browser = webdriver.Chrome("/home/steven/workspaces/chromedriver")
+# browser = webdriver.Chrome("/home/steven/workspaces/chromedriver")
 
 # Variable Preparation
 now = str(datetime.now())
