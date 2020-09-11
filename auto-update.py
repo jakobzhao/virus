@@ -1,4 +1,4 @@
-import os
+from subprocess import call
 import sqlite3
 import time
 import urllib
@@ -326,6 +326,6 @@ if potential_error:
         server.login(sender_email, password)
         server.sendmail(sender_email, receiver_email, message)
 
-    os.popen('sh ../git_reset_hard.sh')
+    os.popen('sh /home/pi/workspaces/git_reset_hard.sh')
 else:
-    os.popen('sh ../update_virus_web.sh')
+    os.popen('sh /home/pi/workspaces/update_virus_web.sh')
