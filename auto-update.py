@@ -328,4 +328,5 @@ if potential_error:
 
     os.popen('sh /home/pi/workspaces/git_reset_hard.sh')
 else:
+    os.popen('sh /home/pi/workspaces/git_commit_push.sh')
     os.popen('sh /home/pi/workspaces/update_virus_web.sh')
