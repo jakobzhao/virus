@@ -1,4 +1,4 @@
-from subprocess import call
+import os
 import sqlite3
 import time
 import urllib
