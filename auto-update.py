@@ -330,5 +330,5 @@ if potential_error:
     subprocess.call(['/home/pi/workspaces/git_reset_hard.sh'])
 else:
     subprocess.call(['/home/pi/workspaces/git_commit_push.sh'])
-    time.sleep(10)
+    time.sleep(30)
     subprocess.call(['/home/pi/workspaces/update_virus_web.sh'])
