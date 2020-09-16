@@ -20,14 +20,14 @@ sqls = "INSERT OR REPLACE INTO virus ('datetime'"
 sqle = ") VALUES ('" + now + "', "
 
 chineseCity = {}
-with open("assets/name.csv", "r", encoding="utf-8") as fp:
+with open("/home/pi/workspaces/virus/assets/name.csv", "r", encoding="utf-8") as fp:
     lines = fp.readlines()
     for line in lines:
         placeItem = line.replace("\n", "").split(",")
         chineseCity[placeItem[0]] = placeItem[1]
 
 canadacities = []
-with open("assets/canada-city.txt", "r", encoding="utf-8") as fp:
+with open("/home/pi/workspaces/virus/assets/canada-city.txt", "r", encoding="utf-8") as fp:
     states = fp.readlines()
     for state in states:
         canadacities.append(state.replace("\n", "").lower())
@@ -152,7 +152,7 @@ for item in items[2:]:
     sqle += "'" + confirmed + "-0-" + recovered + "-" + death + "', "
 
 # U.S. States - new data source nyt
-conn = sqlite3.connect("assets/virus.db")
+conn = sqlite3.connect("/home/pi/workspaces/virus/assets/virus.db")
 cursor = conn.cursor()
 urllink = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv"
 
@@ -173,7 +173,7 @@ with urllib.request.urlopen(urllink) as url:
 
 '''
 # U.S. States - old version which uses NBC data
-conn = sqlite3.connect("assets/virus.db")
+conn = sqlite3.connect("/home/pi/workspaces/virus/assets/virus.db")
 cursor = conn.cursor()
 
 urllink = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdW9DsR5iffFcJvKAJXyOiNn4IYtavRIGslkcJIslHJC7UfrbChv-L4E89TeDEcWZS6QSzCuHWeMON/pub?gid=1879451031&single=true&output=csv"
@@ -242,7 +242,7 @@ prior_row = str(list(cursor.execute("SELECT * FROM virus WHERE rowid = 1")))
 prior_row = prior_row[2:(len(prior_row) - 5)]
 priorFlag = prior_row[1:11]
 
-with open("assets/virus.csv", "w", encoding="utf-8") as fp:
+with open("/home/pi/workspaces/virus/assets/virus.csv", "w", encoding="utf-8") as fp:
     fp.write(str(col_name_list)[1:len(str(col_name_list)) - 1].replace("\'", "").replace(", ", ",").replace("(null)",
                                                                                                             "") + "\n")
     for row in cursor.execute("SELECT * from virus"):
@@ -282,15 +282,15 @@ with open("assets/virus.csv", "w", encoding="utf-8") as fp:
 conn.close()
 
 # exit(-1)
-fp = open("assets/virus.csv", "r", encoding="utf-8")
+fp = open("/home/pi/workspaces/virus/assets/virus.csv", "r", encoding="utf-8")
 lines = fp.readlines()
 fp.close()
 n = len(lines)
 if lines[n - 1][0:10] == lines[n - 2][0:10]:
     lines.pop(n - 2)
 
-with open("assets/virus.csv", "w", encoding="utf-8") as fp:
-    start = 10
+with open("/home/pi/workspaces/virus/assets/virus.csv", "w", encoding="utf-8") as fp:
+    start = 10s
     stop = 26
     id = 0
     for line in lines:
@@ -300,7 +300,7 @@ with open("assets/virus.csv", "w", encoding="utf-8") as fp:
             fp.write(line)
         id += 1
 
-with open("assets/timestamp.txt", "w", encoding="utf-8") as fp:
+with open("/home/pi/workspaces/virus/assets/timestamp.txt", "w", encoding="utf-8") as fp:
     fp.write("timestamp\n")
     fp.write(now)
 
