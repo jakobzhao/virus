@@ -306,8 +306,11 @@ with open("assets/timestamp.txt", "w", encoding="utf-8") as fp:
     fp.write(now)
 
 print("finished!")
+time.sleep(5)
 
 if potential_error:
+    print("ERROR")
+    time.sleep(5)
     import smtplib
     import ssl
 
@@ -317,7 +320,7 @@ if potential_error:
     sender_email = open("steven_gmail_password", "r").read().split("\n")[1]
     password = open("steven_gmail_password", "r").read().split("\n")[2]
     message = """\
-    Subject: Data Update Error - COVID-19 Website 
+    Subject: Data Update Error - COVID-19 Website
 
     There are errors while updating the database. Please check."""
 
