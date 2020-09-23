@@ -333,7 +333,7 @@ if potential_error:
     %s
     """
 
-    message = mystring % ("".join(potential_error))
+    message = message % ("".join(potential_error))
 
     context = ssl.create_default_context()
     with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
