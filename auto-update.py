@@ -328,7 +328,12 @@ if potential_error:
     message = """\
     Subject: Data Update Error - COVID-19 Website
 
-    There are errors while updating the database. Please check."""
+    There are errors while updating the database. Please check.
+    
+    %s
+    """
+
+    message = mystring % ("".join(potential_error))
 
     context = ssl.create_default_context()
     with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
