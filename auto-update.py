@@ -216,7 +216,7 @@ for province in provinces[1:-1]:
     # print (province.text)
     confirmed = province.find_all("td")[1].text.replace(",", "")
     # probable = province.find_all("td")[2].text.replace(",","")
-    recovered = province.find_all("td")[5].text.replace(",", "").replace("***", "")
+    recovered = province.find_all("td")[5].text.replace(",", "").replace("***", "").replace("**", "")
     death = province.find_all("td")[6].text.replace(",", "")
 
     # if enName in canadacities:
