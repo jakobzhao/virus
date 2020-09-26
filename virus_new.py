@@ -10,8 +10,8 @@ import requests
 
 # browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver")
 # browser = webdriver.Chrome("C:/workspace/chromedriver.exe")
-browser = webdriver.Chrome("D:/dev/workspaces/chromedriver.exe")
-# browser = webdriver.Chrome("/Users/stevenbao/dev/chromedriver")
+# browser = webdriver.Chrome("D:/dev/workspaces/chromedriver.exe")
+browser = webdriver.Chrome("/Users/stevenbao/dev/chromedriver")
 # browser = webdriver.Chrome()
 
 # Variable Preparation
@@ -215,7 +215,7 @@ for province in provinces[1:-1]:
     # print (province.text)
     confirmed = province.find_all("td")[1].text.replace(",", "")
     # probable = province.find_all("td")[2].text.replace(",","")
-    recovered = province.find_all("td")[5].text.replace(",", "").replace("***", "")
+    recovered = province.find_all("td")[5].text.replace(",", "").replace("***", "").replace("**", "")
     death = province.find_all("td")[6].text.replace(",", "")
 
     # if enName in canadacities:
