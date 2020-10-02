@@ -148,7 +148,7 @@ for item in items[2:]:
 
     print(name, confirmed, death, recovered)
 
-    sqls += ", '" + name.replace("'", "''") + "'"
+    sqls += ", '" me.replace("'", "''") + "'"
     sqle += "'" + confirmed + "-0-" + recovered + "-" + death + "', "
 
 # U.S. States - new data source nyt

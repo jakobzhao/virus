@@ -151,7 +151,7 @@ for item in items[2:]:
         potential_error.append((name + " Confirmed: " + confirmed + ", Recovered: " + recovered + ", Death: " + death))
         conn = sqlite3.connect("assets/virus.db")
         cursor = conn.cursor()
-        cursor = conn.execute(("SELECT " + name + " FROM virus ORDER BY datetime desc LIMIT 1, 1"))
+        cursor = conn.execute(("SELECT `" + name + "` FROM virus ORDER BY datetime desc LIMIT 1, 1"))
         last_data = cursor.fetchall()[0][0]
         conn.close()
 
