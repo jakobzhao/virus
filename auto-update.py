@@ -329,7 +329,7 @@ if potential_error:
     Subject: Data Update Error - COVID-19 Website
 
     There are errors while updating the database. Please check.
-    
+
     %s
     """
 
@@ -341,6 +341,6 @@ if potential_error:
         server.sendmail(sender_email, receiver_email, message)
 
 
-subprocess.call(['/home/pi/workspaces/git_commit_push.sh'])
+subprocess.call(['/home/ubuntu/workspaces/git_commit_push.sh'])
 time.sleep(30)
-subprocess.call(['/home/pi/workspaces/update_virus_web.sh'])
+subprocess.call(['/home/ubuntu/workspaces/update_virus_web.sh'])
