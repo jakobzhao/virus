@@ -321,7 +321,7 @@ if potential_error:
     import ssl
 
     port = 465  # For SSL
-    smtp_server = "smtp.gmail.com"
+    smtp_server = "smtp.googlemail.com"
     receiver_email = open("steven_gmail_password", "r").read().split("\n")[0]
     sender_email = open("steven_gmail_password", "r").read().split("\n")[1]
     password = open("steven_gmail_password", "r").read().split("\n")[2]
