@@ -340,7 +340,4 @@ if potential_error:
         server.login(sender_email, password)
         server.sendmail(sender_email, receiver_email, message)
 
-
-subprocess.call(['/home/ubuntu/workspaces/git_commit_push.sh'])
-time.sleep(30)
-subprocess.call(['/home/ubuntu/workspaces/update_virus_web.sh'])
+    
