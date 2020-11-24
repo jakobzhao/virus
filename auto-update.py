@@ -140,7 +140,7 @@ try:
 
         confirmed = item.find_all("td")[0].text.split("\n")[0].replace(",", "").replace("No data", "0").replace(" ", "")
         death = item.find_all("td")[1].text.split("\n")[0].replace(",", "").replace("No data", "0").replace("[al]", "")
-        recovered = item.find_all("td")[2].text.split("\n")[0].replace(",", "").replace("No data", "0")
+        recovered = item.find_all("td")[2].text.split("\n")[0].replace(",", "").replace("No data", "0").replace(".", "")
         if recovered == "–" or recovered == "—":
             recovered = "0"
         if death == "–" or death == "—" or death == "?":
