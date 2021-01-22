@@ -10,7 +10,7 @@ import requests
 
 # browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver")
 # browser = webdriver.Chrome("C:/workspace/chromedriver.exe")
-browser = webdriver.Chrome("D:/dev/workspaces/chromedriver.exe")
+browser = webdriver.Chrome("D:/workspaces/chromedriver.exe")
 # browser = webdriver.Chrome("/Users/stevenbao/dev/chromedriver")
 # browser = webdriver.Chrome()
 
@@ -39,11 +39,14 @@ url = "https://voice.baidu.com/act/newpneumonia/newpneumonia"
 browser.get(url)
 
 unfolds = browser.find_elements_by_xpath("//div[starts-with(@class,'Common')]")
-for unfold in unfolds:
-    if unfold.text == "展开全部":
-        unfold.click()
-        time.sleep(2)
-        break
+# for unfold in unfolds:
+#     if unfold.text == "展开全部":
+#         unfold.click()
+#         time.sleep(2)
+#         break
+
+unfolds[4].click()
+time.sleep(2)
 
 browser.find_element_by_xpath("//table[starts-with(@class,'VirusTable')]").find_elements_by_tag_name("tr")
 soup = BeautifulSoup(browser.page_source, 'html.parser')
