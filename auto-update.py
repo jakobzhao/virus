@@ -42,7 +42,7 @@ try:
     browser.get(url)
 
     unfolds = browser.find_elements_by_xpath("//div[starts-with(@class,'Common')]")
-    unfolds[4].click()
+    unfolds[3].click()
     time.sleep(2)
 
     browser.find_element_by_xpath("//table[starts-with(@class,'VirusTable')]").find_elements_by_tag_name("tr")
