@@ -11,7 +11,7 @@ import requests
 # browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver")
 # browser = webdriver.Chrome("C:/workspace/chromedriver.exe")
 # browser = webdriver.Chrome("D:/workspaces/chromedriver.exe")
-browser = webdriver.Chrome("/Users/stevenbao/workspaces/chromedriver")
+browser = webdriver.Chrome("/Users/stevenbao/dev/chromedriver")
 # browser = webdriver.Chrome()
 
 # Variable Preparation
@@ -145,6 +145,10 @@ for item in items[2:]:
         recovered = "0"
     if death == "–" or death == "—" or death == "?":
         death = "0"
+
+    # Recovery data for the U.S. has stopped updating since Feb 14, 2021. 11166500 was the last updated number.
+    if name == "us":
+        recovered = "11166500"
 
     print(name, confirmed, death, recovered)
 

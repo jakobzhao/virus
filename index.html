@@ -66,7 +66,7 @@
                     <p>
     </div>
 
-    <div id="info" data-simplebar data-simplebar-auto-hide="true" style="width:520px!important">
+    <div id="info" data-simplebar data-simplebar-auto-hide="true">
       <div id="title" style="font-size:19px"><img src="img/virus_logo.png" width="28px"> Novel Coronavirus (COVID-19) Infection Map
         <span><a href="https://twitter.com/UW" target="_blank"><i class="fab fa-twitter-square"></i></a></span>
         <span><a href="https://github.com/jakobzhao/virus" target="_blank"><i class="fab fa-github-square"></i></a></span>
@@ -1222,7 +1222,7 @@
 
         places[name] = calPlace(name);
         var deck2 = document.getElementById('deck-2')
-        if(datasets[4]["columns"].includes(name)){
+        if(datasets[4]["columns"].includes(name) | name == "us"){
           deck2.style.visibility = 'hidden';
           deck2.style.height = '0';
           chart.load({

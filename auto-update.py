@@ -143,6 +143,10 @@ try:
         if death == "–" or death == "—" or death == "?":
             death = "0"
 
+        # Recovery data for the U.S. has stopped updating since Feb 14, 2021. 11166500 was the last updated number.
+        if name == "us":
+            recovered = "11166500"
+
         print(name, confirmed, death, recovered)
 
         sqls += ", '" + name.replace("'", "''") + "'"
