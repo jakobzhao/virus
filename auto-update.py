@@ -42,7 +42,13 @@ try:
     browser.get(url)
 
     unfolds = browser.find_elements_by_xpath("//div[starts-with(@class,'Common')]")
-    unfolds[3].click()
+
+    for unfold in unfolds:
+        if unfold.text == "展开全部":
+            unfold.click()
+            time.sleep(2)
+            break
+
     time.sleep(2)
 
     browser.find_element_by_xpath("//table[starts-with(@class,'VirusTable')]").find_elements_by_tag_name("tr")
