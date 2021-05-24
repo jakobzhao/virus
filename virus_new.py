@@ -10,8 +10,8 @@ import requests
 
 # browser = webdriver.Chrome("/Users/FengyuXu/Desktop/web_crawler/twitter_crawler/chromedriver")
 # browser = webdriver.Chrome("C:/workspace/chromedriver.exe")
-# browser = webdriver.Chrome("D:/workspaces/chromedriver.exe")
-browser = webdriver.Chrome("/Users/stevenbao/workspaces/chromedriver")
+browser = webdriver.Chrome("D:/workspaces/chromedriver.exe")
+# browser = webdriver.Chrome("/Users/stevenbao/workspaces/chromedriver")
 # browser = webdriver.Chrome()
 
 # Variable Preparation
@@ -39,13 +39,13 @@ url = "https://voice.baidu.com/act/newpneumonia/newpneumonia"
 browser.get(url)
 
 unfolds = browser.find_elements_by_xpath("//div[starts-with(@class,'Common')]")
-# for unfold in unfolds:
-#     if unfold.text == "展开全部":
-#         unfold.click()
-#         time.sleep(2)
-#         break
+for unfold in unfolds:
+    if unfold.text == "展开全部":
+        unfold.click()
+        time.sleep(2)
+        break
 
-unfolds[3].click()
+# unfolds[3].click()
 time.sleep(2)
 
 browser.find_element_by_xpath("//table[starts-with(@class,'VirusTable')]").find_elements_by_tag_name("tr")

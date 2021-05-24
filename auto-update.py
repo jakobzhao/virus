@@ -43,13 +43,13 @@ try:
 
     unfolds = browser.find_elements_by_xpath("//div[starts-with(@class,'Common')]")
 
-    # for unfold in unfolds:
-    #     if unfold.text == "展开全部":
-    #         unfold.click()
-    #         time.sleep(2)
-    #         break
+    for unfold in unfolds:
+        if unfold.text == "展开全部":
+            unfold.click()
+            time.sleep(2)
+            break
 
-    unfolds[3].click()
+    # unfolds[3].click()
 
     time.sleep(2)
 
