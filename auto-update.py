@@ -41,13 +41,15 @@ try:
     url = "https://voice.baidu.com/act/newpneumonia/newpneumonia"
     browser.get(url)
 
-    unfolds = browser.find_elements_by_xpath("//div[starts-with(@class,'Common')]")
-
-    for unfold in unfolds:
-        if unfold.text == "展开全部":
-            unfold.click()
-            time.sleep(2)
-            break
+    # unfolds = browser.find_elements_by_xpath("//div[starts-with(@class,'Common')]")
+    #
+    # for unfold in unfolds:
+    #     if unfold.text == "展开全部":
+    #         unfold.click()
+    #         time.sleep(2)
+    #         break
+    unfold = browser.find_elements_by_xpath("//*[@id='nationTable']/div")[0]
+    unfold.click()
 
     # unfolds[3].click()
 
