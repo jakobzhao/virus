@@ -38,6 +38,32 @@
 </head>
 
 <body>
+  <div class="modal fade" id="overlay">
+  <div class="modal-dialog" style="max-width: 60%;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Notice</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>We have decided to stop updating the website on June 27th, 2021. Thank you very much for following us since the beginning of the COVID-19 pandemic. Our initial goal of creating this platform is to help inform and educate the general public on this global public health crisis through using GIS technologies. Since January 2020, more than 1.8 million users have accessed our website. We received many positive comments on our integrative approach of collecting and visualizing global COVID-19 case data, especially during the early phase of the pandemic. We sincerely appreciate your recognition of our work and all the valuable feedback you provided to us.
+<br>
+<br>
+One and a half years after the start of the pandemic, with the wide adoption of vaccination, it is good to see that the overall situation is getting better and better. Meanwhile, better standards for COVID-19 data collection and presentation have been established by public health organizations in all parts of the world. Therefore, we think it is time to stop our service and encourage people to follow the information published by official sources, such as the Centers for Disease Control and Prevention and the World Health Organization.
+<br>
+<br>
+Thank you again for your support!
+<br>
+<br>
+<br>
+Stay well,
+<br>
+UW HGIS Lab
+</p>
+      </div>
+    </div>
+  </div>
+</div>
   <main>
     <div class="loader"></div>
     <div id="mobiledeck">
@@ -480,6 +506,7 @@
 
     $(window).ready(function() {
       $('.loader').fadeOut("slow");
+      $('#overlay').modal('show');
     });
 
 
@@ -1511,6 +1538,11 @@
     });
 
   </script>
+
+  <!-- pop-up notice window -->
+  <!-- <script>
+    $('#overlay').modal('show');
+  </script> -->
 
   <!-- Google Analytics -->
   <script>
